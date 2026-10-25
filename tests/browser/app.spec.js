@@ -355,3 +355,11 @@ test("visible button wording is included in accessible names for voice control",
   await cards(page).first().locator(".save").click();
   expect((await new AxeBuilder({ page }).withRules(["label-content-name-mismatch"]).analyze()).violations).toEqual([]);
 });
+
+test('logo uses a clean home URL and social cards have a real static image',async({page,request})=>{
+ await page.goto('/?area=Khilgaon#old-section');await expect(page.locator('#directory')).toHaveAttribute('aria-busy','false');
+ await page.locator('.brand').click();await expect(page).toHaveURL('http://127.0.0.1:4173/');await expect(cards(page)).toHaveCount(hallIds.length);
+ const meta=page.locator('meta[property="og:image"]');await expect(meta).toHaveAttribute('content','https://tanzilahmed.tech/venueradar-bd/social-preview.png');
+ await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute('content','summary_large_image');
+ const response=await request.get('/social-preview.png');expect(response.status()).toBe(200);expect(response.headers()['content-type']).toContain('image/png');const image=await response.body();expect(image.readUInt32BE(16)).toBe(1200);expect(image.readUInt32BE(20)).toBe(630);
+});

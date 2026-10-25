@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">VenueRadar BD — Find a venue in Dhaka</title>
+  <desc id="description">An original VenueRadar BD brand card for a sourced directory of Dhaka community centers and convention halls.</desc>
+  <rect width="1200" height="630" fill="#f7f8f2"/>
+  <rect x="0" y="0" width="16" height="630" fill="#184e42"/>
+  <rect x="64" y="52" width="64" height="64" rx="12" fill="#184e42"/>
+  <text x="77" y="96" font-family="Georgia,serif" font-size="43" fill="#fffef9">V</text>
+  <text x="103" y="103" font-family="Georgia,serif" font-size="26" fill="#fffef9">R</text>
+  <text x="148" y="84" font-family="Arial,Helvetica,sans-serif" font-size="30" fill="#203d35">VenueRadar <tspan font-weight="700" fill="#ad5a35">BD</tspan></text>
+  <text x="150" y="110" font-family="Arial,Helvetica,sans-serif" font-size="13" letter-spacing="3" fill="#50645c">THE DHAKA EDITION</text>
+  <line x1="64" y1="151" x2="1136" y2="151" stroke="#d7dfd1"/>
+  <text x="64" y="220" font-family="Arial,Helvetica,sans-serif" font-size="16" letter-spacing="2.6" fill="#50645c">COMMUNITY CENTERS &amp; CONVENTION HALLS</text>
+  <text x="59" y="314" font-family="Georgia,serif" font-size="76" letter-spacing="-1.8" fill="#203d35">Find a venue</text>
+  <text x="59" y="398" font-family="Georgia,serif" font-size="76" letter-spacing="-1.8" fill="#203d35">in Dhaka.</text>
+  <text x="65" y="458" font-family="Arial,Helvetica,sans-serif" font-size="24" fill="#50645c">Choose an area. Check the details. Make the call.</text>
+  <rect x="785" y="199" width="351" height="270" rx="12" fill="#184e42"/>
+  <text x="815" y="243" font-family="Arial,Helvetica,sans-serif" font-size="14" letter-spacing="2.1" fill="#dce7da">EXPLORE BY NEIGHBORHOOD</text>
+  <g font-family="Arial,Helvetica,sans-serif" font-size="27" fill="#fffef9">
+    <text x="815" y="301">Rampura</text><text x="815" y="356">Khilgaon</text><text x="815" y="411">Malibagh</text>
+  </g>
+  <g stroke="#a7c0ad" fill="none" stroke-width="2">
+    <path d="M1073 286h22m-8-8 8 8-8 8"/><path d="M1073 341h22m-8-8 8 8-8 8"/><path d="M1073 396h22m-8-8 8 8-8 8"/>
+  </g>
+  <line x1="64" y1="512" x2="1136" y2="512" stroke="#d7dfd1"/>
+  <text x="65" y="559" font-family="Arial,Helvetica,sans-serif" font-size="20" fill="#184e42">Published contacts <tspan fill="#ad5a35">·</tspan> Maps <tspan fill="#ad5a35">·</tspan> Compare &amp; save</text>
+  <text x="1136" y="559" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#50645c">tanzilahmed.tech/venueradar-bd</text>
+</svg>

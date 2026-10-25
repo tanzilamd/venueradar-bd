@@ -30,3 +30,7 @@
 - Increase phone-bearing records from 23 to 59, with 70 sourced published numbers; preserve prior valid contacts and show numbers on cards.
 - Add priority-area shortcuts, transparent nearby-area browsing, phone quick filter and visible identity/closure review notices; remove THE RESEARCH DESK card.
 - Preserve existing Git history as explicitly requested; continue repository-local Tanzil Ahmed commit attribution.
+
+## Clean home links and share previews
+- Use the native home link to clear search parameters and fragments without adding `#`.
+- Add an original 1200×630 PNG/SVG brand card, absolute Open Graph image metadata and Twitter large-image card metadata. Preview crawlers can read all metadata without JavaScript.

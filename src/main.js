@@ -667,10 +667,6 @@ $("applyFilters").onclick = () => {
 };
 $("explore").onclick = () => navigate("explore");
 $("saved").onclick = () => navigate("saved");
-document.querySelector(".brand").onclick = (e) => {
-  e.preventDefault();
-  navigate("explore");
-};
 $("method").onclick = method;
 $("footerMethod").onclick = method;
 $("reset").onclick = reset;
