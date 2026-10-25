@@ -1,6 +1,6 @@
 # VenueRadar BD
 
-English-only, Dhaka-focused, static venue research and discovery platform for Bangladesh. No backend, mandatory login, paid API, database or scheduled scraping.
+Dhaka-focused, static venue research and discovery platform for Bangladesh. No backend, mandatory login, paid API, database or scheduled scraping.
 
 **Status: 131 sourced Dhaka records plus one visibly pending owner submission (Jonaki): 124 hall/community/event records and 8 preserved hotels. 94 venues have sourced published phones: 118 contact entries, 114 distinct numbers. All original records individually reviewed; 5 additional source follow-ups remain access-limited. No complete-Dhaka or confirmed-operation claim.**
 
