@@ -1,5 +1,11 @@
 # Changelog
 
+## Final contact-review follow-up
+- Attempt all remaining 34 follow-ups: 29 additional source-review outcomes and 5 explicitly source-limited investigations. Total sourced-phone coverage:94venues,118published contact entries,114distinct numbers.
+- Preserve131original records and facts; label missing-contact research outcomes, source/date and identity/closure/address conflicts. Document58complete addresses,13capacity records and39facility-bearing records.
+- Add owner-supplied Jonaki Convention Hall as an explicitly unverified submission; do not count its phone as source-verified or guess its neighborhood.
+- Keep earlier publication checkpoints below as historical entries.
+
 ## UI usability and contact-completion revision
 - Implement search-first layout, independent Saved state, curated search aliases, honest exact/nearby and capacity context, accessible draft/apply mobile filters, actionable comparison and lazy map workspace.
 - Preserve all 131 venue IDs and established facts; enrich 93 records with additional citations or supported public facts. Increase sourced phone coverage from 59 to 86 venues, with 105 contact entries / 101 distinct numbers.

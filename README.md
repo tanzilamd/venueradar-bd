@@ -2,7 +2,7 @@
 
 English-only, Dhaka-focused, static venue research and discovery platform for Bangladesh. No backend, mandatory login, paid API, database or scheduled scraping.
 
-**Status: 131 sourced Dhaka records: 123 community/event/hall records shown first, plus 8 preserved hotel venues separately. 86 records have sourced public business phones (105 venue contact entries; 101 distinct numbers). Coverage and active operation remain unconfirmed. The latest all-record research pass is unfinished: 95 source-review outcomes, 36 blocked follow-ups.**
+**Status: 131 sourced Dhaka records plus one visibly pending owner submission (Jonaki): 124 hall/community/event records and 8 preserved hotels. 94 venues have sourced published phones: 118 contact entries, 114 distinct numbers. All original records individually reviewed; 5 additional source follow-ups remain access-limited. No complete-Dhaka or confirmed-operation claim.**
 
 ## Develop
 
@@ -36,7 +36,7 @@ Sitemap/canonical/og:url should be generated only after the real Pages URL is kn
 
 ## Data maintenance
 
-Read [research guide](docs/RESEARCH_GUIDE.md), [safe update guide](docs/DATA_UPDATE_GUIDE.md), and [sources and limitations](docs/DATA_SOURCES.md). Version 1 focuses exclusively on Dhaka. Current coverage is 123 community/event/hall records and 8 preserved hotel venues. 45 records still lack a responsibly sourced phone and 8 lack coordinates. Map-reviewed localities are not surveyed boundaries or operator confirmation; many street addresses and capacities remain unknown. Existing verified records must never be replaced by weaker or empty data.
+Read [research guide](docs/RESEARCH_GUIDE.md), [safe update guide](docs/DATA_UPDATE_GUIDE.md), and [sources and limitations](docs/DATA_SOURCES.md). Version 1 focuses exclusively on Dhaka. Current coverage is 124 hall/community/event records including one pending submission, and 8 preserved hotel venues. 37 records lack a sourced phone; the additional submitted contact is independently unverified. 8 original records still lack coordinates. Map-reviewed localities are not surveyed boundaries or operator confirmation; many street addresses and capacities remain unknown. Existing verified records must never be replaced by weaker or empty data.
 
 ## License
 

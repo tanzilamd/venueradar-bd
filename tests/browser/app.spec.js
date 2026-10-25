@@ -363,3 +363,17 @@ test('logo uses a clean home URL and social cards have a real static image',asyn
  await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute('content','summary_large_image');
  const response=await request.get('/social-preview.png');expect(response.status()).toBe(200);expect(response.headers()['content-type']).toContain('image/png');const image=await response.body();expect(image.readUInt32BE(16)).toBe(1200);expect(image.readUInt32BE(20)).toBe(630);
 });
+
+test('submitted venue and unavailable phone states remain explicit', async ({ page }) => {
+  await page.goto('/?venue=bd-jonaki-convention-hall');
+  await expect(page.locator('#dialog')).toBeVisible();
+  await expect(page.locator('#dialog .review-notice')).toContainText('not yet been independently verified');
+  await expect(page.locator('#dialog a[href="tel:+8801762884405"]').first()).toBeVisible();
+  await expect(page.locator('#dialog .contact-list')).toContainText('Contributor-supplied number');
+  await expect(page.locator('#dialog')).not.toContainText('Published business number');
+  await page.goto('/?venue=bd-osm-node-11915138589');
+  await expect(page.locator('#dialog')).toBeVisible();
+  await expect(page.locator('#dialog')).toContainText('No usable business phone was found');
+  await expect(page.locator('#dialog')).toContainText('This does not mean the venue has no phone');
+  await expect(page.locator('#dialog a[href^="tel:"]')).toHaveCount(0);
+});

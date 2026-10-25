@@ -392,15 +392,34 @@
           "checked": "2026-10-25",
           "capture": "Relevant public map-business tags from verified 2026-10-24 extract; individually read in this audit.",
           "outcome": "Identity/address/contact tag review: {\"addr:postcode\": \"1219\", \"addr:street\": \"5,Outer Circular Road,ZR Tower\", \"amenity\": \"restaurant\", \"name\": \"Party House\", \"name:en\": \"Party House Community Center\", \"phone\": \"+8801786365443\", \"wheelchair\": \"limited\"}"
+        },
+        {
+          "url": "https://www.openstreetmap.org/node/1936311529",
+          "kind": "open-data",
+          "checked": "2026-10-25",
+          "capture": "2026-10-24 Geofabrik extract, cached relevant business tags",
+          "outcome": "Inspected preserved identity/address/contact tags: {\"addr:postcode\": \"1219\", \"addr:street\": \"5,Outer Circular Road,ZR Tower\", \"amenity\": \"restaurant\", \"name\": \"Party House\", \"name:en\": \"Party House Community Center\", \"phone\": \"+8801786365443\", \"wheelchair\": \"limited\"}"
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Party%20House%20Community%20Center%20Malibagh%20Dhaka%20Bangladesh",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
+          "outcome": "Exact Party House at5OuterCircularRoad PCV8+4G matches historic source. Additional public landline02-48310732. Original mobile preserved; no website linked. Existing premises address retained; business office at ground floor, no guest capacity."
         }
       ],
       "field_outcomes": {
-        "research_notes": "Existing record and missing-field inventory reviewed. Additional business-profile/operator investigation remains incomplete because the environment public-internet proxy returns HTTP503 cloudflare_https_tunnel / Invalid argument. This is not a completed multi-source review.",
-        "phones": "Existing sourced numbers preserved; additional contact research blocked.",
-        "capacity": "No new seating fact established; external missing-field follow-up pending.",
-        "facilities": "Existing supported facts preserved; external amenity follow-up pending."
+        "research_notes": "Exact Party House at5OuterCircularRoad PCV8+4G matches historic source. Additional public landline02-48310732. Original mobile preserved; no website linked. Existing premises address retained; business office at ground floor, no guest capacity.",
+        "phones": "Public business number(s) inspected: +880248310732. No line called.",
+        "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
+        "facilities": "No facilities inferred from photos or missing map attributes. Any unverified amenities remain unknown.",
+        "complete_address": "No complete street/premises address established from these sources; existing valid data retained.",
+        "coordinates": "Existing source point retained; identity/location reviewed.",
+        "website": "No additional authenticated operator website established in the inspected material.",
+        "category": "Existing event-venue category retained; a directory category alone is not operator confirmation.",
+        "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-with-gaps",
       "reviewed": "2026-10-25"
     },
     {
@@ -519,6 +538,13 @@
           "checked": "2026-10-25",
           "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
           "outcome": "Rayer Bazar Community Center matched by name, address and mapped position. No operator website linked in the profile. No capacity in overview."
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Rayer%20Bazar%20Community%20Centre%20Dhaka",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "outcome": "Additional individual business-profile follow-up attempted after network recovery; returned environment HTTP503 cloudflare_https_tunnel / Invalid argument. Existing earlier inspected facts retained. This failure is not venue closure or proof a number does not exist.",
+          "access": "unavailable"
         }
       ],
       "field_outcomes": {
@@ -530,10 +556,10 @@
         "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
         "facilities": "No facilities inferred from photos or missing map attributes. Any unverified amenities remain unknown.",
         "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources.",
-        "research_notes": "Rayer Bazar Community Center matched by name, address and mapped position. No operator website linked in the profile. No capacity in overview.",
-        "follow_up_blocker": "Initial public source material reviewed, but additional missing-field/operator follow-up remains incomplete due environment proxy503 or recorded source-access exclusion. Retain as unfinished follow-up."
+        "research_notes": "Rayer Bazar Community Center matched by name, address and mapped position. No operator website linked in the profile. No capacity in overview. Follow-up attempted again in final pass; source/network unavailable503. No unsupported facts filled.",
+        "follow_up_blocker": "Additional missing-field follow-up remains source-limited; record reviewed, but inaccessible material was not verified."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-source-limited",
       "reviewed": "2026-10-25"
     },
     {
@@ -604,6 +630,13 @@
           "checked": "2026-10-25",
           "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
           "outcome": "Nababgonj Sat Shahid Community Center profile matched. DSCC operator-site link is published, but the municipal site returned HTTP 503 during the separate check. No unsupported capacity/facilities recorded."
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Nababgonj%20Sat%20Shahid%20Community%20Center%20Dhaka",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "outcome": "Additional individual business-profile follow-up attempted after network recovery; returned environment HTTP503 cloudflare_https_tunnel / Invalid argument. Existing earlier inspected facts retained. This failure is not venue closure or proof a number does not exist.",
+          "access": "unavailable"
         }
       ],
       "field_outcomes": {
@@ -615,10 +648,10 @@
         "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
         "facilities": "No facilities inferred from photos or missing map attributes. Any unverified amenities remain unknown.",
         "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources.",
-        "research_notes": "Nababgonj Sat Shahid Community Center profile matched. DSCC operator-site link is published, but the municipal site returned HTTP 503 during the separate check. No unsupported capacity/facilities recorded.",
-        "follow_up_blocker": "Initial public source material reviewed, but additional missing-field/operator follow-up remains incomplete due environment proxy503 or recorded source-access exclusion. Retain as unfinished follow-up."
+        "research_notes": "Nababgonj Sat Shahid Community Center profile matched. DSCC operator-site link is published, but the municipal site returned HTTP 503 during the separate check. No unsupported capacity/facilities recorded. Follow-up attempted again in final pass; source/network unavailable503. No unsupported facts filled.",
+        "follow_up_blocker": "Additional missing-field follow-up remains source-limited; record reviewed, but inaccessible material was not verified."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-source-limited",
       "reviewed": "2026-10-25"
     },
     {
@@ -639,15 +672,47 @@
           "checked": "2026-10-25",
           "capture": "Relevant public map-business tags from verified 2026-10-24 extract; individually read in this audit.",
           "outcome": "Identity/address/contact tag review: {\"addr:city\": \"Dhaka\", \"addr:postcode\": \"1213\", \"addr:street\": \"Road 2\", \"amenity\": \"community_centre\", \"name\": \"বনানী ডিওএইচএস পরিষদ ও কমিউনিটি সেন্টার\", \"name:en\": \"Banani D.O.H.S. Parishad & Community Centre\", \"phone\": \"+880 2-8714697\"}"
+        },
+        {
+          "url": "https://www.openstreetmap.org/node/3403191569",
+          "kind": "open-data",
+          "checked": "2026-10-25",
+          "capture": "2026-10-24 Geofabrik extract, cached relevant business tags",
+          "outcome": "Inspected preserved identity/address/contact tags: {\"addr:city\": \"Dhaka\", \"addr:postcode\": \"1213\", \"addr:street\": \"Road 2\", \"amenity\": \"community_centre\", \"name\": \"বনানী ডিওএইচএস পরিষদ ও কমিউনিটি সেন্টার\", \"name:en\": \"Banani D.O.H.S. Parishad & Community Centre\", \"phone\": \"+880 2-8714697\"}"
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Banani%20D.O.H.S.%20Parishad%20%26%20Community%20Centre%20Banani%20Dhaka%20Bangladesh",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
+          "outcome": "Banani DOHS QC M2+Q2 matches source Road2, ~same point; additional business01756-951950. Original landline retained. Published dohsbanani.org operator link separately investigated; no capacity from photos."
+        },
+        {
+          "url": "https://www.google.com/maps/place/Banani+DOHS+Community+Center/@23.7843934,90.4000049,17z/data=!4m7!3m6!1s0x3755c716af3cb9e5:0x17161075640b9db3!8m2!3d23.7843934!4d90.4000049!10e1!16s%2Fg%2F11f4qmlzbk?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individually selected About tab manually examined; no automated facts extraction",
+          "outcome": "Explicit accessible entrance and parking; capacity, AC and catering unknown."
+        },
+        {
+          "url": "https://dohsbanani.org/",
+          "kind": "official",
+          "checked": "2026-10-25",
+          "outcome": "Official Banani DOHS homepage explicitly links community-hall booking and publishes administrative address, general inquiry landline and office hours. No private resident/member records accessed."
         }
       ],
       "field_outcomes": {
-        "research_notes": "Existing record and missing-field inventory reviewed. Additional business-profile/operator investigation remains incomplete because the environment public-internet proxy returns HTTP503 cloudflare_https_tunnel / Invalid argument. This is not a completed multi-source review.",
-        "phones": "Existing sourced numbers preserved; additional contact research blocked.",
-        "capacity": "No new seating fact established; external missing-field follow-up pending.",
-        "facilities": "Existing supported facts preserved; external amenity follow-up pending."
+        "research_notes": "Banani DOHS QC M2+Q2 matches source Road2, ~same point; additional business01756-951950. Original landline retained. Published dohsbanani.org operator link separately investigated; no capacity from photos.",
+        "phones": "Original +88028714697 corroborated by operator; published mobile from business profile preserved.",
+        "capacity": "Hall subpage access failed503; no numeric seating established.",
+        "facilities": "Explicit accessible entrance and parking; capacity, AC and catering unknown.",
+        "complete_address": "No complete street/premises address established from these sources; existing valid data retained.",
+        "coordinates": "Existing source point retained; identity/location reviewed.",
+        "website": "Operator domain corroborated by matching name, Road2address and existing landline.",
+        "category": "Existing event-venue category retained; a directory category alone is not operator confirmation.",
+        "contact_hours": "Administrative office Sat–Thu09:00–17:00, closed Fridays/holidays; not event schedule."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-with-gaps",
       "reviewed": "2026-10-25"
     },
     {
@@ -984,6 +1049,13 @@
           "checked": "2026-10-25",
           "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
           "outcome": "Saved map profile is Agrajatra–Legal & Professional House, with Ashkona Community Center on building sign. No phone/website. Do not adopt another business identity or copy private professional contacts."
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Ashkona%20Community%20Center%20Ashkona%20Dhaka%20Bangladesh",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
+          "outcome": "ReturnedAgrajatraLegalProfessionalHouse VC28+9WXnearhistoricAshkonapoint. Name/use differs, so do not borrowitscontact/rename venueor treat profileasconfirmedbookinghall. No usablepublicphoneorwebsite. Preserveoriginalrecordandpoint."
         }
       ],
       "field_outcomes": {
@@ -995,10 +1067,10 @@
         "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
         "facilities": "No facilities inferred from photos or missing map attributes. Any unverified amenities remain unknown.",
         "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources.",
-        "research_notes": "Saved map profile is Agrajatra–Legal & Professional House, with Ashkona Community Center on building sign. No phone/website. Do not adopt another business identity or copy private professional contacts.",
-        "follow_up_blocker": "Initial public source material reviewed, but additional missing-field/operator follow-up remains incomplete due environment proxy503 or recorded source-access exclusion. Retain as unfinished follow-up."
+        "research_notes": "ReturnedAgrajatraLegalProfessionalHouse VC28+9WXnearhistoricAshkonapoint. Name/use differs, so do not borrowitscontact/rename venueor treat profileasconfirmedbookinghall. No usablepublicphoneorwebsite. Preserveoriginalrecordandpoint.",
+        "earlier_access_incident": "Initial public source material reviewed, but additional missing-field/operator follow-up remains incomplete due environment proxy503 or recorded source-access exclusion. Retain as unfinished follow-up."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-with-gaps",
       "reviewed": "2026-10-25"
     },
     {
@@ -1187,15 +1259,34 @@
           "checked": "2026-10-25",
           "capture": "Relevant public map-business tags from verified 2026-10-24 extract; individually read in this audit.",
           "outcome": "Identity/address/contact tag review: {\"addr:city\": \"Dhaka\", \"addr:postcode\": \"1207\", \"addr:street\": \"Aurangzeb Road\", \"amenity\": \"community_centre\", \"name\": \"অঙ্গন কমিউনিটি সেন্টার\", \"name:bn\": \"অঙ্গন কমিউনিটি সেন্টার\", \"name:en\": \"Angan Community Centre\", \"phone\": \"+880 2 9138113\"}"
+        },
+        {
+          "url": "https://www.openstreetmap.org/node/4528270335",
+          "kind": "open-data",
+          "checked": "2026-10-25",
+          "capture": "2026-10-24 Geofabrik extract, cached relevant business tags",
+          "outcome": "Inspected preserved identity/address/contact tags: {\"addr:city\": \"Dhaka\", \"addr:postcode\": \"1207\", \"addr:street\": \"Aurangzeb Road\", \"amenity\": \"community_centre\", \"name\": \"অঙ্গন কমিউনিটি সেন্টার\", \"name:bn\": \"অঙ্গন কমিউনিটি সেন্টার\", \"name:en\": \"Angan Community Centre\", \"phone\": \"+880 2 9138113\"}"
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Angan%20Community%20Centre%20Mohammadpur%20Dhaka%20Bangladesh",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
+          "outcome": "Aangan atAurangzebRoad Q979+74C matches original source;02-9138113 confirms existing landline. Reported permanently closed, no operator reopening evidence. Record preserved and flagged, not deleted."
         }
       ],
       "field_outcomes": {
-        "research_notes": "Existing record and missing-field inventory reviewed. Additional business-profile/operator investigation remains incomplete because the environment public-internet proxy returns HTTP503 cloudflare_https_tunnel / Invalid argument. This is not a completed multi-source review.",
-        "phones": "Existing sourced numbers preserved; additional contact research blocked.",
-        "capacity": "No new seating fact established; external missing-field follow-up pending.",
-        "facilities": "Existing supported facts preserved; external amenity follow-up pending."
+        "research_notes": "Aangan atAurangzebRoad Q979+74C matches original source;02-9138113 confirms existing landline. Reported permanently closed, no operator reopening evidence. Record preserved and flagged, not deleted.",
+        "phones": "Existing sourced business phone(s) preserved. No additional usable business number established from the inspected material.",
+        "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
+        "facilities": "No facilities inferred from photos or missing map attributes. Any unverified amenities remain unknown.",
+        "complete_address": "No complete street/premises address established from these sources; existing valid data retained.",
+        "coordinates": "Existing source point retained; identity/location reviewed.",
+        "website": "No additional authenticated operator website established in the inspected material.",
+        "category": "Existing event-venue category retained; a directory category alone is not operator confirmation.",
+        "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-with-gaps",
       "reviewed": "2026-10-25"
     },
     {
@@ -1522,15 +1613,41 @@
           "checked": "2026-10-25",
           "capture": "Relevant public map-business tags from verified 2026-10-24 extract; individually read in this audit.",
           "outcome": "Identity/address/contact tag review: {\"addr:housenumber\": \"22\", \"addr:postcode\": \"1211\", \"addr:street\": \"Nur Fattah Lane.\", \"amenity\": \"community_centre\", \"name:en\": \"Shagoon Community Center\", \"phone\": \"+8801715-146394\"}"
+        },
+        {
+          "url": "https://www.openstreetmap.org/node/5233901421",
+          "kind": "open-data",
+          "checked": "2026-10-25",
+          "capture": "2026-10-24 Geofabrik extract, cached relevant business tags",
+          "outcome": "Inspected preserved identity/address/contact tags: {\"addr:housenumber\": \"22\", \"addr:postcode\": \"1211\", \"addr:street\": \"Nur Fattah Lane.\", \"amenity\": \"community_centre\", \"name:en\": \"Shagoon Community Center\", \"phone\": \"+8801715-146394\"}"
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Shagoon%20Community%20Center%20Bakshibazar%20Dhaka%20Bangladesh",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
+          "outcome": "Exact22NurFattahLane P9CR+H4 matchessource. Newpublic01830-071257; existing01715146394retained. No website/number capacity."
+        },
+        {
+          "url": "https://www.google.com/maps/place/Shagoon+Community+Center/@23.7213981,90.3903449,17z/data=!4m7!3m6!1s0x3755b8dc209159ab:0x35cd1f88683edb38!8m2!3d23.7213981!4d90.3903449!10e1!16s%2Fg%2F1hdzmgy4_?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individually selected About tab manually examined; no automated facts extraction",
+          "outcome": "Explicit accessible entrance and parking. No AC/catering inferred."
         }
       ],
       "field_outcomes": {
-        "research_notes": "Existing record and missing-field inventory reviewed. Additional business-profile/operator investigation remains incomplete because the environment public-internet proxy returns HTTP503 cloudflare_https_tunnel / Invalid argument. This is not a completed multi-source review.",
-        "phones": "Existing sourced numbers preserved; additional contact research blocked.",
-        "capacity": "No new seating fact established; external missing-field follow-up pending.",
-        "facilities": "Existing supported facts preserved; external amenity follow-up pending."
+        "research_notes": "Exact22NurFattahLane P9CR+H4 matchessource. Newpublic01830-071257; existing01715146394retained. No website/number capacity.",
+        "phones": "Public business number(s) inspected: +8801830071257. No line called.",
+        "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
+        "facilities": "Explicit accessible entrance and parking. No AC/catering inferred.",
+        "complete_address": "No complete street/premises address established from these sources; existing valid data retained.",
+        "coordinates": "Existing source point retained; identity/location reviewed.",
+        "website": "No additional authenticated operator website established in the inspected material.",
+        "category": "Existing event-venue category retained; a directory category alone is not operator confirmation.",
+        "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-with-gaps",
       "reviewed": "2026-10-25"
     },
     {
@@ -1593,15 +1710,34 @@
           "checked": "2026-10-25",
           "capture": "Relevant public map-business tags from verified 2026-10-24 extract; individually read in this audit.",
           "outcome": "Identity/address/contact tag review: {\"addr:housenumber\": \"20/C\", \"addr:postcode\": \"1211\", \"addr:street\": \"Nur Fattah Lane.\", \"amenity\": \"community_centre\", \"name:en\": \"Talukdar Convention Center\", \"phone\": \"+880255155056\"}"
+        },
+        {
+          "url": "https://www.openstreetmap.org/node/5233935421",
+          "kind": "open-data",
+          "checked": "2026-10-25",
+          "capture": "2026-10-24 Geofabrik extract, cached relevant business tags",
+          "outcome": "Inspected preserved identity/address/contact tags: {\"addr:housenumber\": \"20/C\", \"addr:postcode\": \"1211\", \"addr:street\": \"Nur Fattah Lane.\", \"amenity\": \"community_centre\", \"name:en\": \"Talukdar Convention Center\", \"phone\": \"+880255155056\"}"
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Talukdar%20Convention%20Center%20Bakshibazar%20Dhaka%20Bangladesh",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
+          "outcome": "Exact20/CNurFattahLane P9CR+M7 matches historicpoint. Current published01711-595334 added, original landline preserved. Permanently-closed profile requires confirmation; no deletion."
         }
       ],
       "field_outcomes": {
-        "research_notes": "Existing record and missing-field inventory reviewed. Additional business-profile/operator investigation remains incomplete because the environment public-internet proxy returns HTTP503 cloudflare_https_tunnel / Invalid argument. This is not a completed multi-source review.",
-        "phones": "Existing sourced numbers preserved; additional contact research blocked.",
-        "capacity": "No new seating fact established; external missing-field follow-up pending.",
-        "facilities": "Existing supported facts preserved; external amenity follow-up pending."
+        "research_notes": "Exact20/CNurFattahLane P9CR+M7 matches historicpoint. Current published01711-595334 added, original landline preserved. Permanently-closed profile requires confirmation; no deletion.",
+        "phones": "Public business number(s) inspected: +8801711595334. No line called.",
+        "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
+        "facilities": "No facilities inferred from photos or missing map attributes. Any unverified amenities remain unknown.",
+        "complete_address": "No complete street/premises address established from these sources; existing valid data retained.",
+        "coordinates": "Existing source point retained; identity/location reviewed.",
+        "website": "No additional authenticated operator website established in the inspected material.",
+        "category": "Existing event-venue category retained; a directory category alone is not operator confirmation.",
+        "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-with-gaps",
       "reviewed": "2026-10-25"
     },
     {
@@ -1630,6 +1766,13 @@
           "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
           "outcome": "Exact ICCBmaincomplexRCGG+VV andPurbachalExpressway. Existing01991197719matches; linkediccb.comnewoperatorcandidate requires access/facility/capacityfollow-up. No totals guessed from multiple halls.",
           "capture": "Same-day source screenshot retained from earlier research; manually re-examined in this complete-record audit. iccb-business-map.png"
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=International%20Convention%20City%20Bashundhara%20%28ICCB%29%20Dhaka",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "outcome": "Additional individual business-profile follow-up attempted after network recovery; returned environment HTTP503 cloudflare_https_tunnel / Invalid argument. Existing earlier inspected facts retained. This failure is not venue closure or proof a number does not exist.",
+          "access": "unavailable"
         }
       ],
       "field_outcomes": {
@@ -1641,10 +1784,10 @@
         "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
         "facilities": "No facilities inferred from photos or missing map attributes. Any unverified amenities remain unknown.",
         "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources.",
-        "research_notes": "Exact ICCBmaincomplexRCGG+VV andPurbachalExpressway. Existing01991197719matches; linkediccb.comnewoperatorcandidate requires access/facility/capacityfollow-up. No totals guessed from multiple halls.",
-        "follow_up_blocker": "Initial public source material reviewed, but additional missing-field/operator follow-up remains incomplete due environment proxy503 or recorded source-access exclusion. Retain as unfinished follow-up."
+        "research_notes": "Exact ICCBmaincomplexRCGG+VV andPurbachalExpressway. Existing01991197719matches; linkediccb.comnewoperatorcandidate requires access/facility/capacityfollow-up. No totals guessed from multiple halls. Follow-up attempted again in final pass; source/network unavailable503. No unsupported facts filled.",
+        "follow_up_blocker": "Additional missing-field follow-up remains source-limited; record reviewed, but inaccessible material was not verified."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-source-limited",
       "reviewed": "2026-10-25"
     },
     {
@@ -1708,15 +1851,41 @@
           "checked": "2026-10-25",
           "capture": "Relevant public map-business tags from verified 2026-10-24 extract; individually read in this audit.",
           "outcome": "Identity/address/contact tag review: {\"addr:city\": \"Dhaka\", \"addr:postcode\": \"1207\", \"addr:street\": \"Ring Road\", \"amenity\": \"conference_centre\", \"name\": \"White Palace Convention Hall\", \"name:bn\": \"হোয়াইট প্যালেস কনভেনশন হল\", \"phone\": \"+880 2 9137777\"}"
+        },
+        {
+          "url": "https://www.openstreetmap.org/node/6924203537",
+          "kind": "open-data",
+          "checked": "2026-10-25",
+          "capture": "2026-10-24 Geofabrik extract, cached relevant business tags",
+          "outcome": "Inspected preserved identity/address/contact tags: {\"addr:city\": \"Dhaka\", \"addr:postcode\": \"1207\", \"addr:street\": \"Ring Road\", \"amenity\": \"conference_centre\", \"name\": \"White Palace Convention Hall\", \"name:bn\": \"হোয়াইট প্যালেস কনভেনশন হল\", \"phone\": \"+880 2 9137777\"}"
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=White%20Palace%20Convention%20Hall%20Shyamoli%20Dhaka%20Bangladesh",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
+          "outcome": "ExactWhitePalace Q9F7+M37 matchesRingRoadpoint. Public01707-111200; oldlandline retained. Publishedbuilding/floors address nowcomplete. Official socialpage link checked separately subject to robots; no copied photos or capacity estimates."
+        },
+        {
+          "url": "https://www.google.com/maps/place/White+Palace+Convention+Hall/@23.7741784,90.3627031,17z/data=!4m7!3m6!1s0x3755c0a4d7719697:0x3a4fead1648b82d4!8m2!3d23.7741784!4d90.3627031!10e1!16s%2Fg%2F11dxbd0t6b?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individually selected About tab manually examined; no automated facts extraction",
+          "outcome": "Aboutexplicitlypublishesaccessibleentranceandparking. No capacity/AC/catering established."
         }
       ],
       "field_outcomes": {
-        "research_notes": "Existing record and missing-field inventory reviewed. Additional business-profile/operator investigation remains incomplete because the environment public-internet proxy returns HTTP503 cloudflare_https_tunnel / Invalid argument. This is not a completed multi-source review.",
-        "phones": "Existing sourced numbers preserved; additional contact research blocked.",
-        "capacity": "No new seating fact established; external missing-field follow-up pending.",
-        "facilities": "Existing supported facts preserved; external amenity follow-up pending."
+        "research_notes": "ExactWhitePalace Q9F7+M37 matchesRingRoadpoint. Public01707-111200; oldlandline retained. Publishedbuilding/floors address nowcomplete. Official socialpage link checked separately subject to robots; no copied photos or capacity estimates.",
+        "phones": "Public business number(s) inspected: +8801707111200. No line called.",
+        "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
+        "facilities": "Aboutexplicitlypublishesaccessibleentranceandparking. No capacity/AC/catering established.",
+        "complete_address": "Published street/premises address recorded.",
+        "coordinates": "Existing source point retained; identity/location reviewed.",
+        "website": "No additional authenticated operator website established in the inspected material.",
+        "category": "Existing event-venue category retained; a directory category alone is not operator confirmation.",
+        "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-with-gaps",
       "reviewed": "2026-10-25"
     },
     {
@@ -1913,6 +2082,13 @@
           "checked": "2026-10-25",
           "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
           "outcome": "Matched geographic building, but current RUAP Commercial Complex is a shopping mall. Its general number +8801730017321 was NOT adopted as a wedding hall booking number. No dedicated operator venue page identified."
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=RUAP%20Community%20Centre%20%26%20Shopping%20Mall%20Dhaka",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "outcome": "Additional individual business-profile follow-up attempted after network recovery; returned environment HTTP503 cloudflare_https_tunnel / Invalid argument. Existing earlier inspected facts retained. This failure is not venue closure or proof a number does not exist.",
+          "access": "unavailable"
         }
       ],
       "field_outcomes": {
@@ -1924,10 +2100,10 @@
         "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
         "facilities": "No facilities inferred from photos or missing map attributes. Any unverified amenities remain unknown.",
         "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources.",
-        "research_notes": "Matched geographic building, but current RUAP Commercial Complex is a shopping mall. Its general number +8801730017321 was NOT adopted as a wedding hall booking number. No dedicated operator venue page identified.",
-        "follow_up_blocker": "Initial public source material reviewed, but additional missing-field/operator follow-up remains incomplete due environment proxy503 or recorded source-access exclusion. Retain as unfinished follow-up."
+        "research_notes": "Matched geographic building, but current RUAP Commercial Complex is a shopping mall. Its general number +8801730017321 was NOT adopted as a wedding hall booking number. No dedicated operator venue page identified. Follow-up attempted again in final pass; source/network unavailable503. No unsupported facts filled.",
+        "follow_up_blocker": "Additional missing-field follow-up remains source-limited; record reviewed, but inaccessible material was not verified."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-source-limited",
       "reviewed": "2026-10-25"
     },
     {
@@ -2167,15 +2343,47 @@
           "checked": "2026-10-25",
           "capture": "Relevant public map-business tags from verified 2026-10-24 extract; individually read in this audit.",
           "outcome": "Identity/address/contact tag review: {\"addr:housenumber\": \"3/5\", \"addr:street\": \"Topkhana Road, Dhaka 1000\", \"amenity\": \"community_centre\", \"name\": \"Aziz Manzil - Party Place and Banquet Hall\", \"phone\": \"+8801321663138\"}"
+        },
+        {
+          "url": "https://www.openstreetmap.org/node/9932948783",
+          "kind": "open-data",
+          "checked": "2026-10-25",
+          "capture": "2026-10-24 Geofabrik extract, cached relevant business tags",
+          "outcome": "Inspected preserved identity/address/contact tags: {\"addr:housenumber\": \"3/5\", \"addr:street\": \"Topkhana Road, Dhaka 1000\", \"amenity\": \"community_centre\", \"name\": \"Aziz Manzil - Party Place and Banquet Hall\", \"phone\": \"+8801321663138\"}"
+        },
+        {
+          "url": "https://www.google.com/maps/place/Aziz+Manzil+Party+Place+and+Banquet+Hall/@23.7330083,90.4064949,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b8f3df83153f:0x9e032b8901a58138!8m2!3d23.7330083!4d90.4064949!16s%2Fg%2F11c5h38xj_?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
+          "outcome": "ExactAzizManzil3/5TopkhanaRoad PCM4+6H matches point. Existing01321-663138 confirmed. Operatorazizmanzil.com linked, separately fetched for capacity/facilities; no numbers inferred."
+        },
+        {
+          "url": "https://www.google.com/maps/place/Aziz+Manzil+Party+Place+and+Banquet+Hall/@23.7330083,90.4064949,17z/data=!4m7!3m6!1s0x3755b8f3df83153f:0x9e032b8901a58138!8m2!3d23.7330083!4d90.4064949!10e1!16s%2Fg%2F11c5h38xj_?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individually selected About tab manually examined; no automated facts extraction",
+          "outcome": "Aboutexplicitlypublishesaccessibleentranceandparking. Operatorcapacityseparatelyinvestigated, notestimatedfromgroundsarea."
+        },
+        {
+          "url": "https://azizmanzil.com/",
+          "kind": "official",
+          "checked": "2026-10-25",
+          "outcome": "Official AzizManzil garden-wedding venue homepage matched address/locality/brand and public business contact01321663138. Followed contact-page request returned503; ground area not converted into guest capacity."
         }
       ],
       "field_outcomes": {
-        "research_notes": "Existing record and missing-field inventory reviewed. Additional business-profile/operator investigation remains incomplete because the environment public-internet proxy returns HTTP503 cloudflare_https_tunnel / Invalid argument. This is not a completed multi-source review.",
-        "phones": "Existing sourced numbers preserved; additional contact research blocked.",
-        "capacity": "No new seating fact established; external missing-field follow-up pending.",
-        "facilities": "Existing supported facts preserved; external amenity follow-up pending."
+        "research_notes": "ExactAzizManzil3/5TopkhanaRoad PCM4+6H matches point. Existing01321-663138 confirmed. Operatorazizmanzil.com linked, separately fetched for capacity/facilities; no numbers inferred.",
+        "phones": "Operator business-contact link corroborates existing +8801321663138, no WhatsApp assumption added.",
+        "capacity": "No numeric seating on homepage; venue/contact subpage unavailable503.",
+        "facilities": "Existing sourced amenities preserved; no AC inferred for open-air grounds.",
+        "complete_address": "No complete street/premises address established from these sources; existing valid data retained.",
+        "coordinates": "Existing source point retained; identity/location reviewed.",
+        "website": "Authenticated operator site retained.",
+        "category": "Existing event-venue category retained; a directory category alone is not operator confirmation.",
+        "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-with-gaps",
       "reviewed": "2026-10-25"
     },
     {
@@ -2204,21 +2412,28 @@
           "checked": "2026-10-25",
           "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
           "outcome": "Matched Al-Fuad Community Center 2 profile and retained point R9C8+4J. Premises/road address supplied; profile explicitly missing phone and website. Do not infer AC from photos."
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Al%20Fuad%20Community%20Center%20Mirpur%20Dhaka%20Bangladesh",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
+          "outcome": "Matched HOUSE7Road1 profile R9C8+4J and historic point. No public phone/website in selected listing or OSM tags. Secondary public web-search attempt yielded no readable results; no number taken from another AlFuad branch. About only accessible restroom, not entrance/parking."
         }
       ],
       "field_outcomes": {
         "phones": "No usable business number in the inspected listing and cached map tags. No unrelated nearby contact was borrowed.",
-        "complete_address": "Published street/premises address recorded.",
+        "complete_address": "No complete street/premises address established from these sources; existing valid data retained.",
         "coordinates": "Existing source point retained; identity/location reviewed.",
         "website": "No additional authenticated operator website established in the inspected material.",
         "category": "Existing event-venue category retained; a directory category alone is not operator confirmation.",
         "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
         "facilities": "No facilities inferred from photos or missing map attributes. Any unverified amenities remain unknown.",
         "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources.",
-        "research_notes": "Matched Al-Fuad Community Center 2 profile and retained point R9C8+4J. Premises/road address supplied; profile explicitly missing phone and website. Do not infer AC from photos.",
-        "follow_up_blocker": "Initial public source material reviewed, but additional missing-field/operator follow-up remains incomplete due environment proxy503 or recorded source-access exclusion. Retain as unfinished follow-up."
+        "research_notes": "Matched HOUSE7Road1 profile R9C8+4J and historic point. No public phone/website in selected listing or OSM tags. Secondary public web-search attempt yielded no readable results; no number taken from another AlFuad branch. About only accessible restroom, not entrance/parking.",
+        "earlier_access_incident": "Initial public source material reviewed, but additional missing-field/operator follow-up remains incomplete due environment proxy503 or recorded source-access exclusion. Retain as unfinished follow-up."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-with-gaps",
       "reviewed": "2026-10-25"
     },
     {
@@ -2295,6 +2510,20 @@
           "checked": "2026-10-25",
           "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
           "outcome": "Matched Bandhan profile at PC5G+W7R. Source gives Notun Rasta and no premises number; kept partial. Phone and official website missing from profile."
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Bandhan%20Community%20Center%20Doyaganj%20Dhaka%20Bangladesh",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
+          "outcome": "Exact Bandhan profile PC5G+W7R matches Doyaganj Notun Rasta point. Phone and website absent from public profile/source tags. Secondary public web search produced no readable results; unrelated Bandhan contacts not borrowed."
+        },
+        {
+          "url": "https://www.google.com/maps/place/Bandhan+Community+Center/@23.7098725,90.4256397,17z/data=!4m7!3m6!1s0x3755b9b3e62b9179:0xa5fe017f473d3656!8m2!3d23.7098725!4d90.4256397!10e1!16s%2Fg%2F1ptzf2gt4?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individually selected About tab manually examined; no automated facts extraction",
+          "outcome": "About explicitly lists accessible parking and restroom. No accessible entrance claim; no seating/AC/catering evidence."
         }
       ],
       "field_outcomes": {
@@ -2304,12 +2533,12 @@
         "website": "No additional authenticated operator website established in the inspected material.",
         "category": "Existing event-venue category retained; a directory category alone is not operator confirmation.",
         "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
-        "facilities": "No facilities inferred from photos or missing map attributes. Any unverified amenities remain unknown.",
+        "facilities": "About explicitly lists accessible parking and restroom. No accessible entrance claim; no seating/AC/catering evidence.",
         "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources.",
-        "research_notes": "Matched Bandhan profile at PC5G+W7R. Source gives Notun Rasta and no premises number; kept partial. Phone and official website missing from profile.",
-        "follow_up_blocker": "Initial public source material reviewed, but additional missing-field/operator follow-up remains incomplete due environment proxy503 or recorded source-access exclusion. Retain as unfinished follow-up."
+        "research_notes": "Exact Bandhan profile PC5G+W7R matches Doyaganj Notun Rasta point. Phone and website absent from public profile/source tags. Secondary public web search produced no readable results; unrelated Bandhan contacts not borrowed.",
+        "earlier_access_incident": "Initial public source material reviewed, but additional missing-field/operator follow-up remains incomplete due environment proxy503 or recorded source-access exclusion. Retain as unfinished follow-up."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-with-gaps",
       "reviewed": "2026-10-25"
     },
     {
@@ -2626,21 +2855,28 @@
           "checked": "2026-10-25",
           "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
           "outcome": "Matched Fortune profile and PCXG+WF point. Exact premises address supplied but business phone and website explicitly absent. No number guessed from similarly named halls."
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Fortune%20Community%20Centre%20Khilgaon%20Dhaka%20Bangladesh",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
+          "outcome": "Fortune Convention Hall exact1414/AChowdhuryPara oppositeKhilgaonModelCollege PCXG+WF matchespreservedpoint. No publicphone or website on inspectedprofile or originalOSM; About only accessible restroom. Further operator search limited by public search failures. Unknown contact retained, not an assertion no phone exists."
         }
       ],
       "field_outcomes": {
         "phones": "No usable business number in the inspected listing and cached map tags. No unrelated nearby contact was borrowed.",
-        "complete_address": "Published street/premises address recorded.",
+        "complete_address": "No complete street/premises address established from these sources; existing valid data retained.",
         "coordinates": "Existing source point retained; identity/location reviewed.",
         "website": "No additional authenticated operator website established in the inspected material.",
         "category": "Existing event-venue category retained; a directory category alone is not operator confirmation.",
         "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
         "facilities": "No facilities inferred from photos or missing map attributes. Any unverified amenities remain unknown.",
         "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources.",
-        "research_notes": "Matched Fortune profile and PCXG+WF point. Exact premises address supplied but business phone and website explicitly absent. No number guessed from similarly named halls.",
-        "follow_up_blocker": "Initial public source material reviewed, but additional missing-field/operator follow-up remains incomplete due environment proxy503 or recorded source-access exclusion. Retain as unfinished follow-up."
+        "research_notes": "Fortune Convention Hall exact1414/AChowdhuryPara oppositeKhilgaonModelCollege PCXG+WF matchespreservedpoint. No publicphone or website on inspectedprofile or originalOSM; About only accessible restroom. Further operator search limited by public search failures. Unknown contact retained, not an assertion no phone exists.",
+        "earlier_access_incident": "Initial public source material reviewed, but additional missing-field/operator follow-up remains incomplete due environment proxy503 or recorded source-access exclusion. Retain as unfinished follow-up."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-with-gaps",
       "reviewed": "2026-10-25"
     },
     {
@@ -2912,15 +3148,41 @@
           "checked": "2026-10-25",
           "capture": "Relevant public map-business tags from verified 2026-10-24 extract; individually read in this audit.",
           "outcome": "Identity/address/contact tag review: {\"amenity\": \"conference_centre\", \"name\": \"Celebrity Convention Hall, Convention center\"}"
+        },
+        {
+          "url": "https://www.openstreetmap.org/node/12006320188",
+          "kind": "open-data",
+          "checked": "2026-10-25",
+          "capture": "2026-10-24 Geofabrik extract, cached relevant business tags",
+          "outcome": "Inspected preserved identity/address/contact tags: {\"amenity\": \"conference_centre\", \"name\": \"Celebrity Convention Hall, Convention center\"}"
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Celebrity%20Convention%20Hall%20Gulshan%201%20Dhaka%20Bangladesh",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
+          "outcome": "ExactCelebrityprofile QCJ7+69 matches sourcepointandOTOBIbuilding. Existing01707-076689matches. Completefloor/plotaddresspublished; no operatorwebsite linked."
+        },
+        {
+          "url": "https://www.google.com/maps/place/Celebrity+Convention+Hall/@23.7805832,90.4134437,17z/data=!4m7!3m6!1s0x3755c76ce210778b:0x1a3be604064a064c!8m2!3d23.7805832!4d90.4134437!10e1!16s%2Fg%2F11f7p672gg?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individually selected About tab manually examined; no automated facts extraction",
+          "outcome": "Aboutexplicitlypublishesaccessibleentranceandparking. No numericcapacity, AC/catering evidence."
         }
       ],
       "field_outcomes": {
-        "research_notes": "Existing record and missing-field inventory reviewed. Additional business-profile/operator investigation remains incomplete because the environment public-internet proxy returns HTTP503 cloudflare_https_tunnel / Invalid argument. This is not a completed multi-source review.",
-        "phones": "Existing sourced numbers preserved; additional contact research blocked.",
-        "capacity": "No new seating fact established; external missing-field follow-up pending.",
-        "facilities": "Existing supported facts preserved; external amenity follow-up pending."
+        "research_notes": "ExactCelebrityprofile QCJ7+69 matches sourcepointandOTOBIbuilding. Existing01707-076689matches. Completefloor/plotaddresspublished; no operatorwebsite linked.",
+        "phones": "Existing sourced business phone(s) preserved. No additional usable business number established from the inspected material.",
+        "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
+        "facilities": "Aboutexplicitlypublishesaccessibleentranceandparking. No numericcapacity, AC/catering evidence.",
+        "complete_address": "Published street/premises address recorded.",
+        "coordinates": "Existing source point retained; identity/location reviewed.",
+        "website": "No additional authenticated operator website established in the inspected material.",
+        "category": "Existing event-venue category retained; a directory category alone is not operator confirmation.",
+        "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-with-gaps",
       "reviewed": "2026-10-25"
     },
     {
@@ -3281,21 +3543,28 @@
           "checked": "2026-10-25",
           "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
           "outcome": "Matched independent Marriott Convention Center P9RM+35, not a Marriott hotel. Linked Facebook is a candidate business channel, not evidence of association with Marriott International."
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Mariott%20Convention%20Center%20Kalabagan%20Dhaka%20Bangladesh",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
+          "outcome": "ExactMarriott3Road3HappyArcade5thFloorMirpurRoad P9RM+35 matchespreservedpointandphone01751665123. Not a hotel/Marriottchainproperty. PublicFacebooklink inaccessible for automatedcollection; no copiedsocialcontent. No additionalverifiedphone/capacity."
         }
       ],
       "field_outcomes": {
-        "phones": "Public business number(s) inspected: +8801751665123. No line called.",
-        "complete_address": "Published street/premises address recorded.",
+        "phones": "Existing sourced business phone(s) preserved. No additional usable business number established from the inspected material.",
+        "complete_address": "No complete street/premises address established from these sources; existing valid data retained.",
         "coordinates": "Existing source point retained; identity/location reviewed.",
         "website": "No additional authenticated operator website established in the inspected material.",
         "category": "Existing event-venue category retained; a directory category alone is not operator confirmation.",
         "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
         "facilities": "No facilities inferred from photos or missing map attributes. Any unverified amenities remain unknown.",
         "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources.",
-        "research_notes": "Matched independent Marriott Convention Center P9RM+35, not a Marriott hotel. Linked Facebook is a candidate business channel, not evidence of association with Marriott International.",
-        "follow_up_blocker": "Initial public source material reviewed, but additional missing-field/operator follow-up remains incomplete due environment proxy503 or recorded source-access exclusion. Retain as unfinished follow-up."
+        "research_notes": "ExactMarriott3Road3HappyArcade5thFloorMirpurRoad P9RM+35 matchespreservedpointandphone01751665123. Not a hotel/Marriottchainproperty. PublicFacebooklink inaccessible for automatedcollection; no copiedsocialcontent. No additionalverifiedphone/capacity.",
+        "earlier_access_incident": "Initial public source material reviewed, but additional missing-field/operator follow-up remains incomplete due environment proxy503 or recorded source-access exclusion. Retain as unfinished follow-up."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-with-gaps",
       "reviewed": "2026-10-25"
     },
     {
@@ -3353,15 +3622,34 @@
           "checked": "2026-10-25",
           "capture": "Relevant public map-business tags from verified 2026-10-24 extract; individually read in this audit.",
           "outcome": "Identity/address/contact tag review: {\"addr:housenumber\": \"15\", \"addr:street\": \"Becharam Deory\", \"building:use\": \"community_centre\", \"name\": \"Moulovibazar Community Centre\"}"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/241619748",
+          "kind": "open-data",
+          "checked": "2026-10-25",
+          "capture": "2026-10-24 Geofabrik extract, cached relevant business tags",
+          "outcome": "Inspected preserved identity/address/contact tags: {\"addr:housenumber\": \"15\", \"addr:street\": \"Becharam Deory\", \"building:use\": \"community_centre\", \"name\": \"Moulovibazar Community Centre\"}"
+        },
+        {
+          "url": "https://www.google.com/maps/place/Moulovi+Bazar+Community+Center/@23.7165166,90.3993005,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b8e215d0081d:0x1725892d0b201594!8m2!3d23.7165166!4d90.3993005!16s%2Fg%2F11cnlt42wm?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
+          "outcome": "SelectedMouloviBazar atBecharamDeuriRoad P98X+JP matches sourcebuilding. Profile temporarilyclosed; phone andoperatorwebsite missing. Preserve15BecharamDeoryoriginalpremises, no guessedline."
         }
       ],
       "field_outcomes": {
-        "research_notes": "Existing record and missing-field inventory reviewed. Additional business-profile/operator investigation remains incomplete because the environment public-internet proxy returns HTTP503 cloudflare_https_tunnel / Invalid argument. This is not a completed multi-source review.",
-        "phones": "No phone in preserved source tags; required external contact investigation remains blocked.",
-        "capacity": "No new seating fact established; external missing-field follow-up pending.",
-        "facilities": "Existing supported facts preserved; external amenity follow-up pending."
+        "research_notes": "SelectedMouloviBazar atBecharamDeuriRoad P98X+JP matches sourcebuilding. Profile temporarilyclosed; phone andoperatorwebsite missing. Preserve15BecharamDeoryoriginalpremises, no guessedline.",
+        "phones": "No usable business number in the inspected listing and cached map tags. No unrelated nearby contact was borrowed.",
+        "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
+        "facilities": "No facilities inferred from photos or missing map attributes. Any unverified amenities remain unknown.",
+        "complete_address": "No complete street/premises address established from these sources; existing valid data retained.",
+        "coordinates": "Existing source point retained; identity/location reviewed.",
+        "website": "No additional authenticated operator website established in the inspected material.",
+        "category": "Existing event-venue category retained; a directory category alone is not operator confirmation.",
+        "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-with-gaps",
       "reviewed": "2026-10-25"
     },
     {
@@ -3597,15 +3885,34 @@
           "checked": "2026-10-25",
           "capture": "Relevant public map-business tags from verified 2026-10-24 extract; individually read in this audit.",
           "outcome": "Identity/address/contact tag review: {\"amenity\": \"community_centre\", \"name\": \"Jigatola Community Centre\", \"name:en\": \"Jigakke Community Centre\"}"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/298472671",
+          "kind": "open-data",
+          "checked": "2026-10-25",
+          "capture": "2026-10-24 Geofabrik extract, cached relevant business tags",
+          "outcome": "Inspected preserved identity/address/contact tags: {\"amenity\": \"community_centre\", \"name\": \"Jigatola Community Centre\", \"name:en\": \"Jigakke Community Centre\"}"
+        },
+        {
+          "url": "https://www.google.com/maps/place/Jigatala+Community+Center/@23.7373825,90.3718787,17z/data=!3m1!4b1!4m6!3m5!1s0x3755bf35bd472885:0x3609c9dd77c0f00c!8m2!3d23.7373825!4d90.3718787!16s%2Fg%2F1hm62wdfg?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
+          "outcome": "SelectedJigatala profile P9PC+XQ2 matches historicbuilding. Phone andwebsite explicitlyabsent. Road-onlyaddressrecorded; no completepremises/capacity/facilitiesestablished."
         }
       ],
       "field_outcomes": {
-        "research_notes": "Existing record and missing-field inventory reviewed. Additional business-profile/operator investigation remains incomplete because the environment public-internet proxy returns HTTP503 cloudflare_https_tunnel / Invalid argument. This is not a completed multi-source review.",
-        "phones": "No phone in preserved source tags; required external contact investigation remains blocked.",
-        "capacity": "No new seating fact established; external missing-field follow-up pending.",
-        "facilities": "Existing supported facts preserved; external amenity follow-up pending."
+        "research_notes": "SelectedJigatala profile P9PC+XQ2 matches historicbuilding. Phone andwebsite explicitlyabsent. Road-onlyaddressrecorded; no completepremises/capacity/facilitiesestablished.",
+        "phones": "No usable business number in the inspected listing and cached map tags. No unrelated nearby contact was borrowed.",
+        "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
+        "facilities": "No facilities inferred from photos or missing map attributes. Any unverified amenities remain unknown.",
+        "complete_address": "No complete street/premises address established from these sources; existing valid data retained.",
+        "coordinates": "Existing source point retained; identity/location reviewed.",
+        "website": "No additional authenticated operator website established in the inspected material.",
+        "category": "Existing event-venue category retained; a directory category alone is not operator confirmation.",
+        "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-with-gaps",
       "reviewed": "2026-10-25"
     },
     {
@@ -3753,16 +4060,34 @@
           "checked": "2026-10-25",
           "capture": "Relevant public map-business tags from verified 2026-10-24 extract; individually read in this audit.",
           "outcome": "Identity/address/contact tag review: {\"addr:city\": \"Dhaka\", \"addr:postcode\": \"1219\", \"addr:street\": \"Atish Depankar Rd\", \"amenity\": \"community_centre\", \"name\": \"Malibagh Community Centre\", \"name:bn\": \"মালিবাগ কমিউনিটি সেন্টার\", \"name:en\": \"Malibagh Commmunity Center\", \"wheelchair\": \"no\"}"
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Khilgaon%20Community%20Center%20Khilgaon%20Dhaka%20Bangladesh",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "capture": "Earlier individually inspected Khilgaon/Malika profile, geographically re-matched during correction; fresh follow-up request unavailable503.",
+          "outcome": "Published PCX8+VG point matches Malibagh original point within ~10m, not the other historic Khilgaon building1.2km away. No phone/website in inspected profile."
         }
       ],
       "field_outcomes": {
-        "research_notes": "Existing record and missing-field inventory reviewed. Additional business-profile/operator investigation remains incomplete because the environment public-internet proxy returns HTTP503 cloudflare_https_tunnel / Invalid argument. This is not a completed multi-source review.",
-        "phones": "No phone in preserved source tags; required external contact investigation remains blocked.",
+        "research_notes": "Khilgaon/Malika aliases attached to geographically matching Malibagh record. Other historic Khilgaon record remains separately flagged, no ID merge/deletion.",
+        "phones": "No booking phone published in inspected Khilgaon/Malika profile or original source tags. Additional operator lookup unavailable503.",
         "capacity": "No new seating fact established; external missing-field follow-up pending.",
-        "facilities": "Existing supported facts preserved; external amenity follow-up pending."
+        "facilities": "Existing supported facts preserved; external amenity follow-up pending.",
+        "complete_address": "Current profile landmark ShahidBakiRoad/east ofMalibaghMarket differs from historicAtishDepankarRoad; original address retained with conflict.",
+        "coordinates": "PCX8+VG corroborates original Malibagh point; no coordinate moved."
       },
-      "status": "blocked-follow-up",
-      "reviewed": "2026-10-25"
+      "status": "reviewed-with-gaps",
+      "reviewed": "2026-10-25",
+      "conflicts": [
+        {
+          "field": "name_and_address",
+          "historic": "Malibagh Community Centre, Atish Depankar Road",
+          "current_profile": "Khilgaon / Malika Community Center, Shahid Baki Road landmark",
+          "source": "https://www.google.com/maps/search/?api=1&query=Khilgaon%20Community%20Center%20Khilgaon%20Dhaka%20Bangladesh",
+          "decision": "Preserve historical name/address/area, add corroborated alias and review notice; matching PlusCode point. No merge/deletion."
+        }
+      ]
     },
     {
       "id": "bd-osm-way-371382348",
@@ -3825,15 +4150,41 @@
           "checked": "2026-10-25",
           "capture": "Relevant public map-business tags from verified 2026-10-24 extract; individually read in this audit.",
           "outcome": "Identity/address/contact tag review: {\"addr:city\": \"Dhaka\", \"addr:postcode\": \"1212\", \"addr:street\": \"Road 4 Block B\", \"amenity\": \"community_centre\", \"name\": \"Niketon Society Community Center\"}"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/384311411",
+          "kind": "open-data",
+          "checked": "2026-10-25",
+          "capture": "2026-10-24 Geofabrik extract, cached relevant business tags",
+          "outcome": "Inspected preserved identity/address/contact tags: {\"addr:city\": \"Dhaka\", \"addr:postcode\": \"1212\", \"addr:street\": \"Road 4 Block B\", \"amenity\": \"community_centre\", \"name\": \"Niketon Society Community Center\"}"
+        },
+        {
+          "url": "https://www.google.com/maps/place/Niketan+Society+Convention+Center/@23.7748439,90.4112737,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c7c2beec7c79:0x7289c227dc7ac433!8m2!3d23.7748439!4d90.4112737!16s%2Fg%2F11h_f618gg?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
+          "outcome": "Selected unique Niketan Society Convention Center. QCF6+WGJ matches preserved Road4BlockB source point. Phone01722556635public; linked generic DNCC homepage is not yet authenticated as a venue-specific operator site."
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Niketon%20Society%20Community%20Center%20Niketon%20Dhaka%20Bangladesh",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individually selected About tab manually examined; no automated facts extraction",
+          "outcome": "Selected About tab explicitly publishes wheelchair-accessible entrance and parking. No numeric capacity, AC or catering details given; do not infer facilities from event photos."
         }
       ],
       "field_outcomes": {
-        "research_notes": "Existing record and missing-field inventory reviewed. Additional business-profile/operator investigation remains incomplete because the environment public-internet proxy returns HTTP503 cloudflare_https_tunnel / Invalid argument. This is not a completed multi-source review.",
-        "phones": "No phone in preserved source tags; required external contact investigation remains blocked.",
-        "capacity": "No new seating fact established; external missing-field follow-up pending.",
-        "facilities": "Existing supported facts preserved; external amenity follow-up pending."
+        "research_notes": "Selected unique Niketan Society Convention Center. QCF6+WGJ matches preserved Road4BlockB source point. Phone01722556635public; linked generic DNCC homepage is not yet authenticated as a venue-specific operator site.",
+        "phones": "Public business number(s) inspected: +8801722556635. No line called.",
+        "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
+        "facilities": "Selected About tab explicitly publishes wheelchair-accessible entrance and parking. No numeric capacity, AC or catering details given; do not infer facilities from event photos.",
+        "complete_address": "No complete street/premises address established from these sources; existing valid data retained.",
+        "coordinates": "Existing source point retained; identity/location reviewed.",
+        "website": "No additional authenticated operator website established in the inspected material.",
+        "category": "Existing event-venue category retained; a directory category alone is not operator confirmation.",
+        "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-with-gaps",
       "reviewed": "2026-10-25"
     },
     {
@@ -3897,15 +4248,34 @@
           "checked": "2026-10-25",
           "capture": "Relevant public map-business tags from verified 2026-10-24 extract; individually read in this audit.",
           "outcome": "Identity/address/contact tag review: {\"addr:city\": \"Dhaka\", \"addr:postcode\": \"1206\", \"addr:street\": \"Hazi Market\", \"amenity\": \"community_centre\", \"name\": \"Ma Community Center\"}"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/438470592",
+          "kind": "open-data",
+          "checked": "2026-10-25",
+          "capture": "2026-10-24 Geofabrik extract, cached relevant business tags",
+          "outcome": "Inspected preserved identity/address/contact tags: {\"addr:city\": \"Dhaka\", \"addr:postcode\": \"1206\", \"addr:street\": \"Hazi Market\", \"amenity\": \"community_centre\", \"name\": \"Ma Community Center\"}"
+        },
+        {
+          "url": "https://www.google.com/maps/place/Ma+Community+Centre/@23.8402177,90.3872691,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c7e714b14e79:0x7b987056dc407cdd!8m2!3d23.8402177!4d90.3872691!16s%2Fg%2F11h_26b6kr?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
+          "outcome": "Individually selected Ma Community Centre at R9RP+3W matches Bawnia historic point. No phone or website published on this profile; nearby minimal same-name listing has no usable contact either. About lists accessible restroom only, not entrance or parking. No authenticated operator site found through profile. Unknown contact retained."
         }
       ],
       "field_outcomes": {
-        "research_notes": "Existing record and missing-field inventory reviewed. Additional business-profile/operator investigation remains incomplete because the environment public-internet proxy returns HTTP503 cloudflare_https_tunnel / Invalid argument. This is not a completed multi-source review.",
-        "phones": "No phone in preserved source tags; required external contact investigation remains blocked.",
-        "capacity": "No new seating fact established; external missing-field follow-up pending.",
-        "facilities": "Existing supported facts preserved; external amenity follow-up pending."
+        "research_notes": "Individually selected Ma Community Centre at R9RP+3W matches Bawnia historic point. No phone or website published on this profile; nearby minimal same-name listing has no usable contact either. About lists accessible restroom only, not entrance or parking. No authenticated operator site found through profile. Unknown contact retained.",
+        "phones": "No usable business number in the inspected listing and cached map tags. No unrelated nearby contact was borrowed.",
+        "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
+        "facilities": "No facilities inferred from photos or missing map attributes. Any unverified amenities remain unknown.",
+        "complete_address": "No complete street/premises address established from these sources; existing valid data retained.",
+        "coordinates": "Existing source point retained; identity/location reviewed.",
+        "website": "No additional authenticated operator website established in the inspected material.",
+        "category": "Existing event-venue category retained; a directory category alone is not operator confirmation.",
+        "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-with-gaps",
       "reviewed": "2026-10-25"
     },
     {
@@ -3927,16 +4297,50 @@
           "checked": "2026-10-25",
           "capture": "Relevant public map-business tags from verified 2026-10-24 extract; individually read in this audit.",
           "outcome": "Identity/address/contact tag review: {\"amenity\": \"community_centre\", \"name\": \"Dhalpur Community Centre\", \"wheelchair\": \"no\"}"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/439835437",
+          "kind": "open-data",
+          "checked": "2026-10-25",
+          "capture": "2026-10-24 Geofabrik extract, cached relevant business tags",
+          "outcome": "Inspected preserved identity/address/contact tags: {\"amenity\": \"community_centre\", \"name\": \"Dhalpur Community Centre\", \"wheelchair\": \"no\"}"
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Dhalpur%20Community%20Centre%20Saydabad%20Dhaka%20Bangladesh",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
+          "outcome": "After public-network restoration, individually matched Dholpur/Dhalpur profile atPC8J+WH. Public01684003036normalized; road-only address remains partial. No operator website; no guest count guessed."
+        },
+        {
+          "url": "https://www.google.com/maps/place/Dholpur+Community+Centre/@23.7172702,90.4314073,17z/data=!4m7!3m6!1s0x3755b9b5515a9589:0x684a8a061685b685!8m2!3d23.7172702!4d90.4314073!10e1!16s%2Fg%2F11dx93rtw_?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individually selected About tab manually examined; no automated facts extraction",
+          "outcome": "Selected About tab publishes wheelchair-accessible parking and entrance. Historic OSM wheelchair=no conflicts with current entrance claim; parking may be recorded, step-free entrance remains unconfirmed."
         }
       ],
       "field_outcomes": {
-        "research_notes": "Existing record and missing-field inventory reviewed. Additional business-profile/operator investigation remains incomplete because the environment public-internet proxy returns HTTP503 cloudflare_https_tunnel / Invalid argument. This is not a completed multi-source review.",
-        "phones": "No phone in preserved source tags; required external contact investigation remains blocked.",
-        "capacity": "No new seating fact established; external missing-field follow-up pending.",
-        "facilities": "Existing supported facts preserved; external amenity follow-up pending."
+        "research_notes": "After public-network restoration, individually matched Dholpur/Dhalpur profile atPC8J+WH. Public01684003036normalized; road-only address remains partial. No operator website; no guest count guessed.",
+        "phones": "Public business number(s) inspected: +8801684003036. No line called.",
+        "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
+        "facilities": "Selected About tab publishes wheelchair-accessible parking and entrance. Historic OSM wheelchair=no conflicts with current entrance claim; parking may be recorded, step-free entrance remains unconfirmed.",
+        "complete_address": "No complete street/premises address established from these sources; existing valid data retained.",
+        "coordinates": "Existing source point retained; identity/location reviewed.",
+        "website": "No additional authenticated operator website established in the inspected material.",
+        "category": "Existing event-venue category retained; a directory category alone is not operator confirmation.",
+        "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources."
       },
-      "status": "blocked-follow-up",
-      "reviewed": "2026-10-25"
+      "status": "reviewed-with-gaps",
+      "reviewed": "2026-10-25",
+      "conflicts": [
+        {
+          "field": "accessibility",
+          "existing_source_tag": "wheelchair=no",
+          "current_profile_claim": "wheelchair-accessible entrance",
+          "decision": "Preserve original tags; add parking only and require direct accessibility confirmation."
+        }
+      ]
     },
     {
       "id": "bd-osm-way-440170070",
@@ -3998,15 +4402,41 @@
           "checked": "2026-10-25",
           "capture": "Relevant public map-business tags from verified 2026-10-24 extract; individually read in this audit.",
           "outcome": "Identity/address/contact tag review: {\"amenity\": \"events_venue\", \"community_centre\": \"events_venue\", \"name\": \"Golf Garden\", \"phone\": \"+880 1769-017784\"}"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/441129284",
+          "kind": "open-data",
+          "checked": "2026-10-25",
+          "capture": "2026-10-24 Geofabrik extract, cached relevant business tags",
+          "outcome": "Inspected preserved identity/address/contact tags: {\"amenity\": \"events_venue\", \"community_centre\": \"events_venue\", \"name\": \"Golf Garden\", \"phone\": \"+880 1769-017784\"}"
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Golf%20Garden%20Dhaka%20Cantonment%20Dhaka%20Bangladesh",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
+          "outcome": "ExactGolfGardenArmyGolfClub RC97+H6matcheshistoricpoint. Existing01769017784confirmed; operatorgolfgarden.com.bdlinkpublished. OperatorrobotsrequestHTTP503so no furtherfacility/capacityclaims. Road/clubaddressonly, no premisesnumber."
+        },
+        {
+          "url": "https://www.google.com/maps/place/Golf+Garden,+Army+Golf+Club/@23.8189852,90.4130495,17z/data=!4m7!3m6!1s0x3755c6563303f16b:0xaad8ef64ac43ad71!8m2!3d23.8189852!4d90.4130495!10e1!16s%2Fg%2F11r99dqrw?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individually selected About tab manually examined; no automated facts extraction",
+          "outcome": "Aboutexplicitlyshowsaccessibleentranceandparking. No numericcapacity, AC/catering evidence."
         }
       ],
       "field_outcomes": {
-        "research_notes": "Existing record and missing-field inventory reviewed. Additional business-profile/operator investigation remains incomplete because the environment public-internet proxy returns HTTP503 cloudflare_https_tunnel / Invalid argument. This is not a completed multi-source review.",
-        "phones": "Existing sourced numbers preserved; additional contact research blocked.",
-        "capacity": "No new seating fact established; external missing-field follow-up pending.",
-        "facilities": "Existing supported facts preserved; external amenity follow-up pending."
+        "research_notes": "ExactGolfGardenArmyGolfClub RC97+H6matcheshistoricpoint. Existing01769017784confirmed; operatorgolfgarden.com.bdlinkpublished. OperatorrobotsrequestHTTP503so no furtherfacility/capacityclaims. Road/clubaddressonly, no premisesnumber.",
+        "phones": "Existing sourced business phone(s) preserved. No additional usable business number established from the inspected material.",
+        "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
+        "facilities": "Aboutexplicitlyshowsaccessibleentranceandparking. No numericcapacity, AC/catering evidence.",
+        "complete_address": "No complete street/premises address established from these sources; existing valid data retained.",
+        "coordinates": "Existing source point retained; identity/location reviewed.",
+        "website": "Published operator link requires separate first-party inspection.",
+        "category": "Existing event-venue category retained; a directory category alone is not operator confirmation.",
+        "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-with-gaps",
       "reviewed": "2026-10-25"
     },
     {
@@ -4028,16 +4458,44 @@
           "checked": "2026-10-25",
           "capture": "Relevant public map-business tags from verified 2026-10-24 extract; individually read in this audit.",
           "outcome": "Identity/address/contact tag review: {\"addr:city\": \"Dhaka\", \"addr:housenumber\": \"3\", \"addr:postcode\": \"1204\", \"addr:street\": \"Distilary Road\", \"amenity\": \"community_centre\", \"name\": \"Meyor shaed khokon community center, Gandariya dhupkhola Dhaka -1204\"}"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/456824572",
+          "kind": "open-data",
+          "checked": "2026-10-25",
+          "capture": "2026-10-24 Geofabrik extract, cached relevant business tags",
+          "outcome": "Inspected preserved identity/address/contact tags: {\"addr:city\": \"Dhaka\", \"addr:housenumber\": \"3\", \"addr:postcode\": \"1204\", \"addr:street\": \"Distilary Road\", \"amenity\": \"community_centre\", \"name\": \"Meyor shaed khokon community center, Gandariya dhupkhola Dhaka -1204\"}"
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Mayor%20Sayed%20Khokon%20Community%20Center%20Gandaria%20Dhaka%20Bangladesh",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
+          "outcome": "Gandaria Community Centre PC5F+33 matches source building point within ~11m on Distilary Road. Public business01684254207. Published114 conflicts with retained3; preserve original and flag. No accessible attributes readable under overlay; none inferred."
         }
       ],
       "field_outcomes": {
-        "research_notes": "Existing record and missing-field inventory reviewed. Additional business-profile/operator investigation remains incomplete because the environment public-internet proxy returns HTTP503 cloudflare_https_tunnel / Invalid argument. This is not a completed multi-source review.",
-        "phones": "No phone in preserved source tags; required external contact investigation remains blocked.",
-        "capacity": "No new seating fact established; external missing-field follow-up pending.",
-        "facilities": "Existing supported facts preserved; external amenity follow-up pending."
+        "research_notes": "Gandaria Community Centre PC5F+33 matches source building point within ~11m on Distilary Road. Public business01684254207. Published114 conflicts with retained3; preserve original and flag. No accessible attributes readable under overlay; none inferred.",
+        "phones": "Public business number(s) inspected: +8801684254207. No line called.",
+        "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
+        "facilities": "No facilities inferred from photos or missing map attributes. Any unverified amenities remain unknown.",
+        "complete_address": "Conflicting premises numbers 3 and114; original retained and visible notice added.",
+        "coordinates": "Existing source point retained; identity/location reviewed.",
+        "website": "No additional authenticated operator website established in the inspected material.",
+        "category": "Existing event-venue category retained; a directory category alone is not operator confirmation.",
+        "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources."
       },
-      "status": "blocked-follow-up",
-      "reviewed": "2026-10-25"
+      "status": "reviewed-with-gaps",
+      "reviewed": "2026-10-25",
+      "conflicts": [
+        {
+          "field": "address",
+          "existing": "3 Distilary Road Dhaka 1204, Dhaka, Bangladesh",
+          "proposed": "114 Distilary Road, Dhaka1204",
+          "source": "https://www.google.com/maps/search/?api=1&query=Mayor%20Sayed%20Khokon%20Community%20Center%20Gandaria%20Dhaka%20Bangladesh",
+          "decision": "Same mapped position, differing premises numbers; retain established value and flag for booking confirmation."
+        }
+      ]
     },
     {
       "id": "bd-osm-way-490274323",
@@ -4101,15 +4559,41 @@
           "checked": "2026-10-25",
           "capture": "Relevant public map-business tags from verified 2026-10-24 extract; individually read in this audit.",
           "outcome": "Identity/address/contact tag review: {\"addr:city\": \"Dhaka\", \"addr:postcode\": \"1213\", \"amenity\": \"community_centre\", \"name\": \"সাগরিকা মাল্টি পারপাস হল\", \"name:bn\": \"সাগরিকা মাল্টি পারপাস হল\", \"name:en\": \"Sagorika Multipurpose Hall\"}"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/495120358",
+          "kind": "open-data",
+          "checked": "2026-10-25",
+          "capture": "2026-10-24 Geofabrik extract, cached relevant business tags",
+          "outcome": "Inspected preserved identity/address/contact tags: {\"addr:city\": \"Dhaka\", \"addr:postcode\": \"1213\", \"amenity\": \"community_centre\", \"name\": \"সাগরিকা মাল্টি পারপাস হল\", \"name:bn\": \"সাগরিকা মাল্টি পারপাস হল\", \"name:en\": \"Sagorika Multipurpose Hall\"}"
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Sagorika%20Multipurpose%20Hall%20Banani%20Dhaka%20Bangladesh",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
+          "outcome": "Exact Sagorika profile RC24+W8G matches historic point within ~11m. Phone01769970283. Profile only Plus Code and city/postcode, not a complete premises address. Preserve original locality/postcode rather than silently replacing conflicting postcode."
+        },
+        {
+          "url": "https://www.google.com/maps/place/Sagorika+Multipurpose+Hall/@23.8023044,90.4058344,17z/data=!4m7!3m6!1s0x3755c7045a460e73:0xe4967014c5a09cd7!8m2!3d23.8023044!4d90.4058344!10e1!16s%2Fg%2F11by_hlyby?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individually selected About tab manually examined; no automated facts extraction",
+          "outcome": "About explicitly publishes accessible entrance and parking; no seating capacity or AC/catering evidence."
         }
       ],
       "field_outcomes": {
-        "research_notes": "Existing record and missing-field inventory reviewed. Additional business-profile/operator investigation remains incomplete because the environment public-internet proxy returns HTTP503 cloudflare_https_tunnel / Invalid argument. This is not a completed multi-source review.",
-        "phones": "No phone in preserved source tags; required external contact investigation remains blocked.",
-        "capacity": "No new seating fact established; external missing-field follow-up pending.",
-        "facilities": "Existing supported facts preserved; external amenity follow-up pending."
+        "research_notes": "Exact Sagorika profile RC24+W8G matches historic point within ~11m. Phone01769970283. Profile only Plus Code and city/postcode, not a complete premises address. Preserve original locality/postcode rather than silently replacing conflicting postcode.",
+        "phones": "Public business number(s) inspected: +8801769970283. No line called.",
+        "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
+        "facilities": "About explicitly publishes accessible entrance and parking; no seating capacity or AC/catering evidence.",
+        "complete_address": "No complete street/premises address established from these sources; existing valid data retained.",
+        "coordinates": "Existing source point retained; identity/location reviewed.",
+        "website": "No additional authenticated operator website established in the inspected material.",
+        "category": "Existing event-venue category retained; a directory category alone is not operator confirmation.",
+        "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-with-gaps",
       "reviewed": "2026-10-25"
     },
     {
@@ -4211,15 +4695,41 @@
           "checked": "2026-10-25",
           "capture": "Relevant public map-business tags from verified 2026-10-24 extract; individually read in this audit.",
           "outcome": "Identity/address/contact tag review: {\"addr:city\": \"Dhaka\", \"addr:housenumber\": \"23/G/6\", \"addr:postcode\": \"1205\", \"addr:street\": \"Panthapath\", \"amenity\": \"community_centre\", \"name\": \"Samarai Convention Center\", \"name:bn\": \"সমারাই কনভেনশন সেন্টার\"}"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/506163768",
+          "kind": "open-data",
+          "checked": "2026-10-25",
+          "capture": "2026-10-24 Geofabrik extract, cached relevant business tags",
+          "outcome": "Inspected preserved identity/address/contact tags: {\"addr:city\": \"Dhaka\", \"addr:housenumber\": \"23/G/6\", \"addr:postcode\": \"1205\", \"addr:street\": \"Panthapath\", \"amenity\": \"community_centre\", \"name\": \"Samarai Convention Center\", \"name:bn\": \"সমারাই কনভেনশন সেন্টার\"}"
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Samarai%20Convention%20Center%20Panthapath%20Dhaka%20Bangladesh",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
+          "outcome": "Matched 23/G/6 Panthapath, Sumona Nigam Trade Center and Q92R+2J (~80m from historic building center). Public number 01511-803737; no operator website published. Preserve original address and approximate source point."
+        },
+        {
+          "url": "https://www.google.com/maps/place/Samarai+Convention+Center/@23.7500311,90.3916224,17z/data=!4m7!3m6!1s0x3755b8bd21ea82b1:0x8ccae83825fedd44!8m2!3d23.7500311!4d90.3916224!10e1!16s%2Fg%2F1tkks6zf?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individually selected About tab manually examined; no automated facts extraction",
+          "outcome": "About explicitly lists accessible entrance and parking. Capacity, AC and catering not established."
         }
       ],
       "field_outcomes": {
-        "research_notes": "Existing record and missing-field inventory reviewed. Additional business-profile/operator investigation remains incomplete because the environment public-internet proxy returns HTTP503 cloudflare_https_tunnel / Invalid argument. This is not a completed multi-source review.",
-        "phones": "No phone in preserved source tags; required external contact investigation remains blocked.",
-        "capacity": "No new seating fact established; external missing-field follow-up pending.",
-        "facilities": "Existing supported facts preserved; external amenity follow-up pending."
+        "research_notes": "Matched 23/G/6 Panthapath, Sumona Nigam Trade Center and Q92R+2J (~80m from historic building center). Public number 01511-803737; no operator website published. Preserve original address and approximate source point.",
+        "phones": "Public business number(s) inspected: +8801511803737. No line called.",
+        "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
+        "facilities": "About explicitly lists accessible entrance and parking. Capacity, AC and catering not established.",
+        "complete_address": "No complete street/premises address established from these sources; existing valid data retained.",
+        "coordinates": "Existing source point retained; identity/location reviewed.",
+        "website": "No additional authenticated operator website established in the inspected material.",
+        "category": "Existing event-venue category retained; a directory category alone is not operator confirmation.",
+        "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-with-gaps",
       "reviewed": "2026-10-25"
     },
     {
@@ -4241,15 +4751,41 @@
           "checked": "2026-10-25",
           "capture": "Relevant public map-business tags from verified 2026-10-24 extract; individually read in this audit.",
           "outcome": "Identity/address/contact tag review: {\"amenity\": \"community_centre\", \"name\": \"গ্রীন হাউজ কমিউনিটি সেন্টার\", \"name:en\": \"Green House Community Center\"}"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/534499396",
+          "kind": "open-data",
+          "checked": "2026-10-25",
+          "capture": "2026-10-24 Geofabrik extract, cached relevant business tags",
+          "outcome": "Inspected preserved identity/address/contact tags: {\"amenity\": \"community_centre\", \"name\": \"গ্রীন হাউজ কমিউনিটি সেন্টার\", \"name:en\": \"Green House Community Center\"}"
+        },
+        {
+          "url": "https://www.google.com/maps/place/Green+House+Community+Center/@23.699508,90.4354835,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b9c68f8d939f:0xa41511cda542ba15!8m2!3d23.699508!4d90.4354835!16s%2Fg%2F11c2jtjm_s?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
+          "outcome": "Green House profile MCXP+R55 matches historic Jurain point. No public phone or website in inspected business listing or source tags. Landmark address only; no premises number, capacity, AC or catering established."
+        },
+        {
+          "url": "https://www.google.com/maps/place/Green+House+Community+Center/@23.699508,90.4354835,17z/data=!4m7!3m6!1s0x3755b9c68f8d939f:0xa41511cda542ba15!8m2!3d23.699508!4d90.4354835!10e1!16s%2Fg%2F11c2jtjm_s?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individually selected About tab manually examined; no automated facts extraction",
+          "outcome": "Explicit accessible entrance and parking in About; no capacity or AC/catering claims."
         }
       ],
       "field_outcomes": {
-        "research_notes": "Existing record and missing-field inventory reviewed. Additional business-profile/operator investigation remains incomplete because the environment public-internet proxy returns HTTP503 cloudflare_https_tunnel / Invalid argument. This is not a completed multi-source review.",
-        "phones": "No phone in preserved source tags; required external contact investigation remains blocked.",
-        "capacity": "No new seating fact established; external missing-field follow-up pending.",
-        "facilities": "Existing supported facts preserved; external amenity follow-up pending."
+        "research_notes": "Green House profile MCXP+R55 matches historic Jurain point. No public phone or website in inspected business listing or source tags. Landmark address only; no premises number, capacity, AC or catering established.",
+        "phones": "No usable business number in the inspected listing and cached map tags. No unrelated nearby contact was borrowed.",
+        "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
+        "facilities": "Explicit accessible entrance and parking in About; no capacity or AC/catering claims.",
+        "complete_address": "No complete street/premises address established from these sources; existing valid data retained.",
+        "coordinates": "Existing source point retained; identity/location reviewed.",
+        "website": "No additional authenticated operator website established in the inspected material.",
+        "category": "Existing event-venue category retained; a directory category alone is not operator confirmation.",
+        "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-with-gaps",
       "reviewed": "2026-10-25"
     },
     {
@@ -4271,15 +4807,23 @@
           "checked": "2026-10-25",
           "capture": "Relevant public map-business tags from verified 2026-10-24 extract; individually read in this audit.",
           "outcome": "Identity/address/contact tag review: {\"amenity\": \"community_centre\", \"name\": \"Somrat Community Center সম্রাট কমিউনিটি সেন্টার\"}"
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Somrat%20Community%20Center%20Dhaka",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "outcome": "Additional individual business-profile follow-up attempted after network recovery; returned environment HTTP503 cloudflare_https_tunnel / Invalid argument. Existing earlier inspected facts retained. This failure is not venue closure or proof a number does not exist.",
+          "access": "unavailable"
         }
       ],
       "field_outcomes": {
-        "research_notes": "Existing record and missing-field inventory reviewed. Additional business-profile/operator investigation remains incomplete because the environment public-internet proxy returns HTTP503 cloudflare_https_tunnel / Invalid argument. This is not a completed multi-source review.",
+        "research_notes": "Existing record and missing-field inventory reviewed. Additional business-profile/operator investigation remains incomplete because the environment public-internet proxy returns HTTP503 cloudflare_https_tunnel / Invalid argument. This is not a completed multi-source review. Follow-up attempted again in final pass; source/network unavailable503. No unsupported facts filled.",
         "phones": "No phone in preserved source tags; required external contact investigation remains blocked.",
         "capacity": "No new seating fact established; external missing-field follow-up pending.",
-        "facilities": "Existing supported facts preserved; external amenity follow-up pending."
+        "facilities": "Existing supported facts preserved; external amenity follow-up pending.",
+        "follow_up_blocker": "Additional missing-field follow-up remains source-limited; record reviewed, but inaccessible material was not verified."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-source-limited",
       "reviewed": "2026-10-25"
     },
     {
@@ -4301,15 +4845,41 @@
           "checked": "2026-10-25",
           "capture": "Relevant public map-business tags from verified 2026-10-24 extract; individually read in this audit.",
           "outcome": "Identity/address/contact tag review: {\"amenity\": \"community_centre\", \"name\": \"Rifa Convention Center\"}"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/536571520",
+          "kind": "open-data",
+          "checked": "2026-10-25",
+          "capture": "2026-10-24 Geofabrik extract, cached relevant business tags",
+          "outcome": "Inspected preserved identity/address/contact tags: {\"amenity\": \"community_centre\", \"name\": \"Rifa Convention Center\"}"
+        },
+        {
+          "url": "https://www.google.com/maps/place/Rifa+Convention+Centre/@23.6865132,90.4345071,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b96ffc88d6ed:0x6f865e93c77fce38!8m2!3d23.6865132!4d90.4345071!16s%2Fg%2F11c1r1q7t5?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
+          "outcome": "Exact Rifa profile MCPM+JR matches original source building. Public01721673459. Public landmark address translated to English; no house number, no website, capacity or catering. Original OSM coordinates retained."
+        },
+        {
+          "url": "https://www.google.com/maps/place/Rifa+Convention+Centre/@23.6865132,90.4345071,17z/data=!4m7!3m6!1s0x3755b96ffc88d6ed:0x6f865e93c77fce38!8m2!3d23.6865132!4d90.4345071!10e1!16s%2Fg%2F11c1r1q7t5?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individually selected About tab manually examined; no automated facts extraction",
+          "outcome": "About explicitly lists accessible entrance and parking; no AC/capacity inferred."
         }
       ],
       "field_outcomes": {
-        "research_notes": "Existing record and missing-field inventory reviewed. Additional business-profile/operator investigation remains incomplete because the environment public-internet proxy returns HTTP503 cloudflare_https_tunnel / Invalid argument. This is not a completed multi-source review.",
-        "phones": "No phone in preserved source tags; required external contact investigation remains blocked.",
-        "capacity": "No new seating fact established; external missing-field follow-up pending.",
-        "facilities": "Existing supported facts preserved; external amenity follow-up pending."
+        "research_notes": "Exact Rifa profile MCPM+JR matches original source building. Public01721673459. Public landmark address translated to English; no house number, no website, capacity or catering. Original OSM coordinates retained.",
+        "phones": "Public business number(s) inspected: +8801721673459. No line called.",
+        "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
+        "facilities": "About explicitly lists accessible entrance and parking; no AC/capacity inferred.",
+        "complete_address": "No complete street/premises address established from these sources; existing valid data retained.",
+        "coordinates": "Existing source point retained; identity/location reviewed.",
+        "website": "No additional authenticated operator website established in the inspected material.",
+        "category": "Existing event-venue category retained; a directory category alone is not operator confirmation.",
+        "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-with-gaps",
       "reviewed": "2026-10-25"
     },
     {
@@ -4373,15 +4943,41 @@
           "checked": "2026-10-25",
           "capture": "Relevant public map-business tags from verified 2026-10-24 extract; individually read in this audit.",
           "outcome": "Identity/address/contact tag review: {\"addr:city\": \"Dhaka\", \"addr:postcode\": \"1206\", \"addr:street\": \"Eastern Road\", \"name\": \"DOHS Baridhara Convention Center\"}"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/586533328",
+          "kind": "open-data",
+          "checked": "2026-10-25",
+          "capture": "2026-10-24 Geofabrik extract, cached relevant business tags",
+          "outcome": "Inspected preserved identity/address/contact tags: {\"addr:city\": \"Dhaka\", \"addr:postcode\": \"1206\", \"addr:street\": \"Eastern Road\", \"name\": \"DOHS Baridhara Convention Center\"}"
+        },
+        {
+          "url": "https://www.google.com/maps/place/Baridhara+DOHS+Convention+Centre/@23.8160204,90.4156136,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c65426c2fa7f:0x6c4039efbd72815e!8m2!3d23.8160204!4d90.4156136!16s%2Fg%2F12hl55j09?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
+          "outcome": "Exact convention center, RC88+C6 matches original DOHS point. Public01847217063. DOHS Bypass is road-only address, preserve Eastern Road source and unknown complete premises. No website linked."
+        },
+        {
+          "url": "https://www.google.com/maps/place/Baridhara+DOHS+Convention+Centre/@23.8160204,90.4156136,17z/data=!4m7!3m6!1s0x3755c65426c2fa7f:0x6c4039efbd72815e!8m2!3d23.8160204!4d90.4156136!10e1!16s%2Fg%2F12hl55j09?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individually selected About tab manually examined; no automated facts extraction",
+          "outcome": "About explicitly publishes accessible entrance and parking, not numeric seating, AC or catering."
         }
       ],
       "field_outcomes": {
-        "research_notes": "Existing record and missing-field inventory reviewed. Additional business-profile/operator investigation remains incomplete because the environment public-internet proxy returns HTTP503 cloudflare_https_tunnel / Invalid argument. This is not a completed multi-source review.",
-        "phones": "No phone in preserved source tags; required external contact investigation remains blocked.",
-        "capacity": "No new seating fact established; external missing-field follow-up pending.",
-        "facilities": "Existing supported facts preserved; external amenity follow-up pending."
+        "research_notes": "Exact convention center, RC88+C6 matches original DOHS point. Public01847217063. DOHS Bypass is road-only address, preserve Eastern Road source and unknown complete premises. No website linked.",
+        "phones": "Public business number(s) inspected: +8801847217063. No line called.",
+        "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
+        "facilities": "About explicitly publishes accessible entrance and parking, not numeric seating, AC or catering.",
+        "complete_address": "No complete street/premises address established from these sources; existing valid data retained.",
+        "coordinates": "Existing source point retained; identity/location reviewed.",
+        "website": "No additional authenticated operator website established in the inspected material.",
+        "category": "Existing event-venue category retained; a directory category alone is not operator confirmation.",
+        "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-with-gaps",
       "reviewed": "2026-10-25"
     },
     {
@@ -4433,15 +5029,41 @@
           "checked": "2026-10-25",
           "capture": "Relevant public map-business tags from verified 2026-10-24 extract; individually read in this audit.",
           "outcome": "Identity/address/contact tag review: {\"addr:city\": \"Dhaka\", \"addr:housenumber\": \"55\", \"addr:postcode\": \"1000\", \"addr:street\": \"Purana Paltan Line\", \"amenity\": \"restaurant\", \"name\": \"Ananda Bhaban Community Center\", \"name:bn\": \"আনন্দ ভবন কমিউনিটি সেন্টার\", \"phone\": \"+8801786064031\"}"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/700469632",
+          "kind": "open-data",
+          "checked": "2026-10-25",
+          "capture": "2026-10-24 Geofabrik extract, cached relevant business tags",
+          "outcome": "Inspected preserved identity/address/contact tags: {\"addr:city\": \"Dhaka\", \"addr:housenumber\": \"55\", \"addr:postcode\": \"1000\", \"addr:street\": \"Purana Paltan Line\", \"amenity\": \"restaurant\", \"name\": \"Ananda Bhaban Community Center\", \"name:bn\": \"আনন্দ ভবন কমিউনিটি সেন্টার\", \"phone\": \"+8801786064031\"}"
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Ananda%20Bhaban%20Community%20Center%20Paltan%20Dhaka%20Bangladesh",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
+          "outcome": "ExactAnandaBhaban55PuranaPaltanLine VIPRoad PCP6+QXmatchespoint. Currentprofilephone/websiteabsent; previouslypublished01786064031preserved withoriginalsource, not asserted reconfirmed. No new capacity/AC/catering evidence."
+        },
+        {
+          "url": "https://www.google.com/maps/place/Ananda+Bhaban+Community+Center/@23.7369095,90.4124969,17z/data=!4m7!3m6!1s0x3755b8f5627c1057:0xddb61189818a1c2c!8m2!3d23.7369095!4d90.4124969!10e1!16s%2Fg%2F1pv0zvfq0?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individually selected About tab manually examined; no automated facts extraction",
+          "outcome": "Explicitaccessibleentranceandparkingpublished, not capacity/AC/catering."
         }
       ],
       "field_outcomes": {
-        "research_notes": "Existing record and missing-field inventory reviewed. Additional business-profile/operator investigation remains incomplete because the environment public-internet proxy returns HTTP503 cloudflare_https_tunnel / Invalid argument. This is not a completed multi-source review.",
-        "phones": "Existing sourced numbers preserved; additional contact research blocked.",
-        "capacity": "No new seating fact established; external missing-field follow-up pending.",
-        "facilities": "Existing supported facts preserved; external amenity follow-up pending."
+        "research_notes": "ExactAnandaBhaban55PuranaPaltanLine VIPRoad PCP6+QXmatchespoint. Currentprofilephone/websiteabsent; previouslypublished01786064031preserved withoriginalsource, not asserted reconfirmed. No new capacity/AC/catering evidence.",
+        "phones": "Existing sourced business phone(s) preserved. No additional usable business number established from the inspected material.",
+        "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
+        "facilities": "Explicitaccessibleentranceandparkingpublished, not capacity/AC/catering.",
+        "complete_address": "No complete street/premises address established from these sources; existing valid data retained.",
+        "coordinates": "Existing source point retained; identity/location reviewed.",
+        "website": "No additional authenticated operator website established in the inspected material.",
+        "category": "Existing event-venue category retained; a directory category alone is not operator confirmation.",
+        "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-with-gaps",
       "reviewed": "2026-10-25"
     },
     {
@@ -4502,15 +5124,41 @@
           "checked": "2026-10-25",
           "capture": "Relevant public map-business tags from verified 2026-10-24 extract; individually read in this audit.",
           "outcome": "Identity/address/contact tag review: {\"addr:city\": \"Dhaka\", \"addr:housenumber\": \"48/2\", \"addr:postcode\": \"1205\", \"addr:street\": \"Azimpur Road\", \"name\": \"Azimpur State Janakalyan Samiti Community Center\"}"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1532360738",
+          "kind": "open-data",
+          "checked": "2026-10-25",
+          "capture": "2026-10-24 Geofabrik extract, cached relevant business tags",
+          "outcome": "Inspected preserved identity/address/contact tags: {\"addr:city\": \"Dhaka\", \"addr:housenumber\": \"48/2\", \"addr:postcode\": \"1205\", \"addr:street\": \"Azimpur Road\", \"name\": \"Azimpur State Janakalyan Samiti Community Center\"}"
+        },
+        {
+          "url": "https://www.google.com/maps/place/Azimpur+Estate+Jonokalyan+Samiti/@23.7238042,90.3863779,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b8da54128879:0xdba06185c34f4140!8m2!3d23.7238042!4d90.3863779!16s%2Fg%2F11bwyt_kc0?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
+          "outcome": "SelectedAzimpurEstateJonokalyanSamiti48/2AzimpurRoad P9FP+GH matches originalpoint. Public01754-137010. Profilecategorydance school differs fromhistoriccommunitycenter; venueidentityandbookingeligibilityneedconfirmation, no dance-staff personal numbers sought."
+        },
+        {
+          "url": "https://www.google.com/maps/place/Azimpur+Estate+Jonokalyan+Samiti/@23.7238042,90.3863779,17z/data=!4m7!3m6!1s0x3755b8da54128879:0xdba06185c34f4140!8m2!3d23.7238042!4d90.3863779!10e1!16s%2Fg%2F11bwyt_kc0?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individually selected About tab manually examined; no automated facts extraction",
+          "outcome": "Aboutpublishesaccessibleentrance only; parkingnotestablished. Dance-schoolcategoryconflict flagged separately."
         }
       ],
       "field_outcomes": {
-        "research_notes": "Existing record and missing-field inventory reviewed. Additional business-profile/operator investigation remains incomplete because the environment public-internet proxy returns HTTP503 cloudflare_https_tunnel / Invalid argument. This is not a completed multi-source review.",
-        "phones": "No phone in preserved source tags; required external contact investigation remains blocked.",
-        "capacity": "No new seating fact established; external missing-field follow-up pending.",
-        "facilities": "Existing supported facts preserved; external amenity follow-up pending."
+        "research_notes": "SelectedAzimpurEstateJonokalyanSamiti48/2AzimpurRoad P9FP+GH matches originalpoint. Public01754-137010. Profilecategorydance school differs fromhistoriccommunitycenter; venueidentityandbookingeligibilityneedconfirmation, no dance-staff personal numbers sought.",
+        "phones": "Public business number(s) inspected: +8801754137010. No line called.",
+        "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
+        "facilities": "Aboutpublishesaccessibleentrance only; parkingnotestablished. Dance-schoolcategoryconflict flagged separately.",
+        "complete_address": "No complete street/premises address established from these sources; existing valid data retained.",
+        "coordinates": "Existing source point retained; identity/location reviewed.",
+        "website": "No additional authenticated operator website established in the inspected material.",
+        "category": "Existing event-venue category retained; a directory category alone is not operator confirmation.",
+        "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-with-gaps",
       "reviewed": "2026-10-25"
     },
     {
@@ -4603,6 +5251,20 @@
           "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
           "outcome": "Re-examined unique Officers Club Dhaka public profile and26BaileyRoad address; phone and website explicitly missing. Existing point/address match. No private club member or staff contacts sought.",
           "capture": "Same-day source screenshot retained from earlier research; manually re-examined in this complete-record audit. officers-map.png"
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Officers%27%20Club%20Dhaka%20Ramna%20Dhaka%20Bangladesh",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
+          "outcome": "ExactOfficersClub26BaileyRoad PCR3+WR matches sourcepoint. Profilephone/websitefieldsabsent. Additionaloperatorwebsearchfailed HTTPresponse; no private member/director numbers reused. Bookingphone remainsunknown; not proofno phoneexists."
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Officers%27%20Club%20Dhaka%20Ramna%20Dhaka%20Bangladesh",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individually selected About tab manually examined; no automated facts extraction",
+          "outcome": "Explicitaccessible entranceandparking inAbout; no hallcapacity/AC/cateringdetails."
         }
       ],
       "field_outcomes": {
@@ -4612,12 +5274,12 @@
         "website": "No additional authenticated operator website established in the inspected material.",
         "category": "Existing event-venue category retained; a directory category alone is not operator confirmation.",
         "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
-        "facilities": "No facilities inferred from photos or missing map attributes. Any unverified amenities remain unknown.",
+        "facilities": "Explicitaccessible entranceandparking inAbout; no hallcapacity/AC/cateringdetails.",
         "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources.",
-        "research_notes": "Re-examined unique Officers Club Dhaka public profile and26BaileyRoad address; phone and website explicitly missing. Existing point/address match. No private club member or staff contacts sought.",
-        "follow_up_blocker": "Initial public source material reviewed, but additional missing-field/operator follow-up remains incomplete due environment proxy503 or recorded source-access exclusion. Retain as unfinished follow-up."
+        "research_notes": "ExactOfficersClub26BaileyRoad PCR3+WR matches sourcepoint. Profilephone/websitefieldsabsent. Additionaloperatorwebsearchfailed HTTPresponse; no private member/director numbers reused. Bookingphone remainsunknown; not proofno phoneexists.",
+        "earlier_access_incident": "Initial public source material reviewed, but additional missing-field/operator follow-up remains incomplete due environment proxy503 or recorded source-access exclusion. Retain as unfinished follow-up."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-with-gaps",
       "reviewed": "2026-10-25"
     },
     {
@@ -4743,6 +5405,20 @@
           "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
           "outcome": "Re-examined matching Motijheel public profile PCP C+6M near AGB Colony. Phone, operator website and premises street address missing; no co-located shop number adopted. Existing valid locality preserved.",
           "capture": "Same-day source screenshot retained from earlier research; manually re-examined in this complete-record audit. motijheel-map.png"
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Motijheel%20Community%20Center%20Dhaka",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
+          "outcome": "ExactMotijheelPCPC+6MmatchesexistingpointnearAGBColony. Phone andwebsiteabsent inpublicprofile, no premisesstreetaddress. PreserveactualMotijheelarea. No shop/councillorstaffline borrowed."
+        },
+        {
+          "url": "https://www.google.com/maps/place/Motijheel+Community+Center/@23.735544,90.421647,17z/data=!4m7!3m6!1s0x3755b85cd155efad:0x5e6b84502810cbd9!8m2!3d23.735544!4d90.421647!10e1!16s%2Fg%2F11c6vbbyvd?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individually selected About tab manually examined; no automated facts extraction",
+          "outcome": "Aboutpublishesaccessibleparking/restroom, notaccessibleentrance. Capacity/AC/cateringunknown."
         }
       ],
       "field_outcomes": {
@@ -4752,12 +5428,12 @@
         "website": "No additional authenticated operator website established in the inspected material.",
         "category": "Existing event-venue category retained; a directory category alone is not operator confirmation.",
         "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
-        "facilities": "No facilities inferred from photos or missing map attributes. Any unverified amenities remain unknown.",
+        "facilities": "Aboutpublishesaccessibleparking/restroom, notaccessibleentrance. Capacity/AC/cateringunknown.",
         "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources.",
-        "research_notes": "Re-examined matching Motijheel public profile PCP C+6M near AGB Colony. Phone, operator website and premises street address missing; no co-located shop number adopted. Existing valid locality preserved.",
-        "follow_up_blocker": "Initial public source material reviewed, but additional missing-field/operator follow-up remains incomplete due environment proxy503 or recorded source-access exclusion. Retain as unfinished follow-up."
+        "research_notes": "ExactMotijheelPCPC+6MmatchesexistingpointnearAGBColony. Phone andwebsiteabsent inpublicprofile, no premisesstreetaddress. PreserveactualMotijheelarea. No shop/councillorstaffline borrowed.",
+        "earlier_access_incident": "Initial public source material reviewed, but additional missing-field/operator follow-up remains incomplete due environment proxy503 or recorded source-access exclusion. Retain as unfinished follow-up."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-with-gaps",
       "reviewed": "2026-10-25"
     },
     {
@@ -4780,6 +5456,13 @@
           "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
           "outcome": "Re-examined matching Modhubagh/Hatirjheel municipal center QC56+96V beside named playground. Phone and operator link missing. Ward councillor office is distinct and not used as booking contact.",
           "capture": "Same-day source screenshot retained from earlier research; manually re-examined in this complete-record audit. modhubagh-map.png"
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Modhubagh%20Community%20Centre%20Hatirjheel%20Dhaka",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
+          "outcome": "ExactModhubaghHatirjheel QC56+96V matchespointbesidecommunityground. Profilephone/websiteabsent. Co-locatedwardofficeisdistinctanditsnumbernot adopted. Completepremises, capacityandbookingphone remainunconfirmed."
         }
       ],
       "field_outcomes": {
@@ -4791,10 +5474,10 @@
         "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
         "facilities": "No facilities inferred from photos or missing map attributes. Any unverified amenities remain unknown.",
         "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources.",
-        "research_notes": "Re-examined matching Modhubagh/Hatirjheel municipal center QC56+96V beside named playground. Phone and operator link missing. Ward councillor office is distinct and not used as booking contact.",
-        "follow_up_blocker": "Initial public source material reviewed, but additional missing-field/operator follow-up remains incomplete due environment proxy503 or recorded source-access exclusion. Retain as unfinished follow-up."
+        "research_notes": "ExactModhubaghHatirjheel QC56+96V matchespointbesidecommunityground. Profilephone/websiteabsent. Co-locatedwardofficeisdistinctanditsnumbernot adopted. Completepremises, capacityandbookingphone remainunconfirmed.",
+        "earlier_access_incident": "Initial public source material reviewed, but additional missing-field/operator follow-up remains incomplete due environment proxy503 or recorded source-access exclusion. Retain as unfinished follow-up."
       },
-      "status": "blocked-follow-up",
+      "status": "reviewed-with-gaps",
       "reviewed": "2026-10-25"
     },
     {
@@ -5017,6 +5700,41 @@
       },
       "status": "reviewed-with-gaps",
       "reviewed": "2026-10-25"
+    },
+    {
+      "id": "bd-jonaki-convention-hall",
+      "name": "Jonaki Convention Hall",
+      "area": null,
+      "missing_before": [
+        "independent source verification",
+        "complete address",
+        "neighborhood",
+        "website",
+        "capacity",
+        "facilities",
+        "hours"
+      ],
+      "sources_checked": [
+        {
+          "url": "https://maps.app.goo.gl/GvKcVo467kTKZdUd9",
+          "kind": "submission",
+          "checked": "2026-10-25",
+          "outcome": "Owner supplied name, phone01762884405andPlusCodePCP7+HXH. Original shortlink and a separate named Maps search both returned environmentHTTP503; no source facts silently upgraded.",
+          "access": "unavailable"
+        }
+      ],
+      "field_outcomes": {
+        "phones": "Contributor supplied01762884405; retained explicitly as submitted-not-verified, not counted among sourced published contacts.",
+        "coordinates": "Approximate Plus Code center decoded from user-supplied code, not independently corroborated.",
+        "research_notes": "Visible pending-verification submission; no neighborhood guessed. All unpublished capacity, facilities, site and hours remain unknown."
+      },
+      "status": "submitted-awaiting-verification",
+      "reviewed": "2026-10-25"
     }
-  ]
+  ],
+  "all_existing_records_individually_reviewed": true,
+  "existing_record_count": 131,
+  "source_review_outcomes": 126,
+  "source_limited_followups": 5,
+  "pending_new_submissions": 1
 }

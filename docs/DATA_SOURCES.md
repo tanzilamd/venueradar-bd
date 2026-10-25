@@ -2,11 +2,11 @@
 
 ## Current directory
 
-131 records in Dhaka: **123 community/event/convention/banquet hall records shown by default**, and **8 existing hotels separately**. 110 primary map listings retain explicit operator-confirmation warnings. Individually checked business listings and additional operator contact sources are distinguished in each record. No completeness, current-operation or wedding-only guarantee is made.
+132 entries in Dhaka: **124 hall/community/event records shown by default (including one visibly pending owner submission)**, and **8 existing hotels separately**. 110 primary map listings retain explicit operator-confirmation warnings. Individually checked business listings and additional operator contact sources are distinguished in each record. No completeness, current-operation or wedding-only guarantee is made.
 
-**86 records have sourced public business contacts (105 entries; 101 distinct numbers)**; 45 still lack a responsibly sourced phone. No line has been call-tested. 13 records have numeric capacity or bounded ranges, including a range; 123 have mapped positions. All records have a reviewed browsing locality, covering 61 labels. The 98 previously blank areas were researched through cached address hierarchies and reviewed named-address context. This is not independent operator confirmation of every area or a legal boundary survey. Five priority shortcuts include explicit nearby areas, preserving each venue’s actual locality.
+**94 records have sourced published business contacts (118 entries; 114 distinct numbers)**; 37 existing records lack a sourced phone. One additional owner submission has an explicitly unverified contact. No line has been call-tested. 13 records have numeric capacity or bounded ranges, including a range; 123 have mapped positions. All records have a reviewed browsing locality, covering 61 labels. The 98 previously blank areas were researched through cached address hierarchies and reviewed named-address context. This is not independent operator confirmation of every area or a legal boundary survey. Five priority shortcuts include explicit nearby areas, preserving each venue’s actual locality.
 
-The latest [UI/data audit](reports/2026-10-26-ui-data-audit.md) records 95 source-review outcomes and 36 blocked, unfinished follow-ups; it does not claim that comprehensive all-venue research is complete.
+The latest [UI/data audit](reports/2026-10-26-ui-data-audit.md) records 126 source-review outcomes, 5 source-limited follow-ups and one pending owner submission; it does not claim that comprehensive all-venue research is complete.
 
 The earlier correction report is [area and contact revision](reports/2026-10-25-area-contact-revision.md). It details added and modified records, contacts, conflicts, rejected sources and remaining gaps. Closures and ambiguous identities are flagged visibly; no existing venue was automatically removed.
 

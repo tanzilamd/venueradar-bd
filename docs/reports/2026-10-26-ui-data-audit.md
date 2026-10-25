@@ -1,34 +1,35 @@
 # UI audit implementation and venue-data completion pass
 
 Report date: 26 October 2026 (Asia/Dhaka). Source-review dates are stored in UTC; this session's source material was checked on 25 October UTC.
-Baseline: `f6ee35295b21857d27119544c903c6cfdd18d957`. Scope: all 131 existing Dhaka records; no additions, deletions, hotel expansion or history rewrite.
+Baseline: `f6ee35295b21857d27119544c903c6cfdd18d957`. Scope: all 131 existing Dhaka records, plus one explicitly pending owner submission; no deletions, hotel expansion or history rewrite.
 
-**Research is not complete.** All 131 records received a missing-field inventory. 95 records reached documented source-review outcomes (often with genuine unknowns); 36 require additional follow-up. The latter are explicitly labelled `blocked-follow-up`, not counted as completed multi-source investigations. Reapplying the environment network settings did not restore the public-internet route: new Maps/operator requests repeatedly return HTTP 503 `cloudflare_https_tunnel / Invalid argument`. GitHub and the existing Pages URL sometimes respond through other platform routes. This is not evidence of a closed business or missing credentials. No denial, CAPTCHA, robots exclusion or TLS verification was bypassed.
+All 131 pre-existing records received an individual missing-field and source review. The final 34 follow-ups were attempted: 29 reached additional documented source-review outcomes and 5 remain limited by inaccessible sources. Overall, 126 existing records have source-review outcomes with genuine gaps and 5 have explicitly source-limited follow-up. **This is not 100% data completeness or a claim that every possible source was accessible.** Network recovery permitted substantial additional individual Maps and operator research, then the environment proxy again returned HTTP503 `cloudflare_https_tunnel / Invalid argument`, including GitHub. No robots exclusion, challenge or certificate verification was bypassed.
 
-The verified non-destructive enrichments are integrated so they can be tested and reviewed. This report does not satisfy or claim the owner's acceptance criterion that every missing field has completed investigation. The machine-readable review ledger and unresolved list identify exactly what remains.
+The owner also supplied **Jonaki Convention Hall**, phone01762884405 and PlusCodePCP7+HXH with a Maps link. It is displayed separately by status as **user-submitted / independent verification pending**, with an explicit card notice and unverified contact label. It is included in the 132 record count but excluded from the 94 sourced-phone record count and 118 published contact entries. Its decoded approximate point is not a surveyed entrance; the neighborhood remains unknown rather than guessed. There are no deletions or history rewrites.
 
 ## Before and after
 
-| Metric | Before | Researched revision |
+| Metric | Before | Revision |
 |---|---:|---:|
-| Venue records | 131 | 131 |
-| Venues with sourced phones | 59 | 86 |
-| Sourced phone entries across venue records | 70 | 105 |
-| Distinct public business numbers | 69 | 101 |
-| Published complete premises addresses | 26 | 55 |
-| Mapped coordinate records | 123 | 123 |
+| Records (includes one explicit pending submission in revision) | 131 | 132 |
+| Venues with sourced published business phones | 59 | 94 |
+| Published phone entries across venue records | 70 | 118 |
+| Distinct sourced public business numbers | 69 | 114 |
+| Complete premises addresses | 26 | 58 |
+| Mapped records with published source provenance (excludes submitted point) | 123 | 123 |
 | Numeric capacity / bounded ranges | 8 | 13 |
-| Records with documented facilities | 9 | 21 |
-| Operator websites | 25 | 30 |
-| Published first-party hours | 0 | 6 |
+| Records with documented facilities | 9 | 39 |
+| Operator websites | 25 | 33 |
+| Published first-party hours | 0 | 7 |
 
-Counts cover all 131 records, including the 8 preserved hotels; the default hall collection contains 123 records. Phone entries count a published contact once per venue; shared operator/municipal contacts are not independent unique lines. Every phone retains source, UTC review date and `published-not-call-tested` status. No phone was called. No WhatsApp support is inferred.
 
-A complete address means a sourced premises/building plus road/locality, including the 11 original operator addresses whose legacy records predate `address_status`. Road-only, city-only and Plus Code-only addresses are excluded. Coordinates are existing published positions, not independently surveyed entrances. Numeric capacity excludes unbounded/ambiguous combined-floor claims; those remain qualified notes. Facility coverage means at least one supported amenity, not that all amenities or booking eligibility are known.
+Coverage now comprises 131 preserved sourced records plus 1 pending submission: 124 community/event/hall records shown first and 8 preserved hotels separately. Shared numbers count once per venue contact entry but once overall in the distinct-number total. Published contacts retain source/date and are not call-tested. Contributor-supplied contact status is separate; WhatsApp support is not inferred.
+
+A complete address requires a sourced premises/building plus road/locality, including 11 original operator addresses predating address_status. Road-only, city-only and PlusCode-only addresses do not count. All original 123 mapped points are preserved; the additional submitted point is separately qualified. Numeric capacities exclude ambiguous combined-floor and unbounded claims. Documented amenities do not mean all services or booking eligibility have been confirmed.
 
 ## Concrete data changes
 
-- 27 additional records gained a public business phone; 35 sourced phone entries were added (32 distinct numbers). Earlier phone objects and source/date history were preserved.
+- 35 additional existing records gained a sourced public business phone; 48 published contact entries were added (45 additional distinct numbers). Earlier phone objects and source/date history were preserved. The final follow-up added Dhalpur, Niketon, Samarai, Sagorika, Gandaria, Rifa, Baridhara DOHS and Azimpur public contacts, plus additional Party House, Banani DOHS, Shagoon, Talukdar and White Palace numbers.
 - Public operator follow-up added Uttara Community Center's booking line, Intraco's second contact, Prianka Dhanmondi's three contacts, Paragon's second line, Siraj's additional line and Westin's published landline. Individual named business profiles supplied community-center contacts including Sutrapur, Rayer Bazar, Sumon, Ujala, Meem, Bilash Bhaban, Dania, Haji Rahman, Rongdhonu, Dholaipar, Fazlul Karim, Chishty, The Latest Boogie Woogie, Sahal, Waterfall Dhanmondi, Marriott Convention Center, Haji Jummon, New Dhanmondi, Sonali Nupur and Fakir Chan.
 - New numeric capacity evidence: KIB Convention Hall 1 (450, layout unspecified); Aloki Grand Ball Room (400 round-table guests in one serving); Prianka Dhanmondi (600–700, layout unspecified); Paragon's 11th-floor hall (600, layout unspecified); Senamalancha's first-floor convention hall (1,200 maximum, layout unspecified). Halls, floors, serving rounds and seating layouts were not added together.
 - Uttara and PSC publish aggregate or “+” claims without sufficiently precise single-hall seating layouts. These appear as qualified capacity notes and do not populate numeric size filters.
@@ -60,7 +61,7 @@ English branding, Dhaka-only scope, static JSON, local favorites/comparison, one
 
 ## Validation and deployment
 
-The initial revised interface passed 12 model/data tests and 20 browser regressions, including five responsive widths and axe scans. Final integrated-dataset checks and measured production results are recorded in `2026-10-26-qa.md`; do not infer publication or live verification from a successful local build.
+Final integrated checks and actual publication outcomes are recorded in `2026-10-26-qa.md`. A successful local build is not a live-deployment claim.
 
 ## Research evidence and unresolved work
 
@@ -70,8 +71,14 @@ The initial revised interface passed 12 model/data tests and 20 browser regressi
 - Operator sites, licensed OSM/Geofabrik business tags and individually inspected public business profiles are the evidence sources. Some earlier same-day source captures were explicitly re-examined; they are labelled as cached captures, not fresh fetches.
 - Facebook robots exclusions, Google/DDG search challenges, unavailable operator domains and the environment proxy incident limit follow-up. No prohibited bulk Maps extraction, hidden APIs, stored Google ratings/review counts/reviews/photos, copyrighted venue imagery or private schedules were used.
 
-Future request: “Continue the blocked all-venue follow-ups in docs/research/2026-10-26-venue-review.json, prioritizing missing phones in Khilgaon, Malibagh, Motijheel, Eskaton and surrounding areas. Follow AGENTS.md and the research/update guides; preserve verified fields and report conflicts.” Network restoration is required before calling this research phase complete.
+Future request: “Continue the blocked all-venue follow-ups in docs/research/2026-10-26-venue-review.json, prioritizing missing phones in Khilgaon, Malibagh, Motijheel, Eskaton and surrounding areas. Follow AGENTS.md and the research/update guides; preserve verified fields and report conflicts.” The 5 source-limited follow-ups and the Jonaki submission require accessible operator/business sources before claiming full independent completion.
 
 ### Location-match correction
 
 A subsequent cross-record coordinate check found that the common Khilgaon/Malika Maps result matches the separate Malibagh record371381396, not the historic Khilgaon point263618386 about1.2km away. The earlier address/alias/exact-listing attachment was incorrect and has been retracted. Original Khilgaon source values and both IDs/points are preserved, with an explicit location-review notice. No phone was copied between these records.
+
+## Final follow-up outcomes and visible missing-contact states
+
+All 37 records without a sourced phone now carry dated phone-review metadata. Cards distinguish “Phone not found in checked sources”, “Phone research limited” and “Booking contact unconfirmed”; details explain why and explicitly avoid implying the venue has no telephone. Closure notices were added for matching Aangan and Talukdar profiles (reported permanent closure) and Moulovi Bazar (reported temporary closure). Historic records and contacts remain available. Azimpur's category mismatch, Ashkona's different current identity, Gandaria's premises-number conflict and Malibagh/Khilgaon naming/address conflict remain visible.
+
+Source-limited follow-ups: Rayer Bazar, Nababgonj Sat Shahid, ICCB, RUAP and Somrat. Earlier inspected facts are retained; additional inaccessible pages are not reported as checked. Somrat's English/Bengali searches produced no exact usable business match, and secondary web search produced no readable results. No unrelated venue's phone was borrowed. The required unresolved list documents every venue individually.

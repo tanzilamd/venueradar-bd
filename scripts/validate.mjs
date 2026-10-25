@@ -12,6 +12,18 @@ export function validateData(venues, areas, schema, boundary) {
   for (const v of venues) {
     if (seen.has(v.id)) errors.push(`Duplicate ID ${v.id}`);
     seen.add(v.id);
+    if (v.verification !== "user-submitted" && v.evidence.every((e) => e.kind === "submission"))
+      errors.push(`${v.id}: submission status cannot be upgraded without independent source evidence`);
+    if (v.verification === "user-submitted") {
+      if (!v.review_notice || !v.evidence.some((e) => e.kind === "submission"))
+        errors.push(`${v.id}: submissions require a visible notice and submission provenance`);
+      if (v.phones.some((p) => p.status !== "submitted-not-verified"))
+        errors.push(`${v.id}: submitted contacts cannot claim published verification`);
+    } else if (v.phones.some((p) => p.status === "submitted-not-verified")) {
+      errors.push(`${v.id}: unverified submitted contacts require submission status`);
+    }
+    if (v.phone_review && (v.phones.length || !Number.isFinite(Date.parse(v.phone_review.checked)) || v.phone_review.checked > new Date().toISOString().slice(0, 10)))
+      errors.push(`${v.id}: invalid missing-phone review metadata`);
     if (v.coordinates && boundary && !inBoundary(v.coordinates, boundary))
       errors.push(`${v.id}: coordinates outside Dhaka boundary`);
     if (v.verification === "open-data-listed") {

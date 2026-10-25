@@ -258,7 +258,7 @@ test("area review and nearby browsing do not relabel nearby venues", () => {
   assert.equal(nearby.find((v) => v.id === b.id).area, "Banasree");
   const actual = JSON.parse(fs.readFileSync("public/data/venues.json"));
   assert.ok(
-    actual.every((v) => typeof v.area === "string" && v.area.length > 0),
+    actual.filter((v) => v.verification !== "user-submitted").every((v) => typeof v.area === "string" && v.area.length > 0),
   );
   assert.equal(
     actual.find((v) => v.id === "bd-osm-way-1561267432").area,

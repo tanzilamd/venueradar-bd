@@ -262,13 +262,13 @@ function card(v, { compact = false } = {}) {
   if (v.distance != null) facts.append(el("span", `${v.distance.toFixed(1)} km \xB7 straight-line`));
   c.append(facts);
   if (v.review_notice) c.append(el("p", v.review_notice, "review-notice"));
-  const evidence = v.evidence.some((e) => e.kind === "official") ? "Includes an operator source" : v.verification === "open-data-listed" ? "Map-listed \xB7 confirm booking with the venue" : "Public business listing \xB7 confirm details";
+  const evidence = v.verification === "user-submitted" ? "Contributor submission · independent verification pending" : v.evidence.some((e) => e.kind === "official") ? "Includes an operator source" : v.verification === "open-data-listed" ? "Map-listed \xB7 confirm booking with the venue" : "Public business listing \xB7 confirm details";
   c.append(el("p", evidence, "evidence-summary"));
   const actions = el("div", null, "card-actions"), details = button("View details", () => detail(v), "primary");
   details.dataset.action = "details";
   actions.append(details);
   if (v.phones.length) actions.append(withIcon(phoneLink(v.phones[0], v.phones[0].number.replace(/^\+880/, "0")), "phone"));
-  else actions.append(el("span", "Phone not sourced yet", "phone-missing"));
+  else actions.append(el("span", v.phone_review?.status === "identity-unconfirmed" ? "Booking contact unconfirmed" : v.phone_review?.status === "source-limited" ? "Phone research limited" : "Phone not found in checked sources", "phone-missing"));
   actions.append(withIcon(external("Google Maps", mapsURL(v)), "pin"));
   const compareButton = withIcon(button(compare.includes(v.id) ? "Selected" : "Compare", () => toggleCompare(v), "compare-toggle"), "compare");
   compareButton.setAttribute("aria-label", `${compare.includes(v.id) ? "Selected" : "Compare"} ${displayName(v)}; ${compare.includes(v.id) ? "remove from" : "add to"} comparison`);
@@ -376,7 +376,7 @@ function detail(v, { write = true } = {}) {
   if (v.review_notice) box.append(el("p", v.review_notice, "review-notice"));
   const actions = el("div", null, "detail-actions");
   if (v.phones.length) actions.append(withIcon(phoneLink(v.phones[0], "Call \xB7 " + v.phones[0].number.replace(/^\+880/, "0"), "primary"), "phone"));
-  else actions.append(el("span", "Phone not sourced yet", "quiet"));
+  else actions.append(el("span", v.phone_review?.status === "identity-unconfirmed" ? "Booking contact unconfirmed" : v.phone_review?.status === "source-limited" ? "Phone research limited" : "Phone not found in checked sources", "quiet"));
   actions.append(withIcon(external("Google Maps", mapsURL(v), "maps-action"), "pin"));
   const saveButton = withIcon(button(favorites.includes(v.id) ? "Saved" : "Save", () => {
     save(v);
@@ -435,18 +435,21 @@ function detail(v, { write = true } = {}) {
     const list = el("ul", null, "contact-list");
     for (const p of v.phones) {
       const item = el("li");
-      item.append(phoneLink(p), button("Copy number", () => copyText(p.number, "Phone number", item)), external("Source", p.source, "phone-source"), el("p", `${p.label ? p.label + " \xB7 " : ""}Published business number \xB7 source reviewed ${dateText(p.checked)}. Line not call-tested.`, "hint"));
+      item.append(phoneLink(p), button("Copy number", () => copyText(p.number, "Phone number", item)), external("Source", p.source, "phone-source"), el("p", `${p.label ? p.label + " \xB7 " : ""}${p.status === "submitted-not-verified" ? "Contributor-supplied number · independent verification pending" : "Published business number"} \xB7 reviewed ${dateText(p.checked)}. Line not call-tested.`, "hint"));
       list.append(item);
     }
     box.append(list);
-  } else box.append(el("p", "No business number was found in the inspected sources. The Maps listing may have newer contact information."));
+  } else {
+    box.append(el("p", v.phone_review?.note || "No business number was found in the inspected sources. The Maps listing may have newer contact information."));
+    if (v.phone_review) box.append(el("p", "Contact research reviewed " + dateText(v.phone_review.checked) + ". This does not mean the venue has no phone.", "hint"));
+  }
   if (v.website) box.append(external("Official venue / operator website", v.website));
   if (v.booking_email) {
     const a = el("a", v.booking_email.address);
     a.href = "mailto:" + v.booking_email.address;
     box.append(el("p", "Published booking email"), a);
   }
-  box.append(el("p", `Sources reviewed ${dateText(v.last_checked)}. A webpage review does not confirm that a business is operating today.`, "hint"), el("p", "Check current ratings and reviews on Google Maps. Ratings are not stored in this directory.", "hint"));
+  box.append(el("p", v.verification === "user-submitted" ? `Submission reviewed ${dateText(v.last_checked)}; linked business source has not yet been independently verified.` : `Sources reviewed ${dateText(v.last_checked)}. A webpage review does not confirm that a business is operating today.`, "hint"), el("p", "Check current ratings and reviews on Google Maps. Ratings are not stored in this directory.", "hint"));
   const evidence = el("details", null, "source-details");
   evidence.append(el("summary", "Sources & research notes"));
   const grouped = /* @__PURE__ */ new Map();
@@ -460,10 +463,10 @@ function detail(v, { write = true } = {}) {
   const ul = el("ul");
   for (const source of grouped.values()) {
     const li = el("li");
-    li.append(external(sourceLabel(source), source.url), el("p", `Reviewed ${dateText(source.checked)} \xB7 supports: ${[...source.fields].map((s) => s.replace(/^facilities\./, "").replace(/_/g, " ")).join(", ")}.`, "hint"));
+    li.append(external(sourceLabel(source), source.url), el("p", `${source.kind === "submission" ? "Submission received; linked page not verified" : "Reviewed"} ${dateText(source.checked)} \xB7 ${source.kind === "submission" ? "submitted fields" : "supports"}: ${[...source.fields].map((s) => s.replace(/^facilities\./, "").replace(/_/g, " ")).join(", ")}.`, "hint"));
     ul.append(li);
   }
-  evidence.append(el("p", v.verification === "open-data-listed" ? "Primary map record; event booking and current operation require direct confirmation." : "Source checked means the cited material was reviewed. It is not a venue endorsement.", "hint"), el("p", "A business listing is one source, even when it supplies several facts. Independently cross-checked requires genuinely separate supporting sources.", "hint"), ul);
+  evidence.append(el("p", v.verification === "user-submitted" ? "Contributor submission, with independent source verification pending. The supplied link was unavailable during review." : v.verification === "open-data-listed" ? "Primary map record; event booking and current operation require direct confirmation." : "Source checked means the cited material was reviewed. It is not a venue endorsement.", "hint"), el("p", "A business listing is one source, even when it supplies several facts. Independently cross-checked requires genuinely separate supporting sources.", "hint"), ul);
   if (v.discovery) evidence.append(el("p", `OpenStreetMap record last edited ${v.discovery.osm_updated.slice(0, 10)}; that is not an operating-status check.`, "research-note"));
   if (v.notes) evidence.append(el("p", v.notes, "research-note"));
   box.append(evidence);
@@ -535,7 +538,7 @@ function compareView() {
   addRow("Venue type", (v) => v.category);
   if (vs.some((v) => v.review_notice)) addRow("Needs confirmation", (v) => v.review_notice || "No review notice recorded");
   addRow("Official website", (v) => v.website ? external("Visit operator website", v.website) : "Not sourced");
-  addRow("Research status", (v) => v.verification === "cross-checked" ? "Independently cross-checked sources" : v.verification === "open-data-listed" ? (v.evidence.some(e => e.kind === "official") ? "Primary map record; includes operator evidence" : "Primary map record; confirm with the operator") : "Published sources checked; confirm directly");
+  addRow("Research status", (v) => v.verification === "user-submitted" ? "Contributor submission; independent verification pending" : v.verification === "cross-checked" ? "Independently cross-checked sources" : v.verification === "open-data-listed" ? (v.evidence.some(e => e.kind === "official") ? "Primary map record; includes operator evidence" : "Primary map record; confirm with the operator") : "Published sources checked; confirm directly");
   addRow("Source reviewed", (v) => dateText(v.last_checked));
   wrap.append(table);
   box.append(wrap);

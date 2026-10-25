@@ -27,6 +27,7 @@ export function external(text, url, cls) {
 export const phoneLink = (p, label, cls) => {
   const a = el("a", label || p.number.replace(/^\+880/, "0"), cls);
   a.href = "tel:" + p.number;
+  if (p.status === "submitted-not-verified") a.title = "Contributor-supplied number; independent verification pending";
   return a;
 };
 export const displayName = (v) => v.name.replace(/[\s,.]+$/g, "").replace(/\s+/g, " ").replace(/^[a-z]/, (c) => c.toUpperCase());
@@ -50,6 +51,7 @@ export function withIcon(node, name) {
   return node;
 }
 export function sourceLabel(source) {
+  if (source.kind === "submission") return "Contributor-supplied link · verification pending";
   const u = new URL(source.url), host = u.hostname.replace(/^www\./, "");
   if (host.includes("google.com") || host === "maps.app.goo.gl") return "Google Maps business listing";
   if (host === "nominatim.openstreetmap.org") return "OpenStreetMap address review";

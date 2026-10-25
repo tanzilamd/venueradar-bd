@@ -46,7 +46,8 @@ test("qualified claims and hours require matching first-party evidence", () => {
 });
 test("record review inventory and preserved sourced contacts cannot silently disappear", () => {
   const ledger = read("docs/research/2026-10-26-venue-review.json");
-  assert.equal(ledger.records.length, 131);
+  assert.equal(ledger.records.length, venues.length);
+  assert.equal(ledger.records.filter((r) => r.status !== "submitted-awaiting-verification").length, 131);
   assert.equal(ledger.complete, false);
   for (const row of ledger.records) {
     assert.ok(venues.some((v) => v.id === row.id));
@@ -59,4 +60,18 @@ test("record review inventory and preserved sourced contacts cannot silently dis
     for (const old of change.fields.phones?.before || []) assert.ok(current.phones.some((p) => JSON.stringify(p) === JSON.stringify(old)), change.id + " lost published contact history");
     for (const old of change.fields.facilities?.before || []) assert.ok(current.facilities.includes(old), change.id + " lost supported amenity");
   }
+});
+test("contributor contacts stay visibly unverified and cannot become published evidence silently", () => {
+  const submission = structuredClone(venues.find((v) => v.id === "bd-jonaki-convention-hall"));
+  const areas = read("docs/reference/bangladesh-areas.json"), schema = read("schemas/venue.schema.json");
+  assert.equal(submission.verification, "user-submitted");
+  assert.equal(submission.area, null);
+  assert.ok(submission.review_notice);
+  assert.ok(submission.phones.every((p) => p.status === "submitted-not-verified"));
+  assert.deepEqual(filterVenues([submission], { verified: true }), []);
+  assert.deepEqual(validateData([submission], areas, schema), []);
+  submission.phones[0].status = "published-not-call-tested";
+  assert.ok(validateData([submission], areas, schema).some((e) => e.includes("cannot claim published verification")));
+  submission.verification = "source-checked";
+  assert.ok(validateData([submission], areas, schema).some((e) => e.includes("cannot be upgraded")));
 });

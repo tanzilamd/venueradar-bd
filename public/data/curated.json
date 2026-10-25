@@ -65,6 +65,12 @@
       "decision": "admitted",
       "basis": "Manually reviewed first-party event-venue and business-contact pages. No private schedules or staff contacts collected.",
       "checked": "2026-10-25"
+    },
+    {
+      "id": "bd-jonaki-convention-hall",
+      "decision": "submitted-pending-verification",
+      "basis": "Owner-supplied public business details; visibly marked user-submitted. Maps unavailable503; no independently verified or complete-address claim.",
+      "checked": "2026-10-25"
     }
   ],
   "conflicts": [
@@ -275,6 +281,105 @@
       "source": "https://www.google.com/maps/search/?api=1&query=Khilgaon+Community+Center+Dhaka",
       "other_matching_record": "bd-osm-way-371381396",
       "decision": "Location needs confirmation: the common Khilgaon / Malika business result matches the separate Malibagh record, about 1.2 km from this historic map point. Current venue identity at this point is unconfirmed. Only incorrectly added address/alias/listing attachment retracted; original source values retained."
+    },
+    {
+      "id": "bd-osm-way-263618386",
+      "checked": "2026-10-25",
+      "field": "identity_and_address",
+      "incorrect_match": "Khilgaon / Malika listing PCX8+VG",
+      "correct_matching_record": "bd-osm-way-371381396",
+      "historic_record_retained": "bd-osm-way-263618386",
+      "decision": "Retract only the newly added wrong address/alias/listing attachment; preserve original source point and mark identity unconfirmed."
+    },
+    {
+      "id": "bd-osm-way-371381396",
+      "checked": "2026-10-25",
+      "field": "name_and_address",
+      "historic": "Malibagh Community Centre, Atish Depankar Road",
+      "current_profile": "Khilgaon / Malika Community Center, Shahid Baki Road landmark",
+      "source": "https://www.google.com/maps/search/?api=1&query=Khilgaon%20Community%20Center%20Khilgaon%20Dhaka%20Bangladesh",
+      "decision": "Preserve historical name/address/area, add corroborated alias and review notice; matching PlusCode point. No merge/deletion."
+    },
+    {
+      "id": "bd-osm-way-439835437",
+      "checked": "2026-10-25",
+      "field": "accessibility",
+      "existing_source_tag": "wheelchair=no",
+      "current_profile_claim": "wheelchair-accessible entrance",
+      "decision": "Preserve original tags; add parking only and require direct accessibility confirmation."
+    },
+    {
+      "id": "bd-osm-way-456824572",
+      "checked": "2026-10-25",
+      "field": "address",
+      "existing": "3 Distilary Road Dhaka 1204, Dhaka, Bangladesh",
+      "proposed": "114 Distilary Road, Dhaka1204",
+      "source": "https://www.google.com/maps/search/?api=1&query=Mayor%20Sayed%20Khokon%20Community%20Center%20Gandaria%20Dhaka%20Bangladesh",
+      "decision": "Same mapped position, differing premises numbers; retain established value and flag for booking confirmation."
+    },
+    {
+      "id": "bd-osm-node-4035864979",
+      "field": "business_identity_or_status",
+      "checked": "2026-10-25",
+      "notice": "Current venue identity needs confirmation: a search at this historic Ashkona location resolves to Agrajatra Legal & Professional House. Wedding-hall operation and booking contact have not been established.",
+      "source": "https://www.google.com/maps/search/?api=1&query=Ashkona%20Community%20Center%20Ashkona%20Dhaka%20Bangladesh",
+      "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
+    },
+    {
+      "id": "bd-osm-node-4528270335",
+      "field": "business_identity_or_status",
+      "checked": "2026-10-25",
+      "notice": "A matching public business profile reports this venue permanently closed. The historic record and contacts are retained; confirm current availability directly before planning a visit.",
+      "source": "https://www.google.com/maps/search/?api=1&query=Angan%20Community%20Centre%20Mohammadpur%20Dhaka%20Bangladesh",
+      "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
+    },
+    {
+      "id": "bd-osm-node-5233935421",
+      "field": "business_identity_or_status",
+      "checked": "2026-10-25",
+      "notice": "A matching public business profile reports this venue permanently closed. Historic contact information is retained; confirm current availability directly before planning a visit.",
+      "source": "https://www.google.com/maps/search/?api=1&query=Talukdar%20Convention%20Center%20Bakshibazar%20Dhaka%20Bangladesh",
+      "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
+    },
+    {
+      "id": "bd-osm-way-241619748",
+      "field": "business_identity_or_status",
+      "checked": "2026-10-25",
+      "notice": "A matching public business profile reports this venue temporarily closed. The record is retained; confirm current operation and booking availability directly.",
+      "source": "https://www.google.com/maps/place/Moulovi+Bazar+Community+Center/@23.7165166,90.3993005,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b8e215d0081d:0x1725892d0b201594!8m2!3d23.7165166!4d90.3993005!16s%2Fg%2F11cnlt42wm?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+      "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
+    },
+    {
+      "id": "bd-osm-way-263618386",
+      "field": "business_identity_or_status",
+      "checked": "2026-10-25",
+      "notice": "Location needs confirmation: the common Khilgaon / Malika business result matches the separate Malibagh record, about 1.2 km from this historic map point. Current venue identity at this point is unconfirmed.",
+      "source": "https://www.google.com/maps/search/?api=1&query=Khilgaon+Community+Center+Dhaka",
+      "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
+    },
+    {
+      "id": "bd-osm-way-371381396",
+      "field": "business_identity_or_status",
+      "checked": "2026-10-25",
+      "notice": "Address and naming need confirmation: the matching current business profile uses Khilgaon / Malika and a Shahid Baki Road landmark; this historic record uses Malibagh and Atish Depankar Road. Location points match; confirm the address directly.",
+      "source": "https://www.google.com/maps/search/?api=1&query=Khilgaon%20Community%20Center%20Khilgaon%20Dhaka%20Bangladesh",
+      "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
+    },
+    {
+      "id": "bd-osm-way-456824572",
+      "field": "business_identity_or_status",
+      "checked": "2026-10-25",
+      "notice": "Address number needs confirmation: the current Gandaria business profile lists 114 Distilary Road; the historic map record lists 3 Distilary Road. The location points match; confirm the premises number when booking.",
+      "source": "https://www.google.com/maps/search/?api=1&query=Mayor%20Sayed%20Khokon%20Community%20Center%20Gandaria%20Dhaka%20Bangladesh",
+      "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
+    },
+    {
+      "id": "bd-osm-way-1532360738",
+      "field": "business_identity_or_status",
+      "checked": "2026-10-25",
+      "notice": "Venue use needs confirmation: the matching Azimpur Estate Jonokalyan Samiti profile is categorized as a dance school. Confirm that the premises currently accepts wedding or hall bookings.",
+      "source": "https://www.google.com/maps/place/Azimpur+Estate+Jonokalyan+Samiti/@23.7238042,90.3863779,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b8da54128879:0xdba06185c34f4140!8m2!3d23.7238042!4d90.3863779!16s%2Fg%2F11bwyt_kc0?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+      "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
     }
   ],
   "research_status": {
