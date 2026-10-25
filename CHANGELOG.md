@@ -1,5 +1,12 @@
 # Changelog
 
+## Contact-first UI and visual directory manager
+- Simplify public cards, details, filters and comparison to name, area, address, phones and maps; retain historical research in JSON.
+- Add graphical add/edit/remove, drafts, import/export, validation and optional owner-authenticated atomic GitHub publishing with previous-version archives and conflict protection.
+- Auto-sync area indexes and collections so single-file data uploads do not require manual cross-file edits.
+- Add Waterfront, LakeViewGrande, PolicePlaza and Elite; corroborate Jonaki, retain owner-supplied Fortune contact and confirmed Khilgaon position; archive seven permanently closed records.
+- See the contact-directory report for current counts, unresolved phones and actual publication state.
+
 ## Final contact-review follow-up
 - Attempt all remaining 34 follow-ups: 29 additional source-review outcomes and 5 explicitly source-limited investigations. Total sourced-phone coverage:94venues,118published contact entries,114distinct numbers.
 - Preserve131original records and facts; label missing-contact research outcomes, source/date and identity/closure/address conflicts. Document58complete addresses,13capacity records and39facility-bearing records.

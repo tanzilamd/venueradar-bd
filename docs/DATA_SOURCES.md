@@ -1,3 +1,7 @@
+# Data sources and limitations
+
+For the current contact-first revision, see the [26October report](reports/2026-10-26-contact-directory.md), [individual investigation outcomes](research/2026-10-26-contact-revision.json), and [change summary](research/2026-10-26-contact-change-summary.json). These document requested additions, owner contributions, closed-record archives, unresolved contacts and actual publication state. Earlier sections below are historical research checkpoints.
+
 # Data sources and present coverage
 
 ## Current directory

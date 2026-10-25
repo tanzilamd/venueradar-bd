@@ -7,9 +7,10 @@
     "dev": "vite --host 0.0.0.0",
     "build": "npm run validate && vite build",
     "preview": "vite preview --host 0.0.0.0",
-    "validate": "node scripts/validate.mjs",
-    "test": "node --test tests/*.test.mjs",
-    "test:browser": "playwright test"
+    "validate": "npm run prepare:data && node scripts/validate.mjs",
+    "test": "npm run prepare:data && node --test tests/*.test.mjs",
+    "test:browser": "playwright test",
+    "prepare:data": "node scripts/prepare-data.mjs"
   },
   "dependencies": {
     "leaflet": "1.9.4",

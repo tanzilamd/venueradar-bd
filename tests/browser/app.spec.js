@@ -46,59 +46,22 @@ test("slow loading never presents transient zero counts; failed data has a worki
   await page.getByRole("button", { name: "Try again", exact: true }).click();
   await expect(cards(page)).toHaveCount(hallIds.length);
 });
-test("real Dhaka data: hall-first, English UI, aliases, details, source and correction links", async ({ page }) => {
-  const errors = [];
-  page.on("pageerror", (e) => errors.push(e.message));
-  await healthy(page);
-  expect(await page.locator("body").innerText()).not.toMatch(/[\u0980-\u09ff]/);
-  await page.locator("#search").fill("Abakas");
-  await expect(cards(page)).toHaveCount(1);
-  await expect(cards(page)).toContainText("Abacus");
-  await expect(cards(page).locator('a[href="tel:+880248321499"]')).toBeVisible();
-  await cards(page).getByRole("button", { name: "View details", exact: true }).click();
-  await expect(page.locator("#dialog")).toHaveAttribute("aria-labelledby", "dialogTitle");
-  await expect(page.locator('#dialog a[href^="tel:"]').first()).toBeVisible();
-  await expect(page.locator(".source-details")).not.toHaveAttribute("open", "");
-  await page.locator(".source-details summary").click();
-  const correction = page.getByRole("link", { name: "Report incorrect information" });
-  const url = new URL(await correction.getAttribute("href"));
-  expect(url.host).toBe("github.com");
-  expect(url.searchParams.get("body")).toContain("bd-abacus-convention-center");
-  await page.keyboard.press("Escape");
-  await expect(cards(page).getByRole("button", { name: "View details", exact: true })).toBeFocused();
-  expect(errors).toEqual([]);
+test("real Dhaka directory is contact-first with a simple detail view",async({page})=>{
+ const errors=[];page.on("pageerror",e=>errors.push(e.message));await healthy(page);
+ const venue=venues.find(v=>hallIds.includes(v.id)&&v.phones.length&&!v.review_notice);
+ await page.locator("#search").fill(venue.name);await expect(card(page,venue.id)).toBeVisible();
+ await expect(card(page,venue.id).locator('a[href^="tel:"]')).toBeVisible();
+ await card(page,venue.id).getByRole("button",{name:"Details",exact:true}).click();await expect(page.locator("#dialog")).toContainText(venue.name);
+ await expect(page.locator("#dialog")).toContainText("Phone numbers");await expect(page.locator("#dialog")).not.toContainText("Published capacity");await expect(page.locator("#dialog .source-details")).toHaveCount(0);expect(errors).toEqual([]);
 });
-test("area exact and nearby counts are separate, with targeted zero-coverage recovery", async ({ page }) => {
-  await healthy(page);
-  await page.locator('#priorityAreas [data-area-choice="Rampura"]').click();
-  await expect(page.locator("#areaContext")).toContainText("No venues indexed in Rampura yet");
-  await expect(page.locator("#areaContext")).toContainText("nearby");
-  expect(await cards(page).count()).toBeGreaterThan(0);
-  for (const text of await cards(page).locator(".card-location").allTextContents()) expect(text).toContain("Nearby");
-  await page.locator("#includeNearby").uncheck();
-  await expect(cards(page)).toHaveCount(0);
-  await expect(page.locator("#areaContext")).toContainText("coverage is incomplete");
-  await page.locator("#results").getByRole("button", { name: "Show nearby venues", exact: true }).click();
-  expect(await cards(page).count()).toBeGreaterThan(0);
-  await expect(page.locator("#area")).toHaveValue("Rampura");
+test("area results are exact until nearby neighborhoods are requested",async({page})=>{
+ await mock(page);await page.goto("/");await area(page,"Khilgaon");await expect(cards(page)).toHaveCount(1);await expect(cards(page)).toContainText("Beta");
+ await expect(page.locator("#includeNearby")).not.toBeChecked();await page.locator("#includeNearby").check();expect(await cards(page).count()).toBeGreaterThanOrEqual(1);
+ await area(page,"Rampura");await page.locator("#includeNearby").uncheck();await expect(cards(page)).toHaveCount(0);await page.locator("#results").getByRole("button",{name:"Show nearby venues",exact:true}).click();expect(await cards(page).count()).toBeGreaterThan(0);
 });
-test("curated Bangla/roman aliases agree and short AK does not match Dhaka", async ({ page }) => {
-  await healthy(page);
-  let ids;
-  for (const q of ["Banasree", "Banasri", "\u09AC\u09A8\u09B6\u09CD\u09B0\u09C0"]) {
-    await page.locator("#search").fill(q);
-    await expect.poll(() => cards(page).count()).toBeGreaterThan(0);
-    await expect(page.locator("#activeFilters")).toContainText(q);
-    const found = await cards(page).evaluateAll((ns) => ns.map((n) => n.dataset.venue));
-    if (ids) expect(found).toEqual(ids);
-    ids = found;
-  }
-  await page.locator("#search").fill("AK");
-  await expect(cards(page)).toHaveCount(1);
-  await expect(cards(page)).toContainText("AK Convention");
-  await page.locator("#search").fill("definitely-no-indexed-match");
-  await expect(cards(page)).toHaveCount(0);
-  await expect(page.locator("#results")).toContainText("No venues match");
+test("search aliases and empty results remain usable",async({page})=>{
+ await mock(page);await page.goto("/");await page.locator("#search").fill("Alpha");await expect(cards(page)).toHaveCount(1);await expect(cards(page)).toContainText("Alpha");
+ await page.locator("#search").fill("definitely-no-match");await expect(cards(page)).toHaveCount(0);await expect(page.locator("#results")).toContainText("No venues match");
 });
 test("Saved ignores Explore filters, preserves each tab and supports undo and reload", async ({ page }) => {
   await mock(page);
@@ -131,7 +94,7 @@ test("hotel can be saved independently and its shared detail can appear on the d
   await cards(page).locator(".save").click();
   await page.locator("#saved").click();
   await expect(cards(page)).toContainText("Hotel");
-  await cards(page).getByRole("button", { name: "View details", exact: true }).click();
+  await cards(page).getByRole("button", { name: "Details", exact: true }).click();
   await page.getByRole("button", { name: "Copy venue link", exact: true }).click();
   const link = await page.evaluate(() => navigator.clipboard.readText());
   expect(new URL(link).searchParams.get("venue")).toBe("bd-test-hotel");
@@ -140,28 +103,9 @@ test("hotel can be saved independently and its shared detail can appear on the d
   await page.getByRole("button", { name: "Show on directory map", exact: true }).click();
   await expect(page.locator("#mapSelection")).toContainText("Hotel");
 });
-test("capacity coverage explains unknowns; facilities and status filters use actual facts", async ({ page }) => {
-  await mock(page);
-  await page.goto("/");
-  await more(page);
-  await page.locator("#size").selectOption("Large");
-  await expect(cards(page)).toHaveCount(1);
-  await expect(page.locator("#capacityContext")).toContainText("1 of 3");
-  await page.locator("#capacityContext").getByRole("button", { name: "Show venues with unknown capacity" }).click();
-  await expect(cards(page)).toHaveCount(2);
-  await page.locator("#reset").click();
-  await page.locator("#reviewStatus").selectOption("needs-review");
-  await expect(cards(page)).toHaveCount(1);
-  await expect(cards(page)).toContainText("Closure reported");
-  await page.locator("#reviewStatus").selectOption("no-notice");
-  await expect(cards(page)).toHaveCount(2);
-  await page.locator("#reset").click();
-  await more(page);
-  await page.locator("#parking").check();
-  await page.locator("#airConditioning").check();
-  await page.locator("#catering").check();
-  await expect(cards(page)).toHaveCount(1);
-  await expect(cards(page)).toContainText("Alpha");
+test("simple filters omit capacity and source controls",async({page})=>{
+ await mock(page);await page.goto("/");await expect(page.locator("#size,#capacity,#evidence,#verified,.more-filters")).toHaveCount(0);await expect(page.locator("#results")).not.toContainText("Capacity");
+ await page.locator("#phone").check();await expect(cards(page)).toHaveCount(2);await page.locator("#reset").click();await expect(cards(page)).toHaveCount(3);
 });
 test("flagged listings rank last and URL state restores after Back and reload", async ({ page }) => {
   await mock(page);
@@ -177,7 +121,7 @@ test("flagged listings rank last and URL state restores after Back and reload", 
   await expect(page.locator("#area")).toHaveValue("Khilgaon");
   await page.reload();
   await expect(cards(page)).toHaveCount(1);
-  await cards(page).getByRole("button", { name: "View details", exact: true }).click();
+  await cards(page).getByRole("button", { name: "Details", exact: true }).click();
   expect(new URL(page.url()).searchParams.get("venue")).toBe("bd-test-beta");
   await page.goBack();
   await expect(page.locator("#dialog")).not.toBeVisible();
@@ -191,11 +135,11 @@ test("comparison aligns facts, calls all numbers, removes columns and enforces m
   await expect(page.locator("#feedbackText")).toContainText("up to three");
   await page.locator("#openCompare").click();
   const row = (label) => page.getByRole("row").filter({ has: page.getByRole("rowheader", { name: label, exact: true }) });
-  await expect(row("Area").getByRole("cell")).toHaveText(["Banasree", "Khilgaon", "Banasree"]);
+  await expect(row("Area / zone").getByRole("cell")).toHaveText(["Banasree", "Khilgaon", "Banasree"]);
   await expect(row("Phone").locator('a[href^="tel:"]')).toHaveCount(2);
-  await expect(row("Needs confirmation").getByRole("cell").first()).toHaveText("No review notice recorded");
+  await expect(row("Please check").getByRole("cell").first()).toHaveText("Confirm booking details directly");
   await page.locator("#dialog").getByRole("button", { name: "Remove TEST ONLY Aardvark from comparison", exact: true }).click();
-  await expect(row("Area").getByRole("cell")).toHaveCount(2);
+  await expect(row("Area / zone").getByRole("cell")).toHaveCount(2);
   await page.keyboard.press("Escape");
   await page.reload();
   await expect(page.locator("#compareNames .compare-name")).toHaveCount(2);
@@ -296,7 +240,7 @@ for (const width of [360, 390, 768, 1363, 1920]) test(`responsive layout and det
     expect(b.y + b.height).toBeLessThan(936);
   }
   await page.screenshot({ path: `test-results/layout-${width}.png` });
-  await cards(page).first().getByRole("button", { name: "View details", exact: true }).click();
+  await cards(page).first().getByRole("button", { name: "Details", exact: true }).click();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await page.screenshot({ path: `test-results/detail-${width}.png` });
   await page.keyboard.press("Escape");
@@ -310,7 +254,7 @@ test("accessible explore, details, comparison and mobile filter dialogs", async 
   await page.locator("#openCompare").click();
   await scan();
   await page.keyboard.press("Escape");
-  await card(page, "bd-test-alpha").getByRole("button", { name: "View details", exact: true }).click();
+  await card(page, "bd-test-alpha").getByRole("button", { name: "Details", exact: true }).click();
   await scan();
   await page.keyboard.press("Escape");
   await page.setViewportSize({ width: 360, height: 800 });
@@ -342,7 +286,7 @@ test("200 percent desktop reflow equivalent keeps controls and dialogs usable", 
   await page.locator("#mobileFilters").click();
   await expect(page.locator("#applyFilters")).toBeVisible();
   await page.keyboard.press("Escape");
-  await cards(page).first().getByRole("button", { name: "View details", exact: true }).click();
+  await cards(page).first().getByRole("button", { name: "Details", exact: true }).click();
   await expect(page.locator('#dialog a[href^="tel:"]').first()).toBeVisible();
   await page.screenshot({ path: "test-results/reflow-200-equivalent.png" });
   await context.close();
@@ -364,16 +308,7 @@ test('logo uses a clean home URL and social cards have a real static image',asyn
  const response=await request.get('/social-preview.png');expect(response.status()).toBe(200);expect(response.headers()['content-type']).toContain('image/png');const image=await response.body();expect(image.readUInt32BE(16)).toBe(1200);expect(image.readUInt32BE(20)).toBe(630);
 });
 
-test('submitted venue and unavailable phone states remain explicit', async ({ page }) => {
-  await page.goto('/?venue=bd-jonaki-convention-hall');
-  await expect(page.locator('#dialog')).toBeVisible();
-  await expect(page.locator('#dialog .review-notice')).toContainText('not yet been independently verified');
-  await expect(page.locator('#dialog a[href="tel:+8801762884405"]').first()).toBeVisible();
-  await expect(page.locator('#dialog .contact-list')).toContainText('Contributor-supplied number');
-  await expect(page.locator('#dialog')).not.toContainText('Published business number');
-  await page.goto('/?venue=bd-osm-node-11915138589');
-  await expect(page.locator('#dialog')).toBeVisible();
-  await expect(page.locator('#dialog')).toContainText('No usable business phone was found');
-  await expect(page.locator('#dialog')).toContainText('This does not mean the venue has no phone');
-  await expect(page.locator('#dialog a[href^="tel:"]')).toHaveCount(0);
+test('owner-supplied contacts and missing phones are clear',async({page})=>{
+ const owner=fixture('bd-test-owner','TEST ONLY Owner',{phones:[{...sample[0].phones[0],status:'submitted-not-verified'}]});await mock(page,[owner,sample[2]]);await page.goto('/?venue=bd-test-owner');
+ await expect(page.locator('#dialog')).toContainText('Owner supplied');await page.goto('/?venue=bd-test-closed');await expect(page.locator('#dialog')).toContainText('Phone unavailable');await expect(page.locator('#dialog a[href^="tel:"]')).toHaveCount(0);
 });

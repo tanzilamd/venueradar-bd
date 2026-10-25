@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       name="description"
-      content="Explore community centers and convention halls in Dhaka. Compare sourced contacts, published capacity and map listings with clear evidence labels."
+      content="Explore community centers and convention halls in Dhaka. Find hall names, phone numbers and locations by area. Save venues and open their maps."
     />
     <meta
       property="og:title"
@@ -53,14 +53,13 @@
       </section>
       <p id="storageWarning" class="notice" hidden>Browser storage is unavailable. Saved venues and comparisons will last for this session only.</p>
       <section class="workspace">
-        <aside id="filterDock" class="filters" aria-label="Venue filters"><div class="filter-heading"><h2>Refine your search</h2><button id="reset" class="text-button">Clear filters</button></div><div id="filterFields"></div></aside>
+        <aside id="filterDock" class="filters" aria-label="Venue filters"><div class="filter-heading"><h2>Browse Dhaka</h2><button id="reset" class="text-button">Clear filters</button></div><div id="filterFields"></div></aside>
         <section id="directory" class="directory" aria-label="Venue explorer" aria-busy="true">
           <div class="results-top"><div><p id="breadcrumb" class="eyebrow">DHAKA</p><h2 id="resultHeading">Loading venues…</h2></div><div class="result-actions"><button id="mobileFilters" aria-haspopup="dialog">Filters <span id="filterCount"></span></button><div class="view-switch" aria-label="Results view"><button id="listView" aria-pressed="true">List</button><button id="mapView" aria-pressed="false">Map</button></div></div></div>
           <p id="stats" class="coverage-summary" role="status" aria-live="polite">Finding the latest directory…</p>
           <div id="activeFilters" class="active-filters" aria-label="Applied filters"></div>
           <div id="areaContext" class="area-context" hidden></div>
-          <div class="result-controls"><span id="resultLabel" class="result-context"></span><label for="sort">Sort <select id="sort"><option value="name">Name, A–Z</option><option value="capacity">Published capacity</option><option value="distance">Nearest first</option></select></label></div>
-          <div id="capacityContext" class="notice capacity-context" hidden></div>
+          <div class="result-controls"><span id="resultLabel" class="result-context"></span><label for="sort">Sort <select id="sort"><option value="name">Name, A–Z</option><option value="distance">Nearest first</option></select></label></div>
           <p id="message" class="message" role="status"></p>
           <div id="mapWorkspace" class="map-workspace">
             <div id="mapWrap" hidden><div class="map-toolbar"><button id="fitMap">Fit results</button><span id="markerContext"></span></div><div id="map" aria-label="Map of indexed Dhaka venues"></div><p id="mapMessage" class="hint" role="status"></p><div id="mapSelection" class="map-selection"></div><p class="hint">Map points may be approximate; they are not verified entrances. <button id="mapListFallback" class="text-button">View all results in the list</button></p></div>
@@ -69,7 +68,7 @@
         </section>
       </section>
     </main>
-    <footer><span class="footerbrand">VenueRadar BD</span><p>A starting point for finding your venue. Coverage is incomplete.<br><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">Venue data includes © OpenStreetMap contributors · ODbL</a></p><div><button id="footerMethod" class="text-button">Sources &amp; privacy</button><a href="https://github.com/tanzilamd/venueradar-bd/issues/new?title=Suggest+a+Dhaka+venue" target="_blank" rel="noopener noreferrer">Suggest a venue</a></div></footer>
+    <footer><span class="footerbrand">VenueRadar BD</span><p>A starting point for finding your venue. Coverage is incomplete.<br><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">Venue data includes © OpenStreetMap contributors · ODbL</a></p><div><a href="./manage.html">Manage directory</a><button id="footerMethod" class="text-button">About &amp; sources</button><a href="https://github.com/tanzilamd/venueradar-bd/issues/new?title=Suggest+a+Dhaka+venue" target="_blank" rel="noopener noreferrer">Suggest a venue</a></div></footer>
     <div id="feedback" class="feedback" role="status" hidden><span id="feedbackText"></span><button id="undoSave" hidden>Undo</button><button id="dismissFeedback" aria-label="Dismiss notification">×</button></div>
     <div id="compareBar" class="compare-bar" hidden><div><span id="compareCount"></span><div id="compareNames" class="compare-names"></div></div><button id="openCompare" class="primary">Compare venues</button><button id="clearCompare" class="text-button">Clear</button></div>
     <dialog id="dialog" aria-labelledby="dialogTitle"><button class="close" aria-label="Close">×</button><div id="dialogContent"></div></dialog>

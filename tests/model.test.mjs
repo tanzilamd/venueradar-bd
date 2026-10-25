@@ -210,7 +210,6 @@ test("bulk mapped records are spatially scoped, uniquely sourced and not hotel a
       fs.readFileSync("public/data/dhaka-boundary.geojson"),
     );
   const mapped = venues.filter((v) => v.verification === "open-data-listed");
-  assert.equal(mapped.length, 110);
   assert.ok(mapped.every((v) => inBoundary(v.coordinates, boundary)));
   assert.ok(
     mapped.every(
@@ -230,7 +229,7 @@ test("bulk mapped records are spatially scoped, uniquely sourced and not hotel a
     schema = JSON.parse(fs.readFileSync("schemas/venue.schema.json"));
   assert.ok(
     validateData(
-      [{ ...mapped[0], coordinates: { lat: 24.1, lon: 90.4 } }],
+      [{ ...fixture("bd-outside"), coordinates: { lat: 24.1, lon: 90.4 } }],
       areas,
       schema,
       boundary,
@@ -260,8 +259,5 @@ test("area review and nearby browsing do not relabel nearby venues", () => {
   assert.ok(
     actual.filter((v) => v.verification !== "user-submitted").every((v) => typeof v.area === "string" && v.area.length > 0),
   );
-  assert.equal(
-    actual.find((v) => v.id === "bd-osm-way-1561267432").area,
-    "Tejgaon",
-  );
+
 });

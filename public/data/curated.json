@@ -2183,5 +2183,29 @@
         "source": "https://www.google.com/maps/search/?api=1&query=Sugandha%20Convention%20Hall%20Dhanmondi%20Dhaka"
       }
     ]
+  },
+  "contact_directory_revision": {
+    "checked": "2026-10-25",
+    "owner_authorized_closed_removal": true,
+    "closed_archived_ids": [
+      "bd-osm-node-4528270335",
+      "bd-osm-node-5233935421",
+      "bd-osm-node-4582326295",
+      "bd-osm-node-9843518617",
+      "bd-osm-node-3355520099",
+      "bd-osm-node-3734889100",
+      "bd-osm-way-400903521"
+    ],
+    "resolved": [
+      {
+        "id": "bd-jonaki-convention-hall",
+        "result": "Independent profile corroborates name/phone/point; NayaPaltan locality established."
+      },
+      {
+        "id": "bd-osm-way-263618386",
+        "result": "Owner confirms original point; coordinate Maps link avoids false Malika result."
+      }
+    ],
+    "scope": "Contact-first UI; historical capacity/facility data preserved internally. No new size/facility research claims."
   }
 }

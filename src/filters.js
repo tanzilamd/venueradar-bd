@@ -1,15 +1,15 @@
 import { $, el, button } from "./ui.js";
 import { matchesAreaQuery } from "./search.js";
-export const groupNames = (area, areas) => areas.groups?.[area] || [area];
-export function areaNames(area, nearby, areas) {
+const groupNames = (area, areas) => areas.groups?.[area] || [area];
+function areaNames(area, nearby, areas) {
   return [.../* @__PURE__ */ new Set([...groupNames(area, areas), ...(nearby ? areas.nearby?.[area] || [] : []).flatMap((n) => groupNames(n, areas))])];
 }
-export function areaCounts(rows, area, areas) {
+function areaCounts(rows, area, areas) {
   const exact = groupNames(area, areas), near = areaNames(area, true, areas);
   return { exact: rows.filter((v) => exact.includes(v.area)).length, nearby: rows.filter((v) => near.includes(v.area) && !exact.includes(v.area)).length };
 }
-export function areaCombobox({ id, areas, rows, value, onChange }) {
-  const box = el("div", null, "area-control"), label = el("label", "Neighborhood");
+function areaCombobox({ id, areas, rows, value, onChange }) {
+  const box = el("div", null, "area-control"), label = el("label", "Area / zone");
   label.htmlFor = id + "Query";
   const hidden = el("input");
   hidden.type = "hidden";
@@ -71,7 +71,7 @@ export function areaCombobox({ id, areas, rows, value, onChange }) {
       n.append(el("span", area ? name(area) : "All Dhaka"));
       if (area) {
         const c = areaCounts(context, area, areas);
-        n.append(el("small", `${c.exact} indexed here \xB7 ${c.nearby} nearby`));
+        n.append(el("small", `${c.exact} indexed here · ${c.nearby} nearby`));
       } else n.append(el("small", `${context.length} indexed`));
       n.addEventListener("mousedown", (e) => e.preventDefault());
       n.addEventListener("click", () => choose(area));
@@ -118,7 +118,7 @@ export function areaCombobox({ id, areas, rows, value, onChange }) {
     if (document.activeElement !== input || !editing) input.value = next ? name(next) : "All Dhaka";
   }, close };
 }
-export function filterPanel({ prefix = "", values, areas, rows, onChange, onLocate }) {
+function filterPanel({ prefix = "", values, areas, rows, onChange, onLocate }) {
   const root = el("div", null, "filter-fields"), nodes = /* @__PURE__ */ new Map();
   let current = { ...values };
   const area = areaCombobox({ id: prefix + "area", areas, rows, value: current.area, onChange: (v) => change("area", v) });
@@ -156,41 +156,22 @@ export function filterPanel({ prefix = "", values, areas, rows, onChange, onLoca
     return label;
   }
   check("includeNearby", "Include nearby neighborhoods");
-  root.append(el("p", "Nearby means the listed adjacent areas, not a distance radius.", "hint nearby-hint"));
-  select("collection", "Collection", [["community-halls", "Community centers & halls"], ["hotels", "Hotel venues"], ["", "All venues"]]);
-  select("category", "Venue type", [["", "All types"], ...["Community Center", "Wedding Venue", "Banquet Hall", "Convention Center", "Event Hall"].map((x) => [x, x])]);
-  check("phone", "With a public business phone");
-  select("reviewStatus", "Listing notices", [["all", "All listings"], ["no-notice", "No review notice recorded"], ["needs-review", "Needs checking"]]);
-  root.append(el("p", "Listings with review notices appear after other results.", "hint"));
-  const more = el("details", null, "more-filters");
-  more.append(el("summary", "More filters"));
-  const fields = el("div", null, "advanced-fields");
-  more.append(fields);
-  root.append(more);
-  select("size", "Published guest capacity", [["", "Any / unknown capacity"], ["Small", "Small \xB7 fewer than 300"], ["Medium", "Medium \xB7 300\u2013999"], ["Large", "Large \xB7 1,000+"], ["Unknown", "Capacity not published"]], fields);
-  const coverage = el("p", "", "hint");
-  coverage.id = prefix + "capacityCoverage";
-  fields.append(coverage);
-  check("capacity", "Only venues with published capacity", fields);
-  const facility = el("fieldset"), legend = el("legend", "Documented facilities");
-  facility.append(legend);
-  fields.append(facility);
-  check("parking", "Parking documented", facility);
-  check("airConditioning", "Air conditioning documented", facility);
-  check("catering", "Catering documented", facility);
-  fields.append(el("p", "Not documented does not mean a facility is unavailable.", "hint"));
-  select("evidence", "Information source", [["", "All source types"], ["operator", "Includes an operator source"], ["mapped", "Primary map listings"]], fields);
-  check("verified", "Independently cross-checked records", fields);
+  select("collection", "Collection", [["community-halls", "Halls & centers"], ["hotels", "Hotel venues"], ["", "All venues"]]);
+  check("phone", "With a phone number");
   root.append(button("Near me", onLocate, "nearby"), el("p", "One-time location access, only with permission. Your location is never saved.", "hint"));
   const sync = (next, nextRows = rows) => {
     current = { ...next };
     area.set(current.area, nextRows);
     for (const [key, node] of nodes) if (node.type === "checkbox") node.checked = !!current[key];
     else node.value = current[key];
-    const known = nextRows.filter((v) => v.capacity || v.capacity_range).length;
-    coverage.textContent = `${known} of ${nextRows.length} indexed records publish capacity. Unknowns are excluded by a confirmed size filter.`;
-    if (["size", "capacity", "parking", "airConditioning", "catering", "evidence", "verified"].some((k) => current[k])) more.open = true;
   };
   sync(current);
   return { node: root, areaNode: area.node, set: sync };
 }
+export {
+  areaCombobox,
+  areaCounts,
+  areaNames,
+  filterPanel,
+  groupNames
+};

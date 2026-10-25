@@ -1,0 +1,664 @@
+[
+  {
+    "removed_at": "2026-10-25",
+    "reason": "Matching Aangan name, AurangzebRoad and point; current profile reports permanently closed.",
+    "authorization": "Owner explicitly requested removing permanently closed venues in this revision.",
+    "closure_source": "https://www.google.com/maps/search/?api=1&query=Angan+Community+Centre+Aurangzeb+Road+Dhaka",
+    "record": {
+      "id": "bd-osm-node-4528270335",
+      "city": "Dhaka",
+      "name": "Angan Community Centre",
+      "bn_name": "অঙ্গন কমিউনিটি সেন্টার",
+      "aliases": [
+        "অঙ্গন কমিউনিটি সেন্টার",
+        "Aangan Community Center"
+      ],
+      "category": "Community Center",
+      "division": "6",
+      "district": "47",
+      "area": "Mohammadpur",
+      "address": "Aurangzeb Road Dhaka 1207, Dhaka, Bangladesh",
+      "address_status": "partial",
+      "coordinates": {
+        "lat": 23.7630422,
+        "lon": 90.3676036
+      },
+      "phones": [
+        {
+          "number": "+88029138113",
+          "source": "https://www.openstreetmap.org/node/4528270335",
+          "checked": "2026-10-25",
+          "status": "published-not-call-tested"
+        }
+      ],
+      "website": null,
+      "capacity": null,
+      "capacity_layout": null,
+      "facilities": [],
+      "verification": "open-data-listed",
+      "last_checked": "2026-10-25",
+      "evidence": [
+        {
+          "url": "https://www.openstreetmap.org/node/4528270335",
+          "fields": [
+            "name",
+            "aliases",
+            "category",
+            "coordinates",
+            "city",
+            "address",
+            "phones"
+          ],
+          "checked": "2026-10-25",
+          "kind": "open-data",
+          "reuse": "OpenStreetMap contributors, ODbL-1.0; manually reviewed and filtered from the Geofabrik Bangladesh extract. No Google Places data."
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/reverse?lat=23.7630422&lon=90.3676036&format=jsonv2&addressdetails=1&zoom=18&accept-language=en",
+          "fields": [
+            "area"
+          ],
+          "checked": "2026-10-25",
+          "kind": "open-data",
+          "reuse": "OpenStreetMap/Nominatim address data, ODbL-1.0. Cached one-time, single-thread research at <=1 request/second; locality reviewed, not an operator address or legal boundary certification."
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Angan%20Community%20Centre%20Mohammadpur%20Dhaka%20Bangladesh",
+          "fields": [
+            "aliases",
+            "review_notice",
+            "maps_url"
+          ],
+          "checked": "2026-10-25",
+          "kind": "independent",
+          "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+        }
+      ],
+      "notes": "OpenStreetMap listing, not operator-confirmed. Wedding booking, current operation and business contacts must be confirmed directly. The marker is the published map point, not a verified entrance. The map record was last edited 2019-06-06. The source was reviewed on 2026-10-25; that is not an on-site verification date.",
+      "discovery": {
+        "source": "OpenStreetMap",
+        "element_type": "node",
+        "element_id": 4528270335,
+        "element_version": 3,
+        "osm_updated": "2019-06-06 08:08:45+00:00",
+        "extract_timestamp": "2026-10-24T20:20:51Z",
+        "geometry_method": "mapped_point"
+      },
+      "area_review": {
+        "method": "coordinate-and-address-review",
+        "precision": "browsing_locality",
+        "checked": "2026-10-25",
+        "source": "https://nominatim.openstreetmap.org/reverse?lat=23.7630422&lon=90.3676036&format=jsonv2&addressdetails=1&zoom=18&accept-language=en",
+        "reason": "Published Aurangzeb Road address and mapped Mohammadpur locality."
+      },
+      "review_notice": "A matching public business profile reports this venue permanently closed. The historic record and contacts are retained; confirm current availability directly before planning a visit.",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Angan%20Community%20Centre%20Mohammadpur%20Dhaka%20Bangladesh"
+    }
+  },
+  {
+    "removed_at": "2026-10-25",
+    "reason": "MatchingTalukdar20/CNurFattahLaneandpoint;currentprofile permanentlyclosed.",
+    "authorization": "Owner explicitly requested removing permanently closed venues in this revision.",
+    "closure_source": "https://www.google.com/maps/search/?api=1&query=Talukdar+Convention+Center+Dhaka",
+    "record": {
+      "id": "bd-osm-node-5233935421",
+      "city": "Dhaka",
+      "name": "Talukdar Convention Center",
+      "bn_name": null,
+      "aliases": [],
+      "category": "Convention Center",
+      "division": "6",
+      "district": "47",
+      "area": "Bakshibazar",
+      "address": "20/C Nur Fattah Lane. 1211, Dhaka, Bangladesh",
+      "address_status": "partial",
+      "coordinates": {
+        "lat": 23.721588,
+        "lon": 90.3907634
+      },
+      "phones": [
+        {
+          "number": "+880255155056",
+          "source": "https://www.openstreetmap.org/node/5233935421",
+          "checked": "2026-10-25",
+          "status": "published-not-call-tested"
+        },
+        {
+          "number": "+8801711595334",
+          "source": "https://www.google.com/maps/search/?api=1&query=Talukdar%20Convention%20Center%20Bakshibazar%20Dhaka%20Bangladesh",
+          "checked": "2026-10-25",
+          "status": "published-not-call-tested"
+        }
+      ],
+      "website": null,
+      "capacity": null,
+      "capacity_layout": null,
+      "facilities": [],
+      "verification": "open-data-listed",
+      "last_checked": "2026-10-25",
+      "evidence": [
+        {
+          "url": "https://www.openstreetmap.org/node/5233935421",
+          "fields": [
+            "name",
+            "aliases",
+            "category",
+            "coordinates",
+            "city",
+            "address",
+            "phones"
+          ],
+          "checked": "2026-10-25",
+          "kind": "open-data",
+          "reuse": "OpenStreetMap contributors, ODbL-1.0; manually reviewed and filtered from the Geofabrik Bangladesh extract. No Google Places data."
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/reverse?lat=23.721588&lon=90.3907634&format=jsonv2&addressdetails=1&zoom=18&accept-language=en",
+          "fields": [
+            "area"
+          ],
+          "checked": "2026-10-25",
+          "kind": "open-data",
+          "reuse": "OpenStreetMap/Nominatim address data, ODbL-1.0. Cached one-time, single-thread research at <=1 request/second; locality reviewed, not an operator address or legal boundary certification."
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Talukdar%20Convention%20Center%20Bakshibazar%20Dhaka%20Bangladesh",
+          "fields": [
+            "review_notice",
+            "maps_url",
+            "phones"
+          ],
+          "checked": "2026-10-25",
+          "kind": "independent",
+          "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+        }
+      ],
+      "notes": "OpenStreetMap listing, not operator-confirmed. Wedding booking, current operation and business contacts must be confirmed directly. The marker is the published map point, not a verified entrance. The map record was last edited 2017-11-17. The source was reviewed on 2026-10-25; that is not an on-site verification date.",
+      "discovery": {
+        "source": "OpenStreetMap",
+        "element_type": "node",
+        "element_id": 5233935421,
+        "element_version": 1,
+        "osm_updated": "2017-11-17 01:51:48+00:00",
+        "extract_timestamp": "2026-10-24T20:20:51Z",
+        "geometry_method": "mapped_point"
+      },
+      "area_review": {
+        "method": "coordinate-and-address-review",
+        "precision": "browsing_locality",
+        "checked": "2026-10-25",
+        "source": "https://nominatim.openstreetmap.org/reverse?lat=23.721588&lon=90.3907634&format=jsonv2&addressdetails=1&zoom=18&accept-language=en",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      "review_notice": "A matching public business profile reports this venue permanently closed. Historic contact information is retained; confirm current availability directly before planning a visit.",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Talukdar%20Convention%20Center%20Bakshibazar%20Dhaka%20Bangladesh"
+    }
+  },
+  {
+    "removed_at": "2026-10-25",
+    "reason": "MatchingGolamMorshed16JoynagRoad;currentbusinessprofile permanentlyclosed.",
+    "authorization": "Owner explicitly requested removing permanently closed venues in this revision.",
+    "closure_source": "https://www.google.com/maps/search/?api=1&query=Hazi%20Golam%20Morshed%20Community%20Centre%20Bakshibazar%20Dhaka%20Bangladesh",
+    "record": {
+      "id": "bd-osm-node-4582326295",
+      "city": "Dhaka",
+      "name": "Hazi Golam Morshed Community Centre",
+      "bn_name": null,
+      "aliases": [
+        "Gholam Morshed Community Center",
+        "Dhaka City Corporation Office and Golam Morshed Community Center"
+      ],
+      "category": "Community Center",
+      "division": "6",
+      "district": "47",
+      "area": "Bakshibazar",
+      "address": "16 Joynag Road, Bakshibazar, Dhaka 1211",
+      "address_status": "published",
+      "coordinates": {
+        "lat": 23.7222503,
+        "lon": 90.3931706
+      },
+      "phones": [],
+      "website": null,
+      "capacity": null,
+      "capacity_layout": null,
+      "facilities": [],
+      "verification": "open-data-listed",
+      "last_checked": "2026-10-25",
+      "evidence": [
+        {
+          "url": "https://www.openstreetmap.org/node/4582326295",
+          "fields": [
+            "name",
+            "aliases",
+            "category",
+            "coordinates",
+            "city",
+            "address"
+          ],
+          "checked": "2026-10-25",
+          "kind": "open-data",
+          "reuse": "OpenStreetMap contributors, ODbL-1.0; manually reviewed and filtered from the Geofabrik Bangladesh extract. No Google Places data."
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/reverse?lat=23.7222503&lon=90.3931706&format=jsonv2&addressdetails=1&zoom=18&accept-language=en",
+          "fields": [
+            "area"
+          ],
+          "checked": "2026-10-25",
+          "kind": "open-data",
+          "reuse": "OpenStreetMap/Nominatim address data, ODbL-1.0. Cached one-time, single-thread research at <=1 request/second; locality reviewed, not an operator address or legal boundary certification."
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Hazi%20Golam%20Morshed%20Community%20Centre%20Bakshibazar%20Dhaka%20Bangladesh",
+          "fields": [
+            "address",
+            "aliases",
+            "review_notice",
+            "maps_url"
+          ],
+          "checked": "2026-10-25",
+          "kind": "independent",
+          "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+        }
+      ],
+      "notes": "OpenStreetMap listing, not operator-confirmed. Wedding booking, current operation and business contacts must be confirmed directly. The marker is the published map point, not a verified entrance. No unambiguous public business number was available in this source. The map record was last edited 2021-11-11. The source was reviewed on 2026-10-25; that is not an on-site verification date.",
+      "discovery": {
+        "source": "OpenStreetMap",
+        "element_type": "node",
+        "element_id": 4582326295,
+        "element_version": 4,
+        "osm_updated": "2021-11-11 12:44:00+00:00",
+        "extract_timestamp": "2026-10-24T20:20:51Z",
+        "geometry_method": "mapped_point"
+      },
+      "area_review": {
+        "method": "coordinate-and-address-review",
+        "precision": "browsing_locality",
+        "checked": "2026-10-25",
+        "source": "https://nominatim.openstreetmap.org/reverse?lat=23.7222503&lon=90.3931706&format=jsonv2&addressdetails=1&zoom=18&accept-language=en",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      "review_notice": "Closure reported: the matched Gholam Morshed Community Center listing is marked permanently closed. Confirm any current venue or booking identity before visiting.",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Hazi%20Golam%20Morshed%20Community%20Centre%20Bakshibazar%20Dhaka%20Bangladesh",
+      "phone_review": {
+        "status": "identity-unconfirmed",
+        "checked": "2026-10-25",
+        "note": "A booking contact could not be safely matched to this venue. Identity or venue use needs confirmation; unrelated contacts were not reused."
+      }
+    }
+  },
+  {
+    "removed_at": "2026-10-25",
+    "reason": "MatchingCasanovaHouse11BanasreeMainRoadandpoint;currentprofile permanentlyclosed.",
+    "authorization": "Owner explicitly requested removing permanently closed venues in this revision.",
+    "closure_source": "https://www.google.com/maps/search/?api=1&query=Casanova%20Party%20Center%20Banasree%20Dhaka%20Bangladesh",
+    "record": {
+      "id": "bd-osm-node-9843518617",
+      "city": "Dhaka",
+      "name": "Casanova Party Center",
+      "bn_name": null,
+      "aliases": [],
+      "category": "Event Hall",
+      "division": "6",
+      "district": "47",
+      "area": "Banasree",
+      "address": "House 11, Banasree Main Road, Banasree, Dhaka 1212",
+      "address_status": "published",
+      "coordinates": {
+        "lat": 23.7648217,
+        "lon": 90.428561
+      },
+      "phones": [],
+      "website": null,
+      "capacity": null,
+      "capacity_layout": null,
+      "facilities": [],
+      "verification": "open-data-listed",
+      "last_checked": "2026-10-25",
+      "evidence": [
+        {
+          "url": "https://www.openstreetmap.org/node/9843518617",
+          "fields": [
+            "name",
+            "aliases",
+            "category",
+            "coordinates",
+            "city",
+            "address"
+          ],
+          "checked": "2026-10-25",
+          "kind": "open-data",
+          "reuse": "OpenStreetMap contributors, ODbL-1.0; manually reviewed and filtered from the Geofabrik Bangladesh extract. No Google Places data."
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/reverse?lat=23.7648217&lon=90.428561&format=jsonv2&addressdetails=1&zoom=18&accept-language=en",
+          "fields": [
+            "area"
+          ],
+          "checked": "2026-10-25",
+          "kind": "open-data",
+          "reuse": "OpenStreetMap/Nominatim address data, ODbL-1.0. Cached one-time, single-thread research at <=1 request/second; locality reviewed, not an operator address or legal boundary certification."
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Casanova%20Party%20Center%20Banasree%20Dhaka",
+          "fields": [
+            "review_notice"
+          ],
+          "checked": "2026-10-25",
+          "kind": "independent",
+          "reuse": "Individual public business facts manually checked on the named listing at the user’s request. No Google ratings, review counts, reviews, photos, opening hours or Places API dataset copied."
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Casanova%20Party%20Center%20Banasree%20Dhaka%20Bangladesh",
+          "fields": [
+            "address",
+            "review_notice",
+            "maps_url"
+          ],
+          "checked": "2026-10-25",
+          "kind": "independent",
+          "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+        }
+      ],
+      "notes": "OpenStreetMap listing, not operator-confirmed. Wedding booking, current operation and business contacts must be confirmed directly. The marker is the published map point, not a verified entrance. No unambiguous public business number was available in this source. The map record was last edited 2022-06-24. The source was reviewed on 2026-10-25; that is not an on-site verification date. A manually inspected listing reports permanent closure. The historical mapped record is retained pending corroboration; it is not presented as confirmed operating.",
+      "discovery": {
+        "source": "OpenStreetMap",
+        "element_type": "node",
+        "element_id": 9843518617,
+        "element_version": 1,
+        "osm_updated": "2022-06-24 08:42:02+00:00",
+        "extract_timestamp": "2026-10-24T20:20:51Z",
+        "geometry_method": "mapped_point"
+      },
+      "area_review": {
+        "method": "coordinate-and-address-review",
+        "precision": "browsing_locality",
+        "checked": "2026-10-25",
+        "source": "https://nominatim.openstreetmap.org/reverse?lat=23.7648217&lon=90.428561&format=jsonv2&addressdetails=1&zoom=18&accept-language=en",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      "review_notice": "Closure reported: the matched Casanova Party Center listing is marked permanently closed. Verify any replacement venue or booking identity before visiting.",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Casanova%20Party%20Center%20Banasree%20Dhaka%20Bangladesh",
+      "phone_review": {
+        "status": "identity-unconfirmed",
+        "checked": "2026-10-25",
+        "note": "A booking contact could not be safely matched to this venue. Identity or venue use needs confirmation; unrelated contacts were not reused."
+      }
+    }
+  },
+  {
+    "removed_at": "2026-10-25",
+    "reason": "ExactATNAnandaUllashnameandHouse7NewRoad13address profile permanentlyclosed; oldcoordinate differs~1.1km, preserved in archive rather than publishing an unreliable active record.",
+    "authorization": "Owner explicitly requested removing permanently closed venues in this revision.",
+    "closure_source": "https://www.google.com/maps/search/?api=1&query=ATN%20Ananda%20Ullash%20Convention%20Center%20Dhanmondi%20Dhaka%20Bangladesh",
+    "record": {
+      "id": "bd-osm-node-3355520099",
+      "city": "Dhaka",
+      "name": "ATN Ananda Ullash Convention Center",
+      "bn_name": null,
+      "aliases": [],
+      "category": "Convention Center",
+      "division": "6",
+      "district": "47",
+      "area": "Dhanmondi",
+      "address": "House 7, New Road 13, near Sobhag Mosque, Dhanmondi, Dhaka, Bangladesh",
+      "address_status": "published",
+      "coordinates": {
+        "lat": 23.758032,
+        "lon": 90.3660472
+      },
+      "phones": [],
+      "website": null,
+      "capacity": null,
+      "capacity_layout": null,
+      "facilities": [],
+      "verification": "open-data-listed",
+      "last_checked": "2026-10-25",
+      "evidence": [
+        {
+          "url": "https://www.openstreetmap.org/node/3355520099",
+          "fields": [
+            "name",
+            "aliases",
+            "category",
+            "coordinates",
+            "city",
+            "address",
+            "area"
+          ],
+          "checked": "2026-10-25",
+          "kind": "open-data",
+          "reuse": "OpenStreetMap contributors, ODbL-1.0; manually reviewed and filtered from the Geofabrik Bangladesh extract. No Google Places data."
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=ATN%20Ananda%20Ullash%20Convention%20Center%20Dhanmondi%20Dhaka%20Bangladesh",
+          "fields": [
+            "address",
+            "review_notice",
+            "maps_url"
+          ],
+          "checked": "2026-10-25",
+          "kind": "independent",
+          "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+        }
+      ],
+      "notes": "OpenStreetMap listing, not operator-confirmed. Wedding booking, current operation and business contacts must be confirmed directly. The marker is the published map point, not a verified entrance. No unambiguous public business number was available in this source. The map record was last edited 2019-10-02. The source was reviewed on 2026-10-25; that is not an on-site verification date.",
+      "discovery": {
+        "source": "OpenStreetMap",
+        "element_type": "node",
+        "element_id": 3355520099,
+        "element_version": 3,
+        "osm_updated": "2019-10-02 10:02:30+00:00",
+        "extract_timestamp": "2026-10-24T20:20:51Z",
+        "geometry_method": "mapped_point"
+      },
+      "review_notice": "Permanent closure reported on the business listing. Confirm current operation before planning a visit.",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=ATN%20Ananda%20Ullash%20Convention%20Center%20Dhanmondi%20Dhaka%20Bangladesh",
+      "phone_review": {
+        "status": "not-found-in-checked-sources",
+        "checked": "2026-10-25",
+        "note": "No usable business phone was found in the checked public sources. The Maps listing or operator may have newer information."
+      }
+    }
+  },
+  {
+    "removed_at": "2026-10-25",
+    "reason": "MatchingKazi756BegumRokeyaSwaraniandpoint;currentprofile permanentlyclosed.",
+    "authorization": "Owner explicitly requested removing permanently closed venues in this revision.",
+    "closure_source": "https://www.google.com/maps/search/?api=1&query=Kazi%20Community%20Center%20Mirpur%20Dhaka%20Bangladesh",
+    "record": {
+      "id": "bd-osm-node-3734889100",
+      "city": "Dhaka",
+      "name": "Kazi Community Center",
+      "bn_name": null,
+      "aliases": [],
+      "category": "Community Center",
+      "division": "6",
+      "district": "47",
+      "area": "Mirpur",
+      "address": "756 Begum Rokeya Swarani, Mirpur, Dhaka 1216, Bangladesh",
+      "address_status": "published",
+      "coordinates": {
+        "lat": 23.7965839,
+        "lon": 90.3733332
+      },
+      "phones": [],
+      "website": null,
+      "capacity": null,
+      "capacity_layout": null,
+      "facilities": [],
+      "verification": "open-data-listed",
+      "last_checked": "2026-10-25",
+      "evidence": [
+        {
+          "url": "https://www.openstreetmap.org/node/3734889100",
+          "fields": [
+            "name",
+            "aliases",
+            "category",
+            "coordinates",
+            "city",
+            "address"
+          ],
+          "checked": "2026-10-25",
+          "kind": "open-data",
+          "reuse": "OpenStreetMap contributors, ODbL-1.0; manually reviewed and filtered from the Geofabrik Bangladesh extract. No Google Places data."
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/reverse?lat=23.7965839&lon=90.3733332&format=jsonv2&addressdetails=1&zoom=18&accept-language=en",
+          "fields": [
+            "area"
+          ],
+          "checked": "2026-10-25",
+          "kind": "open-data",
+          "reuse": "OpenStreetMap/Nominatim address data, ODbL-1.0. Cached one-time, single-thread research at <=1 request/second; locality reviewed, not an operator address or legal boundary certification."
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Kazi%20Community%20Center%20Mirpur%20Dhaka%20Bangladesh",
+          "fields": [
+            "address",
+            "review_notice",
+            "maps_url"
+          ],
+          "checked": "2026-10-25",
+          "kind": "independent",
+          "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+        }
+      ],
+      "notes": "OpenStreetMap listing, not operator-confirmed. Wedding booking, current operation and business contacts must be confirmed directly. The marker is the published map point, not a verified entrance. No unambiguous public business number was available in this source. The map record was last edited 2015-09-08. The source was reviewed on 2026-10-25; that is not an on-site verification date.",
+      "discovery": {
+        "source": "OpenStreetMap",
+        "element_type": "node",
+        "element_id": 3734889100,
+        "element_version": 1,
+        "osm_updated": "2015-09-08 18:26:41+00:00",
+        "extract_timestamp": "2026-10-24T20:20:51Z",
+        "geometry_method": "mapped_point"
+      },
+      "area_review": {
+        "method": "coordinate-and-address-review",
+        "precision": "browsing_locality",
+        "checked": "2026-10-25",
+        "source": "https://nominatim.openstreetmap.org/reverse?lat=23.7965839&lon=90.3733332&format=jsonv2&addressdetails=1&zoom=18&accept-language=en",
+        "reason": "Kazipara map context grouped under wider Mirpur."
+      },
+      "review_notice": "Permanent closure reported on the business listing. Confirm current operation before planning a visit.",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Kazi%20Community%20Center%20Mirpur%20Dhaka%20Bangladesh",
+      "phone_review": {
+        "status": "not-found-in-checked-sources",
+        "checked": "2026-10-25",
+        "note": "No usable business phone was found in the checked public sources. The Maps listing or operator may have newer information."
+      }
+    }
+  },
+  {
+    "removed_at": "2026-10-25",
+    "reason": "ExactSpectraHouse19Road7Gulshanprofile permanentlyclosed; existingphone andmappedbranchmatch.",
+    "authorization": "Owner explicitly requested removing permanently closed venues in this revision.",
+    "closure_source": "https://www.google.com/maps/place/%E0%A6%B8%E0%A7%8D%E0%A6%AA%E0%A7%87%E0%A6%95%E0%A7%8D%E0%A6%9F%E0%A7%8D%E0%A6%B0%E0%A6%BE+%E0%A6%95%E0%A6%A8%E0%A6%AD%E0%A7%87%E0%A6%A8%E0%A6%B6%E0%A6%A8+%E0%A6%B8%E0%A7%87%E0%A6%A8%E0%A7%8D%E0%A6%9F%E0%A6%BE%E0%A6%B0/@23.7779673,90.4090793,17z/data=!4m10!1m2!2m1!1sSpectra+Convention+Centre+Gulshan+Dhaka!3m6!1s0x3755c79d9e454033:0x792e2dec6567f708!8m2!3d23.7779673!4d90.4135854!15sCidTcGVjdHJhIENvbnZlbnRpb24gQ2VudHJlIEd1bHNoYW4gRGhha2FaKSInc3BlY3RyYSBjb252ZW50aW9uIGNlbnRyZSBndWxzaGFuIGRoYWthkgERY29udmVudGlvbl9jZW50ZXLgAQA!16s%2Fg%2F11r8fy650?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+    "record": {
+      "id": "bd-osm-way-400903521",
+      "city": "Dhaka",
+      "name": "Spectra Convention Centre",
+      "bn_name": null,
+      "aliases": [],
+      "category": "Convention Center",
+      "division": "6",
+      "district": "47",
+      "area": "Gulshan 1",
+      "address": "Dhaka, Bangladesh — street address not supplied in the map listing.",
+      "address_status": "not_available",
+      "coordinates": {
+        "lat": 23.777963,
+        "lon": 90.4135551
+      },
+      "phones": [
+        {
+          "number": "+8801906989895",
+          "source": "https://www.google.com/maps/search/?api=1&query=Spectra%20Convention%20Centre%20Gulshan%20Dhaka",
+          "checked": "2026-10-25",
+          "status": "published-not-call-tested"
+        }
+      ],
+      "website": null,
+      "capacity": null,
+      "capacity_layout": null,
+      "facilities": [],
+      "verification": "open-data-listed",
+      "last_checked": "2026-10-25",
+      "evidence": [
+        {
+          "url": "https://www.openstreetmap.org/way/400903521",
+          "fields": [
+            "name",
+            "aliases",
+            "category",
+            "coordinates",
+            "city",
+            "address"
+          ],
+          "checked": "2026-10-25",
+          "kind": "open-data",
+          "reuse": "OpenStreetMap contributors, ODbL-1.0; manually reviewed and filtered from the Geofabrik Bangladesh extract. No Google Places data."
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/reverse?lat=23.777963&lon=90.4135551&format=jsonv2&addressdetails=1&zoom=18&accept-language=en",
+          "fields": [
+            "area"
+          ],
+          "checked": "2026-10-25",
+          "kind": "open-data",
+          "reuse": "OpenStreetMap/Nominatim address data, ODbL-1.0. Cached one-time, single-thread research at <=1 request/second; locality reviewed, not an operator address or legal boundary certification."
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Spectra%20Convention%20Centre%20Gulshan%20Dhaka",
+          "fields": [
+            "phones"
+          ],
+          "checked": "2026-10-25",
+          "kind": "independent",
+          "reuse": "Individual public booking/business facts manually inspected; no prose, photos, ratings, reviews, schedules or restricted Places API data copied."
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Spectra%20Convention%20Centre%20Gulshan%20Dhaka",
+          "fields": [
+            "review_notice"
+          ],
+          "checked": "2026-10-25",
+          "kind": "independent",
+          "reuse": "Individual public booking/business facts manually inspected; no prose, photos, ratings, reviews, schedules or restricted Places API data copied."
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Spectra%20Convention%20Centre%20Gulshan%20Dhaka",
+          "fields": [
+            "review_notice",
+            "maps_url"
+          ],
+          "checked": "2026-10-25",
+          "kind": "independent",
+          "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+        }
+      ],
+      "notes": "OpenStreetMap listing, not operator-confirmed. Wedding booking, current operation and business contacts must be confirmed directly. The marker is the mapped building’s approximate center, not a verified entrance. No unambiguous public business number was available in this source. The map record was last edited 2017-06-07. The source was reviewed on 2026-10-25; that is not an on-site verification date. Additional public business contact checked on the cited source; no line has been call-tested.",
+      "discovery": {
+        "source": "OpenStreetMap",
+        "element_type": "way",
+        "element_id": 400903521,
+        "element_version": 2,
+        "osm_updated": "2017-06-07 08:58:46+00:00",
+        "extract_timestamp": "2026-10-24T20:20:51Z",
+        "geometry_method": "building_bbox_center"
+      },
+      "area_review": {
+        "method": "coordinate-and-address-review",
+        "precision": "browsing_locality",
+        "checked": "2026-10-25",
+        "source": "https://nominatim.openstreetmap.org/reverse?lat=23.777963&lon=90.4135551&format=jsonv2&addressdetails=1&zoom=18&accept-language=en",
+        "reason": "Mapped Road 7/Gulshan 1 locality."
+      },
+      "review_notice": "Closure reported: the matched Spectra Convention Centre listing is marked permanently closed. Confirm any current operator before planning a visit.",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Spectra%20Convention%20Centre%20Gulshan%20Dhaka"
+    }
+  }
+]

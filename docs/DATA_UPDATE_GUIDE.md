@@ -58,3 +58,9 @@ Report contact entries and distinct phone numbers separately: shared branch or m
 When an owner explicitly requests a public venue addition but independent sources are inaccessible, preserve submission provenance and mark verification as `user-submitted`, evidence kind `submission`, and every submitted phone `submitted-not-verified`. A visible review notice is required. Do not include these contacts in published-source coverage, claim their linked pages were inspected, or invent an area from a nearby map label. Phone actions remain available with a pending-verification label. Upgrade only after actual public-source inspection and retain the original submission history.
 
 For unavailable contacts, optional `phone_review` stores the dated research outcome (`not-found-in-checked-sources`, `source-limited`, or `identity-unconfirmed`). These are research metadata, not proof the venue has no telephone. Preserve the all-record ledger and unresolved report; source-limited follow-up remains independently incomplete.
+
+## Visual manager and the contact-first revision
+
+The owner's 26October2026 request explicitly authorizes removing individually confirmed permanently closed venues; seven matching records were preserved in `docs/archive/venues.json`. Temporarily closed and identity-ambiguous records remain for review. This is a scoped owner instruction, not permission for future automatic deletion.
+
+The current public UI omits capacities/facilities and detailed source controls. Preserve existing researched fields internally. New records do not require those optional facts. Follow `docs/MANAGE_DIRECTORY.md` for the graphical workflow. `npm run prepare:data` derives complete collection membership and appends newly used Dhaka areas before tests/build; legitimate edits do not need a frozen venue count or simultaneous hand edits to several JSON files. Keep schema and provenance validation enabled.
