@@ -7,10 +7,12 @@
 - Visual inspection: screenshots at 360, 768, 1366 and 1920 pixels, no horizontal overflow. Mobile filters collapse while neighborhood selection remains visible. Serif headings, restrained forest/ivory palette, no unlicensed photos or decorative venue placeholders.
 - Production Vite build passes. Application code and map dependencies are locally bundled. No required paid services or API keys. Production dependencies: npm audit reports 0 known vulnerabilities at this check.
 - No critical page errors in the browser discovery scenarios. Browser tests use synthetic records only through request interception; real data remains separately validated and real-content tests use the actual JSON.
-- No Lighthouse score claimed. No live website verification yet.
+- Local production build smoke test under `/dist/` passed: HTTP 200, 8 real records, English content, search, neighborhood filter, details, phone and review links, favorites persistence, comparison and clustered map markers; no page errors.
+- Lighthouse 12.8.2, local production build with mobile emulation: performance 98, accessibility 100, best practices 100, SEO 100 after correcting muted-text contrast. These are local measurements, not live-site scores.
+- Live website verification is pending environment access to the custom hostname.
 
-## Deployment blocker
+## Deployment status
 
 GitHub repository read access and reported repository admin permissions are available, but POST /repos/tanzilamd/venueradar-bd/pages returns HTTP 403, “Resource not accessible by integration.” The GitHub App credential cannot enable Pages. The owner must choose Settings → Pages → Source: GitHub Actions (or grant the integration repository Pages administration access). Only this project repository is targeted. No personal root-site or custom-domain settings are altered.
 
-After Pages is enabled, run the Pages workflow, read the real deployment URL and verify it in Chromium. No guessed URL is presented as live.
+Pages was subsequently enabled and workflow 40194195129 succeeded: https://github.com/tanzilamd/venueradar-bd/actions/runs/40194195129 . GitHub reports https://tanzilahmed.tech/venueradar-bd/ with HTTPS enforced and no project CNAME override. This inherits the existing root site domain; no root configuration was changed. Opening the actual URL was denied by the environment proxy (CONNECT 403). The hostname was added to the environment configuration draft for user application. Successful workflow deployment is not claimed as successful live browser verification.

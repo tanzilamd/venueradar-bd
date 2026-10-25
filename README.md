@@ -30,7 +30,7 @@ English interface with venue-name and alias search, Dhaka neighborhood filters, 
 
 `.github/workflows/pages.yml` builds and deploys via GitHub Actions on main, with limited job permissions. It **refuses to deploy an empty venue dataset**. After research and QA, push to main and configure only this repository's Settings → Pages → Source: GitHub Actions. Never modify the personal root site's repository, CNAME or domain settings. Read the actual Pages API `html_url` and deployment output; open that URL and verify the built data, assets and interactions. Do not assume a hostname or claim live verification from a workflow alone.
 
-Sitemap/canonical/og:url should be generated only after the real Pages URL is known. No guessed production URL is embedded. `robots.txt`, favicon, semantic markup, metadata and keyboard focus states are present. Lighthouse results have not been measured.
+Sitemap/canonical/og:url should be generated only after the real Pages URL is known. The canonical URL and sitemap use GitHub’s reported project URL: https://tanzilahmed.tech/venueradar-bd/ . `robots.txt`, favicon, semantic markup, metadata and keyboard focus states are present. Local mobile Lighthouse scores: performance 98, accessibility 100, best practices 100, SEO 100. These are local build measurements, not live-site measurements.
 
 ## Data maintenance
 
