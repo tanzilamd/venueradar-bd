@@ -11,6 +11,11 @@ export function validateData(venues, areas, schema) {
   for (const v of venues) {
     if (seen.has(v.id)) errors.push(`Duplicate ID ${v.id}`);
     seen.add(v.id);
+    if (
+      v.capacity_range &&
+      (v.capacity != null || v.capacity_range.min > v.capacity_range.max)
+    )
+      errors.push(`${v.id}: invalid or ambiguous capacity range`);
     const district = areas.districts.find((d) => d.id === v.district);
     if (!district || district.division_id !== v.division)
       errors.push(`${v.id}: district/division mismatch`);
@@ -20,6 +25,7 @@ export function validateData(venues, areas, schema) {
       "category",
       ...(v.coordinates ? ["coordinates"] : []),
       ...(v.capacity ? ["capacity"] : []),
+      ...(v.capacity_range ? ["capacity_range"] : []),
       ...v.facilities.map((f) => "facilities." + f),
     ])
       if (!v.evidence.some((e) => e.fields.includes(field)))

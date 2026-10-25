@@ -2,7 +2,7 @@
 
 ## Current admitted venue data
 
-**8 venues, 8 sourced business phone numbers; Dhaka city/district only. This is a small hotel-focused starter set, not a comprehensive directory.**
+**11 venues with sourced business contact information: 8 hotel venues and 3 independent convention/event-hall venues, Dhaka only. This remains an incomplete collection, not all Dhaka community centers.**
 
 On 2026-10-25, HTTPS CONNECT requests to overpass-api.de, www.biccbd.com and www.bangladesh.gov.bd were rejected with 403 by the environment proxy. api.github.com was also denied. Native Git read access works. Network additions were saved to the environment draft, but require user application/publication. Later in the session GitHub, Marriott, Pan Pacific and Radisson became accessible. Eight venue records were manually checked against official event pages. No venue information was copied from memory or invented to fill the target. Broader Dhaka research is still incomplete; additional official-site domains have been saved for review. Overpass returned 406, BICC 503, IHG 403; these failures were not bypassed.
 
@@ -37,3 +37,7 @@ Four coordinate pairs come from the respective Marriott pages’ official locati
 - Dhaka Regency Hotel & Resort: https://dhakaregency.com/meeting (banquet venue classification); https://dhakaregency.com/ (business contact and address). No published capacity on the inspected page.
 
 Additional research attempts: ICCB returned 403; Lakeshore returned 403; Six Seasons presented a CAPTCHA and was not bypassed. Amari and Dhaka Regency became accessible later and were admitted. No record is independently cross-checked yet; all eight are labelled source-checked. Seven have neighborhood assignments; Sonargaon remains neighborhood-unknown pending evidence.
+
+## Independent hall expansion
+
+See [the change report](reports/2026-10-25-community-halls.md) for the 3 added venues, exact first-party URLs, conflicts, remaining neighborhood gaps and access failures. No original venue record was changed. Police Convention Hall adds Eskaton; RAOWA and SKS add Mohakhali. SKS’s occupancy range is preserved rather than turned into a fabricated exact capacity. There are now 11 phone-bearing records (14 published business numbers), 8 with capacity evidence (one a range), and 4 with verified coordinates.

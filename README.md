@@ -2,7 +2,7 @@
 
 English-only, Dhaka-focused, static venue research and discovery platform for Bangladesh. No backend, mandatory login, paid API, database or scheduled scraping.
 
-**Status: Dhaka-first starter directory. Eight official-source venue records; incomplete, hotel-focused coverage. Deployment verification recorded in docs/QA.md.**
+**Status: Dhaka-first starter directory. Eleven official-source venue records; incomplete, hotel-focused coverage. Deployment verification recorded in docs/QA.md.**
 
 ## Develop
 
@@ -24,7 +24,7 @@ Vite bundles Leaflet and clustering locally. Relative build URLs support GitHub 
 
 ## Features implemented
 
-English interface with venue-name and alias search, Dhaka neighborhood filters, category/size/facility/evidence filters, dataset-derived statistics, map/list switching, clustered markers, marker/card selection, venue details and evidence, business call links, current Google review links, 2–3 venue comparisons, persistent favorites, and approximate proximity sorting. Unknown facts are explicitly labelled. Eight source-checked Dhaka venues are indexed; broader community-center coverage remains incomplete.
+English interface with venue-name and alias search, Dhaka neighborhood filters, category/size/facility/evidence filters, dataset-derived statistics, map/list switching, clustered markers, marker/card selection, venue details and evidence, business call links, current Google review links, 2–3 venue comparisons, persistent favorites, and approximate proximity sorting. Unknown facts are explicitly labelled. Eleven source-checked Dhaka venues are indexed; broader community-center coverage remains incomplete.
 
 ## Deployment
 
@@ -34,7 +34,7 @@ Sitemap/canonical/og:url should be generated only after the real Pages URL is kn
 
 ## Data maintenance
 
-Read [research guide](docs/RESEARCH_GUIDE.md), [safe update guide](docs/DATA_UPDATE_GUIDE.md), and [sources and limitations](docs/DATA_SOURCES.md). Version 1 focuses exclusively on Dhaka. Current coverage is eight hotel event venues; community centers and many neighborhoods remain under-represented. Existing verified records must never be replaced by weaker or empty data.
+Read [research guide](docs/RESEARCH_GUIDE.md), [safe update guide](docs/DATA_UPDATE_GUIDE.md), and [sources and limitations](docs/DATA_SOURCES.md). Version 1 focuses exclusively on Dhaka. Current coverage is eight hotel event venues and three independent convention/event-hall venues. This is not a complete community-center directory; many neighborhoods remain under-represented. Existing verified records must never be replaced by weaker or empty data.
 
 ## License
 

@@ -4,7 +4,14 @@ import "leaflet.markercluster";
 import "leaflet.markercluster/dist/MarkerCluster.css";
 import "leaflet.markercluster/dist/MarkerCluster.Default.css";
 import "./style.css";
-import { filterVenues, sizeOf, readIds, mapsURL } from "./model.js";
+import {
+  filterVenues,
+  sizeOf,
+  readIds,
+  mapsURL,
+  hasCapacity,
+  capacityText,
+} from "./model.js";
 const $ = (id) => document.getElementById(id),
   bn = (n) =>
     new Intl.NumberFormat("en-BD", { maximumFractionDigits: 1 }).format(n);
@@ -152,7 +159,7 @@ function method() {
   for (const [title, text] of [
     [
       "Directory coverage",
-      `${bn(venues.length)} source-checked venues indexed in Dhaka. This initial collection focuses on hotel event venues. Community centers and other neighborhoods remain under-represented; this is not a complete directory.`,
+      `${bn(venues.length)} source-checked venues indexed in Dhaka. This collection includes hotel venues and independent convention halls. Community centers and many neighborhoods remain under-represented; this is not a complete directory.`,
     ],
     [
       "Ratings and reviews",
@@ -160,7 +167,7 @@ function method() {
     ],
     [
       "How size is classified",
-      "Small: fewer than 300 people. Medium: 300–999. Large: 1,000 or more. Classification uses published capacity only. Always compare seating layouts: theatre and banquet capacities differ.",
+      "Small: fewer than 300 people. Medium: 300–999. Large: 1,000 or more. Classification uses published capacity only. Always compare seating layouts: theatre and banquet capacities differ. Published ranges are preserved; a range is classified only if both bounds fall within the same size band. Capacity sorting uses the lower bound for ranges.",
     ],
     [
       "Business contacts and verification",
@@ -219,11 +226,11 @@ function facts(v) {
     ["Venue type", tr(v.category)],
     [
       "Published capacity",
-      v.capacity == null
-        ? "Unknown"
-        : `${bn(v.capacity)} people · ${v.capacity_layout || "Layout unspecified"}`,
+      hasCapacity(v)
+        ? `${capacityText(v)} · ${v.capacity_layout || "Layout unspecified"}`
+        : "Unknown",
     ],
-    ["Size", tr(sizeOf(v.capacity))],
+    ["Size", tr(sizeOf(v.capacity, v.capacity_range))],
     ["Documented facilities", v.facilities.map(tr).join(", ") || "Unknown"],
     [
       "Phone",
@@ -339,9 +346,9 @@ function renderCards() {
       el("p", v.capacity_layout || "Seating layout unknown", "hint"),
       el(
         "span",
-        v.capacity == null
-          ? "Capacity unknown"
-          : `${bn(v.capacity)} people · ${tr(sizeOf(v.capacity))}`,
+        hasCapacity(v)
+          ? `${capacityText(v)} · ${tr(sizeOf(v.capacity, v.capacity_range))}`
+          : "Capacity unknown",
         "badge",
       ),
     );
@@ -388,9 +395,10 @@ function render() {
   $("stats").replaceChildren();
   for (const [n, label] of [
     [results.length, "Indexed venues"],
-    [results.filter((v) => v.capacity != null).length, "Capacity documented"],
+    [results.filter(hasCapacity).length, "Capacity documented"],
     [
-      results.filter((v) => sizeOf(v.capacity) === "Large").length,
+      results.filter((v) => sizeOf(v.capacity, v.capacity_range) === "Large")
+        .length,
       "Large venues",
     ],
     [results.filter((v) => v.phones.length).length, "Business phone listed"],
@@ -591,7 +599,7 @@ async function load() {
     compare = readIds(storage, "vr-compare", valid).slice(0, 3);
     placeOptions();
     $("coverageNote").textContent = venues.length
-      ? `Dhaka · ${bn(venues.length)} venues. Initial hotel-focused collection; community center coverage remains incomplete.`
+      ? `Dhaka · ${bn(venues.length)} venues. Independent halls are being added. Neighborhood coverage remains incomplete.`
       : "No verified venue records have been published yet.";
     render();
   } catch {

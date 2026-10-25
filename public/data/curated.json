@@ -47,6 +47,24 @@
       "decision": "admitted",
       "basis": "Official event and contact information inspected; capacity only where a seating table is provided.",
       "checked": "2026-10-25"
+    },
+    {
+      "id": "bd-police-convention-hall-eskaton",
+      "decision": "admitted",
+      "basis": "Manually reviewed first-party event-venue and business-contact pages. No private schedules or staff contacts collected.",
+      "checked": "2026-10-25"
+    },
+    {
+      "id": "bd-raowa-convention-halls",
+      "decision": "admitted",
+      "basis": "Manually reviewed first-party event-venue and business-contact pages. No private schedules or staff contacts collected.",
+      "checked": "2026-10-25"
+    },
+    {
+      "id": "bd-sks-convention-hall",
+      "decision": "admitted",
+      "basis": "Manually reviewed first-party event-venue and business-contact pages. No private schedules or staff contacts collected.",
+      "checked": "2026-10-25"
     }
   ],
   "conflicts": [
@@ -56,6 +74,56 @@
       "summary": 1100,
       "hall_description": 1050,
       "decision": "Use hall-specific theatre figure 1050 with visible layout caveat; banquet capacity unknown."
+    },
+    {
+      "id": "bd-police-convention-hall-eskaton",
+      "field": "phones",
+      "issue": "One mobile number appears with different digit counts between header and contact section.",
+      "decision": "Omit that number; retain only consistently published booking numbers and public landline.",
+      "source": "https://policeconventionhall.com/wp/",
+      "checked": "2026-10-25"
     }
-  ]
+  ],
+  "research_status": {
+    "scope": "Dhaka community centers and convention halls",
+    "complete": false,
+    "gaps": [
+      "Rampura",
+      "Badda",
+      "Uttara",
+      "Mirpur",
+      "Dhanmondi",
+      "Mohammadpur",
+      "Khilgaon",
+      "Malibagh",
+      "Motijheel",
+      "Jatrabari"
+    ],
+    "blocked_sources": [
+      {
+        "url": "https://download.geofabrik.de/asia/bangladesh-latest.osm.pbf",
+        "result": "Environment proxy CONNECT 403; network requirement saved."
+      },
+      {
+        "url": "https://dncc.gov.bd/",
+        "result": "Robots request changed from proxy denial to upstream 503; no municipal records retrieved."
+      },
+      {
+        "url": "https://dscc.portal.gov.bd/",
+        "result": "Upstream 503; no municipal records retrieved."
+      },
+      {
+        "url": "https://overpass.kumi.systems/api/interpreter",
+        "result": "Read timeout, including reduced-scope query."
+      },
+      {
+        "url": "https://overpass.private.coffee/api/interpreter",
+        "result": "Read timeout."
+      },
+      {
+        "url": "https://bashundharaconvention.com/",
+        "result": "Upstream 503; not admitted without inspectable evidence."
+      }
+    ]
+  }
 }

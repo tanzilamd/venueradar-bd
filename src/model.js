@@ -1,4 +1,4 @@
-export const sizeOf = (capacity) =>
+const sizeOfNumber = (capacity) =>
   capacity == null
     ? "Unknown"
     : capacity < 300
@@ -6,6 +6,25 @@ export const sizeOf = (capacity) =>
       : capacity < 1000
         ? "Medium"
         : "Large";
+export function sizeOf(capacity, range) {
+  if (capacity != null) return sizeOfNumber(capacity);
+  if (!range) return "Unknown";
+  const low = sizeOfNumber(range.min),
+    high = sizeOfNumber(range.max);
+  return low === high ? low : "Unknown";
+}
+export const hasCapacity = (v) => v.capacity != null || !!v.capacity_range;
+export function capacityText(v) {
+  const number = (n) => new Intl.NumberFormat("en-BD").format(n);
+  return v.capacity != null
+    ? number(v.capacity) + " people"
+    : v.capacity_range
+      ? number(v.capacity_range.min) +
+        "–" +
+        number(v.capacity_range.max) +
+        " people"
+      : "Capacity unknown";
+}
 export const normalize = (s) =>
   String(s ?? "")
     .normalize("NFKC")
@@ -32,9 +51,9 @@ export function filterVenues(venues, f, location) {
         ["division", "district", "area", "category"].every(
           (k) => !f[k] || String(v[k]) === f[k],
         ) &&
-        (!f.size || sizeOf(v.capacity) === f.size) &&
+        (!f.size || sizeOf(v.capacity, v.capacity_range) === f.size) &&
         (!f.phone || v.phones.length) &&
-        (!f.capacity || v.capacity != null) &&
+        (!f.capacity || hasCapacity(v)) &&
         (!f.verified || v.verification === "cross-checked") &&
         (!f.parking || v.facilities.includes("Parking")) &&
         (!f.saved || f.saved.includes(v.id)),
@@ -46,7 +65,8 @@ export function filterVenues(venues, f, location) {
     }))
     .sort((a, b) =>
       f.sort === "capacity"
-        ? (b.capacity ?? -1) - (a.capacity ?? -1)
+        ? (b.capacity ?? b.capacity_range?.min ?? -1) -
+          (a.capacity ?? a.capacity_range?.min ?? -1)
         : f.sort === "distance"
           ? (a.distance ?? Infinity) - (b.distance ?? Infinity)
           : a.name.localeCompare(b.name),

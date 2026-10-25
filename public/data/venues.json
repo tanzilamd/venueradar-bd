@@ -394,5 +394,189 @@
       }
     ],
     "notes": "The official site describes banquet facilities but the inspected page has no numerical capacity. A separately hosted HTTP factsheet was not retrieved. Published business mobile number is not assumed to support WhatsApp."
+  },
+  {
+    "id": "bd-police-convention-hall-eskaton",
+    "city": "Dhaka",
+    "name": "Police Convention Hall, Eskaton",
+    "bn_name": "পুলিশ কনভেনশন হল, ইস্কাটন",
+    "aliases": [
+      "Police Officers Mess Convention Hall",
+      "Eskaton Police Convention Hall"
+    ],
+    "category": "Convention Center",
+    "division": "6",
+    "district": "47",
+    "area": "Eskaton",
+    "address": "37/3/B Eskaton Garden Road, Ramna, Dhaka, Bangladesh",
+    "coordinates": null,
+    "phones": [
+      {
+        "number": "+8801789376469",
+        "source": "https://policeconventionhall.com/wp/contact-us/",
+        "checked": "2026-10-25",
+        "status": "published-not-call-tested"
+      },
+      {
+        "number": "+8801789376470",
+        "source": "https://policeconventionhall.com/wp/contact-us/",
+        "checked": "2026-10-25",
+        "status": "published-not-call-tested"
+      },
+      {
+        "number": "+880248310492",
+        "source": "https://policeconventionhall.com/wp/contact-us/",
+        "checked": "2026-10-25",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": "https://policeconventionhall.com/wp/",
+    "capacity": 800,
+    "capacity_layout": "Per floor · seating layout not stated",
+    "facilities": ["Parking", "Air conditioning"],
+    "verification": "source-checked",
+    "last_checked": "2026-10-25",
+    "evidence": [
+      {
+        "url": "https://policeconventionhall.com/wp/",
+        "fields": [
+          "name",
+          "bn_name",
+          "aliases",
+          "category",
+          "city",
+          "area",
+          "address",
+          "capacity",
+          "capacity_layout",
+          "facilities.Parking",
+          "facilities.Air conditioning",
+          "website"
+        ],
+        "checked": "2026-10-25",
+        "kind": "official",
+        "reuse": "Individually reviewed public business facts, translated where needed. No promotional prose, photos, reviews, private schedules or personal staff details reproduced."
+      },
+      {
+        "url": "https://policeconventionhall.com/wp/contact-us/",
+        "fields": ["name", "address", "phones"],
+        "checked": "2026-10-25",
+        "kind": "official",
+        "reuse": "Individually reviewed public business facts, translated where needed. No promotional prose, photos, reviews, private schedules or personal staff details reproduced."
+      }
+    ],
+    "notes": "The operator publishes 800 guests per floor and 1,600 across two floors; the per-floor figure is shown, with no seating layout specified. Only consistently published booking numbers and the public landline are included. One other number has conflicting digit counts on the site and is omitted pending clarification. Coordinates have not yet been verified."
+  },
+  {
+    "id": "bd-raowa-convention-halls",
+    "city": "Dhaka",
+    "name": "RAOWA Convention Halls",
+    "bn_name": null,
+    "aliases": ["RAOWA Hall", "RAOWA Convention Hall"],
+    "category": "Event Hall",
+    "division": "6",
+    "district": "47",
+    "area": "Mohakhali",
+    "address": "VIP Road, Mohakhali, Dhaka 1206, Bangladesh",
+    "coordinates": null,
+    "phones": [
+      {
+        "number": "+880255058363",
+        "source": "https://raowa.org/contact-us/",
+        "checked": "2026-10-25",
+        "status": "published-not-call-tested"
+      },
+      {
+        "number": "+8801711054344",
+        "source": "https://raowa.org/contact-us/",
+        "checked": "2026-10-25",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": "https://raowa.org/Terms-Conditions-Non-Member/",
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "source-checked",
+    "last_checked": "2026-10-25",
+    "evidence": [
+      {
+        "url": "https://raowa.org/",
+        "fields": ["name", "aliases", "category", "city", "area", "address"],
+        "checked": "2026-10-25",
+        "kind": "official",
+        "reuse": "Individually reviewed public business facts, translated where needed. No promotional prose, photos, reviews, private schedules or personal staff details reproduced."
+      },
+      {
+        "url": "https://raowa.org/Terms-Conditions-Non-Member/",
+        "fields": ["category", "website"],
+        "checked": "2026-10-25",
+        "kind": "official",
+        "reuse": "Individually reviewed public business facts, translated where needed. No promotional prose, photos, reviews, private schedules or personal staff details reproduced."
+      },
+      {
+        "url": "https://raowa.org/contact-us/",
+        "fields": ["name", "area", "address", "phones"],
+        "checked": "2026-10-25",
+        "kind": "official",
+        "reuse": "Individually reviewed public business facts, translated where needed. No promotional prose, photos, reviews, private schedules or personal staff details reproduced."
+      }
+    ],
+    "notes": "The operator publishes hall-booking terms for non-members. Contacts are the RAOWA office, not a dedicated booking line; confirm eligibility, terms and availability directly. No numerical capacity or coordinates were verified from the inspected text. Multiple halls at this location are kept as one venue record."
+  },
+  {
+    "id": "bd-sks-convention-hall",
+    "city": "Dhaka",
+    "name": "SKS Convention Hall",
+    "bn_name": null,
+    "aliases": ["Sena Convention Hall", "Sena Gourab", "Sena Cafe"],
+    "category": "Convention Center",
+    "division": "6",
+    "district": "47",
+    "area": "Mohakhali",
+    "address": "SKS Tower, 9th Floor, 7 VIP Road, Mohakhali Commercial Area, Dhaka, Bangladesh",
+    "coordinates": null,
+    "phones": [
+      {
+        "number": "+8801769056591",
+        "source": "https://senakalyan.org/dynamic_page/load_page/43",
+        "checked": "2026-10-25",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": "https://senakalyan.org/dynamic_page/load_page/43",
+    "capacity": null,
+    "capacity_layout": "Sena Gourab · published occupancy range; layout not stated",
+    "facilities": ["Parking", "Air conditioning", "Catering"],
+    "verification": "source-checked",
+    "last_checked": "2026-10-25",
+    "evidence": [
+      {
+        "url": "https://senakalyan.org/dynamic_page/load_page/43",
+        "fields": [
+          "name",
+          "aliases",
+          "category",
+          "city",
+          "area",
+          "address",
+          "capacity_range",
+          "capacity_layout",
+          "phones",
+          "facilities.Parking",
+          "facilities.Air conditioning",
+          "facilities.Catering",
+          "website"
+        ],
+        "checked": "2026-10-25",
+        "kind": "official",
+        "reuse": "Individually reviewed public business facts, translated where needed. No promotional prose, photos, reviews, private schedules or personal staff details reproduced."
+      }
+    ],
+    "notes": "The operator lists Sena Gourab at 400–500 people and Sena Cafe at 200–250. The displayed range is for Sena Gourab, not a combined total. Catering support and parking are documented. One record covers the two spaces at this address. Coordinates have not yet been verified.",
+    "capacity_range": {
+      "min": 400,
+      "max": 500
+    }
   }
 ]

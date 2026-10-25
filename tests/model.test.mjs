@@ -144,3 +144,31 @@ test("schema, evidence, administrative and duplicate validation", () => {
     ).length,
   );
 });
+test("published capacity ranges remain ranges in filters and classification", async () => {
+  const { capacityText, hasCapacity } = await import("../src/model.js");
+  const v = {
+    ...fixture(),
+    capacity: null,
+    capacity_range: { min: 400, max: 500 },
+  };
+  assert.equal(capacityText(v), "400–500 people");
+  assert.equal(hasCapacity(v), true);
+  assert.equal(sizeOf(null, v.capacity_range), "Medium");
+  assert.equal(sizeOf(null, { min: 250, max: 350 }), "Unknown");
+  assert.equal(filterVenues([v], { capacity: true, size: "Medium" }).length, 1);
+  const areas = JSON.parse(
+      fs.readFileSync("docs/reference/bangladesh-areas.json"),
+    ),
+    schema = JSON.parse(fs.readFileSync("schemas/venue.schema.json"));
+  v.district = areas.districts.find((d) => d.division_id === v.division).id;
+  v.evidence[0].fields.push("capacity_range");
+  assert.deepEqual(validateData([v], areas, schema), []);
+  assert.ok(
+    validateData(
+      [{ ...v, capacity_range: { min: 500, max: 400 } }],
+      areas,
+      schema,
+    ).length,
+  );
+  assert.ok(validateData([{ ...v, capacity: 500 }], areas, schema).length);
+});

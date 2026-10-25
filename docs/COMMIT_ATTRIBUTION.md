@@ -24,3 +24,7 @@ gh api repos/tanzilamd/venueradar-bd/commits/HEAD --jq '{sha,author_login:.autho
 ```
 
 The author login should be `tanzilamd`. Existing Codex-authored commits are preserved; no history rewrite or force-push is authorized. If an integration forces Codex attribution, stop and tell the owner before making more commits.
+
+## Verified GitHub result
+
+Commit [39510704e671d4147595add927e9910cb9a4b18b](https://github.com/tanzilamd/venueradar-bd/commit/39510704e671d4147595add927e9910cb9a4b18b) was checked after pushing. GitHub reports both author and committer account as `tanzilamd`, name `Tanzil Ahmed`, and email `59307135+tanzilamd@users.noreply.github.com`. The integration preserved the requested identity.

@@ -47,7 +47,7 @@ test("empty state and Dhaka neighborhoods", async ({ page }) => {
   );
   await page.goto("/");
   await expect(page.locator("#results")).toContainText("Research first");
-  await expect(page.locator("#area option")).toHaveCount(16);
+  await expect(page.locator("#area option")).toHaveCount(18);
   await page.locator("#method").click();
   await expect(page.locator("dialog")).toBeVisible();
   await page.keyboard.press("Escape");
@@ -111,7 +111,7 @@ for (const width of [360, 768, 1366, 1920])
   test(`layout ${width}`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
     await page.goto("/");
-    await expect(page.locator(".card")).toHaveCount(8);
+    await expect(page.locator(".card")).toHaveCount(11);
     expect(
       await page.evaluate(
         () => document.documentElement.scrollWidth <= innerWidth,
@@ -124,7 +124,7 @@ for (const width of [360, 768, 1366, 1920])
   });
 test("English-only real records and neighborhood filters", async ({ page }) => {
   await page.goto("/");
-  await expect(page.locator(".card")).toHaveCount(8);
+  await expect(page.locator(".card")).toHaveCount(11);
   expect(await page.locator("body").innerText()).not.toMatch(/[\u0980-\u09ff]/);
   await page.locator("#area").selectOption("Banani");
   await expect(page.locator(".card")).toHaveCount(1);
@@ -164,4 +164,35 @@ test("location denied has useful fallback", async ({ page, context }) => {
     { timeout: 15000 },
   );
   await expect(page.locator("#nearby")).toBeEnabled();
+});
+test("independent convention halls expose sources, calls and honest capacity ranges", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await page.locator("#category").selectOption("Convention Center");
+  await expect(page.locator(".card")).toHaveCount(2);
+  await page.locator("#area").selectOption("Eskaton");
+  await expect(page.locator(".card")).toContainText("Police Convention Hall");
+  await expect(page.locator(".card")).toContainText("800 people");
+  await page.getByRole("button", { name: "View details", exact: true }).click();
+  await expect(
+    page.locator('dialog a[href="tel:+8801789376469"]'),
+  ).toBeVisible();
+  await expect(page.locator("dialog")).toContainText(
+    "conflicting digit counts",
+  );
+  await page.keyboard.press("Escape");
+  await page.locator("#reset").click();
+  await page.locator("#search").fill("SKS Convention");
+  await expect(page.locator(".card")).toContainText("400–500 people");
+  await page.locator("#capacity").check();
+  await expect(page.locator(".card")).toHaveCount(1);
+  await page.getByRole("button", { name: "View details", exact: true }).click();
+  await expect(page.locator("dialog")).toContainText("400–500 people");
+  await expect(page.locator("dialog")).toContainText(
+    "https://senakalyan.org/dynamic_page/load_page/43",
+  );
+  expect(await page.locator("dialog").innerText()).not.toMatch(
+    /[\u0980-\u09ff]/,
+  );
 });
