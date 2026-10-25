@@ -17,3 +17,10 @@
 - Default to 110 community/event/hall records, with the 8 existing hotels in a separate collection.
 - Add evidence-level badges and source filters, mapped boundary validation, provenance snapshots, ODbL attribution and an explicit unknown-neighborhood filter.
 - Keep map-only listings visibly unconfirmed for wedding booking and current operation; no capacities, phones or ratings are invented.
+
+## Area-first contact revision
+- Research 98 previously unassigned localities; preserve evidence and explicitly distinguish browsing areas from operator-confirmed addresses.
+- Add 13 separately sourced halls/branches, including the user-linked Abacus, Ladies Club, Officers’ Club, Motijheel, Nanjing, BRCC, Siraj, AK and JK Malibagh; retain all earlier records.
+- Increase phone-bearing records from 23 to 59, with 70 sourced published numbers; preserve prior valid contacts and show numbers on cards.
+- Add priority-area shortcuts, transparent nearby-area browsing, phone quick filter and visible identity/closure review notices; remove THE RESEARCH DESK card.
+- Preserve existing Git history as explicitly requested; continue repository-local Tanzil Ahmed commit attribution.

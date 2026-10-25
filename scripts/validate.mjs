@@ -12,6 +12,8 @@ export function validateData(venues, areas, schema, boundary) {
   for (const v of venues) {
     if (seen.has(v.id)) errors.push(`Duplicate ID ${v.id}`);
     seen.add(v.id);
+    if (v.coordinates && boundary && !inBoundary(v.coordinates, boundary))
+      errors.push(`${v.id}: coordinates outside Dhaka boundary`);
     if (v.verification === "open-data-listed") {
       if (!v.discovery || !v.evidence.some((e) => e.kind === "open-data"))
         errors.push(`${v.id}: map provenance missing`);
@@ -42,6 +44,7 @@ export function validateData(venues, areas, schema, boundary) {
       ...(v.coordinates ? ["coordinates"] : []),
       ...(v.capacity ? ["capacity"] : []),
       ...(v.capacity_range ? ["capacity_range"] : []),
+      ...(v.review_notice ? ["review_notice"] : []),
       ...v.facilities.map((f) => "facilities." + f),
     ])
       if (!v.evidence.some((e) => e.fields.includes(field)))

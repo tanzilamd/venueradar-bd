@@ -51,7 +51,10 @@ export function filterVenues(venues, f, location) {
         ["division", "district", "category"].every(
           (k) => !f[k] || String(v[k]) === f[k],
         ) &&
-        (!f.area || (f.area === "__unknown__" ? !v.area : v.area === f.area)) &&
+        (!f.area ||
+          (f.area === "__unknown__"
+            ? !v.area
+            : (f.areaIds || [f.area]).includes(v.area))) &&
         (!f.collectionIds || f.collectionIds.includes(v.id)) &&
         (!f.evidence ||
           (f.evidence === "mapped"
@@ -89,6 +92,16 @@ export function readIds(storage, key, valid) {
   }
 }
 export const mapsURL = (v) => {
+  if (v.maps_url) {
+    try {
+      const u = new URL(v.maps_url);
+      if (
+        u.protocol === "https:" &&
+        !u.username && !u.password &&
+        ["maps.app.goo.gl", "www.google.com", "maps.google.com"].includes(u.hostname)
+      ) return u.href;
+    } catch { /* Fall back to an encoded search for invalid listing links. */ }
+  }
   const locality =
     v.address_status === "not_available"
       ? [v.area, v.city || "Dhaka"].filter(Boolean).join(", ")

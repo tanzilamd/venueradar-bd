@@ -31,28 +31,35 @@
       <nav aria-label="Main navigation">
         <button id="explore" class="active">Explore</button
         ><button id="saved">Saved <span id="savedCount">0</span></button
-        ><button id="method">Our research</button>
+        ><button id="method">About the data</button>
       </nav>
       <span class="country">DHAKA, BANGLADESH</span>
     </header>
     <main>
-      <section class="intro">
+      <section class="intro area-intro">
         <div>
-          <p class="eyebrow">A PLACE FOR YOUR OCCASION</p>
-          <h1>Find a place.<br />Make it yours.</h1>
+          <p class="eyebrow">DHAKA · COMMUNITY CENTERS &amp; WEDDING HALLS</p>
+          <h1>Find a hall in your area.</h1>
           <p>
-            Explore Dhaka’s wedding and event venues with the facts in view.<br
-              class="desktop"
-            />
-            Compare the space, check the sources, then make the call.
+            Choose a neighborhood, compare venues and check public business
+            contacts.
           </p>
         </div>
-        <aside class="note">
-          <span class="smallcaps">THE RESEARCH DESK</span
-          ><strong>Good decisions start with good information.</strong>
-          <p id="coverageNote">Loading our venue index…</p>
-          <a href="#" id="researchLink">How we research</a>
-        </aside>
+      </section>
+      <section class="area-explorer" aria-labelledby="areaHeading">
+        <div class="area-explorer-head">
+          <h2 id="areaHeading">Where are you planning?</h2>
+          <button id="allAreas" class="text">All Dhaka</button>
+        </div>
+        <div
+          id="priorityAreas"
+          class="area-grid"
+          aria-label="Popular areas"
+        ></div>
+        <p class="hint">
+          Choose an area below or use the neighborhood filter for more
+          locations.
+        </p>
       </section>
       <section class="workspace">
         <aside class="filters">
@@ -83,6 +90,9 @@
           ><label for="area">Neighborhood</label
           ><select id="area">
             <option value="">All Dhaka</option></select
+          ><label class="check nearby-areas-control"
+            ><input id="includeNearby" type="checkbox" checked /> Include nearby
+            areas</label
           ><label for="category">Venue type</label
           ><select id="category">
             <option value="">All venue types</option>
@@ -122,7 +132,7 @@
           <div class="toolbar">
             <div>
               <p class="eyebrow" id="breadcrumb">DHAKA / ALL NEIGHBORHOODS</p>
-              <h2><span id="count">0</span> venues to explore</h2>
+              <h2><span id="count">0</span> <span id="venueNoun">venues</span> to explore</h2>
             </div>
             <div class="view-switch">
               <button id="listView" aria-pressed="true">List</button
@@ -131,7 +141,9 @@
           </div>
           <div class="statstrip" id="stats"></div>
           <div class="result-controls">
-            <span id="resultLabel" role="status" aria-live="polite"
+            <button id="withPhone" class="phone-quick" aria-pressed="false">
+              With public phone</button
+            ><span id="resultLabel" role="status" aria-live="polite"
               >Loading venues…</span
             ><label for="sort"
               >Sort

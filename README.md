@@ -2,7 +2,7 @@
 
 English-only, Dhaka-focused, static venue research and discovery platform for Bangladesh. No backend, mandatory login, paid API, database or scheduled scraping.
 
-**Status: Dhaka directory with 118 sourced records: 110 hall/community/event venue records shown first, plus 8 preserved hotel venues separately. 107 are explicitly labelled map listings, not operator confirmation. Coverage and wedding-only use are not guaranteed.**
+**Status: 131 sourced Dhaka records: 123 community/event/hall records shown first, plus 8 preserved hotel venues separately. 59 records have published business phones (70 numbers). Every venue has a reviewed browsing locality; coverage and active operation remain unconfirmed.**
 
 ## Develop
 
@@ -24,17 +24,17 @@ Vite bundles Leaflet and clustering locally. Relative build URLs support GitHub 
 
 ## Features implemented
 
-English interface with venue-name and alias search, Dhaka neighborhood filters, category/size/facility/evidence filters, dataset-derived statistics, map/list switching, clustered markers, marker/card selection, venue details and evidence, business call links, current Google review links, 2–3 venue comparisons, persistent favorites, and approximate proximity sorting. Unknown facts are explicitly labelled. 107 map-listed non-hotel venues were added in a manual bulk batch. See docs/reports/2026-10-25-bulk-dhaka-halls.md for scope, provenance and uncertainty.
+English interface with venue-name and alias search, Dhaka neighborhood filters, category/size/facility/evidence filters, dataset-derived statistics, map/list switching, clustered markers, marker/card selection, venue details and evidence, business call links, current Google review links, 2–3 venue comparisons, persistent favorites, and approximate proximity sorting. Unknown facts are explicitly labelled. The area-first revision adds five neighborhood shortcuts, explicit nearby-area browsing, visible call numbers and identity/closure review notices. See [the change report](docs/reports/2026-10-25-area-contact-revision.md) for actual coverage, contacts, provenance and remaining gaps.
 
 ## Deployment
 
 `.github/workflows/pages.yml` builds and deploys via GitHub Actions on main, with limited job permissions. It **refuses to deploy an empty venue dataset**. After research and QA, push to main and configure only this repository's Settings → Pages → Source: GitHub Actions. Never modify the personal root site's repository, CNAME or domain settings. Read the actual Pages API `html_url` and deployment output; open that URL and verify the built data, assets and interactions. Do not assume a hostname or claim live verification from a workflow alone.
 
-Sitemap/canonical/og:url should be generated only after the real Pages URL is known. The canonical URL and sitemap use GitHub’s reported project URL: https://tanzilahmed.tech/venueradar-bd/ . `robots.txt`, favicon, semantic markup, metadata and keyboard focus states are present. Local mobile Lighthouse scores: performance 98, accessibility 100, best practices 100, SEO 100. These are local build measurements, not live-site measurements.
+Sitemap/canonical/og:url should be generated only after the real Pages URL is known. The canonical URL and sitemap use GitHub’s reported project URL: https://tanzilahmed.tech/venueradar-bd/ . `robots.txt`, favicon, semantic markup, metadata and keyboard focus states are present. An earlier local build measured Lighthouse performance 98, accessibility 100, best practices 100 and SEO 100. These are historical local measurements, not a claim about this revision or the live site.
 
 ## Data maintenance
 
-Read [research guide](docs/RESEARCH_GUIDE.md), [safe update guide](docs/DATA_UPDATE_GUIDE.md), and [sources and limitations](docs/DATA_SOURCES.md). Version 1 focuses exclusively on Dhaka. Current coverage is 110 community/event/hall records and 8 preserved hotel venues. Map-only listings need operator confirmation; many street addresses, phones and neighborhood assignments remain unknown. Existing verified records must never be replaced by weaker or empty data.
+Read [research guide](docs/RESEARCH_GUIDE.md), [safe update guide](docs/DATA_UPDATE_GUIDE.md), and [sources and limitations](docs/DATA_SOURCES.md). Version 1 focuses exclusively on Dhaka. Current coverage is 123 community/event/hall records and 8 preserved hotel venues. 72 records still lack a responsibly sourced phone and 8 lack coordinates. Map-reviewed localities are not surveyed boundaries or operator confirmation; many street addresses and capacities remain unknown. Existing verified records must never be replaced by weaker or empty data.
 
 ## License
 

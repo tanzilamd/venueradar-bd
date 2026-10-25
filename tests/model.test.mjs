@@ -122,6 +122,9 @@ test("maps URL safely encodes venue query", () => {
       "https://www.google.com/maps/search/?api=1&query=",
     ),
   );
+  assert.equal(mapsURL({...fixture(), maps_url: "https://maps.app.goo.gl/TYbpPZTJ9amf3mzj8"}), "https://maps.app.goo.gl/TYbpPZTJ9amf3mzj8");
+  for (const maps_url of ["javascript:alert(1)", "https://www.google.com.evil.example/maps/place/hall", "https://user:pass@maps.google.com/"])
+    assert.ok(mapsURL({...fixture(), maps_url}).startsWith("https://www.google.com/maps/search/"));
 });
 test("schema, evidence, administrative and duplicate validation", () => {
   const areas = JSON.parse(
@@ -136,6 +139,9 @@ test("schema, evidence, administrative and duplicate validation", () => {
       .length,
   );
   assert.ok(validateData([v, v], areas, schema).length);
+  assert.ok(validateData([{...v, phones: [{...v.phones[0], number: "+8801712345"}]}], areas, schema).length);
+  assert.ok(validateData([{...v, phones: [{...v.phones[0], source: "https://example.org/not-inspected"}]}], areas, schema).length);
+  assert.ok(validateData([{...v, review_notice: "An unsupported closure assertion"}], areas, schema).length);
   assert.ok(
     validateData(
       [{ ...v, evidence: [{ ...v.evidence[0], fields: ["name"] }] }],
@@ -204,7 +210,7 @@ test("bulk mapped records are spatially scoped, uniquely sourced and not hotel a
       fs.readFileSync("public/data/dhaka-boundary.geojson"),
     );
   const mapped = venues.filter((v) => v.verification === "open-data-listed");
-  assert.equal(mapped.length, 107);
+  assert.equal(mapped.length, 110);
   assert.ok(mapped.every((v) => inBoundary(v.coordinates, boundary)));
   assert.ok(
     mapped.every(
@@ -239,4 +245,23 @@ test("Maps searches omit missing-address explanatory text", () => {
   };
   assert.ok(!decodeURIComponent(mapsURL(v)).includes("not supplied"));
   assert.ok(decodeURIComponent(mapsURL(v)).includes("Dhaka"));
+});
+test("area review and nearby browsing do not relabel nearby venues", () => {
+  const a = { ...fixture("bd-rampura"), area: "Rampura" },
+    b = { ...fixture("bd-banasree"), area: "Banasree" };
+  assert.equal(filterVenues([a, b], { area: "Rampura" }).length, 1);
+  const nearby = filterVenues([a, b], {
+    area: "Rampura",
+    areaIds: ["Rampura", "Banasree"],
+  });
+  assert.equal(nearby.length, 2);
+  assert.equal(nearby.find((v) => v.id === b.id).area, "Banasree");
+  const actual = JSON.parse(fs.readFileSync("public/data/venues.json"));
+  assert.ok(
+    actual.every((v) => typeof v.area === "string" && v.area.length > 0),
+  );
+  assert.equal(
+    actual.find((v) => v.id === "bd-osm-way-1561267432").area,
+    "Tejgaon",
+  );
 });

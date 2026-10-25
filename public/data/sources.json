@@ -17,5 +17,17 @@
     "url": "https://www.openstreetmap.org/relation/13663697",
     "license": "ODbL-1.0",
     "usage": "Mapped metropolitan boundary used to scope this manual discovery batch. It is not a completeness claim or an independently surveyed boundary."
+  },
+  {
+    "id": "osm-nominatim-locality-review-2026-10-25",
+    "url": "https://nominatim.openstreetmap.org/",
+    "license": "ODbL-1.0",
+    "usage": "One-time cached locality research for existing Dhaka business records. Single thread, one machine, <=1 request/second; no runtime geocoding. Address hierarchy reviewed and corrected using branch-specific evidence where available. See area-reviews.json."
+  },
+  {
+    "id": "manual-business-contacts-2026-10-25",
+    "url": "https://github.com/tanzilamd/venueradar-bd/blob/main/docs/reports/2026-10-25-area-contact-revision.md",
+    "license": "Individual public business facts; source-specific rights retained",
+    "usage": "Operator booking/contact pages and user-requested manual business-listing checks. No Google ratings, reviews, photos, opening hours, restricted API responses or bulk Places export. Every phone has its own source and published-not-call-tested status."
   }
 ]

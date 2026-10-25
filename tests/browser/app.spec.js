@@ -5,6 +5,7 @@ const catalog = JSON.parse(
 );
 const defaultCount = catalog.groups.find((g) => g.id === catalog.default)
   .venue_ids.length;
+const productionVenues = JSON.parse(fs.readFileSync("public/data/venues.json", "utf8"));
 const neighborhoodCount = JSON.parse(
   fs.readFileSync("public/data/areas.json", "utf8"),
 ).neighborhoods.length;
@@ -139,6 +140,7 @@ for (const width of [360, 768, 1366, 1920])
     await page.setViewportSize({ width, height: 900 });
     await page.goto("/");
     await expect(page.locator(".card")).toHaveCount(defaultCount);
+    await expect(page.locator("#includeNearby")).toBeVisible();
     expect(
       await page.evaluate(
         () => document.documentElement.scrollWidth <= innerWidth,
@@ -200,7 +202,12 @@ test("independent convention halls expose sources, calls and honest capacity ran
   await page.goto("/");
   await page.locator("#evidence").selectOption("operator");
   await page.locator("#category").selectOption("Convention Center");
-  await expect(page.locator(".card")).toHaveCount(2);
+  const expected = productionVenues.filter(v =>
+    catalog.groups.find(g => g.id === catalog.default).venue_ids.includes(v.id) &&
+    v.category === "Convention Center" && v.evidence.some(e => e.kind === "official")
+  ).length;
+  await expect(page.locator(".card")).toHaveCount(expected);
+  await page.locator("#includeNearby").uncheck();
   await page.locator("#area").selectOption("Eskaton");
   await expect(page.locator(".card")).toContainText("Police Convention Hall");
   await expect(page.locator(".card")).toContainText("800 people");
@@ -233,7 +240,7 @@ test("bulk hall collection defaults to non-hotels and exposes map-source uncerta
   await expect(page.locator(".card")).toHaveCount(defaultCount);
   await expect(page.locator("#results")).not.toContainText("The Westin Dhaka");
   await page.locator("#evidence").selectOption("mapped");
-  await expect(page.locator(".card")).toHaveCount(107);
+  await expect(page.locator(".card")).toHaveCount(110);
   await page.locator("#search").fill("Sutrapur");
   await expect(page.locator(".card")).toHaveCount(1);
   await expect(page.locator(".card")).toContainText(
@@ -244,9 +251,9 @@ test("bulk hall collection defaults to non-hotels and exposes map-source uncerta
   await expect(page.locator("dialog")).toContainText("Map record last edited");
   await page.keyboard.press("Escape");
   await page.locator("#reset").click();
-  await page.locator("#area").selectOption("__unknown__");
-  expect(await page.locator(".card").count()).toBeGreaterThan(0);
-  await expect(page.locator("#breadcrumb")).toContainText("AREA NOT CONFIRMED");
+  await expect(page.locator('#area option[value="__unknown__"]')).toHaveCount(
+    0,
+  );
   await page.locator("#reset").click();
   await page.locator("#collection").selectOption("hotels");
   await expect(page.locator(".card")).toHaveCount(8);
@@ -264,4 +271,71 @@ test("saved hotel venues remain reachable after the hall-first default is restor
   await page.locator("#saved").click();
   await expect(page.locator(".card")).toHaveCount(1);
   await expect(page.locator(".card")).toContainText("Sheraton Dhaka");
+});
+test("area-first shortcuts include nearby venues transparently and the research card is removed", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await expect(page.locator(".card")).toHaveCount(defaultCount);
+  await expect(page.locator("body")).not.toContainText("THE RESEARCH DESK");
+  await expect(page.locator("#priorityAreas button")).toHaveCount(5);
+  await page
+    .locator("#priorityAreas button")
+    .filter({ hasText: "Rampura" })
+    .click();
+  await expect(page.locator("#area")).toHaveValue("Rampura");
+  await expect(page.locator('#priorityAreas button[data-area-choice="Rampura"]')).toBeFocused();
+  await expect(page.locator("#resultLabel")).toContainText("nearby areas");
+  await expect(page.locator("#results")).toContainText("Casanova Party Center");
+  const casanova = page
+    .locator(".card")
+    .filter({ hasText: "Casanova Party Center" });
+  await expect(casanova).toContainText("Banasree");
+  await page.locator("#withPhone").click();
+  await expect(page.locator("#withPhone")).toHaveAttribute(
+    "aria-pressed",
+    "true",
+  );
+  const count = await page.locator(".card").count();
+  expect(count).toBeGreaterThan(0);
+  await page.locator("#reset").click();
+  await page.locator("#search").fill("Ladies Club");
+  await expect(page.locator("#results")).toContainText("Eskaton");
+  await page.locator("#search").fill("Officers");
+  await expect(page.locator("#results")).toContainText("Officers' Club Dhaka");
+});
+test("researched contacts are visible, sourced and distinct from operator evidence", async ({page}) => {
+  await page.goto('/');
+  await page.locator('#search').fill('Abakas');
+  await expect(page.locator('.card')).toHaveCount(1);
+  await expect(page.locator('.card')).toContainText('Abacus Convention Center');
+  await expect(page.locator('.card')).toContainText('Business listing checked');
+  await expect(page.locator('.card a[href="tel:+880248321499"]')).toContainText('0248321499');
+  await page.getByRole('button', {name:'View details',exact:true}).click();
+  await expect(page.locator('dialog')).toContainText('line not call-tested');
+  await expect(page.locator('dialog a[href="https://maps.app.goo.gl/TYbpPZTJ9amf3mzj8"]').first()).toBeVisible();
+  await page.keyboard.press('Escape');
+  await page.locator('#search').fill('Casanova');
+  await expect(page.locator('.review-notice')).toContainText('Closure reported');
+  await page.locator('#reset').click();
+  await page.locator('#includeNearby').uncheck();
+  await page.locator('#area').selectOption('Eskaton');
+  const rows=productionVenues.filter(v=>v.area==='Eskaton' && catalog.groups.find(g=>g.id===catalog.default).venue_ids.includes(v.id));
+  await expect(page.locator('.card')).toHaveCount(rows.length);
+  await expect(page.locator('#results')).not.toContainText("Officers' Club Dhaka");
+});
+test('comparison aligns facts by label across different evidence and review notices', async ({page}) => {
+  await page.goto('/');
+  for(const search of ['Abakas','Casanova']) {
+    await page.locator('#search').fill(search);
+    await expect(page.locator('.card')).toHaveCount(1);
+    await page.getByRole('button',{name:'Compare +',exact:true}).click();
+  }
+  await page.locator('#openCompare').click();
+  const row = label => page.getByRole('row').filter({has: page.getByRole('rowheader',{name:label,exact:true})});
+  await expect(row('Venue type').getByRole('cell')).toHaveText(['Convention Center','Event Hall']);
+  await expect(row('Area').getByRole('cell')).toHaveText(['Eskaton','Banasree']);
+  await expect(row('Phone').getByRole('cell').first()).toHaveText('+880248321499');
+  await expect(row('Needs confirmation').getByRole('cell').first()).toHaveText('No notice recorded');
+  await expect(row('Needs confirmation').getByRole('cell').nth(1)).toContainText('Closure reported');
 });

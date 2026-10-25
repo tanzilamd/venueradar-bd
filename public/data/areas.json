@@ -80,6 +80,296 @@
     {
       "id": "20",
       "name": "Panthapath"
+    },
+    {
+      "id": "21",
+      "name": "Armanitola"
+    },
+    {
+      "id": "22",
+      "name": "Ashkona"
+    },
+    {
+      "id": "23",
+      "name": "Bakshibazar"
+    },
+    {
+      "id": "24",
+      "name": "Banasree"
+    },
+    {
+      "id": "25",
+      "name": "Bangshal"
+    },
+    {
+      "id": "26",
+      "name": "Baridhara"
+    },
+    {
+      "id": "27",
+      "name": "Baridhara DOHS"
+    },
+    {
+      "id": "28",
+      "name": "Basabo"
+    },
+    {
+      "id": "29",
+      "name": "Bawnia"
+    },
+    {
+      "id": "30",
+      "name": "Dania"
+    },
+    {
+      "id": "31",
+      "name": "Dholaipar"
+    },
+    {
+      "id": "32",
+      "name": "Doyaganj"
+    },
+    {
+      "id": "33",
+      "name": "Faridabad"
+    },
+    {
+      "id": "34",
+      "name": "Farmgate"
+    },
+    {
+      "id": "35",
+      "name": "Gandaria"
+    },
+    {
+      "id": "36",
+      "name": "Gopibagh"
+    },
+    {
+      "id": "37",
+      "name": "Goran"
+    },
+    {
+      "id": "38",
+      "name": "Gulshan 1"
+    },
+    {
+      "id": "39",
+      "name": "Hazaribagh"
+    },
+    {
+      "id": "40",
+      "name": "Jigatola"
+    },
+    {
+      "id": "41",
+      "name": "Jurain"
+    },
+    {
+      "id": "42",
+      "name": "Kalabagan"
+    },
+    {
+      "id": "43",
+      "name": "Kamrangirchar"
+    },
+    {
+      "id": "44",
+      "name": "Karwan Bazar"
+    },
+    {
+      "id": "45",
+      "name": "Khilkhet"
+    },
+    {
+      "id": "46",
+      "name": "Madhubag"
+    },
+    {
+      "id": "47",
+      "name": "Nakhalpara"
+    },
+    {
+      "id": "48",
+      "name": "Narinda"
+    },
+    {
+      "id": "49",
+      "name": "Nawabganj (Old Dhaka)"
+    },
+    {
+      "id": "50",
+      "name": "Niketon"
+    },
+    {
+      "id": "51",
+      "name": "Paltan"
+    },
+    {
+      "id": "52",
+      "name": "Postogola"
+    },
+    {
+      "id": "53",
+      "name": "Rayer Bazar"
+    },
+    {
+      "id": "54",
+      "name": "Sabujbag"
+    },
+    {
+      "id": "55",
+      "name": "Saydabad"
+    },
+    {
+      "id": "56",
+      "name": "Segunbagicha"
+    },
+    {
+      "id": "57",
+      "name": "Shyamoli"
+    },
+    {
+      "id": "58",
+      "name": "Sutrapur"
+    },
+    {
+      "id": "59",
+      "name": "Tanti bazar"
+    },
+    {
+      "id": "60",
+      "name": "Tejgaon"
+    },
+    {
+      "id": "61",
+      "name": "Wari"
+    },
+    {
+      "id": "62",
+      "name": "Aftabnagar"
+    },
+    {
+      "id": "63",
+      "name": "Dhalpur"
+    },
+    {
+      "id": "64",
+      "name": "Fakirapool"
+    },
+    {
+      "id": "65",
+      "name": "Kamalapur"
+    },
+    {
+      "id": "66",
+      "name": "Lalmatia"
+    },
+    {
+      "id": "67",
+      "name": "Moghbazar"
+    },
+    {
+      "id": "68",
+      "name": "Noyatola"
+    },
+    {
+      "id": "69",
+      "name": "Ramna"
+    },
+    {
+      "id": "70",
+      "name": "Shahjahanpur"
+    },
+    {
+      "id": "71",
+      "name": "Shantinagar"
     }
-  ]
+  ],
+  "priority": [
+    "Rampura",
+    "Khilgaon",
+    "Malibagh",
+    "Motijheel",
+    "Eskaton"
+  ],
+  "nearby": {
+    "Rampura": [
+      "Banasree",
+      "Badda",
+      "Aftabnagar",
+      "Madhubag",
+      "Khilgaon",
+      "Malibagh"
+    ],
+    "Khilgaon": [
+      "Goran",
+      "Basabo",
+      "Sabujbag",
+      "Malibagh",
+      "Rampura",
+      "Kamalapur"
+    ],
+    "Malibagh": [
+      "Khilgaon",
+      "Moghbazar",
+      "Madhubag",
+      "Shantinagar",
+      "Paltan",
+      "Noyatola"
+    ],
+    "Motijheel": [
+      "Fakirapool",
+      "Paltan",
+      "Kamalapur",
+      "Gopibagh",
+      "Segunbagicha",
+      "Shahjahanpur",
+      "Wari",
+      "Ramna"
+    ],
+    "Eskaton": [
+      "Ramna",
+      "Moghbazar",
+      "Karwan Bazar",
+      "Tejgaon",
+      "Shantinagar",
+      "Segunbagicha",
+      "Farmgate",
+      "Nakhalpara"
+    ],
+    "Mohammadpur": [
+      "Lalmatia",
+      "Rayer Bazar",
+      "Shyamoli",
+      "Dhanmondi"
+    ],
+    "Dhanmondi": [
+      "Jigatola",
+      "Kalabagan",
+      "Lalmatia",
+      "Rayer Bazar"
+    ],
+    "Mirpur": [
+      "Shyamoli",
+      "Bawnia",
+      "Dhaka Cantonment"
+    ],
+    "Gulshan": [
+      "Gulshan 1",
+      "Gulshan 2",
+      "Niketon",
+      "Banani",
+      "Mohakhali"
+    ],
+    "Jatrabari": [
+      "Dania",
+      "Dholaipar",
+      "Dhalpur",
+      "Saydabad",
+      "Jurain",
+      "Postogola",
+      "Doyaganj"
+    ]
+  }
 }

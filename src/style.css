@@ -469,6 +469,13 @@ dd {
 .table-wrap {
   overflow: auto;
 }
+.compare-scroll-hint {
+  display: none;
+}
+.table-wrap th:first-child {
+  position: sticky;
+  left: 0;
+}
 table {
   border-collapse: collapse;
   font-size: 12px;
@@ -785,5 +792,127 @@ h1 {
   .filters:not(.expanded) > label[for="collection"],
   .filters:not(.expanded) > #collection {
     display: block;
+  }
+}
+
+.area-intro {
+  padding: 28px 0 20px;
+}
+.review-notice {
+  color: #824411;
+  background: #fff2dc;
+  border-left: 3px solid #b57523;
+  padding: 8px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.area-intro h1 {
+  font-size: clamp(32px, 3.6vw, 48px);
+  letter-spacing: -1.2px;
+  line-height: 1.2;
+  margin: 7px 0 10px;
+}
+.area-intro p:not(.eyebrow) {
+  margin: 0;
+}
+.area-explorer {
+  padding: 18px 0 22px;
+  border-top: 1px solid var(--line);
+}
+.area-explorer-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.area-explorer-head h2 {
+  font-size: 16px;
+}
+.area-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+.area-choice {
+  text-align: left;
+  background: #fffef9;
+  padding: 13px 16px;
+  border-radius: 7px;
+}
+.area-choice strong {
+  display: block;
+  font-size: 15px;
+}
+.area-choice span {
+  display: block;
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.area-choice[aria-pressed="true"] {
+  border-color: var(--green);
+  background: #e6eee3;
+}
+.area-explorer > .hint {
+  margin: 10px 0 0;
+}
+.phone-quick {
+  font-size: 12px;
+  white-space: nowrap;
+}
+.phone-quick[aria-pressed="true"] {
+  background: var(--green);
+  color: white;
+}
+.result-controls {
+  flex-wrap: wrap;
+}
+.nearby-areas-control {
+  margin-top: 10px;
+}
+.filters label[for="area"] {
+  margin-top: 14px;
+}
+.filters input#search {
+  min-height: 44px;
+}
+@media (max-width: 640px) {
+  .area-intro {
+    padding: 22px 0 18px;
+  }
+  .compare-scroll-hint {
+    display: block;
+  }
+  .area-intro h1 {
+    font-size: 34px;
+  }
+  .area-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .area-choice {
+    padding: 10px 12px;
+    min-height: 66px;
+  }
+  .area-choice:last-child {
+    grid-column: 1/-1;
+  }
+  .area-explorer {
+    padding: 14px 0 18px;
+  }
+  .area-choice strong {
+    font-size: 14px;
+  }
+  .filters:not(.expanded) > label.nearby-areas-control {
+    display: flex;
+  }
+  .phone-quick {
+    min-height: 40px;
+  }
+  .result-controls {
+    gap: 10px;
+  }
+  .filters > label[for="area"] {
+    grid-row: auto;
   }
 }

@@ -20,7 +20,7 @@ export default defineConfig({
         const records = venues
           .map(
             (v) =>
-              `<article><h3>${escape(v.name)}</h3><p>${escape(v.address)}</p><p>${escape(v.phones[0]?.number || "Phone not available")}</p><a href="${escape(v.website || v.evidence[0].url)}" rel="noopener noreferrer">${v.website ? "Official venue information" : "Map listing · confirm with operator"}</a></article>`,
+              `<article><h3>${escape(v.name)}</h3><p>${escape(v.area || "Area not assigned")} · ${escape(v.address)}</p><p>${escape(v.phones[0]?.number || "Phone not sourced yet")}</p>${v.review_notice ? `<p>${escape(v.review_notice)}</p>` : ""}<a href="${escape(v.website || v.evidence[0].url)}" rel="noopener noreferrer">${v.website ? "Official venue information" : "Cited business source · confirm details"}</a></article>`,
           )
           .join("");
         return html.replace(

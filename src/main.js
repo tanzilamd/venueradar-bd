@@ -102,6 +102,7 @@ const ids = [
   "collection",
   "evidence",
   "area",
+  "includeNearby",
   "category",
   "size",
   "phone",
@@ -120,6 +121,10 @@ const filters = () => {
   f.collectionIds = f.collection
     ? collections?.groups.find((g) => g.id === f.collection)?.venue_ids || []
     : null;
+  f.areaIds =
+    f.area && f.area !== "__unknown__"
+      ? [f.area, ...(f.includeNearby ? areas?.nearby?.[f.area] || [] : [])]
+      : null;
   return f;
 };
 function persist(key, value) {
@@ -145,8 +150,16 @@ function areaOptions() {
   const scope = filters().collectionIds;
   const scoped = venues.filter((v) => !scope || scope.includes(v.id));
   for (const a of areas.neighborhoods) {
-    const count = scoped.filter((v) => v.area === a.name).length;
-    option($("area"), a.name, `${a.name} · ${count} indexed`);
+    const names = [
+      a.name,
+      ...($("includeNearby").checked ? areas.nearby?.[a.name] || [] : []),
+    ];
+    const count = scoped.filter((v) => names.includes(v.area)).length;
+    option(
+      $("area"),
+      a.name,
+      `${a.name}${$("includeNearby").checked && names.length > 1 ? " + nearby" : ""} · ${count} indexed`,
+    );
   }
   const unknown = scoped.filter((v) => !v.area).length;
   if (unknown)
@@ -154,6 +167,50 @@ function areaOptions() {
   if ([...$("area").options].some((o) => o.value === old))
     $("area").value = old;
 }
+function renderAreaButtons() {
+  const focusedArea = document.activeElement?.dataset?.areaChoice;
+  const group = filters().collectionIds,
+    scoped = venues.filter((v) => !group || group.includes(v.id));
+  $("priorityAreas").replaceChildren();
+  for (const area of areas.priority || []) {
+    const names = [
+      area,
+      ...($("includeNearby").checked ? areas.nearby?.[area] || [] : []),
+    ];
+    const rows = scoped.filter((v) => names.includes(v.area));
+    const b = button(
+      "",
+      () => {
+        $("area").value = area;
+        $("search").value = "";
+        render();
+        if (innerWidth < 700)
+          $("results").scrollIntoView({ behavior: "smooth", block: "start" });
+      },
+      "area-choice",
+    );
+    b.setAttribute("aria-pressed", String($("area").value === area));
+    b.dataset.areaChoice = area;
+    b.append(
+      el("strong", area),
+      el(
+        "span",
+        `${rows.length} ${$("includeNearby").checked ? "local + nearby" : "indexed"} · ${rows.filter((v) => v.phones.length).length} with phone`,
+      ),
+    );
+    $("priorityAreas").append(b);
+    if (focusedArea === area) b.focus({ preventScroll: true });
+  }
+}
+$("allAreas").onclick = () => {
+  $("area").value = "";
+  $("search").value = "";
+  render();
+};
+$("withPhone").onclick = () => {
+  $("phone").checked = !$("phone").checked;
+  render();
+};
 function button(text, action, cls) {
   const b = el("button", text, cls);
   b.type = "button";
@@ -245,6 +302,15 @@ function syncCompare() {
 function facts(v) {
   return [
     ["Location", v.address || "Not available"],
+    ["Area", v.area || "Not assigned"],
+    ...(v.area_review
+      ? [
+          [
+            "Area evidence",
+            "Map-reviewed browsing locality; not a surveyed boundary",
+          ],
+        ]
+      : []),
     ["Venue type", tr(v.category)],
     [
       "Published capacity",
@@ -256,9 +322,10 @@ function facts(v) {
     ["Documented facilities", v.facilities.map(tr).join(", ") || "Unknown"],
     [
       "Phone",
-      v.phones.map((p) => p.number).join(", ") || "Phone not available",
+      v.phones.map((p) => p.number).join(", ") || "Phone not sourced yet",
     ],
     ["Evidence status", tr(v.verification)],
+    ...(v.review_notice ? [["Needs confirmation", v.review_notice]] : []),
     ["Source reviewed", v.last_checked || "Not checked"],
     ...(v.discovery
       ? [["Map record last edited", v.discovery.osm_updated.slice(0, 10)]]
@@ -367,8 +434,7 @@ function renderCards() {
       el("span", tr(v.category), "eyebrow"),
       el("h3", v.name),
       el("p", v.area || "Dhaka", "english"),
-      el("p", v.address),
-      el("p", v.capacity_layout || "Seating layout unknown", "hint"),
+      el("p", v.address_status === "not_available" ? "Street address not sourced yet" : v.address),
       el(
         "span",
         hasCapacity(v)
@@ -377,12 +443,16 @@ function renderCards() {
         "badge",
       ),
     );
+    if (v.capacity_layout) body.append(el("p", v.capacity_layout, "hint"));
+    if (v.review_notice) body.append(el("p", v.review_notice, "review-notice"));
     body.append(
       el(
         "span",
         v.verification === "open-data-listed"
           ? "Map listing · confirm wedding booking"
-          : "Operator source checked",
+          : v.evidence.some((s) => s.kind === "official")
+            ? "Operator source checked"
+            : "Business listing checked",
         "badge evidence-badge",
       ),
     );
@@ -405,11 +475,16 @@ function renderCards() {
       ),
     );
     if (v.phones.length) {
-      const a = el("a", "Call venue");
+      const a = el("a", `Call · ${v.phones[0].number.replace(/^\+880/, "0")}`);
       a.href = "tel:" + v.phones[0].number;
       actions.append(a);
-    } else actions.append(el("span", "Phone not available", "badge"));
-    actions.append(external("Google reviews", mapsURL(v)));
+    } else actions.append(el("span", "Phone not sourced yet", "badge"));
+    actions.append(
+      external(
+        v.phones.length ? "Google reviews" : "Maps & contact",
+        mapsURL(v),
+      ),
+    );
     c.append(body, star, actions);
     $("results").append(c);
   }
@@ -421,14 +496,21 @@ function render() {
     location,
   );
   $("count").textContent = bn(results.length);
+  $("venueNoun").textContent = results.length === 1 ? "venue" : "venues";
   $("resultLabel").textContent = saved
     ? "Your saved venues"
-    : "Indexed venues only · coverage is incomplete";
+    : $("area").value
+      ? `Showing ${$("area").value}${$("includeNearby").checked ? " and nearby areas" : ""}`
+      : "Choose an area to narrow your search";
+  $("withPhone").setAttribute("aria-pressed", String($("phone").checked));
+  renderAreaButtons();
   $("breadcrumb").textContent =
     "DHAKA / " +
     ($("area").value === "__unknown__"
       ? "AREA NOT CONFIRMED"
-      : $("area").value || "ALL NEIGHBORHOODS");
+      : $("area").value
+        ? $("area").value + ($("includeNearby").checked ? " & NEARBY" : "")
+        : "ALL NEIGHBORHOODS");
   $("stats").replaceChildren();
   for (const [n, label] of [
     [results.length, "Indexed venues"],
@@ -451,7 +533,7 @@ function render() {
 function reset() {
   for (const id of ids) {
     const n = $(id);
-    if (n.type === "checkbox") n.checked = false;
+    if (n.type === "checkbox") n.checked = id === "includeNearby";
     else
       n.value =
         id === "sort" ? "name" : id === "collection" ? collections.default : "";
@@ -522,25 +604,39 @@ function compareView() {
   );
   const wrap = el("div", null, "table-wrap"),
     table = el("table"),
+    thead = el("thead"),
+    tbody = el("tbody"),
     head = el("tr");
+  wrap.tabIndex = 0;
+  wrap.setAttribute("role", "region");
+  wrap.setAttribute("aria-label", "Venue comparison. Scroll horizontally to see all venues.");
   head.append(el("th", "Information"));
   const vs = compare
     .map((id) => venues.find((v) => v.id === id))
     .filter(Boolean);
   for (const v of vs) head.append(el("th", v.name));
-  table.append(head);
-  for (let i = 0; i < facts(vs[0]).length; i++) {
+  for (const th of head.children) th.scope = "col";
+  thead.append(head);
+  table.append(thead, tbody);
+  const columns = vs.map(v => new Map(facts(v))),
+    labels = [...new Set(columns.flatMap(column => [...column.keys()]))];
+  for (const label of labels) {
     const row = el("tr");
-    row.append(el("th", facts(vs[0])[i][0]));
-    for (const v of vs) row.append(el("td", facts(v)[i][1]));
-    table.append(row);
+    const heading = el("th", label);
+    heading.scope = "row";
+    row.append(heading);
+    for (const column of columns)
+      row.append(el("td", column.get(label) || (label === "Needs confirmation" ? "No notice recorded" : "Not applicable")));
+    tbody.append(row);
   }
   for (const [label, key] of [
     ["Official website", "website"],
     ["Google reviews", "maps"],
   ]) {
     const row = el("tr");
-    row.append(el("th", label));
+    const heading = el("th", label);
+    heading.scope = "row";
+    row.append(heading);
     for (const v of vs) {
       const cell = el("td");
       cell.append(
@@ -552,14 +648,15 @@ function compareView() {
       );
       row.append(cell);
     }
-    table.append(row);
+    tbody.append(row);
   }
   wrap.append(table);
+  box.append(el("p", "Swipe or scroll the table horizontally to see every venue.", "hint compare-scroll-hint"));
   box.append(wrap);
   open(box);
 }
 $("dialog").querySelector(".close").onclick = () => $("dialog").close();
-for (const id of ["method", "footerMethod", "researchLink"])
+for (const id of ["method", "footerMethod"])
   $(id).onclick = (e) => {
     e.preventDefault();
     method();
@@ -620,7 +717,7 @@ $("nearby").onclick = () => {
 };
 for (const id of ids)
   $(id).addEventListener(id === "search" ? "input" : "change", () => {
-    if (id === "collection") areaOptions();
+    if (id === "collection" || id === "includeNearby") areaOptions();
     if (id === "sort" && $("sort").value === "distance" && !location)
       $("message").textContent = "Choose “Near me” to enable distance sorting.";
     render();
@@ -643,9 +740,6 @@ async function load() {
     compare = readIds(storage, "vr-compare", valid).slice(0, 3);
     $("collection").value = collections.default;
     placeOptions();
-    $("coverageNote").textContent = venues.length
-      ? `${bn(collections.groups.find((g) => g.id === "community-halls").venue_ids.length)} community centers & halls. ${bn(venues.filter((v) => v.verification === "open-data-listed").length)} map listings need operator confirmation. Hotels are listed separately.`
-      : "No verified venue records have been published yet.";
     render();
   } catch {
     $("results").replaceChildren(
@@ -655,7 +749,7 @@ async function load() {
       ),
       button("Try again", load),
     );
-    $("coverageNote").textContent = "Data could not load.";
+
     $("resultLabel").textContent = "Unable to load";
   }
 }

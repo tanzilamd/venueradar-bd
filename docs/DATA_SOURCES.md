@@ -2,9 +2,11 @@
 
 ## Current directory
 
-118 records in Dhaka: **110 community/event/convention/banquet hall records shown by default**, and **8 existing hotel records available separately**. Of these, 11 have manually inspected operator sources and 107 are OpenStreetMap listings requiring operator confirmation. There is no completeness, active-operation or wedding-only guarantee.
+131 records in Dhaka: **123 community/event/convention/banquet hall records shown by default**, and **8 existing hotels separately**. 110 primary map listings retain explicit operator-confirmation warnings. Individually checked business listings and additional operator contact sources are distinguished in each record. No completeness, current-operation or wedding-only guarantee is made.
 
-23 records have publicly sourced business contacts (26 numbers). Phone publication is not proof of an active line or WhatsApp support. 8 records have published capacity information, including a range. 111 have mapped positions. 98 have no confirmed neighborhood assignment and are explicitly labelled as such rather than assigned by guesswork.
+**59 records have public business contacts (70 numbers)**; 72 still lack a responsibly sourced phone. No line has been call-tested. 8 records have documented capacity, including a range; 123 have mapped positions. All records have a reviewed browsing locality, covering 61 labels. The 98 previously blank areas were researched through cached address hierarchies and reviewed named-address context. This is not independent operator confirmation of every area or a legal boundary survey. Five priority shortcuts include explicit nearby areas, preserving each venue’s actual locality.
+
+The current correction report is [area and contact revision](reports/2026-10-25-area-contact-revision.md). It details added and modified records, contacts, conflicts, rejected sources and remaining gaps. Closures and ambiguous identities are flagged visibly; no existing venue was automatically removed.
 
 ## Bulk map source
 
@@ -16,17 +18,17 @@ OpenStreetMap contributors via the Geofabrik Bangladesh extract:
 
 The 24 October 2026 extract was acquired and checksum-verified during this explicitly requested manual research session. Each new listing retains its OSM identity, version, edit date and geometry method. `public/data/discovery.json` stores the extract metadata, checksums and relevant source tags. `public/data/curated.json` stores admissions, duplicate decisions, conflicts and held candidates. The raw country extract stays outside the repository.
 
-A map edit date is not a business operating-status check. The source-review date means the map data was inspected. Map-only records have an explicit lower-evidence status. No numerical Google ratings, Google Places database content, restricted reviews, unlicensed photographs or copied promotional text are included.
+A map edit date is not a business operating-status check. The source-review date means the map data was inspected. Map-only records have an explicit lower-evidence status. No numerical Google ratings, review counts, reviews, unlicensed photographs, opening hours or copied promotional text are included. The owner-requested contact revision used individual manual business-listing checks for public facts, without a Places API, automated contact extraction or bulk Places export.
 
 The venue database and derived boundary are distributed under ODbL-1.0, with attribution to OpenStreetMap contributors and separate operator citations. The full text is in `public/licenses/ODbL-1.0.txt`; data licensing is distinguished from MIT application code.
 
 ## Operator sources
 
-The original 11 records retain their original first-party source URLs, facts, dates, public business contacts and uncertainty notes. These include official event pages for the eight hotels, Police Convention Hall, RAOWA and SKS. No lower-confidence map field has overwritten an existing operator-sourced value. See `venues.json` for field-specific citations and the earlier change reports for their admission decisions.
+The original 11 records retain their original first-party source URLs, public business contacts, capacities and uncertainty notes; the previously unassigned Sonargaon area was researched separately. Additional first-party contact pages include Dhaka Ladies Club, KIB, Army Welfare Trust public hall-booking contacts, Zaara, JK, X-Group and BCFCC. These include official event pages for the eight hotels, Police Convention Hall, RAOWA and SKS. No lower-confidence map field has overwritten an existing operator-sourced value. See `venues.json` for field-specific citations and the earlier change reports for their admission decisions.
 
 ## Administrative reference
 
-`docs/reference/bangladesh-areas.json` was originally derived from https://github.com/nuhil/bangladesh-geocode under MIT (copyright 2014 Nuhil Mehdy; full notice in GEOCODE_LICENSE.txt). This is a development reference, not a nationwide directory or Version 1 navigation. Neighborhood labels require supplied address evidence; nearest-place inference is not used.
+`docs/reference/bangladesh-areas.json` was originally derived from https://github.com/nuhil/bangladesh-geocode under MIT (copyright 2014 Nuhil Mehdy; full notice in GEOCODE_LICENSE.txt). This is a development reference, not a nationwide directory or Version 1 navigation. Neighborhood labels use reviewed address hierarchies, source names/roads and branch-specific address checks. A nearest geocoder result is not automatically accepted. `public/data/area-reviews.json` preserves the original hierarchy and the reviewed grouping; broader locality suggestions can be refined when a named address supports it. No runtime geocoder or location tracking was added.
 
 ## Map display
 

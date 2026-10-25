@@ -238,16 +238,36 @@
       "bd-osm-way-1561267432"
     ],
     "duplicate_groups": {
-      "340": [13],
-      "347": [19],
-      "350": [64],
-      "52": [88],
-      "58": [20],
-      "2": [140],
-      "368": [345],
-      "404": [137],
-      "406": [139],
-      "416": [318]
+      "340": [
+        13
+      ],
+      "347": [
+        19
+      ],
+      "350": [
+        64
+      ],
+      "52": [
+        88
+      ],
+      "58": [
+        20
+      ],
+      "2": [
+        140
+      ],
+      "368": [
+        345
+      ],
+      "404": [
+        137
+      ],
+      "406": [
+        139
+      ],
+      "416": [
+        318
+      ]
     },
     "outside_scope": [
       {
@@ -536,5 +556,1334 @@
       }
     ],
     "remaining_gaps": "This is not all venues in Dhaka. No wedding-only guarantee or current operating-status guarantee for map-only records."
+  },
+  "area_and_contact_revision": {
+    "checked": "2026-10-25",
+    "area_changes": [
+      {
+        "id": "bd-osm-node-396647115",
+        "before": null,
+        "after": "Sutrapur",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-1936311529",
+        "before": null,
+        "after": "Malibagh",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-3323390519",
+        "before": null,
+        "after": "Kamrangirchar",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-3330957057",
+        "before": null,
+        "after": "Rayer Bazar",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-3374713092",
+        "before": null,
+        "after": "Nawabganj (Old Dhaka)",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-3403191569",
+        "before": null,
+        "after": "Banani",
+        "reason": "Banani DOHS name/address and mapped location; geocoder Gulshan/Korail suggestion rejected."
+      },
+      {
+        "id": "bd-osm-node-3473792181",
+        "before": null,
+        "after": "Kamrangirchar",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-3475693347",
+        "before": null,
+        "after": "Kamrangirchar",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-3714859928",
+        "before": null,
+        "after": "Mohammadpur",
+        "reason": "Published Block A address and mapped Town Hall/Aurangzeb Road context; not a blind nearest-place assignment."
+      },
+      {
+        "id": "bd-osm-node-3731351579",
+        "before": null,
+        "after": "Jigatola",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-3731958028",
+        "before": null,
+        "after": "Badda",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-3734889100",
+        "before": null,
+        "after": "Mirpur",
+        "reason": "Kazipara map context grouped under wider Mirpur."
+      },
+      {
+        "id": "bd-osm-node-3745296696",
+        "before": null,
+        "after": "Faridabad",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-4035864979",
+        "before": null,
+        "after": "Ashkona",
+        "reason": "Source venue name and Ashkona quarter in reverse-geocoded address."
+      },
+      {
+        "id": "bd-osm-node-4072852261",
+        "before": null,
+        "after": "Madhubag",
+        "reason": "Mapped Modhubag quarter and Old Elephant Road context; normalized English spelling."
+      },
+      {
+        "id": "bd-osm-node-4320931026",
+        "before": null,
+        "after": "Mirpur",
+        "reason": "Shewrapara/West Kazipara map context grouped under wider Mirpur."
+      },
+      {
+        "id": "bd-osm-node-4330600894",
+        "before": null,
+        "after": "Bakshibazar",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-4464533589",
+        "before": null,
+        "after": "Hazaribagh",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-4528270335",
+        "before": null,
+        "after": "Mohammadpur",
+        "reason": "Published Aurangzeb Road address and mapped Mohammadpur locality."
+      },
+      {
+        "id": "bd-osm-node-4547663197",
+        "before": null,
+        "after": "Bakshibazar",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-4549001959",
+        "before": null,
+        "after": "Baridhara",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-4582326295",
+        "before": null,
+        "after": "Bakshibazar",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-4729172392",
+        "before": null,
+        "after": "Uttara",
+        "reason": "Azampur/Chalabon mapped address grouped under the wider Uttara browsing locality."
+      },
+      {
+        "id": "bd-osm-node-4973354765",
+        "before": null,
+        "after": "Wari",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-5171683022",
+        "before": null,
+        "after": "Mirpur",
+        "reason": "Mirpur 15 quarter and Mirpur-14 address context; wider browsing locality."
+      },
+      {
+        "id": "bd-osm-node-5233901421",
+        "before": null,
+        "after": "Bakshibazar",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-5233901521",
+        "before": null,
+        "after": "Bakshibazar",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-5233935421",
+        "before": null,
+        "after": "Bakshibazar",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-5998293476",
+        "before": null,
+        "after": "Khilkhet",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-6075578295",
+        "before": null,
+        "after": "Gulshan 1",
+        "reason": "Gulshan 1 quarter and published Road 134."
+      },
+      {
+        "id": "bd-osm-node-6924203537",
+        "before": null,
+        "after": "Shyamoli",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-7711605264",
+        "before": null,
+        "after": "Mirpur",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-7787635919",
+        "before": null,
+        "after": "Dania",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-7787635947",
+        "before": null,
+        "after": "Dania",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-8313877538",
+        "before": null,
+        "after": "Mirpur",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-9622947662",
+        "before": null,
+        "after": "Uttara",
+        "reason": "Diabari, Sector 16/18 source context grouped under the wider Uttara browsing locality."
+      },
+      {
+        "id": "bd-osm-node-9694573157",
+        "before": null,
+        "after": "Goran",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-9694573176",
+        "before": null,
+        "after": "Basabo",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-9806581241",
+        "before": null,
+        "after": "Bawnia",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-9807925208",
+        "before": null,
+        "after": "Panthapath",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-9843518617",
+        "before": null,
+        "after": "Banasree",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-9932948783",
+        "before": null,
+        "after": "Segunbagicha",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-10983479205",
+        "before": null,
+        "after": "Mirpur",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-11716250398",
+        "before": null,
+        "after": "Doyaganj",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-11730096574",
+        "before": null,
+        "after": "Dholaipar",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-11768450931",
+        "before": null,
+        "after": "Tanti bazar",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-11768476986",
+        "before": null,
+        "after": "Doyaganj",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-11775084788",
+        "before": null,
+        "after": "Doyaganj",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-11777855439",
+        "before": null,
+        "after": "Doyaganj",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-11824645603",
+        "before": null,
+        "after": "Jigatola",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-11886959379",
+        "before": null,
+        "after": "Mirpur",
+        "reason": "Mirpur 2 quarter and mapped Main Road."
+      },
+      {
+        "id": "bd-osm-node-11915138589",
+        "before": null,
+        "after": "Khilgaon",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-11939428112",
+        "before": null,
+        "after": "Nakhalpara",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-11939996444",
+        "before": null,
+        "after": "Mirpur",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-11986161470",
+        "before": null,
+        "after": "Mirpur",
+        "reason": "Pirerbag mapped locality grouped under wider Mirpur."
+      },
+      {
+        "id": "bd-osm-node-11988944083",
+        "before": null,
+        "after": "Mirpur",
+        "reason": "Pirerbag mapped locality grouped under wider Mirpur."
+      },
+      {
+        "id": "bd-osm-node-11993579518",
+        "before": null,
+        "after": "Mohammadpur",
+        "reason": "Matched business is at Tokyo Square, Ring Road, Mohammadpur, beside Krishi Market. Shyamoli was a broader geocoder suggestion."
+      },
+      {
+        "id": "bd-osm-node-11993640298",
+        "before": null,
+        "after": "Mirpur",
+        "reason": "Borobagh/West Monipur map context grouped under wider Mirpur."
+      },
+      {
+        "id": "bd-osm-node-12006320188",
+        "before": null,
+        "after": "Gulshan 1",
+        "reason": "Gulshan 1 quarter and mapped business position."
+      },
+      {
+        "id": "bd-osm-node-12012297426",
+        "before": null,
+        "after": "Jigatola",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-12055130480",
+        "before": null,
+        "after": "Basabo",
+        "reason": "The matched branch is explicitly named Bashabo (Basabo) and gives 27 Atish Deepankar Road. This refines the broader Sabujbag map hierarchy without borrowing the Malibagh branch contact."
+      },
+      {
+        "id": "bd-osm-node-12456045701",
+        "before": null,
+        "after": "Gulshan 1",
+        "reason": "Published Road 14 and Gulshan 1 quarter."
+      },
+      {
+        "id": "bd-osm-node-13090503501",
+        "before": null,
+        "after": "Mirpur",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-13527564201",
+        "before": null,
+        "after": "Mirpur",
+        "reason": "Mirpur 13 quarter; wider browsing locality."
+      },
+      {
+        "id": "bd-osm-node-14247677151",
+        "before": null,
+        "after": "Jigatola",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-14252402800",
+        "before": null,
+        "after": "Jigatola",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-node-14286743945",
+        "before": null,
+        "after": "Kalabagan",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-way-241619748",
+        "before": null,
+        "after": "Armanitola",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-way-243982330",
+        "before": null,
+        "after": "Bangshal",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-way-245267775",
+        "before": null,
+        "after": "Armanitola",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-way-263618386",
+        "before": null,
+        "after": "Khilgaon",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-way-295884568",
+        "before": null,
+        "after": "Dhaka Cantonment",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-way-297869678",
+        "before": null,
+        "after": "Gopibagh",
+        "reason": "Reviewed Gopibagh/South Kamalapur locality and mapped point; locality border, not an authoritative boundary."
+      },
+      {
+        "id": "bd-osm-way-298472671",
+        "before": null,
+        "after": "Jigatola",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-way-345203658",
+        "before": null,
+        "after": "Gandaria",
+        "reason": "Published Distilary Road and Dhupkhola/Gandaria venue context."
+      },
+      {
+        "id": "bd-osm-way-367277125",
+        "before": null,
+        "after": "Narinda",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-way-370400603",
+        "before": null,
+        "after": "Mirpur",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-way-371381396",
+        "before": null,
+        "after": "Malibagh",
+        "reason": "Named Malibagh community hall at the rail-gate/Atish Depankar Road border; reviewed browsing locality."
+      },
+      {
+        "id": "bd-osm-way-371382348",
+        "before": null,
+        "after": "Malibagh",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-way-384311411",
+        "before": null,
+        "after": "Niketon",
+        "reason": "Named Niketon Society venue and Road 4 Block B address; geocoder Gulshan 1 is broader."
+      },
+      {
+        "id": "bd-osm-way-400903521",
+        "before": null,
+        "after": "Gulshan 1",
+        "reason": "Mapped Road 7/Gulshan 1 locality."
+      },
+      {
+        "id": "bd-osm-way-438470592",
+        "before": null,
+        "after": "Bawnia",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-way-439835437",
+        "before": null,
+        "after": "Saydabad",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-way-441129284",
+        "before": null,
+        "after": "Dhaka Cantonment",
+        "reason": "Mapped Army Golf Club compound context; geocoder nearby Baridhara DOHS quarter is not an entrance/address confirmation."
+      },
+      {
+        "id": "bd-osm-way-456824572",
+        "before": null,
+        "after": "Gandaria",
+        "reason": "Published Gandariya/Dhupkhola address and Distilary Road."
+      },
+      {
+        "id": "bd-osm-way-490274323",
+        "before": null,
+        "after": "Tejgaon",
+        "reason": "Published Bir Uttam Ziaur Rahman Road and BAF/Old Airport locality; wider Tejgaon grouping."
+      },
+      {
+        "id": "bd-osm-way-495120358",
+        "before": null,
+        "after": "Banani",
+        "reason": "Mapped Banani/Navy compound context; geocoder Gulshan 2 suggestion rejected."
+      },
+      {
+        "id": "bd-osm-way-498173029",
+        "before": null,
+        "after": "Tejgaon",
+        "reason": "BAF Shaheen/Old Airport mapped locality; wider Tejgaon grouping."
+      },
+      {
+        "id": "bd-osm-way-502537807",
+        "before": null,
+        "after": "Dhaka Cantonment",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-way-534499396",
+        "before": null,
+        "after": "Jurain",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-way-534723199",
+        "before": null,
+        "after": "Dholaipar",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-way-536571520",
+        "before": null,
+        "after": "Postogola",
+        "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
+      },
+      {
+        "id": "bd-osm-way-540588060",
+        "before": null,
+        "after": "Mohakhali",
+        "reason": "Matched business is explicitly on TB Gate Road, Mohakhali. Gulshan was a broader geocoder label."
+      },
+      {
+        "id": "bd-osm-way-586533328",
+        "before": null,
+        "after": "Baridhara DOHS",
+        "reason": "Published Eastern Road, DOHS Baridhara venue name and Baridhara DOHS quarter."
+      },
+      {
+        "id": "bd-osm-way-698085019",
+        "before": null,
+        "after": "Tejgaon",
+        "reason": "Mapped Trust Auditorium/Arjotpara position on Bir Uttam Ziaur Rahman Road; wider Tejgaon grouping."
+      },
+      {
+        "id": "bd-osm-way-700469632",
+        "before": null,
+        "after": "Paltan",
+        "reason": "Published Purana Paltan Line and Bijoynagar locality."
+      },
+      {
+        "id": "bd-osm-way-736749229",
+        "before": null,
+        "after": "Farmgate",
+        "reason": "Published Khamar Bari Road and Farmgate quarter."
+      },
+      {
+        "id": "bd-osm-way-1561267432",
+        "before": "Gulshan",
+        "after": "Tejgaon",
+        "reason": "Corrected earlier road-string misclassification: Tejgaon-Gulshan Link Road does not establish Gulshan as the venue area. Mapped Tejgaon industrial locality reviewed."
+      },
+      {
+        "id": "bd-pan-pacific-sonargaon-dhaka",
+        "before": null,
+        "after": "Karwan Bazar"
+      }
+    ],
+    "added_ids": [
+      "bd-osm-way-297302722",
+      "bd-osm-way-367563642",
+      "bd-osm-way-449635016",
+      "bd-abacus-convention-center",
+      "bd-celebration-community-center",
+      "bd-motijheel-community-center",
+      "bd-modhubagh-community-centre",
+      "bd-nanjing-community-center",
+      "bd-siraj-convention-center",
+      "bd-bazlur-rahman-community-complex",
+      "bd-ak-convention-center",
+      "bd-jk-convention-hall-malibagh",
+      "bd-zam-zam-convention-hall-mirpur-1"
+    ],
+    "pending_identity": [],
+    "history_rewrite": "Explicitly declined by owner; no rewrite or force-push authorized.",
+    "contact_changes": [
+      {
+        "id": "bd-osm-node-3714859928",
+        "added_phones": [
+          "+8801716485355"
+        ],
+        "sources": [
+          {
+            "number": "+8801716485355",
+            "url": "https://www.google.com/maps/search/?api=1&query=Priyanka%20Community%20Centre%20Mohammadpur%20Dhaka"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-osm-node-3731351579",
+        "added_phones": [
+          "+8801601036555"
+        ],
+        "sources": [
+          {
+            "number": "+8801601036555",
+            "url": "https://www.google.com/maps/search/?api=1&query=Sugandha%20Convention%20Hall%20Dhanmondi%20Dhaka"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-osm-node-4072852261",
+        "added_phones": [
+          "+8801916869226"
+        ],
+        "sources": [
+          {
+            "number": "+8801916869226",
+            "url": "https://www.google.com/maps/search/?api=1&query=Kader%20Party%20House%20Madhubag%20Dhaka"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-osm-node-4320931026",
+        "added_phones": [
+          "+8801839929551"
+        ],
+        "sources": [
+          {
+            "number": "+8801839929551",
+            "url": "https://www.google.com/maps/search/?api=1&query=DSS%20Convention%20Center%20Shewrapara%20Dhaka"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-osm-node-4547663197",
+        "added_phones": [
+          "+8801912879260"
+        ],
+        "sources": [
+          {
+            "number": "+8801912879260",
+            "url": "https://www.google.com/maps/search/?api=1&query=Rokeya%20Kunjo%20Community%20Center%20Bakshibazar%20Dhaka"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-osm-node-4583633891",
+        "added_phones": [
+          "+8801852601055"
+        ],
+        "sources": [
+          {
+            "number": "+8801852601055",
+            "url": "https://www.google.com/maps/search/?api=1&query=Mirpur%20Convention%20Centre%20Mirpur%202%20Dhaka"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-osm-node-4973354765",
+        "added_phones": [
+          "+8801714137349"
+        ],
+        "sources": [
+          {
+            "number": "+8801714137349",
+            "url": "https://www.google.com/maps/search/?api=1&query=Wari%20Party%20Center%20Dhaka"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-osm-node-5998293476",
+        "added_phones": [
+          "+8801991197719"
+        ],
+        "sources": [
+          {
+            "number": "+8801991197719",
+            "url": "https://www.google.com/maps/search/?api=1&query=International%20Convention%20City%20Bashundhara%20ICCB%20Joar%20Sahara%20Dhaka"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-osm-node-6075578295",
+        "added_phones": [
+          "+8801833333510"
+        ],
+        "sources": [
+          {
+            "number": "+8801833333510",
+            "url": "https://www.google.com/maps/search/?api=1&query=Emmanuelle%20Banquet%20Hall%20Road%20134%20Gulshan%20Dhaka"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-osm-node-9694573157",
+        "added_phones": [
+          "+8801680750760"
+        ],
+        "sources": [
+          {
+            "number": "+8801680750760",
+            "url": "https://www.google.com/maps/search/?api=1&query=Friends%20Convention%20Center%20Goran%20Dhaka"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-osm-node-11824645603",
+        "added_phones": [
+          "+8801755636268",
+          "+8801755636321"
+        ],
+        "sources": [
+          {
+            "number": "+8801755636268",
+            "url": "https://x-grouprestaurant.com/associate-concern"
+          },
+          {
+            "number": "+8801755636321",
+            "url": "https://x-grouprestaurant.com/associate-concern"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-osm-node-11939428112",
+        "added_phones": [
+          "+8801778630350"
+        ],
+        "sources": [
+          {
+            "number": "+8801778630350",
+            "url": "https://www.google.com/maps/search/?api=1&query=Nakhalpara%20Community%20Center%20Dhaka"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-osm-node-11939996444",
+        "added_phones": [
+          "+8801709678171",
+          "+8801709678172"
+        ],
+        "sources": [
+          {
+            "number": "+8801709678171",
+            "url": "https://x-grouprestaurant.com/associate-concern"
+          },
+          {
+            "number": "+8801709678172",
+            "url": "https://x-grouprestaurant.com/associate-concern"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-osm-node-11993579518",
+        "added_phones": [
+          "+8801711993804"
+        ],
+        "sources": [
+          {
+            "number": "+8801711993804",
+            "url": "https://www.google.com/maps/search/?api=1&query=Tokyo%20Square%20Convention%20Center%20Shyamoli%20Dhaka"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-osm-node-12006320188",
+        "added_phones": [
+          "+8801707076689"
+        ],
+        "sources": [
+          {
+            "number": "+8801707076689",
+            "url": "https://www.google.com/maps/search/?api=1&query=Spectra%20Convention%20Centre%20Gulshan%20Dhaka"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-osm-node-12055130480",
+        "added_phones": [
+          "+8801787361001"
+        ],
+        "sources": [
+          {
+            "number": "+8801787361001",
+            "url": "https://www.google.com/maps/search/?api=1&query=JK%20Convention%20Hall%20Atish%20Dipankar%20Road%20Dhaka"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-osm-node-12456045701",
+        "added_phones": [
+          "+88028831900"
+        ],
+        "sources": [
+          {
+            "number": "+88028831900",
+            "url": "https://zaaraconvention.com/"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-osm-way-24448507",
+        "added_phones": [
+          "+8801755636336",
+          "+8801755636337"
+        ],
+        "sources": [
+          {
+            "number": "+8801755636336",
+            "url": "https://x-grouprestaurant.com/associate-concern"
+          },
+          {
+            "number": "+8801755636337",
+            "url": "https://x-grouprestaurant.com/associate-concern"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-osm-way-295884568",
+        "added_phones": [
+          "+8801769017753"
+        ],
+        "sources": [
+          {
+            "number": "+8801769017753",
+            "url": "https://hallbooking.awt.mil.bd/contact_us"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-osm-way-371382348",
+        "added_phones": [
+          "+8801835322398"
+        ],
+        "sources": [
+          {
+            "number": "+8801835322398",
+            "url": "https://www.google.com/maps/search/?api=1&query=Hosaf%20Convention%20Center%20Malibagh%20Dhaka"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-osm-way-400903521",
+        "added_phones": [
+          "+8801906989895"
+        ],
+        "sources": [
+          {
+            "number": "+8801906989895",
+            "url": "https://www.google.com/maps/search/?api=1&query=Spectra%20Convention%20Centre%20Gulshan%20Dhaka"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-osm-way-440170070",
+        "added_phones": [
+          "+8801911392584"
+        ],
+        "sources": [
+          {
+            "number": "+8801911392584",
+            "url": "https://www.google.com/maps/search/?api=1&query=Suchona%20Community%20Center%20Mohammadpur%20Dhaka"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-osm-way-490274323",
+        "added_phones": [
+          "+880255060000"
+        ],
+        "sources": [
+          {
+            "number": "+880255060000",
+            "url": "https://www.google.com/maps/search/?api=1&query=Falcon%20Hall%20Tejgaon%20Dhaka"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-osm-way-498173029",
+        "added_phones": [
+          "+8801769975329"
+        ],
+        "sources": [
+          {
+            "number": "+8801769975329",
+            "url": "https://www.google.com/maps/search/?api=1&query=BAF%20Shaheen%20Hall%20Tejgaon%20Dhaka"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-osm-way-502537807",
+        "added_phones": [
+          "+8801769035214"
+        ],
+        "sources": [
+          {
+            "number": "+8801769035214",
+            "url": "https://hallbooking.awt.mil.bd/contact_us"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-osm-way-540588060",
+        "added_phones": [
+          "+8801813158984"
+        ],
+        "sources": [
+          {
+            "number": "+8801813158984",
+            "url": "https://www.google.com/maps/search/?api=1&query=Mohakhali%20Community%20Center%20Dhaka"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-osm-way-698085019",
+        "added_phones": [
+          "+8801312885213"
+        ],
+        "sources": [
+          {
+            "number": "+8801312885213",
+            "url": "https://hallbooking.awt.mil.bd/contact_us"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-osm-way-736749229",
+        "added_phones": [
+          "+8801805070114",
+          "+8802222244129"
+        ],
+        "sources": [
+          {
+            "number": "+8801805070114",
+            "url": "https://www.kib.org.bd/"
+          },
+          {
+            "number": "+8802222244129",
+            "url": "https://www.kib.org.bd/"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-osm-way-297302722",
+        "added_phones": [
+          "+8801307544312"
+        ],
+        "sources": [
+          {
+            "number": "+8801307544312",
+            "url": "https://dhakaladiesclubbd.com/Contact"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-osm-way-449635016",
+        "added_phones": [
+          "+8801616070808"
+        ],
+        "sources": [
+          {
+            "number": "+8801616070808",
+            "url": "https://www.google.com/maps/place/Waterfall+Restaurant+%26+Convention+Hall+Khilgaon/@23.7487563,90.4062937,16z/data=!4m10!1m2!2m1!1sWaterfall+Restaurant+Convention+Hall+Khilgaon+Dhaka!3m6!1s0x3755b9141cb78191:0xc7610dc2d02ae3c6!8m2!3d23.751932!4d90.4172223!15sCjNXYXRlcmZhbGwgUmVzdGF1cmFudCBDb252ZW50aW9uIEhhbGwgS2hpbGdhb24gRGhha2FaNSIzd2F0ZXJmYWxsIHJlc3RhdXJhbnQgY29udmVudGlvbiBoYWxsIGtoaWxnYW9uIGRoYWthkgERY29udmVudGlvbl9jZW50ZXKaAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMnRXVDFwSGFGRlZWWEJMVTBkT2IwMHljSHBXTWtwdFZGWTVUMVZZWXhBQuABAPoBBAgnEC0!16s%2Fg%2F11l_4b82k4?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-abacus-convention-center",
+        "added_phones": [
+          "+880248321499"
+        ],
+        "sources": [
+          {
+            "number": "+880248321499",
+            "url": "https://maps.app.goo.gl/TYbpPZTJ9amf3mzj8"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-celebration-community-center",
+        "added_phones": [
+          "+8801818400430"
+        ],
+        "sources": [
+          {
+            "number": "+8801818400430",
+            "url": "https://www.google.com/maps/search/?api=1&query=Celebration%20Community%20Center%20Outer%20Circular%20Road%20Dhaka"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-nanjing-community-center",
+        "added_phones": [
+          "+8801790737726"
+        ],
+        "sources": [
+          {
+            "number": "+8801790737726",
+            "url": "https://www.google.com/maps/search/?api=1&query=Nanjing%20Community%20Center%20Banasree%20Dhaka"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-siraj-convention-center",
+        "added_phones": [
+          "+8801712616367"
+        ],
+        "sources": [
+          {
+            "number": "+8801712616367",
+            "url": "https://www.google.com/maps/search/?api=1&query=Siraj%20Convention%20Center%20Banasree%20Dhaka"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-bazlur-rahman-community-complex",
+        "added_phones": [
+          "+8801915745037"
+        ],
+        "sources": [
+          {
+            "number": "+8801915745037",
+            "url": "https://www.google.com/maps/search/?api=1&query=Bazlur%20Rahman%20Community%20Complex%20Banasree%20Dhaka"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-ak-convention-center",
+        "added_phones": [
+          "+8801763983477"
+        ],
+        "sources": [
+          {
+            "number": "+8801763983477",
+            "url": "https://www.google.com/maps/search/?api=1&query=AK%20Convention%20Center%20Dakhin%20Banasree%20Dhaka"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-jk-convention-hall-malibagh",
+        "added_phones": [
+          "+8801337339871",
+          "+8801787361001"
+        ],
+        "sources": [
+          {
+            "number": "+8801337339871",
+            "url": "https://www.google.com/maps/place/Jk+Convention+Hall+Malibagh+Chowdhury+Para+Branch/@23.7449143,90.4213473,15z/data=!4m10!1m2!2m1!1sJK+Convention+Hall+Malibagh+Chowdhurypara+Dhaka!3m6!1s0x3755b93b487d676d:0xd6086bc4d6297b23!8m2!3d23.7527379!4d90.4140421!15sCi9KSyBDb252ZW50aW9uIEhhbGwgTWFsaWJhZ2ggQ2hvd2RodXJ5cGFyYSBEaGFrYVoxIi9qayBjb252ZW50aW9uIGhhbGwgbWFsaWJhZ2ggY2hvd2RodXJ5cGFyYSBkaGFrYZIBEWNvbnZlbnRpb25fY2VudGVymgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDJ4YVRsWnJWbnBhTTBwVlZsVlNiMXBVYkhGbGJEbEZWbFZrZVZaR1JSQULgAQD6AQQIABBI!16s%2Fg%2F11z647f1_g?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
+          },
+          {
+            "number": "+8801787361001",
+            "url": "https://jkconventionhall.com/contact"
+          }
+        ],
+        "original_numbers_preserved": true
+      },
+      {
+        "id": "bd-zam-zam-convention-hall-mirpur-1",
+        "added_phones": [
+          "+8801709678145",
+          "+8801709678146"
+        ],
+        "sources": [
+          {
+            "number": "+8801709678145",
+            "url": "https://x-grouprestaurant.com/associate-concern"
+          },
+          {
+            "number": "+8801709678146",
+            "url": "https://x-grouprestaurant.com/associate-concern"
+          }
+        ],
+        "original_numbers_preserved": true
+      }
+    ],
+    "source_rejections": [
+      {
+        "url": "https://www.bdtradeinfo.com/terms-of-use",
+        "reason": "Terms restrict reuse to end-user reference. No contacts or listings republished from this directory."
+      },
+      {
+        "url": "https://bdwedding.com/",
+        "reason": "Current site content is unrelated spam; rejected."
+      }
+    ],
+    "conflicts": [
+      {
+        "id": "bd-osm-node-9843518617",
+        "field": "operating_status",
+        "source": "https://www.google.com/maps/search/?api=1&query=Casanova%20Party%20Center%20Banasree%20Dhaka",
+        "observed": "Listing reports permanently closed",
+        "decision": "Retained with visible review notice; not deleted."
+      },
+      {
+        "id": "bd-osm-way-371381396",
+        "field": "identity",
+        "observed": "An inspected similarly named Malibag listing has a Gulshan pin. Nearby Khilgaon/Malibagh names may overlap.",
+        "decision": "No phone or coordinates borrowed from the ambiguous listing. Original map identity preserved for follow-up."
+      },
+      {
+        "id": "bd-osm-way-400903521",
+        "field": "operating_status",
+        "source": "https://www.google.com/maps/search/?api=1&query=Spectra%20Convention%20Centre%20Gulshan%20Dhaka",
+        "observed": "Listing reports permanently closed",
+        "decision": "Historical record retained with visible review notice; listed business phone is not confirmation of operation."
+      },
+      {
+        "id": "bd-osm-node-6075578295",
+        "field": "address",
+        "observed": "Preserved OSM address Road 134; matched business listing Road 135. Names and positions agree within 100 metres.",
+        "decision": "Preserve existing address; phone sourced from the matched named business listing. Address needs clarification."
+      }
+    ],
+    "contact_checks_without_number": [
+      {
+        "id": "bd-osm-way-263618386",
+        "source": "https://www.google.com/maps/search/?api=1&query=Khilgaon%20Community%20Center%20Dhaka",
+        "result": "Inspected listing has no public phone"
+      },
+      {
+        "id": "bd-osm-node-11915138589",
+        "source": "https://www.google.com/maps/search/?api=1&query=Fortune%20Community%20Centre%20Khilgaon%20Dhaka",
+        "result": "Inspected listing has no public phone"
+      },
+      {
+        "id": "bd-osm-node-9694573176",
+        "source": "https://www.google.com/maps/search/?api=1&query=Shamsun%20Community%20Centre%20Basabo%20Dhaka",
+        "result": "Inspected listing has no public phone"
+      },
+      {
+        "id": "bd-osm-way-297869678",
+        "source": "https://www.google.com/maps/search/?api=1&query=Sadeque%20Hossain%20Khoka%20Community%20Centre%20Gopibagh%20Dhaka",
+        "result": "Inspected named listing shows no public phone; this does not prove no number exists elsewhere."
+      },
+      {
+        "id": "bd-modhubagh-community-centre",
+        "source": "https://www.google.com/maps/search/?api=1&query=Modhubagh%20Community%20Centre%20Hatirjheel%20Dhaka",
+        "result": "Inspected named listing shows no public phone; this does not prove no number exists elsewhere."
+      },
+      {
+        "id": "bd-motijheel-community-center",
+        "source": "https://www.google.com/maps/search/?api=1&query=Motijheel%20Community%20Center%20Dhaka",
+        "result": "Inspected named listing shows no public phone; this does not prove no number exists elsewhere."
+      },
+      {
+        "id": "bd-osm-way-367563642",
+        "source": "https://www.google.com/maps/search/?api=1&query=Officers+Club+Dhaka+Bailey+Road",
+        "result": "Inspected named listing has no public phone."
+      }
+    ],
+    "held_candidates": [
+      {
+        "name": "Green Valley Party Center, Khilgaon",
+        "source": "https://www.google.com/maps/search/?api=1&query=Green%20Valley%20Convention%20Center%20Khilgaon%20Dhaka",
+        "reason": "Listing reports permanently closed; not admitted as a new operating venue."
+      },
+      {
+        "name": "Rodevu Restaurant, Khilgaon",
+        "source": "https://www.google.com/maps/search/?api=1&query=Rodevu%20Restaurant%20Party%20Center%20Khilgaon%20Dhaka",
+        "reason": "Listing reports permanently closed; not admitted as a new operating venue."
+      },
+      {
+        "name": "Raj Darbar Party & Convention Hall",
+        "source": "https://www.google.com/maps/search/?api=1&query=Raj%20Darbar%20Convention%20Center%20Rampura%20Dhaka",
+        "reason": "Search resolves outside Dhaka; excluded."
+      },
+      {
+        "name": "Banasree Community Center",
+        "reason": "Name/possible relationship to existing Banasree halls remains unresolved; no duplicate added."
+      }
+    ],
+    "identity_location_checks": [
+      {
+        "id": "bd-osm-node-9694573157",
+        "method": "Named listing and published Plus Code compared with preserved OSM point",
+        "approximate_separation_m": 24,
+        "source": "https://www.google.com/maps/search/?api=1&query=Friends%20Convention%20Center%20Goran%20Dhaka"
+      },
+      {
+        "id": "bd-osm-node-6075578295",
+        "method": "Named listing and published Plus Code compared with preserved OSM point",
+        "approximate_separation_m": 36,
+        "source": "https://www.google.com/maps/search/?api=1&query=Emmanuelle%20Banquet%20Hall%20Road%20134%20Gulshan%20Dhaka"
+      },
+      {
+        "id": "bd-osm-way-490274323",
+        "method": "Named listing and published Plus Code compared with preserved OSM point",
+        "approximate_separation_m": 24,
+        "source": "https://www.google.com/maps/search/?api=1&query=Falcon%20Hall%20Tejgaon%20Dhaka"
+      },
+      {
+        "id": "bd-osm-way-498173029",
+        "method": "Named listing and published Plus Code compared with preserved OSM point",
+        "approximate_separation_m": 15,
+        "source": "https://www.google.com/maps/search/?api=1&query=BAF%20Shaheen%20Hall%20Tejgaon%20Dhaka"
+      },
+      {
+        "id": "bd-osm-node-11939428112",
+        "method": "Named listing and published Plus Code compared with preserved OSM point",
+        "approximate_separation_m": 11,
+        "source": "https://www.google.com/maps/search/?api=1&query=Nakhalpara%20Community%20Center%20Dhaka"
+      },
+      {
+        "id": "bd-osm-node-11993579518",
+        "method": "Named listing and published Plus Code compared with preserved OSM point",
+        "approximate_separation_m": 10,
+        "source": "https://www.google.com/maps/search/?api=1&query=Tokyo%20Square%20Convention%20Center%20Shyamoli%20Dhaka"
+      },
+      {
+        "id": "bd-osm-node-4583633891",
+        "method": "Named listing and published Plus Code compared with preserved OSM point",
+        "approximate_separation_m": 20,
+        "source": "https://www.google.com/maps/search/?api=1&query=Mirpur%20Convention%20Centre%20Mirpur%202%20Dhaka"
+      },
+      {
+        "id": "bd-osm-node-4320931026",
+        "method": "Named listing and published Plus Code compared with preserved OSM point",
+        "approximate_separation_m": 26,
+        "source": "https://www.google.com/maps/search/?api=1&query=DSS%20Convention%20Center%20Shewrapara%20Dhaka"
+      },
+      {
+        "id": "bd-osm-node-3714859928",
+        "method": "Named listing and published Plus Code compared with preserved OSM point",
+        "approximate_separation_m": 6,
+        "source": "https://www.google.com/maps/search/?api=1&query=Priyanka%20Community%20Centre%20Mohammadpur%20Dhaka"
+      },
+      {
+        "id": "bd-osm-way-440170070",
+        "method": "Named listing and published Plus Code compared with preserved OSM point",
+        "approximate_separation_m": 5,
+        "source": "https://www.google.com/maps/search/?api=1&query=Suchona%20Community%20Center%20Mohammadpur%20Dhaka"
+      },
+      {
+        "id": "bd-osm-way-540588060",
+        "method": "Named listing and published Plus Code compared with preserved OSM point",
+        "approximate_separation_m": 17,
+        "source": "https://www.google.com/maps/search/?api=1&query=Mohakhali%20Community%20Center%20Dhaka"
+      },
+      {
+        "id": "bd-osm-node-5998293476",
+        "method": "Named listing and published Plus Code compared with preserved OSM point",
+        "approximate_separation_m": 46,
+        "source": "https://www.google.com/maps/search/?api=1&query=International%20Convention%20City%20Bashundhara%20ICCB%20Joar%20Sahara%20Dhaka"
+      },
+      {
+        "id": "bd-osm-node-4547663197",
+        "method": "Named listing and published Plus Code compared with preserved OSM point",
+        "approximate_separation_m": 28,
+        "source": "https://www.google.com/maps/search/?api=1&query=Rokeya%20Kunjo%20Community%20Center%20Bakshibazar%20Dhaka"
+      },
+      {
+        "id": "bd-osm-node-4973354765",
+        "method": "Named listing and published Plus Code compared with preserved OSM point",
+        "approximate_separation_m": 12,
+        "source": "https://www.google.com/maps/search/?api=1&query=Wari%20Party%20Center%20Dhaka"
+      },
+      {
+        "id": "bd-osm-node-3731351579",
+        "method": "Named listing and published Plus Code compared with preserved OSM point",
+        "approximate_separation_m": 18,
+        "source": "https://www.google.com/maps/search/?api=1&query=Sugandha%20Convention%20Hall%20Dhanmondi%20Dhaka"
+      }
+    ]
   }
 }
