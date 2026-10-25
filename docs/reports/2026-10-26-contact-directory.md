@@ -82,6 +82,10 @@ All records missing a phone were individually investigated or retried. The last7
 
 ## Publication status
 
-This revision is prepared locally. GitHub's native Git route and API returned HTTP503cloudflare_https_tunnel/Invalidargument at the last check. Deployment and live verification of this revision are not yet established. The requested post-push expansion to additional missing Dhaka halls remains a separate next stage after the first successful push; candidate names from available discovery results have not been misrepresented as admitted records.
+Application revision8d037be4a10b00fa0c7852a36cc51c30c391f63bwas normally pushed after861633f. The GitHub commit API verified author and committer as TanzilAhmed,59307135+tanzilamd@users.noreply.github.com, associated withtanzilamd. Pages workflow40245654430completed successfully. No root-site, domain or CNAME settings changed.
+
+Public-internet research and local live-site requests still encounter intermittent environmentHTTP503. A post-deployment real-browser verification job now checks the actual production URL and publishes its JSON/screenshot evidence as the live-verification Actions artifact. Check the latest run for the final outcome; local preview success alone is not a live-verification claim.
+
+After the first push, six additional discovered candidates were attempted: GrandShahjahan, Kara, BGB Banquet Hall, Sayeedana, GrandPalaceKhilkhet and UttaraPartyCenter. Individual follow-up requests returned environmentHTTP503. They have not been added without verified contact/location and duplicate checks. This is an explicit unresolved expansion, not a complete-Dhaka coverage claim.
 
 Final production-preview smoke used the actual repository subpath, including manage.html. New Waterfront contact, Fortune editing, clean logo navigation, 360px reflow and asset loads passed with zero JavaScript errors or failed local assets. Desktop/mobile public pages and the editor were visually inspected. No new Lighthouse score is claimed for this revision. The original four environment CA certificates remain; no temporary trust entry was left.

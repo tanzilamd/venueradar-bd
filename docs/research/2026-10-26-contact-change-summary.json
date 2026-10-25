@@ -152,5 +152,13 @@
   ],
   "validation_failures": [],
   "deletions_authorization": "Owner explicitly requested removing permanently closed venues; full archived source records retained.",
-  "publication": "Prepared and tested locally. Native Git and GitHub API currently return environmentHTTP503. Not yet published."
+  "publication": "Application8d037be normally pushed; Pages workflow40245654430success. Live browser verification evidence is recorded in the subsequent Actions artifact.",
+  "additional_candidates_source_limited": [
+    "Grand Shahjahan Convention Hall",
+    "Kara Convention Center",
+    "BGB Banquet Hall",
+    "Sayeedana Community Centre",
+    "The Grand Palace Convention Hall, Khilkhet",
+    "Uttara Party Center"
+  ]
 }
