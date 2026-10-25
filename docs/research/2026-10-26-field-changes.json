@@ -1707,26 +1707,9 @@
     "id": "bd-osm-way-263618386",
     "name": "Khilgaon Community Center",
     "fields": {
-      "address": {
-        "before": "Dhaka, Bangladesh — street address not supplied in the map listing.",
-        "after": "East side of Malibagh Market, Shahid Baki Road, Khilgaon, Dhaka 1219"
-      },
-      "address_status": {
-        "before": "not_available",
-        "after": "partial"
-      },
-      "aliases": {
-        "before": [
-          "খিলগাও কমিউনিটি সেন্টার"
-        ],
-        "after": [
-          "খিলগাও কমিউনিটি সেন্টার",
-          "Khilgaon Malika Community Center"
-        ]
-      },
-      "maps_url": {
+      "review_notice": {
         "before": null,
-        "after": "https://www.google.com/maps/search/?api=1&query=Khilgaon%20Community%20Center%20Khilgaon%20Dhaka%20Bangladesh"
+        "after": "Location needs confirmation: the common Khilgaon / Malika business result matches the separate Malibagh record, about 1.2 km from this historic map point. Current venue identity at this point is unconfirmed."
       }
     },
     "evidence_added": 1,

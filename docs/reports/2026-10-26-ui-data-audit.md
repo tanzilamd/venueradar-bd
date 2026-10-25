@@ -15,7 +15,7 @@ The verified non-destructive enrichments are integrated so they can be tested an
 | Venues with sourced phones | 59 | 86 |
 | Sourced phone entries across venue records | 70 | 105 |
 | Distinct public business numbers | 69 | 101 |
-| Published complete premises addresses | 26 | 56 |
+| Published complete premises addresses | 26 | 55 |
 | Mapped coordinate records | 123 | 123 |
 | Numeric capacity / bounded ranges | 8 | 13 |
 | Records with documented facilities | 9 | 21 |
@@ -71,3 +71,7 @@ The initial revised interface passed 12 model/data tests and 20 browser regressi
 - Facebook robots exclusions, Google/DDG search challenges, unavailable operator domains and the environment proxy incident limit follow-up. No prohibited bulk Maps extraction, hidden APIs, stored Google ratings/review counts/reviews/photos, copyrighted venue imagery or private schedules were used.
 
 Future request: “Continue the blocked all-venue follow-ups in docs/research/2026-10-26-venue-review.json, prioritizing missing phones in Khilgaon, Malibagh, Motijheel, Eskaton and surrounding areas. Follow AGENTS.md and the research/update guides; preserve verified fields and report conflicts.” Network restoration is required before calling this research phase complete.
+
+### Location-match correction
+
+A subsequent cross-record coordinate check found that the common Khilgaon/Malika Maps result matches the separate Malibagh record371381396, not the historic Khilgaon point263618386 about1.2km away. The earlier address/alias/exact-listing attachment was incorrect and has been retracted. Original Khilgaon source values and both IDs/points are preserved, with an explicit location-review notice. No phone was copied between these records.

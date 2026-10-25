@@ -3474,21 +3474,36 @@
           "checked": "2026-10-25",
           "method": "Individual named listing visually inspected in Chromium; no automated contact extraction",
           "outcome": "Matched municipal Khilgaon/Malika venue at PCX8+VG. Source gives road/landmark but no premises number; phone and website explicitly missing. Municipal operator website dscc.gov.bd access previously503; no municipal helpline relabelled as booking number."
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Khilgaon+Community+Center+Dhaka",
+          "kind": "independent",
+          "checked": "2026-10-25",
+          "outcome": "Cross-record coordinate check: returned Khilgaon/Malika profile PCX8+VG matches separate OSM Malibagh record371381396; this historic Khilgaon point is about1.2km away. Retract incorrect address/alias/exact-listing attachment from earlier revision."
         }
       ],
       "field_outcomes": {
-        "phones": "No usable business number in the inspected listing and cached map tags. No unrelated nearby contact was borrowed.",
-        "complete_address": "No complete street/premises address established from these sources; existing valid data retained.",
-        "coordinates": "Existing source point retained; identity/location reviewed.",
+        "phones": "No business phone safely matched to this original point.",
+        "complete_address": "Earlier added Malika address retracted as a wrong geographic match. Original street-address-unknown field restored.",
+        "coordinates": "Both original OSM building points preserved; identity at historic Khilgaon point remains unresolved.",
         "website": "No additional authenticated operator website established in the inspected material.",
         "category": "Existing event-venue category retained; a directory category alone is not operator confirmation.",
         "capacity": "No published numeric seating capacity established from the inspected listing and source tags. No photo-based estimate.",
         "facilities": "No facilities inferred from photos or missing map attributes. Any unverified amenities remain unknown.",
         "contact_hours": "Google listing hours are not retained. No first-party contact-office hours established in these sources.",
-        "research_notes": "Matched municipal Khilgaon/Malika venue at PCX8+VG. Source gives road/landmark but no premises number; phone and website explicitly missing. Municipal operator website dscc.gov.bd access previously503; no municipal helpline relabelled as booking number."
+        "research_notes": "Correction: an earlier match attached a geographically different Malika venue. The original Khilgaon record is retained and flagged; no duplicate merge or deletion."
       },
       "status": "reviewed-with-gaps",
-      "reviewed": "2026-10-25"
+      "reviewed": "2026-10-25",
+      "conflicts": [
+        {
+          "field": "identity_and_address",
+          "incorrect_match": "Khilgaon / Malika listing PCX8+VG",
+          "correct_matching_record": "bd-osm-way-371381396",
+          "historic_record_retained": "bd-osm-way-263618386",
+          "decision": "Retract only the newly added wrong address/alias/listing attachment; preserve original source point and mark identity unconfirmed."
+        }
+      ]
     },
     {
       "id": "bd-osm-way-295884568",

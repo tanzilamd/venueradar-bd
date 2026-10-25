@@ -267,6 +267,14 @@
       "notice": "Operator and business-listing addresses differ. Confirm the current address before travelling.",
       "source": "https://sirajconventioncenter.com/index.php/our-service/",
       "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
+    },
+    {
+      "id": "bd-osm-way-263618386",
+      "field": "identity_and_address",
+      "checked": "2026-10-25",
+      "source": "https://www.google.com/maps/search/?api=1&query=Khilgaon+Community+Center+Dhaka",
+      "other_matching_record": "bd-osm-way-371381396",
+      "decision": "Location needs confirmation: the common Khilgaon / Malika business result matches the separate Malibagh record, about 1.2 km from this historic map point. Current venue identity at this point is unconfirmed. Only incorrectly added address/alias/listing attachment retracted; original source values retained."
     }
   ],
   "research_status": {

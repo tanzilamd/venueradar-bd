@@ -7362,15 +7362,14 @@
     "name": "Khilgaon Community Center",
     "bn_name": "খিলগাও কমিউনিটি সেন্টার",
     "aliases": [
-      "খিলগাও কমিউনিটি সেন্টার",
-      "Khilgaon Malika Community Center"
+      "খিলগাও কমিউনিটি সেন্টার"
     ],
     "category": "Community Center",
     "division": "6",
     "district": "47",
     "area": "Khilgaon",
-    "address": "East side of Malibagh Market, Shahid Baki Road, Khilgaon, Dhaka 1219",
-    "address_status": "partial",
+    "address": "Dhaka, Bangladesh — street address not supplied in the map listing.",
+    "address_status": "not_available",
     "coordinates": {
       "lat": 23.7470463,
       "lon": 90.42728125
@@ -7407,11 +7406,9 @@
         "reuse": "OpenStreetMap/Nominatim address data, ODbL-1.0. Cached one-time, single-thread research at <=1 request/second; locality reviewed, not an operator address or legal boundary certification."
       },
       {
-        "url": "https://www.google.com/maps/search/?api=1&query=Khilgaon%20Community%20Center%20Khilgaon%20Dhaka%20Bangladesh",
+        "url": "https://www.google.com/maps/search/?api=1&query=Khilgaon+Community+Center+Dhaka",
         "fields": [
-          "address",
-          "aliases",
-          "maps_url"
+          "review_notice"
         ],
         "checked": "2026-10-25",
         "kind": "independent",
@@ -7435,7 +7432,7 @@
       "source": "https://nominatim.openstreetmap.org/reverse?lat=23.7470463&lon=90.42728125&format=jsonv2&addressdetails=1&zoom=18&accept-language=en",
       "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
     },
-    "maps_url": "https://www.google.com/maps/search/?api=1&query=Khilgaon%20Community%20Center%20Khilgaon%20Dhaka%20Bangladesh"
+    "review_notice": "Location needs confirmation: the common Khilgaon / Malika business result matches the separate Malibagh record, about 1.2 km from this historic map point. Current venue identity at this point is unconfirmed."
   },
   {
     "id": "bd-osm-way-295884568",
