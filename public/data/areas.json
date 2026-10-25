@@ -371,5 +371,20 @@
       "Postogola",
       "Doyaganj"
     ]
+  },
+  "groups": {
+    "Gulshan": [
+      "Gulshan",
+      "Gulshan 1",
+      "Gulshan 2"
+    ],
+    "Khilkhet": [
+      "Khilkhet",
+      "Nikunja 2 / Khilkhet"
+    ]
+  },
+  "group_notes": {
+    "Gulshan": "Gulshan includes the separately named Gulshan 1 and Gulshan 2 browsing localities. Cards keep their own locality names.",
+    "Khilkhet": "Khilkhet includes the published combined Nikunja 2 / Khilkhet hotel address. Cards keep that original label."
   }
 }

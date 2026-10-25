@@ -23,174 +23,43 @@
   </head>
   <body>
     <a class="skip" href="#results">Skip to venues</a>
-    <header>
-      <a class="brand" href="#"
-        ><span class="brandmark">V<span>R</span></span
-        ><span>VenueRadar <b>BD</b><small>THE DHAKA EDITION</small></span></a
-      >
-      <nav aria-label="Main navigation">
-        <button id="explore" class="active">Explore</button
-        ><button id="saved">Saved <span id="savedCount">0</span></button
-        ><button id="method">About the data</button>
-      </nav>
-      <span class="country">DHAKA, BANGLADESH</span>
+    <header class="site-header">
+      <a class="brand" href="./" title="VenueRadar BD home"><span class="brandmark" aria-hidden="true">V<span>R</span></span><span>VenueRadar <b>BD</b><small>THE DHAKA EDITION</small></span></a>
+      <nav aria-label="Main navigation"><button id="explore" aria-current="page">Explore</button><button id="saved">Saved <span id="savedCount">0</span></button><button id="method">About</button></nav>
+      <a class="suggest-link" href="https://github.com/tanzilamd/venueradar-bd/issues/new?title=Suggest+a+Dhaka+venue" target="_blank" rel="noopener noreferrer">Suggest a venue</a>
     </header>
     <main>
-      <section class="intro area-intro">
-        <div>
-          <p class="eyebrow">DHAKA · COMMUNITY CENTERS &amp; WEDDING HALLS</p>
-          <h1>Find a hall in your area.</h1>
-          <p>
-            Choose a neighborhood, compare venues and check public business
-            contacts.
-          </p>
+      <section class="discovery" aria-labelledby="pageTitle">
+        <div class="intro"><div><p class="eyebrow">DHAKA · COMMUNITY CENTERS &amp; EVENT HALLS</p><h1 id="pageTitle">Find a venue in Dhaka.</h1></div><p class="intro-note">Choose an area. Check the details. Make the call.</p></div>
+        <div class="search-row">
+          <form id="searchForm" role="search"><label for="search">Search a venue or neighborhood</label><div class="search-input"><span id="searchIcon" aria-hidden="true"></span><input id="search" type="search" placeholder="Try Banasree, Ladies Club or a venue name" autocomplete="off" maxlength="180" disabled><button id="clearSearch" type="button" aria-label="Clear search" hidden>×</button></div></form>
+          <div id="searchAreaDock"></div>
         </div>
+        <div class="area-explorer" aria-label="Indexed venue counts by neighborhood"><span class="quiet-label">Indexed venues</span><div id="priorityAreas" class="area-chips"><span class="loading-chip skeleton" aria-hidden="true"></span><span class="loading-chip skeleton" aria-hidden="true"></span><span class="loading-chip skeleton" aria-hidden="true"></span></div><button id="allAreas" class="text-button" disabled>All Dhaka</button></div>
       </section>
-      <section class="area-explorer" aria-labelledby="areaHeading">
-        <div class="area-explorer-head">
-          <h2 id="areaHeading">Where are you planning?</h2>
-          <button id="allAreas" class="text">All Dhaka</button>
-        </div>
-        <div
-          id="priorityAreas"
-          class="area-grid"
-          aria-label="Popular areas"
-        ></div>
-        <p class="hint">
-          Choose an area below or use the neighborhood filter for more
-          locations.
-        </p>
-      </section>
+      <p id="storageWarning" class="notice" hidden>Browser storage is unavailable. Saved venues and comparisons will last for this session only.</p>
       <section class="workspace">
-        <aside class="filters">
-          <div class="filterhead">
-            <h2>Refine your search</h2>
-            <button id="reset" class="text">Reset</button>
+        <aside id="filterDock" class="filters" aria-label="Venue filters"><div class="filter-heading"><h2>Refine your search</h2><button id="reset" class="text-button">Clear filters</button></div><div id="filterFields"></div></aside>
+        <section id="directory" class="directory" aria-label="Venue explorer" aria-busy="true">
+          <div class="results-top"><div><p id="breadcrumb" class="eyebrow">DHAKA</p><h2 id="resultHeading">Loading venues…</h2></div><div class="result-actions"><button id="mobileFilters" aria-haspopup="dialog">Filters <span id="filterCount"></span></button><div class="view-switch" aria-label="Results view"><button id="listView" aria-pressed="true">List</button><button id="mapView" aria-pressed="false">Map</button></div></div></div>
+          <p id="stats" class="coverage-summary" role="status" aria-live="polite">Finding the latest directory…</p>
+          <div id="activeFilters" class="active-filters" aria-label="Applied filters"></div>
+          <div id="areaContext" class="area-context" hidden></div>
+          <div class="result-controls"><span id="resultLabel" class="result-context"></span><label for="sort">Sort <select id="sort"><option value="name">Name, A–Z</option><option value="capacity">Published capacity</option><option value="distance">Nearest first</option></select></label></div>
+          <div id="capacityContext" class="notice capacity-context" hidden></div>
+          <p id="message" class="message" role="status"></p>
+          <div id="mapWorkspace" class="map-workspace">
+            <div id="mapWrap" hidden><div class="map-toolbar"><button id="fitMap">Fit results</button><span id="markerContext"></span></div><div id="map" aria-label="Map of indexed Dhaka venues"></div><p id="mapMessage" class="hint" role="status"></p><div id="mapSelection" class="map-selection"></div><p class="hint">Map points may be approximate; they are not verified entrances. <button id="mapListFallback" class="text-button">View all results in the list</button></p></div>
+            <div id="results" tabindex="-1"><div class="card-skeleton skeleton" aria-hidden="true"></div><div class="card-skeleton skeleton" aria-hidden="true"></div><p class="sr-only">Venue information is loading.</p></div>
           </div>
-          <label for="search">Venue or neighborhood</label
-          ><input
-            id="search"
-            type="search"
-            placeholder="Try a name or neighborhood"
-            autocomplete="off"
-          /><label for="collection">Browse</label
-          ><select id="collection">
-            <option value="community-halls">
-              Community centers &amp; halls
-            </option>
-            <option value="">All venues</option>
-            <option value="hotels">Hotel venues</option></select
-          ><label for="evidence">Information source</label
-          ><select id="evidence">
-            <option value="">All source types</option>
-            <option value="operator">Operator sources</option>
-            <option value="mapped">
-              Map listings · confirm details
-            </option></select
-          ><label for="area">Neighborhood</label
-          ><select id="area">
-            <option value="">All Dhaka</option></select
-          ><label class="check nearby-areas-control"
-            ><input id="includeNearby" type="checkbox" checked /> Include nearby
-            areas</label
-          ><label for="category">Venue type</label
-          ><select id="category">
-            <option value="">All venue types</option>
-            <option>Community Center</option>
-            <option>Wedding Venue</option>
-            <option>Banquet Hall</option>
-            <option>Convention Center</option>
-            <option>Event Hall</option></select
-          ><label for="size">Size · published capacity</label
-          ><select id="size">
-            <option value="">Any size</option>
-            <option value="Small">Small · under 300</option>
-            <option value="Medium">Medium · 300–999</option>
-            <option value="Large">Large · 1,000+</option>
-            <option value="Unknown">Unknown</option>
-          </select>
-          <fieldset>
-            <legend>Documented information</legend>
-            <label class="check"
-              ><input type="checkbox" id="phone" /> Business phone</label
-            ><label class="check"
-              ><input type="checkbox" id="capacity" /> Published capacity</label
-            ><label class="check"
-              ><input type="checkbox" id="verified" /> Independently
-              cross-checked</label
-            ><label class="check"
-              ><input type="checkbox" id="parking" /> Parking</label
-            >
-          </fieldset>
-          <button id="nearby" class="nearby">◎ Near me</button>
-          <p class="hint">
-            One-time location access, only with your permission. Your location
-            is never saved.
-          </p>
-        </aside>
-        <section class="directory" aria-label="Venue explorer">
-          <div class="toolbar">
-            <div>
-              <p class="eyebrow" id="breadcrumb">DHAKA / ALL NEIGHBORHOODS</p>
-              <h2><span id="count">0</span> <span id="venueNoun">venues</span> to explore</h2>
-            </div>
-            <div class="view-switch">
-              <button id="listView" aria-pressed="true">List</button
-              ><button id="mapView" aria-pressed="false">Map</button>
-            </div>
-          </div>
-          <div class="statstrip" id="stats"></div>
-          <div class="result-controls">
-            <button id="withPhone" class="phone-quick" aria-pressed="false">
-              With public phone</button
-            ><span id="resultLabel" role="status" aria-live="polite"
-              >Loading venues…</span
-            ><label for="sort"
-              >Sort
-              <select id="sort">
-                <option value="name">Name, A–Z</option>
-                <option value="capacity">Published capacity</option>
-                <option value="distance">Distance (location needed)</option>
-              </select></label
-            >
-          </div>
-          <p id="message" role="status"></p>
-          <div id="mapWrap" hidden>
-            <div id="map" aria-label="Map of indexed Dhaka venues"></div>
-            <p class="hint">
-              Markers include source-published map points and approximate
-              building centers, not verified entrances. If tiles fail, use the
-              list. Distances are straight-line estimates, not travel distances.
-            </p>
-          </div>
-          <div id="results" tabindex="-1"></div>
         </section>
       </section>
     </main>
-    <footer>
-      <span class="footerbrand">VenueRadar BD</span>
-      <p>
-        Public business information. A starting point, not a complete
-        directory.<br /><a
-          href="https://www.openstreetmap.org/copyright"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Venue data includes © OpenStreetMap contributors · ODbL</a
-        >
-      </p>
-      <button id="footerMethod" class="text">
-        Sources, privacy & limitations
-      </button>
-    </footer>
-    <div id="compareBar" hidden>
-      <span id="compareCount"></span
-      ><button id="openCompare">Compare venues</button
-      ><button id="clearCompare">Clear</button>
-    </div>
-    <dialog id="dialog">
-      <button class="close" aria-label="Close">×</button>
-      <div id="dialogContent"></div>
-    </dialog>
+    <footer><span class="footerbrand">VenueRadar BD</span><p>A starting point for finding your venue. Coverage is incomplete.<br><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">Venue data includes © OpenStreetMap contributors · ODbL</a></p><div><button id="footerMethod" class="text-button">Sources &amp; privacy</button><a href="https://github.com/tanzilamd/venueradar-bd/issues/new?title=Suggest+a+Dhaka+venue" target="_blank" rel="noopener noreferrer">Suggest a venue</a></div></footer>
+    <div id="feedback" class="feedback" role="status" hidden><span id="feedbackText"></span><button id="undoSave" hidden>Undo</button><button id="dismissFeedback" aria-label="Dismiss notification">×</button></div>
+    <div id="compareBar" class="compare-bar" hidden><div><span id="compareCount"></span><div id="compareNames" class="compare-names"></div></div><button id="openCompare" class="primary">Compare venues</button><button id="clearCompare" class="text-button">Clear</button></div>
+    <dialog id="dialog" aria-labelledby="dialogTitle"><button class="close" aria-label="Close">×</button><div id="dialogContent"></div></dialog>
+    <dialog id="filterDialog" aria-labelledby="filterTitle"><div class="drawer-heading"><h2 id="filterTitle">Filters</h2><button id="cancelFilters" aria-label="Close filters without applying">×</button></div><div id="draftFilterFields"></div><div class="drawer-actions"><button id="clearDraft">Clear filters</button><button id="applyFilters" class="primary">Show venues</button></div></dialog>
     <script type="module" src="./src/main.js"></script>
   </body>
 </html>

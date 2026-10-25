@@ -8,7 +8,7 @@ export function validateData(venues, areas, schema, boundary) {
   const valid = new Ajv({ allErrors: true }).compile(schema);
   if (!valid(venues))
     return valid.errors.map((e) => `${e.instancePath}: ${e.message}`);
-  const seen = new Set();
+  const seen = /* @__PURE__ */ new Set();
   for (const v of venues) {
     if (seen.has(v.id)) errors.push(`Duplicate ID ${v.id}`);
     seen.add(v.id);
@@ -19,20 +19,12 @@ export function validateData(venues, areas, schema, boundary) {
         errors.push(`${v.id}: map provenance missing`);
       if (!v.coordinates || !boundary || !inBoundary(v.coordinates, boundary))
         errors.push(`${v.id}: mapped venue outside Dhaka boundary`);
-      if (
-        v.discovery &&
-        !v.evidence.some(
-          (e) =>
-            e.url ===
-            `https://www.openstreetmap.org/${v.discovery.element_type}/${v.discovery.element_id}`,
-        )
-      )
+      if (v.discovery && !v.evidence.some(
+        (e) => e.url === `https://www.openstreetmap.org/${v.discovery.element_type}/${v.discovery.element_id}`
+      ))
         errors.push(`${v.id}: source identity mismatch`);
     }
-    if (
-      v.capacity_range &&
-      (v.capacity != null || v.capacity_range.min > v.capacity_range.max)
-    )
+    if (v.capacity_range && (v.capacity != null || v.capacity_range.min > v.capacity_range.max))
       errors.push(`${v.id}: invalid or ambiguous capacity range`);
     const district = areas.districts.find((d) => d.id === v.district);
     if (!district || district.division_id !== v.division)
@@ -41,25 +33,27 @@ export function validateData(venues, areas, schema, boundary) {
       "name",
       "address",
       "category",
-      ...(v.coordinates ? ["coordinates"] : []),
-      ...(v.capacity ? ["capacity"] : []),
-      ...(v.capacity_range ? ["capacity_range"] : []),
-      ...(v.review_notice ? ["review_notice"] : []),
-      ...v.facilities.map((f) => "facilities." + f),
+      ...v.coordinates ? ["coordinates"] : [],
+      ...v.capacity ? ["capacity"] : [],
+      ...v.capacity_range ? ["capacity_range"] : [],
+      ...v.review_notice ? ["review_notice"] : [],
+      ...v.facilities.map((f) => "facilities." + f)
     ])
       if (!v.evidence.some((e) => e.fields.includes(field)))
         errors.push(`${v.id}: unsupported ${field}`);
     for (const p of v.phones)
-      if (
-        !v.evidence.some(
-          (e) => e.url === p.source && e.fields.includes("phones"),
-        )
-      )
+      if (!v.evidence.some(
+        (e) => e.url === p.source && e.fields.includes("phones")
+      ))
         errors.push(`${v.id}: unsupported phone`);
-    if (
-      v.verification === "cross-checked" &&
-      new Set(v.evidence.map((e) => new URL(e.url).hostname)).size < 2
-    )
+    for (const field of ["capacity_note", "contact_hours", "catering_policy"]) {
+      const fact = v[field];
+      if (fact && !v.evidence.some((e) => e.url === fact.source && e.kind === "official" && e.fields.includes(field)))
+        errors.push(`${v.id}: ${field} requires matching operator evidence`);
+      if (fact && (!Number.isFinite(Date.parse(fact.checked)) || fact.checked > (/* @__PURE__ */ new Date()).toISOString().slice(0, 10)))
+        errors.push(`${v.id}: invalid ${field} review date`);
+    }
+    if (v.verification === "cross-checked" && new Set(v.evidence.map((e) => new URL(e.url).hostname)).size < 2)
       errors.push(`${v.id}: cross-check requires independent sources`);
     for (const s of v.evidence) {
       try {
@@ -68,22 +62,13 @@ export function validateData(venues, areas, schema, boundary) {
       } catch {
         errors.push(`${v.id}: invalid source URL`);
       }
-      if (
-        !Number.isFinite(Date.parse(s.checked)) ||
-        s.checked > new Date().toISOString().slice(0, 10)
-      )
+      if (!Number.isFinite(Date.parse(s.checked)) || s.checked > (/* @__PURE__ */ new Date()).toISOString().slice(0, 10))
         errors.push(`${v.id}: invalid evidence date`);
     }
     for (const other of venues.filter(
-      (x) => x.id !== v.id && x.district === v.district,
+      (x) => x.id !== v.id && x.district === v.district
     )) {
-      if (
-        normalize(other.name) === normalize(v.name) ||
-        (other.coordinates &&
-          v.coordinates &&
-          distance(other.coordinates, v.coordinates) < 0.05 &&
-          normalize(other.name).includes(normalize(v.name)))
-      )
+      if (normalize(other.name) === normalize(v.name) || other.coordinates && v.coordinates && distance(other.coordinates, v.coordinates) < 0.05 && normalize(other.name).includes(normalize(v.name)))
         errors.push(`Probable duplicate ${v.id}/${other.id}`);
     }
   }
@@ -95,11 +80,10 @@ if (process.argv[1]?.endsWith("validate.mjs")) {
     venues,
     read("docs/reference/bangladesh-areas.json"),
     read("schemas/venue.schema.json"),
-    read("public/data/dhaka-boundary.geojson"),
+    read("public/data/dhaka-boundary.geojson")
   );
   const collections = read("public/data/collections.json");
-  const validIds = new Set(venues.map((v) => v.id)),
-    membership = new Set();
+  const validIds = new Set(venues.map((v) => v.id)), membership = /* @__PURE__ */ new Set();
   for (const group of collections.groups)
     for (const id of group.venue_ids) {
       if (!validIds.has(id) || membership.has(id))
@@ -113,7 +97,7 @@ if (process.argv[1]?.endsWith("validate.mjs")) {
     process.exitCode = 1;
   } else
     console.log(
-      `Validated ${venues.length} venue records. ${venues.length ? "Manual evidence review still required." : "EMPTY DATASET: not production-ready."}`,
+      `Validated ${venues.length} venue records. ${venues.length ? "Manual evidence review still required." : "EMPTY DATASET: not production-ready."}`
     );
   if (process.argv.includes("--production") && !venues.length) {
     console.error("Production requires researched venue records.");

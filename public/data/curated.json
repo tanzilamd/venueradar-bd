@@ -82,6 +82,191 @@
       "decision": "Omit that number; retain only consistently published booking numbers and public landline.",
       "source": "https://policeconventionhall.com/wp/",
       "checked": "2026-10-25"
+    },
+    {
+      "id": "bd-siraj-convention-center",
+      "checked": "2026-10-25",
+      "field": "address",
+      "operator_value": "Plot 39, Block C, Aftab Nagar Main Road, Badda, Dhaka 1212",
+      "existing_value": "Plots 44–46, Jahurul Islam City Gate, Road 11, Aftabnagar",
+      "source": "https://sirajconventioncenter.com/index.php/contact-us/",
+      "decision": "Retain existing field and mapped coordinates with visible review notice; ask business to clarify."
+    },
+    {
+      "id": "bd-osm-node-3355520099",
+      "field": "business_identity_or_status",
+      "checked": "2026-10-25",
+      "notice": "Permanent closure reported on the business listing. Confirm current operation before planning a visit.",
+      "source": "https://www.google.com/maps/search/?api=1&query=ATN%20Ananda%20Ullash%20Convention%20Center%20Dhanmondi%20Dhaka%20Bangladesh",
+      "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
+    },
+    {
+      "id": "bd-osm-node-3473792181",
+      "field": "business_identity_or_status",
+      "checked": "2026-10-25",
+      "notice": "Temporary closure reported on the business listing. Confirm current operation before planning a visit.",
+      "source": "https://www.google.com/maps/search/?api=1&query=Bilkis%20Community%20Center%20Kamrangirchar%20Dhaka%20Bangladesh",
+      "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
+    },
+    {
+      "id": "bd-osm-node-3731958028",
+      "field": "business_identity_or_status",
+      "checked": "2026-10-25",
+      "notice": "Venue identity/category needs confirmation: the matched Eleen listing is currently categorized as a restaurant, while the historic record says community center.",
+      "source": "https://www.google.com/maps/place/Eleen+Community+Center/@23.7864401,90.4285426,17z/data=!4m7!3m6!1s0x3755c7c3b74721b7:0xa7c4d198fd5a09ca!8m2!3d23.7864401!4d90.4285426!10e1!16s%2Fg%2F11gv07qsx2?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+      "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
+    },
+    {
+      "id": "bd-osm-node-3734889100",
+      "field": "business_identity_or_status",
+      "checked": "2026-10-25",
+      "notice": "Permanent closure reported on the business listing. Confirm current operation before planning a visit.",
+      "source": "https://www.google.com/maps/search/?api=1&query=Kazi%20Community%20Center%20Mirpur%20Dhaka%20Bangladesh",
+      "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
+    },
+    {
+      "id": "bd-osm-node-4035864979",
+      "field": "business_identity_or_status",
+      "checked": "2026-10-25",
+      "notice": "Identity needs confirmation: the saved map link now shows Agrajatra–Legal & Professional House. The building sign still says Ashkona Community Center. Contact and booking identity are unresolved.",
+      "source": "https://www.google.com/maps/search/?api=1&query=Ashkona%20Community%20Center%20Ashkona%20Dhaka%20Bangladesh",
+      "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
+    },
+    {
+      "id": "bd-osm-node-4330600894",
+      "field": "business_identity_or_status",
+      "checked": "2026-10-25",
+      "notice": "Current booking identity needs confirmation: no unambiguous matching business profile was found for the historic Bakshibazar listing.",
+      "source": "https://www.google.com/maps/search/?api=1&query=Grand%20Convention%20Hall%20Bakshibazar%20Dhaka%20Bangladesh",
+      "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
+    },
+    {
+      "id": "bd-osm-node-4464533589",
+      "field": "business_identity_or_status",
+      "checked": "2026-10-25",
+      "notice": "Current business identity and booking contact need confirmation; similarly named search results could not be matched safely.",
+      "source": "https://www.google.com/maps/search/?api=1&query=Kholil%20Shordar%20Community%20Centre%20Hazaribagh%20Dhaka%20Bangladesh",
+      "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
+    },
+    {
+      "id": "bd-osm-node-4582326295",
+      "field": "business_identity_or_status",
+      "checked": "2026-10-25",
+      "notice": "Closure reported: the matched Gholam Morshed Community Center listing is marked permanently closed. Confirm any current venue or booking identity before visiting.",
+      "source": "https://www.google.com/maps/search/?api=1&query=Hazi%20Golam%20Morshed%20Community%20Centre%20Bakshibazar%20Dhaka%20Bangladesh",
+      "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
+    },
+    {
+      "id": "bd-osm-node-4729172392",
+      "field": "business_identity_or_status",
+      "checked": "2026-10-25",
+      "notice": "Current business identity needs confirmation: no unambiguous Bengal Spicy listing was found for this historic Uttara record.",
+      "source": "https://www.google.com/maps/search/?api=1&query=Bengal%20Spicy%20Party%20Center%20Uttara%20Dhaka%20Bangladesh",
+      "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
+    },
+    {
+      "id": "bd-osm-node-9622947662",
+      "field": "business_identity_or_status",
+      "checked": "2026-10-25",
+      "notice": "Wedding-booking identity needs confirmation: the current matched profile is RUAP Commercial Complex, a shopping mall. A dedicated community-hall contact has not been established.",
+      "source": "https://www.google.com/maps/search/?api=1&query=RUAP%20Community%20Centre%20%26%20Shopping%20Mall%20Uttara%20Dhaka%20Bangladesh",
+      "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
+    },
+    {
+      "id": "bd-osm-node-9806581241",
+      "field": "business_identity_or_status",
+      "checked": "2026-10-25",
+      "notice": "Business identity needs confirmation: the historic Joj listing could not be matched to an unambiguous current public business profile.",
+      "source": "https://www.google.com/maps/search/?api=1&query=Joj%20Community%20Center%20Bawnia%20Dhaka%20Bangladesh",
+      "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
+    },
+    {
+      "id": "bd-osm-node-9807925208",
+      "field": "business_identity_or_status",
+      "checked": "2026-10-25",
+      "notice": "Current venue identity needs confirmation: the matched location is listed as Hotel Rupsha Inn, although a Rupsha Community Center sign is visible. A current event-hall booking contact has not been authenticated.",
+      "source": "https://www.google.com/maps/search/?api=1&query=Rupsha%20Community%20Centre%20Panthapath%20Dhaka%20Bangladesh",
+      "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
+    },
+    {
+      "id": "bd-osm-node-9843518617",
+      "field": "business_identity_or_status",
+      "checked": "2026-10-25",
+      "notice": "Closure reported: the matched Casanova Party Center listing is marked permanently closed. Verify any replacement venue or booking identity before visiting.",
+      "source": "https://www.google.com/maps/search/?api=1&query=Casanova%20Party%20Center%20Banasree%20Dhaka%20Bangladesh",
+      "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
+    },
+    {
+      "id": "bd-osm-node-11775084788",
+      "field": "business_identity_or_status",
+      "checked": "2026-10-25",
+      "notice": "Booking identity needs confirmation: the matched public result is Dhaka Restaurant and Party Center, marked permanently closed, rather than City Lounge. Historic venue data is retained for review.",
+      "source": "https://www.google.com/maps/search/?api=1&query=City%20Lounge%20and%20convention%20center%20Doyaganj%20Dhaka%20Bangladesh",
+      "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
+    },
+    {
+      "id": "bd-osm-node-11986161470",
+      "field": "business_identity_or_status",
+      "checked": "2026-10-25",
+      "notice": "Current business identity needs confirmation: no unique Jononi profile was found for this historic Mirpur record.",
+      "source": "https://www.google.com/maps/search/?api=1&query=Jononi%20Community%20Center%20Mirpur%20Dhaka%20Bangladesh",
+      "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
+    },
+    {
+      "id": "bd-osm-node-12012297426",
+      "field": "business_identity_or_status",
+      "checked": "2026-10-25",
+      "notice": "Current business identity needs confirmation: no unambiguous Chowdhury Community Center listing was matched in Jigatola.",
+      "source": "https://www.google.com/maps/search/?api=1&query=Chowdhury%20Community%20Center%20Jigatola%20Dhaka%20Bangladesh",
+      "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
+    },
+    {
+      "id": "bd-osm-node-13527564201",
+      "field": "business_identity_or_status",
+      "checked": "2026-10-25",
+      "notice": "Event-booking identity needs confirmation: the current Ward 4 DNCC profile describes a shopping complex/market. A dedicated hall contact is not established.",
+      "source": "https://www.google.com/maps/search/?api=1&query=Ward%204%20Community%20Centre%20(DNCC)%20Mirpur%20Dhaka%20Bangladesh",
+      "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
+    },
+    {
+      "id": "bd-osm-way-243982330",
+      "field": "business_identity_or_status",
+      "checked": "2026-10-25",
+      "notice": "Temporary closure reported on the matched Haji Jummon listing. Confirm current operation and booking contact before planning a visit.",
+      "source": "https://www.google.com/maps/search/?api=1&query=Hazi%20Zamman%20Community%20Centre%20Bangshal%20Dhaka%20Bangladesh",
+      "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
+    },
+    {
+      "id": "bd-osm-way-245267775",
+      "field": "business_identity_or_status",
+      "checked": "2026-10-25",
+      "notice": "Current venue identity needs confirmation: the search resolved to Armanitola Field, rather than an authenticated Reza Community Centre business.",
+      "source": "https://www.google.com/maps/search/?api=1&query=Reza%20Community%20Centre%20Armanitola%20Dhaka%20Bangladesh",
+      "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
+    },
+    {
+      "id": "bd-osm-way-370400603",
+      "field": "business_identity_or_status",
+      "checked": "2026-10-25",
+      "notice": "Current booking identity needs confirmation: no unique Pallabi Community Centre profile was matched to this historic Mirpur record.",
+      "source": "https://www.google.com/maps/search/?api=1&query=Pallabi%20Community%20Centre%20Mirpur%20Dhaka%20Bangladesh",
+      "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
+    },
+    {
+      "id": "bd-osm-way-400903521",
+      "field": "business_identity_or_status",
+      "checked": "2026-10-25",
+      "notice": "Closure reported: the matched Spectra Convention Centre listing is marked permanently closed. Confirm any current operator before planning a visit.",
+      "source": "https://www.google.com/maps/search/?api=1&query=Spectra%20Convention%20Centre%20Gulshan%20Dhaka",
+      "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
+    },
+    {
+      "id": "bd-siraj-convention-center",
+      "field": "business_identity_or_status",
+      "checked": "2026-10-25",
+      "notice": "Operator and business-listing addresses differ. Confirm the current address before travelling.",
+      "source": "https://sirajconventioncenter.com/index.php/our-service/",
+      "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
     }
   ],
   "research_status": {

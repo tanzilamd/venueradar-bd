@@ -1,5 +1,11 @@
 # Changelog
 
+## UI usability and contact-completion revision
+- Implement search-first layout, independent Saved state, curated search aliases, honest exact/nearby and capacity context, accessible draft/apply mobile filters, actionable comparison and lazy map workspace.
+- Preserve all 131 venue IDs and established facts; enrich 93 records with additional citations or supported public facts. Increase sourced phone coverage from 59 to 86 venues, with 105 contact entries / 101 distinct numbers.
+- Add 13 numeric/range capacity records, 21 facility-bearing records, source-backed hours/catering notes and explicit identity/closure conflicts.
+- Record the unfinished research honestly: 95 source-review outcomes, 36 additional follow-ups blocked by source/network access. See the 26 October audit and unresolved list.
+
 ## Unreleased
 - Add English-only, Dhaka-focused static discovery application.
 - Add source-aware schema, validators, manual research guidance and safe update process.

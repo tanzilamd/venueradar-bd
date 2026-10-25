@@ -1,0 +1,2180 @@
+[
+  {
+    "id": "bd-the-westin-dhaka",
+    "name": "The Westin Dhaka",
+    "fields": {
+      "facilities": {
+        "before": [
+          "Catering"
+        ],
+        "after": [
+          "Catering",
+          "Stage"
+        ]
+      },
+      "phones": {
+        "before": [
+          {
+            "number": "+8809638228811",
+            "source": "https://www.marriott.com/en-us/hotels/dacwi-the-westin-dhaka/events/",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ],
+        "after": [
+          {
+            "number": "+8809638228811",
+            "source": "https://www.marriott.com/en-us/hotels/dacwi-the-westin-dhaka/events/",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          },
+          {
+            "number": "+8802222291988",
+            "source": "https://www.marriott.com/en-us/hotels/dacwi-the-westin-dhaka/events/",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ]
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-le-meridien-dhaka",
+    "name": "Le Méridien Dhaka",
+    "fields": {
+      "facilities": {
+        "before": [],
+        "after": [
+          "Stage"
+        ]
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-sheraton-dhaka",
+    "name": "Sheraton Dhaka",
+    "fields": {
+      "facilities": {
+        "before": [],
+        "after": [
+          "Stage"
+        ]
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-renaissance-dhaka-gulshan",
+    "name": "Renaissance Dhaka Gulshan Hotel",
+    "fields": {
+      "facilities": {
+        "before": [
+          "Catering"
+        ],
+        "after": [
+          "Catering",
+          "Stage"
+        ]
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-police-convention-hall-eskaton",
+    "name": "Police Convention Hall, Eskaton",
+    "fields": {
+      "contact_hours": {
+        "before": null,
+        "after": {
+          "text": "10:00–18:00; days not specified",
+          "kind": "booking-office-hours",
+          "source": "https://policeconventionhall.com/wp/",
+          "checked": "2026-10-25"
+        }
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-396647115",
+    "name": "Sutrapur Community Centre",
+    "fields": {
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Sutrapur%20Community%20Centre%20Sutrapur%20Dhaka%20Bangladesh"
+      },
+      "phones": {
+        "before": [],
+        "after": [
+          {
+            "number": "+8801628591109",
+            "source": "https://www.google.com/maps/search/?api=1&query=Sutrapur%20Community%20Centre%20Sutrapur%20Dhaka%20Bangladesh",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ]
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-2697232301",
+    "name": "Uttara Community Centre",
+    "fields": {
+      "address": {
+        "before": "Shahjalal Avenue Road 13, Sector 6, Uttara Model Town Dhaka 1230, Dhaka, Bangladesh",
+        "after": "Plot 20, Road 13/D, Sector 6, Uttara Model Town, Dhaka 1230"
+      },
+      "address_status": {
+        "before": "partial",
+        "after": "published"
+      },
+      "capacity_note": {
+        "before": null,
+        "after": {
+          "text": "The operator advertises up to 2,000 guests across two floors, and also uses “2,000+”. A single-hall seating layout is not specified; confirm usable banquet capacity directly.",
+          "source": "https://uttaracommunitycenter.com/",
+          "checked": "2026-10-25"
+        }
+      },
+      "facilities": {
+        "before": [],
+        "after": [
+          "Parking",
+          "Air conditioning",
+          "Catering"
+        ]
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Uttara%20Community%20Centre%20Uttara%20Dhaka%20Bangladesh"
+      },
+      "phones": {
+        "before": [],
+        "after": [
+          {
+            "number": "+8801773872670",
+            "source": "https://www.google.com/maps/search/?api=1&query=Uttara%20Community%20Centre%20Uttara%20Dhaka%20Bangladesh",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          },
+          {
+            "number": "+8801575527504",
+            "source": "https://uttaracommunitycenter.com/",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ]
+      },
+      "website": {
+        "before": null,
+        "after": "https://uttaracommunitycenter.com/"
+      }
+    },
+    "evidence_added": 2,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-3330957057",
+    "name": "Rayer Bazar Community Centre",
+    "fields": {
+      "address": {
+        "before": "Dhaka, Bangladesh — street address not supplied in the map listing.",
+        "after": "24 Rayer–Sanker Road, Rayer Bazar, Dhaka, Bangladesh"
+      },
+      "address_status": {
+        "before": "not_available",
+        "after": "published"
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/place/Rayer+Bazar+Community+Center/@23.7488831,90.3637042,17z/data=!3m1!4b1!4m6!3m5!1s0x3755bfb6554e8a25:0xf07cc974fd33637a!8m2!3d23.7488831!4d90.3637042!16s%2Fg%2F11fw4qcpgl?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
+      },
+      "phones": {
+        "before": [],
+        "after": [
+          {
+            "number": "+8801978280263",
+            "source": "https://www.google.com/maps/place/Rayer+Bazar+Community+Center/@23.7488831,90.3637042,17z/data=!3m1!4b1!4m6!3m5!1s0x3755bfb6554e8a25:0xf07cc974fd33637a!8m2!3d23.7488831!4d90.3637042!16s%2Fg%2F11fw4qcpgl?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ]
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-3355520099",
+    "name": "ATN Ananda Ullash Convention Center",
+    "fields": {
+      "address": {
+        "before": "7 Road 13 New Dhanmondi 1209, Dhaka, Bangladesh",
+        "after": "House 7, New Road 13, near Sobhag Mosque, Dhanmondi, Dhaka, Bangladesh"
+      },
+      "address_status": {
+        "before": "partial",
+        "after": "published"
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=ATN%20Ananda%20Ullash%20Convention%20Center%20Dhanmondi%20Dhaka%20Bangladesh"
+      },
+      "review_notice": {
+        "before": null,
+        "after": "Permanent closure reported on the business listing. Confirm current operation before planning a visit."
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-3374713092",
+    "name": "Nababgonj Sat Shahid Community Center",
+    "fields": {
+      "address": {
+        "before": "Dhaka, Bangladesh — street address not supplied in the map listing.",
+        "after": "112/K Jagannath Shaha Road, near Nobabgonj Boro Masjid, Nawabganj, Old Dhaka 1211, Bangladesh"
+      },
+      "address_status": {
+        "before": "not_available",
+        "after": "published"
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Nababgonj%20Sat%20Shahid%20Community%20Center%20Nawabganj%20(Old%20Dhaka)%20Dhaka%20Bangladesh"
+      },
+      "phones": {
+        "before": [],
+        "after": [
+          {
+            "number": "+8801949855326",
+            "source": "https://www.google.com/maps/search/?api=1&query=Nababgonj%20Sat%20Shahid%20Community%20Center%20Nawabganj%20(Old%20Dhaka)%20Dhaka%20Bangladesh",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ]
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-3473792181",
+    "name": "Bilkis Community Center",
+    "fields": {
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Bilkis%20Community%20Center%20Kamrangirchar%20Dhaka%20Bangladesh"
+      },
+      "review_notice": {
+        "before": null,
+        "after": "Temporary closure reported on the business listing. Confirm current operation before planning a visit."
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-3475693347",
+    "name": "Sumon Community Centre",
+    "fields": {
+      "aliases": {
+        "before": [],
+        "after": [
+          "Sumon Community Center Office",
+          "সুমন কমিউনিটি সেন্টার অফিস"
+        ]
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/place/%E0%A6%B8%E0%A7%81%E0%A6%AE%E0%A6%A8+%E0%A6%95%E0%A6%AE%E0%A6%BF%E0%A6%89%E0%A6%A8%E0%A6%BF%E0%A6%9F%E0%A6%BF+%E0%A6%B8%E0%A7%87%E0%A6%A8%E0%A7%8D%E0%A6%9F%E0%A6%BE%E0%A6%B0+%E0%A6%85%E0%A6%AB%E0%A6%BF%E0%A6%B8/@23.7119375,90.3811388,15z/data=!4m10!1m2!2m1!1sSumon+Community+Centre+Kamrangirchar+Dhaka+Bangladesh!3m6!1s0x3755bf2b8d595785:0xf42f790bae57a5a6!8m2!3d23.720467!4d90.3713575!15sCjVTdW1vbiBDb21tdW5pdHkgQ2VudHJlIEthbXJhbmdpcmNoYXIgRGhha2EgQmFuZ2xhZGVzaJIBEGNvbW11bml0eV9jZW50ZXLgAQA!16s%2Fg%2F11hd9sx43g?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
+      },
+      "phones": {
+        "before": [],
+        "after": [
+          {
+            "number": "+8801711024008",
+            "source": "https://www.google.com/maps/place/%E0%A6%B8%E0%A7%81%E0%A6%AE%E0%A6%A8+%E0%A6%95%E0%A6%AE%E0%A6%BF%E0%A6%89%E0%A6%A8%E0%A6%BF%E0%A6%9F%E0%A6%BF+%E0%A6%B8%E0%A7%87%E0%A6%A8%E0%A7%8D%E0%A6%9F%E0%A6%BE%E0%A6%B0+%E0%A6%85%E0%A6%AB%E0%A6%BF%E0%A6%B8/@23.7119375,90.3811388,15z/data=!4m10!1m2!2m1!1sSumon+Community+Centre+Kamrangirchar+Dhaka+Bangladesh!3m6!1s0x3755bf2b8d595785:0xf42f790bae57a5a6!8m2!3d23.720467!4d90.3713575!15sCjVTdW1vbiBDb21tdW5pdHkgQ2VudHJlIEthbXJhbmdpcmNoYXIgRGhha2EgQmFuZ2xhZGVzaJIBEGNvbW11bml0eV9jZW50ZXLgAQA!16s%2Fg%2F11hd9sx43g?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ]
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-3714859928",
+    "name": "Priyanka Community Centre",
+    "fields": {
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Priyanka%20Community%20Centre%20Mohammadpur%20Dhaka"
+      },
+      "aliases": {
+        "before": [],
+        "after": [
+          "New Prianka Community Center"
+        ]
+      }
+    },
+    "evidence_added": 2,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-3731351579",
+    "name": "sugondha community center",
+    "fields": {
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Sugandha%20Convention%20Hall%20Dhanmondi%20Dhaka"
+      },
+      "aliases": {
+        "before": [
+          "New Sugandha Convention Hall",
+          "Sugondha Community Center"
+        ],
+        "after": [
+          "New Sugandha Convention Hall",
+          "Sugondha Community Center"
+        ]
+      }
+    },
+    "evidence_added": 2,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-3731958028",
+    "name": "Ellin Community Center",
+    "fields": {
+      "address": {
+        "before": "Dhaka, Bangladesh — street address not supplied in the map listing.",
+        "after": "219 Satarkul Road, Badda, Dhaka 1212, Bangladesh"
+      },
+      "address_status": {
+        "before": "not_available",
+        "after": "published"
+      },
+      "aliases": {
+        "before": [
+          "এলিন কমিউনিটি সেন্টার"
+        ],
+        "after": [
+          "এলিন কমিউনিটি সেন্টার",
+          "Eleen Community Center",
+          "Elin Community Centre"
+        ]
+      },
+      "facilities": {
+        "before": [],
+        "after": [
+          "Parking"
+        ]
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Ellin%20Community%20Center%20Badda%20Dhaka%20Bangladesh"
+      },
+      "review_notice": {
+        "before": null,
+        "after": "Venue identity/category needs confirmation: the matched Eleen listing is currently categorized as a restaurant, while the historic record says community center."
+      }
+    },
+    "evidence_added": 2,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-3734889100",
+    "name": "Kazi Community Center",
+    "fields": {
+      "address": {
+        "before": "Dhaka, Bangladesh — street address not supplied in the map listing.",
+        "after": "756 Begum Rokeya Swarani, Mirpur, Dhaka 1216, Bangladesh"
+      },
+      "address_status": {
+        "before": "not_available",
+        "after": "published"
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Kazi%20Community%20Center%20Mirpur%20Dhaka%20Bangladesh"
+      },
+      "review_notice": {
+        "before": null,
+        "after": "Permanent closure reported on the business listing. Confirm current operation before planning a visit."
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-3745296696",
+    "name": "Ujala Community Center",
+    "fields": {
+      "address": {
+        "before": "Haricharan Ray Road Dhaka, Dhaka, Bangladesh",
+        "after": "55 Horicharan Roy Road, Mill Barrack, Faridabad, Dhaka 1204"
+      },
+      "address_status": {
+        "before": "partial",
+        "after": "published"
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Ujala%20Community%20Center%20Faridabad%20Dhaka%20Bangladesh"
+      },
+      "phones": {
+        "before": [],
+        "after": [
+          {
+            "number": "+8801729822274",
+            "source": "https://www.google.com/maps/search/?api=1&query=Ujala%20Community%20Center%20Faridabad%20Dhaka%20Bangladesh",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ]
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-4035864979",
+    "name": "Ashkona Community Center",
+    "fields": {
+      "review_notice": {
+        "before": null,
+        "after": "Identity needs confirmation: the saved map link now shows Agrajatra–Legal & Professional House. The building sign still says Ashkona Community Center. Contact and booking identity are unresolved."
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-4072852261",
+    "name": "Kader Party House",
+    "fields": {},
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-4320931026",
+    "name": "DSS Convention Center",
+    "fields": {
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=DSS%20Convention%20Center%20Shewrapara%20Dhaka"
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-4330600894",
+    "name": "Grand Convention Hall",
+    "fields": {
+      "review_notice": {
+        "before": null,
+        "after": "Current booking identity needs confirmation: no unambiguous matching business profile was found for the historic Bakshibazar listing."
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-4464533589",
+    "name": "Kholil Shordar Community Centre..",
+    "fields": {
+      "review_notice": {
+        "before": null,
+        "after": "Current business identity and booking contact need confirmation; similarly named search results could not be matched safely."
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-4547663197",
+    "name": "Rokeya Kunjo Community Center",
+    "fields": {
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Rokeya%20Kunjo%20Community%20Center%20Bakshibazar%20Dhaka"
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-4549001959",
+    "name": "Intraco Convention Hall",
+    "fields": {
+      "address": {
+        "before": "Dhaka, Bangladesh — street address not supplied in the map listing.",
+        "after": "House 40, Road 09, J Block, Baridhara, Dhaka 1212"
+      },
+      "address_status": {
+        "before": "not_available",
+        "after": "published"
+      },
+      "aliases": {
+        "before": [],
+        "after": [
+          "Intraco Convention Hall & Catering Service"
+        ]
+      },
+      "contact_hours": {
+        "before": null,
+        "after": {
+          "text": "09:00–23:30; days not specified",
+          "kind": "published-business-hours",
+          "source": "https://intracoconventionhall.com/hall-rent/",
+          "checked": "2026-10-25"
+        }
+      },
+      "facilities": {
+        "before": [],
+        "after": [
+          "Parking",
+          "Air conditioning",
+          "Catering"
+        ]
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Intraco%20Convention%20Hall%20Baridhara%20Dhaka%20Bangladesh"
+      },
+      "phones": {
+        "before": [],
+        "after": [
+          {
+            "number": "+8801975006195",
+            "source": "https://www.google.com/maps/search/?api=1&query=Intraco%20Convention%20Hall%20Baridhara%20Dhaka%20Bangladesh",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          },
+          {
+            "number": "+8801975006074",
+            "source": "https://intracoconventionhall.com/hall-rent/",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ]
+      },
+      "website": {
+        "before": null,
+        "after": "https://intracoconventionhall.com/"
+      }
+    },
+    "evidence_added": 2,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-4582326295",
+    "name": "Hazi Golam Morshed Community Centre",
+    "fields": {
+      "address": {
+        "before": "12/A Joynag Rd 1211, Dhaka, Bangladesh",
+        "after": "16 Joynag Road, Bakshibazar, Dhaka 1211"
+      },
+      "address_status": {
+        "before": "partial",
+        "after": "published"
+      },
+      "aliases": {
+        "before": [],
+        "after": [
+          "Gholam Morshed Community Center",
+          "Dhaka City Corporation Office and Golam Morshed Community Center"
+        ]
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Hazi%20Golam%20Morshed%20Community%20Centre%20Bakshibazar%20Dhaka%20Bangladesh"
+      },
+      "review_notice": {
+        "before": null,
+        "after": "Closure reported: the matched Gholam Morshed Community Center listing is marked permanently closed. Confirm any current venue or booking identity before visiting."
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-4583633891",
+    "name": "Mirpur Convention Centre",
+    "fields": {
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Mirpur%20Convention%20Centre%20Mirpur%202%20Dhaka"
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-4729172392",
+    "name": "Bengal Spicy Party Center",
+    "fields": {
+      "review_notice": {
+        "before": null,
+        "after": "Current business identity needs confirmation: no unambiguous Bengal Spicy listing was found for this historic Uttara record."
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-4973354765",
+    "name": "Wari Party Center",
+    "fields": {
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Wari%20Party%20Center%20Dhaka"
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-5171683022",
+    "name": "PSC Convention Hall",
+    "fields": {
+      "address": {
+        "before": "Main Road - 13 1206, Dhaka, Bangladesh",
+        "after": "Section 14, Mirpur, Dhaka 1206"
+      },
+      "capacity_note": {
+        "before": null,
+        "after": {
+          "text": "The operator advertises 800+ guests per floor and up to 1,600 across its halls. Seating layout and simultaneous banquet capacity are unspecified; confirm the hall you need.",
+          "source": "https://pscconventionhall.net/",
+          "checked": "2026-10-25"
+        }
+      },
+      "facilities": {
+        "before": [],
+        "after": [
+          "Parking",
+          "Catering"
+        ]
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=PSC%20Convention%20Hall%20Mirpur%20Dhaka%20Bangladesh"
+      },
+      "phones": {
+        "before": [],
+        "after": [
+          {
+            "number": "+8801320216261",
+            "source": "https://www.google.com/maps/search/?api=1&query=PSC%20Convention%20Hall%20Mirpur%20Dhaka%20Bangladesh",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ]
+      },
+      "website": {
+        "before": null,
+        "after": "https://pscconventionhall.net/"
+      }
+    },
+    "evidence_added": 2,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-5233901521",
+    "name": "Mim Community Centre",
+    "fields": {
+      "aliases": {
+        "before": [],
+        "after": [
+          "Meem Community Center"
+        ]
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Mim%20Community%20Centre%20Bakshibazar%20Dhaka%20Bangladesh"
+      },
+      "phones": {
+        "before": [],
+        "after": [
+          {
+            "number": "+88028628731",
+            "source": "https://www.google.com/maps/search/?api=1&query=Mim%20Community%20Centre%20Bakshibazar%20Dhaka%20Bangladesh",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ]
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-5998293476",
+    "name": "International Convention City Bashundhara (ICCB)",
+    "fields": {
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=International%20Convention%20City%20Bashundhara%20ICCB%20Joar%20Sahara%20Dhaka"
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-6075578295",
+    "name": "Emmanuelle's Banquet Hall",
+    "fields": {
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Emmanuelle%20Banquet%20Hall%20Road%20134%20Gulshan%20Dhaka"
+      },
+      "aliases": {
+        "before": [
+          "ইমানুয়েলস ব্যাঙ্কুয়েট হল"
+        ],
+        "after": [
+          "ইমানুয়েলস ব্যাঙ্কুয়েট হল",
+          "Emmanuelle's Party Center, Gulshan 1"
+        ]
+      }
+    },
+    "evidence_added": 2,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-7711605264",
+    "name": "Bilash Bhaban Community Centre",
+    "fields": {
+      "address": {
+        "before": "Dhaka, Bangladesh — street address not supplied in the map listing.",
+        "after": "Road 5, Mirpur, Dhaka 1216"
+      },
+      "address_status": {
+        "before": "not_available",
+        "after": "partial"
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Bilash%20Bhaban%20Community%20Centre%20Mirpur%20Dhaka%20Bangladesh"
+      },
+      "phones": {
+        "before": [],
+        "after": [
+          {
+            "number": "+8801817112905",
+            "source": "https://www.google.com/maps/search/?api=1&query=Bilash%20Bhaban%20Community%20Centre%20Mirpur%20Dhaka%20Bangladesh",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ]
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-7787635919",
+    "name": "Dania Community Center",
+    "fields": {
+      "address": {
+        "before": "Dania Road Dhaka 1236, Dhaka, Bangladesh",
+        "after": "430 Shonir Akhra–Dania Road, Dhaka 1236"
+      },
+      "address_status": {
+        "before": "partial",
+        "after": "published"
+      },
+      "aliases": {
+        "before": [
+          "দনিয়া কমিউনিটি সেন্টার"
+        ],
+        "after": [
+          "দনিয়া কমিউনিটি সেন্টার",
+          "Dania Convention Centre"
+        ]
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Dania%20Community%20Center%20Dania%20Dhaka%20Bangladesh"
+      },
+      "phones": {
+        "before": [],
+        "after": [
+          {
+            "number": "+8801911588309",
+            "source": "https://www.google.com/maps/search/?api=1&query=Dania%20Community%20Center%20Dania%20Dhaka%20Bangladesh",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ]
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-7787635947",
+    "name": "Hazi Rahman Community Center",
+    "fields": {
+      "aliases": {
+        "before": [
+          "হাজী রহমান কমিউনিটি সেন্টার"
+        ],
+        "after": [
+          "হাজী রহমান কমিউনিটি সেন্টার",
+          "Haji Rahman Community Centre"
+        ]
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Hazi%20Rahman%20Community%20Center%20Dania%20Dhaka%20Bangladesh"
+      },
+      "phones": {
+        "before": [],
+        "after": [
+          {
+            "number": "+8801947853559",
+            "source": "https://www.google.com/maps/search/?api=1&query=Hazi%20Rahman%20Community%20Center%20Dania%20Dhaka%20Bangladesh",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ]
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-8313877538",
+    "name": "Rongdhonu Convention Hall",
+    "fields": {
+      "address": {
+        "before": "Dhaka, Bangladesh — street address not supplied in the map listing.",
+        "after": "Rongdhonu Shopping Complex, House 155/156, Road 1, Pallabi Road, Mirpur, Dhaka 1216"
+      },
+      "address_status": {
+        "before": "not_available",
+        "after": "published"
+      },
+      "aliases": {
+        "before": [],
+        "after": [
+          "Rongdhonu Convention Center"
+        ]
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Rongdhonu%20Convention%20Hall%20Mirpur%20Dhaka%20Bangladesh"
+      },
+      "phones": {
+        "before": [],
+        "after": [
+          {
+            "number": "+8801309791242",
+            "source": "https://www.google.com/maps/search/?api=1&query=Rongdhonu%20Convention%20Hall%20Mirpur%20Dhaka%20Bangladesh",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ]
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-9622947662",
+    "name": "RUAP Community Centre & Shopping Mall",
+    "fields": {
+      "review_notice": {
+        "before": null,
+        "after": "Wedding-booking identity needs confirmation: the current matched profile is RUAP Commercial Complex, a shopping mall. A dedicated community-hall contact has not been established."
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-9694573157",
+    "name": "Friends Convention Center",
+    "fields": {
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Friends%20Convention%20Center%20Goran%20Dhaka"
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-9694573176",
+    "name": "Shamsun Community Centre",
+    "fields": {
+      "address": {
+        "before": "Dhaka, Bangladesh — street address not supplied in the map listing.",
+        "after": "1 Purbo Basabo Road, Basabo, Dhaka"
+      },
+      "address_status": {
+        "before": "not_available",
+        "after": "published"
+      },
+      "aliases": {
+        "before": [],
+        "after": [
+          "Samsun Community Center",
+          "Samsun Community Center Basabo"
+        ]
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Shamsun%20Community%20Centre%20Basabo%20Dhaka%20Bangladesh"
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-9806581241",
+    "name": "Joj Community Center",
+    "fields": {
+      "review_notice": {
+        "before": null,
+        "after": "Business identity needs confirmation: the historic Joj listing could not be matched to an unambiguous current public business profile."
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-9807925208",
+    "name": "Rupsha Community Centre",
+    "fields": {
+      "review_notice": {
+        "before": null,
+        "after": "Current venue identity needs confirmation: the matched location is listed as Hotel Rupsha Inn, although a Rupsha Community Center sign is visible. A current event-hall booking contact has not been authenticated."
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-9843518617",
+    "name": "Casanova Party Center",
+    "fields": {
+      "address": {
+        "before": "Dhaka, Bangladesh — street address not supplied in the map listing.",
+        "after": "House 11, Banasree Main Road, Banasree, Dhaka 1212"
+      },
+      "address_status": {
+        "before": "not_available",
+        "after": "published"
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Casanova%20Party%20Center%20Banasree%20Dhaka%20Bangladesh"
+      },
+      "review_notice": {
+        "before": "Closure reported on the business listing. Confirm current operation before planning a visit.",
+        "after": "Closure reported: the matched Casanova Party Center listing is marked permanently closed. Verify any replacement venue or booking identity before visiting."
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-10983479205",
+    "name": "Al Fuad Community Center",
+    "fields": {
+      "address": {
+        "before": "Avenue 5, Dhaka, Bangladesh",
+        "after": "House 7, Road 1, Mirpur, Dhaka 1216"
+      },
+      "address_status": {
+        "before": "partial",
+        "after": "published"
+      },
+      "aliases": {
+        "before": [],
+        "after": [
+          "Al-Fuad Community Center 2"
+        ]
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Al%20Fuad%20Community%20Center%20Mirpur%20Dhaka%20Bangladesh"
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-11216294296",
+    "name": "Prianka Community Center",
+    "fields": {
+      "address": {
+        "before": "52/1 Road 3A Dhanmondi, Dhaka 1205, Dhaka, Bangladesh",
+        "after": "House 52/2, Floor 2, Road 3/A, Satmasjid Road, Dhanmondi, Dhaka 1209"
+      },
+      "address_status": {
+        "before": "partial",
+        "after": "published"
+      },
+      "aliases": {
+        "before": [],
+        "after": [
+          "Prianka Community Centre"
+        ]
+      },
+      "capacity_layout": {
+        "before": null,
+        "after": "Published guest range; seating layout unspecified"
+      },
+      "capacity_range": {
+        "before": null,
+        "after": {
+          "min": 600,
+          "max": 700
+        }
+      },
+      "contact_hours": {
+        "before": null,
+        "after": {
+          "text": "Daily, 10:00–22:00",
+          "kind": "published-business-hours",
+          "source": "https://sites.google.com/view/pcc-bd/home",
+          "checked": "2026-10-25"
+        }
+      },
+      "facilities": {
+        "before": [],
+        "after": [
+          "Air conditioning",
+          "Catering"
+        ]
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Prianka%20Community%20Center%20Dhanmondi%20Dhaka%20Bangladesh"
+      },
+      "phones": {
+        "before": [],
+        "after": [
+          {
+            "number": "+8801300065358",
+            "source": "https://www.google.com/maps/search/?api=1&query=Prianka%20Community%20Center%20Dhanmondi%20Dhaka%20Bangladesh",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          },
+          {
+            "number": "+8801926671130",
+            "source": "https://sites.google.com/view/pcc-bd/home",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          },
+          {
+            "number": "+8801718739212",
+            "source": "https://sites.google.com/view/pcc-bd/home",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ]
+      },
+      "website": {
+        "before": null,
+        "after": "https://sites.google.com/view/pcc-bd/home"
+      }
+    },
+    "evidence_added": 2,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-11716250398",
+    "name": "Bandhan Community Center",
+    "fields": {
+      "address": {
+        "before": "Dhaka, Bangladesh — street address not supplied in the map listing.",
+        "after": "Notun Rasta, Doyaganj, Dhaka"
+      },
+      "address_status": {
+        "before": "not_available",
+        "after": "partial"
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Bandhan%20Community%20Center%20Doyaganj%20Dhaka%20Bangladesh"
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-11730096574",
+    "name": "Dholaipar Community Center",
+    "fields": {
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Dholaipar%20Community%20Center%20Dholaipar%20Dhaka%20Bangladesh"
+      },
+      "phones": {
+        "before": [],
+        "after": [
+          {
+            "number": "+8801701854377",
+            "source": "https://www.google.com/maps/search/?api=1&query=Dholaipar%20Community%20Center%20Dholaipar%20Dhaka%20Bangladesh",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ]
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-11768450931",
+    "name": "Fazlul Karim Community Center",
+    "fields": {
+      "address": {
+        "before": "Dhaka, Bangladesh — street address not supplied in the map listing.",
+        "after": "22 English Road, Tanti Bazar, Dhaka 1000"
+      },
+      "address_status": {
+        "before": "not_available",
+        "after": "published"
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Fazlul%20Karim%20Community%20Center%20Tanti%20bazar%20Dhaka%20Bangladesh"
+      },
+      "phones": {
+        "before": [],
+        "after": [
+          {
+            "number": "+8801712006699",
+            "source": "https://www.google.com/maps/search/?api=1&query=Fazlul%20Karim%20Community%20Center%20Tanti%20bazar%20Dhaka%20Bangladesh",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ]
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-11768476986",
+    "name": "Chishty Convention Hall",
+    "fields": {
+      "address": {
+        "before": "Dhaka, Bangladesh — street address not supplied in the map listing.",
+        "after": "East Dholaikhal New Road, Doyaganj, Dhaka"
+      },
+      "address_status": {
+        "before": "not_available",
+        "after": "partial"
+      },
+      "aliases": {
+        "before": [
+          "Chishty Convention Hall, E Dholaikhal New Rd, Lal Mohan Shaha Street, Dholaikhal, Dhaka"
+        ],
+        "after": [
+          "Chishty Convention Hall, E Dholaikhal New Rd, Lal Mohan Shaha Street, Dholaikhal, Dhaka",
+          "Chisty Convention Hall"
+        ]
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Chishty%20Convention%20Hall%20Doyaganj%20Dhaka%20Bangladesh"
+      },
+      "phones": {
+        "before": [],
+        "after": [
+          {
+            "number": "+8801748241717",
+            "source": "https://www.google.com/maps/search/?api=1&query=Chishty%20Convention%20Hall%20Doyaganj%20Dhaka%20Bangladesh",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ]
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-11775084788",
+    "name": "City Lounge and convention center",
+    "fields": {
+      "review_notice": {
+        "before": null,
+        "after": "Booking identity needs confirmation: the matched public result is Dhaka Restaurant and Party Center, marked permanently closed, rather than City Lounge. Historic venue data is retained for review."
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-11777855439",
+    "name": "The Latest Boogie Woogie",
+    "fields": {
+      "address": {
+        "before": "Dhaka, Bangladesh — street address not supplied in the map listing.",
+        "after": "22/23 Doyaganj New Road, Dhaka"
+      },
+      "address_status": {
+        "before": "not_available",
+        "after": "published"
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=The%20Latest%20Boogie%20Woogie%20Doyaganj%20Dhaka%20Bangladesh"
+      },
+      "phones": {
+        "before": [],
+        "after": [
+          {
+            "number": "+8801835402042",
+            "source": "https://www.google.com/maps/search/?api=1&query=The%20Latest%20Boogie%20Woogie%20Doyaganj%20Dhaka%20Bangladesh",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ]
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-11886959379",
+    "name": "Sahal International Convention Center",
+    "fields": {
+      "aliases": {
+        "before": [],
+        "after": [
+          "Sahal International Convention Hall"
+        ]
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Sahal%20International%20Convention%20Center%20Mirpur%20Dhaka%20Bangladesh"
+      },
+      "phones": {
+        "before": [],
+        "after": [
+          {
+            "number": "+8801841440126",
+            "source": "https://www.google.com/maps/search/?api=1&query=Sahal%20International%20Convention%20Center%20Mirpur%20Dhaka%20Bangladesh",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ]
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-11915138589",
+    "name": "Fortune Community Centre",
+    "fields": {
+      "address": {
+        "before": "Dhaka, Bangladesh — street address not supplied in the map listing.",
+        "after": "1414/A Khilgaon Chowdhury Para, opposite Khilgaon Model College, Dhaka 1219"
+      },
+      "address_status": {
+        "before": "not_available",
+        "after": "published"
+      },
+      "aliases": {
+        "before": [],
+        "after": [
+          "Fortune Convention Hall"
+        ]
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Fortune%20Community%20Centre%20Khilgaon%20Dhaka%20Bangladesh"
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-11939428112",
+    "name": "Nakhalpara Community Center",
+    "fields": {
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Nakhalpara%20Community%20Center%20Dhaka"
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-11986161470",
+    "name": "Jononi Community Center",
+    "fields": {
+      "review_notice": {
+        "before": null,
+        "after": "Current business identity needs confirmation: no unique Jononi profile was found for this historic Mirpur record."
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-11988944083",
+    "name": "Suborna Community Center",
+    "fields": {
+      "aliases": {
+        "before": [],
+        "after": [
+          "Suborno Community Center"
+        ]
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-11993579518",
+    "name": "Tokyo Square Convention Center",
+    "fields": {
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Tokyo%20Square%20Convention%20Center%20Shyamoli%20Dhaka"
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-11993640298",
+    "name": "Efa Convention Center",
+    "fields": {
+      "address": {
+        "before": "Dhaka, Bangladesh — street address not supplied in the map listing.",
+        "after": "63/7, 60 Feet Road, Kamal Soroni, Mirpur, Dhaka 1216"
+      },
+      "address_status": {
+        "before": "not_available",
+        "after": "published"
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Efa%20Convention%20Center%20Mirpur%20Dhaka%20Bangladesh"
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-12012297426",
+    "name": "Chowdhury Community Center,",
+    "fields": {
+      "review_notice": {
+        "before": null,
+        "after": "Current business identity needs confirmation: no unambiguous Chowdhury Community Center listing was matched in Jigatola."
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-12055130480",
+    "name": "JK Convention Hall",
+    "fields": {
+      "contact_hours": {
+        "before": null,
+        "after": {
+          "text": "Daily, 09:00–22:00",
+          "kind": "booking-office-hours",
+          "source": "https://jkconventionhall.com/contact",
+          "checked": "2026-10-25"
+        }
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-12456045701",
+    "name": "Zaara convention center",
+    "fields": {
+      "address": {
+        "before": "3 Road 14, Dhaka, Bangladesh",
+        "after": "Haque Plaza, Level 3, House 7, Road 14, Gulshan 1, Dhaka 1212, Bangladesh"
+      },
+      "address_status": {
+        "before": "partial",
+        "after": "published"
+      },
+      "contact_hours": {
+        "before": null,
+        "after": {
+          "text": "Sunday–Saturday, 09:00–22:30",
+          "kind": "published-business-hours",
+          "source": "https://zaaraconvention.com/",
+          "checked": "2026-10-25"
+        }
+      },
+      "facilities": {
+        "before": [],
+        "after": [
+          "Catering"
+        ]
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-13090503501",
+    "name": "Orchid Community Centre",
+    "fields": {
+      "address": {
+        "before": "Dhaka, Bangladesh — street address not supplied in the map listing.",
+        "after": "House 24, Avenue 5, Section 6, Mirpur, Dhaka 1216"
+      },
+      "address_status": {
+        "before": "not_available",
+        "after": "published"
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Orchid%20Community%20Centre%20Mirpur%20Dhaka%20Bangladesh"
+      },
+      "phones": {
+        "before": [],
+        "after": [
+          {
+            "number": "+8801674534637",
+            "source": "https://www.google.com/maps/search/?api=1&query=Orchid%20Community%20Centre%20Mirpur%20Dhaka%20Bangladesh",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ]
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-13134454618",
+    "name": "Waterfall Restaurant and Convention Hall Dhanmondi",
+    "fields": {
+      "address": {
+        "before": "Plaza AR Road No. 14 Dhanmondi R/A, Dhaka 1205, Dhaka, Bangladesh",
+        "after": "Plaza AR, Dhanmondi 28, Dhaka 1205"
+      },
+      "address_status": {
+        "before": "partial",
+        "after": "published"
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Waterfall%20Restaurant%20and%20Convention%20Hall%20Dhanmondi%20Dhanmondi%20Dhaka%20Bangladesh"
+      },
+      "phones": {
+        "before": [],
+        "after": [
+          {
+            "number": "+8801616070808",
+            "source": "https://www.google.com/maps/search/?api=1&query=Waterfall%20Restaurant%20and%20Convention%20Hall%20Dhanmondi%20Dhanmondi%20Dhaka%20Bangladesh",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ]
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-13527564201",
+    "name": "Ward 4 Community Centre (DNCC)",
+    "fields": {
+      "review_notice": {
+        "before": null,
+        "after": "Event-booking identity needs confirmation: the current Ward 4 DNCC profile describes a shopping complex/market. A dedicated hall contact is not established."
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-14247677151",
+    "name": "New Dhanmondi Convention",
+    "fields": {
+      "address": {
+        "before": "Dhaka, Bangladesh — street address not supplied in the map listing.",
+        "after": "KRUPA Square, Floor 2, 44 (new) / 744 (old), Satmasjid Road, Dhaka 1209"
+      },
+      "address_status": {
+        "before": "not_available",
+        "after": "published"
+      },
+      "aliases": {
+        "before": [],
+        "after": [
+          "New Dhanmondi Convention Hall"
+        ]
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/place/New+Dhanmondi+Convention+Hall/@23.7457645,90.3713565,17z/data=!3m1!4b1!4m6!3m5!1s0x3755bf4ec37d96cb:0xe5c99f4c4dbbd57f!8m2!3d23.7457645!4d90.3713565!16s%2Fg%2F11rf02_qmc?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
+      },
+      "phones": {
+        "before": [],
+        "after": [
+          {
+            "number": "+8801886520025",
+            "source": "https://www.google.com/maps/place/New+Dhanmondi+Convention+Hall/@23.7457645,90.3713565,17z/data=!3m1!4b1!4m6!3m5!1s0x3755bf4ec37d96cb:0xe5c99f4c4dbbd57f!8m2!3d23.7457645!4d90.3713565!16s%2Fg%2F11rf02_qmc?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ]
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-14252402800",
+    "name": "Paragon Convention Hall",
+    "fields": {
+      "address": {
+        "before": "Dhaka, Bangladesh — street address not supplied in the map listing.",
+        "after": "Level 11, Green Rowshana Tower, 755 Satmasjid Road, Dhaka 1205"
+      },
+      "address_status": {
+        "before": "not_available",
+        "after": "published"
+      },
+      "capacity": {
+        "before": null,
+        "after": 600
+      },
+      "capacity_layout": {
+        "before": null,
+        "after": "11th floor hall · published guest capacity; seating layout unspecified"
+      },
+      "facilities": {
+        "before": [],
+        "after": [
+          "Parking",
+          "Air conditioning",
+          "Catering"
+        ]
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Paragon%20Convention%20Hall%20Jigatola%20Dhaka%20Bangladesh"
+      },
+      "phones": {
+        "before": [],
+        "after": [
+          {
+            "number": "+8801705513911",
+            "source": "https://www.google.com/maps/search/?api=1&query=Paragon%20Convention%20Hall%20Jigatola%20Dhaka%20Bangladesh",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          },
+          {
+            "number": "+8801842875480",
+            "source": "https://paragonconvention.com/",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ]
+      },
+      "website": {
+        "before": null,
+        "after": "https://paragonconvention.com/"
+      }
+    },
+    "evidence_added": 4,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-node-14286743945",
+    "name": "Mariott Convention Center",
+    "fields": {
+      "address": {
+        "before": "Dhaka, Bangladesh — street address not supplied in the map listing.",
+        "after": "House 3, Road 3, Happy Arcade, Floor 5, Mirpur Road, Kalabagan, Dhaka 1205"
+      },
+      "address_status": {
+        "before": "not_available",
+        "after": "published"
+      },
+      "aliases": {
+        "before": [],
+        "after": [
+          "Marriott Convention Center"
+        ]
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/place/Marriott+Convention+Center/@23.7401964,90.382893,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b8b7c0c7c595:0x3ce702ed0f9ae33e!8m2!3d23.7401964!4d90.382893!16s%2Fg%2F12hkr24mx?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
+      },
+      "phones": {
+        "before": [],
+        "after": [
+          {
+            "number": "+8801751665123",
+            "source": "https://www.google.com/maps/place/Marriott+Convention+Center/@23.7401964,90.382893,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b8b7c0c7c595:0x3ce702ed0f9ae33e!8m2!3d23.7401964!4d90.382893!16s%2Fg%2F12hkr24mx?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ]
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-way-243982330",
+    "name": "Hazi Zamman Community Centre",
+    "fields": {
+      "address": {
+        "before": "20 Hazi Abdul Rasid Lane, Dhaka, Bangladesh",
+        "after": "104 Kazi Alauddin Road, Bangshal, Dhaka"
+      },
+      "address_status": {
+        "before": "partial",
+        "after": "published"
+      },
+      "aliases": {
+        "before": [
+          "HaziZamman Community Centre"
+        ],
+        "after": [
+          "HaziZamman Community Centre",
+          "Haji Jummon Community Centre"
+        ]
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Hazi%20Zamman%20Community%20Centre%20Bangshal%20Dhaka%20Bangladesh"
+      },
+      "phones": {
+        "before": [],
+        "after": [
+          {
+            "number": "+8801712006699",
+            "source": "https://www.google.com/maps/search/?api=1&query=Hazi%20Zamman%20Community%20Centre%20Bangshal%20Dhaka%20Bangladesh",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ]
+      },
+      "review_notice": {
+        "before": null,
+        "after": "Temporary closure reported on the matched Haji Jummon listing. Confirm current operation and booking contact before planning a visit."
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-way-245267775",
+    "name": "Reza Community Centre",
+    "fields": {
+      "review_notice": {
+        "before": null,
+        "after": "Current venue identity needs confirmation: the search resolved to Armanitola Field, rather than an authenticated Reza Community Centre business."
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-way-263618386",
+    "name": "Khilgaon Community Center",
+    "fields": {
+      "address": {
+        "before": "Dhaka, Bangladesh — street address not supplied in the map listing.",
+        "after": "East side of Malibagh Market, Shahid Baki Road, Khilgaon, Dhaka 1219"
+      },
+      "address_status": {
+        "before": "not_available",
+        "after": "partial"
+      },
+      "aliases": {
+        "before": [
+          "খিলগাও কমিউনিটি সেন্টার"
+        ],
+        "after": [
+          "খিলগাও কমিউনিটি সেন্টার",
+          "Khilgaon Malika Community Center"
+        ]
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Khilgaon%20Community%20Center%20Khilgaon%20Dhaka%20Bangladesh"
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-way-297869678",
+    "name": "Sadeque Hossain Khoka Community Centre",
+    "fields": {
+      "aliases": {
+        "before": [
+          "সাদেক হোসেন খোকা কমিউনিটি সেন্টার"
+        ],
+        "after": [
+          "সাদেক হোসেন খোকা কমিউনিটি সেন্টার",
+          "Sadek Hossain Khoka Community Center"
+        ]
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Sadeque%20Hossain%20Khoka%20Community%20Centre%20Gopibagh%20Dhaka%20Bangladesh"
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-way-345203658",
+    "name": "Sonali Nupur Community Center",
+    "fields": {
+      "address": {
+        "before": "157/I Distilary Road Dhaka, Dhaka, Bangladesh",
+        "after": "159 Distilary Road, Gandaria, Dhaka"
+      },
+      "address_status": {
+        "before": "partial",
+        "after": "published"
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/place/Sonali+Nupur+Community+Center/@23.7058007,90.4206485,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b9afb67fcdf9:0xdef6ffc31e916c49!8m2!3d23.7058007!4d90.4206485!16s%2Fg%2F11c30ss1kr?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
+      },
+      "phones": {
+        "before": [],
+        "after": [
+          {
+            "number": "+8801628591109",
+            "source": "https://www.google.com/maps/place/Sonali+Nupur+Community+Center/@23.7058007,90.4206485,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b9afb67fcdf9:0xdef6ffc31e916c49!8m2!3d23.7058007!4d90.4206485!16s%2Fg%2F11c30ss1kr?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ]
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-way-367277125",
+    "name": "Fakir Chan Community Center",
+    "fields": {
+      "address": {
+        "before": "South Muhsendi Road Dhaka, Dhaka, Bangladesh",
+        "after": "18/1 Dhakkin Mushundi Road, Narinda, Dhaka"
+      },
+      "address_status": {
+        "before": "partial",
+        "after": "published"
+      },
+      "aliases": {
+        "before": [
+          "Fakir Chan"
+        ],
+        "after": [
+          "Fakir Chan",
+          "Fakir Chan Sardar Community Center"
+        ]
+      },
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Fakir%20Chan%20Community%20Center%20Narinda%20Dhaka%20Bangladesh"
+      },
+      "phones": {
+        "before": [],
+        "after": [
+          {
+            "number": "+8801836428211",
+            "source": "https://www.google.com/maps/search/?api=1&query=Fakir%20Chan%20Community%20Center%20Narinda%20Dhaka%20Bangladesh",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ]
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-way-370400603",
+    "name": "Pallabi Community Centre",
+    "fields": {
+      "review_notice": {
+        "before": null,
+        "after": "Current booking identity needs confirmation: no unique Pallabi Community Centre profile was matched to this historic Mirpur record."
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-way-371382348",
+    "name": "Hosaf Convention Center",
+    "fields": {},
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-way-400903521",
+    "name": "Spectra Convention Centre",
+    "fields": {
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Spectra%20Convention%20Centre%20Gulshan%20Dhaka"
+      },
+      "review_notice": {
+        "before": "Closure reported on the business listing. Confirm current operation before planning a visit.",
+        "after": "Closure reported: the matched Spectra Convention Centre listing is marked permanently closed. Confirm any current operator before planning a visit."
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-way-440170070",
+    "name": "Suchona Community Center",
+    "fields": {
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Suchona%20Community%20Center%20Mohammadpur%20Dhaka"
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-way-490274323",
+    "name": "Falcon Hall",
+    "fields": {
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Falcon%20Hall%20Tejgaon%20Dhaka"
+      },
+      "aliases": {
+        "before": [
+          "ফ্যালকন হল"
+        ],
+        "after": [
+          "ফ্যালকন হল",
+          "BAF Falcon Hall"
+        ]
+      }
+    },
+    "evidence_added": 2,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-way-498173029",
+    "name": "BAF Shaheen Hall",
+    "fields": {
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=BAF%20Shaheen%20Hall%20Tejgaon%20Dhaka"
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-way-502537807",
+    "name": "Senamalancha",
+    "fields": {
+      "capacity": {
+        "before": null,
+        "after": 1200
+      },
+      "capacity_layout": {
+        "before": null,
+        "after": "Convention hall, first floor · published maximum; seating layout unspecified"
+      },
+      "catering_policy": {
+        "before": null,
+        "after": {
+          "text": "Catering and event-management companies must be chosen from the operator’s approved list; outside providers are not permitted. Confirm the current list directly.",
+          "source": "https://hallbooking.awt.mil.bd/senamalancha_details",
+          "checked": "2026-10-25"
+        }
+      },
+      "facilities": {
+        "before": [],
+        "after": [
+          "Catering"
+        ]
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-way-540588060",
+    "name": "Mohakhali Community Center",
+    "fields": {
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Mohakhali%20Community%20Center%20Dhaka"
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-way-736749229",
+    "name": "KIB Convention Hall",
+    "fields": {
+      "address": {
+        "before": "Khamar Bari Road Dhaka, Dhaka, Bangladesh",
+        "after": "KIB Complex, Khamar Bari Road, Farmgate, Dhaka 1215, Bangladesh"
+      },
+      "address_status": {
+        "before": "partial",
+        "after": "published"
+      },
+      "capacity": {
+        "before": null,
+        "after": 450
+      },
+      "capacity_layout": {
+        "before": null,
+        "after": "KIBC Convention Hall 1, Level G · published seating; layout unspecified"
+      },
+      "facilities": {
+        "before": [
+          "Parking",
+          "Accessible entrance"
+        ],
+        "after": [
+          "Parking",
+          "Accessible entrance",
+          "Catering"
+        ]
+      },
+      "phones": {
+        "before": [
+          {
+            "number": "+8801805070114",
+            "source": "https://www.kib.org.bd/",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          },
+          {
+            "number": "+8802222244129",
+            "source": "https://www.kib.org.bd/",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ],
+        "after": [
+          {
+            "number": "+8801805070114",
+            "source": "https://www.kib.org.bd/",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          },
+          {
+            "number": "+8802222244129",
+            "source": "https://www.kib.org.bd/",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          },
+          {
+            "number": "+8801711402895",
+            "source": "https://www.kib.org.bd/",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ]
+      }
+    },
+    "evidence_added": 2,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-way-1561267432",
+    "name": "Aloki",
+    "fields": {
+      "address": {
+        "before": "211 Tejgaon Gulshan Link Road Dhaka, Dhaka, Bangladesh",
+        "after": "211 Tejgaon Link Road, Tejgaon, Dhaka, Bangladesh"
+      },
+      "address_status": {
+        "before": "partial",
+        "after": "published"
+      },
+      "capacity": {
+        "before": null,
+        "after": 400
+      },
+      "capacity_layout": {
+        "before": null,
+        "after": "Grand Ball Room · round tables, one serving"
+      },
+      "facilities": {
+        "before": [],
+        "after": [
+          "Parking",
+          "Catering"
+        ]
+      }
+    },
+    "evidence_added": 2,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-way-367563642",
+    "name": "Officers' Club Dhaka",
+    "fields": {
+      "maps_url": {
+        "before": null,
+        "after": "https://www.google.com/maps/search/?api=1&query=Officers+Club+Dhaka+Bailey+Road"
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-osm-way-449635016",
+    "name": "Waterfall Restaurant and Convention Hall, Khilgaon",
+    "fields": {},
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-abacus-convention-center",
+    "name": "Abacus Convention Center",
+    "fields": {},
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-celebration-community-center",
+    "name": "Celebration Community Center",
+    "fields": {},
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-motijheel-community-center",
+    "name": "Motijheel Community Center",
+    "fields": {},
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-modhubagh-community-centre",
+    "name": "Modhubagh Community Centre, Hatirjheel",
+    "fields": {},
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-nanjing-community-center",
+    "name": "Nanjing Community Center",
+    "fields": {},
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-siraj-convention-center",
+    "name": "Siraj Convention Center",
+    "fields": {
+      "facilities": {
+        "before": [],
+        "after": [
+          "Parking",
+          "Air conditioning",
+          "Catering"
+        ]
+      },
+      "phones": {
+        "before": [
+          {
+            "number": "+8801712616367",
+            "source": "https://www.google.com/maps/search/?api=1&query=Siraj%20Convention%20Center%20Banasree%20Dhaka",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ],
+        "after": [
+          {
+            "number": "+8801712616367",
+            "source": "https://www.google.com/maps/search/?api=1&query=Siraj%20Convention%20Center%20Banasree%20Dhaka",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          },
+          {
+            "number": "+8801787661750",
+            "source": "https://sirajconventioncenter.com/index.php/our-service/",
+            "checked": "2026-10-25",
+            "status": "published-not-call-tested"
+          }
+        ]
+      },
+      "review_notice": {
+        "before": null,
+        "after": "Operator and business-listing addresses differ. Confirm the current address before travelling."
+      }
+    },
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-bazlur-rahman-community-complex",
+    "name": "Bazlur Rahman Community Complex (BRCC)",
+    "fields": {},
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-ak-convention-center",
+    "name": "AK Convention Center",
+    "fields": {},
+    "evidence_added": 1,
+    "discovery_note_preserved": true
+  },
+  {
+    "id": "bd-jk-convention-hall-malibagh",
+    "name": "JK Convention Hall, Malibagh Chowdhurypara",
+    "fields": {
+      "contact_hours": {
+        "before": null,
+        "after": {
+          "text": "Daily, 09:00–22:00",
+          "kind": "booking-office-hours",
+          "source": "https://jkconventionhall.com/contact",
+          "checked": "2026-10-25"
+        }
+      }
+    },
+    "evidence_added": 2,
+    "discovery_note_preserved": true
+  }
+]
