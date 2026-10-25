@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       name="description"
-      content="Explore source-checked wedding and event venues in Dhaka. Compare published capacities, facilities and business contacts with VenueRadar BD."
+      content="Explore community centers and convention halls in Dhaka. Compare sourced contacts, published capacity and map listings with clear evidence labels."
     />
     <meta
       property="og:title"
@@ -66,7 +66,21 @@
             type="search"
             placeholder="Try a name or neighborhood"
             autocomplete="off"
-          /><label for="area">Neighborhood</label
+          /><label for="collection">Browse</label
+          ><select id="collection">
+            <option value="community-halls">
+              Community centers &amp; halls
+            </option>
+            <option value="">All venues</option>
+            <option value="hotels">Hotel venues</option></select
+          ><label for="evidence">Information source</label
+          ><select id="evidence">
+            <option value="">All source types</option>
+            <option value="operator">Operator sources</option>
+            <option value="mapped">
+              Map listings · confirm details
+            </option></select
+          ><label for="area">Neighborhood</label
           ><select id="area">
             <option value="">All Dhaka</option></select
           ><label for="category">Venue type</label
@@ -132,9 +146,9 @@
           <div id="mapWrap" hidden>
             <div id="map" aria-label="Map of indexed Dhaka venues"></div>
             <p class="hint">
-              Only venues with source-checked coordinates appear on the map. If
-              tiles fail, use the list. Distances are straight-line estimates,
-              not travel distances.
+              Markers include source-published map points and approximate
+              building centers, not verified entrances. If tiles fail, use the
+              list. Distances are straight-line estimates, not travel distances.
             </p>
           </div>
           <div id="results" tabindex="-1"></div>
@@ -144,7 +158,13 @@
     <footer>
       <span class="footerbrand">VenueRadar BD</span>
       <p>
-        Public business information. A starting point, not a complete directory.
+        Public business information. A starting point, not a complete
+        directory.<br /><a
+          href="https://www.openstreetmap.org/copyright"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Venue data includes © OpenStreetMap contributors · ODbL</a
+        >
       </p>
       <button id="footerMethod" class="text">
         Sources, privacy & limitations

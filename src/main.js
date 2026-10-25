@@ -36,6 +36,7 @@ const external = (label, url) => {
 };
 let venues = [],
   areas,
+  collections,
   results = [],
   favorites = [],
   compare = [],
@@ -74,6 +75,7 @@ const labels = {
   Stage: "Stage",
   "source-checked": "Source checked",
   "cross-checked": "Cross-checked",
+  "open-data-listed": "Map listing · not operator-confirmed",
 };
 const tr = (s) => labels[s] || s;
 for (const o of $("category").options)
@@ -97,6 +99,8 @@ filterToggle.setAttribute("aria-controls", "category");
 document.querySelector(".filterhead").append(filterToggle);
 const ids = [
   "search",
+  "collection",
+  "evidence",
   "area",
   "category",
   "size",
@@ -106,13 +110,18 @@ const ids = [
   "parking",
   "sort",
 ];
-const filters = () =>
-  Object.fromEntries(
+const filters = () => {
+  const f = Object.fromEntries(
     ids.map((id) => [
       id,
       $(id).type === "checkbox" ? $(id).checked : $(id).value,
     ]),
   );
+  f.collectionIds = f.collection
+    ? collections?.groups.find((g) => g.id === f.collection)?.venue_ids || []
+    : null;
+  return f;
+};
 function persist(key, value) {
   try {
     storage.setItem(key, JSON.stringify(value));
@@ -133,10 +142,15 @@ function areaOptions() {
   const old = $("area").value;
   $("area").replaceChildren();
   option($("area"), "", "All Dhaka");
+  const scope = filters().collectionIds;
+  const scoped = venues.filter((v) => !scope || scope.includes(v.id));
   for (const a of areas.neighborhoods) {
-    const count = venues.filter((v) => v.area === a.name).length;
+    const count = scoped.filter((v) => v.area === a.name).length;
     option($("area"), a.name, `${a.name} · ${count} indexed`);
   }
+  const unknown = scoped.filter((v) => !v.area).length;
+  if (unknown)
+    option($("area"), "__unknown__", `Area not confirmed · ${unknown} indexed`);
   if ([...$("area").options].some((o) => o.value === old))
     $("area").value = old;
 }
@@ -159,7 +173,7 @@ function method() {
   for (const [title, text] of [
     [
       "Directory coverage",
-      `${bn(venues.length)} source-checked venues indexed in Dhaka. This collection includes hotel venues and independent convention halls. Community centers and many neighborhoods remain under-represented; this is not a complete directory.`,
+      `${bn(venues.length)} venues are indexed in Dhaka, including ${bn(venues.filter((v) => v.verification === "open-data-listed").length)} OpenStreetMap listings. Map listings are not operator-confirmed and may be outdated. Wedding-only use and current operation are not guaranteed. The default collection prioritizes community centers and halls; hotels are available separately. Coverage is incomplete.`,
     ],
     [
       "Ratings and reviews",
@@ -179,7 +193,7 @@ function method() {
     ],
     [
       "Sources and licensing",
-      "Administrative reference: nuhil/bangladesh-geocode (MIT). Map: © OpenStreetMap contributors (ODbL). Each venue lists its own evidence. Photos and numerical ratings are not reproduced without permission.",
+      "Venue database and mapped boundary: © OpenStreetMap contributors, ODbL-1.0, with separately cited operator facts. Bulk discovery used the 24 October 2026 Geofabrik extract; map edit dates are not operating-status checks. Administrative reference: nuhil/bangladesh-geocode (MIT). No restricted Google ratings, photographs or marketing prose are copied.",
     ],
   ]) {
     box.append(el("h3", title), el("p", text));
@@ -194,6 +208,14 @@ function method() {
       "Suggest a correction or a new venue through GitHub, with supporting sources.",
     ),
     external("GitHub repository", "https://github.com/tanzilamd/venueradar-bd"),
+    external(
+      "OpenStreetMap attribution and license",
+      "https://www.openstreetmap.org/copyright",
+    ),
+    external(
+      "Geofabrik source extract",
+      "https://download.geofabrik.de/asia/bangladesh.html",
+    ),
   );
   open(box);
 }
@@ -237,7 +259,10 @@ function facts(v) {
       v.phones.map((p) => p.number).join(", ") || "Phone not available",
     ],
     ["Evidence status", tr(v.verification)],
-    ["Last source check", v.last_checked || "Not checked"],
+    ["Source reviewed", v.last_checked || "Not checked"],
+    ...(v.discovery
+      ? [["Map record last edited", v.discovery.osm_updated.slice(0, 10)]]
+      : []),
   ];
 }
 function detail(v) {
@@ -352,6 +377,15 @@ function renderCards() {
         "badge",
       ),
     );
+    body.append(
+      el(
+        "span",
+        v.verification === "open-data-listed"
+          ? "Map listing · confirm wedding booking"
+          : "Operator source checked",
+        "badge evidence-badge",
+      ),
+    );
     if (v.facilities.includes("Parking"))
       body.append(el("span", "Parking documented", "badge"));
     if (v.distance != null)
@@ -391,7 +425,10 @@ function render() {
     ? "Your saved venues"
     : "Indexed venues only · coverage is incomplete";
   $("breadcrumb").textContent =
-    "DHAKA / " + ($("area").value || "ALL NEIGHBORHOODS");
+    "DHAKA / " +
+    ($("area").value === "__unknown__"
+      ? "AREA NOT CONFIRMED"
+      : $("area").value || "ALL NEIGHBORHOODS");
   $("stats").replaceChildren();
   for (const [n, label] of [
     [results.length, "Indexed venues"],
@@ -415,7 +452,9 @@ function reset() {
   for (const id of ids) {
     const n = $(id);
     if (n.type === "checkbox") n.checked = false;
-    else n.value = id === "sort" ? "name" : "";
+    else
+      n.value =
+        id === "sort" ? "name" : id === "collection" ? collections.default : "";
   }
   saved = false;
   $("saved").classList.remove("active");
@@ -529,6 +568,10 @@ $("reset").onclick = reset;
 $("explore").onclick = reset;
 $("saved").onclick = () => {
   saved = !saved;
+  if (saved) {
+    $("collection").value = "";
+    areaOptions();
+  }
   $("saved").classList.toggle("active", saved);
   $("explore").classList.toggle("active", !saved);
   render();
@@ -577,6 +620,7 @@ $("nearby").onclick = () => {
 };
 for (const id of ids)
   $(id).addEventListener(id === "search" ? "input" : "change", () => {
+    if (id === "collection") areaOptions();
     if (id === "sort" && $("sort").value === "distance" && !location)
       $("message").textContent = "Choose “Near me” to enable distance sorting.";
     render();
@@ -584,22 +628,23 @@ for (const id of ids)
 async function load() {
   try {
     const data = await Promise.all(
-      ["venues", "areas"].map(async (n) => {
-        const r = await fetch(`./data/${n}.json`);
+      ["venues", "areas", "collections"].map(async (n) => {
+        const r = await fetch(`./data/${n}.json`, { cache: "no-cache" });
         if (!r.ok) throw Error(n);
         return r.json();
       }),
     );
-    [venues, areas] = data;
+    [venues, areas, collections] = data;
     venues = venues.filter((v) => v.city === "Dhaka");
     if (!Array.isArray(venues) || !Array.isArray(areas.neighborhoods))
       throw Error("Invalid data");
     const valid = new Set(venues.map((v) => v.id));
     favorites = readIds(storage, "vr-favorites", valid);
     compare = readIds(storage, "vr-compare", valid).slice(0, 3);
+    $("collection").value = collections.default;
     placeOptions();
     $("coverageNote").textContent = venues.length
-      ? `Dhaka · ${bn(venues.length)} venues. Independent halls are being added. Neighborhood coverage remains incomplete.`
+      ? `${bn(collections.groups.find((g) => g.id === "community-halls").venue_ids.length)} community centers & halls. ${bn(venues.filter((v) => v.verification === "open-data-listed").length)} map listings need operator confirmation. Hotels are listed separately.`
       : "No verified venue records have been published yet.";
     render();
   } catch {

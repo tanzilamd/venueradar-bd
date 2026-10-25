@@ -1,4 +1,30 @@
+import fs from "node:fs";
 import { test, expect } from "@playwright/test";
+const catalog = JSON.parse(
+  fs.readFileSync("public/data/collections.json", "utf8"),
+);
+const defaultCount = catalog.groups.find((g) => g.id === catalog.default)
+  .venue_ids.length;
+const neighborhoodCount = JSON.parse(
+  fs.readFileSync("public/data/areas.json", "utf8"),
+).neighborhoods.length;
+async function mockCollection(page, rows) {
+  await page.route("**/data/collections.json", (r) =>
+    r.fulfill({
+      json: {
+        default: "community-halls",
+        groups: [
+          {
+            id: "community-halls",
+            label: "Community centers & halls",
+            venue_ids: rows.map((v) => v.id),
+          },
+          { id: "hotels", label: "Hotel venues", venue_ids: [] },
+        ],
+      },
+    }),
+  );
+}
 const make = (id, name, capacity) => ({
   id,
   city: "Dhaka",
@@ -47,7 +73,7 @@ test("empty state and Dhaka neighborhoods", async ({ page }) => {
   );
   await page.goto("/");
   await expect(page.locator("#results")).toContainText("Research first");
-  await expect(page.locator("#area option")).toHaveCount(18);
+  await expect(page.locator("#area option")).toHaveCount(neighborhoodCount + 1);
   await page.locator("#method").click();
   await expect(page.locator("dialog")).toBeVisible();
   await page.keyboard.press("Escape");
@@ -60,6 +86,7 @@ test("fixture-only discovery, details, favorites persistence, compare and map", 
   await page.route("**/data/venues.json", (route) =>
     route.fulfill({ json: records }),
   );
+  await mockCollection(page, records);
   await context.grantPermissions(["geolocation"]);
   await context.setGeolocation({ latitude: 23.8, longitude: 90.4 });
   const errors = [];
@@ -111,7 +138,7 @@ for (const width of [360, 768, 1366, 1920])
   test(`layout ${width}`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
     await page.goto("/");
-    await expect(page.locator(".card")).toHaveCount(11);
+    await expect(page.locator(".card")).toHaveCount(defaultCount);
     expect(
       await page.evaluate(
         () => document.documentElement.scrollWidth <= innerWidth,
@@ -124,8 +151,9 @@ for (const width of [360, 768, 1366, 1920])
   });
 test("English-only real records and neighborhood filters", async ({ page }) => {
   await page.goto("/");
-  await expect(page.locator(".card")).toHaveCount(11);
+  await expect(page.locator(".card")).toHaveCount(defaultCount);
   expect(await page.locator("body").innerText()).not.toMatch(/[\u0980-\u09ff]/);
+  await page.locator("#collection").selectOption("hotels");
   await page.locator("#area").selectOption("Banani");
   await expect(page.locator(".card")).toHaveCount(1);
   await expect(page.locator(".card")).toContainText("Sheraton Dhaka");
@@ -146,6 +174,7 @@ test("clustered markers and failed map tile fallback", async ({ page }) => {
     coordinates: { lat: 23.8, lon: 90.4 },
   }));
   await page.route("**/data/venues.json", (r) => r.fulfill({ json: same }));
+  await mockCollection(page, same);
   await page.route("https://tile.openstreetmap.org/**", (r) => r.abort());
   await page.goto("/");
   await page.locator("#mapView").click();
@@ -169,6 +198,7 @@ test("independent convention halls expose sources, calls and honest capacity ran
   page,
 }) => {
   await page.goto("/");
+  await page.locator("#evidence").selectOption("operator");
   await page.locator("#category").selectOption("Convention Center");
   await expect(page.locator(".card")).toHaveCount(2);
   await page.locator("#area").selectOption("Eskaton");
@@ -195,4 +225,43 @@ test("independent convention halls expose sources, calls and honest capacity ran
   expect(await page.locator("dialog").innerText()).not.toMatch(
     /[\u0980-\u09ff]/,
   );
+});
+test("bulk hall collection defaults to non-hotels and exposes map-source uncertainty", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await expect(page.locator(".card")).toHaveCount(defaultCount);
+  await expect(page.locator("#results")).not.toContainText("The Westin Dhaka");
+  await page.locator("#evidence").selectOption("mapped");
+  await expect(page.locator(".card")).toHaveCount(107);
+  await page.locator("#search").fill("Sutrapur");
+  await expect(page.locator(".card")).toHaveCount(1);
+  await expect(page.locator(".card")).toContainText(
+    "Map listing · confirm wedding booking",
+  );
+  await page.getByRole("button", { name: "View details", exact: true }).click();
+  await expect(page.locator("dialog")).toContainText("not operator-confirmed");
+  await expect(page.locator("dialog")).toContainText("Map record last edited");
+  await page.keyboard.press("Escape");
+  await page.locator("#reset").click();
+  await page.locator("#area").selectOption("__unknown__");
+  expect(await page.locator(".card").count()).toBeGreaterThan(0);
+  await expect(page.locator("#breadcrumb")).toContainText("AREA NOT CONFIRMED");
+  await page.locator("#reset").click();
+  await page.locator("#collection").selectOption("hotels");
+  await expect(page.locator(".card")).toHaveCount(8);
+  await expect(page.locator("#results")).toContainText("The Westin Dhaka");
+});
+test("saved hotel venues remain reachable after the hall-first default is restored", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await page.locator("#collection").selectOption("hotels");
+  await page.locator("#search").fill("Sheraton");
+  await page.locator(".save").click();
+  await page.reload();
+  await expect(page.locator("#collection")).toHaveValue("community-halls");
+  await page.locator("#saved").click();
+  await expect(page.locator(".card")).toHaveCount(1);
+  await expect(page.locator(".card")).toContainText("Sheraton Dhaka");
 });

@@ -4,5 +4,18 @@
     "url": "https://github.com/nuhil/bangladesh-geocode",
     "license": "MIT",
     "usage": "Administrative names only; no venue claims."
+  },
+  {
+    "id": "osm-geofabrik-bd-2026-10-24",
+    "url": "https://download.geofabrik.de/asia/bangladesh.html",
+    "license": "ODbL-1.0",
+    "attribution": "\u00a9 OpenStreetMap contributors",
+    "usage": "107 manually selected, spatially scoped map listings. Not operator confirmation or proof of wedding-only use. Source identities and edit dates are in discovery.json."
+  },
+  {
+    "id": "osm-dhaka-metropolitan-boundary",
+    "url": "https://www.openstreetmap.org/relation/13663697",
+    "license": "ODbL-1.0",
+    "usage": "Mapped metropolitan boundary used to scope this manual discovery batch. It is not a completeness claim or an independently surveyed boundary."
   }
 ]

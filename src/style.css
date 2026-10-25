@@ -770,3 +770,20 @@ h1 {
     grid-template-columns: minmax(0, 1fr) auto;
   }
 }
+
+.evidence-badge {
+  display: block;
+  width: fit-content;
+  margin-top: 8px;
+  background: #f1efe3;
+  color: #5c533b;
+}
+.filters label[for="collection"] {
+  margin-top: 18px;
+}
+@media (max-width: 640px) {
+  .filters:not(.expanded) > label[for="collection"],
+  .filters:not(.expanded) > #collection {
+    display: block;
+  }
+}

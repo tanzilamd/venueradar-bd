@@ -17,6 +17,13 @@ try {
     return r.json();
   });
   expect(data.length).toBeGreaterThan(0);
+  const collections = await page.evaluate(async () =>
+    (await fetch("./data/collections.json")).json(),
+  );
+  const halls = collections.groups.find((g) => g.id === "community-halls");
+  await expect(page.locator(".card")).toHaveCount(halls.venue_ids.length);
+  await expect(page.locator("#results")).not.toContainText("The Westin Dhaka");
+  await page.locator("#collection").selectOption("");
   await expect(page.locator(".card")).toHaveCount(data.length);
   expect(await page.locator("body").innerText()).not.toMatch(/[\u0980-\u09ff]/);
   await page.locator("#search").fill("Sheraton");
@@ -24,6 +31,7 @@ try {
   await page.locator(".save").click();
   await page.reload();
   await expect(page.locator("#savedCount")).toHaveText("1");
+  await page.locator("#collection").selectOption("hotels");
   await page.locator("#area").selectOption("Banani");
   await expect(page.locator(".card")).toHaveCount(1);
   await page.getByRole("button", { name: "View details", exact: true }).click();
@@ -60,7 +68,10 @@ try {
           ),
       ),
     )
-    .toBe(data.filter((v) => v.coordinates).length);
+    .toBe(
+      data.filter((v) => halls.venue_ids.includes(v.id) && v.coordinates)
+        .length,
+    );
   expect(errors).toEqual([]);
   await page.screenshot({
     path: "/tmp/venueradar-production-smoke.png",

@@ -68,6 +68,18 @@
     {
       "id": "17",
       "name": "Mohakhali"
+    },
+    {
+      "id": "18",
+      "name": "Agargaon"
+    },
+    {
+      "id": "19",
+      "name": "Azimpur"
+    },
+    {
+      "id": "20",
+      "name": "Panthapath"
     }
   ]
 }

@@ -24,3 +24,15 @@ Unknown optional fields use null or empty arrays, never fictional values. Protec
 ## Published capacity ranges
 
 When a source gives a range, preserve it in optional `capacity_range: {"min":400,"max":500}` with `capacity: null` and evidence for `capacity_range`. Never silently choose an endpoint as an exact capacity. Both endpoints must be positive integers and min must not exceed max. UI classification is available only if both endpoints belong to the same size band; capacity sorting uses the lower bound. Preserve the named hall and seating layout, or explicitly state that the layout is unspecified. Do not add multiple hall capacities together.
+
+## Explicit manual bulk discovery
+
+Bulk research is allowed when explicitly requested; scheduled discovery remains forbidden. Prefer a single licensed extract and local filtering to repetitive venue-by-venue search. Verify the provider’s published checksum before processing. Keep large extracts and temporary tooling outside the repository. Do not expand research outside Dhaka while filtering the national extract.
+
+A `community_centre` tag alone is not proof of a wedding venue. Review names/types, exclude clinics, toilets, shops, welfare hubs, schools, roads and ambiguous institutions. Use the attributed metropolitan boundary for spatial scoping and inspect duplicates, renamed businesses, point/building pairs and co-located halls. Hold identity conflicts; never double-count them to inflate coverage.
+
+Map-only admissions require `verification: open-data-listed`, full discovery metadata, source URL, edit timestamp and explicit uncertainty. Never relabel a map listing as operator-verified. Preserve map edit dates separately from review dates. Unknown phone numbers, addresses, capacities and facilities remain unknown. Do not infer a neighborhood from the nearest map label or estimate a venue's capacity from its building geometry.
+
+The combined database and extracted geometry are ODbL-1.0. Preserve visible attribution and the full license. Include only relevant public business tags in provenance snapshots; exclude private schedules, personal staff data, security details and unrelated building attributes. Retain IDs in collections.json and keep every active venue in exactly one group. The community-halls group is the default; hotels remain separately accessible, not deleted.
+
+When operator evidence becomes available, preserve stronger existing fields and source history. Treat a conflicting first-party/map identity as a review item. Never overwrite a valid operator phone with an older or incomplete mapped number. Public map phone tags are published contacts, not call-tested lines. Report the number of new map listings separately from operator-confirmed records; do not claim full Dhaka coverage without a demonstrably complete inventory.

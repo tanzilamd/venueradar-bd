@@ -1,8 +1,9 @@
 import fs from "node:fs";
 import Ajv from "ajv";
+import { inBoundary } from "../src/geo.js";
 import { normalize, distance } from "../src/model.js";
 const read = (n) => JSON.parse(fs.readFileSync(n, "utf8"));
-export function validateData(venues, areas, schema) {
+export function validateData(venues, areas, schema, boundary) {
   const errors = [];
   const valid = new Ajv({ allErrors: true }).compile(schema);
   if (!valid(venues))
@@ -11,6 +12,21 @@ export function validateData(venues, areas, schema) {
   for (const v of venues) {
     if (seen.has(v.id)) errors.push(`Duplicate ID ${v.id}`);
     seen.add(v.id);
+    if (v.verification === "open-data-listed") {
+      if (!v.discovery || !v.evidence.some((e) => e.kind === "open-data"))
+        errors.push(`${v.id}: map provenance missing`);
+      if (!v.coordinates || !boundary || !inBoundary(v.coordinates, boundary))
+        errors.push(`${v.id}: mapped venue outside Dhaka boundary`);
+      if (
+        v.discovery &&
+        !v.evidence.some(
+          (e) =>
+            e.url ===
+            `https://www.openstreetmap.org/${v.discovery.element_type}/${v.discovery.element_id}`,
+        )
+      )
+        errors.push(`${v.id}: source identity mismatch`);
+    }
     if (
       v.capacity_range &&
       (v.capacity != null || v.capacity_range.min > v.capacity_range.max)
@@ -76,7 +92,19 @@ if (process.argv[1]?.endsWith("validate.mjs")) {
     venues,
     read("docs/reference/bangladesh-areas.json"),
     read("schemas/venue.schema.json"),
+    read("public/data/dhaka-boundary.geojson"),
   );
+  const collections = read("public/data/collections.json");
+  const validIds = new Set(venues.map((v) => v.id)),
+    membership = new Set();
+  for (const group of collections.groups)
+    for (const id of group.venue_ids) {
+      if (!validIds.has(id) || membership.has(id))
+        errors.push(`Invalid or duplicate collection member ${id}`);
+      membership.add(id);
+    }
+  if (membership.size !== validIds.size)
+    errors.push("Collection membership is incomplete");
   if (errors.length) {
     console.error(errors.join("\n"));
     process.exitCode = 1;

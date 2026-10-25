@@ -125,5 +125,416 @@
         "result": "Upstream 503; not admitted without inspectable evidence."
       }
     ]
+  },
+  "bulk_2026_10_25": {
+    "candidate_count": 418,
+    "added_ids": [
+      "bd-osm-node-396647115",
+      "bd-osm-node-1936311529",
+      "bd-osm-node-2697232301",
+      "bd-osm-node-3323390519",
+      "bd-osm-node-3330957057",
+      "bd-osm-node-3355520099",
+      "bd-osm-node-3374713092",
+      "bd-osm-node-3403191569",
+      "bd-osm-node-3473792181",
+      "bd-osm-node-3475693347",
+      "bd-osm-node-3714859928",
+      "bd-osm-node-3731351579",
+      "bd-osm-node-3731958028",
+      "bd-osm-node-3734889100",
+      "bd-osm-node-3745296696",
+      "bd-osm-node-4035864979",
+      "bd-osm-node-4072852261",
+      "bd-osm-node-4320931026",
+      "bd-osm-node-4330600894",
+      "bd-osm-node-4464533589",
+      "bd-osm-node-4528270335",
+      "bd-osm-node-4547663197",
+      "bd-osm-node-4549001959",
+      "bd-osm-node-4582326295",
+      "bd-osm-node-4583633891",
+      "bd-osm-node-4729172392",
+      "bd-osm-node-4973354765",
+      "bd-osm-node-5171683022",
+      "bd-osm-node-5233901421",
+      "bd-osm-node-5233901521",
+      "bd-osm-node-5233935421",
+      "bd-osm-node-5998293476",
+      "bd-osm-node-6075578295",
+      "bd-osm-node-6924203537",
+      "bd-osm-node-7711605264",
+      "bd-osm-node-7787635919",
+      "bd-osm-node-7787635947",
+      "bd-osm-node-8313877538",
+      "bd-osm-node-9622947662",
+      "bd-osm-node-9694573157",
+      "bd-osm-node-9694573176",
+      "bd-osm-node-9806581241",
+      "bd-osm-node-9807925208",
+      "bd-osm-node-9843518617",
+      "bd-osm-node-9932948783",
+      "bd-osm-node-10983479205",
+      "bd-osm-node-11216294296",
+      "bd-osm-node-11716250398",
+      "bd-osm-node-11730096574",
+      "bd-osm-node-11768450931",
+      "bd-osm-node-11768476986",
+      "bd-osm-node-11775084788",
+      "bd-osm-node-11777855439",
+      "bd-osm-node-11824645603",
+      "bd-osm-node-11886959379",
+      "bd-osm-node-11915138589",
+      "bd-osm-node-11939428112",
+      "bd-osm-node-11939996444",
+      "bd-osm-node-11986161470",
+      "bd-osm-node-11988944083",
+      "bd-osm-node-11993579518",
+      "bd-osm-node-11993640298",
+      "bd-osm-node-12006320188",
+      "bd-osm-node-12012297426",
+      "bd-osm-node-12055130480",
+      "bd-osm-node-12456045701",
+      "bd-osm-node-13090503501",
+      "bd-osm-node-13134454618",
+      "bd-osm-node-13527564201",
+      "bd-osm-node-14247677151",
+      "bd-osm-node-14252402800",
+      "bd-osm-node-14286743945",
+      "bd-osm-way-24448507",
+      "bd-osm-way-241619748",
+      "bd-osm-way-243982330",
+      "bd-osm-way-245267775",
+      "bd-osm-way-263618386",
+      "bd-osm-way-295884568",
+      "bd-osm-way-297869678",
+      "bd-osm-way-298472671",
+      "bd-osm-way-345203658",
+      "bd-osm-way-367277125",
+      "bd-osm-way-370400603",
+      "bd-osm-way-371381396",
+      "bd-osm-way-371382348",
+      "bd-osm-way-384311411",
+      "bd-osm-way-400903521",
+      "bd-osm-way-438470592",
+      "bd-osm-way-439835437",
+      "bd-osm-way-440170070",
+      "bd-osm-way-441129284",
+      "bd-osm-way-456824572",
+      "bd-osm-way-490274323",
+      "bd-osm-way-495120358",
+      "bd-osm-way-498173029",
+      "bd-osm-way-502537807",
+      "bd-osm-way-506163768",
+      "bd-osm-way-534499396",
+      "bd-osm-way-534723199",
+      "bd-osm-way-536571520",
+      "bd-osm-way-540588060",
+      "bd-osm-way-586533328",
+      "bd-osm-way-698085019",
+      "bd-osm-way-700469632",
+      "bd-osm-way-736749229",
+      "bd-osm-way-1532360738",
+      "bd-osm-way-1561267432"
+    ],
+    "duplicate_groups": {
+      "340": [13],
+      "347": [19],
+      "350": [64],
+      "52": [88],
+      "58": [20],
+      "2": [140],
+      "368": [345],
+      "404": [137],
+      "406": [139],
+      "416": [318]
+    },
+    "outside_scope": [
+      {
+        "source": "https://www.openstreetmap.org/node/3308011630",
+        "reason": "Outside the mapped Dhaka Metropolitan boundary",
+        "name": "Chayaneer Community center"
+      },
+      {
+        "source": "https://www.openstreetmap.org/node/3312441078",
+        "reason": "Outside the mapped Dhaka Metropolitan boundary",
+        "name": "Banya Community Center"
+      },
+      {
+        "source": "https://www.openstreetmap.org/node/3312444029",
+        "reason": "Outside the mapped Dhaka Metropolitan boundary",
+        "name": "Nupur Community center"
+      },
+      {
+        "source": "https://www.openstreetmap.org/node/3851898779",
+        "reason": "Outside the mapped Dhaka Metropolitan boundary",
+        "name": "Laboni Community center & chaineese reastaurant"
+      },
+      {
+        "source": "https://www.openstreetmap.org/node/4461408468",
+        "reason": "Outside the mapped Dhaka Metropolitan boundary",
+        "name": "Nahar Community Center"
+      },
+      {
+        "source": "https://www.openstreetmap.org/node/4464372672",
+        "reason": "Outside the mapped Dhaka Metropolitan boundary",
+        "name": "Kasturi Community Center"
+      },
+      {
+        "source": "https://www.openstreetmap.org/node/12095466731",
+        "reason": "Outside the mapped Dhaka Metropolitan boundary",
+        "name": "Bondhon Community Center, Community center"
+      },
+      {
+        "source": "https://www.openstreetmap.org/node/12110063055",
+        "reason": "Outside the mapped Dhaka Metropolitan boundary",
+        "name": "Friends And Family Convention Hall, Conference center"
+      }
+    ],
+    "phone_conflicts": [
+      {
+        "source": "https://www.openstreetmap.org/node/3714859928",
+        "reason": "Ambiguous or incomplete Dhaka business phone format; omitted",
+        "published": "+880 48119607"
+      },
+      {
+        "source": "https://www.openstreetmap.org/node/3714859928",
+        "reason": "Ambiguous or incomplete Dhaka business phone format; omitted",
+        "published": "+880 48111061"
+      }
+    ],
+    "held_for_review": [
+      {
+        "candidate_index": 1,
+        "name": "Goethe Institut Bangladesh",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 29,
+        "name": "Chef the city",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 31,
+        "name": "The Nordic Club Dhaka",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 45,
+        "name": "Tejgaon Club",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 51,
+        "name": "আনন্দ ধারা",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 55,
+        "name": "DOHS Council",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 71,
+        "name": "community_centre",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 74,
+        "name": "SAIMON SENTER",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 75,
+        "name": "FALGUN CANTER",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 90,
+        "name": "সেক্টর ৩ কল্যাণ সমিতি",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 91,
+        "name": "সেক্টর ৫ কল্যাণ সমিতি",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 94,
+        "name": "Opener Solution",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 100,
+        "name": "Global heavy chemical ltd. factory",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 120,
+        "name": "BCSIR Officers Club, Community center, BCSIR Compound, Laboratory Rd, Dhaka",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 127,
+        "name": "Property Care Services Bangladesh (Pvt.) Ltd.",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 135,
+        "name": "PD Office, Community Centre",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 143,
+        "name": "Lira Industrial Enterprise Ltd, Community center",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 144,
+        "name": "Designer Services, Community center",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 148,
+        "name": "Rong Tuli Wedding And Event Management",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 156,
+        "name": "Bangladesh Mohajir & Welfare Development Committee",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 162,
+        "name": "World Vision Center",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 163,
+        "name": "Rajia khan Surokhha Community Hub",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 298,
+        "name": "Bir Sresto Munsi Abdur Rouf Community centre",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 304,
+        "name": "Priyanka Shooting Zone",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 306,
+        "name": "Shaheed moazzem hall",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 324,
+        "name": "Emmanueles' Convention Center",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 325,
+        "name": "BGB Banquet Hall",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 334,
+        "name": "Kolabagan Government Quarter Community Center",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 335,
+        "name": "Pearl Harbor",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 349,
+        "name": "Retired Army Officer's Welfare Association (RAOWA) Club Complex",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 354,
+        "name": "Oroni Juboshongho",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 359,
+        "name": "Osmani Memorial Auditorium",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 365,
+        "name": "TSC Auditorium",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 369,
+        "name": "Community Centre",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 370,
+        "name": "Dhaka Club Youth Center",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 372,
+        "name": "Samson H. Chowdhury Centre",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 373,
+        "name": "Shahid Abu Sayed International Convention Centre",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 377,
+        "name": "Bafwa Auditorium",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 379,
+        "name": "Victoria Convention Center",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 405,
+        "name": "Army Officer's Club",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 410,
+        "name": "Bangladesh Shooting Sports Federation Auditorium",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 411,
+        "name": "Sirajul Islam Lecture Hall",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 412,
+        "name": "RC Mazumder Auditorium",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "candidate_index": 415,
+        "name": "BUET Auditorium",
+        "reason": "Ambiguous function, potential duplicate, or institution-specific auditorium; no wedding-venue assumption."
+      },
+      {
+        "name": "Rupali Community Centre",
+        "source": "https://www.openstreetmap.org/node/4580053001",
+        "reason": "Same name at two nearby locations. Branch versus relocation identity is not established; both new candidates are held rather than guessed or double-counted."
+      },
+      {
+        "name": "Rupali Community Centre",
+        "source": "https://www.openstreetmap.org/node/8952908632",
+        "reason": "Same name at two nearby locations. Branch versus relocation identity is not established; both new candidates are held rather than guessed or double-counted."
+      }
+    ],
+    "remaining_gaps": "This is not all venues in Dhaka. No wedding-only guarantee or current operating-status guarantee for map-only records."
   }
 }

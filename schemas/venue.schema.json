@@ -142,7 +142,7 @@
         }
       },
       "verification": {
-        "enum": ["source-checked", "cross-checked"]
+        "enum": ["source-checked", "cross-checked", "open-data-listed"]
       },
       "last_checked": {
         "type": "string",
@@ -200,6 +200,49 @@
           "max": {
             "type": "integer",
             "minimum": 1
+          }
+        }
+      },
+      "address_status": {
+        "enum": ["published", "partial", "not_available"]
+      },
+      "discovery": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source",
+          "element_type",
+          "element_id",
+          "element_version",
+          "osm_updated",
+          "extract_timestamp",
+          "geometry_method"
+        ],
+        "properties": {
+          "source": {
+            "const": "OpenStreetMap"
+          },
+          "element_type": {
+            "enum": ["node", "way", "relation"]
+          },
+          "element_id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "element_version": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "osm_updated": {
+            "type": "string",
+            "minLength": 10
+          },
+          "extract_timestamp": {
+            "type": "string",
+            "minLength": 10
+          },
+          "geometry_method": {
+            "enum": ["mapped_point", "building_bbox_center"]
           }
         }
       }

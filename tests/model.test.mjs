@@ -172,3 +172,71 @@ test("published capacity ranges remain ranges in filters and classification", as
   );
   assert.ok(validateData([{ ...v, capacity: 500 }], areas, schema).length);
 });
+test("collection, source-confidence and unknown-area filters remain independent", () => {
+  const operator = fixture(),
+    mapped = {
+      ...fixture("bd-mapped"),
+      area: null,
+      verification: "open-data-listed",
+      evidence: [{ kind: "open-data" }],
+    };
+  assert.equal(
+    filterVenues([operator, mapped], { collectionIds: [mapped.id] }).length,
+    1,
+  );
+  assert.equal(
+    filterVenues([operator, mapped], { evidence: "operator" })[0].id,
+    operator.id,
+  );
+  assert.equal(
+    filterVenues([operator, mapped], { evidence: "mapped" })[0].id,
+    mapped.id,
+  );
+  assert.equal(
+    filterVenues([operator, mapped], { area: "__unknown__" })[0].id,
+    mapped.id,
+  );
+});
+test("bulk mapped records are spatially scoped, uniquely sourced and not hotel additions", async () => {
+  const { inBoundary } = await import("../src/geo.js");
+  const venues = JSON.parse(fs.readFileSync("public/data/venues.json")),
+    boundary = JSON.parse(
+      fs.readFileSync("public/data/dhaka-boundary.geojson"),
+    );
+  const mapped = venues.filter((v) => v.verification === "open-data-listed");
+  assert.equal(mapped.length, 107);
+  assert.ok(mapped.every((v) => inBoundary(v.coordinates, boundary)));
+  assert.ok(
+    mapped.every(
+      (v) => v.discovery && v.evidence.some((e) => e.kind === "open-data"),
+    ),
+  );
+  assert.ok(mapped.every((v) => !v.name.toLowerCase().includes("hotel")));
+  assert.equal(
+    new Set(mapped.map((v) => v.evidence[0].url)).size,
+    mapped.length,
+  );
+  assert.equal(inBoundary({ lat: 24.1, lon: 90.4 }, boundary), false);
+  assert.equal(inBoundary({ lat: 23.83, lon: 90.75 }, boundary), false);
+  const areas = JSON.parse(
+      fs.readFileSync("docs/reference/bangladesh-areas.json"),
+    ),
+    schema = JSON.parse(fs.readFileSync("schemas/venue.schema.json"));
+  assert.ok(
+    validateData(
+      [{ ...mapped[0], coordinates: { lat: 24.1, lon: 90.4 } }],
+      areas,
+      schema,
+      boundary,
+    ).length,
+  );
+});
+test("Maps searches omit missing-address explanatory text", () => {
+  const v = {
+    ...fixture(),
+    address_status: "not_available",
+    address: "Dhaka — street address not supplied in the map listing.",
+  };
+  assert.ok(!decodeURIComponent(mapsURL(v)).includes("not supplied"));
+  assert.ok(decodeURIComponent(mapsURL(v)).includes("Dhaka"));
+});

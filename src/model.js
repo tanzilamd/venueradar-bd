@@ -48,9 +48,15 @@ export function filterVenues(venues, f, location) {
           normalize(
             [v.name, v.bn_name, ...v.aliases, v.address, v.area].join(" "),
           ).includes(normalize(f.search))) &&
-        ["division", "district", "area", "category"].every(
+        ["division", "district", "category"].every(
           (k) => !f[k] || String(v[k]) === f[k],
         ) &&
+        (!f.area || (f.area === "__unknown__" ? !v.area : v.area === f.area)) &&
+        (!f.collectionIds || f.collectionIds.includes(v.id)) &&
+        (!f.evidence ||
+          (f.evidence === "mapped"
+            ? v.verification === "open-data-listed"
+            : v.evidence.some((e) => e.kind === "official"))) &&
         (!f.size || sizeOf(v.capacity, v.capacity_range) === f.size) &&
         (!f.phone || v.phones.length) &&
         (!f.capacity || hasCapacity(v)) &&
@@ -82,6 +88,13 @@ export function readIds(storage, key, valid) {
     return [];
   }
 }
-export const mapsURL = (v) =>
-  "https://www.google.com/maps/search/?api=1&query=" +
-  encodeURIComponent(`${v.name} ${v.address} Bangladesh`);
+export const mapsURL = (v) => {
+  const locality =
+    v.address_status === "not_available"
+      ? [v.area, v.city || "Dhaka"].filter(Boolean).join(", ")
+      : v.address;
+  return (
+    "https://www.google.com/maps/search/?api=1&query=" +
+    encodeURIComponent(`${v.name} ${locality} Bangladesh`)
+  );
+};

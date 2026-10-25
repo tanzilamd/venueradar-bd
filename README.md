@@ -2,7 +2,7 @@
 
 English-only, Dhaka-focused, static venue research and discovery platform for Bangladesh. No backend, mandatory login, paid API, database or scheduled scraping.
 
-**Status: Dhaka-first starter directory. Eleven official-source venue records; incomplete, hotel-focused coverage. Deployment verification recorded in docs/QA.md.**
+**Status: Dhaka directory with 118 sourced records: 110 hall/community/event venue records shown first, plus 8 preserved hotel venues separately. 107 are explicitly labelled map listings, not operator confirmation. Coverage and wedding-only use are not guaranteed.**
 
 ## Develop
 
@@ -24,7 +24,7 @@ Vite bundles Leaflet and clustering locally. Relative build URLs support GitHub 
 
 ## Features implemented
 
-English interface with venue-name and alias search, Dhaka neighborhood filters, category/size/facility/evidence filters, dataset-derived statistics, map/list switching, clustered markers, marker/card selection, venue details and evidence, business call links, current Google review links, 2–3 venue comparisons, persistent favorites, and approximate proximity sorting. Unknown facts are explicitly labelled. Eleven source-checked Dhaka venues are indexed; broader community-center coverage remains incomplete.
+English interface with venue-name and alias search, Dhaka neighborhood filters, category/size/facility/evidence filters, dataset-derived statistics, map/list switching, clustered markers, marker/card selection, venue details and evidence, business call links, current Google review links, 2–3 venue comparisons, persistent favorites, and approximate proximity sorting. Unknown facts are explicitly labelled. 107 map-listed non-hotel venues were added in a manual bulk batch. See docs/reports/2026-10-25-bulk-dhaka-halls.md for scope, provenance and uncertainty.
 
 ## Deployment
 
@@ -34,8 +34,8 @@ Sitemap/canonical/og:url should be generated only after the real Pages URL is kn
 
 ## Data maintenance
 
-Read [research guide](docs/RESEARCH_GUIDE.md), [safe update guide](docs/DATA_UPDATE_GUIDE.md), and [sources and limitations](docs/DATA_SOURCES.md). Version 1 focuses exclusively on Dhaka. Current coverage is eight hotel event venues and three independent convention/event-hall venues. This is not a complete community-center directory; many neighborhoods remain under-represented. Existing verified records must never be replaced by weaker or empty data.
+Read [research guide](docs/RESEARCH_GUIDE.md), [safe update guide](docs/DATA_UPDATE_GUIDE.md), and [sources and limitations](docs/DATA_SOURCES.md). Version 1 focuses exclusively on Dhaka. Current coverage is 110 community/event/hall records and 8 preserved hotel venues. Map-only listings need operator confirmation; many street addresses, phones and neighborhood assignments remain unknown. Existing verified records must never be replaced by weaker or empty data.
 
 ## License
 
-Application code: MIT (LICENSE). Administrative names retain attribution in docs/GEOCODE_LICENSE.txt. Venue sources require their own lawful reuse basis; no blanket license for third-party content is claimed. Leaflet and marker clustering retain their upstream licenses in dependency packages.
+Application code: MIT (LICENSE). Administrative names retain attribution in docs/GEOCODE_LICENSE.txt. The combined venue database and derived boundary use ODbL-1.0 with © OpenStreetMap contributors attribution and separately cited operator facts. Full data license: public/licenses/ODbL-1.0.txt. No blanket license for third-party photos, promotional text or restricted content is claimed. Leaflet and marker clustering retain their upstream licenses in dependency packages.
