@@ -5825,7 +5825,11 @@
       "lat": 23.7498349,
       "lon": 90.4259238
     },
-    "phones": [],
+    "phones": [
+      {
+        "number": "01954411222",
+      }
+    ],
     "website": null,
     "capacity": null,
     "capacity_layout": null,
@@ -11848,7 +11852,7 @@
     "category": "Convention Center",
     "division": "6",
     "district": "47",
-    "area": null,
+    "area": "Paltan",
     "address": "PCP7+HXH, Dhaka, Bangladesh — street address and neighborhood pending confirmation.",
     "address_status": "partial",
     "coordinates": {
