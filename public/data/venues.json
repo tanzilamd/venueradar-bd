@@ -1,0 +1,398 @@
+[
+  {
+    "id": "bd-the-westin-dhaka",
+    "name": "The Westin Dhaka",
+    "bn_name": "দ্য ওয়েস্টিন ঢাকা",
+    "aliases": [],
+    "category": "Wedding Venue",
+    "division": "6",
+    "district": "47",
+    "area": "Gulshan 2",
+    "address": "Main Gulshan Avenue, Plot-01, Road 45, Gulshan-2, Dhaka 1212, Bangladesh",
+    "coordinates": {
+      "lat": 23.79318941,
+      "lon": 90.41461206
+    },
+    "phones": [
+      {
+        "number": "+8809638228811",
+        "source": "https://www.marriott.com/en-us/hotels/dacwi-the-westin-dhaka/events/",
+        "checked": "2026-10-25",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": "https://www.marriott.com/en-us/hotels/dacwi-the-westin-dhaka/events/",
+    "capacity": 350,
+    "capacity_layout": "Grand Ballroom · banquet",
+    "facilities": ["Catering"],
+    "verification": "source-checked",
+    "last_checked": "2026-10-25",
+    "evidence": [
+      {
+        "url": "https://www.marriott.com/en-us/hotels/dacwi-the-westin-dhaka/events/",
+        "fields": [
+          "name",
+          "bn_name",
+          "area",
+          "aliases",
+          "address",
+          "category",
+          "coordinates",
+          "phones",
+          "website",
+          "capacity",
+          "capacity_layout",
+          "facilities.Catering"
+        ],
+        "checked": "2026-10-25",
+        "kind": "official",
+        "reuse": "Individual public business facts, manually reviewed; no prose, reviews, photos or database copied."
+      }
+    ],
+    "notes": "Capacity is for the Grand Ballroom in banquet layout, not the whole hotel. Confirm the layout and current availability with the venue.",
+    "city": "Dhaka"
+  },
+  {
+    "id": "bd-le-meridien-dhaka",
+    "name": "Le Méridien Dhaka",
+    "bn_name": "লে মেরিডিয়ান ঢাকা",
+    "aliases": [],
+    "category": "Wedding Venue",
+    "division": "6",
+    "district": "47",
+    "area": "Nikunja 2 / Khilkhet",
+    "address": "79/A Commercial Area, Airport Road, Nikunja 2, Khilkhet, Dhaka 1229, Bangladesh",
+    "coordinates": {
+      "lat": 23.836406,
+      "lon": 90.417813
+    },
+    "phones": [
+      {
+        "number": "+8809638900089",
+        "source": "https://www.marriott.com/en-us/hotels/dacmd-le-meridien-dhaka/events/",
+        "checked": "2026-10-25",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": "https://www.marriott.com/en-us/hotels/dacmd-le-meridien-dhaka/events/",
+    "capacity": 500,
+    "capacity_layout": "Grand Ballroom · banquet",
+    "facilities": [],
+    "verification": "source-checked",
+    "last_checked": "2026-10-25",
+    "evidence": [
+      {
+        "url": "https://www.marriott.com/en-us/hotels/dacmd-le-meridien-dhaka/events/",
+        "fields": [
+          "name",
+          "bn_name",
+          "area",
+          "aliases",
+          "address",
+          "category",
+          "coordinates",
+          "phones",
+          "website",
+          "capacity",
+          "capacity_layout"
+        ],
+        "checked": "2026-10-25",
+        "kind": "official",
+        "reuse": "Individual public business facts, manually reviewed; no prose, reviews, photos or database copied."
+      }
+    ],
+    "notes": "Capacity is for the Grand Ballroom in banquet layout. Other spaces have different capacities; this figure is not a hotel-wide total.",
+    "city": "Dhaka"
+  },
+  {
+    "id": "bd-sheraton-dhaka",
+    "name": "Sheraton Dhaka",
+    "bn_name": "শেরাটন ঢাকা",
+    "aliases": [],
+    "category": "Wedding Venue",
+    "division": "6",
+    "district": "47",
+    "area": "Banani",
+    "address": "44 Kemal Ataturk Avenue, Banani, Dhaka 1213, Bangladesh",
+    "coordinates": {
+      "lat": 23.793538,
+      "lon": 90.406236
+    },
+    "phones": [
+      {
+        "number": "+880255668111",
+        "source": "https://www.marriott.com/en-us/hotels/dacsi-sheraton-dhaka/events/",
+        "checked": "2026-10-25",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": "https://www.marriott.com/en-us/hotels/dacsi-sheraton-dhaka/events/",
+    "capacity": 600,
+    "capacity_layout": "Grand Ballroom · banquet",
+    "facilities": [],
+    "verification": "source-checked",
+    "last_checked": "2026-10-25",
+    "evidence": [
+      {
+        "url": "https://www.marriott.com/en-us/hotels/dacsi-sheraton-dhaka/events/",
+        "fields": [
+          "name",
+          "bn_name",
+          "area",
+          "aliases",
+          "address",
+          "category",
+          "coordinates",
+          "phones",
+          "website",
+          "capacity",
+          "capacity_layout"
+        ],
+        "checked": "2026-10-25",
+        "kind": "official",
+        "reuse": "Individual public business facts, manually reviewed; no prose, reviews, photos or database copied."
+      }
+    ],
+    "notes": "Grand Ballroom banquet capacity is 600. The official 1,000-person headline refers to reception layout, not seated banquet dining.",
+    "city": "Dhaka"
+  },
+  {
+    "id": "bd-renaissance-dhaka-gulshan",
+    "name": "Renaissance Dhaka Gulshan Hotel",
+    "bn_name": "রেনেসাঁ ঢাকা গুলশান",
+    "aliases": [],
+    "category": "Wedding Venue",
+    "division": "6",
+    "district": "47",
+    "area": "Gulshan",
+    "address": "78 Gulshan Avenue, Dhaka 1212, Bangladesh",
+    "coordinates": {
+      "lat": 23.787455,
+      "lon": 90.416788
+    },
+    "phones": [
+      {
+        "number": "+8809638200100",
+        "source": "https://www.marriott.com/en-us/hotels/dacbr-renaissance-dhaka-gulshan-hotel/events/",
+        "checked": "2026-10-25",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": "https://www.marriott.com/en-us/hotels/dacbr-renaissance-dhaka-gulshan-hotel/events/",
+    "capacity": 152,
+    "capacity_layout": "R Events Total · banquet",
+    "facilities": ["Catering"],
+    "verification": "source-checked",
+    "last_checked": "2026-10-25",
+    "evidence": [
+      {
+        "url": "https://www.marriott.com/en-us/hotels/dacbr-renaissance-dhaka-gulshan-hotel/events/",
+        "fields": [
+          "name",
+          "bn_name",
+          "area",
+          "aliases",
+          "address",
+          "category",
+          "coordinates",
+          "phones",
+          "website",
+          "capacity",
+          "capacity_layout",
+          "facilities.Catering"
+        ],
+        "checked": "2026-10-25",
+        "kind": "official",
+        "reuse": "Individual public business facts, manually reviewed; no prose, reviews, photos or database copied."
+      }
+    ],
+    "notes": "Capacity is for R Events Total in banquet layout. Other rooms and layouts have different capacities.",
+    "city": "Dhaka"
+  },
+  {
+    "id": "bd-radisson-blu-dhaka",
+    "name": "Radisson Blu Water Garden Hotel, Dhaka",
+    "bn_name": "র‍্যাডিসন ব্লু ওয়াটার গার্ডেন ঢাকা",
+    "aliases": ["Radisson Blu Dhaka Water Garden"],
+    "category": "Wedding Venue",
+    "division": "6",
+    "district": "47",
+    "area": "Dhaka Cantonment",
+    "address": "Airport Rd, Dhaka Cantonment, Dhaka 1206, Bangladesh",
+    "coordinates": null,
+    "phones": [
+      {
+        "number": "+8809666774466",
+        "source": "https://www.radissonhotels.com/en-us/hotels/radisson-blu-dhaka/meeting-events",
+        "checked": "2026-10-25",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": "https://www.radissonhotels.com/en-us/hotels/radisson-blu-dhaka/meeting-events",
+    "capacity": 1050,
+    "capacity_layout": "Grand Ballroom · theatre",
+    "facilities": ["Parking", "Catering"],
+    "verification": "source-checked",
+    "last_checked": "2026-10-25",
+    "evidence": [
+      {
+        "url": "https://www.radissonhotels.com/en-us/hotels/radisson-blu-dhaka/meeting-events",
+        "fields": [
+          "name",
+          "bn_name",
+          "aliases",
+          "area",
+          "address",
+          "category",
+          "phones",
+          "website",
+          "capacity",
+          "capacity_layout",
+          "facilities.Parking",
+          "facilities.Catering"
+        ],
+        "checked": "2026-10-25",
+        "kind": "official",
+        "reuse": "Individual publicly listed business facts only; no promotional text, images or rating data reused."
+      }
+    ],
+    "notes": "Theatre capacity, not wedding banquet seating. The page headline says 1,100, while its Grand Ballroom description says 1,050; the hall-specific figure is shown. Coordinates have not yet been verified.",
+    "city": "Dhaka"
+  },
+  {
+    "id": "bd-pan-pacific-sonargaon-dhaka",
+    "name": "Pan Pacific Sonargaon Dhaka",
+    "bn_name": "প্যান প্যাসিফিক সোনারগাঁও ঢাকা",
+    "aliases": ["Sonargaon Hotel"],
+    "category": "Wedding Venue",
+    "division": "6",
+    "district": "47",
+    "area": null,
+    "address": "107 Kazi Nazrul Islam Avenue, Dhaka 1215, Bangladesh",
+    "coordinates": null,
+    "phones": [
+      {
+        "number": "+880255028008",
+        "source": "https://www.panpacific.com/en/hotels-and-resorts/pp-dhaka/meetings.html",
+        "checked": "2026-10-25",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": "https://www.panpacific.com/en/hotels-and-resorts/pp-dhaka/meetings.html",
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "source-checked",
+    "last_checked": "2026-10-25",
+    "evidence": [
+      {
+        "url": "https://www.panpacific.com/en/hotels-and-resorts/pp-dhaka/meetings.html",
+        "fields": [
+          "name",
+          "bn_name",
+          "aliases",
+          "address",
+          "category",
+          "phones",
+          "website"
+        ],
+        "checked": "2026-10-25",
+        "kind": "official",
+        "reuse": "Public business name, address and phone facts only. No copyrighted descriptions or media reproduced."
+      }
+    ],
+    "notes": "The official overview advertises up to 2,500 attendees across an unspecified event configuration. Capacity remains unknown until a particular space and layout are confirmed. Coordinates have not yet been verified.",
+    "city": "Dhaka"
+  },
+  {
+    "id": "bd-amari-dhaka",
+    "city": "Dhaka",
+    "name": "Amari Dhaka",
+    "bn_name": null,
+    "aliases": [],
+    "category": "Banquet Hall",
+    "division": "6",
+    "district": "47",
+    "area": "Gulshan 2",
+    "address": "47, Road No 41, Gulshan-2, Dhaka 1212, Bangladesh",
+    "coordinates": null,
+    "phones": [
+      {
+        "number": "+880255059620",
+        "source": "https://www.amari.com/dhaka/meetings-events",
+        "checked": "2026-10-25",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": "https://www.amari.com/dhaka/meetings-events",
+    "capacity": 200,
+    "capacity_layout": "The Eden Grand Ballroom · banquet",
+    "facilities": [],
+    "verification": "source-checked",
+    "last_checked": "2026-10-25",
+    "evidence": [
+      {
+        "url": "https://www.amari.com/dhaka/meetings-events",
+        "fields": [
+          "name",
+          "address",
+          "city",
+          "area",
+          "category",
+          "phones",
+          "website",
+          "capacity",
+          "capacity_layout"
+        ],
+        "checked": "2026-10-25",
+        "kind": "official",
+        "reuse": "Manually checked individual business facts only; no promotional prose, photographs or ratings reproduced."
+      }
+    ],
+    "notes": "The official capacity chart lists 200 in banquet layout and 300 for reception. Banquet capacity is shown. Coordinates have not yet been verified."
+  },
+  {
+    "id": "bd-dhaka-regency",
+    "city": "Dhaka",
+    "name": "Dhaka Regency Hotel & Resort",
+    "bn_name": null,
+    "aliases": ["Dhaka Regency"],
+    "category": "Banquet Hall",
+    "division": "6",
+    "district": "47",
+    "area": "Nikunja 2 / Khilkhet",
+    "address": "Airport Road, Nikunja-2, Dhaka 1229, Bangladesh",
+    "coordinates": null,
+    "phones": [
+      {
+        "number": "+8801713332651",
+        "source": "https://dhakaregency.com/",
+        "checked": "2026-10-25",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": "https://dhakaregency.com/meeting",
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "source-checked",
+    "last_checked": "2026-10-25",
+    "evidence": [
+      {
+        "url": "https://dhakaregency.com/",
+        "fields": ["name", "aliases", "address", "city", "area", "phones"],
+        "checked": "2026-10-25",
+        "kind": "official",
+        "reuse": "Manually checked individual business facts only; no promotional prose, photographs or ratings reproduced."
+      },
+      {
+        "url": "https://dhakaregency.com/meeting",
+        "fields": ["name", "category", "website"],
+        "checked": "2026-10-25",
+        "kind": "official",
+        "reuse": "Manually checked individual business facts only; no promotional prose, photographs or ratings reproduced."
+      }
+    ],
+    "notes": "The official site describes banquet facilities but the inspected page has no numerical capacity. A separately hosted HTTP factsheet was not retrieved. Published business mobile number is not assumed to support WhatsApp."
+  }
+]

@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Explore source-checked wedding and event venues in Dhaka. Compare published capacities, facilities and business contacts with VenueRadar BD."
+    />
+    <meta
+      property="og:title"
+      content="VenueRadar BD | A considered place to celebrate"
+    />
+    <meta
+      property="og:description"
+      content="Find your Dhaka venue. Check the facts. Compare with confidence."
+    />
+    <meta name="theme-color" content="#184e42" />
+    <title>VenueRadar BD — Wedding & Event Venues in Dhaka</title>
+    <link rel="icon" href="./favicon.svg" />
+  </head>
+  <body>
+    <a class="skip" href="#results">Skip to venues</a>
+    <header>
+      <a class="brand" href="#"
+        ><span class="brandmark">V<span>R</span></span
+        ><span>VenueRadar <b>BD</b><small>THE DHAKA EDITION</small></span></a
+      >
+      <nav aria-label="Main navigation">
+        <button id="explore" class="active">Explore</button
+        ><button id="saved">Saved <span id="savedCount">0</span></button
+        ><button id="method">Our research</button>
+      </nav>
+      <span class="country">DHAKA, BANGLADESH</span>
+    </header>
+    <main>
+      <section class="intro">
+        <div>
+          <p class="eyebrow">A PLACE FOR YOUR OCCASION</p>
+          <h1>Find a place.<br />Make it yours.</h1>
+          <p>
+            Explore Dhaka’s wedding and event venues with the facts in view.<br
+              class="desktop"
+            />
+            Compare the space, check the sources, then make the call.
+          </p>
+        </div>
+        <aside class="note">
+          <span class="smallcaps">THE RESEARCH DESK</span
+          ><strong>Good decisions start with good information.</strong>
+          <p id="coverageNote">Loading our venue index…</p>
+          <a href="#" id="researchLink">How we research</a>
+        </aside>
+      </section>
+      <section class="workspace">
+        <aside class="filters">
+          <div class="filterhead">
+            <h2>Refine your search</h2>
+            <button id="reset" class="text">Reset</button>
+          </div>
+          <label for="search">Venue or neighborhood</label
+          ><input
+            id="search"
+            type="search"
+            placeholder="Try a name or neighborhood"
+            autocomplete="off"
+          /><label for="area">Neighborhood</label
+          ><select id="area">
+            <option value="">All Dhaka</option></select
+          ><label for="category">Venue type</label
+          ><select id="category">
+            <option value="">All venue types</option>
+            <option>Community Center</option>
+            <option>Wedding Venue</option>
+            <option>Banquet Hall</option>
+            <option>Convention Center</option>
+            <option>Event Hall</option></select
+          ><label for="size">Size · published capacity</label
+          ><select id="size">
+            <option value="">Any size</option>
+            <option value="Small">Small · under 300</option>
+            <option value="Medium">Medium · 300–999</option>
+            <option value="Large">Large · 1,000+</option>
+            <option value="Unknown">Unknown</option>
+          </select>
+          <fieldset>
+            <legend>Documented information</legend>
+            <label class="check"
+              ><input type="checkbox" id="phone" /> Business phone</label
+            ><label class="check"
+              ><input type="checkbox" id="capacity" /> Published capacity</label
+            ><label class="check"
+              ><input type="checkbox" id="verified" /> Independently
+              cross-checked</label
+            ><label class="check"
+              ><input type="checkbox" id="parking" /> Parking</label
+            >
+          </fieldset>
+          <button id="nearby" class="nearby">◎ Near me</button>
+          <p class="hint">
+            One-time location access, only with your permission. Your location
+            is never saved.
+          </p>
+        </aside>
+        <section class="directory" aria-label="Venue explorer">
+          <div class="toolbar">
+            <div>
+              <p class="eyebrow" id="breadcrumb">DHAKA / ALL NEIGHBORHOODS</p>
+              <h2><span id="count">0</span> venues to explore</h2>
+            </div>
+            <div class="view-switch">
+              <button id="listView" aria-pressed="true">List</button
+              ><button id="mapView" aria-pressed="false">Map</button>
+            </div>
+          </div>
+          <div class="statstrip" id="stats"></div>
+          <div class="result-controls">
+            <span id="resultLabel" role="status" aria-live="polite"
+              >Loading venues…</span
+            ><label for="sort"
+              >Sort
+              <select id="sort">
+                <option value="name">Name, A–Z</option>
+                <option value="capacity">Published capacity</option>
+                <option value="distance">Distance (location needed)</option>
+              </select></label
+            >
+          </div>
+          <p id="message" role="status"></p>
+          <div id="mapWrap" hidden>
+            <div id="map" aria-label="Map of indexed Dhaka venues"></div>
+            <p class="hint">
+              Only venues with source-checked coordinates appear on the map. If
+              tiles fail, use the list. Distances are straight-line estimates,
+              not travel distances.
+            </p>
+          </div>
+          <div id="results" tabindex="-1"></div>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <span class="footerbrand">VenueRadar BD</span>
+      <p>
+        Public business information. A starting point, not a complete directory.
+      </p>
+      <button id="footerMethod" class="text">
+        Sources, privacy & limitations
+      </button>
+    </footer>
+    <div id="compareBar" hidden>
+      <span id="compareCount"></span
+      ><button id="openCompare">Compare venues</button
+      ><button id="clearCompare">Clear</button>
+    </div>
+    <dialog id="dialog">
+      <button class="close" aria-label="Close">×</button>
+      <div id="dialogContent"></div>
+    </dialog>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

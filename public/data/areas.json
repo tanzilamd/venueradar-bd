@@ -1,0 +1,65 @@
+{
+  "city": "Dhaka",
+  "neighborhoods": [
+    {
+      "id": "1",
+      "name": "Rampura"
+    },
+    {
+      "id": "2",
+      "name": "Badda"
+    },
+    {
+      "id": "3",
+      "name": "Gulshan"
+    },
+    {
+      "id": "4",
+      "name": "Gulshan 2"
+    },
+    {
+      "id": "5",
+      "name": "Banani"
+    },
+    {
+      "id": "6",
+      "name": "Uttara"
+    },
+    {
+      "id": "7",
+      "name": "Mirpur"
+    },
+    {
+      "id": "8",
+      "name": "Dhanmondi"
+    },
+    {
+      "id": "9",
+      "name": "Mohammadpur"
+    },
+    {
+      "id": "10",
+      "name": "Khilgaon"
+    },
+    {
+      "id": "11",
+      "name": "Malibagh"
+    },
+    {
+      "id": "12",
+      "name": "Motijheel"
+    },
+    {
+      "id": "13",
+      "name": "Jatrabari"
+    },
+    {
+      "id": "14",
+      "name": "Nikunja 2 / Khilkhet"
+    },
+    {
+      "id": "15",
+      "name": "Dhaka Cantonment"
+    }
+  ]
+}

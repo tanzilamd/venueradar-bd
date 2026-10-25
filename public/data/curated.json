@@ -1,0 +1,61 @@
+{
+  "records": [
+    {
+      "id": "bd-the-westin-dhaka",
+      "decision": "admitted",
+      "basis": "Official event page inspected; business identity/address/phone and available capacity table checked. Bengali names are editorial transliterations.",
+      "checked": "2026-10-25"
+    },
+    {
+      "id": "bd-le-meridien-dhaka",
+      "decision": "admitted",
+      "basis": "Official event page inspected; business identity/address/phone and available capacity table checked. Bengali names are editorial transliterations.",
+      "checked": "2026-10-25"
+    },
+    {
+      "id": "bd-sheraton-dhaka",
+      "decision": "admitted",
+      "basis": "Official event page inspected; business identity/address/phone and available capacity table checked. Bengali names are editorial transliterations.",
+      "checked": "2026-10-25"
+    },
+    {
+      "id": "bd-renaissance-dhaka-gulshan",
+      "decision": "admitted",
+      "basis": "Official event page inspected; business identity/address/phone and available capacity table checked. Bengali names are editorial transliterations.",
+      "checked": "2026-10-25"
+    },
+    {
+      "id": "bd-radisson-blu-dhaka",
+      "decision": "admitted",
+      "basis": "Official event page inspected; business identity/address/phone and available capacity table checked. Bengali names are editorial transliterations.",
+      "checked": "2026-10-25"
+    },
+    {
+      "id": "bd-pan-pacific-sonargaon-dhaka",
+      "decision": "admitted",
+      "basis": "Official event page inspected; business identity/address/phone and available capacity table checked. Bengali names are editorial transliterations.",
+      "checked": "2026-10-25"
+    },
+    {
+      "id": "bd-amari-dhaka",
+      "decision": "admitted",
+      "basis": "Official event and contact information inspected; capacity only where a seating table is provided.",
+      "checked": "2026-10-25"
+    },
+    {
+      "id": "bd-dhaka-regency",
+      "decision": "admitted",
+      "basis": "Official event and contact information inspected; capacity only where a seating table is provided.",
+      "checked": "2026-10-25"
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "bd-radisson-blu-dhaka",
+      "field": "capacity",
+      "summary": 1100,
+      "hall_description": 1050,
+      "decision": "Use hall-specific theatre figure 1050 with visible layout caveat; banquet capacity unknown."
+    }
+  ]
+}
