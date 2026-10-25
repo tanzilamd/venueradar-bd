@@ -5825,14 +5825,7 @@
       "lat": 23.7498349,
       "lon": 90.4259238
     },
-    "phones": [
-      {
-        "number": "+8801954411222",
-        "source": "https://www.facebook.com/bdfortunehall/",
-        "checked": "2026-10-26",
-        "status": "published-not-call-tested"
-      }
-    ],
+    "phones": [],
     "website": null,
     "capacity": null,
     "capacity_layout": null,
