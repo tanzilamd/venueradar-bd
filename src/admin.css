@@ -283,13 +283,13 @@
 }
 .manager-body {
   --green: #104d40;
-  --ink: #142124;
-  --muted: #59666a;
-  --paper: #f8fafb;
-  --surface: #fff;
-  --line: #e5eaec;
-  --soft: #edf4f1;
-  --accent: #d99b74;
+  --ink: #192a27;
+  --muted: #53645e;
+  --paper: #faf9f5;
+  --surface: #fffefa;
+  --line: #e3e6df;
+  --soft: #edf4ee;
+  --accent: #b78c54;
   background: var(--paper);
   color: var(--ink);
   font-family: "Inter", "Segoe UI", Arial, sans-serif;
@@ -299,7 +299,7 @@
 .manager-body h1, .manager-body h2, .manager-body h3 { font-family: inherit; letter-spacing: -.04em; }
 .manager-body .site-header { min-height: 76px; padding: 12px max(28px, calc((100vw - 1540px) / 2)); background: #104b3e; border: 0; justify-content: space-between; }
 .manager-body .brand { color: #fff; font-size: 20px; font-weight: 700; gap: 10px; letter-spacing: -.5px; }
-.manager-body .brand b { color: #e2a27b; }
+.manager-body .brand b { color: #d7b278; }
 .manager-body .brandmark { background: none; width: 32px; height: 40px; border-radius: 0; font-family: inherit; font-size: 27px; font-weight: 500; letter-spacing: -6px; }
 .manager-body .brandmark span { font-size: 23px; padding-top: 4px; }
 .manager-body .manager-back { color: #eaf2ee; font-size: 13px; text-decoration: none; padding: 10px 12px; border: 1px solid #ffffff35; border-radius: 7px; }
@@ -329,6 +329,7 @@
 .manager-row { border: 1px solid transparent; margin-bottom: 5px; padding: 11px 12px; gap: 5px; }
 .manager-row:hover { background: #f6faf8; border-color: var(--line); }
 .manager-row[aria-pressed=true] { background: #eaf5ef; border-color: #cfe1d7; }
+.manager-row:focus-visible { outline: 3px solid #ae7839; outline-offset: -2px; }
 .manager-row strong { font-size: 13px; font-weight: 650; line-height: 1.4; }
 .manager-row span { font-size: 11px; }
 .manager-row .review-badge, .review-panel .review-badge { display: inline-flex; width: max-content; padding: 4px 8px; border-radius: 5px; background: #f7eee1; color: #80532a; font-size: 10px; font-weight: 650; }
@@ -349,6 +350,8 @@
 .manager-shell .confirm-review { display: flex; align-items: flex-start; gap: 10px; line-height: 1.5; font-size: 12px; cursor: pointer; }
 .review-panel small { display: block; margin: 9px 0 0 28px; }
 .form-actions { margin-top: 16px; }
+.manager-editor .form-actions { position: sticky; bottom: 8px; z-index: 5; padding: 12px 14px; margin-inline: -14px; background: #fffefaed; border: 1px solid var(--line); border-radius: 9px; box-shadow: 0 3px 20px #18352315; }
+.manager-body :is(button, a, input, select, textarea, summary):focus-visible { outline: 3px solid #ae7839; outline-offset: 2px; }
 .publish-panel { background: #fff; border-color: var(--line); border-radius: 10px; gap: 32px; padding: 24px; margin-top: 16px; }
 .publish-panel h2 { font-size: 22px; font-weight: 750; }
 .publish-panel .eyebrow { font-size: 10px; font-weight: 700; color: #526d60; }

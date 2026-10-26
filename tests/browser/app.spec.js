@@ -51,7 +51,7 @@ test("real Dhaka directory is contact-first with a simple detail view",async({pa
  const venue=venues.find(v=>hallIds.includes(v.id)&&v.phones.length&&!v.review_notice);
  await page.locator("#search").fill(venue.name);await expect(card(page,venue.id)).toBeVisible();
  await expect(card(page,venue.id).locator('a[href^="tel:"]')).toBeVisible();
- await card(page,venue.id).getByRole("button",{name:"Details",exact:true}).click();await expect(page.locator("#dialog")).toContainText(venue.name);
+ await card(page,venue.id).getByRole("button",{name:/^Details for /}).click();await expect(page.locator("#dialog")).toContainText(venue.name);
  await expect(page.locator("#dialog")).toContainText("Phone numbers");await expect(page.locator("#dialog")).not.toContainText("Published capacity");await expect(page.locator("#dialog .source-details")).toHaveCount(0);expect(errors).toEqual([]);
 });
 test("area results are exact until nearby neighborhoods are requested",async({page})=>{
@@ -122,7 +122,7 @@ test("hotel can be saved independently and its shared detail can appear on the d
   await cards(page).locator(".save").click();
   await page.locator("#saved").click();
   await expect(cards(page)).toContainText("Hotel");
-  await cards(page).getByRole("button", { name: "Details", exact: true }).click();
+  await cards(page).getByRole("button", { name: /^Details for / }).click();
   await page.getByRole("button", { name: "Copy venue link", exact: true }).click();
   const link = await page.evaluate(() => navigator.clipboard.readText());
   expect(new URL(link).searchParams.get("venue")).toBe("bd-test-hotel");
@@ -149,7 +149,7 @@ test("flagged listings rank last and URL state restores after Back and reload", 
   await expect(page.locator("#area")).toHaveValue("Khilgaon");
   await page.reload();
   await expect(cards(page)).toHaveCount(1);
-  await cards(page).getByRole("button", { name: "Details", exact: true }).click();
+  await cards(page).getByRole("button", { name: /^Details for / }).click();
   expect(new URL(page.url()).searchParams.get("venue")).toBe("bd-test-beta");
   await page.goBack();
   await expect(page.locator("#dialog")).not.toBeVisible();
@@ -199,6 +199,10 @@ test("map clusters nearby pins accessibly", async ({ page }) => {
   await expect(page.locator(".marker-cluster")).toHaveCount(1);
   await expect(page.locator(".marker-cluster")).toHaveAttribute("aria-label", /2 venues/);
   await expect(page.locator(".marker-cluster")).toHaveAttribute("tabindex", "0");
+  await page.locator(".marker-cluster").evaluate((node) => node.addEventListener("click", () => { window.clusterKeyboardClicks = (window.clusterKeyboardClicks || 0) + 1; }));
+  await page.locator(".marker-cluster").focus();
+  await page.keyboard.press("Enter");
+  expect(await page.evaluate(() => window.clusterKeyboardClicks)).toBeGreaterThan(0);
 });
 test("mobile map selection actions remain above the Compare tray", async ({ page }) => {
   await page.setViewportSize({ width: 360, height: 800 });
@@ -213,6 +217,11 @@ test("mobile map selection actions remain above the Compare tray", async ({ page
     const tray = await page.locator("#compareBar").boundingBox();
     return actions.y + actions.height <= tray.y - 8;
   }).toBe(true);
+  const positions = await page.locator("#mapSelection .card-actions > *").evaluateAll((nodes) => nodes.map((node) => { const b = node.getBoundingClientRect(); return { x: b.x, y: b.y, right: b.right, bottom: b.bottom }; }));
+  for (let i = 0; i < positions.length; i++) for (let j = i + 1; j < positions.length; j++) {
+    const a = positions[i], b = positions[j];
+    expect(a.right <= b.x || b.right <= a.x || a.bottom <= b.y || b.bottom <= a.y).toBe(true);
+  }
 });
 test("one-time nearby distance is sorted and never serialized or stored", async ({ page, context }) => {
   await mock(page);
@@ -275,7 +284,7 @@ test("mobile filters have draft, cancel, clear and apply; combobox is keyboard u
   await page.keyboard.press("Escape");
   await expect(cards(page)).toHaveCount(1);
 });
-for (const width of [360, 390, 768, 1363, 1920]) test(`responsive layout and detail ${width}`, async ({ page }) => {
+for (const width of [320, 360, 390, 430, 768, 1024, 1363, 1440, 1920]) test(`responsive layout and detail ${width}`, async ({ page }) => {
   await page.setViewportSize({ width, height: 936 });
   await healthy(page);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
@@ -298,7 +307,7 @@ test("accessible explore, details, comparison and mobile filter dialogs", async 
   await page.locator("#openCompare").click();
   await scan();
   await page.keyboard.press("Escape");
-  await card(page, "bd-test-alpha").getByRole("button", { name: "Details", exact: true }).click();
+  await card(page, "bd-test-alpha").getByRole("button", { name: /^Details for / }).click();
   await scan();
   await page.keyboard.press("Escape");
   await page.setViewportSize({ width: 360, height: 800 });
@@ -370,6 +379,8 @@ test("desktop workspace selection updates the contact panel and lazy location ma
   await expect(inspector.locator("h2")).toContainText("Beta");
   await expect(card(page, "bd-test-beta")).toHaveClass(/selected/);
   await expect(page.locator("#selectionAnnouncement")).toContainText("Beta selected");
+  await expect(inspector.locator(".venue-marker")).toHaveCount(0);
+  await inspector.getByRole("button", { name: /Show location map/ }).click();
   await expect(inspector.locator(".venue-marker")).toHaveCount(1);
   await expect(inspector.locator('a[href="tel:+8801712345678"]')).toBeVisible();
   await card(page, "bd-test-alpha").locator(".card-address").click();
@@ -394,6 +405,7 @@ test("workspace map fallback stays usable and venue labels are rendered as text"
   await page.goto("/");
   await cards(page).first().locator(".venue-name").click();
   const inspector = page.locator("#venueInspector");
+  await inspector.getByRole("button", { name: /Show location map/ }).click();
   await expect(inspector).toContainText("Map unavailable");
   await expect(inspector.getByRole("link", { name: "Open in Google Maps" })).toBeVisible();
   await inspector.locator(".venue-marker").hover();

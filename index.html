@@ -45,12 +45,12 @@
     </header>
     <main>
       <section class="discovery" aria-labelledby="pageTitle">
-        <div class="intro"><div><p class="eyebrow">THE DHAKA HALL DIRECTORY</p><h1 id="pageTitle">Find a hall in Dhaka.</h1></div><p class="intro-note">Your area. Your shortlist. One call closer.</p></div>
+        <div class="intro"><div><p class="eyebrow">THE DHAKA HALL DIRECTORY</p><h1 id="pageTitle">Find a hall in Dhaka.</h1><p class="intro-note">Browse by neighborhood, check the location and make the call.</p></div></div>
         <div id="discoverySearchDock"><div class="search-row">
           <form id="searchForm" role="search"><label for="search">Search a venue or neighborhood</label><div class="search-input"><span id="searchIcon" aria-hidden="true"></span><input id="search" type="search" placeholder="Search halls or neighborhoods" autocomplete="off" maxlength="180" disabled><button id="clearSearch" type="button" aria-label="Clear search" hidden>×</button></div></form>
           <div id="searchAreaDock"></div>
         </div></div>
-        <div class="area-explorer" aria-label="Browse neighborhoods"><button id="allAreas" disabled>All Dhaka</button><div id="priorityAreas" class="area-chips"><span class="loading-chip skeleton" aria-hidden="true"></span><span class="loading-chip skeleton" aria-hidden="true"></span><span class="loading-chip skeleton" aria-hidden="true"></span></div></div>
+        <div class="area-explorer" aria-label="Browse neighborhoods"><button id="allAreas" disabled>All Dhaka</button><div id="priorityAreas" class="area-chips"><span class="loading-chip skeleton" aria-hidden="true"></span><span class="loading-chip skeleton" aria-hidden="true"></span><span class="loading-chip skeleton" aria-hidden="true"></span></div><button id="moreAreas" type="button" aria-label="More areas in Dhaka">More areas<span aria-hidden="true"> ↓</span></button></div>
       </section>
       <p id="storageWarning" class="notice" hidden>Browser storage is unavailable. Saved venues and comparisons will last for this session only.</p>
       <section class="workspace">
@@ -66,7 +66,7 @@
             <div id="mapWrap" hidden><div class="map-toolbar"><button id="fitMap">Fit results</button><span id="markerContext"></span></div><div id="map" aria-label="Map of indexed Dhaka venues"></div><p id="mapMessage" class="hint" role="status"></p><div id="mapSelection" class="map-selection"></div><p class="hint">Map points may be approximate; they are not verified entrances. <button id="mapListFallback" class="text-button">View all results in the list</button></p></div>
             <div class="venue-columns" aria-hidden="true"><span>Venue</span><span>Area</span><span>Contact &amp; actions</span></div>
             <div id="results" tabindex="-1"><div class="card-skeleton skeleton" aria-hidden="true"></div><div class="card-skeleton skeleton" aria-hidden="true"></div><p class="sr-only">Venue information is loading.</p></div>
-          </div><section id="venueInspector" class="venue-inspector" aria-label="Selected hall" hidden></section></div>
+          </div><section id="venueInspector" class="venue-inspector" aria-label="Selected venue" hidden></section></div>
         </section>
       </section>
     </main>

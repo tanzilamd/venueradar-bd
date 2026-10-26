@@ -159,13 +159,14 @@ function filterPanel({ prefix = "", values, areas, rows, onChange, onLocate }) {
     parent.append(label);
     return label;
   }
-  check("includeNearby", "Include nearby neighborhoods");
+  const nearbyCheck = check("includeNearby", "Include nearby neighborhoods");
   select("collection", "Collection", [["community-halls", "Halls & centers"], ["hotels", "Hotel venues"], ["", "All venues"]]);
   check("phone", "With a phone number");
   root.append(button("Near me", onLocate, "nearby"), el("p", "One-time location access, only with permission. Your location is never saved.", "hint"));
   const sync = (next, nextRows = rows) => {
     current = { ...next };
     area.set(current.area, nextRows);
+    nearbyCheck.hidden = !current.area;
     for (const [key, node] of nodes) if (node.type === "checkbox") node.checked = !!current[key];
     else node.value = current[key];
   };

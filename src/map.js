@@ -10,6 +10,13 @@ export function createMap(container, { onSelect, onError }) {
   tiles.on("tileerror", () => onError("Map tiles could not load. Switch to the list or use a venue\u2019s Google Maps link."));
   const clusters = L.markerClusterGroup({ chunkedLoading: true });
   map.addLayer(clusters);
+  container.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    const cluster = event.target.closest(".marker-cluster");
+    if (!cluster) return;
+    event.preventDefault();
+    cluster.click();
+  });
   function accessibleClusters() {
     for (const node of container.querySelectorAll(".marker-cluster")) {
       const count = node.textContent.trim();
