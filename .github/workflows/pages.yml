@@ -61,6 +61,7 @@ jobs:
       - name: Verify the deployed website in a real browser
         env:
           LIVE_SITE_URL: https://tanzilahmed.tech/venueradar-bd/
+          VR_REQUIRE_MAP_TILES: '1'
         run: node scripts/verify-live.mjs
       - name: Save live verification evidence
         if: always()

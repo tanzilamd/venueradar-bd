@@ -59,3 +59,8 @@
 ## Clean home links and share previews
 - Use the native home link to clear search parameters and fragments without adding `#`.
 - Add an original 1200×630 PNG/SVG brand card, absolute Open Graph image metadata and Twitter large-image card metadata. Preview crawlers can read all metadata without JavaScript.
+
+## MapLibre map refresh
+- Replace the default Leaflet basemap with a lazy-loaded MapLibre/OpenFreeMap Positron vector map; keep the existing Leaflet map as a fallback for devices without WebGL 2.
+- Preserve map/list selection, fit results, coordinate gaps and contact actions. Add keyboard-accessible venue markers, clusters and a venue chooser for shared coordinates.
+- Keep provider attribution visible, retain the list/Google Maps fallback when imagery fails, and verify real vector tiles in the Pages live-browser workflow. No venue records or paid services changed.

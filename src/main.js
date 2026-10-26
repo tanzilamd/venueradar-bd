@@ -4,7 +4,7 @@ import { filterVenues, sizeOf, hasCapacity, capacityText, readIds, mapsURL } fro
 import { defaultFilters, readURL, stateURL } from "./state.js";
 import { filterPanel, areaCounts, areaNames, groupNames, nearbyNames } from "./filters.js";
 import { $, el, button, external, phoneLink, displayName, dateText, icon, withIcon, sourceLabel } from "./ui.js";
-let venues = [], areas, collections, results = [], favorites = [], compare = [], sharedIds = [], ready = false, locationPoint = null, selected = null, sidebar = null, draftPanel = null, draft = null, mapController = null, mapPromise = null, mapTileError = "";
+let venues = [], areas, collections, results = [], favorites = [], compare = [], sharedIds = [], ready = false, locationPoint = null, selected = null, sidebar = null, draftPanel = null, draft = null, mapController = null, mapControllerLoading = null, mapPromise = null, mapTileError = "";
 let state = { tab: "explore", filters: defaultFilters("explore"), view: "list", detailId: null, sharedIds: [] };
 const contexts = { explore: { filters: defaultFilters("explore"), view: "list" }, saved: { filters: defaultFilters("saved"), view: "list" }, shared: { filters: defaultFilters("shared"), view: "list" } };
 let storage = null, storageWorks = true, modalKind = null, returnFocus = null, undo = null, searchTimer = null, feedbackTimer = null, loading = false;
@@ -360,7 +360,7 @@ async function ensurePreviewMap() {
       const module = await mapPromise;
       const v = results.find((row) => row.id === selected);
       if (!v?.coordinates || $("venueInspector").hidden) return;
-      if (!previewMap) previewMap = module.createLocationPreview(previewMapNode, () => {
+      if (!previewMap) previewMap = await module.createLocationPreview(previewMapNode, () => {
         previewMapError = true;
         if (!$("venueInspector").querySelector(".inspector-map-message")) {
           previewMapNode.after(el("p", "Map unavailable. Use Google Maps below.", "inspector-map-message"));
@@ -601,7 +601,7 @@ function method() {
   const box = el("section");
   box.append(heading("About VenueRadar BD"));
   box.append(el("p", "Find community centers, convention halls and event venues by area in Dhaka. This is a growing directory, not a complete list of every hall."));
-  box.append(el("h3", "Information & sources"), el("p", "We use public venue and operator websites, individually reviewed business listings, OpenStreetMap and clearly labelled owner contributions. Published numbers are not call-tested. Confirm the address, current operation and booking details directly. Google Maps provides current ratings and reviews; we do not copy ratings or reviews."));
+  box.append(el("h3", "Information & sources"), el("p", "We use public venue and operator websites, individually reviewed business listings, OpenStreetMap and clearly labelled owner contributions. OpenFreeMap serves the interactive basemap; attribution appears on the map. Published numbers are not call-tested. Confirm the address, current operation and booking details directly. Google Maps provides current ratings and reviews; we do not copy ratings or reviews."));
   box.append(el("h3", "Your privacy"), el("p", "Saved venues and comparisons stay in this browser. Near me requests your location once and does not store it. No account is needed to explore. Maps and external websites receive normal connection information."));
   box.append(external("Data sources & research notes", "https://github.com/tanzilamd/venueradar-bd/blob/main/docs/DATA_SOURCES.md"), el("p"), external("© OpenStreetMap contributors · ODbL", "https://www.openstreetmap.org/copyright"));
   const manage = el("a", "Manage the directory", "manage-link");
@@ -614,12 +614,15 @@ async function ensureMap() {
   if (!mapController) {
     $("mapMessage").textContent = "Loading the map…";
     try {
-      if (!mapPromise) mapPromise = import("./map.js");
-      const module = await mapPromise;
-      if (!mapController) mapController = module.createMap($("map"), { onSelect: (id) => selectOnMap(id), onError: (text) => {
-        mapTileError = text;
-        if (results.some((v) => v.coordinates)) $("mapMessage").textContent = text;
-      } });
+      if (!mapControllerLoading) mapControllerLoading = (async () => {
+        if (!mapPromise) mapPromise = import("./map.js");
+        const module = await mapPromise;
+        mapController = await module.createMap($("map"), { onSelect: (id) => selectOnMap(id), onError: (text) => {
+          mapTileError = text;
+          if (results.some((v) => v.coordinates)) $("mapMessage").textContent = text;
+        } });
+      })().finally(() => { mapControllerLoading = null; });
+      await mapControllerLoading;
     } catch {
       mapPromise = null;
       $("mapMessage").textContent = "The map could not load. Use the list and Google Maps links.";

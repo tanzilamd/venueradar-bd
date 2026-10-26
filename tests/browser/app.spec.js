@@ -178,7 +178,7 @@ test("map lazy loading, marker selection, tile failure fallback and unknown-poin
   await mock(page);
   const requests = [];
   page.on("request", (r) => requests.push(r.url()));
-  await page.route("https://tile.openstreetmap.org/**", (r) => r.abort());
+  await page.route("https://tiles.openfreemap.org/**", (r) => r.abort());
   await page.goto("/");
   await expect(cards(page)).toHaveCount(3);
   expect(requests.some((u) => u.includes("/src/map.js"))).toBe(false);
@@ -188,7 +188,7 @@ test("map lazy loading, marker selection, tile failure fallback and unknown-poin
   await expect(page.locator(".card.selected")).toHaveCount(1);
   await expect(page.locator("#mapSelection")).toContainText("TEST ONLY");
   await expect(page.locator("#markerContext")).toContainText("1 without a marker");
-  await expect(page.locator("#mapMessage")).toContainText("Map tiles could not load");
+  await expect(page.locator("#mapMessage")).toContainText("Map imagery could not load");
   await page.locator("#mapListFallback").click();
   await expect(cards(page)).toHaveCount(3);
 });
@@ -203,6 +203,24 @@ test("map clusters nearby pins accessibly", async ({ page }) => {
   await page.locator(".marker-cluster").focus();
   await page.keyboard.press("Enter");
   expect(await page.evaluate(() => window.clusterKeyboardClicks)).toBeGreaterThan(0);
+  await expect(page.locator(".cluster-venue-list button")).toHaveCount(2);
+  await page.locator(".cluster-venue-list button").first().click();
+  await expect(page.locator("#mapSelection h3")).toContainText("TEST ONLY");
+});
+test("devices without WebGL keep the Leaflet map and its list fallback", async ({ page }) => {
+  await page.addInitScript(() => {
+    const original = HTMLCanvasElement.prototype.getContext;
+    HTMLCanvasElement.prototype.getContext = function (kind, ...args) {
+      return kind === "webgl2" ? null : original.call(this, kind, ...args);
+    };
+  });
+  await mock(page);
+  await page.goto("/");
+  await page.locator("#mapView").click();
+  await expect(page.locator("#map.leaflet-container")).toBeVisible();
+  await expect(page.locator("#map .venue-marker")).toHaveCount(2);
+  await page.locator("#mapListFallback").click();
+  await expect(cards(page)).toHaveCount(3);
 });
 test("mobile map selection actions remain above the Compare tray", async ({ page }) => {
   await page.setViewportSize({ width: 360, height: 800 });
@@ -313,6 +331,10 @@ test("accessible explore, details, comparison and mobile filter dialogs", async 
   await page.setViewportSize({ width: 360, height: 800 });
   await page.locator("#mobileFilters").click();
   await scan();
+  await page.keyboard.press("Escape");
+  await page.locator("#mapView").click();
+  await page.locator("#map .venue-marker, #map .marker-cluster").first().waitFor();
+  await scan();
 });
 test("saving and comparing preserve the current map viewport", async ({ page }) => {
   await mock(page);
@@ -323,11 +345,13 @@ test("saving and comparing preserve the current map viewport", async ({ page }) 
   await map.click({ position: { x: 180, y: 170 } });
   await page.keyboard.press("ArrowRight");
   await page.waitForTimeout(300);
-  const pane = page.locator(".leaflet-map-pane");
-  const transform = await pane.evaluate((n) => n.style.transform);
+  const marker = page.locator("#map .venue-marker").first();
+  const position = await marker.boundingBox();
   await card(page, "bd-test-alpha").locator(".save").click();
   await card(page, "bd-test-alpha").locator(".compare-toggle").click();
-  expect(await pane.evaluate((n) => n.style.transform)).toBe(transform);
+  const after = await marker.boundingBox();
+  expect(Math.abs(after.x - position.x)).toBeLessThan(2);
+  expect(Math.abs(after.y - position.y)).toBeLessThan(2);
 });
 test("200 percent desktop reflow equivalent keeps controls and dialogs usable", async ({ browser }) => {
   const context = await browser.newContext({ viewport: { width: 683, height: 468 }, deviceScaleFactor: 2 });
@@ -401,15 +425,14 @@ test("workspace map fallback stays usable and venue labels are rendered as text"
   await page.setViewportSize({ width: 1440, height: 936 });
   const name = 'TEST ONLY <img src=x onerror="window.injected=1">';
   await mock(page, [fixture("bd-test-escaped", name)]);
-  await page.route("https://tile.openstreetmap.org/**", (r) => r.fulfill({ status: 503, body: "Unavailable" }));
+  await page.route("https://tiles.openfreemap.org/**", (r) => r.fulfill({ status: 503, body: "Unavailable" }));
   await page.goto("/");
   await cards(page).first().locator(".venue-name").click();
   const inspector = page.locator("#venueInspector");
   await inspector.getByRole("button", { name: /Show location map/ }).click();
   await expect(inspector).toContainText("Map unavailable");
   await expect(inspector.getByRole("link", { name: "Open in Google Maps" })).toBeVisible();
-  await inspector.locator(".venue-marker").hover();
-  await expect(inspector.locator(".leaflet-tooltip")).toHaveText(name);
+  await expect(inspector.locator(".venue-marker")).toHaveAttribute("data-label", name);
   await expect(page.locator("#inspectorMap img[src=x]")).toHaveCount(0);
   expect(await page.evaluate(() => window.injected)).toBeUndefined();
   await expect(inspector.locator('a[href^="tel:"]')).toBeVisible();

@@ -8,7 +8,7 @@ Live project: https://tanzilahmed.tech/venueradar-bd/
 
 - English interface, Dhaka areas, name/alias search and optional nearby neighborhoods.
 - Phone and Maps actions, a short detail view, Saved venues and comparison.
-- Lazy-loaded Leaflet/OpenStreetMap map with clustering, selected cards, and list fallback.
+- Lazy-loaded MapLibre/OpenFreeMap vector map with clustering, selected cards, and list fallback. Browsers without WebGL use the original Leaflet/OpenStreetMap map.
 - One-time nearby distance sorting; precise location is never saved or shared.
 - Local Storage favorites and comparisons, with graceful storage failure handling.
 - Clean home links and a static Open Graph/Twitter sharing image.
@@ -40,6 +40,8 @@ npm run build
 ## Data and safe updates
 
 The active dataset is `public/data/venues.json`. Sources, licensed discovery material and reviewed areas remain under `public/data/`; historical reviews and archived records live under `docs/`. Counts are calculated from the current active data, never hardcoded into the interface.
+
+The map provider, attribution, WebGL fallback and maintenance steps are documented in [the map guide](docs/MAP_GUIDE.md). OpenFreeMap's public instance requires no key or billing and provides no availability guarantee; the directory retains its list and outbound Maps links if imagery is unavailable.
 
 Read [research guidance](docs/RESEARCH_GUIDE.md), [safe-update rules](docs/DATA_UPDATE_GUIDE.md), [sources](docs/DATA_SOURCES.md), and the [26October contact-directory revision](docs/reports/2026-10-26-contact-directory.md) for the current checkpoint, known conflicts, unresolved contacts and actual deployment state. Existing reports are dated history, not a claim that their counts describe every later edit.
 

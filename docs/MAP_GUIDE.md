@@ -1,0 +1,13 @@
+# Dhaka map implementation
+
+The directory uses **MapLibre GL JS** with OpenFreeMap's public Positron vector style. It needs no account, API key, backend or paid plan. The map module and its worker load only after a visitor opens Map view or requests the selected venue's location preview. Venue facts remain in static JSON; the map provider supplies only basemap imagery.
+
+MapLibre renders the basemap. Supercluster groups the actual venue coordinates. Markers and cluster counts are HTML buttons so they can be activated with a pointer or keyboard. When several venues share a point, the cluster opens an accessible list rather than hiding overlapping venues. Selecting a marker updates the existing card and contact actions. Fit results, filtered counts, on-demand preview and venues without coordinates retain their existing behavior.
+
+The OpenFreeMap style provides visible attribution for OpenFreeMap, OpenMapTiles and OpenStreetMap. Its [quick start](https://openfreemap.org/quick_start/) describes the no-key style URL; its [terms](https://openfreemap.org/tos/) allow use of the public service but provide no availability guarantee. If imagery fails, venue markers, the list and Google Maps links remain available. Devices without WebGL 2 use the original Leaflet/OpenStreetMap map through a lazy fallback module. Do not hide attribution or bulk-download map tiles.
+
+For a future style change, update `STYLE_URL` and the small `tuneStyle()` palette in `src/map.js`; verify the new provider's licence, attribution, coverage and availability before publishing. Keep `src/map-fallback.js` until the WebGL fallback is no longer needed.
+
+Visual comparison at 390px and 1440px: [previous mobile map](map-refresh/before-390.jpg), [new mobile map](map-refresh/after-390.jpg), [previous desktop map](map-refresh/before-1440.jpg), [new desktop map](map-refresh/after-1440.jpg). Both “before” screenshots were captured from the former live site with tiles loaded. The “after” screenshots are from the local production build with OpenFreeMap tiles loaded.
+
+Validation covers map/list synchronization, selection, clustering and keyboard activation, shared-coordinate venues, fit/viewport persistence, tile errors, missing coordinates, mobile actions above the Compare tray, WebGL fallback, and the live Pages URL. `scripts/verify-live.mjs` records the number of successful OpenFreeMap vector-tile requests.

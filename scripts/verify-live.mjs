@@ -17,7 +17,10 @@ const browser = await chromium.launch({
 try {
   const context = await browser.newContext({ viewport: { width: 1363, height: 936 } }), page = await context.newPage();
   page.on("pageerror", (e) => report.javascriptErrors.push(e.message));
+  let openFreeMapResponses = 0, vectorTilesLoaded = 0;
   page.on("response", (r) => {
+    if (r.url().startsWith("https://tiles.openfreemap.org/") && r.status() === 200) openFreeMapResponses++;
+    if (r.url().startsWith("https://tiles.openfreemap.org/planet/") && r.url().includes(".pbf") && r.status() === 200) vectorTilesLoaded++;
     if (r.url().startsWith(url) && r.status() >= 400) report.failedAssets.push([r.url(), r.status()]);
   });
   const ready = async (target = url) => {
@@ -98,11 +101,14 @@ try {
   }
   report.checks.push("Saved persistence and two-venue comparison");
   await page.locator("#mapView").click();
-  await page.locator("#map .leaflet-marker-icon").first().waitFor({ timeout: 2e4 });
-  await page.waitForTimeout(1500);
-  report.mapTilesLoaded = await page.locator("#map .leaflet-tile-loaded").count();
+  await page.locator("#map.maplibregl-map .maplibregl-canvas").waitFor({ timeout: 2e4 });
+  await page.locator("#map .venue-marker, #map .marker-cluster").first().waitFor({ timeout: 2e4 });
+  for (let attempt = 0; attempt < 16 && !vectorTilesLoaded; attempt++) await page.waitForTimeout(500);
+  report.openFreeMapResourcesLoaded = openFreeMapResponses;
+  report.openFreeMapVectorTilesLoaded = vectorTilesLoaded;
+  if (process.env.VR_REQUIRE_MAP_TILES === "1") assert.ok(vectorTilesLoaded > 0, "OpenFreeMap vector tiles did not load in the live browser");
   report.clusters = await page.locator("#map .marker-cluster").count();
-  report.checks.push("Lazy Leaflet map renders venue markers/clusters");
+  report.checks.push("Lazy MapLibre/OpenFreeMap map renders venue markers/clusters");
   await page.screenshot({ path: out + "/desktop-map.png" });
   await page.locator("#listView").click();
   await page.setViewportSize({ width: 360, height: 800 });

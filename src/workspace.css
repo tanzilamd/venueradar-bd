@@ -138,6 +138,7 @@
 .directory-page .inspector-location-wrap .inspector-location { margin-bottom: 0; }
 .directory-page .inspector-map { height: 174px; border-radius: 8px; border: 1px solid var(--line); background: #edf2f0; isolation: isolate; }
 .directory-page .inspector-map .leaflet-control-attribution { font-size: 9px !important; background: white; }
+.directory-page .inspector-map .maplibregl-ctrl-attrib { font-size: 9px; max-width: 100%; }
 .directory-page .inspector-map-message { font-size: 11px; color: #596c61; margin: 8px 0 0; }
 .directory-page .inspector-eyebrow { color: #836443; font-size: 10px; font-weight: 700; letter-spacing: 1.25px; margin-bottom: 7px; }
 .directory-page .venue-inspector h2 { font-size: 23px; font-weight: 750; line-height: 1.25; letter-spacing: -.6px; margin-bottom: 10px; overflow-wrap: anywhere; }
@@ -168,9 +169,24 @@
 .directory-page .map-selection .map-selection-actions > .primary { background: var(--green); color: #fff; border-color: var(--green); font-weight: 650; justify-content: center; flex-direction: row; padding: 8px; }
 .directory-page .map-selection .map-selection-actions > .primary .icon { width: 16px; height: 16px; }
 .directory-page .map-selection .map-selection-actions > :last-child { background: #f1f5f1; color: var(--green); border-color: #dce6dd; }
+.directory-page #map, .directory-page .inspector-map { background: #edf1e9; }
+.directory-page .venue-marker { width: 44px; height: 44px; padding: 0; cursor: pointer; }
+.directory-page .venue-marker .map-pin { border-color: #fffefa; box-shadow: 0 2px 9px #15382d55; }
+.directory-page .venue-marker:is(:hover, :focus-visible)::after { content: attr(data-label); position: absolute; left: 50%; bottom: calc(100% + 5px); transform: translateX(-50%); width: max-content; max-width: 220px; padding: 6px 9px; border-radius: 5px; background: #fffefa; border: 1px solid #d8e3d8; color: var(--ink); box-shadow: 0 3px 12px #152a2040; font-size: 11px; line-height: 1.3; text-align: center; white-space: normal; pointer-events: none; }
 .directory-page .venue-marker.is-selected .map-pin { background: #a5773e; box-shadow: 0 0 0 5px #cba76a80, 0 1px 5px #173b3166; }
 .directory-page .marker-cluster-small, .directory-page .marker-cluster-medium, .directory-page .marker-cluster-large { background: #a9cbb4a6; }
 .directory-page .marker-cluster-small div, .directory-page .marker-cluster-medium div, .directory-page .marker-cluster-large div { background: #226652dc; color: #fff; font-weight: 700; }
+.directory-page .marker-cluster { width: 44px; height: 44px; padding: 0; border: 4px solid #d3e5d9; border-radius: 50%; background: #1b604d; color: white; box-shadow: 0 2px 9px #183d3352; cursor: pointer; }
+.directory-page .marker-cluster span { display: grid; place-items: center; width: 100%; height: 100%; font-size: 12px; font-weight: 750; line-height: 1; }
+.directory-page .marker-cluster:hover, .directory-page .marker-cluster:focus-visible { background: #0d4839; border-color: #afcdb9; }
+.directory-page .maplibregl-control-container .maplibregl-ctrl-group { border-radius: 8px; box-shadow: 0 2px 12px #1c372e38; overflow: hidden; }
+.directory-page .maplibregl-control-container .maplibregl-ctrl-group button { width: 38px; height: 38px; }
+.directory-page .maplibregl-ctrl-attrib { background: #fffefaed; color: #344e47; padding: 3px 6px; font-size: 10px; }
+.directory-page .maplibregl-ctrl-attrib a { color: #205848; }
+.directory-page .venue-cluster-popup .maplibregl-popup-content { padding: 12px; border-radius: 9px; border: 1px solid var(--line); box-shadow: 0 5px 20px #17372a30; }
+.directory-page .cluster-venue-list { display: grid; gap: 5px; max-height: 200px; overflow-y: auto; }
+.directory-page .cluster-venue-list strong { margin: 0 26px 4px 0; font-size: 12px; }
+.directory-page .cluster-venue-list button { width: 100%; padding: 8px; min-height: 38px; text-align: left; border: 0; border-radius: 5px; background: #edf4ee; color: var(--green); font-size: 12px; }
 .directory-page footer { max-width: 1540px; margin-top: 34px; padding: 24px 36px; border-color: var(--line); font-size: 11px; }
 .directory-page .footerbrand { font-family: inherit; font-weight: 650; font-size: 16px; }
 .directory-page dialog { border: 1px solid var(--line); border-radius: 14px; background: white; }
