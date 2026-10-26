@@ -65,11 +65,14 @@ try {
   await page.locator("#venueInspector h2").waitFor();
   const cleanName = (name) => name.toLowerCase().replace(/[\s,.]+$/g, "").replace(/\s+/g, " ").trim();
   assert.equal(cleanName(await page.locator("#venueInspector h2").innerText()), cleanName(venue.name));
-  if (venue.coordinates) await page.locator("#inspectorMap .venue-marker").waitFor({ timeout: 2e4 });
+  if (venue.coordinates) {
+    await page.locator("#venueInspector").getByRole("button", { name: /Show location map/ }).click();
+    await page.locator("#inspectorMap .venue-marker").waitFor({ timeout: 2e4 });
+  }
   if (venue.phones.length) assert.equal(await page.locator('#venueInspector a[href="tel:' + venue.phones[0].number + '"]').count(), 1);
   await page.screenshot({ path: out + "/desktop-workspace.png" });
   report.checks.push("Clean Workspace row selection, contact inspector and on-demand location map");
-  await card.getByRole("button", { name: "Details", exact: true }).click();
+  await card.getByRole("button", { name: /^Details for / }).click();
   await page.locator("#dialog[open]").waitFor();
   assert.ok((await page.locator("#dialog").innerText()).includes("Phone numbers"));
   await page.keyboard.press("Escape");
