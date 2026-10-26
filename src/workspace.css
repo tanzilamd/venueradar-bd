@@ -200,7 +200,7 @@
 .directory-page .saved-empty .empty p { max-width: 46ch; }
 .directory-page #dialog[data-kind="detail"] .venue-detail { max-width: 680px; }
 .directory-page #dialog[data-kind="detail"] .detail-topline { color: #80613d; font-size: 11px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
-.directory-page #dialog[data-kind="detail"] .detail-actions { padding: 0 0 15px; border-bottom: 1px solid var(--line); }
+.directory-page #dialog[data-kind="detail"] .detail-actions { padding: 0; border: 0; }
 .directory-page #dialog[data-kind="detail"] .detail-extras { border: 0; margin-top: 4px; }
 .directory-page #dialog[data-kind="detail"] .detail-extras > summary { font-size: 13px; font-weight: 650; }
 .directory-page #dialog[data-kind="detail"] .contact-list li { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
@@ -313,7 +313,6 @@
   .directory-page .card-head { display: block; }
   .directory-page .card-head > div { display: flex; flex-direction: column; align-items: start; }
   .directory-page .card h3 { order: 0; padding-right: 92px; font-size: 16px; line-height: 1.4; align-self: stretch; }
-  .directory-page .card .venue-name::after { content: "  ·  Details ›"; color: var(--green); font-size: 11px; font-weight: 600; white-space: nowrap; }
   .directory-page .card-location { position: absolute; right: 12px; top: 17px; max-width: 88px; order: 1; display: flex; margin: 0; font-size: 10px; align-self: start; }
   .directory-page .card-location > span:not(.nearby-tag) { font-size: 9px; padding: 4px 7px; }
   .directory-page .card-address { order: 2; font-size: 12px; line-height: 1.55; margin: 6px 0 0; align-self: stretch; }
