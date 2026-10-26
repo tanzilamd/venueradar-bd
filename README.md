@@ -8,7 +8,7 @@ Live project: https://tanzilahmed.tech/venueradar-bd/
 
 - English interface, Dhaka areas, name/alias search and optional nearby neighborhoods.
 - Phone and Maps actions, a short detail view, Saved venues and comparison.
-- Lazy-loaded MapLibre/OpenFreeMap vector map with clustering, selected cards, and list fallback. Browsers without WebGL use the original Leaflet/OpenStreetMap map.
+- Lazy-loaded MapLibre/OpenFreeMap vector map with clustering, visible-area venue browsing, one-time Near me positioning, selected contacts, and list fallback. Browsers without WebGL use the original Leaflet/OpenStreetMap map.
 - One-time nearby distance sorting; precise location is never saved or shared.
 - Local Storage favorites and comparisons, with graceful storage failure handling.
 - Clean home links and a static Open Graph/Twitter sharing image.

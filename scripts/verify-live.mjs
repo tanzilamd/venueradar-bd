@@ -109,6 +109,12 @@ try {
   if (process.env.VR_REQUIRE_MAP_TILES === "1") assert.ok(vectorTilesLoaded > 0, "OpenFreeMap vector tiles did not load in the live browser");
   report.clusters = await page.locator("#map .marker-cluster").count();
   report.checks.push("Lazy MapLibre/OpenFreeMap map renders venue markers/clusters");
+  const inView = Number((await page.locator("#markerContext").innerText()).split(" ")[0]);
+  assert.ok(inView > 0, "Map must report visible venues");
+  await page.locator("#mapSearchArea").click();
+  assert.equal(await page.locator("#results .card").count(), inView);
+  await page.locator("#mapClearArea").click();
+  report.checks.push("Map-area discovery filters the map-side list and restores all results");
   await page.screenshot({ path: out + "/desktop-map.png" });
   await page.locator("#listView").click();
   await page.setViewportSize({ width: 360, height: 800 });

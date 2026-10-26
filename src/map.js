@@ -74,13 +74,13 @@ function clusterElement(count, onActivate) {
   return node;
 }
 
-export async function createMap(container, { onSelect, onError }) {
-  if (!hasWebGL()) return (await import("./map-fallback.js")).createMap(container, { onSelect, onError });
+export async function createMap(container, { onSelect, onError, onViewportChange }) {
+  if (!hasWebGL()) return (await import("./map-fallback.js")).createMap(container, { onSelect, onError, onViewportChange });
   let map;
   try { map = makeMap(container, { onError }); }
-  catch { return (await import("./map-fallback.js")).createMap(container, { onSelect, onError }); }
+  catch { return (await import("./map-fallback.js")).createMap(container, { onSelect, onError, onViewportChange }); }
   const index = new Supercluster({ radius: 48, maxZoom: 18 });
-  let rows = [], key = "", selected = null, popup = null;
+  let rows = [], key = "", selected = null, popup = null, userMarker = null;
   const markers = new Map();
   const byId = new Map();
   function clearMarkers() {
@@ -135,7 +135,11 @@ export async function createMap(container, { onSelect, onError }) {
     }
     for (const [key, marker] of markers) if (!visible.has(key)) { marker.remove(); markers.delete(key); }
   }
-  map.on("moveend", renderMarkers);
+  function visibleIds() {
+    const bounds = map.getBounds();
+    return rows.filter((v) => bounds.contains(coordinates(v))).map((v) => v.id);
+  }
+  map.on("moveend", () => { renderMarkers(); onViewportChange?.(visibleIds()); });
   function fit() {
     if (!rows.length) return;
     const lons = rows.map((v) => v.coordinates.lon), lats = rows.map((v) => v.coordinates.lat);
@@ -158,6 +162,7 @@ export async function createMap(container, { onSelect, onError }) {
     popup?.remove();
     clearMarkers();
     if (rows.length) fit();
+    else onViewportChange?.([]);
   }
   function select(id, { zoom = false } = {}) {
     selected = id;
@@ -168,9 +173,18 @@ export async function createMap(container, { onSelect, onError }) {
       node.setAttribute("aria-pressed", String(active));
     }
     const v = byId.get(id);
-    if (v && zoom) map.easeTo({ center: coordinates(v), zoom: Math.max(map.getZoom(), 16), duration: reducedMotion() ? 0 : 300 });
+    if (v && zoom) map.jumpTo({ center: coordinates(v), zoom: Math.max(map.getZoom(), 16) });
   }
-  return { setResults, select, fit, invalidate() { map.resize(); renderMarkers(); } };
+  function focusLocation(point) {
+    userMarker?.remove();
+    const dot = document.createElement("div");
+    dot.className = "map-user-dot";
+    dot.setAttribute("role", "img");
+    dot.setAttribute("aria-label", "Your approximate location");
+    userMarker = new maplibregl.Marker({ element: dot, anchor: "center" }).setLngLat([point.lon, point.lat]).addTo(map);
+    map.easeTo({ center: [point.lon, point.lat], zoom: 14, duration: reducedMotion() ? 0 : 350 });
+  }
+  return { setResults, select, fit, visibleIds, focusLocation, invalidate() { map.resize(); renderMarkers(); onViewportChange?.(visibleIds()); } };
 }
 
 // The selected-venue preview shares the same vector style, but makes no map

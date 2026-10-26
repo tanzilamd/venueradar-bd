@@ -183,6 +183,17 @@
 .directory-page .maplibregl-control-container .maplibregl-ctrl-group button { width: 38px; height: 38px; }
 .directory-page .maplibregl-ctrl-attrib { background: #fffefaed; color: #344e47; padding: 3px 6px; font-size: 10px; }
 .directory-page .maplibregl-ctrl-attrib a { color: #205848; }
+.directory-page .map-toolbar { gap: 8px; }
+.directory-page .map-toolbar button, .directory-page .map-area-bar button { min-height: 40px; border: 1px solid #cbd9cf; border-radius: 7px; background: #fffefa; color: #174d3e; padding: 8px 12px; font-size: 12px; font-weight: 650; }
+.directory-page .map-toolbar button:hover, .directory-page .map-area-bar button:hover:not(:disabled) { background: #eaf2eb; }
+.directory-page .map-area-bar { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 9px 0 0; font-size: 12px; color: #52665d; }
+.directory-page .map-area-bar > div { display: flex; gap: 7px; flex-wrap: wrap; }
+.directory-page .map-area-bar #mapSearchArea { background: var(--green); border-color: var(--green); color: #fff; }
+.directory-page .map-area-bar #mapSearchArea:hover:not(:disabled) { background: #17634d; }
+.directory-page .map-area-bar #mapSearchArea:disabled { opacity: .55; cursor: not-allowed; }
+.directory-page .map-area-heading { margin: 0 0 9px; color: #345a49; font-size: 13px; font-weight: 700; }
+.directory-page .map-area-empty { margin: 8px 0; padding: 16px; color: #52665d; background: #f3f7f2; border-radius: 8px; font-size: 13px; }
+.directory-page .map-user-dot { display: block; width: 19px; height: 19px; border: 3px solid white; border-radius: 50%; background: #2670c3; box-shadow: 0 0 0 5px #2670c34d, 0 1px 5px #122e3470; pointer-events: none; }
 .directory-page .venue-cluster-popup .maplibregl-popup-content { padding: 12px; border-radius: 9px; border: 1px solid var(--line); box-shadow: 0 5px 20px #17372a30; }
 .directory-page .cluster-venue-list { display: grid; gap: 5px; max-height: 200px; overflow-y: auto; }
 .directory-page .cluster-venue-list strong { margin: 0 26px 4px 0; font-size: 12px; }
@@ -344,6 +355,8 @@
   .directory-page .result-group-heading { padding: 10px 12px; font-size: 10px; }
   .directory-page .map-mode .card { padding: 14px; }
   .directory-page .map-mode #results { display: none; }
+  .directory-page .map-mode.map-area-active #results { display: block; height: auto; max-height: 360px; margin-top: 8px; }
+  .directory-page .map-area-bar { align-items: flex-start; flex-direction: column; }
   .directory-page .map-mode #map { height: 48vh; min-height: 290px; }
   .directory-page .map-selection .map-selection-actions { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 8px; }
   .directory-page .map-selection .map-selection-actions > button { grid-column: 1/-1; grid-row: 2; }

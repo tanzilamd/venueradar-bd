@@ -3,9 +3,9 @@ import "leaflet/dist/leaflet.css";
 import "leaflet.markercluster";
 import "leaflet.markercluster/dist/MarkerCluster.css";
 import "leaflet.markercluster/dist/MarkerCluster.Default.css";
-export function createMap(container, { onSelect, onError }) {
+export function createMap(container, { onSelect, onError, onViewportChange }) {
   const map = L.map(container, { scrollWheelZoom: false }).setView([23.76, 90.4], 12), markers = /* @__PURE__ */ new Map();
-  let key = "", selected = null;
+  let key = "", selected = null, userMarker = null;
   const tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19, attribution: '\xA9 <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
   tiles.on("tileerror", () => onError("Map tiles could not load. Switch to the list or use a venue\u2019s Google Maps link."));
   const clusters = L.markerClusterGroup({ chunkedLoading: true });
@@ -26,6 +26,11 @@ export function createMap(container, { onSelect, onError }) {
     }
   }
   map.on("layeradd zoomend moveend", accessibleClusters);
+  function visibleIds() {
+    const bounds = map.getBounds();
+    return [...markers].filter(([, marker]) => bounds.contains(marker.getLatLng())).map(([id]) => id);
+  }
+  map.on("moveend", () => onViewportChange?.(visibleIds()));
   const icon = (active) => L.divIcon({ html: '<span class="map-pin"></span>', className: "venue-marker" + (active ? " is-selected" : ""), iconSize: [44, 44], iconAnchor: [22, 22] });
   function fit() {
     if (markers.size) map.fitBounds(clusters.getBounds(), { padding: [30, 30], maxZoom: 15 });
@@ -47,6 +52,7 @@ export function createMap(container, { onSelect, onError }) {
     }
     fit();
     accessibleClusters();
+    onViewportChange?.(visibleIds());
   }
   function select(id, { zoom = false } = {}) {
     selected = id;
@@ -61,8 +67,21 @@ export function createMap(container, { onSelect, onError }) {
       marker.openTooltip();
     });
   }
-  return { setResults, select, fit, invalidate() {
+  function focusLocation(point) {
+    userMarker?.remove();
+    const dot = document.createElement("span");
+    dot.className = "map-user-dot";
+    dot.setAttribute("role", "img");
+    dot.setAttribute("aria-label", "Your approximate location");
+    userMarker = L.marker([point.lat, point.lon], {
+      icon: L.divIcon({ html: dot.outerHTML, className: "", iconSize: [20, 20], iconAnchor: [10, 10] }),
+      keyboard: false, interactive: false
+    }).addTo(map);
+    map.setView([point.lat, point.lon], 14);
+  }
+  return { setResults, select, fit, visibleIds, focusLocation, invalidate() {
     requestAnimationFrame(() => map.invalidateSize());
+    onViewportChange?.(visibleIds());
   } };
 }
 

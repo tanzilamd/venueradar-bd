@@ -1,5 +1,10 @@
 # Changelog
 
+## Map-first venue browsing — 26 October 2026
+- Show the number of indexed venues inside the visible map, with an explicit action to browse just those venues and a one-tap reset to the full directory.
+- Add one-time Near me positioning with a distinct approximate-location dot and straight-line distance sorting. Coordinates remain in memory only.
+- Keep map-area results available on mobile only when requested, preserve the existing search and Saved/Compare behavior, and extend the Leaflet fallback and live browser checks.
+
 ## Clean Workspace interface — 26 October 2026
 - Implement the selected compact list design, dark-green search/navigation and self-hosted Inter typography.
 - Add a selected-hall contact panel with an on-demand real location map, and compact mobile detail sheets with additional options available on demand.

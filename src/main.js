@@ -5,6 +5,7 @@ import { defaultFilters, readURL, stateURL } from "./state.js";
 import { filterPanel, areaCounts, areaNames, groupNames, nearbyNames } from "./filters.js";
 import { $, el, button, external, phoneLink, displayName, dateText, icon, withIcon, sourceLabel } from "./ui.js";
 let venues = [], areas, collections, results = [], favorites = [], compare = [], sharedIds = [], ready = false, locationPoint = null, selected = null, sidebar = null, draftPanel = null, draft = null, mapController = null, mapControllerLoading = null, mapPromise = null, mapTileError = "";
+let mapAreaIds = null, mapVisibleIds = [], mapResultSignature = "";
 let state = { tab: "explore", filters: defaultFilters("explore"), view: "list", detailId: null, sharedIds: [] };
 const contexts = { explore: { filters: defaultFilters("explore"), view: "list" }, saved: { filters: defaultFilters("saved"), view: "list" }, shared: { filters: defaultFilters("shared"), view: "list" } };
 let storage = null, storageWorks = true, modalKind = null, returnFocus = null, undo = null, searchTimer = null, feedbackTimer = null, loading = false;
@@ -397,9 +398,14 @@ function renderCards() {
   const fragment = document.createDocumentFragment();
   if (!results.length) fragment.append(emptyState());
   else {
+    const shown = state.view === "map" && mapAreaIds ? results.filter((v) => mapAreaIds.has(v.id)) : results;
+    if (state.view === "map" && mapAreaIds) {
+      fragment.append(el("h3", `${shown.length} ${shown.length === 1 ? "venue" : "venues"} in the selected map area`, "map-area-heading"));
+      if (!shown.length) fragment.append(el("p", "No indexed venues in this map area. Move the map or show all results.", "map-area-empty"));
+    }
     const own = state.filters.area && state.filters.sort === "name" ? groupNames(state.filters.area, areas) : null;
     let group = null;
-    for (const v of results) {
+    for (const v of shown) {
       const key = v.review_notice ? "needs-review" : own && !own.includes(v.area) ? "nearby" : own ? "exact" : "normal";
       if (key !== group) {
         if (key === "needs-review") fragment.append(el("h3", "Please confirm these details", "result-group-heading"));
@@ -420,6 +426,8 @@ function render() {
     const own = groupNames(state.filters.area, areas);
     results.sort((a, b) => Number(!!a.review_notice) - Number(!!b.review_notice) || Number(!own.includes(a.area)) - Number(!own.includes(b.area)));
   }
+  const signature = results.map((v) => `${v.id}:${v.coordinates?.lat},${v.coordinates?.lon}`).sort().join("|");
+  if (signature !== mapResultSignature) { mapAreaIds = null; mapResultSignature = signature; }
   if (selected && !results.some((v) => v.id === selected)) selected = null;
   if (!selected && state.view === "list" && window.innerWidth >= 1100) selected = results[0]?.id || null;
   $("search").value = state.filters.search;
@@ -443,6 +451,7 @@ function render() {
   renderInspector();
   syncCompare();
   $("directory").classList.toggle("map-mode", state.view === "map");
+  $("directory").classList.toggle("map-area-active", state.view === "map" && mapAreaIds !== null);
   $("mapWrap").hidden = state.view !== "map";
   $("listView").setAttribute("aria-pressed", String(state.view === "list"));
   $("mapView").setAttribute("aria-pressed", String(state.view === "map"));
@@ -609,6 +618,15 @@ function method() {
   box.append(el("h3", "For the owner"), manage);
   openModal(box, "about");
 }
+function updateMapAreaControls() {
+  if (!mapController) return;
+  const mapped = results.filter((v) => v.coordinates).length;
+  const missing = results.length - mapped;
+  $("markerContext").textContent = `${mapVisibleIds.length} in view · ${mapped} mapped · ${missing} without a marker`;
+  $("mapSearchArea").disabled = !mapVisibleIds.length;
+  $("mapSearchArea").textContent = `Show ${mapVisibleIds.length} ${mapVisibleIds.length === 1 ? "venue" : "venues"} here`;
+  $("mapClearArea").hidden = mapAreaIds === null;
+}
 async function ensureMap() {
   if (state.view !== "map") return;
   if (!mapController) {
@@ -617,7 +635,10 @@ async function ensureMap() {
       if (!mapControllerLoading) mapControllerLoading = (async () => {
         if (!mapPromise) mapPromise = import("./map.js");
         const module = await mapPromise;
-        mapController = await module.createMap($("map"), { onSelect: (id) => selectOnMap(id), onError: (text) => {
+        mapController = await module.createMap($("map"), { onSelect: (id) => selectOnMap(id), onViewportChange: (ids) => {
+          mapVisibleIds = ids;
+          updateMapAreaControls();
+        }, onError: (text) => {
           mapTileError = text;
           if (results.some((v) => v.coordinates)) $("mapMessage").textContent = text;
         } });
@@ -633,16 +654,22 @@ async function ensureMap() {
   mapController.setResults(results);
   mapController.invalidate();
   if (selected) mapController.select(selected);
-  $("markerContext").textContent = `${results.filter((v) => v.coordinates).length} mapped · ${results.filter((v) => !v.coordinates).length} without a marker`;
+  updateMapAreaControls();
   $("mapMessage").textContent = !results.length
     ? "No venues match the current search or filters. Switch to List to change them."
     : !results.some((v) => v.coordinates)
       ? "These matching venues have no source-published map point. Switch to List to view them."
-      : mapTileError || "Distances, when available, are straight-line estimates.";
+      : mapTileError || "Move or zoom the map, then choose Show venues here.";
   renderMapSelection();
 }
 function selectOnMap(id, zoom = false) {
   selected = id;
+  if (mapAreaIds && !mapAreaIds.has(id)) {
+    mapAreaIds = null;
+    $("directory").classList.remove("map-area-active");
+    renderCards();
+    updateMapAreaControls();
+  }
   mapController?.select(id, { zoom });
   document.querySelectorAll(".card").forEach((n) => n.classList.toggle("selected", n.dataset.venue === id));
   if (window.innerWidth > 720) document.querySelector(`[data-venue="${id}"]`)?.scrollIntoView({ block: "nearest", behavior: "auto" });
@@ -656,7 +683,7 @@ function renderMapSelection() {
     box.append(el("p", "Select a marker to see a venue and its contact actions.", "hint"));
     return;
   }
-  box.append(el("h3", displayName(v)), el("p", v.area + " · " + locationNote(v), "hint"));
+  box.append(el("h3", displayName(v)), el("p", v.area + " · " + locationNote(v) + (v.distance != null ? ` · ${v.distance.toFixed(1)} km straight-line from you` : ""), "hint"));
   if (v.review_notice) box.append(el("p", v.review_notice, "review-notice"));
   const actions = el("div", null, "card-actions");
   actions.classList.add("map-selection-actions");
@@ -678,18 +705,32 @@ function setView(view) {
   render();
   if (view === "map") document.querySelector(".results-top")?.scrollIntoView?.({ block: "start" });
 }
-function locate() {
-  if (!navigator.geolocation) {
-    $("message").textContent = "Location is unavailable in this browser. Choose a neighborhood instead.";
+function locate(focusMap = false) {
+  if (focusMap && locationPoint) {
+    mapAreaIds = null;
+    changeFilters({ ...state.filters, area: "", includeNearby: false, sort: "distance" });
+    $("mapLocationNote").hidden = false;
+    ensureMap().then(() => {
+      mapController?.focusLocation(locationPoint);
+    });
     return;
   }
-  $("message").textContent = "Waiting for location permission…";
+  if (!navigator.geolocation) {
+    $(focusMap ? "mapMessage" : "message").textContent = "Location is unavailable in this browser. Choose a neighborhood instead.";
+    return;
+  }
+  $(focusMap ? "mapMessage" : "message").textContent = "Waiting for location permission…";
   navigator.geolocation.getCurrentPosition((p) => {
     locationPoint = { lat: p.coords.latitude, lon: p.coords.longitude };
-    $("message").textContent = "Distances are straight-line estimates, not travel distances. Your location has not been stored.";
-    changeFilters({ ...state.filters, sort: "distance" });
+    $(focusMap ? "mapMessage" : "message").textContent = "Distances are straight-line estimates, not travel distances. Your location has not been stored.";
+    if (focusMap) mapAreaIds = null;
+    changeFilters({ ...state.filters, area: focusMap ? "" : state.filters.area, includeNearby: focusMap ? false : state.filters.includeNearby, sort: "distance" });
+    if (focusMap) $("mapLocationNote").hidden = false;
+    if (focusMap) ensureMap().then(() => {
+      mapController?.focusLocation(locationPoint);
+    });
   }, (error) => {
-    $("message").textContent = error.code === 1 ? "Location permission was denied. You can still search by neighborhood." : error.code === 3 ? "Location request timed out. Try again or choose a neighborhood." : "Your location could not be determined. Choose a neighborhood instead.";
+    $(focusMap ? "mapMessage" : "message").textContent = error.code === 1 ? "Location permission was denied. You can still search by neighborhood." : error.code === 3 ? "Location request timed out. Try again or choose a neighborhood." : "Your location could not be determined. Choose a neighborhood instead.";
   }, { maximumAge: 0, timeout: 1e4, enableHighAccuracy: false });
 }
 function openFilters() {
@@ -767,7 +808,27 @@ $("sort").onchange = () => {
 };
 $("listView").onclick = () => setView("list");
 $("mapView").onclick = () => setView("map");
-$("fitMap").onclick = () => mapController?.fit();
+$("fitMap").onclick = () => {
+  mapAreaIds = null;
+  $("directory").classList.remove("map-area-active");
+  renderCards();
+  mapController?.fit();
+  updateMapAreaControls();
+};
+$("mapNearMe").onclick = () => locate(true);
+$("mapSearchArea").onclick = () => {
+  mapAreaIds = new Set(mapController?.visibleIds() || []);
+  $("directory").classList.add("map-area-active");
+  renderCards();
+  updateMapAreaControls();
+  if (innerWidth <= 720) $("results").scrollIntoView({ block: "start" });
+};
+$("mapClearArea").onclick = () => {
+  mapAreaIds = null;
+  $("directory").classList.remove("map-area-active");
+  renderCards();
+  updateMapAreaControls();
+};
 $("mapListFallback").onclick = () => setView("list");
 $("openCompare").onclick = compareView;
 $("navCompare").onclick = () => compare.length >= 2 ? compareView() : notify("Select two or three halls using their Compare buttons.");
@@ -826,7 +887,7 @@ async function load() {
     if (state.filters.area && !areas.neighborhoods.some((a2) => a2.name === state.filters.area)) state.filters.area = "";
     sharedIds = state.sharedIds;
     contexts[state.tab] = { filters: { ...state.filters }, view: state.view };
-    sidebar = filterPanel({ values: state.filters, areas, rows: scopeRows(state.filters), onChange: (next) => changeFilters(next), onLocate: locate });
+    sidebar = filterPanel({ values: state.filters, areas, rows: scopeRows(state.filters), onChange: (next) => changeFilters(next), onLocate: () => locate() });
     $("filterFields").replaceChildren(sidebar.node);
     $("searchAreaDock").replaceChildren(sidebar.areaNode);
     ready = true;
