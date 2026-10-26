@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import { matchesSearch } from "../src/search.js";
 import { readURL, stateURL, defaultFilters } from "../src/state.js";
-import { filterVenues, hasCapacity } from "../src/model.js";
+import { filterVenues, hasCapacity, mapsURL } from "../src/model.js";
 import { validateData } from "../scripts/validate.mjs";
 const read = (p) => JSON.parse(fs.readFileSync(p, "utf8"));
 const venues = read("public/data/venues.json");
@@ -34,6 +34,16 @@ test("listing notices remain last without implying operating status", () => {
   const rows = [{ ...venues[0], id: "flag", name: "Aardvark", review_notice: "Needs identity confirmation" }, { ...venues[0], id: "plain", name: "Zebra" }];
   assert.equal(filterVenues(rows, { sort: "name" })[1].id, "flag");
   assert.deepEqual(filterVenues(rows, { reviewStatus: "no-notice" }).map((v) => v.id), ["plain"]);
+});
+test("Malibagh map navigation does not search for a different Khilgaon hall", () => {
+  const malibagh = venues.find((v) => v.id === "bd-osm-way-371381396");
+  const url = new URL(mapsURL(malibagh));
+  assert.equal(url.hostname, "www.google.com");
+  assert.equal(url.pathname, "/maps/search/");
+  const [lat, lon] = url.searchParams.get("query").split(",").map(Number);
+  assert.ok(Math.abs(lat - malibagh.coordinates.lat) < 0.00001);
+  assert.ok(Math.abs(lon - malibagh.coordinates.lon) < 0.00001);
+  assert.ok(malibagh.review_notice);
 });
 test("qualified claims and hours require matching first-party evidence", () => {
   const areas = read("docs/reference/bangladesh-areas.json"), schema = read("schemas/venue.schema.json");

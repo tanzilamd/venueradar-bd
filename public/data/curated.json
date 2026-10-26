@@ -424,6 +424,38 @@
       "notice": "Established mapped address says 63/7 Kamal Soroni; venue-specific booking page says 636/7 Kamal Soroni.",
       "source": "https://humayra.com.bd/product/efa-convention-center/",
       "decision": "Retain the established address. The new business phone is independently published for the matched hall; premises-number conflict requires further operator confirmation."
+    },
+    {
+      "id": "bd-osm-way-371381396",
+      "field": "maps_url",
+      "checked": "2026-10-26",
+      "notice": "The previous search URL named Khilgaon Community Center, whereas this historic record is Malibagh Community Centre and its business identity is unresolved.",
+      "source": "https://www.google.com/maps/search/?api=1&query=Khilgaon%20Community%20Center%20Khilgaon%20Dhaka%20Bangladesh",
+      "decision": "Replaced the cross-business name query with the established OpenStreetMap coordinate query. Retained the Malibagh record, approximate mapped position and identity/address review notice; no phone or alternate business facts were transferred."
+    },
+    {
+      "id": "bd-dream-world-convention-center-zigatola",
+      "field": "current_operation",
+      "checked": "2026-10-26",
+      "notice": "Venue-specific booking page still offers this hall, while its matched Maps business listing reports permanently closed and publishes a different historical contact.",
+      "source": "https://www.google.com/maps/search/?api=1&query=Dream%20World%20Convention%20Center%2023/C%20Jigatola%20Main%20Road%2C%20Dhanmondi%2C%20Dhaka%201209",
+      "decision": "Keep original booking-page phone history and a visible permanent-closure warning; do not treat the older page as current-operation proof. Proposed archive/removal needs separate review."
+    },
+    {
+      "id": "bd-mardi-gras-convention-hall",
+      "field": "current_operation",
+      "checked": "2026-10-26",
+      "notice": "Venue-specific booking page offers this hall; the matched Maps listing reports permanently closed.",
+      "source": "https://www.google.com/maps/place/Mardi+Gras+Convention+Hall/@23.7922635,90.3752839,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c734abe658fd:0x433af76dd467034!8m2!3d23.7922635!4d90.3752839!16s%2Fg%2F11bxfv5c_r",
+      "decision": "Keep source history and show a prominent closure warning; do not treat the older booking page as current-operation proof. Proposed archive/removal needs separate review."
+    },
+    {
+      "id": "bd-popeyes-plus-convention-hall",
+      "field": "current_operation",
+      "checked": "2026-10-26",
+      "notice": "Venue-specific booking page offers this hall; the matched Maps listing reports temporarily closed and publishes a different business phone.",
+      "source": "https://www.google.com/maps/place/Popeyes+Convention+Hall/@23.8356278,90.3760218,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c134d1aac785:0x1c197773a8967e7!8m2!3d23.8356278!4d90.3760218!16s%2Fg%2F11c6cdqz7p",
+      "decision": "Retain both independently sourced published business contacts, label neither as call-tested, and show a temporary-closure warning."
     }
   ],
   "research_status": {

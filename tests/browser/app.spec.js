@@ -63,6 +63,23 @@ test("search aliases and empty results remain usable",async({page})=>{
  await mock(page);await page.goto("/");await page.locator("#search").fill("Alpha");await expect(cards(page)).toHaveCount(1);await expect(cards(page)).toContainText("Alpha");
  await page.locator("#search").fill("definitely-no-match");await expect(cards(page)).toHaveCount(0);await expect(page.locator("#results")).toContainText("No venues match");
 });
+test("map distinguishes no matches from matching halls without map points", async ({ page }) => {
+  await mock(page, [fixture("bd-test-unmapped", "TEST ONLY Unmapped Hall", { coordinates: null })]);
+  await page.goto("/");
+  await page.locator("#mapView").click();
+  await expect(page.locator("#mapMessage")).toContainText("matching venues have no source-published map point");
+  await page.locator("#search").fill("not-a-hall");
+  await expect(page.locator("#mapMessage")).toContainText("No venues match the current search or filters");
+  await page.locator("#search").fill("Unmapped Hall");
+  await expect(page.locator("#mapMessage")).toContainText("matching venues have no source-published map point");
+  await page.locator("#listView").click();
+  await expect(cards(page)).toHaveCount(1);
+});
+test("reported closure is clear on the existing venue card", async ({ page }) => {
+  await mock(page, [fixture("bd-test-closure", "TEST ONLY Closed Hall", { review_notice: "Closure reported: matched listing says permanently closed." })]);
+  await page.goto("/");
+  await expect(cards(page).first()).toContainText("Reported permanently closed");
+});
 test("Paltan corridor stays together and nearby Motijheel works both ways", async ({ page }) => {
  const rows = [fixture("bd-test-paltan", "TEST ONLY Paltan hall", { area: "Paltan" }), fixture("bd-test-naya", "TEST ONLY Naya hall", { area: "Naya Paltan" }), fixture("bd-test-motijheel", "TEST ONLY Motijheel hall", { area: "Motijheel" })];
  await mock(page, rows); await page.goto("/");
@@ -148,6 +165,8 @@ test("comparison aligns facts, calls all numbers, removes columns and enforces m
   const row = (label) => page.getByRole("row").filter({ has: page.getByRole("rowheader", { name: label, exact: true }) });
   await expect(row("Area / zone").getByRole("cell")).toHaveText(["Banasree", "Khilgaon", "Banasree"]);
   await expect(row("Phone").locator('a[href^="tel:"]')).toHaveCount(2);
+  await expect(row("Published capacity").getByRole("cell")).toHaveText([/1,200 people/, "Not published", "Not published"]);
+  await expect(row("Documented facilities").getByRole("cell")).toHaveText([/Parking/, "Not documented", "Not documented"]);
   await expect(row("Please check").getByRole("cell").first()).toHaveText("Confirm booking details directly");
   await page.locator("#dialog").getByRole("button", { name: "Remove TEST ONLY Aardvark from comparison", exact: true }).click();
   await expect(row("Area / zone").getByRole("cell")).toHaveCount(2);
@@ -180,6 +199,20 @@ test("map clusters nearby pins accessibly", async ({ page }) => {
   await expect(page.locator(".marker-cluster")).toHaveCount(1);
   await expect(page.locator(".marker-cluster")).toHaveAttribute("aria-label", /2 venues/);
   await expect(page.locator(".marker-cluster")).toHaveAttribute("tabindex", "0");
+});
+test("mobile map selection actions remain above the Compare tray", async ({ page }) => {
+  await page.setViewportSize({ width: 360, height: 800 });
+  await mock(page);
+  await page.goto("/");
+  for (const id of ["bd-test-alpha", "bd-test-beta"]) await card(page, id).locator(".compare-toggle").click();
+  await page.locator("#mapView").click();
+  await page.locator("#map .venue-marker").first().click();
+  await expect(page.locator("#mapSelection .card-actions")).toBeVisible();
+  await expect.poll(async () => {
+    const actions = await page.locator("#mapSelection .card-actions").boundingBox();
+    const tray = await page.locator("#compareBar").boundingBox();
+    return actions.y + actions.height <= tray.y - 8;
+  }).toBe(true);
 });
 test("one-time nearby distance is sorted and never serialized or stored", async ({ page, context }) => {
   await mock(page);

@@ -1,0 +1,986 @@
+{
+  "checked": "2026-10-26",
+  "scope": "All 139 active venue URLs/fallbacks received a structural audit. Seven Google Maps listing pages were individually viewed and one Abacus short-link redirect checked. Other search links are not claimed to resolve to a unique business. No automated Google Maps data extraction.",
+  "counts": {
+    "fallback-generated": 38,
+    "named-search": 66,
+    "exact-place-link": 32,
+    "coordinate-search": 2,
+    "short-link": 1
+  },
+  "rows": [
+    {
+      "id": "bd-the-westin-dhaka",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-le-meridien-dhaka",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-sheraton-dhaka",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-renaissance-dhaka-gulshan",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-radisson-blu-dhaka",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-pan-pacific-sonargaon-dhaka",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-amari-dhaka",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-dhaka-regency",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-police-convention-hall-eskaton",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-raowa-convention-halls",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-sks-convention-hall",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-396647115",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-1936311529",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-2697232301",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-3323390519",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-3330957057",
+      "mode": "exact-place-link",
+      "structural_result": "URL point is 0.003 km from stored point; name still requires independent business identity review.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-3374713092",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-3403191569",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-3473792181",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-3475693347",
+      "mode": "exact-place-link",
+      "structural_result": "URL point is 0.025 km from stored point; name still requires independent business identity review.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-3714859928",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-3731351579",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-3731958028",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-3745296696",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-4035864979",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-4072852261",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-4320931026",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-4330600894",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-4464533589",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-4547663197",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-4549001959",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-4583633891",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-4729172392",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-4973354765",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-5171683022",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-5233901421",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-5233901521",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-5998293476",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-6075578295",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-6924203537",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-7711605264",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-7787635919",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-7787635947",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-8313877538",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-9622947662",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-9694573157",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-9694573176",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-9806581241",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-9807925208",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-9932948783",
+      "mode": "exact-place-link",
+      "structural_result": "URL point is 0.014 km from stored point; name still requires independent business identity review.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-10983479205",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-11216294296",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-11716250398",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-11730096574",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-11768450931",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-11768476986",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-11775084788",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-11777855439",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-11824645603",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-11886959379",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-11915138589",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-11939428112",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-11939996444",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-11986161470",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-11988944083",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-11993579518",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-11993640298",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-12006320188",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-12012297426",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-12055130480",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-12456045701",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-13090503501",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-13134454618",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-13527564201",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-14247677151",
+      "mode": "exact-place-link",
+      "structural_result": "URL point is 0.013 km from stored point; name still requires independent business identity review.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-14252402800",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-node-14286743945",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-24448507",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-241619748",
+      "mode": "exact-place-link",
+      "structural_result": "URL point is 0.010 km from stored point; name still requires independent business identity review.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-243982330",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-245267775",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-263618386",
+      "mode": "coordinate-search",
+      "structural_result": "Query points to stored map coordinates without asserting a business identity.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-295884568",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-297869678",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-298472671",
+      "mode": "exact-place-link",
+      "structural_result": "URL point is 0.049 km from stored point; name still requires independent business identity review.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-345203658",
+      "mode": "exact-place-link",
+      "structural_result": "URL point is 0.019 km from stored point; name still requires independent business identity review.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-367277125",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-370400603",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-371381396",
+      "mode": "coordinate-search",
+      "structural_result": "Query points to stored map coordinates without asserting a business identity.",
+      "individually_reviewed": true,
+      "manual_outcome": "Coordinate-only destination reviewed; linked business identity remains unresolved."
+    },
+    {
+      "id": "bd-osm-way-371382348",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-384311411",
+      "mode": "exact-place-link",
+      "structural_result": "URL point is 0.001 km from stored point; name still requires independent business identity review.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-438470592",
+      "mode": "exact-place-link",
+      "structural_result": "URL point is 0.005 km from stored point; name still requires independent business identity review.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-439835437",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-440170070",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-441129284",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-456824572",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-490274323",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-495120358",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-498173029",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-502537807",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-506163768",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-534499396",
+      "mode": "exact-place-link",
+      "structural_result": "URL point is 0.016 km from stored point; name still requires independent business identity review.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-534723199",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-536571520",
+      "mode": "exact-place-link",
+      "structural_result": "URL point is 0.025 km from stored point; name still requires independent business identity review.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-540588060",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-586533328",
+      "mode": "exact-place-link",
+      "structural_result": "URL point is 0.014 km from stored point; name still requires independent business identity review.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-698085019",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-700469632",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-736749229",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-1532360738",
+      "mode": "exact-place-link",
+      "structural_result": "URL point is 0.031 km from stored point; name still requires independent business identity review.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-1561267432",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-297302722",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-367563642",
+      "mode": "exact-place-link",
+      "structural_result": "URL point is 0.044 km from stored point; name still requires independent business identity review.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-osm-way-449635016",
+      "mode": "exact-place-link",
+      "structural_result": "URL point is 0.002 km from stored point; name still requires independent business identity review.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-abacus-convention-center",
+      "mode": "short-link",
+      "structural_result": "Redirect target matches Abacus name and stored coordinates.",
+      "individually_reviewed": true,
+      "manual_outcome": "Short link redirects to matching Abacus place and stored point."
+    },
+    {
+      "id": "bd-celebration-community-center",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-motijheel-community-center",
+      "mode": "exact-place-link",
+      "structural_result": "URL point is 0.005 km from stored point; name still requires independent business identity review.",
+      "individually_reviewed": true,
+      "manual_outcome": "Matching AGB Colony profile reviewed; no phone displayed."
+    },
+    {
+      "id": "bd-modhubagh-community-centre",
+      "mode": "exact-place-link",
+      "structural_result": "URL point is 0.003 km from stored point; name still requires independent business identity review.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-nanjing-community-center",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-siraj-convention-center",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-bazlur-rahman-community-complex",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-ak-convention-center",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-jk-convention-hall-malibagh",
+      "mode": "exact-place-link",
+      "structural_result": "URL point is 0.006 km from stored point; name still requires independent business identity review.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-zam-zam-convention-hall-mirpur-1",
+      "mode": "fallback-generated",
+      "structural_result": "Name and available address/area form a search; exact business destination is unconfirmed.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-jonaki-convention-hall",
+      "mode": "exact-place-link",
+      "structural_result": "URL point is 0.000 km from stored point; name still requires independent business identity review.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-waterfront-convention-hall",
+      "mode": "exact-place-link",
+      "structural_result": "URL point is 0.000 km from stored point; name still requires independent business identity review.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-lakeview-grande-convention-hall",
+      "mode": "exact-place-link",
+      "structural_result": "URL point is 0.000 km from stored point; name still requires independent business identity review.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-police-plaza-convention-centre",
+      "mode": "exact-place-link",
+      "structural_result": "URL point is 0.000 km from stored point; name still requires independent business identity review.",
+      "individually_reviewed": true,
+      "manual_outcome": "Matching House 2 Road 144 profile reviewed; no phone displayed."
+    },
+    {
+      "id": "bd-elite-convention-hall",
+      "mode": "exact-place-link",
+      "structural_result": "URL point is 0.000 km from stored point; name still requires independent business identity review.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-grand-shahjahan-convention-hall",
+      "mode": "exact-place-link",
+      "structural_result": "URL point is 0.000 km from stored point; name still requires independent business identity review.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-kara-convention-center",
+      "mode": "exact-place-link",
+      "structural_result": "URL point is 0.000 km from stored point; name still requires independent business identity review.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-bgb-banquet-hall",
+      "mode": "exact-place-link",
+      "structural_result": "URL point is 0.000 km from stored point; name still requires independent business identity review.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-sayeedana-community-centre",
+      "mode": "exact-place-link",
+      "structural_result": "URL point is 0.000 km from stored point; name still requires independent business identity review.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-grand-palace-convention-hall",
+      "mode": "exact-place-link",
+      "structural_result": "URL point is 0.000 km from stored point; name still requires independent business identity review.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-uttara-party-center",
+      "mode": "exact-place-link",
+      "structural_result": "URL point is 0.000 km from stored point; name still requires independent business identity review.",
+      "individually_reviewed": false,
+      "manual_outcome": null
+    },
+    {
+      "id": "bd-dream-world-convention-center-zigatola",
+      "mode": "named-search",
+      "structural_result": "Name/alias and locality search; exact result may vary and requires individual verification.",
+      "individually_reviewed": true,
+      "manual_outcome": "Matching Jigatola profile reviewed; permanent closure reported."
+    },
+    {
+      "id": "bd-mardi-gras-convention-hall",
+      "mode": "exact-place-link",
+      "structural_result": "Individual listing reviewed; no local marker stored without independent licensed geometry.",
+      "individually_reviewed": true,
+      "manual_outcome": "Matching Shewrapara profile reviewed; permanent closure reported."
+    },
+    {
+      "id": "bd-nur-community-center-jatrabari",
+      "mode": "exact-place-link",
+      "structural_result": "Individual listing reviewed; no local marker stored without independent licensed geometry.",
+      "individually_reviewed": true,
+      "manual_outcome": "Matching Bibir Bagicha profile and published phone reviewed."
+    },
+    {
+      "id": "bd-popeyes-plus-convention-hall",
+      "mode": "exact-place-link",
+      "structural_result": "Individual listing reviewed; no local marker stored without independent licensed geometry.",
+      "individually_reviewed": true,
+      "manual_outcome": "Matching Shagufta Road profile reviewed; temporary closure and second phone reported."
+    }
+  ]
+}

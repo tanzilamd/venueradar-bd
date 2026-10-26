@@ -8040,9 +8040,18 @@
         "kind": "independent",
         "checked": "2026-10-26",
         "reuse": "The matching point is currently named Khilgaon / Malika, with a Malibagh market and Shahid Baki Road address. It publishes no phone. Preserve the historic Malibagh record and existing identity/address warning; do not merge it with the separately owner-confirmed Khilgaon point. Individual visual review; no ratings, review counts, reviews, photos or business hours copied."
+      },
+      {
+        "url": "https://www.openstreetmap.org/way/371381396",
+        "fields": [
+          "maps_url"
+        ],
+        "kind": "open-data",
+        "checked": "2026-10-26",
+        "reuse": "The published map point is used for a coordinate-only Google Maps search. This avoids asserting that a differently named Khilgaon/Malika business profile is this venue; the approximate building centre and identity conflict remain disclosed."
       }
     ],
-    "notes": "OpenStreetMap listing, not operator-confirmed. Wedding booking, current operation and business contacts must be confirmed directly. The marker is the mapped building’s approximate center, not a verified entrance. No unambiguous public business number was available in this source. The map record was last edited 2020-07-18. The source was reviewed on 2026-10-25; that is not an on-site verification date.",
+    "notes": "OpenStreetMap listing, not operator-confirmed. Wedding booking, current operation and business contacts must be confirmed directly. The marker is the mapped building’s approximate center, not a verified entrance. No unambiguous public business number was available in this source. The map record was last edited 2020-07-18. The source was reviewed on 2026-10-25; that is not an on-site verification date. Map navigation now searches the established coordinates rather than an ambiguously matched Khilgaon business name.",
     "discovery": {
       "source": "OpenStreetMap",
       "element_type": "way",
@@ -8060,7 +8069,7 @@
       "reason": "Named Malibagh community hall at the rail-gate/Atish Depankar Road border; reviewed browsing locality."
     },
     "review_notice": "Address and naming need confirmation: the matching current business profile uses Khilgaon / Malika and a Shahid Baki Road landmark; this historic record uses Malibagh and Atish Depankar Road. Location points match; confirm the address directly.",
-    "maps_url": "https://www.google.com/maps/search/?api=1&query=Khilgaon%20Community%20Center%20Khilgaon%20Dhaka%20Bangladesh",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=23.74966095%2C90.41622245",
     "phone_review": {
       "status": "identity-unconfirmed",
       "checked": "2026-10-26",
@@ -12141,10 +12150,22 @@
         "checked": "2026-10-26",
         "kind": "independent",
         "reuse": "Individual public business facts from a venue-specific third-party booking page; no copied descriptions, photos, ratings, reviews or restricted API data. Contact not call-tested."
+      },
+      {
+        "url": "https://www.google.com/maps/search/?api=1&query=Dream%20World%20Convention%20Center%2023/C%20Jigatola%20Main%20Road%2C%20Dhanmondi%2C%20Dhaka%201209",
+        "fields": [
+          "name",
+          "address",
+          "review_notice"
+        ],
+        "checked": "2026-10-26",
+        "kind": "independent",
+        "reuse": "Individual public business listing manually inspected for name, Jigatola address and reported closure. No ratings, reviews, photos, hours or restricted API data retained."
       }
     ],
     "notes": "Venue-specific third-party booking page reviewed. Business contact has not been call-tested. Exact map position, current operation and operator ownership remain unconfirmed.",
-    "maps_url": "https://www.google.com/maps/search/?api=1&query=Dream%20World%20Convention%20Center%2023/C%20Jigatola%20Main%20Road%2C%20Dhanmondi%2C%20Dhaka%201209"
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Dream%20World%20Convention%20Center%2023/C%20Jigatola%20Main%20Road%2C%20Dhanmondi%2C%20Dhaka%201209",
+    "review_notice": "Closure reported: the matched public business listing currently marks Dream World Convention Center permanently closed. Its third-party booking contacts may be historical; confirm directly before relying on them."
   },
   {
     "id": "bd-mardi-gras-convention-hall",
@@ -12186,17 +12207,33 @@
         "checked": "2026-10-26",
         "kind": "independent",
         "reuse": "Individual public business facts from a venue-specific third-party booking page; no copied descriptions, photos, ratings, reviews or restricted API data. Contact not call-tested."
+      },
+      {
+        "url": "https://www.google.com/maps/place/Mardi+Gras+Convention+Hall/@23.7922635,90.3752839,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c734abe658fd:0x433af76dd467034!8m2!3d23.7922635!4d90.3752839!16s%2Fg%2F11bxfv5c_r",
+        "fields": [
+          "name",
+          "area",
+          "maps_url",
+          "phones",
+          "review_notice"
+        ],
+        "checked": "2026-10-26",
+        "kind": "independent",
+        "reuse": "Individual public business listing manually inspected. Name, Shewrapara locality and published phone match the booking page; listing reports permanent closure. No ratings, reviews, photos, hours or restricted API data retained."
       }
     ],
     "notes": "Venue-specific third-party booking page reviewed. Business contact has not been call-tested. Exact map position, current operation and operator ownership remain unconfirmed.",
-    "maps_url": "https://www.google.com/maps/search/?api=1&query=Mardi%20Gras%20Convention%20Hall%20965%20East%20Shewrapara%2C%20Mirpur%2C%20Dhaka%201216"
+    "maps_url": "https://www.google.com/maps/place/Mardi+Gras+Convention+Hall/@23.7922635,90.3752839,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c734abe658fd:0x433af76dd467034!8m2!3d23.7922635!4d90.3752839!16s%2Fg%2F11bxfv5c_r",
+    "review_notice": "Closure reported: the matched public business listing currently marks Mardi Gras Convention Hall permanently closed. Its published contact may be historical; confirm directly before relying on it."
   },
   {
     "id": "bd-nur-community-center-jatrabari",
     "city": "Dhaka",
     "name": "Nur Community Center",
     "bn_name": null,
-    "aliases": [],
+    "aliases": [
+      "Nur Community Center & Thai Park Chinese Restaurant"
+    ],
     "category": "Community Center",
     "division": "6",
     "district": "47",
@@ -12231,17 +12268,32 @@
         "checked": "2026-10-26",
         "kind": "independent",
         "reuse": "Individual public business facts from a venue-specific third-party booking page; no copied descriptions, photos, ratings, reviews or restricted API data. Contact not call-tested."
+      },
+      {
+        "url": "https://www.google.com/maps/place/Nur+Community+Center+%26+Thai+Park+Chinese+Restaurant/@23.7111557,90.4366593,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b9cc71742f4d:0x87822e594af330df!8m2!3d23.7111557!4d90.4366593!16s%2Fg%2F1hfb33g6y",
+        "fields": [
+          "name",
+          "aliases",
+          "area",
+          "maps_url",
+          "phones"
+        ],
+        "checked": "2026-10-26",
+        "kind": "independent",
+        "reuse": "Individual public business listing manually inspected. Jatrabari/Bibir Bagicha location and the published phone match the venue-specific booking page. No ratings, reviews, photos, hours or restricted API data retained."
       }
     ],
     "notes": "Venue-specific third-party booking page reviewed. Business contact has not been call-tested. Exact map position, current operation and operator ownership remain unconfirmed.",
-    "maps_url": "https://www.google.com/maps/search/?api=1&query=Nur%20Community%20Center%20Near%20Bibir%20Bagicha%20Gate%201%2C%20Dhaka%E2%80%93Demra%20Highway%2C%20Dhaka%201204"
+    "maps_url": "https://www.google.com/maps/place/Nur+Community+Center+%26+Thai+Park+Chinese+Restaurant/@23.7111557,90.4366593,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b9cc71742f4d:0x87822e594af330df!8m2!3d23.7111557!4d90.4366593!16s%2Fg%2F1hfb33g6y"
   },
   {
     "id": "bd-popeyes-plus-convention-hall",
     "city": "Dhaka",
     "name": "Popeyes Plus Convention Hall",
     "bn_name": null,
-    "aliases": [],
+    "aliases": [
+      "Popeyes Convention Hall"
+    ],
     "category": "Convention Center",
     "division": "6",
     "district": "47",
@@ -12253,6 +12305,12 @@
       {
         "number": "+8801921427273",
         "source": "https://humayra.com.bd/product/popeyes-plus-convention-hall/",
+        "checked": "2026-10-26",
+        "status": "published-not-call-tested"
+      },
+      {
+        "number": "+8801616555560",
+        "source": "https://www.google.com/maps/place/Popeyes+Convention+Hall/@23.8356278,90.3760218,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c134d1aac785:0x1c197773a8967e7!8m2!3d23.8356278!4d90.3760218!16s%2Fg%2F11c6cdqz7p",
         "checked": "2026-10-26",
         "status": "published-not-call-tested"
       }
@@ -12276,9 +12334,24 @@
         "checked": "2026-10-26",
         "kind": "independent",
         "reuse": "Individual public business facts from a venue-specific third-party booking page; no copied descriptions, photos, ratings, reviews or restricted API data. Contact not call-tested."
+      },
+      {
+        "url": "https://www.google.com/maps/place/Popeyes+Convention+Hall/@23.8356278,90.3760218,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c134d1aac785:0x1c197773a8967e7!8m2!3d23.8356278!4d90.3760218!16s%2Fg%2F11c6cdqz7p",
+        "fields": [
+          "name",
+          "aliases",
+          "area",
+          "maps_url",
+          "phones",
+          "review_notice"
+        ],
+        "checked": "2026-10-26",
+        "kind": "independent",
+        "reuse": "Individual public business listing manually inspected. Shagufta New Road matches the booking page; listing publishes a second public business phone and reports temporary closure. No ratings, reviews, photos, hours or restricted API data retained."
       }
     ],
     "notes": "Venue-specific third-party booking page reviewed. Business contact has not been call-tested. Exact map position, current operation and operator ownership remain unconfirmed.",
-    "maps_url": "https://www.google.com/maps/search/?api=1&query=Popeyes%20Plus%20Convention%20Hall%20Mirpur%2012%2C%20Shagufta%20New%20Road%2C%20Mirpur%20DOHS%2C%20Dhaka%201216"
+    "maps_url": "https://www.google.com/maps/place/Popeyes+Convention+Hall/@23.8356278,90.3760218,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c134d1aac785:0x1c197773a8967e7!8m2!3d23.8356278!4d90.3760218!16s%2Fg%2F11c6cdqz7p",
+    "review_notice": "Temporary closure reported: the matched public business listing currently marks Popeyes Convention Hall temporarily closed. Confirm reopening and booking contacts directly."
   }
 ]

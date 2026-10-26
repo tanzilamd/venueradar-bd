@@ -4,7 +4,7 @@ import { filterVenues, sizeOf, hasCapacity, capacityText, readIds, mapsURL } fro
 import { defaultFilters, readURL, stateURL } from "./state.js";
 import { filterPanel, areaCounts, areaNames, groupNames, nearbyNames } from "./filters.js";
 import { $, el, button, external, phoneLink, displayName, dateText, icon, withIcon, sourceLabel } from "./ui.js";
-let venues = [], areas, collections, results = [], favorites = [], compare = [], sharedIds = [], ready = false, locationPoint = null, selected = null, sidebar = null, draftPanel = null, draft = null, mapController = null, mapPromise = null;
+let venues = [], areas, collections, results = [], favorites = [], compare = [], sharedIds = [], ready = false, locationPoint = null, selected = null, sidebar = null, draftPanel = null, draft = null, mapController = null, mapPromise = null, mapTileError = "";
 let state = { tab: "explore", filters: defaultFilters("explore"), view: "list", detailId: null, sharedIds: [] };
 const contexts = { explore: { filters: defaultFilters("explore"), view: "list" }, saved: { filters: defaultFilters("saved"), view: "list" }, shared: { filters: defaultFilters("shared"), view: "list" } };
 let storage = null, storageWorks = true, modalKind = null, returnFocus = null, undo = null, searchTimer = null, loading = false;
@@ -268,7 +268,7 @@ function card(v) {
   head.append(identity);
   identity.append(el("p", v.address_status === "not_available" ? "Use the map to check the address." : v.address, "card-address"));
   if (v.distance != null) identity.append(el("p", `${v.distance.toFixed(1)} km · straight-line`, "card-distance"));
-  if (v.review_notice) identity.append(el("p", v.verification === "user-submitted" ? "Submitted · confirmation pending" : "Details need confirmation", "listing-note"));
+  if (v.review_notice) identity.append(el("p", v.verification === "user-submitted" ? "Submitted · confirmation pending" : /^Closure reported:/i.test(v.review_notice) ? "Reported permanently closed" : /^Temporary closure reported:/i.test(v.review_notice) ? "Reported temporarily closed" : "Details need confirmation", "listing-note"));
   c.append(head);
   const actions = el("div", null, "card-actions");
   if (v.phones.length) actions.append(withIcon(phoneLink(v.phones[0], v.phones[0].number.replace(/^\+880/, "0"), "primary"), "phone"));
@@ -461,6 +461,7 @@ function detail(v, { write = true } = {}) {
   renderInspector();
   document.querySelectorAll(".card").forEach((n) => n.classList.toggle("selected", n.dataset.venue === v.id));
   mapController?.select(v.id, { zoom: state.view === "map" });
+  if (state.view === "map") renderMapSelection();
   const box = el("article", null, "venue-detail");
   box.append(el("p", v.area || "Dhaka", "detail-topline"), heading(displayName(v)));
   if (v.review_notice) box.append(el("p", v.review_notice, "review-notice"));
@@ -573,6 +574,8 @@ function compareView() {
   });
   addRow("Map & reviews", (v) => external("Google Maps", mapsURL(v)));
   addRow("Website", (v) => v.website ? external("Visit website", v.website) : "Unavailable");
+  if (vs.some((v) => hasCapacity(v))) addRow("Published capacity", (v) => hasCapacity(v) ? capacityText(v) + (v.capacity_layout ? ` · ${v.capacity_layout}` : "") : "Not published");
+  if (vs.some((v) => v.facilities.length)) addRow("Documented facilities", (v) => v.facilities.length ? v.facilities.join(", ") : "Not documented");
   if (vs.some((v) => v.review_notice)) addRow("Please check", (v) => v.review_notice || "Confirm booking details directly");
   wrap.append(table);
   box.append(wrap);
@@ -598,9 +601,9 @@ async function ensureMap() {
       if (!mapPromise) mapPromise = import("./map.js");
       const module = await mapPromise;
       if (!mapController) mapController = module.createMap($("map"), { onSelect: (id) => selectOnMap(id), onError: (text) => {
-        $("mapMessage").textContent = text;
+        mapTileError = text;
+        if (results.some((v) => v.coordinates)) $("mapMessage").textContent = text;
       } });
-      $("mapMessage").textContent = "Distances, when available, are straight-line estimates.";
     } catch {
       mapPromise = null;
       $("mapMessage").textContent = "The map could not load. Use the list and Google Maps links.";
@@ -612,7 +615,11 @@ async function ensureMap() {
   mapController.invalidate();
   if (selected) mapController.select(selected);
   $("markerContext").textContent = `${results.filter((v) => v.coordinates).length} mapped · ${results.filter((v) => !v.coordinates).length} without a marker`;
-  if (!results.some((v) => v.coordinates)) $("mapMessage").textContent = "No source-published coordinates in these results. All venues remain available in the list.";
+  $("mapMessage").textContent = !results.length
+    ? "No venues match the current search or filters. Switch to List to change them."
+    : !results.some((v) => v.coordinates)
+      ? "These matching venues have no source-published map point. Switch to List to view them."
+      : mapTileError || "Distances, when available, are straight-line estimates.";
   renderMapSelection();
 }
 function selectOnMap(id, zoom = false) {
@@ -637,6 +644,12 @@ function renderMapSelection() {
   if (v.phones.length) actions.append(phoneLink(v.phones[0], "Call"));
   actions.append(external("Google Maps", mapsURL(v)));
   box.append(actions);
+  requestAnimationFrame(() => {
+    if (state.view !== "map" || selected !== v.id) return;
+    const tray = $("compareBar"), bottom = tray.hidden ? innerHeight - 12 : Math.min(innerHeight - 12, tray.getBoundingClientRect().top - 12);
+    const rect = actions.getBoundingClientRect(), overlap = rect.bottom - bottom;
+    if (rect.top < innerHeight && overlap > 0) window.scrollBy({ top: overlap, behavior: "instant" });
+  });
 }
 function setView(view) {
   state.view = view;

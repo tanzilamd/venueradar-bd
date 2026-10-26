@@ -33,6 +33,21 @@ test("invalid source/phone cannot create a workflow-breaking draft", async ({ pa
   await expect(page.locator("#formError")).toContainText("Invalid Bangladesh phone");
   await expect(page.locator("#changeSummary")).toHaveText("No changes yet.");
 });
+test("manager searches missing-field queues without changing published data", async ({ page }) => {
+  const noPhone = { ...v, id: "bd-test-no-phone", name: "TEST ONLY No Phone", phones: [] };
+  const noPoint = { ...v, id: "bd-test-no-point", name: "TEST ONLY No Map", coordinates: null, address_status: "partial" };
+  await page.route("**/data/venues.json", (r) => r.fulfill({ json: [v, noPhone, noPoint] }));
+  await page.goto("/manage.html");
+  const search = page.locator("#adminSearch");
+  await search.fill("missing:phone");
+  await expect(page.locator("#adminList button")).toHaveCount(1);
+  await expect(page.locator("#adminList")).toContainText("No Phone");
+  await search.fill("missing:map");
+  await expect(page.locator("#adminList")).toContainText("No Map");
+  await search.fill("missing:address no map");
+  await expect(page.locator("#adminList button")).toHaveCount(1);
+  await expect(page.locator("#changeSummary")).toHaveText("No changes yet.");
+});
 test("manager finds review notices and clears one only after source confirmation", async ({ page }) => {
   const flagged = real.find((row) => row.review_notice && row.verification !== "user-submitted");
   await page.route("**/data/venues.json", (r) => r.fulfill({ json: [v, flagged] }));

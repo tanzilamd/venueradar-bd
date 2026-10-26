@@ -30,9 +30,18 @@ function draft() {
   }
 }
 function render() {
-  const q = $("adminSearch").value.toLowerCase(), list = $("adminList");
+  const search = $("adminSearch").value.toLowerCase().trim();
+  const queue = /^(missing:(?:phone|address|map|area)|needs:review)(?:\s|$)/.exec(search)?.[1] || "";
+  const q = queue ? search.slice(queue.length).trim() : search;
+  const list = $("adminList");
   list.replaceChildren();
-  const shown = rows.filter((v) => (v.name + " " + (v.area || "")).toLowerCase().includes(q) && (!$('reviewOnly').checked || !!v.review_notice)).sort((a, b) => a.name.localeCompare(b.name));
+  const shown = rows.filter((v) => (v.name + " " + (v.area || "")).toLowerCase().includes(q)
+    && (!$('reviewOnly').checked || !!v.review_notice)
+    && (!queue || queue === "missing:phone" && !v.phones.length
+      || queue === "missing:address" && v.address_status !== "published"
+      || queue === "missing:map" && !v.coordinates
+      || queue === "missing:area" && !v.area
+      || queue === "needs:review" && !!v.review_notice)).sort((a, b) => a.name.localeCompare(b.name));
   $("adminCount").textContent = `${shown.length} of ${rows.length} halls and venues`;
   for (const v of shown) {
     const b = button("", () => open(v), "manager-row");

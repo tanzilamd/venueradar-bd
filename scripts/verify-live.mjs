@@ -9,7 +9,11 @@ const url = process.env.LIVE_SITE_URL || "https://tanzilahmed.tech/venueradar-bd
 const out = "live-verification";
 fs.mkdirSync(out, { recursive: true });
 const report = { url, commit: process.env.GITHUB_SHA || "local", checks: [], javascriptErrors: [], failedAssets: [] };
-const browser = await chromium.launch({ ...process.env.CHROMIUM_PATH ? { executablePath: process.env.CHROMIUM_PATH } : {}, args: ["--no-sandbox"] });
+const browser = await chromium.launch({
+  ...process.env.CHROMIUM_PATH ? { executablePath: process.env.CHROMIUM_PATH } : {},
+  ...process.env.VR_BROWSER_PROXY ? { proxy: { server: process.env.VR_BROWSER_PROXY } } : {},
+  args: ["--no-sandbox", ...(process.env.VR_PROXY_SPKI ? [`--ignore-certificate-errors-spki-list=${process.env.VR_PROXY_SPKI}`] : [])]
+});
 try {
   const context = await browser.newContext({ viewport: { width: 1363, height: 936 } }), page = await context.newPage();
   page.on("pageerror", (e) => report.javascriptErrors.push(e.message));
