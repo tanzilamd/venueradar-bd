@@ -30,7 +30,7 @@ function stateURL(base, state) {
   const f = state.filters, defaults = defaultFilters(state.tab);
   for (const [key, param] of Object.entries(keys)) if (f[key] !== defaults[key]) u.searchParams.set(param, f[key]);
   for (const [key, param] of Object.entries(bools)) if (f[key]) u.searchParams.set(param, "1");
-  if (!f.includeNearby) u.searchParams.set("nearby", "0");
+  u.searchParams.set("nearby", f.includeNearby ? "1" : "0");
   if (state.tab === "saved") u.searchParams.set("tab", "saved");
   if (state.tab === "shared") u.searchParams.set("list", state.sharedIds.join(","));
   if (state.view === "map") u.searchParams.set("view", "map");

@@ -9,7 +9,7 @@
     "id": "osm-geofabrik-bd-2026-10-24",
     "url": "https://download.geofabrik.de/asia/bangladesh.html",
     "license": "ODbL-1.0",
-    "attribution": "\u00a9 OpenStreetMap contributors",
+    "attribution": "© OpenStreetMap contributors",
     "usage": "107 manually selected, spatially scoped map listings. Not operator confirmation or proof of wedding-only use. Source identities and edit dates are in discovery.json."
   },
   {
@@ -29,5 +29,11 @@
     "url": "https://github.com/tanzilamd/venueradar-bd/blob/main/docs/reports/2026-10-25-area-contact-revision.md",
     "license": "Individual public business facts; source-specific rights retained",
     "usage": "Operator booking/contact pages and user-requested manual business-listing checks. No Google ratings, reviews, photos, opening hours, restricted API responses or bulk Places export. Every phone has its own source and published-not-call-tested status."
+  },
+  {
+    "id": "manual-additional-dhaka-halls-2026-10-26",
+    "url": "https://github.com/tanzilamd/venueradar-bd/blob/main/docs/reports/2026-10-26-additional-halls.md",
+    "license": "Individual public business facts; OSM locality data ODbL-1.0; source-specific rights retained",
+    "usage": "Six individual public business profiles visually inspected; published contact, name, address and map point only. Cached OSM address hierarchies manually reviewed for browsing locality. No ratings, reviews, photos, Google business hours or bulk Places export."
   }
 ]

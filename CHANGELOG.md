@@ -1,5 +1,11 @@
 # Changelog
 
+## Additional Dhaka halls and consistent nearby areas — 26 October 2026
+- Add six individually reviewed dedicated halls with sourced phones and map positions; preserve all 129 prior records and contacts. Active directory: 135 records, including 127 halls/centers and eight separately grouped hotels.
+- Align Ananda and Jonaki under the broader Paltan browsing zone while preserving the Naya Paltan address. Connect nearby Naya Paltan/Motijheel both ways, make nearby relationships reciprocal, and keep shared-zone neighbors consistent.
+- Preserve the nearby selection across shared links and reloads. Add unit, browser and live-deployment checks for area behavior.
+- Recheck eight missing-contact follow-ups; document 33 still unresolved phones, identity/address conflicts and rejected operator website candidates without inventing facts. See `docs/reports/2026-10-26-additional-halls.md`.
+
 ## Contact-first UI and visual directory manager
 - Simplify public cards, details, filters and comparison to name, area, address, phones and maps; retain historical research in JSON.
 - Add graphical add/edit/remove, drafts, import/export, validation and optional owner-authenticated atomic GitHub publishing with previous-version archives and conflict protection.

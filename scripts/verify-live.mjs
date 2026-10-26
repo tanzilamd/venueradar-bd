@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { chromium } from "playwright";
 const expected = JSON.parse(fs.readFileSync("public/data/venues.json", "utf8"));
 const catalog = JSON.parse(fs.readFileSync("public/data/collections.json", "utf8"));
+const expectedAreas = JSON.parse(fs.readFileSync("public/data/areas.json", "utf8"));
 const hallIds = catalog.groups.find((g) => g.id === "community-halls").venue_ids;
 const url = process.env.LIVE_SITE_URL || "https://tanzilahmed.tech/venueradar-bd/";
 const out = "live-verification";
@@ -29,6 +30,26 @@ try {
     await page.waitForTimeout(5e3);
   }
   report.checks.push("Live JSON exactly matches the deployed commit");
+  const areaResponse = await context.request.get(url + "data/areas.json?revision=" + report.commit);
+  assert.equal(areaResponse.status(), 200);
+  assert.deepEqual(await areaResponse.json(), expectedAreas);
+  const grouped = expectedAreas.groups?.Paltan || ["Paltan"];
+  for (const area of ["Paltan", "Naya Paltan", "Motijheel"]) {
+    await ready(url + "?area=" + encodeURIComponent(area) + "&nearby=0");
+    const own = expectedAreas.groups?.[area] || [area];
+    const exactIds = expected.filter((v) => hallIds.includes(v.id) && own.includes(v.area)).map((v) => v.id).sort();
+    assert.deepEqual((await page.locator("#results .card").evaluateAll((nodes) => nodes.map((n) => n.dataset.venue))).sort(), exactIds);
+    await page.locator("#includeNearby").check();
+    await page.reload();
+    await page.locator('#directory[aria-busy="false"]').waitFor();
+    assert.ok(await page.locator("#includeNearby").isChecked());
+    if (area === "Motijheel") {
+      for (const v of expected.filter((v) => hallIds.includes(v.id) && grouped.includes(v.area))) {
+        await page.locator('[data-venue="' + v.id + '"]').waitFor();
+      }
+    }
+  }
+  report.checks.push("Live area index, Paltan / Naya Paltan grouping and nearby Motijheel survive reload");
   await ready();
   assert.equal(await page.locator("#results .card").count(), hallIds.length);
   const venue = expected.find((v) => hallIds.includes(v.id) && v.phones.length && !v.review_notice) || expected.find((v) => hallIds.includes(v.id)) || expected[0];

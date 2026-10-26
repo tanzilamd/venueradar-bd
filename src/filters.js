@@ -1,8 +1,12 @@
 import { $, el, button } from "./ui.js";
 import { matchesAreaQuery } from "./search.js";
 const groupNames = (area, areas) => areas.groups?.[area] || [area];
+function nearbyNames(area, areas) {
+  const own = groupNames(area, areas);
+  return [...new Set(own.flatMap((name) => areas.nearby?.[name] || []))].filter((name) => !own.includes(name));
+}
 function areaNames(area, nearby, areas) {
-  return [.../* @__PURE__ */ new Set([...groupNames(area, areas), ...(nearby ? areas.nearby?.[area] || [] : []).flatMap((n) => groupNames(n, areas))])];
+  return [.../* @__PURE__ */ new Set([...groupNames(area, areas), ...(nearby ? nearbyNames(area, areas) : []).flatMap((n) => groupNames(n, areas))])];
 }
 function areaCounts(rows, area, areas) {
   const exact = groupNames(area, areas), near = areaNames(area, true, areas);
@@ -172,6 +176,7 @@ export {
   areaCombobox,
   areaCounts,
   areaNames,
+  nearbyNames,
   filterPanel,
   groupNames
 };

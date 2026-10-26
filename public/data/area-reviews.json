@@ -2357,6 +2357,151 @@
       },
       "precision": "browsing locality",
       "reason": "Matched the named hotel and Kazi Nazrul Islam Avenue address to Kawran Bazar; English spelling normalized."
+    },
+    {
+      "venue_id": "bd-grand-shahjahan-convention-hall",
+      "area": "Kajla",
+      "checked": "2026-10-26",
+      "source": "https://nominatim.openstreetmap.org/reverse?lat=23.7111861&lon=90.4460932&format=jsonv2&zoom=18&addressdetails=1&accept-language=en",
+      "address_hierarchy": {
+        "neighbourhood": "Mridhabari",
+        "quarter": "Kazirgaon",
+        "suburb": "Kajla",
+        "city": "Dhaka",
+        "county": "Dhaka Metropolitan",
+        "state_district": "Dhaka District",
+        "ISO3166-2-lvl5": "BD-13",
+        "state": "Dhaka Division",
+        "ISO3166-2-lvl4": "BD-C",
+        "postcode": "1360",
+        "country": "Bangladesh",
+        "country_code": "bd"
+      },
+      "reason": "Published business point and premises/road context reviewed against the OSM address hierarchy. Nearest-object name and differing geocoder street/postcode were not copied into the venue address.",
+      "precision": "browsing locality; not a surveyed administrative boundary"
+    },
+    {
+      "venue_id": "bd-kara-convention-center",
+      "area": "Bakshibazar",
+      "checked": "2026-10-26",
+      "source": "https://nominatim.openstreetmap.org/reverse?lat=23.7206859&lon=90.3965857&format=jsonv2&zoom=18&addressdetails=1&accept-language=en",
+      "address_hierarchy": {
+        "amenity": "Baganbari Mosque",
+        "road": "Tat Khan Lane",
+        "neighbourhood": "Chankharpul",
+        "quarter": "Sat Rawza",
+        "suburb": "Bokshibazar",
+        "city": "Dhaka",
+        "county": "Dhaka Metropolitan",
+        "state_district": "Dhaka District",
+        "ISO3166-2-lvl5": "BD-13",
+        "state": "Dhaka Division",
+        "ISO3166-2-lvl4": "BD-C",
+        "postcode": "1211",
+        "country": "Bangladesh",
+        "country_code": "bd"
+      },
+      "reason": "Published business point and premises/road context reviewed against the OSM address hierarchy. Nearest-object name and differing geocoder street/postcode were not copied into the venue address.",
+      "precision": "browsing locality; not a surveyed administrative boundary"
+    },
+    {
+      "venue_id": "bd-bgb-banquet-hall",
+      "area": "Jigatola",
+      "checked": "2026-10-26",
+      "source": "https://nominatim.openstreetmap.org/reverse?lat=23.7376045&lon=90.3772444&format=jsonv2&zoom=18&addressdetails=1&accept-language=en",
+      "address_hierarchy": {
+        "shop": "Shimanto Square Building 2",
+        "road": "Shahid Maj, General Shakli Avenue",
+        "quarter": "Maneshwar",
+        "suburb": "Jigatola",
+        "city": "Dhaka",
+        "county": "Dhaka Metropolitan",
+        "state_district": "Dhaka District",
+        "ISO3166-2-lvl5": "BD-13",
+        "state": "Dhaka Division",
+        "ISO3166-2-lvl4": "BD-C",
+        "postcode": "1205",
+        "country": "Bangladesh",
+        "country_code": "bd"
+      },
+      "reason": "Published business point and premises/road context reviewed against the OSM address hierarchy. Nearest-object name and differing geocoder street/postcode were not copied into the venue address.",
+      "precision": "browsing locality; not a surveyed administrative boundary"
+    },
+    {
+      "venue_id": "bd-sayeedana-community-centre",
+      "area": "Dhanmondi",
+      "checked": "2026-10-26",
+      "source": "https://nominatim.openstreetmap.org/reverse?lat=23.7460892&lon=90.3738983&format=jsonv2&zoom=18&addressdetails=1&accept-language=en",
+      "address_hierarchy": {
+        "road": "Dhanmondi 9A",
+        "residential": "Dhanmondi Residential Area",
+        "quarter": "Modhubazar",
+        "suburb": "Dhanmondi",
+        "city": "Dhaka",
+        "county": "Dhaka Metropolitan",
+        "state_district": "Dhaka District",
+        "ISO3166-2-lvl5": "BD-13",
+        "state": "Dhaka Division",
+        "ISO3166-2-lvl4": "BD-C",
+        "postcode": "1205",
+        "country": "Bangladesh",
+        "country_code": "bd"
+      },
+      "reason": "Published business point and premises/road context reviewed against the OSM address hierarchy. Nearest-object name and differing geocoder street/postcode were not copied into the venue address. The venue publishes House 36, Road 9/A, R/A; OSM identifies that road as Dhanmondi 9A in Dhanmondi Residential Area. Preserve the venue postcode rather than the differing geocoder postcode.",
+      "precision": "browsing locality; not a surveyed administrative boundary"
+    },
+    {
+      "venue_id": "bd-grand-palace-convention-hall",
+      "area": "Khilkhet",
+      "checked": "2026-10-26",
+      "source": "https://www.google.com/maps/place/The+Grand+Palace+Convention+Hall/@23.8341513,90.457869,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c9664425eb23:0x3d68ffb6b8960fc0!8m2!3d23.8341513!4d90.457869!16s%2Fg%2F11tk80k89_?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+      "address_hierarchy": {
+        "suburb": "Dumni",
+        "city": "Dhaka",
+        "county": "Dhaka Metropolitan",
+        "state_district": "Dhaka District",
+        "ISO3166-2-lvl5": "BD-13",
+        "state": "Dhaka Division",
+        "ISO3166-2-lvl4": "BD-C",
+        "postcode": "1229",
+        "country": "Bangladesh",
+        "country_code": "bd"
+      },
+      "reason": "Khilkhet is explicitly published in the matched business address. The OSM hierarchy uses broader Dumni; retain the published browsing locality without claiming surveyed borders.",
+      "precision": "browsing locality; not a surveyed administrative boundary"
+    },
+    {
+      "venue_id": "bd-uttara-party-center",
+      "area": "Uttara",
+      "checked": "2026-10-26",
+      "source": "https://nominatim.openstreetmap.org/reverse?lat=23.8646972&lon=90.3995238&format=jsonv2&zoom=18&addressdetails=1&accept-language=en",
+      "address_hierarchy": {
+        "amenity": "Standard Bank Limited, Uttara Model Town Branch",
+        "road": "Road 7",
+        "neighbourhood": "Badshartek",
+        "quarter": "Sector 3",
+        "suburb": "Uttara",
+        "city": "Dhaka",
+        "county": "Dhaka Metropolitan",
+        "state_district": "Dhaka District",
+        "ISO3166-2-lvl5": "BD-13",
+        "state": "Dhaka Division",
+        "ISO3166-2-lvl4": "BD-C",
+        "postcode": "1276",
+        "country": "Bangladesh",
+        "country_code": "bd"
+      },
+      "reason": "Published business point and premises/road context reviewed against the OSM address hierarchy. Nearest-object name and differing geocoder street/postcode were not copied into the venue address.",
+      "precision": "browsing locality; not a surveyed administrative boundary"
+    },
+    {
+      "venue_id": "bd-jonaki-convention-hall",
+      "area": "Paltan",
+      "previous_area": "Naya Paltan",
+      "checked": "2026-10-26",
+      "source": "https://www.google.com/maps/place/Jonaki+Convention+Hall/@23.7363665,90.4150115,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b9004e15ee91:0x16d3973017cd0f61!8m2!3d23.7363665!4d90.4150115!16s%2Fg%2F11wv9p4nyc?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+      "reason": "Owner confirms Ananda and Jonaki share the same local road corridor. Individually rechecked published points are about 260m apart. Use the broader Paltan browsing zone consistently; keep the more precise Naya Paltan locality in the existing address. This is a browsing label, not a surveyed boundary change.",
+      "precision": "browsing locality; source address and map point retained"
     }
   ]
 }

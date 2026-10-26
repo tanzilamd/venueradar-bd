@@ -1,0 +1,92 @@
+[
+  {
+    "id": "bd-osm-way-438470592",
+    "checked": "2026-10-26",
+    "source": "https://www.google.com/maps/place/Ma+Community+Centre/@23.8402177,90.3872691,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c7e714b14e79:0x7b987056dc407cdd!8m2!3d23.8402177!4d90.3872691!16s%2Fg%2F11h_26b6kr?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+    "fields": [
+      "phone_review",
+      "maps_url"
+    ],
+    "outcome": "Named Ma Community Centre and published point match the existing Bawnia record. The inspected profile publishes no phone or operator website. This does not establish that the venue has no telephone."
+  },
+  {
+    "id": "bd-osm-way-534499396",
+    "checked": "2026-10-26",
+    "source": "https://www.google.com/maps/place/Green+House+Community+Center/@23.699508,90.4354835,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b9c68f8d939f:0xa41511cda542ba15!8m2!3d23.699508!4d90.4354835!16s%2Fg%2F11c2jtjm_s?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+    "fields": [
+      "phone_review",
+      "maps_url"
+    ],
+    "outcome": "Named Green House Community Center and published point match the existing record. The inspected profile publishes no phone or operator website. Existing contact facts preserved."
+  },
+  {
+    "id": "bd-osm-way-367563642",
+    "checked": "2026-10-26",
+    "source": "https://www.google.com/maps/place/Officer's+Club+Dhaka/@23.7423727,90.404548,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b88da8b960c3:0x7ea449c7267fb4b8!8m2!3d23.7423727!4d90.404548!16s%2Fg%2F1ptw40bsq?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+    "fields": [
+      "phone_review",
+      "maps_url"
+    ],
+    "outcome": "Matching Officers Club profile at 26 Bailey Road publishes no phone or website. An additional operator-contact search was challenged; no bypass or unsupported number. This replaces the earlier network-only follow-up outcome."
+  },
+  {
+    "id": "bd-motijheel-community-center",
+    "checked": "2026-10-26",
+    "source": "https://www.google.com/maps/place/Motijheel+Community+Center/@23.735544,90.421647,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b85cd155efad:0x5e6b84502810cbd9!8m2!3d23.735544!4d90.421647!16s%2Fg%2F11c6vbbyvd?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+    "fields": [
+      "phone_review",
+      "maps_url"
+    ],
+    "outcome": "Matched Motijheel Community Center business name and point; profile publishes no phone or operator website. Earlier facts retained."
+  },
+  {
+    "id": "bd-modhubagh-community-centre",
+    "checked": "2026-10-26",
+    "source": "https://www.google.com/maps/place/Modhubagh+Community+Centre,+Hatirjheel/@23.7584944,90.4105533,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b9c82f416251:0x10fb9b30ccbb11cf!8m2!3d23.7584944!4d90.4105533!16s%2Fg%2F11hfk1ymm9?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+    "fields": [
+      "phone_review",
+      "maps_url"
+    ],
+    "outcome": "Matched Modhubagh Community Centre Hatirjheel name and point; profile publishes no phone or operator website. Earlier facts retained."
+  },
+  {
+    "id": "bd-osm-way-534723199",
+    "checked": "2026-10-26",
+    "source": "https://www.google.com/maps/search/Somrat+Community+Center+Dholaipar+Dhaka/@24.1005732,91.0667531,9z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+    "fields": [
+      "phone_review",
+      "review_notice"
+    ],
+    "outcome": "Somrat search returns different-named Dholaipar venues and a similarly named venue outside Dhaka; no unique match for this historic Dholaipar record. No phone borrowed or closure inferred."
+  },
+  {
+    "id": "bd-osm-way-371381396",
+    "checked": "2026-10-26",
+    "source": "https://www.google.com/maps/place/Khilgaon+Community+Center/@23.74965,90.2721077,12z/data=!4m10!1m2!2m1!1sMalibagh+Community+Centre+Dhaka!3m6!1s0x3755b863416f5795:0x668212d68f44a4cc!8m2!3d23.74965!4d90.4163033!15sCh9NYWxpYmFnaCBDb21tdW5pdHkgQ2VudHJlIERoYWthWiEiH21hbGliYWdoIGNvbW11bml0eSBjZW50cmUgZGhha2GSARBjb21tdW5pdHlfY2VudGVymgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVVJDZFhabFducEJSUkFC4AEA-gEECAAQRA!16s%2Fg%2F1tcvxsfw?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+    "fields": [
+      "phone_review"
+    ],
+    "outcome": "The matching point is currently named Khilgaon / Malika, with a Malibagh market and Shahid Baki Road address. It publishes no phone. Preserve the historic Malibagh record and existing identity/address warning; do not merge it with the separately owner-confirmed Khilgaon point."
+  },
+  {
+    "id": "bd-police-plaza-convention-centre",
+    "checked": "2026-10-26",
+    "source": "https://www.google.com/maps/place/Police+Plaza+Convention+Centre/@23.7705246,90.3978659,15z/data=!3m1!5s0x3755c7836bb749d3:0x693d96f4549a4c6e!4m6!3m5!1s0x3755c76934945adb:0x40d241f97b7d7b22!8m2!3d23.7729044!4d90.4162845!16s%2Fg%2F11fm_44xhw?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+    "fields": [
+      "phone_review",
+      "maps_url"
+    ],
+    "outcome": "Matching Police Plaza Convention Centre profile, House 2 Road 144 and published point rechecked. No phone or operator website is displayed. No unrelated shopping-mall number substituted."
+  },
+  {
+    "id": "bd-jonaki-convention-hall",
+    "checked": "2026-10-26",
+    "source": "https://www.google.com/maps/place/Jonaki+Convention+Hall/@23.7363665,90.4150115,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b9004e15ee91:0x16d3973017cd0f61!8m2!3d23.7363665!4d90.4150115!16s%2Fg%2F11wv9p4nyc?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+    "fields": [
+      "area"
+    ],
+    "before": "Naya Paltan",
+    "after": "Paltan",
+    "outcome": "Owner confirms Ananda and Jonaki share the same local road corridor. Individually rechecked published points are about 260m apart. Use the broader Paltan browsing zone consistently; keep the more precise Naya Paltan locality in the existing address. This is a browsing label, not a surveyed boundary change."
+  }
+]

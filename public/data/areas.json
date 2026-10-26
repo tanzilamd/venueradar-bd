@@ -288,6 +288,10 @@
     {
       "id": "72",
       "name": "Naya Paltan"
+    },
+    {
+      "id": "73",
+      "name": "Kajla"
     }
   ],
   "priority": [
@@ -299,81 +303,478 @@
   ],
   "nearby": {
     "Rampura": [
-      "Banasree",
-      "Badda",
       "Aftabnagar",
-      "Madhubag",
+      "Badda",
+      "Banasree",
       "Khilgaon",
+      "Madhubag",
       "Malibagh"
     ],
-    "Khilgaon": [
-      "Goran",
-      "Basabo",
-      "Sabujbag",
-      "Malibagh",
-      "Rampura",
-      "Kamalapur"
+    "Badda": [
+      "Aftabnagar",
+      "Baridhara",
+      "Gulshan",
+      "Gulshan 1",
+      "Niketon",
+      "Rampura"
     ],
-    "Malibagh": [
-      "Khilgaon",
-      "Moghbazar",
-      "Madhubag",
-      "Shantinagar",
-      "Paltan",
-      "Noyatola"
+    "Gulshan": [
+      "Badda",
+      "Banani",
+      "Gulshan 1",
+      "Gulshan 2",
+      "Mohakhali",
+      "Niketon"
     ],
-    "Motijheel": [
-      "Fakirapool",
-      "Paltan",
-      "Kamalapur",
-      "Gopibagh",
-      "Segunbagicha",
-      "Shahjahanpur",
-      "Wari",
-      "Ramna"
+    "Gulshan 2": [
+      "Banani",
+      "Baridhara",
+      "Gulshan",
+      "Gulshan 1"
     ],
-    "Eskaton": [
-      "Ramna",
-      "Moghbazar",
-      "Karwan Bazar",
-      "Tejgaon",
-      "Shantinagar",
-      "Segunbagicha",
-      "Farmgate",
-      "Nakhalpara"
+    "Banani": [
+      "Dhaka Cantonment",
+      "Gulshan",
+      "Gulshan 2",
+      "Mohakhali"
     ],
-    "Mohammadpur": [
-      "Lalmatia",
-      "Rayer Bazar",
-      "Shyamoli",
-      "Dhanmondi"
+    "Uttara": [
+      "Ashkona",
+      "Bawnia",
+      "Khilkhet"
+    ],
+    "Mirpur": [
+      "Agargaon",
+      "Bawnia",
+      "Dhaka Cantonment",
+      "Shyamoli"
     ],
     "Dhanmondi": [
       "Jigatola",
       "Kalabagan",
       "Lalmatia",
+      "Mohammadpur",
+      "Panthapath",
       "Rayer Bazar"
     ],
-    "Mirpur": [
-      "Shyamoli",
-      "Bawnia",
-      "Dhaka Cantonment"
+    "Mohammadpur": [
+      "Dhanmondi",
+      "Lalmatia",
+      "Rayer Bazar",
+      "Shyamoli"
     ],
-    "Gulshan": [
-      "Gulshan 1",
-      "Gulshan 2",
-      "Niketon",
-      "Banani",
-      "Mohakhali"
+    "Khilgaon": [
+      "Banasree",
+      "Basabo",
+      "Goran",
+      "Kamalapur",
+      "Malibagh",
+      "Rampura",
+      "Sabujbag",
+      "Shahjahanpur"
+    ],
+    "Malibagh": [
+      "Khilgaon",
+      "Madhubag",
+      "Moghbazar",
+      "Naya Paltan",
+      "Noyatola",
+      "Paltan",
+      "Rampura",
+      "Shahjahanpur",
+      "Shantinagar"
+    ],
+    "Motijheel": [
+      "Fakirapool",
+      "Gopibagh",
+      "Kamalapur",
+      "Naya Paltan",
+      "Paltan",
+      "Ramna",
+      "Segunbagicha",
+      "Shahjahanpur",
+      "Wari"
     ],
     "Jatrabari": [
       "Dania",
-      "Dholaipar",
       "Dhalpur",
-      "Saydabad",
+      "Dholaipar",
+      "Doyaganj",
       "Jurain",
+      "Kajla",
       "Postogola",
-      "Doyaganj"
+      "Saydabad"
+    ],
+    "Nikunja 2 / Khilkhet": [
+      "Khilkhet"
+    ],
+    "Dhaka Cantonment": [
+      "Banani",
+      "Bawnia",
+      "Khilkhet",
+      "Mirpur",
+      "Mohakhali"
+    ],
+    "Eskaton": [
+      "Farmgate",
+      "Karwan Bazar",
+      "Moghbazar",
+      "Nakhalpara",
+      "Ramna",
+      "Segunbagicha",
+      "Shantinagar",
+      "Tejgaon"
+    ],
+    "Mohakhali": [
+      "Banani",
+      "Dhaka Cantonment",
+      "Gulshan",
+      "Gulshan 1",
+      "Nakhalpara",
+      "Tejgaon"
+    ],
+    "Agargaon": [
+      "Farmgate",
+      "Mirpur",
+      "Shyamoli",
+      "Tejgaon"
+    ],
+    "Azimpur": [
+      "Bakshibazar",
+      "Hazaribagh",
+      "Kamrangirchar",
+      "Nawabganj (Old Dhaka)"
+    ],
+    "Panthapath": [
+      "Dhanmondi",
+      "Farmgate",
+      "Kalabagan",
+      "Karwan Bazar"
+    ],
+    "Armanitola": [
+      "Bakshibazar",
+      "Bangshal",
+      "Tanti bazar"
+    ],
+    "Ashkona": [
+      "Khilkhet",
+      "Uttara"
+    ],
+    "Bakshibazar": [
+      "Armanitola",
+      "Azimpur",
+      "Bangshal"
+    ],
+    "Banasree": [
+      "Aftabnagar",
+      "Goran",
+      "Khilgaon",
+      "Rampura"
+    ],
+    "Bangshal": [
+      "Armanitola",
+      "Bakshibazar",
+      "Sutrapur",
+      "Tanti bazar"
+    ],
+    "Baridhara": [
+      "Badda",
+      "Baridhara DOHS",
+      "Gulshan 2"
+    ],
+    "Baridhara DOHS": [
+      "Baridhara",
+      "Khilkhet"
+    ],
+    "Basabo": [
+      "Goran",
+      "Kamalapur",
+      "Khilgaon",
+      "Sabujbag"
+    ],
+    "Bawnia": [
+      "Dhaka Cantonment",
+      "Mirpur",
+      "Uttara"
+    ],
+    "Dania": [
+      "Dholaipar",
+      "Jatrabari",
+      "Kajla"
+    ],
+    "Dholaipar": [
+      "Dania",
+      "Jatrabari",
+      "Jurain"
+    ],
+    "Doyaganj": [
+      "Gandaria",
+      "Gopibagh",
+      "Jatrabari",
+      "Saydabad",
+      "Wari"
+    ],
+    "Faridabad": [
+      "Gandaria",
+      "Jurain",
+      "Postogola"
+    ],
+    "Farmgate": [
+      "Agargaon",
+      "Eskaton",
+      "Karwan Bazar",
+      "Panthapath",
+      "Tejgaon"
+    ],
+    "Gandaria": [
+      "Doyaganj",
+      "Faridabad",
+      "Jurain",
+      "Narinda",
+      "Sutrapur"
+    ],
+    "Gopibagh": [
+      "Doyaganj",
+      "Kamalapur",
+      "Motijheel",
+      "Saydabad",
+      "Wari"
+    ],
+    "Goran": [
+      "Banasree",
+      "Basabo",
+      "Khilgaon",
+      "Sabujbag"
+    ],
+    "Gulshan 1": [
+      "Badda",
+      "Gulshan",
+      "Gulshan 2",
+      "Mohakhali",
+      "Niketon"
+    ],
+    "Hazaribagh": [
+      "Azimpur",
+      "Jigatola",
+      "Kamrangirchar",
+      "Nawabganj (Old Dhaka)",
+      "Rayer Bazar"
+    ],
+    "Jigatola": [
+      "Dhanmondi",
+      "Hazaribagh",
+      "Rayer Bazar"
+    ],
+    "Jurain": [
+      "Dholaipar",
+      "Faridabad",
+      "Gandaria",
+      "Jatrabari",
+      "Postogola"
+    ],
+    "Kalabagan": [
+      "Dhanmondi",
+      "Panthapath"
+    ],
+    "Kamrangirchar": [
+      "Azimpur",
+      "Hazaribagh",
+      "Nawabganj (Old Dhaka)"
+    ],
+    "Karwan Bazar": [
+      "Eskaton",
+      "Farmgate",
+      "Panthapath",
+      "Tejgaon"
+    ],
+    "Khilkhet": [
+      "Ashkona",
+      "Baridhara DOHS",
+      "Dhaka Cantonment",
+      "Nikunja 2 / Khilkhet",
+      "Uttara"
+    ],
+    "Madhubag": [
+      "Malibagh",
+      "Moghbazar",
+      "Noyatola",
+      "Rampura"
+    ],
+    "Nakhalpara": [
+      "Eskaton",
+      "Mohakhali",
+      "Tejgaon"
+    ],
+    "Narinda": [
+      "Gandaria",
+      "Sutrapur",
+      "Wari"
+    ],
+    "Nawabganj (Old Dhaka)": [
+      "Azimpur",
+      "Hazaribagh",
+      "Kamrangirchar"
+    ],
+    "Niketon": [
+      "Badda",
+      "Gulshan",
+      "Gulshan 1"
+    ],
+    "Paltan": [
+      "Fakirapool",
+      "Malibagh",
+      "Motijheel",
+      "Naya Paltan",
+      "Ramna",
+      "Segunbagicha",
+      "Shantinagar"
+    ],
+    "Postogola": [
+      "Faridabad",
+      "Jatrabari",
+      "Jurain"
+    ],
+    "Rayer Bazar": [
+      "Dhanmondi",
+      "Hazaribagh",
+      "Jigatola",
+      "Mohammadpur"
+    ],
+    "Sabujbag": [
+      "Basabo",
+      "Goran",
+      "Khilgaon"
+    ],
+    "Saydabad": [
+      "Dhalpur",
+      "Doyaganj",
+      "Gopibagh",
+      "Jatrabari",
+      "Kamalapur"
+    ],
+    "Segunbagicha": [
+      "Eskaton",
+      "Motijheel",
+      "Naya Paltan",
+      "Paltan"
+    ],
+    "Shyamoli": [
+      "Agargaon",
+      "Lalmatia",
+      "Mirpur",
+      "Mohammadpur"
+    ],
+    "Sutrapur": [
+      "Bangshal",
+      "Gandaria",
+      "Narinda",
+      "Tanti bazar",
+      "Wari"
+    ],
+    "Tanti bazar": [
+      "Armanitola",
+      "Bangshal",
+      "Sutrapur",
+      "Wari"
+    ],
+    "Tejgaon": [
+      "Agargaon",
+      "Eskaton",
+      "Farmgate",
+      "Karwan Bazar",
+      "Moghbazar",
+      "Mohakhali",
+      "Nakhalpara",
+      "Noyatola"
+    ],
+    "Wari": [
+      "Doyaganj",
+      "Gopibagh",
+      "Motijheel",
+      "Narinda",
+      "Sutrapur",
+      "Tanti bazar"
+    ],
+    "Aftabnagar": [
+      "Badda",
+      "Banasree",
+      "Rampura"
+    ],
+    "Dhalpur": [
+      "Jatrabari",
+      "Kajla",
+      "Saydabad"
+    ],
+    "Fakirapool": [
+      "Kamalapur",
+      "Motijheel",
+      "Naya Paltan",
+      "Paltan",
+      "Shahjahanpur"
+    ],
+    "Kamalapur": [
+      "Basabo",
+      "Fakirapool",
+      "Gopibagh",
+      "Khilgaon",
+      "Motijheel",
+      "Saydabad",
+      "Shahjahanpur"
+    ],
+    "Lalmatia": [
+      "Dhanmondi",
+      "Mohammadpur",
+      "Shyamoli"
+    ],
+    "Moghbazar": [
+      "Eskaton",
+      "Madhubag",
+      "Malibagh",
+      "Noyatola",
+      "Ramna",
+      "Shantinagar",
+      "Tejgaon"
+    ],
+    "Noyatola": [
+      "Madhubag",
+      "Malibagh",
+      "Moghbazar",
+      "Tejgaon"
+    ],
+    "Ramna": [
+      "Eskaton",
+      "Moghbazar",
+      "Motijheel",
+      "Paltan",
+      "Shantinagar"
+    ],
+    "Shahjahanpur": [
+      "Fakirapool",
+      "Kamalapur",
+      "Khilgaon",
+      "Malibagh",
+      "Motijheel"
+    ],
+    "Shantinagar": [
+      "Eskaton",
+      "Malibagh",
+      "Moghbazar",
+      "Naya Paltan",
+      "Paltan",
+      "Ramna"
+    ],
+    "Naya Paltan": [
+      "Fakirapool",
+      "Malibagh",
+      "Motijheel",
+      "Paltan",
+      "Segunbagicha",
+      "Shantinagar"
+    ],
+    "Kajla": [
+      "Dania",
+      "Dhalpur",
+      "Jatrabari"
     ]
   },
   "groups": {
@@ -385,10 +786,20 @@
     "Khilkhet": [
       "Khilkhet",
       "Nikunja 2 / Khilkhet"
+    ],
+    "Paltan": [
+      "Paltan",
+      "Naya Paltan"
+    ],
+    "Naya Paltan": [
+      "Paltan",
+      "Naya Paltan"
     ]
   },
   "group_notes": {
     "Gulshan": "Gulshan includes the separately named Gulshan 1 and Gulshan 2 browsing localities. Cards keep their own locality names.",
-    "Khilkhet": "Khilkhet includes the published combined Nikunja 2 / Khilkhet hotel address. Cards keep that original label."
+    "Khilkhet": "Khilkhet includes the published combined Nikunja 2 / Khilkhet hotel address. Cards keep that original label.",
+    "Paltan": "Paltan and Naya Paltan share a browsing zone. Addresses retain their local street names.",
+    "Naya Paltan": "Paltan and Naya Paltan share a browsing zone. Addresses retain their local street names."
   }
 }

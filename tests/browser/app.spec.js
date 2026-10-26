@@ -63,6 +63,17 @@ test("search aliases and empty results remain usable",async({page})=>{
  await mock(page);await page.goto("/");await page.locator("#search").fill("Alpha");await expect(cards(page)).toHaveCount(1);await expect(cards(page)).toContainText("Alpha");
  await page.locator("#search").fill("definitely-no-match");await expect(cards(page)).toHaveCount(0);await expect(page.locator("#results")).toContainText("No venues match");
 });
+test("Paltan corridor stays together and nearby Motijheel works both ways", async ({ page }) => {
+ const rows = [fixture("bd-test-paltan", "TEST ONLY Paltan hall", { area: "Paltan" }), fixture("bd-test-naya", "TEST ONLY Naya hall", { area: "Naya Paltan" }), fixture("bd-test-motijheel", "TEST ONLY Motijheel hall", { area: "Motijheel" })];
+ await mock(page, rows); await page.goto("/");
+ await area(page, "Naya Paltan"); await expect(cards(page)).toHaveCount(2);
+ await expect(page.locator("#areaContext")).toContainText("share a browsing zone");
+ await page.locator("#includeNearby").check(); await expect(cards(page)).toHaveCount(3);
+ await page.reload(); await expect(cards(page)).toHaveCount(3); await expect(page.locator("#includeNearby")).toBeChecked();
+ await expect(card(page, "bd-test-motijheel")).toContainText("Motijheel");
+ await area(page, "Motijheel"); await page.locator("#includeNearby").uncheck(); await expect(cards(page)).toHaveCount(1);
+ await page.locator("#includeNearby").check(); await expect(cards(page)).toHaveCount(3);
+});
 test("Saved ignores Explore filters, preserves each tab and supports undo and reload", async ({ page }) => {
   await mock(page);
   await page.goto("/");

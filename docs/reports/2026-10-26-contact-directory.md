@@ -42,7 +42,7 @@ Aangan, Talukdar, GolamMorshed, Casanova, ATNAnandaUllash, Kazi and Spectra were
 
 ## Remaining phone information and access limits
 
-All records missing a phone were individually investigated or retried. The last7requests(Ma,Malibagh,GreenHouse,Somrat,OfficersClub,Motijheel,Modhubagh) failed/rendered unavailable during an environmentHTTP503incident. Earlier facts were preserved; inaccessible material was not claimed as checked. Other profiles either publish no contact or do not establish the same business identity. RUAP's mall line and Rupsha's hotel line were not borrowed as hall-booking numbers. Google/DDG challenges, Brave429, Facebook collection restrictions and inaccessible operator domains were respected. No fabricated phone, restricted API export, stored ratings/reviews or copied photographs were added.
+All records missing a phone were individually investigated or retried. At this historical checkpoint, seven requests (Ma, Malibagh, Green House, Somrat, Officers Club, Motijheel and Modhubagh) failed/rendered unavailable during an environment HTTP503 incident. They were subsequently rechecked; see the additional-halls follow-up report. Earlier facts were preserved; inaccessible material was not claimed as checked. Other profiles either publish no contact or do not establish the same business identity. RUAP's mall line and Rupsha's hotel line were not borrowed as hall-booking numbers. Google/DDG challenges, Brave429, Facebook collection restrictions and inaccessible operator domains were respected. No fabricated phone, restricted API export, stored ratings/reviews or copied photographs were added.
 
 | Venue without a phone | Area | Latest outcome |
 |---|---|---|
@@ -86,6 +86,10 @@ Application revision8d037be4a10b00fa0c7852a36cc51c30c391f63bwas normally pushed 
 
 Public-internet research and local live-site requests still encounter intermittent environmentHTTP503. A post-deployment real-browser verification job now checks the actual production URL and publishes its JSON/screenshot evidence as the live-verification Actions artifact. Check the latest run for the final outcome; local preview success alone is not a live-verification claim.
 
-After the first push, six additional discovered candidates were attempted: GrandShahjahan, Kara, BGB Banquet Hall, Sayeedana, GrandPalaceKhilkhet and UttaraPartyCenter. Individual follow-up requests returned environmentHTTP503. They have not been added without verified contact/location and duplicate checks. This is an explicit unresolved expansion, not a complete-Dhaka coverage claim.
+At this historical checkpoint, six additional candidates were blocked by environment HTTP503. On 26 October all six were individually inspected, checked for duplicates and admitted with sourced phones and positions. The current dataset and remaining gaps are reported in [the additional-halls follow-up](2026-10-26-additional-halls.md). There is still no complete-Dhaka coverage claim.
 
 Final production-preview smoke used the actual repository subpath, including manage.html. New Waterfront contact, Fortune editing, clean logo navigation, 360px reflow and asset loads passed with zero JavaScript errors or failed local assets. Desktop/mobile public pages and the editor were visually inspected. No new Lighthouse score is claimed for this revision. The original four environment CA certificates remain; no temporary trust entry was left.
+
+## Subsequent verified deployment and data follow-up
+
+Commit `3f2b5aa` was normally pushed, and run `40279621066` passed all three jobs including actual production Chromium verification. The downloaded live report records success, no JavaScript errors or failed site assets, nine loaded OSM tiles and three clusters. Later six-hall additions and nearby-area corrections are documented in [the current follow-up report](2026-10-26-additional-halls.md); the coverage table above describes this earlier revision.

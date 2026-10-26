@@ -1,7 +1,7 @@
 import "./style.css";
 import { filterVenues, sizeOf, hasCapacity, capacityText, readIds, mapsURL } from "./model.js";
 import { defaultFilters, readURL, stateURL } from "./state.js";
-import { filterPanel, areaCounts, areaNames, groupNames } from "./filters.js";
+import { filterPanel, areaCounts, areaNames, groupNames, nearbyNames } from "./filters.js";
 import { $, el, button, external, phoneLink, displayName, dateText, icon, withIcon, sourceLabel } from "./ui.js";
 let venues = [], areas, collections, results = [], favorites = [], compare = [], sharedIds = [], ready = false, locationPoint = null, selected = null, sidebar = null, draftPanel = null, draft = null, mapController = null, mapPromise = null;
 let state = { tab: "explore", filters: defaultFilters("explore"), view: "list", detailId: null, sharedIds: [] };
@@ -226,7 +226,7 @@ function areaContext() {
   else text = `${exact} ${exact === 1 ? "match" : "matches"} in ${f.area}` + (f.includeNearby ? ` · ${nearby} in nearby neighborhoods.` : ".");
   box.append(el("p", text));
   if (f.includeNearby) {
-    const names = areas.nearby?.[f.area] || [];
+    const names = nearbyNames(f.area, areas);
     if (names.length) box.append(el("p", "Nearby areas: " + names.join(", ") + ". Results keep their own neighborhood labels.", "nearby-list"));
   }
   if (areas.group_notes?.[f.area]) box.append(el("p", areas.group_notes[f.area], "nearby-list"));

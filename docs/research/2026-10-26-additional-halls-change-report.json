@@ -1,0 +1,1549 @@
+{
+  "checked": "2026-10-26",
+  "baseline_commit": "3f2b5aaa739f719f0ba70f36e848b1a7492bc54b",
+  "added": [
+    "bd-grand-shahjahan-convention-hall",
+    "bd-kara-convention-center",
+    "bd-bgb-banquet-hall",
+    "bd-sayeedana-community-centre",
+    "bd-grand-palace-convention-hall",
+    "bd-uttara-party-center"
+  ],
+  "modified": [
+    {
+      "id": "bd-osm-way-371381396",
+      "name": "Malibagh Community Centre",
+      "fields": {
+        "evidence": {
+          "before": [
+            {
+              "url": "https://www.openstreetmap.org/way/371381396",
+              "fields": [
+                "name",
+                "aliases",
+                "category",
+                "coordinates",
+                "city",
+                "address"
+              ],
+              "checked": "2026-10-25",
+              "kind": "open-data",
+              "reuse": "OpenStreetMap contributors, ODbL-1.0; manually reviewed and filtered from the Geofabrik Bangladesh extract. No Google Places data."
+            },
+            {
+              "url": "https://nominatim.openstreetmap.org/reverse?lat=23.74966095&lon=90.41622244999999&format=jsonv2&addressdetails=1&zoom=18&accept-language=en",
+              "fields": [
+                "area"
+              ],
+              "checked": "2026-10-25",
+              "kind": "open-data",
+              "reuse": "OpenStreetMap/Nominatim address data, ODbL-1.0. Cached one-time, single-thread research at <=1 request/second; locality reviewed, not an operator address or legal boundary certification."
+            },
+            {
+              "url": "https://www.openstreetmap.org/way/371381396",
+              "fields": [
+                "review_notice"
+              ],
+              "checked": "2026-10-25",
+              "kind": "open-data",
+              "reuse": "Individual public booking/business facts manually inspected; no prose, photos, ratings, reviews, schedules or restricted Places API data copied."
+            },
+            {
+              "url": "https://www.google.com/maps/search/?api=1&query=Khilgaon%20Community%20Center%20Khilgaon%20Dhaka%20Bangladesh",
+              "fields": [
+                "aliases",
+                "maps_url",
+                "review_notice"
+              ],
+              "checked": "2026-10-25",
+              "kind": "independent",
+              "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+            }
+          ],
+          "after": [
+            {
+              "url": "https://www.openstreetmap.org/way/371381396",
+              "fields": [
+                "name",
+                "aliases",
+                "category",
+                "coordinates",
+                "city",
+                "address"
+              ],
+              "checked": "2026-10-25",
+              "kind": "open-data",
+              "reuse": "OpenStreetMap contributors, ODbL-1.0; manually reviewed and filtered from the Geofabrik Bangladesh extract. No Google Places data."
+            },
+            {
+              "url": "https://nominatim.openstreetmap.org/reverse?lat=23.74966095&lon=90.41622244999999&format=jsonv2&addressdetails=1&zoom=18&accept-language=en",
+              "fields": [
+                "area"
+              ],
+              "checked": "2026-10-25",
+              "kind": "open-data",
+              "reuse": "OpenStreetMap/Nominatim address data, ODbL-1.0. Cached one-time, single-thread research at <=1 request/second; locality reviewed, not an operator address or legal boundary certification."
+            },
+            {
+              "url": "https://www.openstreetmap.org/way/371381396",
+              "fields": [
+                "review_notice"
+              ],
+              "checked": "2026-10-25",
+              "kind": "open-data",
+              "reuse": "Individual public booking/business facts manually inspected; no prose, photos, ratings, reviews, schedules or restricted Places API data copied."
+            },
+            {
+              "url": "https://www.google.com/maps/search/?api=1&query=Khilgaon%20Community%20Center%20Khilgaon%20Dhaka%20Bangladesh",
+              "fields": [
+                "aliases",
+                "maps_url",
+                "review_notice"
+              ],
+              "checked": "2026-10-25",
+              "kind": "independent",
+              "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+            },
+            {
+              "url": "https://www.google.com/maps/place/Khilgaon+Community+Center/@23.74965,90.2721077,12z/data=!4m10!1m2!2m1!1sMalibagh+Community+Centre+Dhaka!3m6!1s0x3755b863416f5795:0x668212d68f44a4cc!8m2!3d23.74965!4d90.4163033!15sCh9NYWxpYmFnaCBDb21tdW5pdHkgQ2VudHJlIERoYWthWiEiH21hbGliYWdoIGNvbW11bml0eSBjZW50cmUgZGhha2GSARBjb21tdW5pdHlfY2VudGVymgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVVJDZFhabFducEJSUkFC4AEA-gEECAAQRA!16s%2Fg%2F1tcvxsfw?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+              "fields": [
+                "phone_review"
+              ],
+              "kind": "independent",
+              "checked": "2026-10-26",
+              "reuse": "The matching point is currently named Khilgaon / Malika, with a Malibagh market and Shahid Baki Road address. It publishes no phone. Preserve the historic Malibagh record and existing identity/address warning; do not merge it with the separately owner-confirmed Khilgaon point. Individual visual review; no ratings, review counts, reviews, photos or business hours copied."
+            }
+          ]
+        },
+        "phone_review": {
+          "before": {
+            "status": "source-limited",
+            "checked": "2026-10-25",
+            "note": "Additional source access was unavailable. Earlier research found no usable number; the business may publish newer details elsewhere."
+          },
+          "after": {
+            "status": "identity-unconfirmed",
+            "checked": "2026-10-26",
+            "note": "The matching point is currently named Khilgaon / Malika, with a Malibagh market and Shahid Baki Road address. It publishes no phone. Preserve the historic Malibagh record and existing identity/address warning; do not merge it with the separately owner-confirmed Khilgaon point."
+          }
+        },
+        "last_checked": {
+          "before": "2026-10-25",
+          "after": "2026-10-26"
+        }
+      }
+    },
+    {
+      "id": "bd-osm-way-438470592",
+      "name": "Ma Community Center",
+      "fields": {
+        "evidence": {
+          "before": [
+            {
+              "url": "https://www.openstreetmap.org/way/438470592",
+              "fields": [
+                "name",
+                "aliases",
+                "category",
+                "coordinates",
+                "city",
+                "address"
+              ],
+              "checked": "2026-10-25",
+              "kind": "open-data",
+              "reuse": "OpenStreetMap contributors, ODbL-1.0; manually reviewed and filtered from the Geofabrik Bangladesh extract. No Google Places data."
+            },
+            {
+              "url": "https://nominatim.openstreetmap.org/reverse?lat=23.8402222&lon=90.38722340000001&format=jsonv2&addressdetails=1&zoom=18&accept-language=en",
+              "fields": [
+                "area"
+              ],
+              "checked": "2026-10-25",
+              "kind": "open-data",
+              "reuse": "OpenStreetMap/Nominatim address data, ODbL-1.0. Cached one-time, single-thread research at <=1 request/second; locality reviewed, not an operator address or legal boundary certification."
+            },
+            {
+              "url": "https://www.google.com/maps/place/Ma+Community+Centre/@23.8402177,90.3872691,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c7e714b14e79:0x7b987056dc407cdd!8m2!3d23.8402177!4d90.3872691!16s%2Fg%2F11h_26b6kr?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+              "fields": [
+                "aliases",
+                "maps_url"
+              ],
+              "checked": "2026-10-25",
+              "kind": "independent",
+              "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+            }
+          ],
+          "after": [
+            {
+              "url": "https://www.openstreetmap.org/way/438470592",
+              "fields": [
+                "name",
+                "aliases",
+                "category",
+                "coordinates",
+                "city",
+                "address"
+              ],
+              "checked": "2026-10-25",
+              "kind": "open-data",
+              "reuse": "OpenStreetMap contributors, ODbL-1.0; manually reviewed and filtered from the Geofabrik Bangladesh extract. No Google Places data."
+            },
+            {
+              "url": "https://nominatim.openstreetmap.org/reverse?lat=23.8402222&lon=90.38722340000001&format=jsonv2&addressdetails=1&zoom=18&accept-language=en",
+              "fields": [
+                "area"
+              ],
+              "checked": "2026-10-25",
+              "kind": "open-data",
+              "reuse": "OpenStreetMap/Nominatim address data, ODbL-1.0. Cached one-time, single-thread research at <=1 request/second; locality reviewed, not an operator address or legal boundary certification."
+            },
+            {
+              "url": "https://www.google.com/maps/place/Ma+Community+Centre/@23.8402177,90.3872691,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c7e714b14e79:0x7b987056dc407cdd!8m2!3d23.8402177!4d90.3872691!16s%2Fg%2F11h_26b6kr?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+              "fields": [
+                "aliases",
+                "maps_url"
+              ],
+              "checked": "2026-10-25",
+              "kind": "independent",
+              "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+            },
+            {
+              "url": "https://www.google.com/maps/place/Ma+Community+Centre/@23.8402177,90.3872691,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c7e714b14e79:0x7b987056dc407cdd!8m2!3d23.8402177!4d90.3872691!16s%2Fg%2F11h_26b6kr?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+              "fields": [
+                "phone_review",
+                "maps_url"
+              ],
+              "kind": "independent",
+              "checked": "2026-10-26",
+              "reuse": "Named Ma Community Centre and published point match the existing Bawnia record. The inspected profile publishes no phone or operator website. This does not establish that the venue has no telephone. Individual visual review; no ratings, review counts, reviews, photos or business hours copied."
+            }
+          ]
+        },
+        "phone_review": {
+          "before": {
+            "status": "source-limited",
+            "checked": "2026-10-25",
+            "note": "Additional source access was unavailable. Earlier research found no usable number; the business may publish newer details elsewhere."
+          },
+          "after": {
+            "status": "not-found-in-checked-sources",
+            "checked": "2026-10-26",
+            "note": "Named Ma Community Centre and published point match the existing Bawnia record. The inspected profile publishes no phone or operator website. This does not establish that the venue has no telephone."
+          }
+        },
+        "last_checked": {
+          "before": "2026-10-25",
+          "after": "2026-10-26"
+        }
+      }
+    },
+    {
+      "id": "bd-osm-way-534499396",
+      "name": "Green House Community Center",
+      "fields": {
+        "evidence": {
+          "before": [
+            {
+              "url": "https://www.openstreetmap.org/way/534499396",
+              "fields": [
+                "name",
+                "aliases",
+                "category",
+                "coordinates",
+                "city",
+                "address"
+              ],
+              "checked": "2026-10-25",
+              "kind": "open-data",
+              "reuse": "OpenStreetMap contributors, ODbL-1.0; manually reviewed and filtered from the Geofabrik Bangladesh extract. No Google Places data."
+            },
+            {
+              "url": "https://nominatim.openstreetmap.org/reverse?lat=23.6994691&lon=90.43533414999999&format=jsonv2&addressdetails=1&zoom=18&accept-language=en",
+              "fields": [
+                "area"
+              ],
+              "checked": "2026-10-25",
+              "kind": "open-data",
+              "reuse": "OpenStreetMap/Nominatim address data, ODbL-1.0. Cached one-time, single-thread research at <=1 request/second; locality reviewed, not an operator address or legal boundary certification."
+            },
+            {
+              "url": "https://www.google.com/maps/place/Green+House+Community+Center/@23.699508,90.4354835,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b9c68f8d939f:0xa41511cda542ba15!8m2!3d23.699508!4d90.4354835!16s%2Fg%2F11c2jtjm_s?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+              "fields": [
+                "address",
+                "maps_url"
+              ],
+              "checked": "2026-10-25",
+              "kind": "independent",
+              "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+            },
+            {
+              "url": "https://www.google.com/maps/place/Green+House+Community+Center/@23.699508,90.4354835,17z/data=!4m7!3m6!1s0x3755b9c68f8d939f:0xa41511cda542ba15!8m2!3d23.699508!4d90.4354835!10e1!16s%2Fg%2F11c2jtjm_s?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+              "fields": [
+                "facilities.Parking",
+                "facilities.Accessible entrance"
+              ],
+              "checked": "2026-10-25",
+              "kind": "independent",
+              "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+            }
+          ],
+          "after": [
+            {
+              "url": "https://www.openstreetmap.org/way/534499396",
+              "fields": [
+                "name",
+                "aliases",
+                "category",
+                "coordinates",
+                "city",
+                "address"
+              ],
+              "checked": "2026-10-25",
+              "kind": "open-data",
+              "reuse": "OpenStreetMap contributors, ODbL-1.0; manually reviewed and filtered from the Geofabrik Bangladesh extract. No Google Places data."
+            },
+            {
+              "url": "https://nominatim.openstreetmap.org/reverse?lat=23.6994691&lon=90.43533414999999&format=jsonv2&addressdetails=1&zoom=18&accept-language=en",
+              "fields": [
+                "area"
+              ],
+              "checked": "2026-10-25",
+              "kind": "open-data",
+              "reuse": "OpenStreetMap/Nominatim address data, ODbL-1.0. Cached one-time, single-thread research at <=1 request/second; locality reviewed, not an operator address or legal boundary certification."
+            },
+            {
+              "url": "https://www.google.com/maps/place/Green+House+Community+Center/@23.699508,90.4354835,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b9c68f8d939f:0xa41511cda542ba15!8m2!3d23.699508!4d90.4354835!16s%2Fg%2F11c2jtjm_s?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+              "fields": [
+                "address",
+                "maps_url"
+              ],
+              "checked": "2026-10-25",
+              "kind": "independent",
+              "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+            },
+            {
+              "url": "https://www.google.com/maps/place/Green+House+Community+Center/@23.699508,90.4354835,17z/data=!4m7!3m6!1s0x3755b9c68f8d939f:0xa41511cda542ba15!8m2!3d23.699508!4d90.4354835!10e1!16s%2Fg%2F11c2jtjm_s?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+              "fields": [
+                "facilities.Parking",
+                "facilities.Accessible entrance"
+              ],
+              "checked": "2026-10-25",
+              "kind": "independent",
+              "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+            },
+            {
+              "url": "https://www.google.com/maps/place/Green+House+Community+Center/@23.699508,90.4354835,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b9c68f8d939f:0xa41511cda542ba15!8m2!3d23.699508!4d90.4354835!16s%2Fg%2F11c2jtjm_s?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+              "fields": [
+                "phone_review",
+                "maps_url"
+              ],
+              "kind": "independent",
+              "checked": "2026-10-26",
+              "reuse": "Named Green House Community Center and published point match the existing record. The inspected profile publishes no phone or operator website. Existing contact facts preserved. Individual visual review; no ratings, review counts, reviews, photos or business hours copied."
+            }
+          ]
+        },
+        "phone_review": {
+          "before": {
+            "status": "source-limited",
+            "checked": "2026-10-25",
+            "note": "Additional source access was unavailable. Earlier research found no usable number; the business may publish newer details elsewhere."
+          },
+          "after": {
+            "status": "not-found-in-checked-sources",
+            "checked": "2026-10-26",
+            "note": "Named Green House Community Center and published point match the existing record. The inspected profile publishes no phone or operator website. Existing contact facts preserved."
+          }
+        },
+        "last_checked": {
+          "before": "2026-10-25",
+          "after": "2026-10-26"
+        }
+      }
+    },
+    {
+      "id": "bd-osm-way-534723199",
+      "name": "Somrat Community Center",
+      "fields": {
+        "evidence": {
+          "before": [
+            {
+              "url": "https://www.openstreetmap.org/way/534723199",
+              "fields": [
+                "name",
+                "aliases",
+                "category",
+                "coordinates",
+                "city",
+                "address"
+              ],
+              "checked": "2026-10-25",
+              "kind": "open-data",
+              "reuse": "OpenStreetMap contributors, ODbL-1.0; manually reviewed and filtered from the Geofabrik Bangladesh extract. No Google Places data."
+            },
+            {
+              "url": "https://nominatim.openstreetmap.org/reverse?lat=23.70517245&lon=90.43551845&format=jsonv2&addressdetails=1&zoom=18&accept-language=en",
+              "fields": [
+                "area"
+              ],
+              "checked": "2026-10-25",
+              "kind": "open-data",
+              "reuse": "OpenStreetMap/Nominatim address data, ODbL-1.0. Cached one-time, single-thread research at <=1 request/second; locality reviewed, not an operator address or legal boundary certification."
+            }
+          ],
+          "after": [
+            {
+              "url": "https://www.openstreetmap.org/way/534723199",
+              "fields": [
+                "name",
+                "aliases",
+                "category",
+                "coordinates",
+                "city",
+                "address"
+              ],
+              "checked": "2026-10-25",
+              "kind": "open-data",
+              "reuse": "OpenStreetMap contributors, ODbL-1.0; manually reviewed and filtered from the Geofabrik Bangladesh extract. No Google Places data."
+            },
+            {
+              "url": "https://nominatim.openstreetmap.org/reverse?lat=23.70517245&lon=90.43551845&format=jsonv2&addressdetails=1&zoom=18&accept-language=en",
+              "fields": [
+                "area"
+              ],
+              "checked": "2026-10-25",
+              "kind": "open-data",
+              "reuse": "OpenStreetMap/Nominatim address data, ODbL-1.0. Cached one-time, single-thread research at <=1 request/second; locality reviewed, not an operator address or legal boundary certification."
+            },
+            {
+              "url": "https://www.google.com/maps/search/Somrat+Community+Center+Dholaipar+Dhaka/@24.1005732,91.0667531,9z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+              "fields": [
+                "phone_review",
+                "review_notice"
+              ],
+              "kind": "independent",
+              "checked": "2026-10-26",
+              "reuse": "Somrat search returns different-named Dholaipar venues and a similarly named venue outside Dhaka; no unique match for this historic Dholaipar record. No phone borrowed or closure inferred. Individual visual review; no ratings, review counts, reviews, photos or business hours copied."
+            }
+          ]
+        },
+        "phone_review": {
+          "before": {
+            "status": "source-limited",
+            "checked": "2026-10-25",
+            "note": "Additional source access was unavailable. Earlier research found no usable number; the business may publish newer details elsewhere."
+          },
+          "after": {
+            "status": "identity-unconfirmed",
+            "checked": "2026-10-26",
+            "note": "Somrat search returns different-named Dholaipar venues and a similarly named venue outside Dhaka; no unique match for this historic Dholaipar record. No phone borrowed or closure inferred."
+          }
+        },
+        "last_checked": {
+          "before": "2026-10-25",
+          "after": "2026-10-26"
+        },
+        "review_notice": {
+          "before": null,
+          "after": "Current business identity needs confirmation. Checked results did not establish this hall at the historic map point; confirm the venue and location before visiting."
+        }
+      }
+    },
+    {
+      "id": "bd-osm-way-367563642",
+      "name": "Officers' Club Dhaka",
+      "fields": {
+        "evidence": {
+          "before": [
+            {
+              "url": "https://www.openstreetmap.org/way/367563642",
+              "fields": [
+                "name",
+                "aliases",
+                "category",
+                "address",
+                "coordinates",
+                "area",
+                "city"
+              ],
+              "checked": "2026-10-25",
+              "kind": "open-data",
+              "reuse": "OpenStreetMap contributors, ODbL-1.0. User-nominated event venue; mapped identity reviewed without assuming general public admission or wedding-only use."
+            },
+            {
+              "url": "https://nominatim.openstreetmap.org/search?q=Officers+Club%2C+Dhaka&format=jsonv2&addressdetails=1&extratags=1&limit=5&countrycodes=bd&accept-language=en",
+              "fields": [
+                "name",
+                "area",
+                "address"
+              ],
+              "checked": "2026-10-25",
+              "kind": "open-data",
+              "reuse": "OpenStreetMap/Nominatim cached one-time named venue lookup, ODbL-1.0. Not operator confirmation."
+            },
+            {
+              "url": "https://www.google.com/maps/search/?api=1&query=Officers+Club+Dhaka+Bailey+Road",
+              "fields": [
+                "address"
+              ],
+              "checked": "2026-10-25",
+              "kind": "independent",
+              "reuse": "Individual public business facts manually checked on the named listing at the user’s request. No Google ratings, review counts, reviews, photos, opening hours or Places API dataset copied."
+            },
+            {
+              "url": "https://www.google.com/maps/search/?api=1&query=Officers+Club+Dhaka+Bailey+Road",
+              "fields": [
+                "maps_url"
+              ],
+              "checked": "2026-10-25",
+              "kind": "independent",
+              "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+            },
+            {
+              "url": "https://www.google.com/maps/search/?api=1&query=Officers%27%20Club%20Dhaka%20Ramna%20Dhaka%20Bangladesh",
+              "fields": [
+                "maps_url"
+              ],
+              "checked": "2026-10-25",
+              "kind": "independent",
+              "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+            },
+            {
+              "url": "https://www.google.com/maps/search/?api=1&query=Officers%27%20Club%20Dhaka%20Ramna%20Dhaka%20Bangladesh",
+              "fields": [
+                "facilities.Parking",
+                "facilities.Accessible entrance"
+              ],
+              "checked": "2026-10-25",
+              "kind": "independent",
+              "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+            }
+          ],
+          "after": [
+            {
+              "url": "https://www.openstreetmap.org/way/367563642",
+              "fields": [
+                "name",
+                "aliases",
+                "category",
+                "address",
+                "coordinates",
+                "area",
+                "city"
+              ],
+              "checked": "2026-10-25",
+              "kind": "open-data",
+              "reuse": "OpenStreetMap contributors, ODbL-1.0. User-nominated event venue; mapped identity reviewed without assuming general public admission or wedding-only use."
+            },
+            {
+              "url": "https://nominatim.openstreetmap.org/search?q=Officers+Club%2C+Dhaka&format=jsonv2&addressdetails=1&extratags=1&limit=5&countrycodes=bd&accept-language=en",
+              "fields": [
+                "name",
+                "area",
+                "address"
+              ],
+              "checked": "2026-10-25",
+              "kind": "open-data",
+              "reuse": "OpenStreetMap/Nominatim cached one-time named venue lookup, ODbL-1.0. Not operator confirmation."
+            },
+            {
+              "url": "https://www.google.com/maps/search/?api=1&query=Officers+Club+Dhaka+Bailey+Road",
+              "fields": [
+                "address"
+              ],
+              "checked": "2026-10-25",
+              "kind": "independent",
+              "reuse": "Individual public business facts manually checked on the named listing at the user’s request. No Google ratings, review counts, reviews, photos, opening hours or Places API dataset copied."
+            },
+            {
+              "url": "https://www.google.com/maps/search/?api=1&query=Officers+Club+Dhaka+Bailey+Road",
+              "fields": [
+                "maps_url"
+              ],
+              "checked": "2026-10-25",
+              "kind": "independent",
+              "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+            },
+            {
+              "url": "https://www.google.com/maps/search/?api=1&query=Officers%27%20Club%20Dhaka%20Ramna%20Dhaka%20Bangladesh",
+              "fields": [
+                "maps_url"
+              ],
+              "checked": "2026-10-25",
+              "kind": "independent",
+              "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+            },
+            {
+              "url": "https://www.google.com/maps/search/?api=1&query=Officers%27%20Club%20Dhaka%20Ramna%20Dhaka%20Bangladesh",
+              "fields": [
+                "facilities.Parking",
+                "facilities.Accessible entrance"
+              ],
+              "checked": "2026-10-25",
+              "kind": "independent",
+              "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+            },
+            {
+              "url": "https://www.google.com/maps/place/Officer's+Club+Dhaka/@23.7423727,90.404548,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b88da8b960c3:0x7ea449c7267fb4b8!8m2!3d23.7423727!4d90.404548!16s%2Fg%2F1ptw40bsq?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+              "fields": [
+                "phone_review",
+                "maps_url"
+              ],
+              "kind": "independent",
+              "checked": "2026-10-26",
+              "reuse": "Matching Officers Club profile at 26 Bailey Road publishes no phone or website. An additional operator-contact search was challenged; no bypass or unsupported number. This replaces the earlier network-only follow-up outcome. Individual visual review; no ratings, review counts, reviews, photos or business hours copied."
+            }
+          ]
+        },
+        "phone_review": {
+          "before": {
+            "status": "source-limited",
+            "checked": "2026-10-25",
+            "note": "Additional source access was unavailable. Earlier research found no usable number; the business may publish newer details elsewhere."
+          },
+          "after": {
+            "status": "source-limited",
+            "checked": "2026-10-26",
+            "note": "Matching Officers Club profile at 26 Bailey Road publishes no phone or website. An additional operator-contact search was challenged; no bypass or unsupported number. This replaces the earlier network-only follow-up outcome."
+          }
+        },
+        "last_checked": {
+          "before": "2026-10-25",
+          "after": "2026-10-26"
+        },
+        "maps_url": {
+          "before": "https://www.google.com/maps/search/?api=1&query=Officers%27%20Club%20Dhaka%20Ramna%20Dhaka%20Bangladesh",
+          "after": "https://www.google.com/maps/place/Officer's+Club+Dhaka/@23.7423727,90.404548,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b88da8b960c3:0x7ea449c7267fb4b8!8m2!3d23.7423727!4d90.404548!16s%2Fg%2F1ptw40bsq?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
+        }
+      }
+    },
+    {
+      "id": "bd-motijheel-community-center",
+      "name": "Motijheel Community Center",
+      "fields": {
+        "evidence": {
+          "before": [
+            {
+              "url": "https://www.google.com/maps/search/?api=1&query=Motijheel%20Community%20Center%20Dhaka",
+              "fields": [
+                "name",
+                "aliases",
+                "category",
+                "area",
+                "address",
+                "coordinates",
+                "maps_url"
+              ],
+              "checked": "2026-10-25",
+              "kind": "independent",
+              "reuse": "Individual public business facts manually checked on the named listing at the user’s request. No Google ratings, review counts, reviews, photos, opening hours or Places API dataset copied."
+            },
+            {
+              "url": "https://www.google.com/maps/search/?api=1&query=Motijheel%20Community%20Center%20Dhaka",
+              "fields": [
+                "maps_url"
+              ],
+              "checked": "2026-10-25",
+              "kind": "independent",
+              "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+            },
+            {
+              "url": "https://www.google.com/maps/search/?api=1&query=Motijheel%20Community%20Center%20Dhaka",
+              "fields": [
+                "maps_url"
+              ],
+              "checked": "2026-10-25",
+              "kind": "independent",
+              "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+            },
+            {
+              "url": "https://www.google.com/maps/place/Motijheel+Community+Center/@23.735544,90.421647,17z/data=!4m7!3m6!1s0x3755b85cd155efad:0x5e6b84502810cbd9!8m2!3d23.735544!4d90.421647!10e1!16s%2Fg%2F11c6vbbyvd?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+              "fields": [
+                "facilities.Parking"
+              ],
+              "checked": "2026-10-25",
+              "kind": "independent",
+              "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+            }
+          ],
+          "after": [
+            {
+              "url": "https://www.google.com/maps/search/?api=1&query=Motijheel%20Community%20Center%20Dhaka",
+              "fields": [
+                "name",
+                "aliases",
+                "category",
+                "area",
+                "address",
+                "coordinates",
+                "maps_url"
+              ],
+              "checked": "2026-10-25",
+              "kind": "independent",
+              "reuse": "Individual public business facts manually checked on the named listing at the user’s request. No Google ratings, review counts, reviews, photos, opening hours or Places API dataset copied."
+            },
+            {
+              "url": "https://www.google.com/maps/search/?api=1&query=Motijheel%20Community%20Center%20Dhaka",
+              "fields": [
+                "maps_url"
+              ],
+              "checked": "2026-10-25",
+              "kind": "independent",
+              "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+            },
+            {
+              "url": "https://www.google.com/maps/search/?api=1&query=Motijheel%20Community%20Center%20Dhaka",
+              "fields": [
+                "maps_url"
+              ],
+              "checked": "2026-10-25",
+              "kind": "independent",
+              "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+            },
+            {
+              "url": "https://www.google.com/maps/place/Motijheel+Community+Center/@23.735544,90.421647,17z/data=!4m7!3m6!1s0x3755b85cd155efad:0x5e6b84502810cbd9!8m2!3d23.735544!4d90.421647!10e1!16s%2Fg%2F11c6vbbyvd?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+              "fields": [
+                "facilities.Parking"
+              ],
+              "checked": "2026-10-25",
+              "kind": "independent",
+              "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+            },
+            {
+              "url": "https://www.google.com/maps/place/Motijheel+Community+Center/@23.735544,90.421647,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b85cd155efad:0x5e6b84502810cbd9!8m2!3d23.735544!4d90.421647!16s%2Fg%2F11c6vbbyvd?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+              "fields": [
+                "phone_review",
+                "maps_url"
+              ],
+              "kind": "independent",
+              "checked": "2026-10-26",
+              "reuse": "Matched Motijheel Community Center business name and point; profile publishes no phone or operator website. Earlier facts retained. Individual visual review; no ratings, review counts, reviews, photos or business hours copied."
+            }
+          ]
+        },
+        "phone_review": {
+          "before": {
+            "status": "source-limited",
+            "checked": "2026-10-25",
+            "note": "Additional source access was unavailable. Earlier research found no usable number; the business may publish newer details elsewhere."
+          },
+          "after": {
+            "status": "not-found-in-checked-sources",
+            "checked": "2026-10-26",
+            "note": "Matched Motijheel Community Center business name and point; profile publishes no phone or operator website. Earlier facts retained."
+          }
+        },
+        "last_checked": {
+          "before": "2026-10-25",
+          "after": "2026-10-26"
+        },
+        "maps_url": {
+          "before": "https://www.google.com/maps/search/?api=1&query=Motijheel%20Community%20Center%20Dhaka",
+          "after": "https://www.google.com/maps/place/Motijheel+Community+Center/@23.735544,90.421647,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b85cd155efad:0x5e6b84502810cbd9!8m2!3d23.735544!4d90.421647!16s%2Fg%2F11c6vbbyvd?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
+        }
+      }
+    },
+    {
+      "id": "bd-modhubagh-community-centre",
+      "name": "Modhubagh Community Centre, Hatirjheel",
+      "fields": {
+        "evidence": {
+          "before": [
+            {
+              "url": "https://www.google.com/maps/search/?api=1&query=Modhubagh%20Community%20Centre%20Hatirjheel%20Dhaka",
+              "fields": [
+                "name",
+                "aliases",
+                "category",
+                "area",
+                "address",
+                "coordinates",
+                "maps_url"
+              ],
+              "checked": "2026-10-25",
+              "kind": "independent",
+              "reuse": "Individual public business facts manually checked on the named listing at the user’s request. No Google ratings, review counts, reviews, photos, opening hours or Places API dataset copied."
+            },
+            {
+              "url": "https://www.google.com/maps/search/?api=1&query=Modhubagh%20Community%20Centre%20Hatirjheel%20Dhaka",
+              "fields": [
+                "maps_url"
+              ],
+              "checked": "2026-10-25",
+              "kind": "independent",
+              "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+            },
+            {
+              "url": "https://www.google.com/maps/search/?api=1&query=Modhubagh%20Community%20Centre%20Hatirjheel%20Dhaka",
+              "fields": [
+                "maps_url"
+              ],
+              "checked": "2026-10-25",
+              "kind": "independent",
+              "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+            }
+          ],
+          "after": [
+            {
+              "url": "https://www.google.com/maps/search/?api=1&query=Modhubagh%20Community%20Centre%20Hatirjheel%20Dhaka",
+              "fields": [
+                "name",
+                "aliases",
+                "category",
+                "area",
+                "address",
+                "coordinates",
+                "maps_url"
+              ],
+              "checked": "2026-10-25",
+              "kind": "independent",
+              "reuse": "Individual public business facts manually checked on the named listing at the user’s request. No Google ratings, review counts, reviews, photos, opening hours or Places API dataset copied."
+            },
+            {
+              "url": "https://www.google.com/maps/search/?api=1&query=Modhubagh%20Community%20Centre%20Hatirjheel%20Dhaka",
+              "fields": [
+                "maps_url"
+              ],
+              "checked": "2026-10-25",
+              "kind": "independent",
+              "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+            },
+            {
+              "url": "https://www.google.com/maps/search/?api=1&query=Modhubagh%20Community%20Centre%20Hatirjheel%20Dhaka",
+              "fields": [
+                "maps_url"
+              ],
+              "checked": "2026-10-25",
+              "kind": "independent",
+              "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+            },
+            {
+              "url": "https://www.google.com/maps/place/Modhubagh+Community+Centre,+Hatirjheel/@23.7584944,90.4105533,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b9c82f416251:0x10fb9b30ccbb11cf!8m2!3d23.7584944!4d90.4105533!16s%2Fg%2F11hfk1ymm9?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+              "fields": [
+                "phone_review",
+                "maps_url"
+              ],
+              "kind": "independent",
+              "checked": "2026-10-26",
+              "reuse": "Matched Modhubagh Community Centre Hatirjheel name and point; profile publishes no phone or operator website. Earlier facts retained. Individual visual review; no ratings, review counts, reviews, photos or business hours copied."
+            }
+          ]
+        },
+        "phone_review": {
+          "before": {
+            "status": "source-limited",
+            "checked": "2026-10-25",
+            "note": "Additional source access was unavailable. Earlier research found no usable number; the business may publish newer details elsewhere."
+          },
+          "after": {
+            "status": "not-found-in-checked-sources",
+            "checked": "2026-10-26",
+            "note": "Matched Modhubagh Community Centre Hatirjheel name and point; profile publishes no phone or operator website. Earlier facts retained."
+          }
+        },
+        "last_checked": {
+          "before": "2026-10-25",
+          "after": "2026-10-26"
+        },
+        "maps_url": {
+          "before": "https://www.google.com/maps/search/?api=1&query=Modhubagh%20Community%20Centre%20Hatirjheel%20Dhaka",
+          "after": "https://www.google.com/maps/place/Modhubagh+Community+Centre,+Hatirjheel/@23.7584944,90.4105533,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b9c82f416251:0x10fb9b30ccbb11cf!8m2!3d23.7584944!4d90.4105533!16s%2Fg%2F11hfk1ymm9?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
+        }
+      }
+    },
+    {
+      "id": "bd-jonaki-convention-hall",
+      "name": "Jonaki Convention Hall",
+      "fields": {
+        "evidence": {
+          "before": [
+            {
+              "url": "https://maps.app.goo.gl/GvKcVo467kTKZdUd9",
+              "fields": [
+                "name",
+                "category",
+                "address",
+                "coordinates",
+                "phones",
+                "review_notice"
+              ],
+              "checked": "2026-10-25",
+              "kind": "submission",
+              "reuse": "Repository owner supplied venue name, public business phone and Plus Code with this Maps link. The linked page returned environment HTTP503; submission reviewed, source not independently verified."
+            },
+            {
+              "url": "https://www.google.com/maps/place/Jonaki+Convention+Hall/@23.7363714,90.4124366,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b9004e15ee91:0x16d3973017cd0f61!8m2!3d23.7363665!4d90.4150115!16s%2Fg%2F11wv9p4nyc?entry=tts&g_ep=EgoyMDI2MTAyMC4wIPu8ASoASAFQAw%3D%3D&skid=04f7ac82-48d6-4580-8d80-0fd2b5482295",
+              "fields": [
+                "name",
+                "phones",
+                "coordinates",
+                "maps_url"
+              ],
+              "kind": "independent",
+              "checked": "2026-10-25",
+              "reuse": "Individual public business facts manually reviewed; no copied ratings, reviews, photos, private schedules or restricted API data."
+            },
+            {
+              "url": "https://nominatim.openstreetmap.org/reverse?lat=23.7363665&lon=90.4150115&format=jsonv2&zoom=18&addressdetails=1&accept-language=en",
+              "fields": [
+                "area",
+                "address"
+              ],
+              "kind": "open-data",
+              "checked": "2026-10-25",
+              "reuse": "ODbL locality hierarchy: Jonaki Cinema Hall Lane, Noya Paltan quarter; no neighborhood inferred from nearest map label."
+            }
+          ],
+          "after": [
+            {
+              "url": "https://maps.app.goo.gl/GvKcVo467kTKZdUd9",
+              "fields": [
+                "name",
+                "category",
+                "address",
+                "coordinates",
+                "phones",
+                "review_notice"
+              ],
+              "checked": "2026-10-25",
+              "kind": "submission",
+              "reuse": "Repository owner supplied venue name, public business phone and Plus Code with this Maps link. The linked page returned environment HTTP503; submission reviewed, source not independently verified."
+            },
+            {
+              "url": "https://www.google.com/maps/place/Jonaki+Convention+Hall/@23.7363714,90.4124366,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b9004e15ee91:0x16d3973017cd0f61!8m2!3d23.7363665!4d90.4150115!16s%2Fg%2F11wv9p4nyc?entry=tts&g_ep=EgoyMDI2MTAyMC4wIPu8ASoASAFQAw%3D%3D&skid=04f7ac82-48d6-4580-8d80-0fd2b5482295",
+              "fields": [
+                "name",
+                "phones",
+                "coordinates",
+                "maps_url"
+              ],
+              "kind": "independent",
+              "checked": "2026-10-25",
+              "reuse": "Individual public business facts manually reviewed; no copied ratings, reviews, photos, private schedules or restricted API data."
+            },
+            {
+              "url": "https://nominatim.openstreetmap.org/reverse?lat=23.7363665&lon=90.4150115&format=jsonv2&zoom=18&addressdetails=1&accept-language=en",
+              "fields": [
+                "area",
+                "address"
+              ],
+              "kind": "open-data",
+              "checked": "2026-10-25",
+              "reuse": "ODbL locality hierarchy: Jonaki Cinema Hall Lane, Noya Paltan quarter; no neighborhood inferred from nearest map label."
+            },
+            {
+              "url": "https://www.google.com/maps/place/Jonaki+Convention+Hall/@23.7363665,90.4150115,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b9004e15ee91:0x16d3973017cd0f61!8m2!3d23.7363665!4d90.4150115!16s%2Fg%2F11wv9p4nyc?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+              "fields": [
+                "area"
+              ],
+              "kind": "independent",
+              "checked": "2026-10-26",
+              "reuse": "Owner confirms Ananda and Jonaki share the same local road corridor. Individually rechecked published points are about 260m apart. Use the broader Paltan browsing zone consistently; keep the more precise Naya Paltan locality in the existing address. This is a browsing label, not a surveyed boundary change."
+            }
+          ]
+        },
+        "last_checked": {
+          "before": "2026-10-25",
+          "after": "2026-10-26"
+        },
+        "area": {
+          "before": "Naya Paltan",
+          "after": "Paltan"
+        },
+        "area_review": {
+          "before": null,
+          "after": {
+            "method": "named-address-review",
+            "precision": "browsing_locality",
+            "checked": "2026-10-26",
+            "source": "https://www.google.com/maps/place/Jonaki+Convention+Hall/@23.7363665,90.4150115,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b9004e15ee91:0x16d3973017cd0f61!8m2!3d23.7363665!4d90.4150115!16s%2Fg%2F11wv9p4nyc?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+            "reason": "Owner confirms Ananda and Jonaki share the same local road corridor. Individually rechecked published points are about 260m apart. Use the broader Paltan browsing zone consistently; keep the more precise Naya Paltan locality in the existing address. This is a browsing label, not a surveyed boundary change."
+          }
+        }
+      }
+    },
+    {
+      "id": "bd-police-plaza-convention-centre",
+      "name": "Police Plaza Convention Centre",
+      "fields": {
+        "evidence": {
+          "before": [
+            {
+              "url": "https://www.google.com/maps/place/Police+Plaza+Convention+Centre/@23.7705246,90.3978659,15z/data=!3m1!5s0x3755c7836bb749d3:0x693d96f4549a4c6e!4m6!3m5!1s0x3755c76934945adb:0x40d241f97b7d7b22!8m2!3d23.7729044!4d90.4162845!16s%2Fg%2F11fm_44xhw?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+              "fields": [
+                "name",
+                "area",
+                "category",
+                "address",
+                "coordinates",
+                "maps_url"
+              ],
+              "kind": "independent",
+              "checked": "2026-10-25",
+              "reuse": "Individual public business facts manually reviewed; no copied ratings, reviews, photos, private schedules or restricted API data."
+            },
+            {
+              "url": "https://nominatim.openstreetmap.org/reverse?lat=23.7729044&lon=90.4162845&format=jsonv2&zoom=18&addressdetails=1&accept-language=en",
+              "fields": [
+                "area"
+              ],
+              "kind": "open-data",
+              "checked": "2026-10-25",
+              "reuse": "ODbL address hierarchy reviewed against the named business road and point; browsing locality is not a surveyed administrative boundary."
+            }
+          ],
+          "after": [
+            {
+              "url": "https://www.google.com/maps/place/Police+Plaza+Convention+Centre/@23.7705246,90.3978659,15z/data=!3m1!5s0x3755c7836bb749d3:0x693d96f4549a4c6e!4m6!3m5!1s0x3755c76934945adb:0x40d241f97b7d7b22!8m2!3d23.7729044!4d90.4162845!16s%2Fg%2F11fm_44xhw?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+              "fields": [
+                "name",
+                "area",
+                "category",
+                "address",
+                "coordinates",
+                "maps_url"
+              ],
+              "kind": "independent",
+              "checked": "2026-10-25",
+              "reuse": "Individual public business facts manually reviewed; no copied ratings, reviews, photos, private schedules or restricted API data."
+            },
+            {
+              "url": "https://nominatim.openstreetmap.org/reverse?lat=23.7729044&lon=90.4162845&format=jsonv2&zoom=18&addressdetails=1&accept-language=en",
+              "fields": [
+                "area"
+              ],
+              "kind": "open-data",
+              "checked": "2026-10-25",
+              "reuse": "ODbL address hierarchy reviewed against the named business road and point; browsing locality is not a surveyed administrative boundary."
+            },
+            {
+              "url": "https://www.google.com/maps/place/Police+Plaza+Convention+Centre/@23.7705246,90.3978659,15z/data=!3m1!5s0x3755c7836bb749d3:0x693d96f4549a4c6e!4m6!3m5!1s0x3755c76934945adb:0x40d241f97b7d7b22!8m2!3d23.7729044!4d90.4162845!16s%2Fg%2F11fm_44xhw?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+              "fields": [
+                "phone_review",
+                "maps_url"
+              ],
+              "kind": "independent",
+              "checked": "2026-10-26",
+              "reuse": "Matching Police Plaza Convention Centre profile, House 2 Road 144 and published point rechecked. No phone or operator website is displayed. No unrelated shopping-mall number substituted. Individual visual review; no ratings, review counts, reviews, photos or business hours copied."
+            }
+          ]
+        },
+        "phone_review": {
+          "before": {
+            "status": "source-limited",
+            "checked": "2026-10-25",
+            "note": "No phone in the inspected business profile. Other operator/search sources were inaccessible; no unrelated shopping-mall contact was used."
+          },
+          "after": {
+            "status": "not-found-in-checked-sources",
+            "checked": "2026-10-26",
+            "note": "Matching Police Plaza Convention Centre profile, House 2 Road 144 and published point rechecked. No phone or operator website is displayed. No unrelated shopping-mall number substituted."
+          }
+        },
+        "last_checked": {
+          "before": "2026-10-25",
+          "after": "2026-10-26"
+        }
+      }
+    }
+  ],
+  "unchanged": [
+    "bd-the-westin-dhaka",
+    "bd-le-meridien-dhaka",
+    "bd-sheraton-dhaka",
+    "bd-renaissance-dhaka-gulshan",
+    "bd-radisson-blu-dhaka",
+    "bd-pan-pacific-sonargaon-dhaka",
+    "bd-amari-dhaka",
+    "bd-dhaka-regency",
+    "bd-police-convention-hall-eskaton",
+    "bd-raowa-convention-halls",
+    "bd-sks-convention-hall",
+    "bd-osm-node-396647115",
+    "bd-osm-node-1936311529",
+    "bd-osm-node-2697232301",
+    "bd-osm-node-3323390519",
+    "bd-osm-node-3330957057",
+    "bd-osm-node-3374713092",
+    "bd-osm-node-3403191569",
+    "bd-osm-node-3473792181",
+    "bd-osm-node-3475693347",
+    "bd-osm-node-3714859928",
+    "bd-osm-node-3731351579",
+    "bd-osm-node-3731958028",
+    "bd-osm-node-3745296696",
+    "bd-osm-node-4035864979",
+    "bd-osm-node-4072852261",
+    "bd-osm-node-4320931026",
+    "bd-osm-node-4330600894",
+    "bd-osm-node-4464533589",
+    "bd-osm-node-4547663197",
+    "bd-osm-node-4549001959",
+    "bd-osm-node-4583633891",
+    "bd-osm-node-4729172392",
+    "bd-osm-node-4973354765",
+    "bd-osm-node-5171683022",
+    "bd-osm-node-5233901421",
+    "bd-osm-node-5233901521",
+    "bd-osm-node-5998293476",
+    "bd-osm-node-6075578295",
+    "bd-osm-node-6924203537",
+    "bd-osm-node-7711605264",
+    "bd-osm-node-7787635919",
+    "bd-osm-node-7787635947",
+    "bd-osm-node-8313877538",
+    "bd-osm-node-9622947662",
+    "bd-osm-node-9694573157",
+    "bd-osm-node-9694573176",
+    "bd-osm-node-9806581241",
+    "bd-osm-node-9807925208",
+    "bd-osm-node-9932948783",
+    "bd-osm-node-10983479205",
+    "bd-osm-node-11216294296",
+    "bd-osm-node-11716250398",
+    "bd-osm-node-11730096574",
+    "bd-osm-node-11768450931",
+    "bd-osm-node-11768476986",
+    "bd-osm-node-11775084788",
+    "bd-osm-node-11777855439",
+    "bd-osm-node-11824645603",
+    "bd-osm-node-11886959379",
+    "bd-osm-node-11915138589",
+    "bd-osm-node-11939428112",
+    "bd-osm-node-11939996444",
+    "bd-osm-node-11986161470",
+    "bd-osm-node-11988944083",
+    "bd-osm-node-11993579518",
+    "bd-osm-node-11993640298",
+    "bd-osm-node-12006320188",
+    "bd-osm-node-12012297426",
+    "bd-osm-node-12055130480",
+    "bd-osm-node-12456045701",
+    "bd-osm-node-13090503501",
+    "bd-osm-node-13134454618",
+    "bd-osm-node-13527564201",
+    "bd-osm-node-14247677151",
+    "bd-osm-node-14252402800",
+    "bd-osm-node-14286743945",
+    "bd-osm-way-24448507",
+    "bd-osm-way-241619748",
+    "bd-osm-way-243982330",
+    "bd-osm-way-245267775",
+    "bd-osm-way-263618386",
+    "bd-osm-way-295884568",
+    "bd-osm-way-297869678",
+    "bd-osm-way-298472671",
+    "bd-osm-way-345203658",
+    "bd-osm-way-367277125",
+    "bd-osm-way-370400603",
+    "bd-osm-way-371382348",
+    "bd-osm-way-384311411",
+    "bd-osm-way-439835437",
+    "bd-osm-way-440170070",
+    "bd-osm-way-441129284",
+    "bd-osm-way-456824572",
+    "bd-osm-way-490274323",
+    "bd-osm-way-495120358",
+    "bd-osm-way-498173029",
+    "bd-osm-way-502537807",
+    "bd-osm-way-506163768",
+    "bd-osm-way-536571520",
+    "bd-osm-way-540588060",
+    "bd-osm-way-586533328",
+    "bd-osm-way-698085019",
+    "bd-osm-way-700469632",
+    "bd-osm-way-736749229",
+    "bd-osm-way-1532360738",
+    "bd-osm-way-1561267432",
+    "bd-osm-way-297302722",
+    "bd-osm-way-449635016",
+    "bd-abacus-convention-center",
+    "bd-celebration-community-center",
+    "bd-nanjing-community-center",
+    "bd-siraj-convention-center",
+    "bd-bazlur-rahman-community-complex",
+    "bd-ak-convention-center",
+    "bd-jk-convention-hall-malibagh",
+    "bd-zam-zam-convention-hall-mirpur-1",
+    "bd-waterfront-convention-hall",
+    "bd-lakeview-grande-convention-hall",
+    "bd-elite-convention-hall"
+  ],
+  "deleted": [],
+  "proposed_deletions": [],
+  "validation_failures": [],
+  "protected_existing_fields_preserved": true,
+  "unresolved_contacts": [
+    {
+      "id": "bd-osm-node-3323390519",
+      "name": "Al Hera Community Centre",
+      "area": "Kamrangirchar",
+      "research_outcome": {
+        "status": "not-found-in-checked-sources",
+        "checked": "2026-10-25",
+        "note": "No usable business phone was found in the checked public sources. The Maps listing or operator may have newer information."
+      },
+      "review_notice": null
+    },
+    {
+      "id": "bd-osm-node-3473792181",
+      "name": "Bilkis Community Center",
+      "area": "Kamrangirchar",
+      "research_outcome": {
+        "status": "not-found-in-checked-sources",
+        "checked": "2026-10-25",
+        "note": "No usable business phone was found in the checked public sources. The Maps listing or operator may have newer information."
+      },
+      "review_notice": "Temporarily closed on the checked business listing. Confirm reopening before arranging a visit."
+    },
+    {
+      "id": "bd-osm-node-3731958028",
+      "name": "Ellin Community Center",
+      "area": "Badda",
+      "research_outcome": {
+        "status": "identity-unconfirmed",
+        "checked": "2026-10-25",
+        "note": "A booking contact could not be safely matched to this venue. Identity or venue use needs confirmation; unrelated contacts were not reused."
+      },
+      "review_notice": "Venue identity/category needs confirmation: the matched Eleen listing is currently categorized as a restaurant, while the historic record says community center."
+    },
+    {
+      "id": "bd-osm-node-4035864979",
+      "name": "Ashkona Community Center",
+      "area": "Ashkona",
+      "research_outcome": {
+        "status": "identity-unconfirmed",
+        "checked": "2026-10-25",
+        "note": "A booking contact could not be safely matched to this venue. Identity or venue use needs confirmation; unrelated contacts were not reused."
+      },
+      "review_notice": "Current venue identity needs confirmation: a search at this historic Ashkona location resolves to Agrajatra Legal & Professional House. Wedding-hall operation and booking contact have not been established."
+    },
+    {
+      "id": "bd-osm-node-4330600894",
+      "name": "Grand Convention Hall",
+      "area": "Bakshibazar",
+      "research_outcome": {
+        "status": "identity-unconfirmed",
+        "checked": "2026-10-25",
+        "note": "A booking contact could not be safely matched to this venue. Identity or venue use needs confirmation; unrelated contacts were not reused."
+      },
+      "review_notice": "Current booking identity needs confirmation: no unambiguous matching business profile was found for the historic Bakshibazar listing."
+    },
+    {
+      "id": "bd-osm-node-4464533589",
+      "name": "Kholil Shordar Community Centre..",
+      "area": "Hazaribagh",
+      "research_outcome": {
+        "status": "identity-unconfirmed",
+        "checked": "2026-10-25",
+        "note": "A booking contact could not be safely matched to this venue. Identity or venue use needs confirmation; unrelated contacts were not reused."
+      },
+      "review_notice": "Current business identity and booking contact need confirmation; similarly named search results could not be matched safely."
+    },
+    {
+      "id": "bd-osm-node-4729172392",
+      "name": "Bengal Spicy Party Center",
+      "area": "Uttara",
+      "research_outcome": {
+        "status": "identity-unconfirmed",
+        "checked": "2026-10-25",
+        "note": "A booking contact could not be safely matched to this venue. Identity or venue use needs confirmation; unrelated contacts were not reused."
+      },
+      "review_notice": "Current business identity needs confirmation: no unambiguous Bengal Spicy listing was found for this historic Uttara record."
+    },
+    {
+      "id": "bd-osm-node-9622947662",
+      "name": "RUAP Community Centre & Shopping Mall",
+      "area": "Uttara",
+      "research_outcome": {
+        "status": "identity-unconfirmed",
+        "checked": "2026-10-25",
+        "note": "A booking contact could not be safely matched to this venue. Identity or venue use needs confirmation; unrelated contacts were not reused."
+      },
+      "review_notice": "Wedding-booking identity needs confirmation: the current matched profile is RUAP Commercial Complex, a shopping mall. A dedicated community-hall contact has not been established."
+    },
+    {
+      "id": "bd-osm-node-9694573176",
+      "name": "Shamsun Community Centre",
+      "area": "Basabo",
+      "research_outcome": {
+        "status": "not-found-in-checked-sources",
+        "checked": "2026-10-25",
+        "note": "No usable business phone was found in the checked public sources. The Maps listing or operator may have newer information."
+      },
+      "review_notice": null
+    },
+    {
+      "id": "bd-osm-node-9806581241",
+      "name": "Joj Community Center",
+      "area": "Bawnia",
+      "research_outcome": {
+        "status": "identity-unconfirmed",
+        "checked": "2026-10-25",
+        "note": "A booking contact could not be safely matched to this venue. Identity or venue use needs confirmation; unrelated contacts were not reused."
+      },
+      "review_notice": "Business identity needs confirmation: the historic Joj listing could not be matched to an unambiguous current public business profile."
+    },
+    {
+      "id": "bd-osm-node-9807925208",
+      "name": "Rupsha Community Centre",
+      "area": "Panthapath",
+      "research_outcome": {
+        "status": "identity-unconfirmed",
+        "checked": "2026-10-25",
+        "note": "A booking contact could not be safely matched to this venue. Identity or venue use needs confirmation; unrelated contacts were not reused."
+      },
+      "review_notice": "Current venue identity needs confirmation: the matched location is listed as Hotel Rupsha Inn, although a Rupsha Community Center sign is visible. A current event-hall booking contact has not been authenticated."
+    },
+    {
+      "id": "bd-osm-node-10983479205",
+      "name": "Al Fuad Community Center",
+      "area": "Mirpur",
+      "research_outcome": {
+        "status": "not-found-in-checked-sources",
+        "checked": "2026-10-25",
+        "note": "No usable business phone was found in the checked public sources. The Maps listing or operator may have newer information."
+      },
+      "review_notice": null
+    },
+    {
+      "id": "bd-osm-node-11716250398",
+      "name": "Bandhan Community Center",
+      "area": "Doyaganj",
+      "research_outcome": {
+        "status": "not-found-in-checked-sources",
+        "checked": "2026-10-25",
+        "note": "No usable business phone was found in the checked public sources. The Maps listing or operator may have newer information."
+      },
+      "review_notice": null
+    },
+    {
+      "id": "bd-osm-node-11775084788",
+      "name": "City Lounge and convention center",
+      "area": "Doyaganj",
+      "research_outcome": {
+        "status": "identity-unconfirmed",
+        "checked": "2026-10-25",
+        "note": "A booking contact could not be safely matched to this venue. Identity or venue use needs confirmation; unrelated contacts were not reused."
+      },
+      "review_notice": "Booking identity needs confirmation: the matched public result is Dhaka Restaurant and Party Center, marked permanently closed, rather than City Lounge. Historic venue data is retained for review."
+    },
+    {
+      "id": "bd-osm-node-11986161470",
+      "name": "Jononi Community Center",
+      "area": "Mirpur",
+      "research_outcome": {
+        "status": "identity-unconfirmed",
+        "checked": "2026-10-25",
+        "note": "A booking contact could not be safely matched to this venue. Identity or venue use needs confirmation; unrelated contacts were not reused."
+      },
+      "review_notice": "Current business identity needs confirmation: no unique Jononi profile was found for this historic Mirpur record."
+    },
+    {
+      "id": "bd-osm-node-11988944083",
+      "name": "Suborna Community Center",
+      "area": "Mirpur",
+      "research_outcome": {
+        "status": "not-found-in-checked-sources",
+        "checked": "2026-10-25",
+        "note": "No usable business phone was found in the checked public sources. The Maps listing or operator may have newer information."
+      },
+      "review_notice": null
+    },
+    {
+      "id": "bd-osm-node-11993640298",
+      "name": "Efa Convention Center",
+      "area": "Mirpur",
+      "research_outcome": {
+        "status": "not-found-in-checked-sources",
+        "checked": "2026-10-25",
+        "note": "No usable business phone was found in the checked public sources. The Maps listing or operator may have newer information."
+      },
+      "review_notice": null
+    },
+    {
+      "id": "bd-osm-node-12012297426",
+      "name": "Chowdhury Community Center,",
+      "area": "Jigatola",
+      "research_outcome": {
+        "status": "identity-unconfirmed",
+        "checked": "2026-10-25",
+        "note": "A booking contact could not be safely matched to this venue. Identity or venue use needs confirmation; unrelated contacts were not reused."
+      },
+      "review_notice": "Current business identity needs confirmation: no unambiguous Chowdhury Community Center listing was matched in Jigatola."
+    },
+    {
+      "id": "bd-osm-node-13527564201",
+      "name": "Ward 4 Community Centre (DNCC)",
+      "area": "Mirpur",
+      "research_outcome": {
+        "status": "identity-unconfirmed",
+        "checked": "2026-10-25",
+        "note": "A booking contact could not be safely matched to this venue. Identity or venue use needs confirmation; unrelated contacts were not reused."
+      },
+      "review_notice": "Event-booking identity needs confirmation: the current Ward 4 DNCC profile describes a shopping complex/market. A dedicated hall contact is not established."
+    },
+    {
+      "id": "bd-osm-way-241619748",
+      "name": "Moulovibazar Community Centre",
+      "area": "Armanitola",
+      "research_outcome": {
+        "status": "not-found-in-checked-sources",
+        "checked": "2026-10-25",
+        "note": "No usable business phone was found in the checked public sources. The Maps listing or operator may have newer information."
+      },
+      "review_notice": "A matching public business profile reports this venue temporarily closed. The record is retained; confirm current operation and booking availability directly."
+    },
+    {
+      "id": "bd-osm-way-245267775",
+      "name": "Reza Community Centre",
+      "area": "Armanitola",
+      "research_outcome": {
+        "status": "identity-unconfirmed",
+        "checked": "2026-10-25",
+        "note": "A booking contact could not be safely matched to this venue. Identity or venue use needs confirmation; unrelated contacts were not reused."
+      },
+      "review_notice": "Current venue identity needs confirmation: the search resolved to Armanitola Field, rather than an authenticated Reza Community Centre business."
+    },
+    {
+      "id": "bd-osm-way-263618386",
+      "name": "Khilgaon Community Center",
+      "area": "Khilgaon",
+      "research_outcome": {
+        "status": "not-found-in-checked-sources",
+        "checked": "2026-10-25",
+        "note": "The owner confirms the existing Khilgaon location. A public booking phone remains unavailable in checked sources."
+      },
+      "review_notice": null
+    },
+    {
+      "id": "bd-osm-way-297869678",
+      "name": "Sadeque Hossain Khoka Community Centre",
+      "area": "Gopibagh",
+      "research_outcome": {
+        "status": "not-found-in-checked-sources",
+        "checked": "2026-10-25",
+        "note": "No usable business phone was found in the checked public sources. The Maps listing or operator may have newer information."
+      },
+      "review_notice": null
+    },
+    {
+      "id": "bd-osm-way-298472671",
+      "name": "Jigatola Community Centre",
+      "area": "Jigatola",
+      "research_outcome": {
+        "status": "not-found-in-checked-sources",
+        "checked": "2026-10-25",
+        "note": "No usable business phone was found in the checked public sources. The Maps listing or operator may have newer information."
+      },
+      "review_notice": null
+    },
+    {
+      "id": "bd-osm-way-370400603",
+      "name": "Pallabi Community Centre",
+      "area": "Mirpur",
+      "research_outcome": {
+        "status": "identity-unconfirmed",
+        "checked": "2026-10-25",
+        "note": "A booking contact could not be safely matched to this venue. Identity or venue use needs confirmation; unrelated contacts were not reused."
+      },
+      "review_notice": "Current booking identity needs confirmation: no unique Pallabi Community Centre profile was matched to this historic Mirpur record."
+    },
+    {
+      "id": "bd-osm-way-371381396",
+      "name": "Malibagh Community Centre",
+      "area": "Malibagh",
+      "research_outcome": {
+        "status": "identity-unconfirmed",
+        "checked": "2026-10-26",
+        "note": "The matching point is currently named Khilgaon / Malika, with a Malibagh market and Shahid Baki Road address. It publishes no phone. Preserve the historic Malibagh record and existing identity/address warning; do not merge it with the separately owner-confirmed Khilgaon point."
+      },
+      "review_notice": "Address and naming need confirmation: the matching current business profile uses Khilgaon / Malika and a Shahid Baki Road landmark; this historic record uses Malibagh and Atish Depankar Road. Location points match; confirm the address directly."
+    },
+    {
+      "id": "bd-osm-way-438470592",
+      "name": "Ma Community Center",
+      "area": "Bawnia",
+      "research_outcome": {
+        "status": "not-found-in-checked-sources",
+        "checked": "2026-10-26",
+        "note": "Named Ma Community Centre and published point match the existing Bawnia record. The inspected profile publishes no phone or operator website. This does not establish that the venue has no telephone."
+      },
+      "review_notice": null
+    },
+    {
+      "id": "bd-osm-way-534499396",
+      "name": "Green House Community Center",
+      "area": "Jurain",
+      "research_outcome": {
+        "status": "not-found-in-checked-sources",
+        "checked": "2026-10-26",
+        "note": "Named Green House Community Center and published point match the existing record. The inspected profile publishes no phone or operator website. Existing contact facts preserved."
+      },
+      "review_notice": null
+    },
+    {
+      "id": "bd-osm-way-534723199",
+      "name": "Somrat Community Center",
+      "area": "Dholaipar",
+      "research_outcome": {
+        "status": "identity-unconfirmed",
+        "checked": "2026-10-26",
+        "note": "Somrat search returns different-named Dholaipar venues and a similarly named venue outside Dhaka; no unique match for this historic Dholaipar record. No phone borrowed or closure inferred."
+      },
+      "review_notice": "Current business identity needs confirmation. Checked results did not establish this hall at the historic map point; confirm the venue and location before visiting."
+    },
+    {
+      "id": "bd-osm-way-367563642",
+      "name": "Officers' Club Dhaka",
+      "area": "Ramna",
+      "research_outcome": {
+        "status": "source-limited",
+        "checked": "2026-10-26",
+        "note": "Matching Officers Club profile at 26 Bailey Road publishes no phone or website. An additional operator-contact search was challenged; no bypass or unsupported number. This replaces the earlier network-only follow-up outcome."
+      },
+      "review_notice": null
+    },
+    {
+      "id": "bd-motijheel-community-center",
+      "name": "Motijheel Community Center",
+      "area": "Motijheel",
+      "research_outcome": {
+        "status": "not-found-in-checked-sources",
+        "checked": "2026-10-26",
+        "note": "Matched Motijheel Community Center business name and point; profile publishes no phone or operator website. Earlier facts retained."
+      },
+      "review_notice": null
+    },
+    {
+      "id": "bd-modhubagh-community-centre",
+      "name": "Modhubagh Community Centre, Hatirjheel",
+      "area": "Madhubag",
+      "research_outcome": {
+        "status": "not-found-in-checked-sources",
+        "checked": "2026-10-26",
+        "note": "Matched Modhubagh Community Centre Hatirjheel name and point; profile publishes no phone or operator website. Earlier facts retained."
+      },
+      "review_notice": null
+    },
+    {
+      "id": "bd-police-plaza-convention-centre",
+      "name": "Police Plaza Convention Centre",
+      "area": "Gulshan",
+      "research_outcome": {
+        "status": "not-found-in-checked-sources",
+        "checked": "2026-10-26",
+        "note": "Matching Police Plaza Convention Centre profile, House 2 Road 144 and published point rechecked. No phone or operator website is displayed. No unrelated shopping-mall number substituted."
+      },
+      "review_notice": null
+    }
+  ],
+  "area_navigation": {
+    "reciprocal_links": true,
+    "indexed_browsing_areas": 73,
+    "paltan_and_naya_paltan_shared_group": true,
+    "nearby_motijheel_bidirectional": true,
+    "nearby_selection_in_share_url": true,
+    "limitation": "Curated browsing suggestions, not official surveyed boundaries or driving routes."
+  }
+}

@@ -449,5 +449,95 @@
       "phone_review"
     ],
     "outcome": "Additional source request unavailableHTTP503; earlier source facts preserved. This does not prove the venue has no telephone."
+  },
+  {
+    "id": "bd-grand-shahjahan-convention-hall",
+    "source": "https://www.google.com/maps/place/Grand+Shahjahan+Convention+Hall%2F%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A8%E0%A7%8D%E0%A6%A1+%E0%A6%B6%E0%A6%BE%E0%A6%B9%E0%A6%9C%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%A8+%E0%A6%95%E0%A6%A8%E0%A6%AD%E0%A7%87%E0%A6%A8%E0%A6%B6%E0%A6%A8+%E0%A6%B9%E0%A6%B2/@23.7111861,90.4460932,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b99d2115ed87:0x58bcc4bde564a885!8m2!3d23.7111861!4d90.4460932!16s%2Fg%2F11qzwbqd01?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+    "checked": "2026-10-26",
+    "fields": [
+      "name",
+      "area",
+      "category",
+      "address",
+      "coordinates",
+      "maps_url",
+      "phones"
+    ],
+    "outcome": "Matched named business and published location; capacity/facilities not collected in simplified contact directory."
+  },
+  {
+    "id": "bd-kara-convention-center",
+    "source": "https://www.google.com/maps/place/Kara+Convention+Center/@23.7206859,90.3965857,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b940bb8870d7:0x1feae28d966fd5!8m2!3d23.7206859!4d90.3965857!16s%2Fg%2F11g4lk5n3s?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+    "checked": "2026-10-26",
+    "fields": [
+      "name",
+      "area",
+      "category",
+      "address",
+      "coordinates",
+      "maps_url",
+      "phones"
+    ],
+    "outcome": "Matched named business and published location; capacity/facilities not collected in simplified contact directory."
+  },
+  {
+    "id": "bd-bgb-banquet-hall",
+    "source": "https://www.google.com/maps/place/BGB+Banquet+Hall/@23.7376045,90.3772444,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b990acc00c73:0x60f7e5b5072ab61c!8m2!3d23.7376045!4d90.3772444!16s%2Fg%2F11fnn_c4zg?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+    "checked": "2026-10-26",
+    "fields": [
+      "name",
+      "area",
+      "category",
+      "address",
+      "coordinates",
+      "maps_url",
+      "phones"
+    ],
+    "outcome": "Matched named business and published location; capacity/facilities not collected in simplified contact directory."
+  },
+  {
+    "id": "bd-sayeedana-community-centre",
+    "source": "https://www.google.com/maps/place/Sayeedana+Community+Centre/@23.7460892,90.3738983,17z/data=!3m1!4b1!4m6!3m5!1s0x3755bf4cb968c5e7:0x55ec85e736e435cb!8m2!3d23.7460892!4d90.3738983!16s%2Fg%2F1hhh2gwzb?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+    "checked": "2026-10-26",
+    "fields": [
+      "name",
+      "area",
+      "category",
+      "address",
+      "coordinates",
+      "maps_url",
+      "phones"
+    ],
+    "outcome": "Matched named business and published location; capacity/facilities not collected in simplified contact directory."
+  },
+  {
+    "id": "bd-grand-palace-convention-hall",
+    "source": "https://www.google.com/maps/place/The+Grand+Palace+Convention+Hall/@23.8341513,90.457869,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c9664425eb23:0x3d68ffb6b8960fc0!8m2!3d23.8341513!4d90.457869!16s%2Fg%2F11tk80k89_?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+    "checked": "2026-10-26",
+    "fields": [
+      "name",
+      "area",
+      "category",
+      "address",
+      "coordinates",
+      "maps_url",
+      "phones"
+    ],
+    "outcome": "Matched named business and published location; capacity/facilities not collected in simplified contact directory."
+  },
+  {
+    "id": "bd-uttara-party-center",
+    "source": "https://www.google.com/maps/place/Uttara+Party+Center/@23.8646972,90.3995238,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c3f68697e1c9:0x27c02ddb0b3592ef!8m2!3d23.8646972!4d90.3995238!16s%2Fg%2F11f4qkvhky?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+    "checked": "2026-10-26",
+    "fields": [
+      "name",
+      "area",
+      "category",
+      "address",
+      "coordinates",
+      "maps_url",
+      "phones"
+    ],
+    "outcome": "Matched named business and published location; capacity/facilities not collected in simplified contact directory."
   }
 ]

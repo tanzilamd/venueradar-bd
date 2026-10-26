@@ -380,6 +380,14 @@
       "notice": "Venue use needs confirmation: the matching Azimpur Estate Jonokalyan Samiti profile is categorized as a dance school. Confirm that the premises currently accepts wedding or hall bookings.",
       "source": "https://www.google.com/maps/place/Azimpur+Estate+Jonokalyan+Samiti/@23.7238042,90.3863779,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b8da54128879:0xdba06185c34f4140!8m2!3d23.7238042!4d90.3863779!16s%2Fg%2F11bwyt_kc0?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
       "decision": "Retain record and protected fields; visibly flag for operator/manual confirmation. No deletion."
+    },
+    {
+      "id": "bd-grand-palace-convention-hall",
+      "field": "area",
+      "checked": "2026-10-26",
+      "notice": "The business address publishes Khilkhet; OSM address hierarchy uses Dumni.",
+      "source": "https://www.google.com/maps/place/The+Grand+Palace+Convention+Hall/@23.8341513,90.457869,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c9664425eb23:0x3d68ffb6b8960fc0!8m2!3d23.8341513!4d90.457869!16s%2Fg%2F11tk80k89_?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+      "decision": "Keep Khilkhet as the explicit published browsing locality; preserve Dumni hierarchy in the area review. No claim of a surveyed neighborhood boundary."
     }
   ],
   "research_status": {
@@ -2207,5 +2215,44 @@
       }
     ],
     "scope": "Contact-first UI; historical capacity/facility data preserved internally. No new size/facility research claims."
+  },
+  "additional_2026_10_26": {
+    "added_ids": [
+      "bd-grand-shahjahan-convention-hall",
+      "bd-kara-convention-center",
+      "bd-bgb-banquet-hall",
+      "bd-sayeedana-community-centre",
+      "bd-grand-palace-convention-hall",
+      "bd-uttara-party-center"
+    ],
+    "scope": "Six individually reviewed dedicated Dhaka halls, not a complete city inventory.",
+    "duplicate_review": [
+      "No candidate phone already exists in the active directory.",
+      "Grand Shahjahan is a different name and position from Grand Convention Hall, Bakshibazar.",
+      "BGB Banquet Hall is at Shimanto Shombhar; existing Shimanto Convention Center has a separate operator identity and Shimanto Square address approximately 65m away. Do not merge or transfer their booking lines.",
+      "Uttara Party Center is approximately 664m from Uttara Community Centre; distinct name, premises and phone."
+    ],
+    "website_decisions": [
+      {
+        "id": "bd-bgb-banquet-hall",
+        "candidate": "https://bgbbanquethall.site/",
+        "decision": "Rejected as an authenticated operator source. The fetched page uses a +1 (555) placeholder phone and 750 Grand Avenue, Design District, inconsistent with the Dhaka business. No claims copied; website remains unknown."
+      },
+      {
+        "id": "bd-grand-palace-convention-hall",
+        "candidate": "https://tgpconvention.com/",
+        "decision": "Linked from the inspected business profile, but the robots request encountered a proxy tunnel 403. No bypass or content collection; official website authenticity remains unverified and the venue website stays null."
+      }
+    ]
+  },
+  "nearby_area_revision_2026_10_26": {
+    "reason": "Owner reported missing Naya Paltan / Motijheel linkage and inconsistent Ananda / Jonaki zone granularity.",
+    "changes": [
+      "Align Jonaki and Ananda under the broader Paltan browsing zone without moving any point or discarding the Naya Paltan address.",
+      "Paltan and Naya Paltan filters use the same explicitly described group.",
+      "Make all existing nearby links reciprocal and fill reviewed nearby browsing links for remaining indexed areas. No radius derived from incomplete venue coverage."
+    ],
+    "limitations": "Curated nearby browsing areas are suggestions, not official administrative boundaries or driving distances.",
+    "all_areas_with_neighbors": true
   }
 }
