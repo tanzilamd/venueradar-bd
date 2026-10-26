@@ -2322,5 +2322,50 @@
     ],
     "limitations": "Curated nearby browsing areas are suggestions, not official administrative boundaries or driving distances.",
     "all_areas_with_neighbors": true
+  },
+  "priority_halls_2026_10_26": {
+    "scope": "Manual follow-up for Moghbazar, Khilgaon, Gopibagh, Banasree and Badda; eight distinct public event venues added. This is not complete coverage of Dhaka.",
+    "added_ids": [
+      "bd-moghbazar-convention-center",
+      "bd-kh-convention-centre-gopibagh",
+      "bd-blue-moon-party-centre-khilgaon",
+      "bd-taiking-party-centre-middle-badda",
+      "bd-protik-rupsree-convention-center",
+      "bd-mahal-community-center-badda",
+      "bd-shadi-mahal-party-center-badda",
+      "bd-kamrul-restaurant-convention-center"
+    ],
+    "candidate_screening": "The 2026-10-25 Geofabrik Bangladesh OSM extract was checksum verified and locally filtered to a Dhaka study rectangle. Named candidates were compared with all 139 existing records by names, phones, addresses and proximity. Individual public business profiles and the Moghbazar operator site were then inspected manually; no Maps bulk extraction or ratings were retained.",
+    "held_candidates": [
+      {
+        "name": "Esha Convention Hall",
+        "area": "Aftabnagar",
+        "reason": "Three same-name/same-premises Maps results disagree on permanent closure; one publishes +8801805750787. Exact active branch identity needs first-party confirmation before admission."
+      },
+      {
+        "name": "Casanova Party Center",
+        "area": "Banasree",
+        "reason": "Mapped OSM candidate, but the matching individually inspected Maps profile reports permanently closed."
+      },
+      {
+        "name": "Spectra Convention Centre",
+        "area": "Gulshan",
+        "reason": "Mapped OSM candidate, but the matching individually inspected Maps profile reports permanently closed."
+      },
+      {
+        "name": "Protik Rupsree Housing",
+        "area": "Banasree",
+        "reason": "The housing property's public phone belongs to another listing and was not copied to Protik Rupsree Convention Center."
+      }
+    ],
+    "phone_conflict": {
+      "id": "bd-taiking-party-centre-middle-badda",
+      "reason": "The older OSM map tag publishes +8801971880028; the matching individual Maps business profile publishes +8801811880022. Both source-qualified lines are retained without a call-tested claim and a visible warning requests direct confirmation."
+    },
+    "duplicate_decisions": [
+      "Moghbazar Convention Center and Celebration Community Center have different names, addresses, public contacts and map points about 88 m apart.",
+      "KH Convention Centre and Sadeque Hossain Khoka Community Centre have separate map markers about 153 m apart; the latter is not reused as a phone source.",
+      "Shadi Mahal Party Center is on DIT Road 5; Mahal Community Center is at House 42, Road 13, DIT Project."
+    ]
   }
 }
