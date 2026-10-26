@@ -95,7 +95,7 @@
 .directory-page .venue-columns { display: grid; grid-template-columns: minmax(0, 1fr) 100px 322px; padding: 12px 16px 9px; gap: 16px; font-size: 11px; font-weight: 550; color: #59676c; }
 .directory-page #results { display: grid; align-content: start; gap: 7px; background: transparent; border: 0; border-radius: 0; }
 .directory-page .card { display: grid; grid-template-columns: minmax(0, 1fr) 100px 322px; position: relative; padding: 12px 16px; gap: 3px 16px; border: 1px solid var(--line); border-radius: 8px; margin: 0; box-shadow: none; background: white; min-height: 84px; }
-.directory-page .card.selected { background: #edf6f1; border-color: #cbded3; box-shadow: inset 3px 0 #2a735f; }
+.directory-page .card.selected { background: #edf6f1; border-color: var(--line); box-shadow: none; }
 .directory-page .card:not(.selected):hover { background: #fafcfb; }
 .directory-page .card-head, .directory-page .card-head > div { display: contents; }
 .directory-page .card h3 { grid-column: 1; grid-row: 1; font-size: 16px; font-family: inherit; font-weight: 680; line-height: 1.4; margin: 0; align-self: end; }
