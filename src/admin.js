@@ -32,12 +32,13 @@ function draft() {
 function render() {
   const q = $("adminSearch").value.toLowerCase(), list = $("adminList");
   list.replaceChildren();
-  const shown = rows.filter((v) => (v.name + " " + (v.area || "")).toLowerCase().includes(q)).sort((a, b) => a.name.localeCompare(b.name));
+  const shown = rows.filter((v) => (v.name + " " + (v.area || "")).toLowerCase().includes(q) && (!$('reviewOnly').checked || !!v.review_notice)).sort((a, b) => a.name.localeCompare(b.name));
   $("adminCount").textContent = `${shown.length} of ${rows.length} halls and venues`;
   for (const v of shown) {
     const b = button("", () => open(v), "manager-row");
     b.setAttribute("aria-pressed", String(selected === v.id));
     b.append(el("strong", v.name), el("span", (v.area || "Area to confirm") + " · " + (v.phones[0]?.number.replace(/^\+880/, "0") || "No phone")));
+    if (v.review_notice) b.append(el("span", "Needs review", "review-badge"));
     list.append(b);
   }
   if (!shown.length) list.append(el("p", "No match. Try another name or add a hall.", "hint"));
@@ -49,8 +50,9 @@ function render() {
     if (k === "modified") {
       const old = baseline.find((x) => x.id === v.id);
       const text = (x) => Array.isArray(x) ? x.map((p) => p.number).join(", ") : String(x ?? "Unavailable");
-      const fields = ["name", "area", "address", "phones", "maps_url", "website", "review_notice"].filter((f) => JSON.stringify(old[f]) !== JSON.stringify(v[f]));
+      const fields = ["name", "area", "address", "phones", "maps_url", "website", "review_notice"].filter((f) => JSON.stringify(old[f]) !== JSON.stringify(v[f]) && !(f === "review_notice" && !v.review_notice));
       if (fields.length) li.append(el("br"), el("small", fields.map((f) => f.replace("_", " ") + ": " + text(old[f]) + " → " + text(v[f])).join("; "), "hint"));
+      if (old.review_notice && !v.review_notice) li.append(el("br"), el("small", "Review notice cleared after public source check.", "hint"));
     }
     $("changeList").append(li);
   }
@@ -64,8 +66,12 @@ function open(v = null) {
   $("venueForm").hidden = false;
   $("editorTitle").textContent = v ? "Edit hall" : "Add a hall";
   $("deleteVenue").hidden = !v;
-  const vals = { Id: v?.id || "", Name: v?.name || "", Area: v?.area || "", Address: v?.address || "", AddressStatus: v?.address_status || "partial", Phones: v?.phones.map((p) => p.number).join("\n") || "", Maps: v?.maps_url || "", Website: v?.website || "", Lat: v?.coordinates?.lat ?? "", Lon: v?.coordinates?.lon ?? "", Source: v?.maps_url || v?.evidence.at(-1)?.url || "", SourceKind: "independent", Notice: v?.review_notice || "" };
+  const vals = { Id: v?.id || "", Name: v?.name || "", Area: v?.area || "", Address: v?.address || "", AddressStatus: v?.address_status || "partial", Phones: v?.phones.map((p) => p.number).join("\n") || "", Maps: v?.maps_url || "", Website: v?.website || "", Lat: v?.coordinates?.lat ?? "", Lon: v?.coordinates?.lon ?? "", Source: v?.review_notice ? "" : v?.maps_url || v?.evidence.at(-1)?.url || "", SourceKind: "independent", Notice: v?.review_notice || "" };
   for (const [k, value] of Object.entries(vals)) $("edit" + k).value = value;
+  $("reviewPanel").hidden = !v?.review_notice;
+  $("existingNotice").textContent = v?.review_notice || "";
+  $("editConfirmNotice").checked = false;
+  $("noticeField").hidden = false;
   $("formError").textContent = "";
   render();
   $("editName").focus();
@@ -75,12 +81,17 @@ $("editMaps").addEventListener("input", () => {
   if (!$("editSource").value) $("editSource").value = $("editMaps").value;
 });
 $("adminSearch").oninput = render;
+$("reviewOnly").onchange = render;
+$("editConfirmNotice").onchange = () => {
+  $("noticeField").hidden = $("editConfirmNotice").checked;
+};
 $("newVenue").onclick = () => open();
 $("venueForm").onsubmit = (e) => {
   e.preventDefault();
   try {
     const input = {};
     for (const k of ["Id", "Name", "Area", "Address", "AddressStatus", "Phones", "Maps", "Website", "Lat", "Lon", "Source", "SourceKind", "Notice"]) input[k[0].toLowerCase() + k.slice(1)] = $("edit" + k).value;
+    input.confirmNotice = $("editConfirmNotice").checked;
     const next = editVenue(rows, input);
     const errors = validation(next);
     if (errors.length) throw Error(errors.slice(0, 4).join("\n"));

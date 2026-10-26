@@ -272,3 +272,103 @@
     width: 100%;
   }
 }
+
+/* Match the public Clean Workspace while keeping publishing controls explicit. */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("/fonts/inter-latin.woff2") format("woff2");
+}
+.manager-body {
+  --green: #104d40;
+  --ink: #142124;
+  --muted: #59666a;
+  --paper: #f8fafb;
+  --surface: #fff;
+  --line: #e5eaec;
+  --soft: #edf4f1;
+  --accent: #d99b74;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+.manager-body h1, .manager-body h2, .manager-body h3 { font-family: inherit; letter-spacing: -.04em; }
+.manager-body .site-header { min-height: 76px; padding: 12px max(28px, calc((100vw - 1540px) / 2)); background: #104b3e; border: 0; justify-content: space-between; }
+.manager-body .brand { color: #fff; font-size: 20px; font-weight: 700; gap: 10px; letter-spacing: -.5px; }
+.manager-body .brand b { color: #e2a27b; }
+.manager-body .brandmark { background: none; width: 32px; height: 40px; border-radius: 0; font-family: inherit; font-size: 27px; font-weight: 500; letter-spacing: -6px; }
+.manager-body .brandmark span { font-size: 23px; padding-top: 4px; }
+.manager-body .manager-back { color: #eaf2ee; font-size: 13px; text-decoration: none; padding: 10px 12px; border: 1px solid #ffffff35; border-radius: 7px; }
+.manager-body .manager-back:hover { background: #ffffff15; }
+.manager-shell { max-width: 1540px; padding: 28px 36px 64px; }
+.manager-intro { align-items: end; }
+.manager-intro h1 { font-size: clamp(28px, 3vw, 36px); max-width: none; margin: 0 0 7px; line-height: 1.15; font-weight: 750; }
+.manager-intro p { margin: 0; font-size: 13px; }
+.manager-intro .eyebrow { color: #526d60; font-size: 10px; font-weight: 700; letter-spacing: 1.2px; margin-bottom: 6px; }
+.manager-intro > .primary { min-width: 126px; }
+.manager-shell button, .manager-shell .import-control { border-radius: 8px; }
+.manager-shell .primary { background: var(--green); border-color: var(--green); color: white; font-weight: 600; }
+.manager-shell .primary:hover { background: #0b3c32; }
+.manager-toolbar { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 15px 16px; margin: 18px 0 14px; align-items: center; }
+.manager-search { width: min(460px, 100%); min-width: 0; display: grid; gap: 7px; }
+.manager-search > label:first-child { font-size: 12px; font-weight: 650; }
+.manager-shell .review-filter { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 500; color: var(--muted); cursor: pointer; margin-top: 3px; }
+.manager-shell .review-filter input, .manager-shell .confirm-review input { width: 18px; height: 18px; min-height: 18px; flex: 0 0 18px; padding: 0; accent-color: var(--green); }
+.manager-tools { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+.manager-shell input, .manager-shell textarea, .manager-shell select { border-color: #d7e2de; border-radius: 8px; background: #fff; font-size: 14px; font-weight: 400; }
+.manager-shell :is(input, textarea, select):focus { border-color: #4f9077; }
+.manager-shell .import-control { background: #fff; border-color: var(--line); }
+.manager-layout { grid-template-columns: 304px minmax(0, 1fr); gap: 16px; border: 0; border-radius: 0; overflow: visible; background: transparent; align-items: start; }
+.manager-list, .manager-editor { border: 1px solid var(--line); border-radius: 10px; background: #fff; min-width: 0; }
+.manager-list { padding: 12px; max-height: min(75vh, 860px); overflow: auto; }
+.manager-list > p { margin: 3px 0 10px; font-size: 11px; }
+.manager-row { border: 1px solid transparent; margin-bottom: 5px; padding: 11px 12px; gap: 5px; }
+.manager-row:hover { background: #f6faf8; border-color: var(--line); }
+.manager-row[aria-pressed=true] { background: #eaf5ef; border-color: #cfe1d7; }
+.manager-row strong { font-size: 13px; font-weight: 650; line-height: 1.4; }
+.manager-row span { font-size: 11px; }
+.manager-row .review-badge, .review-panel .review-badge { display: inline-flex; width: max-content; padding: 4px 8px; border-radius: 5px; background: #f7eee1; color: #80532a; font-size: 10px; font-weight: 650; }
+.manager-editor { padding: 24px; }
+.manager-editor .empty { margin: 26px 0; padding: 28px; background: #f7faf8; border-radius: 8px; }
+.manager-editor .empty h2 { font-size: 20px; }
+.editor-heading { margin-bottom: 18px; }
+.editor-heading h2 { font-size: 23px; font-weight: 750; }
+.form-grid { gap: 15px 18px; }
+.manager-shell label { font-size: 12px; font-weight: 600; }
+.manager-shell label small { line-height: 1.4; }
+.coordinate-fields summary { font-size: 12px; }
+.source-entry { border-color: var(--line); background: #fafcfb; border-radius: 9px; margin-top: 22px; padding: 17px; }
+.source-entry legend { font-size: 12px; font-weight: 700; }
+.source-entry .hint { font-size: 12px; }
+.review-panel { background: #fffaf2; border: 1px solid #e8d9bd; border-radius: 9px; padding: 16px; margin-top: 22px; }
+.review-panel p { margin: 11px 0 14px; font-size: 13px; line-height: 1.5; }
+.manager-shell .confirm-review { display: flex; align-items: flex-start; gap: 10px; line-height: 1.5; font-size: 12px; cursor: pointer; }
+.review-panel small { display: block; margin: 9px 0 0 28px; }
+.form-actions { margin-top: 16px; }
+.publish-panel { background: #fff; border-color: var(--line); border-radius: 10px; gap: 32px; padding: 24px; margin-top: 16px; }
+.publish-panel h2 { font-size: 22px; font-weight: 750; }
+.publish-panel .eyebrow { font-size: 10px; font-weight: 700; color: #526d60; }
+.publish-controls details { border: 1px solid var(--line); border-radius: 8px; padding: 9px 14px; }
+.publish-controls summary { font-size: 13px; }
+.publish-controls > .primary { min-height: 46px; }
+@media (max-width: 800px) {
+  .manager-body .site-header { min-height: 64px; padding: 10px 16px; }
+  .manager-body .brand { font-size: 16px; gap: 6px; }
+  .manager-body .brandmark { width: 26px; font-size: 24px; }
+  .manager-body .brandmark span { font-size: 20px; }
+  .manager-body .manager-back { font-size: 11px; padding: 8px; }
+  .manager-shell { padding: 22px 14px 40px; }
+  .manager-intro { align-items: stretch; gap: 16px; }
+  .manager-intro h1 { font-size: 28px; }
+  .manager-toolbar { padding: 14px; align-items: stretch; }
+  .manager-search { width: 100%; }
+  .manager-tools { justify-content: flex-start; }
+  .manager-layout { grid-template-columns: 1fr; }
+  .manager-list { max-height: 250px; border: 1px solid var(--line); }
+  .manager-editor { padding: 19px 15px; }
+  .publish-panel { padding: 19px 15px; }
+}

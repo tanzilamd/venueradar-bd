@@ -33,6 +33,18 @@ test("duplicate names are rejected and deletes are explicit change-set entries",
   assert.throws(() => editVenue([v], { ...input(v), id: "" }));
   assert.deepEqual(changeSet([v], []).removed, [v]);
 });
+test("review notices require an explicit public-source confirmation and retain prior evidence", () => {
+  const v = base(), form = input(v);
+  v.review_notice = "Confirm this venue's current details.";
+  v.evidence.push({ url: "https://example.org/earlier-review", kind: "independent", checked: "2026-10-25", fields: ["review_notice"], reuse: "Synthetic test evidence." });
+  assert.throws(() => editVenue([v], form), /confirmation checkbox/);
+  assert.throws(() => editVenue([v], { ...form, confirmNotice: true, sourceKind: "submission" }), /public business source/);
+  const result = editVenue([v], { ...form, confirmNotice: true })[0];
+  assert.equal(result.review_notice, undefined);
+  assert.ok(result.evidence.some((e) => e.url === "https://example.org/earlier-review"));
+  assert.ok(result.evidence.some((e) => e.url === form.source && e.checked === result.last_checked));
+  assert.deepEqual(validateData([result], regions, schema, boundary), []);
+});
 function apiMock(baseline, { conflict = false } = {}) {
   const calls = [];
   const fn = async (path, token, body, method) => {

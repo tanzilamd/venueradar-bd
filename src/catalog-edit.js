@@ -27,12 +27,19 @@ function editVenue(rows, input, date = (/* @__PURE__ */ new Date()).toISOString(
   if (!source) throw Error("Add the public source link for this change. Choose Owner contribution if independent verification is pending.");
   const kind = input.sourceKind || "submission";
   if (!["official", "independent", "submission"].includes(kind)) throw Error("Choose a source type.");
+  const confirming = input.confirmNotice === true;
+  if (confirming && !old?.review_notice) throw Error("This venue has no review notice to confirm.");
+  if (confirming && kind === "submission") throw Error("Resolve a review notice using an inspected public business source, not an owner contribution.");
   const maps = safeURL(input.maps, true), website = safeURL(input.website);
   const numbers = [...new Set(input.phones.split(/[,;\n]/).map(normalizePhone).filter(Boolean))];
   const v = old ? structuredClone(old) : { id: "bd-" + name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""), bn_name: null, aliases: [], category: "Convention Center", city: "Dhaka", division: "6", district: "47", coordinates: null, capacity: null, capacity_layout: null, facilities: [], evidence: [], notes: null, website: null, phones: [], verification: kind === "submission" ? "user-submitted" : "source-checked" };
   if (!old && rows.some((r) => r.id === v.id)) throw Error("This venue ID already exists. Use a more specific name.");
   Object.assign(v, { name, area, address, address_status: input.addressStatus || "partial", last_checked: date });
-  v.phones = numbers.map((number) => old?.phones.find((p) => p.number === number) || { number, source, checked: date, status: kind === "submission" ? "submitted-not-verified" : "published-not-call-tested" });
+  v.phones = numbers.map((number) => {
+    const previous = old?.phones.find((p) => p.number === number);
+    if (confirming && previous?.status === "submitted-not-verified") return { number, source, checked: date, status: "published-not-call-tested" };
+    return previous || { number, source, checked: date, status: kind === "submission" ? "submitted-not-verified" : "published-not-call-tested" };
+  });
   if (v.phones.length) delete v.phone_review;
   else v.phone_review = { status: "not-found-in-checked-sources", checked: date, note: "No public business contact was supplied in this directory update. Check the business listing for newer information." };
   if (maps) v.maps_url = maps;
@@ -43,9 +50,11 @@ function editVenue(rows, input, date = (/* @__PURE__ */ new Date()).toISOString(
     if (!lat || !lon || !Number.isFinite(Number(lat)) || !Number.isFinite(Number(lon))) throw Error("Enter both valid map coordinates, or leave both blank.");
     v.coordinates = { lat: Number(lat), lon: Number(lon) };
   } else if (!old?.coordinates) v.coordinates = null;
-  const notice = (input.notice ?? old?.review_notice ?? "").trim();
+  const notice = confirming ? "" : (input.notice ?? old?.review_notice ?? "").trim();
+  if (old?.review_notice && !notice && !confirming) throw Error("Use the confirmation checkbox and a public source to clear this review notice.");
   if (notice) v.review_notice = notice;
   else delete v.review_notice;
+  if (confirming && v.verification === "user-submitted") v.verification = "source-checked";
   if (!old && kind === "submission" && !v.review_notice) v.review_notice = "Owner-contributed listing. Confirm the location and business contact directly; independent verification is pending.";
   v.evidence.push({ url: source, kind, checked: date, fields: ["name", "area", "address", "category", "phones", ...v.coordinates ? ["coordinates"] : [], ...maps ? ["maps_url"] : [], ...website ? ["website"] : [], ...v.review_notice ? ["review_notice"] : []], reuse: kind === "submission" ? "Owner-supplied public business information; independent verification pending." : "Public business facts reviewed by the directory owner in the visual editor. No copied reviews, ratings, photographs or private information." });
   return old ? rows.map((r) => r.id === v.id ? v : r) : [...rows, v];

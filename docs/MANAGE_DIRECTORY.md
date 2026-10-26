@@ -10,6 +10,8 @@ Open **https://tanzilahmed.tech/venueradar-bd/manage.html** after the manager re
 
 Keep a public source URL. Choose **Owner contribution** if the fact is supplied by you but has not been independently established from that source. Those contacts stay labelled as owner supplied. Previously sourced information and hidden research fields are retained when untouched. Correct a warning only when its underlying issue has actually been resolved.
 
+Use **Needs review only** to find listings with a visible confirmation notice. Open one and read the current issue. After checking a current public business source, tick the confirmation checkbox, select **Official venue website** or **Public business / Maps listing**, paste the exact source URL and save to draft. This removes the visitor notice after publication, records the review date and retains earlier evidence. The checkbox is required to clear an existing notice; an owner contribution alone cannot resolve it. For a submitted listing, check its listed phone numbers on the cited source before confirming because their status is updated to published, not call-tested. If the issue remains uncertain, leave the notice in place or revise its wording.
+
 Missing data is allowed. Invalid phone formats, unsafe links, duplicate names, unsupported fields and locations outside the Dhaka boundary are rejected before publication. Adding a number clears stale “phone not found” metadata automatically. Area indexes and collection membership are rebuilt together, so you do not need to edit those files.
 
 Drafts are stored in this browser when storage is available. Download a JSON backup before clearing browser data, switching devices or replacing a draft. A stale draft is not restored over newer published data.

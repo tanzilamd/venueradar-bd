@@ -130,9 +130,18 @@ try {
   await page.locator("#adminSearch").fill(venue.name);
   await page.locator("#adminList button").filter({ has: page.getByText(venue.name, { exact: true }) }).first().click();
   assert.equal(await page.locator("#editPhones").inputValue(), venue.phones.map((p) => p.number).join("\n"));
+  await page.locator("#adminSearch").fill("");
+  await page.locator("#reviewOnly").check();
+  assert.equal(await page.locator("#adminList button").count(), expected.filter((v) => v.review_notice).length);
+  if (expected.some((v) => v.review_notice)) {
+    await page.locator("#adminList button").first().click();
+    assert.equal(await page.locator("#reviewPanel").isVisible(), true);
+    await page.locator("#editConfirmNotice").check();
+    assert.equal(await page.locator("#noticeField").isVisible(), false);
+  }
   assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
   await page.screenshot({ path: out + "/manager-mobile.png" });
-  report.checks.push("Live manager loads and displays the current venue contacts");
+  report.checks.push("Live manager shows venue contacts and evidence-gated review controls");
   assert.deepEqual(report.javascriptErrors, []);
   assert.deepEqual(report.failedAssets, []);
   report.success = true;

@@ -33,6 +33,31 @@ test("invalid source/phone cannot create a workflow-breaking draft", async ({ pa
   await expect(page.locator("#formError")).toContainText("Invalid Bangladesh phone");
   await expect(page.locator("#changeSummary")).toHaveText("No changes yet.");
 });
+test("manager finds review notices and clears one only after source confirmation", async ({ page }) => {
+  const flagged = real.find((row) => row.review_notice && row.verification !== "user-submitted");
+  await page.route("**/data/venues.json", (r) => r.fulfill({ json: [v, flagged] }));
+  await page.goto("/manage.html");
+  await page.locator("#reviewOnly").check();
+  await expect(page.locator("#adminList button")).toHaveCount(1);
+  await expect(page.locator("#adminList button")).toContainText("Needs review");
+  await page.locator("#adminList button").click();
+  await expect(page.locator("#existingNotice")).toHaveText(flagged.review_notice);
+  await expect(page.locator("#editSource")).toBeEmpty();
+  await page.locator("#editNotice").fill("");
+  await page.locator("#editSource").fill("https://example.org/checked-business");
+  await page.getByRole("button", { name: "Save to draft", exact: true }).click();
+  await expect(page.locator("#formError")).toContainText("confirmation checkbox");
+  await page.locator("#editConfirmNotice").check();
+  await page.getByRole("button", { name: "Save to draft", exact: true }).click();
+  await expect(page.locator("#changeSummary")).toContainText("1 edited");
+  await expect(page.locator("#adminList button")).toHaveCount(0);
+  const download = page.waitForEvent("download");
+  await page.locator("#exportData").click();
+  const file = await download;
+  const saved = JSON.parse(fs.readFileSync(await file.path(), "utf8")).find((row) => row.id === flagged.id);
+  expect(saved.review_notice).toBeUndefined();
+  expect(saved.evidence).toContainEqual(expect.objectContaining({ url: "https://example.org/checked-business" }));
+});
 test("new hall previews and exports a valid single JSON file", async ({ page }) => {
   await load(page);
   await page.locator("#newVenue").click();
