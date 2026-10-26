@@ -92,11 +92,10 @@
 .directory-page .area-context .nearby-list { font-size: 11px; margin-top: 3px; }
 .directory-page .venue-workspace { display: grid; grid-template-columns: minmax(0, 1fr) 304px; align-items: start; gap: 28px; }
 .directory-page .venue-workspace:has(.venue-inspector[hidden]) { grid-template-columns: minmax(0, 1fr); }
-.directory-page .venue-columns { display: grid; grid-template-columns: minmax(0, 1fr) 100px 322px; padding: 12px 18px; gap: 16px; border-bottom: 1px solid var(--line); font-size: 11px; font-weight: 550; color: #59676c; }
-.directory-page #results { background: #fff; border: 1px solid var(--line); border-top: 0; border-radius: 0 0 9px 9px; }
-.directory-page .card { display: grid; grid-template-columns: minmax(0, 1fr) 100px 322px; position: relative; padding: 20px 18px; gap: 3px 16px; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; margin: 0; box-shadow: none; background: white; min-height: 102px; }
-.directory-page .card:last-child { border-bottom: 0; border-radius: 0 0 9px 9px; }
-.directory-page .card.selected { background: #edf6f1; box-shadow: inset 3px 0 #2a735f; }
+.directory-page .venue-columns { display: grid; grid-template-columns: minmax(0, 1fr) 100px 322px; padding: 12px 16px 9px; gap: 16px; font-size: 11px; font-weight: 550; color: #59676c; }
+.directory-page #results { display: grid; align-content: start; gap: 7px; background: transparent; border: 0; border-radius: 0; }
+.directory-page .card { display: grid; grid-template-columns: minmax(0, 1fr) 100px 322px; position: relative; padding: 12px 16px; gap: 3px 16px; border: 1px solid var(--line); border-radius: 8px; margin: 0; box-shadow: none; background: white; min-height: 84px; }
+.directory-page .card.selected { background: #edf6f1; border-color: #cbded3; box-shadow: inset 3px 0 #2a735f; }
 .directory-page .card:not(.selected):hover { background: #fafcfb; }
 .directory-page .card-head, .directory-page .card-head > div { display: contents; }
 .directory-page .card h3 { grid-column: 1; grid-row: 1; font-size: 16px; font-family: inherit; font-weight: 680; line-height: 1.4; margin: 0; align-self: end; }
@@ -112,20 +111,20 @@
 .directory-page .card .save { position: static; transform: none; width: 34px; min-width: 34px; height: 44px; min-height: 44px; font-size: 0; display: inline-flex; align-items: center; justify-content: center; padding: 0; border: 0; background: none; }
 .directory-page .card .save[aria-pressed="true"] { color: var(--green); background: #dcece3; border-radius: 6px; }
 .directory-page .card .save .icon { width: 17px; height: 17px; }
-.directory-page .card-actions { grid-column: 3; grid-row: 1 / span 4; align-self: center; display: flex; gap: 5px; border: 0; margin: 0; padding: 0; flex-wrap: nowrap; }
+.directory-page .card-actions { grid-column: 3; grid-row: 1 / span 4; align-self: center; display: grid; grid-template-columns: minmax(0, 1fr) 64px 28px 28px 32px; align-items: center; gap: 4px; border: 0; margin: 0; padding: 0; }
 .directory-page .card-actions > a, .directory-page .card-actions > button { min-height: 38px; border-radius: 7px; padding: 7px 9px; font-size: 12px; display: inline-flex; gap: 5px; align-items: center; justify-content: center; text-decoration: none; border-color: #e9edf0; background: #f2f5f6; white-space: nowrap; }
 .directory-page .card-actions .primary { background: var(--green); border-color: var(--green); color: white; font-weight: 600; font-size: 13px; letter-spacing: 0; font-variant-numeric: tabular-nums; }
 .directory-page .card-actions .primary .icon { width: 14px; height: 14px; flex-basis: 14px; }
 @media (min-width: 721px) {
-  .directory-page .card-actions .primary { flex-direction: row-reverse; background: none; border: 0; padding: 0; gap: 8px; color: var(--green); font-size: 14px; font-weight: 650; }
+  .directory-page .card-actions .primary { width: 100%; flex-direction: row-reverse; justify-content: flex-end; background: none; border: 0; padding: 0; gap: 8px; color: var(--green); font-size: 14px; font-weight: 650; }
   .directory-page .card-actions .primary .icon { background: var(--green); color: #fff; width: 34px; height: 38px; flex-basis: 34px; padding: 10px 8px; border-radius: 7px; }
   .directory-page .card-actions .primary:hover { color: #092e26; }
   .directory-page .card-actions .primary:hover .icon { background: #092e26; }
 }
-.directory-page .card-actions .row-details, .directory-page .card-actions .compare-toggle { font-size: 0; width: 30px; min-width: 30px; padding: 0; min-height: 32px; margin: 0; background: none; border-color: transparent; }
+.directory-page .card-actions .row-details, .directory-page .card-actions .compare-toggle { font-size: 0; width: 28px; min-width: 28px; padding: 0; min-height: 32px; margin: 0; background: none; border-color: transparent; }
 .directory-page .card-actions .compare-toggle[aria-pressed="true"] { background: #d9eade; color: var(--green); }
 .directory-page .card-actions .row-details .icon, .directory-page .card-actions .compare-toggle .icon { width: 15px; height: 15px; flex-basis: 15px; }
-.directory-page .phone-missing { font-size: 11px; color: #59666a; padding: 9px 0; }
+.directory-page .card-actions > .phone-missing { display: flex; align-items: center; height: 38px; font-size: 11px; color: #59666a; padding: 0; white-space: nowrap; }
 .directory-page .result-group-heading { font-size: 11px; font-weight: 600; letter-spacing: .035em; color: #566966; background: #f5f8f7; padding: 10px 18px; margin: 0; border-bottom: 1px solid var(--line); }
 .directory-page .venue-inspector { position: sticky; top: 24px; border: 1px solid var(--line); border-radius: 11px; background: white; padding: 15px; min-width: 0; max-height: calc(100dvh - 48px); overflow-y: auto; scrollbar-width: thin; }
 .directory-page .inspector-location { background: #edf2f0; border: 1px solid #e1e9e5; width: 100%; min-height: 144px; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 9px; color: #32574c; font-size: 12px; margin-bottom: 20px; }
@@ -186,8 +185,7 @@
   .directory-page #headerSearchDock .search-row { grid-template-columns: minmax(130px, 1fr) 140px; }
   .directory-page main { padding-inline: 24px; }
   .directory-page .venue-workspace { grid-template-columns: minmax(0, 1fr) 270px; gap: 20px; }
-  .directory-page .venue-columns, .directory-page .card { grid-template-columns: minmax(0, 1fr) 96px 316px; gap: 3px 10px; padding-inline: 14px; }
-  .directory-page .card-actions { gap: 3px; }
+  .directory-page .venue-columns, .directory-page .card { grid-template-columns: minmax(0, 1fr) 96px 316px; column-gap: 10px; padding-inline: 14px; }
 }
 @media (max-width: 1099px) {
   .directory-page .site-header { padding: 12px 24px; min-height: 68px; gap: 16px; }
@@ -204,6 +202,14 @@
   .directory-page .filters { margin-bottom: 18px; }
   .directory-page .map-mode .map-workspace { display: block; }
   .directory-page .map-mode #results { height: 350px; }
+}
+@media (min-width: 721px) and (max-width: 850px) {
+  .directory-page .filters { display: none; }
+  .directory-page #mobileFilters { display: inline-flex; align-items: center; padding: 8px 11px; border-color: var(--line); background: white; font-size: 12px; }
+  .directory-page .venue-columns { display: none; }
+  .directory-page .card { grid-template-columns: minmax(0, 1fr) 115px; }
+  .directory-page .card-location { grid-column: 2; grid-row: 1 / span 2; justify-self: end; }
+  .directory-page .card-actions { grid-column: 1 / -1; grid-row: 3; width: 322px; margin-top: 7px; }
 }
 @media (max-width: 720px) {
   .directory-page .site-header { padding: 10px 16px; min-height: 64px; flex-wrap: nowrap; gap: 8px; }
@@ -254,7 +260,7 @@
   .directory-page .area-context { padding: 9px 10px; font-size: 11px; }
   .directory-page .area-context .nearby-list { font-size: 10px; line-height: 1.6; }
   .directory-page .venue-columns { display: none; }
-  .directory-page #results { border: 1px solid var(--line); border-radius: 9px; }
+  .directory-page #results { gap: 7px; border: 0; border-radius: 0; }
   .directory-page .card { display: block; padding: 15px 12px; min-height: 0; }
   .directory-page .card-head { display: block; }
   .directory-page .card-head > div { display: flex; flex-direction: column; align-items: start; }
