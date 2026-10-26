@@ -5895,13 +5895,20 @@
       "lat": 23.7980314,
       "lon": 90.3647005
     },
-    "phones": [],
+    "phones": [
+      {
+        "number": "+8801957257979",
+        "source": "https://humayra.com.bd/product/efa-convention-center/",
+        "checked": "2026-10-26",
+        "status": "published-not-call-tested"
+      }
+    ],
     "website": null,
     "capacity": null,
     "capacity_layout": null,
     "facilities": [],
     "verification": "open-data-listed",
-    "last_checked": "2026-10-25",
+    "last_checked": "2026-10-26",
     "evidence": [
       {
         "url": "https://www.openstreetmap.org/node/11993640298",
@@ -5935,9 +5942,21 @@
         "checked": "2026-10-25",
         "kind": "independent",
         "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+      },
+      {
+        "url": "https://humayra.com.bd/product/efa-convention-center/",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "phones"
+        ],
+        "checked": "2026-10-26",
+        "kind": "independent",
+        "reuse": "Individual public business facts from a venue-specific third-party booking page; no copied descriptions, photos, ratings, reviews or restricted API data. Contact not call-tested."
       }
     ],
-    "notes": "OpenStreetMap listing, not operator-confirmed. Wedding booking, current operation and business contacts must be confirmed directly. The marker is the published map point, not a verified entrance. No unambiguous public business number was available in this source. The map record was last edited 2024-06-20. The source was reviewed on 2026-10-25; that is not an on-site verification date.",
+    "notes": "OpenStreetMap listing, not operator-confirmed. Wedding booking, current operation and business contacts must be confirmed directly. The marker is the published map point, not a verified entrance. No unambiguous public business number was available in this source. The map record was last edited 2024-06-20. The source was reviewed on 2026-10-25; that is not an on-site verification date. Contact 01957 257979 is published by a third-party booking page; it has not been call-tested. That page writes the premises number as 636/7, while the established map address says 63/7; the established address is retained pending confirmation.",
     "discovery": {
       "source": "OpenStreetMap",
       "element_type": "node",
@@ -5954,12 +5973,7 @@
       "source": "https://nominatim.openstreetmap.org/reverse?lat=23.7980314&lon=90.3647005&format=jsonv2&addressdetails=1&zoom=18&accept-language=en",
       "reason": "Borobagh/West Monipur map context grouped under wider Mirpur."
     },
-    "maps_url": "https://www.google.com/maps/search/?api=1&query=Efa%20Convention%20Center%20Mirpur%20Dhaka%20Bangladesh",
-    "phone_review": {
-      "status": "not-found-in-checked-sources",
-      "checked": "2026-10-25",
-      "note": "No usable business phone was found in the checked public sources. The Maps listing or operator may have newer information."
-    }
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Efa%20Convention%20Center%20Mirpur%20Dhaka%20Bangladesh"
   },
   {
     "id": "bd-osm-node-12006320188",
@@ -9623,6 +9637,24 @@
         "source": "https://www.google.com/maps/place/Baridhara+DOHS+Convention+Centre/@23.8160204,90.4156136,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c65426c2fa7f:0x6c4039efbd72815e!8m2!3d23.8160204!4d90.4156136!16s%2Fg%2F12hl55j09?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
         "checked": "2026-10-25",
         "status": "published-not-call-tested"
+      },
+      {
+        "number": "+88028413119",
+        "source": "https://humayra.com.bd/product/baridhara-dohs-convention-center/",
+        "checked": "2026-10-26",
+        "status": "published-not-call-tested"
+      },
+      {
+        "number": "+88028412216",
+        "source": "https://humayra.com.bd/product/baridhara-dohs-convention-center/",
+        "checked": "2026-10-26",
+        "status": "published-not-call-tested"
+      },
+      {
+        "number": "+8801844008863",
+        "source": "https://humayra.com.bd/product/baridhara-dohs-convention-center/",
+        "checked": "2026-10-26",
+        "status": "published-not-call-tested"
       }
     ],
     "website": null,
@@ -9633,7 +9665,7 @@
       "Accessible entrance"
     ],
     "verification": "open-data-listed",
-    "last_checked": "2026-10-25",
+    "last_checked": "2026-10-26",
     "evidence": [
       {
         "url": "https://www.openstreetmap.org/way/586533328",
@@ -9678,9 +9710,22 @@
         "checked": "2026-10-25",
         "kind": "independent",
         "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+      },
+      {
+        "url": "https://humayra.com.bd/product/baridhara-dohs-convention-center/",
+        "fields": [
+          "name",
+          "aliases",
+          "area",
+          "address",
+          "phones"
+        ],
+        "checked": "2026-10-26",
+        "kind": "independent",
+        "reuse": "Individual public business facts from a venue-specific third-party booking page; no copied descriptions, photos, ratings, reviews or restricted API data. Contact not call-tested."
       }
     ],
-    "notes": "OpenStreetMap listing, not operator-confirmed. Wedding booking, current operation and business contacts must be confirmed directly. The marker is the mapped building’s approximate center, not a verified entrance. No unambiguous public business number was available in this source. The map record was last edited 2025-07-28. The source was reviewed on 2026-10-25; that is not an on-site verification date. Audit update: the contacts above were subsequently found in the individually inspected public sources. Historical discovery notes describe the original map record. Numbers are published business contacts, not call-tested lines.",
+    "notes": "OpenStreetMap listing, not operator-confirmed. Wedding booking, current operation and business contacts must be confirmed directly. The marker is the mapped building’s approximate center, not a verified entrance. No unambiguous public business number was available in this source. The map record was last edited 2025-07-28. The source was reviewed on 2026-10-25; that is not an on-site verification date. Audit update: the contacts above were subsequently found in the individually inspected public sources. Historical discovery notes describe the original map record. Numbers are published business contacts, not call-tested lines. The Baridhara DOHS venue-specific booking page publishes three additional contacts, including two landlines; none were call-tested.",
     "discovery": {
       "source": "OpenStreetMap",
       "element_type": "way",
@@ -12049,5 +12094,191 @@
       "source": "https://nominatim.openstreetmap.org/reverse?lat=23.8646972&lon=90.3995238&format=jsonv2&zoom=18&addressdetails=1&accept-language=en",
       "reason": "Published business point and premises/road context reviewed against the OSM address hierarchy. Nearest-object name and differing geocoder street/postcode were not copied into the venue address."
     }
+  },
+  {
+    "id": "bd-dream-world-convention-center-zigatola",
+    "city": "Dhaka",
+    "name": "Dream World Convention Center",
+    "bn_name": null,
+    "aliases": [],
+    "category": "Convention Center",
+    "division": "6",
+    "district": "47",
+    "area": "Jigatola",
+    "address": "23/C Jigatola Main Road, Dhanmondi, Dhaka 1209",
+    "address_status": "published",
+    "coordinates": null,
+    "phones": [
+      {
+        "number": "+8801715659952",
+        "source": "https://humayra.com.bd/product/dream-world-convention-center/",
+        "checked": "2026-10-26",
+        "status": "published-not-call-tested"
+      },
+      {
+        "number": "+8801312408146",
+        "source": "https://humayra.com.bd/product/dream-world-convention-center/",
+        "checked": "2026-10-26",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": null,
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "source-checked",
+    "last_checked": "2026-10-26",
+    "evidence": [
+      {
+        "url": "https://humayra.com.bd/product/dream-world-convention-center/",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "address",
+          "phones"
+        ],
+        "checked": "2026-10-26",
+        "kind": "independent",
+        "reuse": "Individual public business facts from a venue-specific third-party booking page; no copied descriptions, photos, ratings, reviews or restricted API data. Contact not call-tested."
+      }
+    ],
+    "notes": "Venue-specific third-party booking page reviewed. Business contact has not been call-tested. Exact map position, current operation and operator ownership remain unconfirmed.",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Dream%20World%20Convention%20Center%2023/C%20Jigatola%20Main%20Road%2C%20Dhanmondi%2C%20Dhaka%201209"
+  },
+  {
+    "id": "bd-mardi-gras-convention-hall",
+    "city": "Dhaka",
+    "name": "Mardi Gras Convention Hall",
+    "bn_name": null,
+    "aliases": [],
+    "category": "Convention Center",
+    "division": "6",
+    "district": "47",
+    "area": "Shewrapara",
+    "address": "965 East Shewrapara, Mirpur, Dhaka 1216",
+    "address_status": "published",
+    "coordinates": null,
+    "phones": [
+      {
+        "number": "+8801921100914",
+        "source": "https://humayra.com.bd/product/mardi-gras-convention-hall/",
+        "checked": "2026-10-26",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": null,
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "source-checked",
+    "last_checked": "2026-10-26",
+    "evidence": [
+      {
+        "url": "https://humayra.com.bd/product/mardi-gras-convention-hall/",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "address",
+          "phones"
+        ],
+        "checked": "2026-10-26",
+        "kind": "independent",
+        "reuse": "Individual public business facts from a venue-specific third-party booking page; no copied descriptions, photos, ratings, reviews or restricted API data. Contact not call-tested."
+      }
+    ],
+    "notes": "Venue-specific third-party booking page reviewed. Business contact has not been call-tested. Exact map position, current operation and operator ownership remain unconfirmed.",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Mardi%20Gras%20Convention%20Hall%20965%20East%20Shewrapara%2C%20Mirpur%2C%20Dhaka%201216"
+  },
+  {
+    "id": "bd-nur-community-center-jatrabari",
+    "city": "Dhaka",
+    "name": "Nur Community Center",
+    "bn_name": null,
+    "aliases": [],
+    "category": "Community Center",
+    "division": "6",
+    "district": "47",
+    "area": "Jatrabari",
+    "address": "Near Bibir Bagicha Gate 1, Dhaka–Demra Highway, Dhaka 1204",
+    "address_status": "published",
+    "coordinates": null,
+    "phones": [
+      {
+        "number": "+8801933233635",
+        "source": "https://humayra.com.bd/product/nur-community-center/",
+        "checked": "2026-10-26",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": null,
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "source-checked",
+    "last_checked": "2026-10-26",
+    "evidence": [
+      {
+        "url": "https://humayra.com.bd/product/nur-community-center/",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "address",
+          "phones"
+        ],
+        "checked": "2026-10-26",
+        "kind": "independent",
+        "reuse": "Individual public business facts from a venue-specific third-party booking page; no copied descriptions, photos, ratings, reviews or restricted API data. Contact not call-tested."
+      }
+    ],
+    "notes": "Venue-specific third-party booking page reviewed. Business contact has not been call-tested. Exact map position, current operation and operator ownership remain unconfirmed.",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Nur%20Community%20Center%20Near%20Bibir%20Bagicha%20Gate%201%2C%20Dhaka%E2%80%93Demra%20Highway%2C%20Dhaka%201204"
+  },
+  {
+    "id": "bd-popeyes-plus-convention-hall",
+    "city": "Dhaka",
+    "name": "Popeyes Plus Convention Hall",
+    "bn_name": null,
+    "aliases": [],
+    "category": "Convention Center",
+    "division": "6",
+    "district": "47",
+    "area": "Mirpur",
+    "address": "Mirpur 12, Shagufta New Road, Mirpur DOHS, Dhaka 1216",
+    "address_status": "published",
+    "coordinates": null,
+    "phones": [
+      {
+        "number": "+8801921427273",
+        "source": "https://humayra.com.bd/product/popeyes-plus-convention-hall/",
+        "checked": "2026-10-26",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": null,
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "source-checked",
+    "last_checked": "2026-10-26",
+    "evidence": [
+      {
+        "url": "https://humayra.com.bd/product/popeyes-plus-convention-hall/",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "address",
+          "phones"
+        ],
+        "checked": "2026-10-26",
+        "kind": "independent",
+        "reuse": "Individual public business facts from a venue-specific third-party booking page; no copied descriptions, photos, ratings, reviews or restricted API data. Contact not call-tested."
+      }
+    ],
+    "notes": "Venue-specific third-party booking page reviewed. Business contact has not been call-tested. Exact map position, current operation and operator ownership remain unconfirmed.",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Popeyes%20Plus%20Convention%20Hall%20Mirpur%2012%2C%20Shagufta%20New%20Road%2C%20Mirpur%20DOHS%2C%20Dhaka%201216"
   }
 ]

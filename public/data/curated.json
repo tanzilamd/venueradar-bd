@@ -71,6 +71,34 @@
       "decision": "submitted-pending-verification",
       "basis": "Owner-supplied public business details; visibly marked user-submitted. Maps unavailable503; no independently verified or complete-address claim.",
       "checked": "2026-10-25"
+    },
+    {
+      "id": "bd-dream-world-convention-center-zigatola",
+      "decision": "admitted-source-checked",
+      "basis": "Venue-specific public booking page establishes the hall name, published address and business contact; no precise coordinates inferred.",
+      "source": "https://humayra.com.bd/product/dream-world-convention-center/",
+      "checked": "2026-10-26"
+    },
+    {
+      "id": "bd-mardi-gras-convention-hall",
+      "decision": "admitted-source-checked",
+      "basis": "Venue-specific public booking page establishes the hall name, published address and business contact; no precise coordinates inferred.",
+      "source": "https://humayra.com.bd/product/mardi-gras-convention-hall/",
+      "checked": "2026-10-26"
+    },
+    {
+      "id": "bd-nur-community-center-jatrabari",
+      "decision": "admitted-source-checked",
+      "basis": "Venue-specific public booking page establishes the hall name, published address and business contact; no precise coordinates inferred.",
+      "source": "https://humayra.com.bd/product/nur-community-center/",
+      "checked": "2026-10-26"
+    },
+    {
+      "id": "bd-popeyes-plus-convention-hall",
+      "decision": "admitted-source-checked",
+      "basis": "Venue-specific public booking page establishes the hall name, published address and business contact; no precise coordinates inferred.",
+      "source": "https://humayra.com.bd/product/popeyes-plus-convention-hall/",
+      "checked": "2026-10-26"
     }
   ],
   "conflicts": [
@@ -388,6 +416,14 @@
       "notice": "The business address publishes Khilkhet; OSM address hierarchy uses Dumni.",
       "source": "https://www.google.com/maps/place/The+Grand+Palace+Convention+Hall/@23.8341513,90.457869,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c9664425eb23:0x3d68ffb6b8960fc0!8m2!3d23.8341513!4d90.457869!16s%2Fg%2F11tk80k89_?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
       "decision": "Keep Khilkhet as the explicit published browsing locality; preserve Dumni hierarchy in the area review. No claim of a surveyed neighborhood boundary."
+    },
+    {
+      "id": "bd-osm-node-11993640298",
+      "field": "address",
+      "checked": "2026-10-26",
+      "notice": "Established mapped address says 63/7 Kamal Soroni; venue-specific booking page says 636/7 Kamal Soroni.",
+      "source": "https://humayra.com.bd/product/efa-convention-center/",
+      "decision": "Retain the established address. The new business phone is independently published for the matched hall; premises-number conflict requires further operator confirmation."
     }
   ],
   "research_status": {

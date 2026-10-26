@@ -93,7 +93,8 @@
       },
       "review_notice": "A matching public business profile reports this venue permanently closed. The historic record and contacts are retained; confirm current availability directly before planning a visit.",
       "maps_url": "https://www.google.com/maps/search/?api=1&query=Angan%20Community%20Centre%20Mohammadpur%20Dhaka%20Bangladesh"
-    }
+    },
+    "closure_status": "reported-permanently-closed"
   },
   {
     "removed_at": "2026-10-25",
@@ -192,7 +193,8 @@
       },
       "review_notice": "A matching public business profile reports this venue permanently closed. Historic contact information is retained; confirm current availability directly before planning a visit.",
       "maps_url": "https://www.google.com/maps/search/?api=1&query=Talukdar%20Convention%20Center%20Bakshibazar%20Dhaka%20Bangladesh"
-    }
+    },
+    "closure_status": "reported-permanently-closed"
   },
   {
     "removed_at": "2026-10-25",
@@ -286,7 +288,8 @@
         "checked": "2026-10-25",
         "note": "A booking contact could not be safely matched to this venue. Identity or venue use needs confirmation; unrelated contacts were not reused."
       }
-    }
+    },
+    "closure_status": "reported-permanently-closed"
   },
   {
     "removed_at": "2026-10-25",
@@ -385,7 +388,8 @@
         "checked": "2026-10-25",
         "note": "A booking contact could not be safely matched to this venue. Identity or venue use needs confirmation; unrelated contacts were not reused."
       }
-    }
+    },
+    "closure_status": "reported-permanently-closed"
   },
   {
     "removed_at": "2026-10-25",
@@ -460,7 +464,8 @@
         "checked": "2026-10-25",
         "note": "No usable business phone was found in the checked public sources. The Maps listing or operator may have newer information."
       }
-    }
+    },
+    "closure_status": "reported-permanently-closed"
   },
   {
     "removed_at": "2026-10-25",
@@ -550,7 +555,8 @@
         "checked": "2026-10-25",
         "note": "No usable business phone was found in the checked public sources. The Maps listing or operator may have newer information."
       }
-    }
+    },
+    "closure_status": "reported-permanently-closed"
   },
   {
     "removed_at": "2026-10-25",
@@ -659,6 +665,7 @@
       },
       "review_notice": "Closure reported: the matched Spectra Convention Centre listing is marked permanently closed. Confirm any current operator before planning a visit.",
       "maps_url": "https://www.google.com/maps/search/?api=1&query=Spectra%20Convention%20Centre%20Gulshan%20Dhaka"
-    }
+    },
+    "closure_status": "reported-permanently-closed"
   }
 ]

@@ -292,6 +292,10 @@
     {
       "id": "73",
       "name": "Kajla"
+    },
+    {
+      "id": "74",
+      "name": "Shewrapara"
     }
   ],
   "priority": [
@@ -347,6 +351,7 @@
       "Agargaon",
       "Bawnia",
       "Dhaka Cantonment",
+      "Shewrapara",
       "Shyamoli"
     ],
     "Dhanmondi": [
@@ -436,6 +441,7 @@
     "Agargaon": [
       "Farmgate",
       "Mirpur",
+      "Shewrapara",
       "Shyamoli",
       "Tejgaon"
     ],
@@ -775,6 +781,10 @@
       "Dania",
       "Dhalpur",
       "Jatrabari"
+    ],
+    "Shewrapara": [
+      "Agargaon",
+      "Mirpur"
     ]
   },
   "groups": {
