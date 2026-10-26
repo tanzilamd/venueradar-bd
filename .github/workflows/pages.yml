@@ -40,6 +40,7 @@ jobs:
   verify-live:
     needs: deploy
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     permissions:
       contents: read
     steps:
@@ -51,7 +52,12 @@ jobs:
           node-version: '24'
           cache: npm
       - run: npm ci
-      - run: npx playwright install --with-deps chromium
+      - name: Use Chrome installed on the hosted runner
+        run: |
+          chrome_path="$(command -v google-chrome || command -v google-chrome-stable)"
+          test -n "$chrome_path"
+          "$chrome_path" --version
+          echo "CHROMIUM_PATH=$chrome_path" >> "$GITHUB_ENV"
       - name: Verify the deployed website in a real browser
         env:
           LIVE_SITE_URL: https://tanzilahmed.tech/venueradar-bd/
