@@ -1,4 +1,5 @@
 import "./style.css";
+import "./workspace.css";
 import { filterVenues, sizeOf, hasCapacity, capacityText, readIds, mapsURL } from "./model.js";
 import { defaultFilters, readURL, stateURL } from "./state.js";
 import { filterPanel, areaCounts, areaNames, groupNames, nearbyNames } from "./filters.js";
@@ -7,6 +8,10 @@ let venues = [], areas, collections, results = [], favorites = [], compare = [],
 let state = { tab: "explore", filters: defaultFilters("explore"), view: "list", detailId: null, sharedIds: [] };
 const contexts = { explore: { filters: defaultFilters("explore"), view: "list" }, saved: { filters: defaultFilters("saved"), view: "list" }, shared: { filters: defaultFilters("shared"), view: "list" } };
 let storage = null, storageWorks = true, modalKind = null, returnFocus = null, undo = null, searchTimer = null, loading = false;
+let previewMap = null, previewMapLoading = null, previewMapWanted = false, previewMapError = false;
+const previewMapNode = el("div", null, "inspector-map");
+previewMapNode.id = "inspectorMap";
+previewMapNode.setAttribute("aria-label", "Selected hall location map");
 try {
   storage = window.localStorage;
 } catch {
@@ -106,9 +111,15 @@ $("dialog").addEventListener("cancel", (e) => {
   e.preventDefault();
   closeDialog();
 });
+$("dialog").addEventListener("click", (event) => {
+  if (event.target !== $("dialog")) return;
+  const bounds = $("dialog").getBoundingClientRect();
+  if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) closeDialog();
+});
 function openModal(content, kind) {
   if (!$("dialog").open) returnFocus = document.activeElement;
   modalKind = kind;
+  $("dialog").dataset.kind = kind;
   $("dialogContent").replaceChildren(content);
   if (!$("dialog").open) $("dialog").showModal();
   $("dialog").querySelector(".close").focus({ preventScroll: true });
@@ -181,11 +192,13 @@ function syncCompare() {
   $("openCompare").disabled = compare.length < 2;
   $("openCompare").textContent = compare.length < 2 ? "Select one more" : `Compare ${compare.length} venues`;
   $("savedCount").textContent = String(favorites.length);
+  $("navCompareCount").textContent = String(compare.length);
   requestAnimationFrame(() => document.documentElement.style.setProperty("--tray-height", compare.length ? `${bar.getBoundingClientRect().height + 25}px` : "0px"));
 }
 function renderAreas() {
   const focus = document.activeElement?.dataset?.areaChoice, scoped = scopeRows(state.filters);
   $("priorityAreas").replaceChildren();
+  $("allAreas").setAttribute("aria-pressed", String(!state.filters.area));
   for (const area of areas.priority || []) {
     const c = areaCounts(scoped, area, areas);
     const b = button("", () => changeFilters({ ...state.filters, area, search: "" }), "area-choice");
@@ -235,32 +248,122 @@ function areaContext() {
 function card(v) {
   const c = el("article", null, "card" + (v.id === selected ? " selected" : ""));
   c.dataset.venue = v.id;
+  c.addEventListener("click", (event) => {
+    if (!event.target.closest("a, button")) previewVenue(v);
+  });
   const head = el("div", null, "card-head"), identity = el("div");
   const place = el("p", null, "card-location");
   if (state.filters.area && !groupNames(state.filters.area, areas).includes(v.area)) place.append(el("span", "Nearby", "nearby-tag"));
   place.append(el("span", v.area || "Dhaka · area to confirm"));
-  identity.append(place, el("h3", displayName(v)));
+  const title = el("h3");
+  const preview = button(displayName(v), () => previewVenue(v), "venue-name");
+  preview.dataset.action = "preview";
+  title.append(preview);
+  identity.append(place, title);
   const star = withIcon(button(favorites.includes(v.id) ? "Saved" : "Save", () => save(v), "save"), "save");
   star.setAttribute("aria-label", `${displayName(v)} · ${favorites.includes(v.id) ? "remove from saved" : "save venue"}`);
   star.setAttribute("aria-pressed", String(favorites.includes(v.id)));
-  head.append(identity, star);
+  star.dataset.action = "save";
+  star.title = favorites.includes(v.id) ? "Remove from Saved" : "Save hall";
+  head.append(identity);
+  identity.append(el("p", v.address_status === "not_available" ? "Use the map to check the address." : v.address, "card-address"));
+  if (v.distance != null) identity.append(el("p", `${v.distance.toFixed(1)} km · straight-line`, "card-distance"));
+  if (v.review_notice) identity.append(el("p", v.verification === "user-submitted" ? "Submitted · confirmation pending" : "Details need confirmation", "listing-note"));
   c.append(head);
-  c.append(el("p", v.address_status === "not_available" ? "Use the map to check the address." : v.address, "card-address"));
-  if (v.distance != null) c.append(el("p", `${v.distance.toFixed(1)} km · straight-line`, "card-distance"));
-  if (v.review_notice) c.append(el("p", v.verification === "user-submitted" ? "Submitted · confirmation pending" : "Details need confirmation", "listing-note"));
   const actions = el("div", null, "card-actions");
   if (v.phones.length) actions.append(withIcon(phoneLink(v.phones[0], v.phones[0].number.replace(/^\+880/, "0"), "primary"), "phone"));
   else actions.append(el("span", "Phone unavailable", "phone-missing"));
   actions.append(withIcon(external("Map", mapsURL(v)), "pin"));
-  const details = button("Details", () => detail(v));
+  const details = withIcon(button("Details", () => detail(v), "row-details"), "details");
+  details.setAttribute("aria-label", "Details");
+  details.title = "All contacts and details";
   details.dataset.action = "details";
   actions.append(details);
-  const compareButton = button(compare.includes(v.id) ? "Selected" : "Compare", () => toggleCompare(v), "compare-toggle text-button");
+  const compareButton = withIcon(button(compare.includes(v.id) ? "Selected" : "Compare", () => toggleCompare(v), "compare-toggle"), "compare");
   compareButton.setAttribute("aria-label", `${compare.includes(v.id) ? "Selected" : "Compare"} ${displayName(v)}; ${compare.includes(v.id) ? "remove from" : "add to"} comparison`);
   compareButton.setAttribute("aria-pressed", String(compare.includes(v.id)));
-  actions.append(compareButton);
+  compareButton.dataset.action = "compare";
+  compareButton.title = compare.includes(v.id) ? "Remove from comparison" : "Add to comparison";
+  actions.append(compareButton, star);
   c.append(actions);
   return c;
+}
+function previewVenue(v) {
+  if (window.innerWidth < 1100 || state.view === "map") return detail(v);
+  selected = v.id;
+  previewMapWanted = true;
+  $("selectionAnnouncement").textContent = `${displayName(v)} selected. Contact details are shown beside the list.`;
+  document.querySelectorAll(".card").forEach((n) => n.classList.toggle("selected", n.dataset.venue === v.id));
+  renderInspector();
+}
+function renderInspector() {
+  const box = $("venueInspector");
+  const focusAction = box.contains(document.activeElement) ? document.activeElement.dataset.inspectorAction : null;
+  const v = results.find((row) => row.id === selected);
+  box.hidden = window.innerWidth < 1100 || state.view !== "list" || !v;
+  box.replaceChildren();
+  if (box.hidden) return;
+  const location = el("div", null, "inspector-location-wrap");
+  if (v.coordinates && previewMapWanted) {
+    location.append(previewMapNode);
+    if (!previewMap) location.append(el("p", "Loading location…", "inspector-map-message"));
+    if (previewMapError) location.append(el("p", "Map unavailable. Use Google Maps below.", "inspector-map-message"));
+    ensurePreviewMap();
+  } else {
+    const loadMap = withIcon(button(v.coordinates ? "Show location map" : "Check location on Google Maps", () => {
+      if (!v.coordinates) return window.open(mapsURL(v), "_blank", "noopener,noreferrer");
+      previewMapWanted = true;
+      renderInspector();
+    }, "inspector-location"), "pin");
+    loadMap.append(el("span", v.area || "Dhaka", "inspector-map-area"));
+    location.append(loadMap);
+  }
+  box.append(location, el("p", "SELECTED HALL", "inspector-eyebrow"), el("h2", displayName(v)), el("span", v.area || "Dhaka", "zone-pill"));
+  box.append(withIcon(el("p", v.address_status === "not_available" ? "Check the location on Google Maps." : v.address, "inspector-address"), "pin"));
+  if (v.review_notice) box.append(el("p", v.review_notice, "review-notice"));
+  const contacts = el("div", null, "inspector-contacts");
+  for (const p of v.phones) {
+    contacts.append(withIcon(phoneLink(p, undefined, "primary"), "phone"));
+    if (p.status === "submitted-not-verified") contacts.append(el("small", "Owner supplied · confirm directly", "hint"));
+  }
+  if (!v.phones.length) contacts.append(el("p", "Phone unavailable", "phone-missing"));
+  contacts.append(withIcon(external("Open in Google Maps", mapsURL(v), "inspector-maps"), "pin"));
+  box.append(contacts);
+  const actions = el("div", null, "inspector-actions");
+  const saved = withIcon(button(favorites.includes(v.id) ? "Saved" : "Save", () => save(v)), "save");
+  saved.dataset.inspectorAction = "save";
+  saved.setAttribute("aria-pressed", String(favorites.includes(v.id)));
+  const comparison = withIcon(button(compare.includes(v.id) ? "Selected" : "Compare", () => toggleCompare(v)), "compare");
+  comparison.dataset.inspectorAction = "compare";
+  comparison.setAttribute("aria-pressed", String(compare.includes(v.id)));
+  actions.append(saved, comparison);
+  box.append(actions, button("More details & contacts", () => detail(v), "inspector-more"));
+  if (focusAction) box.querySelector(`[data-inspector-action="${focusAction}"]`)?.focus({ preventScroll: true });
+}
+async function ensurePreviewMap() {
+  if (previewMapLoading) return previewMapLoading;
+  previewMapLoading = (async () => {
+    try {
+      if (!mapPromise) mapPromise = import("./map.js");
+      const module = await mapPromise;
+      const v = results.find((row) => row.id === selected);
+      if (!v?.coordinates || $("venueInspector").hidden) return;
+      if (!previewMap) previewMap = module.createLocationPreview(previewMapNode, () => {
+        previewMapError = true;
+        if (!$("venueInspector").querySelector(".inspector-map-message")) {
+          previewMapNode.after(el("p", "Map unavailable. Use Google Maps below.", "inspector-map-message"));
+        }
+      });
+      previewMap.setVenue(v);
+      if (!previewMapError) $("venueInspector").querySelector(".inspector-map-message")?.remove();
+    } catch {
+      previewMapError = true;
+      const message = $("venueInspector").querySelector(".inspector-map-message");
+      if (message) message.textContent = "Map unavailable. Use Google Maps below.";
+    }
+  })();
+  await previewMapLoading;
+  previewMapLoading = null;
 }
 function emptyState() {
   const box = el("section", null, "empty"), f = state.filters;
@@ -306,6 +409,7 @@ function render() {
     results.sort((a, b) => Number(!!a.review_notice) - Number(!!b.review_notice) || Number(!own.includes(a.area)) - Number(!own.includes(b.area)));
   }
   if (selected && !results.some((v) => v.id === selected)) selected = null;
+  if (!selected && state.view === "list" && window.innerWidth >= 1100) selected = results[0]?.id || null;
   $("search").value = state.filters.search;
   $("clearSearch").hidden = !state.filters.search;
   $("sort").value = state.filters.sort;
@@ -322,6 +426,7 @@ function render() {
   activeChips();
   areaContext();
   renderCards();
+  renderInspector();
   syncCompare();
   $("directory").classList.toggle("map-mode", state.view === "map");
   $("mapWrap").hidden = state.view !== "map";
@@ -353,13 +458,16 @@ function detail(v, { write = true } = {}) {
     syncURL("push", true);
   }
   selected = v.id;
+  renderInspector();
   document.querySelectorAll(".card").forEach((n) => n.classList.toggle("selected", n.dataset.venue === v.id));
   mapController?.select(v.id, { zoom: state.view === "map" });
   const box = el("article", null, "venue-detail");
   box.append(el("p", v.area || "Dhaka", "detail-topline"), heading(displayName(v)));
   if (v.review_notice) box.append(el("p", v.review_notice, "review-notice"));
+  box.append(withIcon(el("p", v.address_status === "not_available" ? "Street address unavailable. Check the location on Google Maps." : v.address, "detail-location-summary"), "pin"));
   const actions = el("div", null, "detail-actions");
-  if (v.phones.length) actions.append(withIcon(phoneLink(v.phones[0], "Call venue", "primary"), "phone"));
+  if (v.phones.length) actions.append(withIcon(phoneLink(v.phones[0], undefined, "primary"), "phone"));
+  else box.append(el("p", "Phone unavailable. Check the venue's current Maps listing.", "phone-missing"));
   actions.append(withIcon(external("Google Maps", mapsURL(v), "maps-action"), "pin"));
   const saveButton = withIcon(button(favorites.includes(v.id) ? "Saved" : "Save", () => {
     save(v);
@@ -367,10 +475,16 @@ function detail(v, { write = true } = {}) {
     saveButton.setAttribute("aria-pressed", String(favorites.includes(v.id)));
   }), "save");
   saveButton.setAttribute("aria-pressed", String(favorites.includes(v.id)));
-  actions.append(saveButton, button("Copy venue link", () => shareVenue(v, box)));
+  actions.append(saveButton, withIcon(button(compare.includes(v.id) ? "Selected" : "Compare", () => {
+    toggleCompare(v);
+    detail(v, { write: false });
+  }), "compare"));
   box.append(actions);
+  if (v.phones[0]?.status === "submitted-not-verified") box.append(el("p", "Owner supplied · confirm directly", "hint"));
+  const extras = el("details", null, "detail-extras");
+  extras.open = window.innerWidth > 720;
+  extras.append(el("summary", v.phones.length > 1 ? `${v.phones.length} phone numbers & more options` : "More contacts & options"));
   const address = el("section", null, "address-block");
-  address.append(el("h3", "Location"), el("p", v.address_status === "not_available" ? "Street address unavailable. Check the location on Google Maps." : v.address));
   if (v.address_status !== "not_available") address.append(button("Copy address", () => copyText(v.address, "Address", address), "text-button"));
   if (v.coordinates) address.append(button("Show on directory map", () => {
     state.detailId = null;
@@ -386,7 +500,8 @@ function detail(v, { write = true } = {}) {
     render();
     ensureMap().then(() => selectOnMap(v.id, true));
   }, "text-button"));
-  box.append(address, el("h3", "Phone numbers"));
+  address.append(button("Copy venue link", () => shareVenue(v, extras), "text-button"));
+  extras.append(address, el("h3", "Phone numbers"));
   if (v.phones.length) {
     const list = el("ul", null, "contact-list");
     for (const p of v.phones) {
@@ -395,11 +510,12 @@ function detail(v, { write = true } = {}) {
       if (p.status === "submitted-not-verified") item.append(el("small", "Owner supplied · confirm directly", "hint"));
       list.append(item);
     }
-    box.append(list);
-  } else box.append(el("p", "Phone unavailable in the checked sources. The business may publish newer details on its Maps listing.", "quiet"));
-  if (v.website) box.append(external("Visit website", v.website));
-  box.append(el("p", "Check current ratings and reviews on Google Maps.", "hint"));
-  box.append(external("Suggest a correction", correctionURL(v), "text-button"));
+    extras.append(list);
+  } else extras.append(el("p", "Phone unavailable in the checked sources. The business may publish newer details on its Maps listing.", "quiet"));
+  if (v.website) extras.append(external("Visit website", v.website));
+  extras.append(el("p", "Check current ratings and reviews on Google Maps.", "hint"));
+  extras.append(external("Suggest a correction", correctionURL(v), "text-button"));
+  box.append(extras);
   openModal(box, "detail");
 }
 function compareView() {
@@ -410,7 +526,7 @@ function compareView() {
     return;
   }
   const box = el("section");
-  box.append(heading("Compare your venues"), el("p", "Check the facts side by side. Unknown information does not mean a facility is unavailable.", "hint"), el("p", "Swipe or scroll the table horizontally to see every venue.", "compare-scroll-hint"));
+  box.append(heading("Compare your venues"), el("p", "Compare locations and contacts, then confirm booking details directly.", "hint"), el("p", "Swipe or scroll the table horizontally to see every venue.", "compare-scroll-hint"));
   const wrap = el("div", null, "table-wrap");
   wrap.tabIndex = 0;
   wrap.setAttribute("role", "region");
@@ -553,7 +669,10 @@ function openFilters() {
     draftPanel.set(next, scopeRows(next));
     $("applyFilters").textContent = `Show ${filtered(next).length} venues`;
   }, onLocate: () => {
-    notify("Apply your filters first, then use Near me.");
+    changeFilters(draft);
+    $("filterDialog").close();
+    $("mobileFilters").focus();
+    locate();
   } });
   fieldset.append(draftPanel.node);
   $("applyFilters").textContent = `Show ${filtered(draft).length} venues`;
@@ -613,6 +732,7 @@ $("mapView").onclick = () => setView("map");
 $("fitMap").onclick = () => mapController?.fit();
 $("mapListFallback").onclick = () => setView("list");
 $("openCompare").onclick = compareView;
+$("navCompare").onclick = () => compare.length >= 2 ? compareView() : notify("Select two or three halls using their Compare buttons.");
 $("clearCompare").onclick = () => {
   compare = [];
   persist("vr-compare", compare);
@@ -620,8 +740,21 @@ $("clearCompare").onclick = () => {
 };
 const shareButton = button("Share search", shareCurrent, "text-button share-search");
 shareButton.id = "shareSearch";
-document.querySelector(".result-controls").insertBefore(shareButton, document.querySelector(".result-controls label"));
+document.querySelector(".result-controls").append(shareButton);
 $("searchIcon").append(icon("search"));
+withIcon($("saved"), "save");
+withIcon($("navCompare"), "compare");
+const searchRow = document.querySelector(".search-row");
+const desktopQuery = window.matchMedia("(min-width: 1100px)");
+function adaptWorkspace() {
+  (desktopQuery.matches ? $("headerSearchDock") : $("discoverySearchDock")).append(searchRow);
+  if (ready) {
+    if (!selected && desktopQuery.matches && state.view === "list") selected = results[0]?.id || null;
+    renderInspector();
+  }
+}
+desktopQuery.addEventListener("change", adaptWorkspace);
+adaptWorkspace();
 window.addEventListener("popstate", () => {
   if (!ready) return;
   remember();

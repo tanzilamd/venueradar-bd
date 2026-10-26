@@ -1,5 +1,11 @@
 # Changelog
 
+## Clean Workspace interface — 26 October 2026
+- Implement the selected compact list design, dark-green search/navigation and self-hosted Inter typography.
+- Add a selected-hall contact panel with an on-demand real location map, and compact mobile detail sheets with additional options available on demand.
+- Preserve area/nearby discovery, phone/map actions, Saved, Compare and the owner manager; make Near me usable directly from mobile filters.
+- Preserve the complete venue dataset. Add workspace regression checks, safe text-only Leaflet labels and deployed-browser verification for the new layout and font.
+
 ## Additional Dhaka halls and consistent nearby areas — 26 October 2026
 - Add six individually reviewed dedicated halls with sourced phones and map positions; preserve all 129 prior records and contacts. Active directory: 135 records, including 127 halls/centers and eight separately grouped hotels.
 - Align Ananda and Jonaki under the broader Paltan browsing zone while preserving the Naya Paltan address. Connect nearby Naya Paltan/Motijheel both ways, make nearby relationships reciprocal, and keep shared-zone neighbors consistent.

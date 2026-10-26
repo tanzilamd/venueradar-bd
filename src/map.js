@@ -31,7 +31,9 @@ export function createMap(container, { onSelect, onError }) {
     markers.clear();
     for (const v of rows.filter((v2) => v2.coordinates)) {
       const marker = L.marker([v.coordinates.lat, v.coordinates.lon], { icon: icon(v.id === selected), title: v.name, alt: v.name, keyboard: true });
-      marker.bindTooltip(v.name, { direction: "top" });
+      const label = document.createElement("span");
+      label.textContent = v.name;
+      marker.bindTooltip(label, { direction: "top" });
       marker.on("click", () => onSelect(v.id));
       clusters.addLayer(marker);
       markers.set(v.id, marker);
@@ -55,4 +57,32 @@ export function createMap(container, { onSelect, onError }) {
   return { setResults, select, fit, invalidate() {
     requestAnimationFrame(() => map.invalidateSize());
   } };
+}
+
+// One lazy, reusable map for the selected hall; no tiles are prefetched.
+export function createLocationPreview(container, onError) {
+  const map = L.map(container, { scrollWheelZoom: false, zoomControl: false, dragging: false, doubleClickZoom: false, touchZoom: false, keyboard: false });
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+    attribution: '\u00a9 <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).on("tileerror", onError).addTo(map);
+  let marker = null, position = "";
+  return {
+    setVenue(v) {
+      const next = `${v.coordinates.lat},${v.coordinates.lon}`;
+      if (next !== position) {
+        position = next;
+        if (marker) marker.remove();
+        const label = document.createElement("span");
+        label.textContent = v.name;
+        marker = L.marker([v.coordinates.lat, v.coordinates.lon], {
+          icon: L.divIcon({ html: '<span class="map-pin"></span>', className: "venue-marker", iconSize: [36, 36], iconAnchor: [18, 18] }),
+          title: v.name,
+          alt: v.name
+        }).bindTooltip(label).addTo(map);
+        map.setView([v.coordinates.lat, v.coordinates.lon], 15);
+      }
+      requestAnimationFrame(() => map.invalidateSize());
+    }
+  };
 }

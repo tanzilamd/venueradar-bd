@@ -1,0 +1,292 @@
+/* Public directory theme. The owner manager continues to use the shared base. */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("/fonts/inter-latin.woff2") format("woff2");
+}
+.directory-page {
+  --green: #104d40;
+  --ink: #142124;
+  --muted: #59666a;
+  --paper: #f8fafb;
+  --surface: #ffffff;
+  --line: #e5eaec;
+  --soft: #edf4f1;
+  --accent: #d99b74;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+  color: var(--ink);
+  background: var(--paper);
+}
+.directory-page .site-header {
+  background: #104b3e;
+  border: 0;
+  min-height: 76px;
+  padding: 12px max(28px, calc((100vw - 1540px) / 2));
+  gap: 28px;
+}
+.directory-page .brand { color: #fff; font-size: 20px; font-weight: 700; gap: 10px; letter-spacing: -.5px; }
+.directory-page .brand b { color: #e2a27b; }
+.directory-page .brand small { display: none; }
+.directory-page .brandmark { background: none; width: 32px; height: 40px; font-family: inherit; font-size: 27px; letter-spacing: -6px; font-weight: 500; }
+.directory-page .brandmark span { font-size: 23px; padding-top: 4px; }
+.directory-page .site-header nav { gap: 8px; flex-shrink: 0; }
+.directory-page .site-header nav button { color: #eaf2ee; display: inline-flex; align-items: center; gap: 6px; font-size: 13px; padding: 10px 8px; min-width: 0; border-radius: 0; }
+.directory-page .site-header nav button:hover { background: #ffffff12; }
+.directory-page .site-header nav [aria-current="page"] { background: transparent; box-shadow: inset 0 -2px #c1dbcb; color: #fff; }
+.directory-page #savedCount, .directory-page #navCompareCount { font-size: 11px; min-width: 13px; color: #d9e9df; }
+.directory-page #headerSearchDock { flex: 1; max-width: 670px; min-width: 0; }
+.directory-page #headerSearchDock .search-row { grid-template-columns: minmax(170px, 1fr) 165px; gap: 12px; }
+.directory-page #headerSearchDock label { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); }
+.directory-page #headerSearchDock #search, .directory-page #headerSearchDock .area-control input { height: 44px; min-height: 44px; background: #fbfdfc; border-color: transparent; font-size: 13px; }
+.directory-page #headerSearchDock .area-control input { padding-right: 24px; }
+.directory-page #headerSearchDock .area-options { min-width: 280px; right: 0; left: auto; }
+.directory-page .search-input > span { left: 12px; }
+.directory-page #search { padding-left: 39px; }
+.directory-page main { max-width: 1540px; padding: 28px 36px 20px; }
+.directory-page .intro { margin-bottom: 20px; align-items: center; }
+.directory-page .intro .eyebrow { display: none; }
+.directory-page h1 { font: 750 clamp(30px, 2.7vw, 38px)/1.14 "Inter", "Segoe UI", Arial, sans-serif; letter-spacing: -1.5px; }
+.directory-page .intro-note { display: none; }
+.directory-page #discoverySearchDock:empty { display: none; }
+.directory-page .area-explorer { display: flex; align-items: center; gap: 9px; margin: 0 0 22px; }
+.directory-page .area-chips { display: flex; gap: 9px; flex-wrap: wrap; }
+.directory-page .area-choice, .directory-page #allAreas { border: 1px solid #e9eef0; background: #f0f3f5; color: #35464b; border-radius: 10px; padding: 11px 19px; font-size: 13px; min-height: 44px; margin: 0; }
+.directory-page .area-choice strong { font-weight: 500; }
+.directory-page .area-choice small { display: none; }
+.directory-page .area-choice[aria-pressed="true"], .directory-page #allAreas[aria-pressed="true"] { background: var(--green); color: white; border-color: var(--green); }
+.directory-page .workspace { display: block; border: 0; padding: 0; }
+.directory-page .filters { display: flex; align-items: center; justify-content: space-between; border: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 8px 0; margin-bottom: 16px; position: static; }
+.directory-page .filter-heading { order: 2; margin: 0 0 0 16px; }
+.directory-page .filter-heading h2 { display: none; }
+.directory-page .filter-heading button { font-size: 12px; text-decoration: none; color: var(--muted); }
+.directory-page #filterFields { flex: 1; min-width: 0; }
+.directory-page #filterFields .filter-fields { display: flex; gap: 24px; align-items: center; }
+.directory-page #filterFields .field { display: flex; align-items: center; gap: 8px; margin: 0; }
+.directory-page #filterFields .field label { font-size: 12px; margin: 0; color: var(--muted); }
+.directory-page #filterFields .field select { font-size: 12px; min-height: 40px; padding: 7px 28px 7px 10px; width: 156px; border-color: var(--line); background: white; }
+.directory-page #filterFields .check { margin: 0; padding: 0; font-size: 12px; gap: 8px; }
+.directory-page #filterFields .hint { display: none; }
+.directory-page #filterFields .nearby { margin: 0 0 0 auto; font-size: 12px; border: 1px solid var(--line); background: white; width: auto; padding: 8px 13px; min-height: 40px; }
+.directory-page .results-top { align-items: center; margin: 0; }
+.directory-page .results-top h2 { font-size: 18px; letter-spacing: -.3px; }
+.directory-page #breadcrumb { font-size: 10px; letter-spacing: 1px; margin-bottom: 4px; }
+.directory-page .result-actions { gap: 9px; }
+.directory-page .view-switch { border-color: var(--line); border-radius: 8px; background: white; }
+.directory-page .view-switch button { min-height: 38px; padding: 7px 14px; font-size: 12px; }
+.directory-page .coverage-summary { font-size: 12px; color: var(--muted); margin: 5px 0 0; }
+.directory-page .result-meta { display: flex; justify-content: space-between; align-items: center; margin: 3px 0 14px; min-height: 22px; gap: 12px; }
+.directory-page .result-controls { margin: 0; justify-content: flex-end; gap: 20px; }
+.directory-page .result-context { display: none; }
+.directory-page .share-search { font-size: 11px; min-height: 24px; text-decoration: none; padding: 0; }
+.directory-page .result-controls label { font-size: 12px; }
+.directory-page #sort { background: white; font-size: 12px; min-height: 38px; width: 144px; border-color: var(--line); }
+.directory-page .active-filters { margin-top: 10px; }
+.directory-page .active-filters:empty { display: none; }
+.directory-page .filter-chip { font-size: 11px; min-height: 32px; padding: 5px 9px; border-radius: 6px; }
+.directory-page .area-context { background: #f0f5f2; border: 0; border-radius: 7px; padding: 10px 13px; font-size: 12px; margin-top: 12px; }
+.directory-page .area-context p { margin: 0; }
+.directory-page .area-context .nearby-list { font-size: 11px; margin-top: 3px; }
+.directory-page .venue-workspace { display: grid; grid-template-columns: minmax(0, 1fr) 304px; align-items: start; gap: 28px; }
+.directory-page .venue-workspace:has(.venue-inspector[hidden]) { grid-template-columns: minmax(0, 1fr); }
+.directory-page .venue-columns { display: grid; grid-template-columns: minmax(0, 1fr) 100px 322px; padding: 12px 18px; gap: 16px; border-bottom: 1px solid var(--line); font-size: 11px; font-weight: 550; color: #59676c; }
+.directory-page #results { background: #fff; border: 1px solid var(--line); border-top: 0; border-radius: 0 0 9px 9px; }
+.directory-page .card { display: grid; grid-template-columns: minmax(0, 1fr) 100px 322px; position: relative; padding: 20px 18px; gap: 3px 16px; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; margin: 0; box-shadow: none; background: white; min-height: 102px; }
+.directory-page .card:last-child { border-bottom: 0; border-radius: 0 0 9px 9px; }
+.directory-page .card.selected { background: #edf6f1; box-shadow: inset 3px 0 #2a735f; }
+.directory-page .card:not(.selected):hover { background: #fafcfb; }
+.directory-page .card-head, .directory-page .card-head > div { display: contents; }
+.directory-page .card h3 { grid-column: 1; grid-row: 1; font-size: 16px; font-family: inherit; font-weight: 680; line-height: 1.4; margin: 0; align-self: end; }
+.directory-page .venue-name { display: block; text-align: left; font: inherit; color: var(--ink); border: 0; padding: 0; min-height: 24px; background: transparent; letter-spacing: -.25px; }
+.directory-page .venue-name:hover { color: var(--green); text-decoration: underline; text-underline-offset: 3px; background: none; }
+.directory-page .card-location { grid-column: 2; grid-row: 1 / span 2; margin: 0; align-self: center; font-size: 11px; font-weight: 500; letter-spacing: 0; display: flex; gap: 4px; flex-wrap: wrap; }
+.directory-page .card-location > span:not(.nearby-tag), .directory-page .zone-pill { display: inline-block; border-radius: 6px; background: #edf1f3; color: #405057; padding: 5px 9px; line-height: 1.2; font-size: 11px; }
+.directory-page .card-location > span { max-width: 100%; overflow-wrap: anywhere; }
+.directory-page .card.selected .card-location > span:not(.nearby-tag) { background: #e1eee8; color: #275646; }
+.directory-page .nearby-tag { font-size: 10px; color: #647774; background: transparent; padding: 0; }
+.directory-page .card-address { grid-column: 1; grid-row: 2; color: #59696f; font-size: 12px; line-height: 1.5; margin: 2px 0 0; max-width: none; align-self: start; }
+.directory-page .card-distance, .directory-page .listing-note { grid-column: 1; font-size: 10px; line-height: 1.4; margin: 3px 0 0; }
+.directory-page .card .save { position: static; transform: none; width: 34px; min-width: 34px; height: 44px; min-height: 44px; font-size: 0; display: inline-flex; align-items: center; justify-content: center; padding: 0; border: 0; background: none; }
+.directory-page .card .save[aria-pressed="true"] { color: var(--green); background: #dcece3; border-radius: 6px; }
+.directory-page .card .save .icon { width: 17px; height: 17px; }
+.directory-page .card-actions { grid-column: 3; grid-row: 1 / span 4; align-self: center; display: flex; gap: 5px; border: 0; margin: 0; padding: 0; flex-wrap: nowrap; }
+.directory-page .card-actions > a, .directory-page .card-actions > button { min-height: 38px; border-radius: 7px; padding: 7px 9px; font-size: 12px; display: inline-flex; gap: 5px; align-items: center; justify-content: center; text-decoration: none; border-color: #e9edf0; background: #f2f5f6; white-space: nowrap; }
+.directory-page .card-actions .primary { background: var(--green); border-color: var(--green); color: white; font-weight: 600; font-size: 13px; letter-spacing: 0; font-variant-numeric: tabular-nums; }
+.directory-page .card-actions .primary .icon { width: 14px; height: 14px; flex-basis: 14px; }
+@media (min-width: 721px) {
+  .directory-page .card-actions .primary { flex-direction: row-reverse; background: none; border: 0; padding: 0; gap: 8px; color: var(--green); font-size: 14px; font-weight: 650; }
+  .directory-page .card-actions .primary .icon { background: var(--green); color: #fff; width: 34px; height: 38px; flex-basis: 34px; padding: 10px 8px; border-radius: 7px; }
+  .directory-page .card-actions .primary:hover { color: #092e26; }
+  .directory-page .card-actions .primary:hover .icon { background: #092e26; }
+}
+.directory-page .card-actions .row-details, .directory-page .card-actions .compare-toggle { font-size: 0; width: 30px; min-width: 30px; padding: 0; min-height: 32px; margin: 0; background: none; border-color: transparent; }
+.directory-page .card-actions .compare-toggle[aria-pressed="true"] { background: #d9eade; color: var(--green); }
+.directory-page .card-actions .row-details .icon, .directory-page .card-actions .compare-toggle .icon { width: 15px; height: 15px; flex-basis: 15px; }
+.directory-page .phone-missing { font-size: 11px; color: #59666a; padding: 9px 0; }
+.directory-page .result-group-heading { font-size: 11px; font-weight: 600; letter-spacing: .035em; color: #566966; background: #f5f8f7; padding: 10px 18px; margin: 0; border-bottom: 1px solid var(--line); }
+.directory-page .venue-inspector { position: sticky; top: 24px; border: 1px solid var(--line); border-radius: 11px; background: white; padding: 15px; min-width: 0; max-height: calc(100dvh - 48px); overflow-y: auto; scrollbar-width: thin; }
+.directory-page .inspector-location { background: #edf2f0; border: 1px solid #e1e9e5; width: 100%; min-height: 144px; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 9px; color: #32574c; font-size: 12px; margin-bottom: 20px; }
+.directory-page .inspector-location:hover { background: #e5efea; border-color: #bdd0c5; }
+.directory-page .inspector-location .icon { width: 26px; height: 26px; flex: 0 0 26px; order: -1; }
+.directory-page .inspector-map-area { font-size: 11px; color: #51665c; }
+.directory-page .inspector-location-wrap { margin-bottom: 20px; }
+.directory-page .inspector-location-wrap .inspector-location { margin-bottom: 0; }
+.directory-page .inspector-map { height: 174px; border-radius: 8px; border: 1px solid var(--line); background: #edf2f0; isolation: isolate; }
+.directory-page .inspector-map .leaflet-control-attribution { font-size: 9px !important; background: white; }
+.directory-page .inspector-map-message { font-size: 11px; color: #596c61; margin: 8px 0 0; }
+.directory-page .inspector-eyebrow { color: #5d7064; font-size: 10px; font-weight: 650; letter-spacing: 1.4px; margin-bottom: 7px; }
+.directory-page .venue-inspector h2 { font-size: 23px; font-weight: 750; line-height: 1.25; letter-spacing: -.6px; margin-bottom: 10px; overflow-wrap: anywhere; }
+.directory-page .inspector-address { display: flex; align-items: flex-start; gap: 8px; font-size: 12px; color: #62716f; line-height: 1.7; margin: 16px 0; }
+.directory-page .inspector-address .icon { margin-top: 2px; width: 16px; height: 16px; flex-basis: 16px; }
+.directory-page .inspector-contacts { display: grid; gap: 8px; }
+.directory-page .inspector-contacts > a { min-height: 45px; display: flex; justify-content: center; align-items: center; gap: 9px; border-radius: 7px; border: 1px solid var(--line); font-size: 13px; text-decoration: none; font-weight: 600; }
+.directory-page .inspector-contacts .primary { border-color: var(--green); font-variant-numeric: tabular-nums; }
+.directory-page .inspector-maps { background: #fbfcfc; color: #334f45; }
+.directory-page .inspector-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 15px 0 5px; }
+.directory-page .inspector-actions button { display: flex; align-items: center; justify-content: center; gap: 7px; border: 0; border-radius: 7px; background: #f1f4f5; font-size: 12px; }
+.directory-page .inspector-actions button[aria-pressed="true"] { background: #dfede5; color: var(--green); }
+.directory-page .inspector-more { border: 0; background: none; font-size: 11px; padding: 8px 0; min-height: 36px; color: #5f726d; text-decoration: underline; text-underline-offset: 3px; width: 100%; }
+.directory-page .review-notice { font-size: 12px; }
+.directory-page .empty { border: 0; box-shadow: none; background: white; padding: 40px 22px; }
+.directory-page .map-mode .venue-columns { display: none; }
+.directory-page .map-mode .map-workspace { grid-template-columns: minmax(0, 1.25fr) minmax(320px, .9fr); }
+.directory-page .map-mode .card { display: block; padding: 17px; }
+.directory-page .map-mode .card-head { display: flex; }
+.directory-page .map-mode .card-head > div { display: block; min-width: 0; }
+.directory-page .map-mode .card-location { margin-bottom: 6px; }
+.directory-page .map-mode .card h3 { font-size: 16px; }
+.directory-page .map-mode .card .save { position: static; transform: none; flex: 0 0 34px; }
+.directory-page .map-mode .card-actions { padding: 9px 0 0; }
+.directory-page .map-selection h3 { font-family: inherit; font-size: 18px; font-weight: 700; }
+.directory-page footer { max-width: 1540px; margin-top: 34px; padding: 24px 36px; border-color: var(--line); font-size: 11px; }
+.directory-page .footerbrand { font-family: inherit; font-weight: 650; font-size: 16px; }
+.directory-page dialog { border: 1px solid var(--line); border-radius: 14px; background: white; }
+.directory-page dialog::backdrop { background: #122e275c; backdrop-filter: none; }
+.directory-page dialog h2 { font-weight: 750; letter-spacing: -.7px; }
+.directory-page .compare-bar { background: #fff; border-color: #b5cfc1; border-radius: 10px; box-shadow: 0 8px 40px #112e211c; }
+.directory-page .detail-actions > a, .directory-page .detail-actions > button { border-radius: 8px; font-size: 13px; }
+.directory-page .detail-topline { font-size: 10px; }
+.directory-page .detail-location-summary { display: flex; gap: 8px; color: #59696f; font-size: 14px; line-height: 1.6; margin: 14px 0; }
+.directory-page .detail-location-summary .icon { margin-top: 3px; }
+.directory-page .detail-extras { border-top: 1px solid var(--line); margin-top: 18px; }
+.directory-page .detail-extras > summary { min-height: 44px; padding: 14px 0; font-size: 12px; cursor: pointer; color: #475f53; }
+.directory-page .detail-extras .address-block { border-top: 0; margin-top: 0; padding-top: 0; }
+.directory-page .contact-list a { font-variant-numeric: tabular-nums; }
+@media (min-width: 1540px) {
+  .directory-page .venue-workspace { grid-template-columns: minmax(0, 1fr) 340px; gap: 32px; }
+}
+@media (max-width: 1250px) and (min-width: 1100px) {
+  .directory-page .site-header { gap: 18px; padding-inline: 24px; }
+  .directory-page .site-header .brand { font-size: 17px; }
+  .directory-page .site-header nav { gap: 0; }
+  .directory-page .site-header nav button { font-size: 12px; padding-inline: 7px; }
+  .directory-page #headerSearchDock .search-row { grid-template-columns: minmax(130px, 1fr) 140px; }
+  .directory-page main { padding-inline: 24px; }
+  .directory-page .venue-workspace { grid-template-columns: minmax(0, 1fr) 270px; gap: 20px; }
+  .directory-page .venue-columns, .directory-page .card { grid-template-columns: minmax(0, 1fr) 96px 316px; gap: 3px 10px; padding-inline: 14px; }
+  .directory-page .card-actions { gap: 3px; }
+}
+@media (max-width: 1099px) {
+  .directory-page .site-header { padding: 12px 24px; min-height: 68px; gap: 16px; }
+  .directory-page #headerSearchDock { display: none; }
+  .directory-page main { padding: 26px 24px; }
+  .directory-page .search-row { grid-template-columns: minmax(0, 1fr) 220px; gap: 12px; margin-bottom: 18px; }
+  .directory-page .search-row label { font-size: 12px; }
+  .directory-page #search { height: 46px; font-size: 14px; }
+  .directory-page .intro-note { display: none; }
+  .directory-page .intro { margin-bottom: 20px; }
+  .directory-page .venue-workspace { display: block; }
+  .directory-page .venue-columns, .directory-page .card { grid-template-columns: minmax(0, 1fr) 96px 322px; }
+  .directory-page #filterFields .filter-fields { gap: 14px; flex-wrap: wrap; }
+  .directory-page .filters { margin-bottom: 18px; }
+  .directory-page .map-mode .map-workspace { display: block; }
+  .directory-page .map-mode #results { height: 350px; }
+}
+@media (max-width: 720px) {
+  .directory-page .site-header { padding: 10px 16px; min-height: 64px; flex-wrap: nowrap; gap: 8px; }
+  .directory-page .site-header .brand { font-size: 16px; letter-spacing: -.45px; gap: 6px; }
+  .directory-page .brandmark { width: 26px; font-size: 24px; }
+  .directory-page .brandmark span { font-size: 20px; }
+  .directory-page .site-header nav { gap: 2px; margin-left: auto; }
+  .directory-page .site-header nav button { font-size: 11px; padding: 8px 5px; gap: 4px; min-height: 44px; }
+  .directory-page .site-header nav .icon { display: none; }
+  .directory-page #navCompare { display: none; }
+  .directory-page .site-header nav button:first-child { display: none; }
+  .directory-page main { padding: 22px 14px 16px; }
+  .directory-page .intro { margin-bottom: 18px; }
+  .directory-page .intro .eyebrow { font-size: 8px; letter-spacing: 1.25px; margin-bottom: 7px; }
+  .directory-page h1 { font-size: 28px; letter-spacing: -1px; }
+  .directory-page .search-row { display: grid; grid-template-columns: minmax(0, 1fr) 115px; gap: 8px; margin-bottom: 14px; }
+  .directory-page .search-row label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .directory-page #searchAreaDock { display: block; min-width: 0; }
+  .directory-page #search, .directory-page .search-row .area-control input { height: 44px; min-height: 44px; font-size: 13px; background: white; border: 1px solid #dce5e1; border-radius: 7px; }
+  .directory-page #search { font-size: 13px; padding-left: 34px; padding-right: 29px; }
+  .directory-page .search-input > span { left: 10px; }
+  .directory-page .search-input .icon { width: 15px; height: 15px; }
+  .directory-page #clearSearch { width: 30px; font-size: 22px; }
+  .directory-page .area-control input { padding: 8px 14px 8px 9px; }
+  .directory-page .search-row .area-options { width: min(280px, calc(100vw - 28px)); min-width: 240px; left: auto; right: 0; }
+  .directory-page .area-explorer { gap: 7px; margin: 0 0 18px; overflow-x: auto; align-items: center; scrollbar-width: none; padding: 2px 0; }
+  .directory-page .area-explorer > #allAreas { display: block; flex: 0 0 auto; }
+  .directory-page .area-chips { overflow: visible; width: auto; flex-wrap: nowrap; padding: 0; gap: 7px; }
+  .directory-page .area-choice, .directory-page #allAreas { padding: 10px 13px; min-height: 42px; font-size: 12px; border-radius: 8px; white-space: nowrap; }
+  .directory-page .area-choice { display: block; }
+  .directory-page .filters { display: none; }
+  .directory-page .results-top h2 { font-size: 15px; }
+  .directory-page .results-top { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 10px 7px; }
+  .directory-page .results-top > div:first-child { grid-column: 1/-1; }
+  .directory-page .result-actions { display: contents; }
+  .directory-page .sort-control { grid-column: 1; grid-row: 2; }
+  .directory-page #mobileFilters { grid-column: 2; grid-row: 2; }
+  .directory-page .view-switch { grid-column: 3; grid-row: 2; }
+  .directory-page #breadcrumb { font-size: 8px; letter-spacing: 1px; }
+  .directory-page .coverage-summary { font-size: 11px; margin: 3px 0 0; }
+  .directory-page #mobileFilters { display: inline-flex; min-height: 38px; align-items: center; font-size: 11px; padding: 8px; background: white; border-color: var(--line); }
+  .directory-page .view-switch button { min-height: 38px; padding: 7px 11px; font-size: 11px; }
+  .directory-page .result-actions { gap: 6px; }
+  .directory-page .result-controls { display: flex; align-items: center; gap: 12px; margin: 0; }
+  .directory-page .result-controls .share-search { margin-right: auto; font-size: 11px; }
+  .directory-page .result-controls label { font-size: 0; }
+  .directory-page #sort { font-size: 11px; width: 128px; }
+  .directory-page .area-context { padding: 9px 10px; font-size: 11px; }
+  .directory-page .area-context .nearby-list { font-size: 10px; line-height: 1.6; }
+  .directory-page .venue-columns { display: none; }
+  .directory-page #results { border: 1px solid var(--line); border-radius: 9px; }
+  .directory-page .card { display: block; padding: 15px 12px; min-height: 0; }
+  .directory-page .card-head { display: block; }
+  .directory-page .card-head > div { display: flex; flex-direction: column; align-items: start; }
+  .directory-page .card h3 { order: 0; padding-right: 92px; font-size: 16px; line-height: 1.4; align-self: stretch; }
+  .directory-page .card-location { position: absolute; right: 12px; top: 17px; max-width: 88px; order: 1; display: flex; margin: 0; font-size: 10px; align-self: start; }
+  .directory-page .card-location > span:not(.nearby-tag) { font-size: 9px; padding: 4px 7px; }
+  .directory-page .card-address { order: 2; font-size: 12px; line-height: 1.55; margin: 6px 0 0; align-self: stretch; }
+  .directory-page .card-distance, .directory-page .listing-note { order: 3; }
+  .directory-page .card .save { position: static; transform: none; width: 44px; min-width: 44px; height: 44px; }
+  .directory-page .card-actions { display: flex; flex-wrap: nowrap; padding: 0; margin-top: 11px; gap: 5px; }
+  .directory-page .card-actions > a, .directory-page .card-actions > button { min-height: 42px; font-size: 11px; padding: 8px; }
+  .directory-page .card-actions .primary { flex: 1; font-size: 13px; padding: 8px 10px; }
+  .directory-page .card-actions .row-details { display: none; }
+  .directory-page .card-actions .compare-toggle { font-size: 0; width: 44px; min-width: 44px; padding: 0; min-height: 44px; }
+  .directory-page .card-actions .row-details .icon, .directory-page .card-actions .compare-toggle .icon { width: 17px; height: 17px; flex-basis: 17px; }
+  .directory-page .phone-missing { margin-right: auto; }
+  .directory-page .result-group-heading { padding: 10px 12px; font-size: 10px; }
+  .directory-page .map-mode .card { padding: 14px; }
+  .directory-page .map-mode #results { display: none; }
+  .directory-page .map-mode #map { height: 48vh; min-height: 290px; }
+  .directory-page footer { padding: 22px 14px; margin-top: 20px; font-size: 11px; }
+  .directory-page dialog { padding: 20px 16px calc(20px + env(safe-area-inset-bottom)); border-radius: 0; }
+  .directory-page #dialog[data-kind="detail"] { position: fixed; inset: auto 0 0; margin: 0; width: 100%; height: auto; max-height: min(84dvh, 760px); border-radius: 20px 20px 0 0; border: 0; border-top: 1px solid #dce6df; box-shadow: 0 -8px 40px #173e2c20; }
+  .directory-page #dialog[data-kind="detail"]::before { content: ""; display: block; width: 32px; height: 4px; background: #c6cecb; border-radius: 4px; margin: -9px auto 15px; }
+  .directory-page #dialog[data-kind="detail"] h2 { font-size: 23px; letter-spacing: -.6px; }
+  .directory-page #dialog[data-kind="detail"] .detail-actions { display: grid; grid-template-columns: minmax(0, 1fr) 44px 44px; gap: 7px; padding: 0; margin: 16px 0; }
+  .directory-page #dialog[data-kind="detail"] .detail-actions > .primary { grid-column: 1/-1; }
+  .directory-page #dialog[data-kind="detail"] .detail-actions > button { font-size: 0; padding: 0; justify-content: center; }
+  .directory-page #dialog[data-kind="detail"] .detail-actions > .primary { font-size: 16px; }
+  .directory-page #dialog[data-kind="detail"] .detail-location-summary { font-size: 13px; margin: 12px 0; }
+  .directory-page .detail-actions > a, .directory-page .detail-actions > button { font-size: 12px; min-height: 44px; padding: 9px; }
+  .directory-page .address-block p { font-size: 13px; }
+  .directory-page .contact-list li a { font-size: 17px; }
+  .directory-page .compare-bar { font-size: 12px; }
+}

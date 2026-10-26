@@ -38,6 +38,7 @@ export const icons = {
   pin: '<path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/>',
   save: '<path d="M6 3h12v18l-6-4-6 4z"/>',
   compare: '<path d="M4 5h6v14H4zM14 5h6v14h-6z"/>',
+  details: '<path d="m9 5 7 7-7 7"/>',
   share: '<path d="M8 12v8h12V8h-8M4 8V4h12M4 4l10 10"/>'
 };
 export function icon(name) {

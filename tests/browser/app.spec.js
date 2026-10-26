@@ -251,7 +251,7 @@ for (const width of [360, 390, 768, 1363, 1920]) test(`responsive layout and det
     expect(b.y + b.height).toBeLessThan(936);
   }
   await page.screenshot({ path: `test-results/layout-${width}.png` });
-  await cards(page).first().getByRole("button", { name: "Details", exact: true }).click();
+  await cards(page).first().locator(width <= 720 ? ".venue-name" : ".row-details").click();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await page.screenshot({ path: `test-results/detail-${width}.png` });
   await page.keyboard.press("Escape");
@@ -297,7 +297,7 @@ test("200 percent desktop reflow equivalent keeps controls and dialogs usable", 
   await page.locator("#mobileFilters").click();
   await expect(page.locator("#applyFilters")).toBeVisible();
   await page.keyboard.press("Escape");
-  await cards(page).first().getByRole("button", { name: "Details", exact: true }).click();
+  await cards(page).first().locator(".venue-name").click();
   await expect(page.locator('#dialog a[href^="tel:"]').first()).toBeVisible();
   await page.screenshot({ path: "test-results/reflow-200-equivalent.png" });
   await context.close();
@@ -322,4 +322,86 @@ test('logo uses a clean home URL and social cards have a real static image',asyn
 test('owner-supplied contacts and missing phones are clear',async({page})=>{
  const owner=fixture('bd-test-owner','TEST ONLY Owner',{phones:[{...sample[0].phones[0],status:'submitted-not-verified'}]});await mock(page,[owner,sample[2]]);await page.goto('/?venue=bd-test-owner');
  await expect(page.locator('#dialog')).toContainText('Owner supplied');await page.goto('/?venue=bd-test-closed');await expect(page.locator('#dialog')).toContainText('Phone unavailable');await expect(page.locator('#dialog a[href^="tel:"]')).toHaveCount(0);
+});
+
+test("desktop workspace selection updates the contact panel and lazy location map", async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 936 });
+  await mock(page);
+  await page.goto("/");
+  const inspector = page.locator("#venueInspector");
+  await expect(inspector).toBeVisible();
+  await expect(inspector.locator("h2")).toContainText("Alpha");
+  await expect(page.locator("#inspectorMap")).toHaveCount(0);
+  await card(page, "bd-test-beta").locator(".venue-name").focus();
+  await page.keyboard.press("Enter");
+  await expect(inspector.locator("h2")).toContainText("Beta");
+  await expect(card(page, "bd-test-beta")).toHaveClass(/selected/);
+  await expect(page.locator("#selectionAnnouncement")).toContainText("Beta selected");
+  await expect(inspector.locator(".venue-marker")).toHaveCount(1);
+  await expect(inspector.locator('a[href="tel:+8801712345678"]')).toBeVisible();
+  await card(page, "bd-test-alpha").locator(".card-address").click();
+  await expect(inspector.locator("h2")).toContainText("Alpha");
+  await card(page, "bd-test-beta").locator(".venue-name").click();
+  await expect(inspector.locator("h2")).toContainText("Beta");
+  await inspector.getByRole("button", { name: "Save", exact: true }).click();
+  await expect(inspector.getByRole("button", { name: "Saved", exact: true })).toBeFocused();
+  await expect(page.locator("#savedCount")).toHaveText("1");
+  await inspector.getByRole("button", { name: "Compare", exact: true }).click();
+  await expect(page.locator("#navCompareCount")).toHaveText("1");
+  await expect(inspector.locator("h2")).toContainText("Beta");
+  await page.locator("#search").fill("no-such-workspace-hall");
+  await expect(inspector).toBeHidden();
+});
+
+test("workspace map fallback stays usable and venue labels are rendered as text", async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 936 });
+  const name = 'TEST ONLY <img src=x onerror="window.injected=1">';
+  await mock(page, [fixture("bd-test-escaped", name)]);
+  await page.route("https://tile.openstreetmap.org/**", (r) => r.fulfill({ status: 503, body: "Unavailable" }));
+  await page.goto("/");
+  await cards(page).first().locator(".venue-name").click();
+  const inspector = page.locator("#venueInspector");
+  await expect(inspector).toContainText("Map unavailable");
+  await expect(inspector.getByRole("link", { name: "Open in Google Maps" })).toBeVisible();
+  await inspector.locator(".venue-marker").hover();
+  await expect(inspector.locator(".leaflet-tooltip")).toHaveText(name);
+  await expect(page.locator("#inspectorMap img[src=x]")).toHaveCount(0);
+  expect(await page.evaluate(() => window.injected)).toBeUndefined();
+  await expect(inspector.locator('a[href^="tel:"]')).toBeVisible();
+});
+
+test("mobile hall names open a reachable bottom sheet and restore keyboard focus", async ({ page }) => {
+  await page.setViewportSize({ width: 360, height: 800 });
+  await mock(page);
+  await page.goto("/");
+  await expect(page.locator("#venueInspector")).toBeHidden();
+  const name = card(page, "bd-test-alpha").locator(".venue-name");
+  await name.click();
+  const sheet = page.locator('#dialog[data-kind="detail"]');
+  await expect(sheet).toBeVisible();
+  const bounds = await sheet.boundingBox();
+  expect(bounds.y).toBeGreaterThan(0);
+  expect(bounds.y + bounds.height).toBeLessThanOrEqual(801);
+  await expect(sheet.locator('a[href^="tel:"]').first()).toBeVisible();
+  await expect(sheet.getByRole("link", { name: "Google Maps", exact: true })).toBeVisible();
+  expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
+  await page.keyboard.press("Escape");
+  await expect(name).toBeFocused();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+});
+
+test("Near me works directly from the mobile filter sheet without storing coordinates", async ({ page, context }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await context.grantPermissions(["geolocation"]);
+  await context.setGeolocation({ latitude: 23.760123, longitude: 90.420456 });
+  await mock(page);
+  await page.goto("/");
+  await page.locator("#mobileFilters").click();
+  await page.locator("#filterDialog .nearby").click();
+  await expect(page.locator("#filterDialog")).not.toBeVisible();
+  await expect(page.locator("#sort")).toHaveValue("distance");
+  await expect(cards(page).first()).toContainText("Alpha");
+  await expect(page.locator("#message")).toContainText("straight-line");
+  expect(page.url()).not.toContain("23.760123");
+  expect(await page.evaluate(() => JSON.stringify(localStorage))).not.toContain("23.760123");
 });
