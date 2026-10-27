@@ -70,7 +70,7 @@
 .directory-page #filterFields .filter-fields { display: flex; gap: 24px; align-items: center; }
 .directory-page #filterFields .field { display: flex; align-items: center; gap: 8px; margin: 0; }
 .directory-page #filterFields .field label { font-size: 12px; margin: 0; color: var(--muted); }
-.directory-page #filterFields .field select { font-size: 12px; min-height: 40px; padding: 7px 28px 7px 10px; width: 156px; border-color: var(--line); background: white; }
+.directory-page #filterFields .field select { font-size: 12px; min-height: 40px; padding: 7px 28px 7px 10px; width: 205px; border-color: var(--line); background: white; }
 .directory-page #filterFields .check { margin: 0; padding: 0; font-size: 12px; gap: 8px; }
 .directory-page #filterFields .hint { display: none; }
 .directory-page #filterFields .nearby { margin: 0 0 0 auto; font-size: 12px; border: 1px solid var(--line); background: white; width: auto; padding: 8px 13px; min-height: 40px; }

@@ -21,6 +21,8 @@ The owner requested a separate restaurant/party-center collection and further Dh
 
 **Unchanged existing venue records:** 138. **Proposed deletions:** none. **Validation failures:** none. Collection membership is generated from the optional `collection` field for explicitly classified records and retained for other records. The visual manager now allows the owner to select a collection when adding or editing.
 
+The desktop collection control was widened enough to show the new label in full. Existing colors, page structure and venue-card styling remain in place.
+
 ## Evidence and decisions
 
 - [Onion Leaf's first-party site](https://onionleafbd.com/) explicitly offers wedding events, gives 458 West Rampura, DIT Road and two public business numbers. Its individually matched Maps profile agrees on the address and first number. This is the strongest new wedding-use evidence. The operator page was accessible during research; a later retry and robots request hit environment HTTP 503, so no automated crawl or copied site text is included.
