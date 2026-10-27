@@ -296,6 +296,14 @@
     {
       "id": "74",
       "name": "Shewrapara"
+    },
+    {
+      "id": "75",
+      "name": "Nilkhet"
+    },
+    {
+      "id": "76",
+      "name": "Dumni"
     }
   ],
   "priority": [
@@ -355,6 +363,7 @@
       "Shyamoli"
     ],
     "Dhanmondi": [
+      "Nilkhet",
       "Jigatola",
       "Kalabagan",
       "Lalmatia",
@@ -446,6 +455,7 @@
       "Tejgaon"
     ],
     "Azimpur": [
+      "Nilkhet",
       "Bakshibazar",
       "Hazaribagh",
       "Kamrangirchar",
@@ -785,6 +795,10 @@
     "Shewrapara": [
       "Agargaon",
       "Mirpur"
+    ],
+    "Nilkhet": [
+      "Azimpur",
+      "Dhanmondi"
     ]
   },
   "groups": {

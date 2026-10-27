@@ -8804,7 +8804,7 @@
     "capacity_layout": null,
     "facilities": [],
     "verification": "open-data-listed",
-    "last_checked": "2026-10-25",
+    "last_checked": "2026-10-27",
     "evidence": [
       {
         "url": "https://www.openstreetmap.org/way/490274323",
@@ -8855,9 +8855,23 @@
         "checked": "2026-10-25",
         "kind": "independent",
         "reuse": "Published business name/spelling from the individually re-examined same-day named profile. No copied descriptions or photographs."
+      },
+      {
+        "url": "https://www.google.com/maps/place/BAF+Falcon+Hall/@23.7713571,90.3900861,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c75c5e71bcaf:0x6f80e95fbd7b6e8d!8m2!3d23.7713571!4d90.3900861!16s%2Fg%2F1tdh6tg8?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+        "fields": [
+          "name",
+          "aliases",
+          "category",
+          "coordinates",
+          "phones",
+          "maps_url"
+        ],
+        "checked": "2026-10-27",
+        "kind": "independent",
+        "reuse": "Individual public business facts manually inspected on the named listing; no photos, ratings, reviews, hours, descriptions or restricted API responses stored."
       }
     ],
-    "notes": "OpenStreetMap listing, not operator-confirmed. Wedding booking, current operation and business contacts must be confirmed directly. The marker is the mapped building’s approximate center, not a verified entrance. No unambiguous public business number was available in this source. The map record was last edited 2025-10-28. The source was reviewed on 2026-10-25; that is not an on-site verification date. Additional public business contact checked on the cited source; no line has been call-tested.",
+    "notes": "OpenStreetMap listing, not operator-confirmed. Wedding booking, current operation and business contacts must be confirmed directly. The marker is the mapped building’s approximate center, not a verified entrance. The map record was last edited 2025-10-28. The source was reviewed on 2026-10-25; that is not an on-site verification date. Additional public business contact checked on the cited source; no line has been call-tested.",
     "discovery": {
       "source": "OpenStreetMap",
       "element_type": "way",
@@ -8874,7 +8888,7 @@
       "source": "https://nominatim.openstreetmap.org/reverse?lat=23.77142585&lon=90.39030015&format=jsonv2&addressdetails=1&zoom=18&accept-language=en",
       "reason": "Published Bir Uttam Ziaur Rahman Road and BAF/Old Airport locality; wider Tejgaon grouping."
     },
-    "maps_url": "https://www.google.com/maps/search/?api=1&query=Falcon%20Hall%20Tejgaon%20Dhaka"
+    "maps_url": "https://www.google.com/maps/place/BAF+Falcon+Hall/@23.7713571,90.3900861,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c75c5e71bcaf:0x6f80e95fbd7b6e8d!8m2!3d23.7713571!4d90.3900861!16s%2Fg%2F1tdh6tg8?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
   },
   {
     "id": "bd-osm-way-495120358",
@@ -13872,5 +13886,603 @@
     "address_status": "published",
     "maps_url": "https://www.google.com/maps/place/Sector+7+Restaurant+%26+Party+Center/@23.8688789,90.3998918,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c424230aff6b:0x59107c95ada642e3!8m2!3d23.8688789!4d90.3998918!16s%2Fg%2F11fxvpqzvx",
     "collection": "restaurant-party-centers"
+  },
+  {
+    "id": "bd-midnight-sun-1",
+    "name": "Midnight Sun-1",
+    "bn_name": null,
+    "aliases": [
+      "Midnight Sun 1"
+    ],
+    "category": "Event Hall",
+    "division": "6",
+    "district": "47",
+    "area": "Malibagh",
+    "address": "89 DIT Road, Dhaka 1217, Bangladesh",
+    "address_status": "published",
+    "coordinates": {
+      "lat": 23.7477978,
+      "lon": 90.4126937
+    },
+    "phones": [
+      {
+        "number": "+8801776327912",
+        "source": "https://www.google.com/maps/place/Midnight+Sun-1/@23.7422008,90.3989016,15z/data=!4m10!1m2!2m1!1sMidnight+Sun+restaurant+party+center+Dhaka!3m6!1s0x3755b98cae08af09:0x9c3792b072e890b8!8m2!3d23.7477978!4d90.4126937!15sCipNaWRuaWdodCBTdW4gcmVzdGF1cmFudCBwYXJ0eSBjZW50ZXIgRGhha2FaLCIqbWlkbmlnaHQgc3VuIHJlc3RhdXJhbnQgcGFydHkgY2VudGVyIGRoYWthkgESY2hpbmVzZV9yZXN0YXVyYW50mgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVVJDY3poaFFUZFJSUkFC4AEA-gEECAAQQw!16s%2Fg%2F11qgs4tjcr?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+        "checked": "2026-10-27",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": null,
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "source-checked",
+    "last_checked": "2026-10-27",
+    "evidence": [
+      {
+        "url": "https://www.google.com/maps/place/Midnight+Sun-1/@23.7422008,90.3989016,15z/data=!4m10!1m2!2m1!1sMidnight+Sun+restaurant+party+center+Dhaka!3m6!1s0x3755b98cae08af09:0x9c3792b072e890b8!8m2!3d23.7477978!4d90.4126937!15sCipNaWRuaWdodCBTdW4gcmVzdGF1cmFudCBwYXJ0eSBjZW50ZXIgRGhha2FaLCIqbWlkbmlnaHQgc3VuIHJlc3RhdXJhbnQgcGFydHkgY2VudGVyIGRoYWthkgESY2hpbmVzZV9yZXN0YXVyYW50mgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVVJDY3poaFFUZFJSUkFC4AEA-gEECAAQQw!16s%2Fg%2F11qgs4tjcr?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+        "fields": [
+          "name",
+          "aliases",
+          "category",
+          "area",
+          "address",
+          "coordinates",
+          "phones",
+          "maps_url"
+        ],
+        "checked": "2026-10-27",
+        "kind": "independent",
+        "reuse": "Individual public business facts manually inspected on the named listing; no photos, ratings, reviews, hours, descriptions or restricted API responses stored."
+      }
+    ],
+    "notes": "The owner reports weddings at Midnight Sun, but wedding bookings at this particular branch were not independently confirmed. Ask the branch directly.",
+    "city": "Dhaka",
+    "collection": "restaurant-party-centers",
+    "maps_url": "https://www.google.com/maps/place/Midnight+Sun-1/@23.7422008,90.3989016,15z/data=!4m10!1m2!2m1!1sMidnight+Sun+restaurant+party+center+Dhaka!3m6!1s0x3755b98cae08af09:0x9c3792b072e890b8!8m2!3d23.7477978!4d90.4126937!15sCipNaWRuaWdodCBTdW4gcmVzdGF1cmFudCBwYXJ0eSBjZW50ZXIgRGhha2FaLCIqbWlkbmlnaHQgc3VuIHJlc3RhdXJhbnQgcGFydHkgY2VudGVyIGRoYWthkgESY2hpbmVzZV9yZXN0YXVyYW50mgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVVJDY3poaFFUZFJSUkFC4AEA-gEECAAQQw!16s%2Fg%2F11qgs4tjcr?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "bd-midnight-sun-2",
+    "name": "Midnight Sun-2 - Nilkhet",
+    "bn_name": null,
+    "aliases": [
+      "Midnight Sun 2"
+    ],
+    "category": "Event Hall",
+    "division": "6",
+    "district": "47",
+    "area": "Nilkhet",
+    "address": "3/B Mirpur Road, Dhaka 1205, Bangladesh",
+    "address_status": "published",
+    "coordinates": {
+      "lat": 23.7331267,
+      "lon": 90.3851096
+    },
+    "phones": [
+      {
+        "number": "+88029661359",
+        "source": "https://www.google.com/maps/place/Midnight+Sun-2+-+Nilkhet/@23.7422008,90.3989016,15z/data=!4m10!1m2!2m1!1sMidnight+Sun+restaurant+party+center+Dhaka!3m6!1s0x3755b8c60a0a1c9f:0xf03156dd4c4bea2b!8m2!3d23.7331267!4d90.3851096!15sCipNaWRuaWdodCBTdW4gcmVzdGF1cmFudCBwYXJ0eSBjZW50ZXIgRGhha2FaLCIqbWlkbmlnaHQgc3VuIHJlc3RhdXJhbnQgcGFydHkgY2VudGVyIGRoYWthkgEUcGFuX2FzaWFuX3Jlc3RhdXJhbnSaASRDaGREU1VoTk1HOW5TMFZNTmtOdExXMDNOMHBsWnpWUlJSQULgAQD6AQQIABBJ!16s%2Fg%2F1tgfnh6w?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+        "checked": "2026-10-27",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": null,
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "source-checked",
+    "last_checked": "2026-10-27",
+    "evidence": [
+      {
+        "url": "https://www.google.com/maps/place/Midnight+Sun-2+-+Nilkhet/@23.7422008,90.3989016,15z/data=!4m10!1m2!2m1!1sMidnight+Sun+restaurant+party+center+Dhaka!3m6!1s0x3755b8c60a0a1c9f:0xf03156dd4c4bea2b!8m2!3d23.7331267!4d90.3851096!15sCipNaWRuaWdodCBTdW4gcmVzdGF1cmFudCBwYXJ0eSBjZW50ZXIgRGhha2FaLCIqbWlkbmlnaHQgc3VuIHJlc3RhdXJhbnQgcGFydHkgY2VudGVyIGRoYWthkgEUcGFuX2FzaWFuX3Jlc3RhdXJhbnSaASRDaGREU1VoTk1HOW5TMFZNTmtOdExXMDNOMHBsWnpWUlJSQULgAQD6AQQIABBJ!16s%2Fg%2F1tgfnh6w?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+        "fields": [
+          "name",
+          "aliases",
+          "category",
+          "area",
+          "address",
+          "coordinates",
+          "phones",
+          "maps_url"
+        ],
+        "checked": "2026-10-27",
+        "kind": "independent",
+        "reuse": "Individual public business facts manually inspected on the named listing; no photos, ratings, reviews, hours, descriptions or restricted API responses stored."
+      }
+    ],
+    "notes": "The owner reports weddings at Midnight Sun, but wedding bookings at this particular branch were not independently confirmed. Ask the branch directly.",
+    "city": "Dhaka",
+    "collection": "restaurant-party-centers",
+    "maps_url": "https://www.google.com/maps/place/Midnight+Sun-2+-+Nilkhet/@23.7422008,90.3989016,15z/data=!4m10!1m2!2m1!1sMidnight+Sun+restaurant+party+center+Dhaka!3m6!1s0x3755b8c60a0a1c9f:0xf03156dd4c4bea2b!8m2!3d23.7331267!4d90.3851096!15sCipNaWRuaWdodCBTdW4gcmVzdGF1cmFudCBwYXJ0eSBjZW50ZXIgRGhha2FaLCIqbWlkbmlnaHQgc3VuIHJlc3RhdXJhbnQgcGFydHkgY2VudGVyIGRoYWthkgEUcGFuX2FzaWFuX3Jlc3RhdXJhbnSaASRDaGREU1VoTk1HOW5TMFZNTmtOdExXMDNOMHBsWnpWUlJSQULgAQD6AQQIABBJ!16s%2Fg%2F1tgfnh6w?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "bd-midnight-sun-3",
+    "name": "Midnight Sun-3",
+    "bn_name": null,
+    "aliases": [
+      "Midnight Sun 3"
+    ],
+    "category": "Event Hall",
+    "division": "6",
+    "district": "47",
+    "area": "Naya Paltan",
+    "address": "56 VIP Road, Eastern Trade Center, Dhaka 1000, Bangladesh",
+    "address_status": "published",
+    "coordinates": {
+      "lat": 23.7369696,
+      "lon": 90.4123102
+    },
+    "phones": [
+      {
+        "number": "+8802222228820",
+        "source": "https://www.google.com/maps/place/Midnight+Sun-3/@23.7422008,90.3989016,15z/data=!4m10!1m2!2m1!1sMidnight+Sun+restaurant+party+center+Dhaka!3m6!1s0x3755b8f563bf35df:0x176b4b3bb425967b!8m2!3d23.7369696!4d90.4123102!15sCipNaWRuaWdodCBTdW4gcmVzdGF1cmFudCBwYXJ0eSBjZW50ZXIgRGhha2FaLCIqbWlkbmlnaHQgc3VuIHJlc3RhdXJhbnQgcGFydHkgY2VudGVyIGRoYWthkgESY2hpbmVzZV9yZXN0YXVyYW50mgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDIxUk0yRlZkSGhaZW1zeVUycEZlVk5YT1ZSbGEyc3daRlk1U0ZVeFJSQULgAQD6AQQIKBAc!16s%2Fg%2F1hcbjt5hf?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+        "checked": "2026-10-27",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": null,
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "source-checked",
+    "last_checked": "2026-10-27",
+    "evidence": [
+      {
+        "url": "https://www.google.com/maps/place/Midnight+Sun-3/@23.7422008,90.3989016,15z/data=!4m10!1m2!2m1!1sMidnight+Sun+restaurant+party+center+Dhaka!3m6!1s0x3755b8f563bf35df:0x176b4b3bb425967b!8m2!3d23.7369696!4d90.4123102!15sCipNaWRuaWdodCBTdW4gcmVzdGF1cmFudCBwYXJ0eSBjZW50ZXIgRGhha2FaLCIqbWlkbmlnaHQgc3VuIHJlc3RhdXJhbnQgcGFydHkgY2VudGVyIGRoYWthkgESY2hpbmVzZV9yZXN0YXVyYW50mgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDIxUk0yRlZkSGhaZW1zeVUycEZlVk5YT1ZSbGEyc3daRlk1U0ZVeFJSQULgAQD6AQQIKBAc!16s%2Fg%2F1hcbjt5hf?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+        "fields": [
+          "name",
+          "aliases",
+          "category",
+          "area",
+          "address",
+          "coordinates",
+          "phones",
+          "maps_url"
+        ],
+        "checked": "2026-10-27",
+        "kind": "independent",
+        "reuse": "Individual public business facts manually inspected on the named listing; no photos, ratings, reviews, hours, descriptions or restricted API responses stored."
+      }
+    ],
+    "notes": "The owner reports weddings at Midnight Sun, but wedding bookings at this particular branch were not independently confirmed. Ask the branch directly.",
+    "city": "Dhaka",
+    "collection": "restaurant-party-centers",
+    "maps_url": "https://www.google.com/maps/place/Midnight+Sun-3/@23.7422008,90.3989016,15z/data=!4m10!1m2!2m1!1sMidnight+Sun+restaurant+party+center+Dhaka!3m6!1s0x3755b8f563bf35df:0x176b4b3bb425967b!8m2!3d23.7369696!4d90.4123102!15sCipNaWRuaWdodCBTdW4gcmVzdGF1cmFudCBwYXJ0eSBjZW50ZXIgRGhha2FaLCIqbWlkbmlnaHQgc3VuIHJlc3RhdXJhbnQgcGFydHkgY2VudGVyIGRoYWthkgESY2hpbmVzZV9yZXN0YXVyYW50mgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDIxUk0yRlZkSGhaZW1zeVUycEZlVk5YT1ZSbGEyc3daRlk1U0ZVeFJSQULgAQD6AQQIKBAc!16s%2Fg%2F1hcbjt5hf?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "bd-secret-garden-event-spaces",
+    "name": "Secret Garden Event Spaces",
+    "bn_name": null,
+    "aliases": [],
+    "category": "Wedding Venue",
+    "division": "6",
+    "district": "47",
+    "area": "Dumni",
+    "address": "Plot 309, Dumni Road, Dhaka, Bangladesh",
+    "address_status": "published",
+    "coordinates": {
+      "lat": 23.8327013,
+      "lon": 90.4636416
+    },
+    "phones": [
+      {
+        "number": "+8801313946174",
+        "source": "https://secretgardenbd.com/",
+        "checked": "2026-10-27",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": "https://secretgardenbd.com/",
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "cross-checked",
+    "last_checked": "2026-10-27",
+    "evidence": [
+      {
+        "url": "https://secretgardenbd.com/",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "address",
+          "phones",
+          "website"
+        ],
+        "checked": "2026-10-27",
+        "kind": "official",
+        "reuse": "First-party venue website manually inspected; only individual public business facts retained."
+      },
+      {
+        "url": "https://www.google.com/maps/place/Secret+Garden+Event+Spaces/@23.8327013,90.4636416,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c9a66f348681:0x5d89aaebf66e840a!8m2!3d23.8327013!4d90.4636416!16s%2Fg%2F11h942147s?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "coordinates",
+          "phones",
+          "maps_url"
+        ],
+        "checked": "2026-10-27",
+        "kind": "independent",
+        "reuse": "Individual public business facts manually inspected on the named listing; no photos, ratings, reviews, hours, descriptions or restricted API responses stored."
+      }
+    ],
+    "notes": null,
+    "city": "Dhaka",
+    "maps_url": "https://www.google.com/maps/place/Secret+Garden+Event+Spaces/@23.8327013,90.4636416,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c9a66f348681:0x5d89aaebf66e840a!8m2!3d23.8327013!4d90.4636416!16s%2Fg%2F11h942147s?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "bd-polwel-convention-center",
+    "name": "Polwel Convention Center",
+    "bn_name": null,
+    "aliases": [],
+    "category": "Convention Center",
+    "division": "6",
+    "district": "47",
+    "area": "Uttara",
+    "address": "Polwel Carnation Shopping Centre, Dhaka–Mymensingh Road, Dhaka 1230, Bangladesh",
+    "address_status": "published",
+    "coordinates": {
+      "lat": 23.8786671,
+      "lon": 90.4015531
+    },
+    "phones": [
+      {
+        "number": "+8801822822128",
+        "source": "https://www.google.com/maps/place/Polwel+Convention+Center/@23.8786671,90.4015531,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c4384c912823:0x3f36c8be0805c68!8m2!3d23.8786671!4d90.4015531!16s%2Fg%2F11c1ws0kn2?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+        "checked": "2026-10-27",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": null,
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "source-checked",
+    "last_checked": "2026-10-27",
+    "evidence": [
+      {
+        "url": "https://www.google.com/maps/place/Polwel+Convention+Center/@23.8786671,90.4015531,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c4384c912823:0x3f36c8be0805c68!8m2!3d23.8786671!4d90.4015531!16s%2Fg%2F11c1ws0kn2?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "address",
+          "coordinates",
+          "phones",
+          "maps_url"
+        ],
+        "checked": "2026-10-27",
+        "kind": "independent",
+        "reuse": "Individual public business facts manually inspected on the named listing; no photos, ratings, reviews, hours, descriptions or restricted API responses stored."
+      }
+    ],
+    "notes": "The linked operator website could not be inspected during this review. Confirm current wedding bookings directly.",
+    "city": "Dhaka",
+    "maps_url": "https://www.google.com/maps/place/Polwel+Convention+Center/@23.8786671,90.4015531,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c4384c912823:0x3f36c8be0805c68!8m2!3d23.8786671!4d90.4015531!16s%2Fg%2F11c1ws0kn2?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "bd-rupali-community-center-mirpur",
+    "name": "Rupali Community Center (RCC)",
+    "bn_name": null,
+    "aliases": [
+      "Rupali Community Centre"
+    ],
+    "category": "Community Center",
+    "division": "6",
+    "district": "47",
+    "area": "Mirpur",
+    "address": "Road No. 5, Mirpur, Dhaka 1216, Bangladesh",
+    "address_status": "published",
+    "coordinates": {
+      "lat": 23.8112921,
+      "lon": 90.368577
+    },
+    "phones": [
+      {
+        "number": "+8801712259218",
+        "source": "https://www.google.com/maps/place/Rupali+Community+Center+(RCC)/@23.8112921,90.368577,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c129c4a6a4ef:0xaa35f37e8cd5a0fd!8m2!3d23.8112921!4d90.368577!16s%2Fg%2F11clss7778?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+        "checked": "2026-10-27",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": null,
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "cross-checked",
+    "last_checked": "2026-10-27",
+    "evidence": [
+      {
+        "url": "https://www.google.com/maps/place/Rupali+Community+Center+(RCC)/@23.8112921,90.368577,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c129c4a6a4ef:0xaa35f37e8cd5a0fd!8m2!3d23.8112921!4d90.368577!16s%2Fg%2F11clss7778?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+        "fields": [
+          "name",
+          "aliases",
+          "category",
+          "area",
+          "address",
+          "coordinates",
+          "phones",
+          "maps_url"
+        ],
+        "checked": "2026-10-27",
+        "kind": "independent",
+        "reuse": "Individual public business facts manually inspected on the named listing; no photos, ratings, reviews, hours, descriptions or restricted API responses stored."
+      },
+      {
+        "url": "https://www.openstreetmap.org/node/8952908632",
+        "fields": [
+          "name",
+          "aliases",
+          "category",
+          "coordinates"
+        ],
+        "checked": "2026-10-27",
+        "kind": "open-data",
+        "reuse": "Single named OpenStreetMap node cross-checked against the current individually inspected business profile; ODbL-1.0 attribution retained."
+      }
+    ],
+    "notes": "A second older OpenStreetMap point with the same name remains held as a possible relocation or duplicate. This listing follows the matched current business profile.",
+    "city": "Dhaka",
+    "maps_url": "https://www.google.com/maps/place/Rupali+Community+Center+(RCC)/@23.8112921,90.368577,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c129c4a6a4ef:0xaa35f37e8cd5a0fd!8m2!3d23.8112921!4d90.368577!16s%2Fg%2F11clss7778?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "bd-lake-view-convention-dhanmondi",
+    "name": "Lake View Convention",
+    "bn_name": null,
+    "aliases": [
+      "Lakeview Convention Dhanmondi"
+    ],
+    "category": "Convention Center",
+    "division": "6",
+    "district": "47",
+    "area": "Dhanmondi",
+    "address": "5th, 8th and 9th Floors, Khan ABC Tradeplex, Plot 37, Road 2, Dhanmondi, Dhaka, Bangladesh",
+    "address_status": "published",
+    "coordinates": {
+      "lat": 23.7382219,
+      "lon": 90.3780065
+    },
+    "phones": [
+      {
+        "number": "+8801896061922",
+        "source": "https://lakeviewconvention.com/",
+        "checked": "2026-10-27",
+        "status": "published-not-call-tested"
+      },
+      {
+        "number": "+8801896061923",
+        "source": "https://lakeviewconvention.com/",
+        "checked": "2026-10-27",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": "https://lakeviewconvention.com/",
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "cross-checked",
+    "last_checked": "2026-10-27",
+    "evidence": [
+      {
+        "url": "https://lakeviewconvention.com/",
+        "fields": [
+          "name",
+          "aliases",
+          "category",
+          "area",
+          "address",
+          "phones",
+          "website"
+        ],
+        "checked": "2026-10-27",
+        "kind": "official",
+        "reuse": "First-party venue website manually inspected; only individual public business facts retained."
+      },
+      {
+        "url": "https://www.google.com/maps/place/Lake+View+Convention/@23.7382219,90.3780065,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b9dfe4c81d67:0x3e6b4e1250ef96ab!8m2!3d23.7382219!4d90.3780065!16s%2Fg%2F11lv8ddwfz?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "coordinates",
+          "phones",
+          "maps_url"
+        ],
+        "checked": "2026-10-27",
+        "kind": "independent",
+        "reuse": "Individual public business facts manually inspected on the named listing; no photos, ratings, reviews, hours, descriptions or restricted API responses stored."
+      }
+    ],
+    "notes": "This Dhanmondi business is distinct from LakeView Grande Convention Hall in Rampura. Confirm the required floor and booking details directly.",
+    "city": "Dhaka",
+    "maps_url": "https://www.google.com/maps/place/Lake+View+Convention/@23.7382219,90.3780065,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b9dfe4c81d67:0x3e6b4e1250ef96ab!8m2!3d23.7382219!4d90.3780065!16s%2Fg%2F11lv8ddwfz?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "bd-jolpai-restaurant-party-center",
+    "name": "Jolpai Restaurant & Party Center",
+    "bn_name": null,
+    "aliases": [],
+    "category": "Event Hall",
+    "division": "6",
+    "district": "47",
+    "area": "Moghbazar",
+    "address": "Dhaka, Bangladesh",
+    "address_status": "partial",
+    "coordinates": {
+      "lat": 23.7480994,
+      "lon": 90.4030163
+    },
+    "phones": [
+      {
+        "number": "+8801744316100",
+        "source": "https://www.google.com/maps/place/Jolpai+Restaurant+%26+Party+Center/@23.7480994,90.4004414,17z/data=!3m1!4b1!4m14!1m7!3m6!1s0x3755b9f1a82f6cdf:0xedf85b1305870fa5!2sJolpai+Restaurant+%26+Party+Center!8m2!3d23.7480994!4d90.4030163!16s%2Fg%2F11g87drh8w!3m5!1s0x3755b9f1a82f6cdf:0xedf85b1305870fa5!8m2!3d23.7480994!4d90.4030163!16s%2Fg%2F11g87drh8w?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+        "checked": "2026-10-27",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": null,
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "source-checked",
+    "last_checked": "2026-10-27",
+    "evidence": [
+      {
+        "url": "https://www.google.com/maps/place/Jolpai+Restaurant+%26+Party+Center/@23.7480994,90.4004414,17z/data=!3m1!4b1!4m14!1m7!3m6!1s0x3755b9f1a82f6cdf:0xedf85b1305870fa5!2sJolpai+Restaurant+%26+Party+Center!8m2!3d23.7480994!4d90.4030163!16s%2Fg%2F11g87drh8w!3m5!1s0x3755b9f1a82f6cdf:0xedf85b1305870fa5!8m2!3d23.7480994!4d90.4030163!16s%2Fg%2F11g87drh8w?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "address",
+          "coordinates",
+          "phones",
+          "maps_url"
+        ],
+        "checked": "2026-10-27",
+        "kind": "independent",
+        "reuse": "Individual public business facts manually inspected on the named listing; no photos, ratings, reviews, hours, descriptions or restricted API responses stored."
+      }
+    ],
+    "notes": "A precise street address and current wedding-booking terms were not published on the inspected business profile. Use the mapped location and confirm with the venue.",
+    "city": "Dhaka",
+    "collection": "restaurant-party-centers",
+    "maps_url": "https://www.google.com/maps/place/Jolpai+Restaurant+%26+Party+Center/@23.7480994,90.4004414,17z/data=!3m1!4b1!4m14!1m7!3m6!1s0x3755b9f1a82f6cdf:0xedf85b1305870fa5!2sJolpai+Restaurant+%26+Party+Center!8m2!3d23.7480994!4d90.4030163!16s%2Fg%2F11g87drh8w!3m5!1s0x3755b9f1a82f6cdf:0xedf85b1305870fa5!8m2!3d23.7480994!4d90.4030163!16s%2Fg%2F11g87drh8w?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "bd-red-orchid-party-center-eskaton",
+    "name": "Red Orchid Restaurant & Party Center",
+    "bn_name": null,
+    "aliases": [],
+    "category": "Event Hall",
+    "division": "6",
+    "district": "47",
+    "area": "Eskaton",
+    "address": "400 New Eskaton Road, 3rd Floor, Dhaka 1000, Bangladesh",
+    "address_status": "published",
+    "coordinates": {
+      "lat": 23.748136,
+      "lon": 90.4016725
+    },
+    "phones": [
+      {
+        "number": "+8801314909285",
+        "source": "https://www.redorchidbd.com/contact/",
+        "checked": "2026-10-27",
+        "status": "published-not-call-tested"
+      },
+      {
+        "number": "+8801611965414",
+        "source": "https://www.redorchidbd.com/contact/",
+        "checked": "2026-10-27",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": "https://www.redorchidbd.com/",
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "cross-checked",
+    "last_checked": "2026-10-27",
+    "evidence": [
+      {
+        "url": "https://www.redorchidbd.com/contact/",
+        "fields": [
+          "name",
+          "area",
+          "address",
+          "phones",
+          "website"
+        ],
+        "checked": "2026-10-27",
+        "kind": "official",
+        "reuse": "First-party venue website manually inspected; only individual public business facts retained."
+      },
+      {
+        "url": "https://www.redorchidbd.com/",
+        "fields": [
+          "name",
+          "category",
+          "website"
+        ],
+        "checked": "2026-10-27",
+        "kind": "official",
+        "reuse": "First-party venue website manually inspected; only individual public business facts retained."
+      },
+      {
+        "url": "https://www.google.com/maps/place/Red+Orchid+Restaurant+%26+Party+Center/@23.748136,90.4016725,17z/data=!4m14!1m7!3m6!1s0x3755b8904c3f18ef:0x8a77ea03ab53614d!2sRed+Orchid+Restaurant+%26+Party+Center!8m2!3d23.748136!4d90.4016725!16s%2Fg%2F1q648vx2y!3m5!1s0x3755b8904c3f18ef:0x8a77ea03ab53614d!8m2!3d23.748136!4d90.4016725!16s%2Fg%2F1q648vx2y?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "address",
+          "coordinates",
+          "phones",
+          "maps_url"
+        ],
+        "checked": "2026-10-27",
+        "kind": "independent",
+        "reuse": "Individual public business facts manually inspected on the named listing; no photos, ratings, reviews, hours, descriptions or restricted API responses stored."
+      }
+    ],
+    "notes": "The official site describes a party center and publishes both business numbers. Confirm wedding arrangements directly.",
+    "city": "Dhaka",
+    "collection": "restaurant-party-centers",
+    "maps_url": "https://www.google.com/maps/place/Red+Orchid+Restaurant+%26+Party+Center/@23.748136,90.4016725,17z/data=!4m14!1m7!3m6!1s0x3755b8904c3f18ef:0x8a77ea03ab53614d!2sRed+Orchid+Restaurant+%26+Party+Center!8m2!3d23.748136!4d90.4016725!16s%2Fg%2F1q648vx2y!3m5!1s0x3755b8904c3f18ef:0x8a77ea03ab53614d!8m2!3d23.748136!4d90.4016725!16s%2Fg%2F1q648vx2y?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": "bd-fakruddin-party-centre-moghbazar",
+    "name": "Fakruddin Restaurant Catering and Party Centre",
+    "bn_name": null,
+    "aliases": [
+      "Fakhruddin Restaurant Catering and Party Centre"
+    ],
+    "category": "Event Hall",
+    "division": "6",
+    "district": "47",
+    "area": "Moghbazar",
+    "address": "25 Shahid Shangbadik Selina Parveen Sarak, Moghbazar Road, Dhaka 1217, Bangladesh",
+    "address_status": "published",
+    "coordinates": {
+      "lat": 23.7473241,
+      "lon": 90.4097956
+    },
+    "phones": [
+      {
+        "number": "+8801726503284",
+        "source": "https://www.google.com/maps/place/Fakruddin+Restaurant+Catering+and+Party+Centre/@23.7473241,90.4097956,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b960572d26db:0x895dd4e8ee24737b!8m2!3d23.7473241!4d90.4097956!16s%2Fg%2F11sp8_jvfd?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+        "checked": "2026-10-27",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": null,
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "source-checked",
+    "last_checked": "2026-10-27",
+    "evidence": [
+      {
+        "url": "https://www.google.com/maps/place/Fakruddin+Restaurant+Catering+and+Party+Centre/@23.7473241,90.4097956,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b960572d26db:0x895dd4e8ee24737b!8m2!3d23.7473241!4d90.4097956!16s%2Fg%2F11sp8_jvfd?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+        "fields": [
+          "name",
+          "aliases",
+          "category",
+          "area",
+          "address",
+          "coordinates",
+          "phones",
+          "maps_url"
+        ],
+        "checked": "2026-10-27",
+        "kind": "independent",
+        "reuse": "Individual public business facts manually inspected on the named listing; no photos, ratings, reviews, hours, descriptions or restricted API responses stored."
+      }
+    ],
+    "notes": "The named listing identifies restaurant, catering and party-center services; current wedding-booking terms were not independently confirmed.",
+    "city": "Dhaka",
+    "collection": "restaurant-party-centers",
+    "maps_url": "https://www.google.com/maps/place/Fakruddin+Restaurant+Catering+and+Party+Centre/@23.7473241,90.4097956,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b960572d26db:0x895dd4e8ee24737b!8m2!3d23.7473241!4d90.4097956!16s%2Fg%2F11sp8_jvfd?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
   }
 ]

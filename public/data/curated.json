@@ -99,6 +99,66 @@
       "basis": "Venue-specific public booking page establishes the hall name, published address and business contact; no precise coordinates inferred.",
       "source": "https://humayra.com.bd/product/popeyes-plus-convention-hall/",
       "checked": "2026-10-26"
+    },
+    {
+      "id": "bd-midnight-sun-1",
+      "decision": "admitted-source-checked",
+      "basis": "Individually inspected named business profile; public phone published but not call-tested. Wedding booking at restaurant branches may need direct confirmation.",
+      "checked": "2026-10-27"
+    },
+    {
+      "id": "bd-midnight-sun-2",
+      "decision": "admitted-source-checked",
+      "basis": "Individually inspected named business profile; public phone published but not call-tested. Wedding booking at restaurant branches may need direct confirmation.",
+      "checked": "2026-10-27"
+    },
+    {
+      "id": "bd-midnight-sun-3",
+      "decision": "admitted-source-checked",
+      "basis": "Individually inspected named business profile; public phone published but not call-tested. Wedding booking at restaurant branches may need direct confirmation.",
+      "checked": "2026-10-27"
+    },
+    {
+      "id": "bd-secret-garden-event-spaces",
+      "decision": "admitted-source-checked",
+      "basis": "Individually inspected business profile cross-checked with a distinct official or OSM source; public booking contacts are published, not call-tested.",
+      "checked": "2026-10-27"
+    },
+    {
+      "id": "bd-polwel-convention-center",
+      "decision": "admitted-source-checked",
+      "basis": "Individually inspected named business profile; public phone published but not call-tested. Wedding booking at restaurant branches may need direct confirmation.",
+      "checked": "2026-10-27"
+    },
+    {
+      "id": "bd-rupali-community-center-mirpur",
+      "decision": "admitted-source-checked",
+      "basis": "Individually inspected business profile cross-checked with a distinct official or OSM source; public booking contacts are published, not call-tested.",
+      "checked": "2026-10-27"
+    },
+    {
+      "id": "bd-lake-view-convention-dhanmondi",
+      "decision": "admitted-source-checked",
+      "basis": "Individually inspected business profile cross-checked with a distinct official or OSM source; public booking contacts are published, not call-tested.",
+      "checked": "2026-10-27"
+    },
+    {
+      "id": "bd-jolpai-restaurant-party-center",
+      "decision": "admitted-source-checked",
+      "basis": "Individually inspected named business profile; public phone published but not call-tested. Wedding booking at restaurant branches may need direct confirmation.",
+      "checked": "2026-10-27"
+    },
+    {
+      "id": "bd-red-orchid-party-center-eskaton",
+      "decision": "admitted-source-checked",
+      "basis": "Individually inspected business profile cross-checked with a distinct official or OSM source; public booking contacts are published, not call-tested.",
+      "checked": "2026-10-27"
+    },
+    {
+      "id": "bd-fakruddin-party-centre-moghbazar",
+      "decision": "admitted-source-checked",
+      "basis": "Individually inspected named business profile; public phone published but not call-tested. Wedding booking at restaurant branches may need direct confirmation.",
+      "checked": "2026-10-27"
     }
   ],
   "conflicts": [
@@ -2475,5 +2535,61 @@
     ],
     "checked": "2026-10-27",
     "deduplicated_existing_id": "bd-osm-node-4072852261"
+  },
+  "additional_wedding_places_2026_10_27": {
+    "scope": "Owner-requested additional Dhaka wedding places and Midnight Sun branches. No exhaustive Dhaka claim.",
+    "added_ids": [
+      "bd-midnight-sun-1",
+      "bd-midnight-sun-2",
+      "bd-midnight-sun-3",
+      "bd-secret-garden-event-spaces",
+      "bd-polwel-convention-center",
+      "bd-rupali-community-center-mirpur",
+      "bd-lake-view-convention-dhanmondi",
+      "bd-jolpai-restaurant-party-center",
+      "bd-red-orchid-party-center-eskaton",
+      "bd-fakruddin-party-centre-moghbazar"
+    ],
+    "modified_ids": [
+      "bd-osm-way-490274323"
+    ],
+    "falcon_change": {
+      "field": "maps_url",
+      "before": "https://www.google.com/maps/search/?api=1&query=Falcon%20Hall%20Tejgaon%20Dhaka",
+      "after": "https://www.google.com/maps/place/BAF+Falcon+Hall/@23.7713571,90.3900861,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c75c5e71bcaf:0x6f80e95fbd7b6e8d!8m2!3d23.7713571!4d90.3900861!16s%2Fg%2F1tdh6tg8?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+      "reason": "Individual business listing matched existing Falcon Hall, so the existing record was improved instead of adding a duplicate."
+    },
+    "held": [
+      {
+        "name": "Midnight Sun, Bashundhara City",
+        "reason": "Business listing reported closed; excluded."
+      },
+      {
+        "name": "Emmanuelle’s Party Center, Gulshan",
+        "reason": "Same public number and near-identical point as existing Emmanuelle’s Banquet Hall; held as probable duplicate/address conflict."
+      },
+      {
+        "name": "Emmanuelle’s Convention Center, Dhanmondi",
+        "reason": "Very near existing Shimanto Convention Center; separate operator/floor identity requires review."
+      },
+      {
+        "name": "Dhaka Party Center, Bangshal",
+        "reason": "About 31 m from indexed Hazi Zamman Community Centre; different contact and address, but independent premises identity not established."
+      },
+      {
+        "name": "ATN Ananda Ullash Convention Center",
+        "reason": "Matched listing reported permanently closed."
+      },
+      {
+        "name": "Kazi Community Center",
+        "reason": "Matched listing reported permanently closed."
+      },
+      {
+        "name": "Rupali Community Centre second OSM point",
+        "reason": "Same name nearby; held as possible relocation or duplicate. Current matched point admitted once."
+      }
+    ],
+    "limitations": "Individual named business listings and allowed first-party pages were reviewed; no claim of exhaustive coverage, call-tested contacts, or weddings at every restaurant branch.",
+    "checked": "2026-10-27"
   }
 }

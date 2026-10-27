@@ -135,6 +135,10 @@
         "bd-mahal-community-center-badda",
         "bd-alkaderia-convention-hall-rampura",
         "bd-aristocrat-banquet-hall-motijheel",
+        "bd-secret-garden-event-spaces",
+        "bd-polwel-convention-center",
+        "bd-rupali-community-center-mirpur",
+        "bd-lake-view-convention-dhanmondi",
         "bd-victoria-convention-center-dhanmondi"
       ]
     },
@@ -165,7 +169,13 @@
         "bd-red-chilli-party-center-banasree",
         "bd-shaker-park-party-center-jatrabari",
         "bd-golden-sun-party-center-mirpur",
-        "bd-sector-7-party-center-uttara"
+        "bd-sector-7-party-center-uttara",
+        "bd-midnight-sun-1",
+        "bd-midnight-sun-2",
+        "bd-midnight-sun-3",
+        "bd-jolpai-restaurant-party-center",
+        "bd-red-orchid-party-center-eskaton",
+        "bd-fakruddin-party-centre-moghbazar"
       ]
     },
     {
