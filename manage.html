@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>Manage halls · VenueRadar BD</title>
+    <title>Manage venues · VenueRadar BD</title>
     <link rel="icon" href="./favicon.svg">
   </head>
   <body class="manager-body">
@@ -14,24 +14,25 @@
     </header>
     <main class="manager-shell">
       <div class="manager-intro">
-        <div><p class="eyebrow">DIRECTORY MANAGER</p><h1>Manage Dhaka halls</h1><p>Choose a venue, update its details, then review and publish your draft.</p></div>
-        <button id="newVenue" class="primary" disabled>Add a hall</button>
+        <div><p class="eyebrow">DIRECTORY MANAGER</p><h1>Manage Dhaka venues</h1><p>Choose a venue, update its details, then review and publish your draft.</p></div>
+        <button id="newVenue" class="primary" disabled>Add a venue</button>
       </div>
       <p id="adminMessage" class="notice" role="status">Loading directory…</p>
       <div class="manager-toolbar">
-        <div class="manager-search"><label for="adminSearch">Find a hall</label><input id="adminSearch" type="search" placeholder="Name, area or missing:phone" title="Review queues: missing:phone, missing:address, missing:map, missing:area, needs:review. Add a name or area after the queue to narrow results." disabled><label class="review-filter"><input id="reviewOnly" type="checkbox">Needs review only</label></div>
+        <div class="manager-search"><label for="adminSearch">Find a venue</label><input id="adminSearch" type="search" placeholder="Name, area or missing:phone" title="Review queues: missing:phone, missing:address, missing:map, missing:area, needs:review. Add a name or area after the queue to narrow results." disabled><label class="review-filter"><input id="reviewOnly" type="checkbox">Needs review only</label></div>
         <div class="manager-tools"><button id="recoverDraft" hidden>Download older draft</button><button id="exportData" disabled>Download JSON</button><label class="import-control">Import JSON<input id="importData" type="file" accept="application/json,.json"></label><button id="discardDraft" disabled>Discard draft</button></div>
       </div>
       <div class="manager-layout">
         <section class="manager-list" aria-label="Choose a venue"><p id="adminCount" class="hint"></p><div id="adminList"></div></section>
         <section class="manager-editor">
-          <div id="editorEmpty" class="empty"><h2>Select a hall to edit</h2><p>Update the name, area, address, phone numbers and map link in one place.</p></div>
+          <div id="editorEmpty" class="empty"><h2>Select a venue to edit</h2><p>Update the name, collection, area, address, phone numbers and map link in one place.</p></div>
           <form id="venueForm" hidden>
-            <div class="editor-heading"><h2 id="editorTitle">Edit hall</h2><button id="deleteVenue" type="button" class="danger">Remove hall</button></div>
+            <div class="editor-heading"><h2 id="editorTitle">Edit venue</h2><button id="deleteVenue" type="button" class="danger">Remove venue</button></div>
             <input id="editId" type="hidden">
             <div class="form-grid">
-              <label>Hall name<input id="editName" required maxlength="180"></label>
+              <label>Venue name<input id="editName" required maxlength="180"></label>
               <label>Area / zone<input id="editArea" list="areaNames" required placeholder="e.g. Khilgaon"><datalist id="areaNames"></datalist></label>
+              <label>Collection<select id="editCollection"><option value="community-halls">Community centers & halls</option><option value="restaurant-party-centers">Restaurants & party centers</option><option value="hotels">Hotel venues</option></select></label>
               <label class="full">Address<textarea id="editAddress" required rows="2"></textarea></label>
               <label>Address detail<select id="editAddressStatus"><option value="partial">Road / landmark only</option><option value="published">Complete premises address</option><option value="not_available">Not available</option></select></label>
               <label>Phone numbers<textarea id="editPhones" rows="2" placeholder="01712345678, 02-48321499"></textarea><small>Separate numbers with commas or new lines. Bangladesh formatting is handled for you.</small></label>

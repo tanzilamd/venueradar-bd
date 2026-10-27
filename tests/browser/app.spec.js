@@ -4,6 +4,7 @@ import AxeBuilder from "@axe-core/playwright";
 const venues = JSON.parse(fs.readFileSync("public/data/venues.json", "utf8"));
 const catalog = JSON.parse(fs.readFileSync("public/data/collections.json", "utf8"));
 const hallIds = catalog.groups.find((g) => g.id === "community-halls").venue_ids;
+const partyIds = catalog.groups.find((g) => g.id === "restaurant-party-centers").venue_ids;
 const cards = (p) => p.locator("#results .card");
 const card = (p, id) => p.locator(`#results [data-venue="${id}"]`);
 const fixture = (id, name, extra = {}) => ({ id, city: "Dhaka", name, aliases: [], bn_name: null, category: "Convention Center", division: "6", district: "47", area: "Banasree", address: "TEST ONLY address, Dhaka", address_status: "published", coordinates: { lat: 23.76, lon: 90.42 }, phones: [{ number: "+8801712345678", source: "https://example.org/test-only", checked: "2026-10-25", status: "published-not-call-tested" }], website: null, capacity: null, capacity_layout: null, facilities: [], verification: "source-checked", last_checked: "2026-10-25", evidence: [{ url: "https://example.org/test-only", fields: ["name", "phones"], kind: "official", checked: "2026-10-25" }], notes: "Synthetic browser fixture only.", ...extra });
@@ -54,6 +55,17 @@ test("real Dhaka directory is contact-first with a simple detail view",async({pa
  await card(page,venue.id).getByRole("button",{name:/^Details for /}).click();await expect(page.locator("#dialog")).toContainText(venue.name);
  await expect(page.locator("#dialog")).toContainText("Phone numbers");await expect(page.locator("#dialog")).not.toContainText("Published capacity");await expect(page.locator("#dialog .source-details")).toHaveCount(0);expect(errors).toEqual([]);
 });
+test("restaurant and party centers have an independent, shareable collection", async ({ page }) => {
+  await page.goto("/?collection=restaurant-party-centers");
+  await expect(cards(page)).toHaveCount(partyIds.length);
+  await expect(card(page, "bd-onion-leaf-restaurant-party-center")).toBeVisible();
+  await expect(card(page, "bd-onion-leaf-restaurant-party-center").locator('a[href^="tel:"]')).toBeVisible();
+  await page.reload();
+  await expect(cards(page)).toHaveCount(partyIds.length);
+  await page.locator("#search").fill("Onion Leaf");
+  await expect(cards(page)).toHaveCount(1);
+  await expect(card(page, "bd-onion-leaf-restaurant-party-center")).toBeVisible();
+});
 test("area results are exact until nearby neighborhoods are requested",async({page})=>{
  await mock(page);await page.goto("/");await area(page,"Khilgaon");await expect(cards(page)).toHaveCount(1);await expect(cards(page)).toContainText("Beta");
  await expect(page.locator("#includeNearby")).not.toBeChecked();await page.locator("#includeNearby").check();expect(await cards(page).count()).toBeGreaterThanOrEqual(1);
@@ -61,7 +73,7 @@ test("area results are exact until nearby neighborhoods are requested",async({pa
 });
 test("mobile nearby shortcut toggles exact results and area badges never cover addresses", async ({ page }) => {
   await page.setViewportSize({ width: 320, height: 750 });
-  await page.goto("/?area=Rampura&nearby=1");
+  await page.goto("/?collection=&area=Rampura&nearby=1");
   await expect(page.locator('#directory[aria-busy="false"]')).toBeVisible();
   const quick = page.locator("#quickNearby"), blue = card(page, "bd-blue-moon-party-centre-khilgaon");
   await expect(quick).toBeVisible();

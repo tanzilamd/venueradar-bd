@@ -73,10 +73,11 @@ test("manager finds review notices and clears one only after source confirmation
   expect(saved.review_notice).toBeUndefined();
   expect(saved.evidence).toContainEqual(expect.objectContaining({ url: "https://example.org/checked-business" }));
 });
-test("new hall previews and exports a valid single JSON file", async ({ page }) => {
+test("new party center previews and exports a valid single JSON file", async ({ page }) => {
   await load(page);
   await page.locator("#newVenue").click();
-  await page.locator("#editName").fill("TEST ONLY New Hall");
+  await page.locator("#editName").fill("TEST ONLY New Party Center");
+  await page.locator("#editCollection").selectOption("restaurant-party-centers");
   await page.locator("#editArea").fill("Rampura");
   await page.locator("#editAddress").fill("House1, Road1, Rampura, Dhaka");
   await page.locator("#editPhones").fill("01712345678");
@@ -91,6 +92,8 @@ test("new hall previews and exports a valid single JSON file", async ({ page }) 
   const json = JSON.parse(fs.readFileSync(await file.path(), "utf8"));
   expect(json).toHaveLength(2);
   expect(json[1].phones[0].number).toBe("+8801712345678");
+  expect(json[1].collection).toBe("restaurant-party-centers");
+  expect(json[1].category).toBe("Event Hall");
 });
 test("manager is accessible and mobile form has no horizontal overflow", async ({ page }) => {
   await load(page);

@@ -57,6 +57,13 @@
           "Event Hall"
         ]
       },
+      "collection": {
+        "enum": [
+          "community-halls",
+          "restaurant-party-centers",
+          "hotels"
+        ]
+      },
       "division": {
         "type": "string"
       },

@@ -612,6 +612,15 @@
       "bd-osm-way-1561267432"
     ],
     "duplicate_groups": {
+      "2": [
+        140
+      ],
+      "52": [
+        88
+      ],
+      "58": [
+        20
+      ],
       "340": [
         13
       ],
@@ -620,15 +629,6 @@
       ],
       "350": [
         64
-      ],
-      "52": [
-        88
-      ],
-      "58": [
-        20
-      ],
-      "2": [
-        140
       ],
       "368": [
         345
@@ -2409,5 +2409,71 @@
       }
     ],
     "source_limits": "The venue-linked ALKADERIA site returned HTTP 403 and the Bird's Eye site returned HTTP 503 through the public route. Neither was treated as inspected official evidence or stored as a confirmed website. The other map-only additions do not assert current wedding-booking terms."
+  },
+  "restaurant_party_expansion_2026_10_27": {
+    "scope": "Separated mixed-use restaurant and party venues from dedicated halls. Added only individually matched Dhaka businesses; collection membership describes venue type and does not assert wedding booking at every business.",
+    "moved_ids": [
+      "bd-osm-node-4729172392",
+      "bd-osm-node-4973354765",
+      "bd-osm-node-9932948783",
+      "bd-osm-node-13134454618",
+      "bd-osm-way-449635016",
+      "bd-uttara-party-center",
+      "bd-blue-moon-party-centre-khilgaon",
+      "bd-taiking-party-centre-middle-badda",
+      "bd-shadi-mahal-party-center-badda",
+      "bd-kamrul-restaurant-convention-center",
+      "bd-china-land-party-center-khilgaon",
+      "bd-haques-banquet-hall-meradia",
+      "bd-birds-eye-convention-hall-paltan",
+      "bd-party-palace-banasree",
+      "bd-modhumilon-party-center-badda",
+      "bd-osm-node-4072852261"
+    ],
+    "added_ids": [
+      "bd-onion-leaf-restaurant-party-center",
+      "bd-shanghai-chinese-party-center-jatrabari",
+      "bd-arabian-khabsa-party-center-jigatola",
+      "bd-dhanmondi-party-center",
+      "bd-red-chilli-party-center-banasree",
+      "bd-shaker-park-party-center-jatrabari",
+      "bd-victoria-convention-center-dhanmondi",
+      "bd-golden-sun-party-center-mirpur",
+      "bd-sector-7-party-center-uttara"
+    ],
+    "operator_wedding_confirmed": [
+      "bd-onion-leaf-restaurant-party-center",
+      "bd-haques-banquet-hall-meradia"
+    ],
+    "source_conflicts": [
+      {
+        "name": "Shanghai Chinese Restaurant & Party Center",
+        "issue": "the OSM extract lists +8801924748437; named current business profile lists +8801943317335. Only the latter is displayed; neither line has been call-tested."
+      },
+      {
+        "name": "The Golden Sun Chinese Restaurant and Party Center",
+        "issue": "Older OSM listing is in Jatrabari; current matched public profile is in Mirpur. No relationship inferred."
+      }
+    ],
+    "held_candidates": [
+      {
+        "name": "Rainbow Bridge Restaurant & Party Center",
+        "reason": "OSM entry exists, but the targeted public profile search did not uniquely identify the same current business."
+      },
+      {
+        "name": "Golden Gate Restaurant & Party Center",
+        "reason": "Potential duplicate or replacement of Blue Moon, only about 17 m away."
+      },
+      {
+        "name": "Rodevu Restaurant & Party Center",
+        "reason": "Matching public listing previously reported permanently closed."
+      },
+      {
+        "name": "Casanova Party Center",
+        "reason": "Matching public listing previously reported permanently closed."
+      }
+    ],
+    "checked": "2026-10-27",
+    "deduplicated_existing_id": "bd-osm-node-4072852261"
   }
 }

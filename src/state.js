@@ -8,7 +8,7 @@ function readURL(url, validIds = /* @__PURE__ */ new Set()) {
   for (const [key, param] of Object.entries(keys)) if (p.has(param)) filters[key] = p.get(param).slice(0, 180);
   for (const [key, param] of Object.entries(bools)) filters[key] = p.get(param) === "1";
   if (p.has("nearby")) filters.includeNearby = p.get("nearby") === "1";
-  if (!["", "community-halls", "hotels"].includes(filters.collection)) filters.collection = defaultFilters(tab).collection;
+  if (!["", "community-halls", "restaurant-party-centers", "hotels"].includes(filters.collection)) filters.collection = defaultFilters(tab).collection;
   if (!["", "Small", "Medium", "Large", "Unknown"].includes(filters.size)) filters.size = "";
   if (!["name", "distance"].includes(filters.sort)) filters.sort = "name";
   if (!["all", "no-notice", "needs-review"].includes(filters.reviewStatus)) filters.reviewStatus = "all";

@@ -26,15 +26,18 @@ function editVenue(rows, input, date = (/* @__PURE__ */ new Date()).toISOString(
   const source = safeURL(input.source);
   if (!source) throw Error("Add the public source link for this change. Choose Owner contribution if independent verification is pending.");
   const kind = input.sourceKind || "submission";
+  const collection = input.collection || old?.collection || "community-halls";
+  if (!["community-halls", "restaurant-party-centers", "hotels"].includes(collection)) throw Error("Choose a valid collection.");
   if (!["official", "independent", "submission"].includes(kind)) throw Error("Choose a source type.");
   const confirming = input.confirmNotice === true;
   if (confirming && !old?.review_notice) throw Error("This venue has no review notice to confirm.");
   if (confirming && kind === "submission") throw Error("Resolve a review notice using an inspected public business source, not an owner contribution.");
   const maps = safeURL(input.maps, true), website = safeURL(input.website);
   const numbers = [...new Set(input.phones.split(/[,;\n]/).map(normalizePhone).filter(Boolean))];
-  const v = old ? structuredClone(old) : { id: "bd-" + name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""), bn_name: null, aliases: [], category: "Convention Center", city: "Dhaka", division: "6", district: "47", coordinates: null, capacity: null, capacity_layout: null, facilities: [], evidence: [], notes: null, website: null, phones: [], verification: kind === "submission" ? "user-submitted" : "source-checked" };
+  const v = old ? structuredClone(old) : { id: "bd-" + name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""), bn_name: null, aliases: [], category: collection === "restaurant-party-centers" ? "Event Hall" : "Convention Center", city: "Dhaka", division: "6", district: "47", coordinates: null, capacity: null, capacity_layout: null, facilities: [], evidence: [], notes: null, website: null, phones: [], verification: kind === "submission" ? "user-submitted" : "source-checked" };
   if (!old && rows.some((r) => r.id === v.id)) throw Error("This venue ID already exists. Use a more specific name.");
   Object.assign(v, { name, area, address, address_status: input.addressStatus || "partial", last_checked: date });
+  if (input.collection) v.collection = collection;
   v.phones = numbers.map((number) => {
     const previous = old?.phones.find((p) => p.number === number);
     if (confirming && previous?.status === "submitted-not-verified") return { number, source, checked: date, status: "published-not-call-tested" };
@@ -61,12 +64,15 @@ function editVenue(rows, input, date = (/* @__PURE__ */ new Date()).toISOString(
 }
 function deriveCatalog(rows, collections, areas) {
   const ids = new Set(rows.map((r) => r.id)), assigned = /* @__PURE__ */ new Set();
-  const groups = structuredClone(collections.groups).map((g) => ({ ...g, venue_ids: g.venue_ids.filter((id) => ids.has(id) && !assigned.has(id) && (assigned.add(id), true)) }));
+  const explicit = new Map(rows.filter((r) => r.collection).map((r) => [r.id, r.collection]));
+  const groups = structuredClone(collections.groups).map((g) => ({ ...g, venue_ids: g.venue_ids.filter((id) => ids.has(id) && !explicit.has(id) && !assigned.has(id) && (assigned.add(id), true)) }));
   const hall = groups.find((g) => g.id === "community-halls");
   if (!hall) throw Error("Community hall collection is missing.");
   rows.forEach((v) => {
     if (!assigned.has(v.id)) {
-      hall.venue_ids.push(v.id);
+      const target = v.collection ? groups.find((g) => g.id === v.collection) : hall;
+      if (!target) throw Error(`Unknown collection for ${v.id}: ${v.collection}`);
+      target.venue_ids.push(v.id);
       assigned.add(v.id);
     }
   });

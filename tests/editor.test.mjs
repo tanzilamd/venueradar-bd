@@ -28,6 +28,19 @@ test("visual edits retain hidden facts and old evidence; unknown areas and colle
   assert.equal(d.areas.neighborhoods[0].name, form.area);
   assert.throws(() => editVenue([v], { ...form, maps: "javascript:alert(1)" }));
 });
+test("collection selection survives visual edits and rebuilds one membership", () => {
+  const v = base(), form = { ...input(v), collection: "restaurant-party-centers" };
+  const out = editVenue([v], form)[0];
+  const catalog = deriveCatalog([out], { default: "community-halls", groups: [
+    { id: "community-halls", venue_ids: [v.id] },
+    { id: "restaurant-party-centers", venue_ids: [] },
+    { id: "hotels", venue_ids: [] }
+  ] }, { neighborhoods: [{ id: "1", name: "Khilgaon" }] });
+  assert.equal(out.collection, "restaurant-party-centers");
+  assert.deepEqual(catalog.collections.groups.map((g) => g.venue_ids), [[], [v.id], []]);
+  assert.deepEqual(validateData([out], regions, schema, boundary), []);
+  assert.throws(() => editVenue([v], { ...form, collection: "other" }), /valid collection/);
+});
 test("duplicate names are rejected and deletes are explicit change-set entries", () => {
   const v = base();
   assert.throws(() => editVenue([v], { ...input(v), id: "" }));

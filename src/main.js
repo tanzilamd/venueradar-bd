@@ -226,7 +226,7 @@ function activeChips() {
   if (f.search) entries.push(["search", `Search: ${f.search}`]);
   if (f.area) entries.push(["area", f.area]);
   if (f.area && f.includeNearby) entries.push(["includeNearby", "Nearby included"]);
-  if (f.collection !== defaults.collection) entries.push(["collection", f.collection === "hotels" ? "Hotel venues" : f.collection === "community-halls" ? "Community centers & halls" : "All venues"]);
+  if (f.collection !== defaults.collection) entries.push(["collection", collections.groups.find((g) => g.id === f.collection)?.label || "All venues"]);
   if (f.phone) entries.push(["phone", "With a phone number"]);
   $("activeFilters").replaceChildren();
   for (const [key, label] of entries) {
@@ -613,7 +613,7 @@ function compareView() {
 function method() {
   const box = el("section");
   box.append(heading("About VenueRadar BD"));
-  box.append(el("p", "Find community centers, convention halls and event venues by area in Dhaka. This is a growing directory, not a complete list of every hall."));
+  box.append(el("p", "Find community centers, convention halls, restaurants and party centers by area in Dhaka. This is a growing directory, not a complete list of every wedding venue. Party-center listings do not guarantee wedding bookings; confirm suitability directly."));
   box.append(el("h3", "Information & sources"), el("p", "We use public venue and operator websites, individually reviewed business listings, OpenStreetMap and clearly labelled owner contributions. OpenFreeMap serves the interactive basemap; attribution appears on the map. Published numbers are not call-tested. Confirm the address, current operation and booking details directly. Google Maps provides current ratings and reviews; we do not copy ratings or reviews."));
   box.append(el("h3", "Your privacy"), el("p", "Saved venues and comparisons stay in this browser. Near me requests your location once and does not store it. No account is needed to explore. Maps and external websites receive normal connection information."));
   box.append(external("Data sources & research notes", "https://github.com/tanzilamd/venueradar-bd/blob/main/docs/DATA_SOURCES.md"), el("p"), external("© OpenStreetMap contributors · ODbL", "https://www.openstreetmap.org/copyright"));

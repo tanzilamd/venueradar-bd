@@ -160,7 +160,7 @@ function filterPanel({ prefix = "", values, areas, rows, onChange, onLocate }) {
     return label;
   }
   const nearbyCheck = check("includeNearby", "Include nearby neighborhoods");
-  select("collection", "Collection", [["community-halls", "Halls & centers"], ["hotels", "Hotel venues"], ["", "All venues"]]);
+  select("collection", "Collection", [["community-halls", "Halls & centers"], ["restaurant-party-centers", "Restaurants & party centers"], ["hotels", "Hotel venues"], ["", "All venues"]]);
   check("phone", "With a phone number");
   root.append(button("Near me", onLocate, "nearby"), el("p", "One-time location access, only with permission. Your location is never saved.", "hint"));
   const sync = (next, nextRows = rows) => {

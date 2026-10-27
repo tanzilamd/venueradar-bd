@@ -2055,11 +2055,11 @@
     "division": "6",
     "district": "47",
     "area": "Madhubag",
-    "address": "Dhaka, Bangladesh — street address not supplied in the map listing.",
-    "address_status": "not_available",
+    "address": "352 Modhubag, Moghbazar, Dhaka 1217, Bangladesh",
+    "address_status": "partial",
     "coordinates": {
-      "lat": 23.7568792,
-      "lon": 90.4113471
+      "lat": 23.7573028,
+      "lon": 90.4105097
     },
     "phones": [
       {
@@ -2074,7 +2074,7 @@
     "capacity_layout": null,
     "facilities": [],
     "verification": "open-data-listed",
-    "last_checked": "2026-10-25",
+    "last_checked": "2026-10-27",
     "evidence": [
       {
         "url": "https://www.openstreetmap.org/node/4072852261",
@@ -2125,9 +2125,35 @@
         "checked": "2026-10-25",
         "kind": "independent",
         "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+      },
+      {
+        "url": "https://www.openstreetmap.org/way/390936527",
+        "fields": [
+          "name",
+          "address",
+          "coordinates"
+        ],
+        "checked": "2026-10-27",
+        "kind": "open-data",
+        "reuse": "OSM ODbL-1.0 building entry at the same named party house; older street number kept as partial until operator reconfirmation."
+      },
+      {
+        "url": "https://www.google.com/maps/place/Kader's+Party+House/@23.7573028,90.4105097,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b880d124adbb:0x48d7e20fa950f7f4!8m2!3d23.7573028!4d90.4105097!16s%2Fg%2F11f403mkfq",
+        "fields": [
+          "name",
+          "aliases",
+          "category",
+          "area",
+          "coordinates",
+          "phones",
+          "maps_url"
+        ],
+        "checked": "2026-10-27",
+        "kind": "independent",
+        "reuse": "Individually inspected named public business profile. Exact listing name, location and previously sourced business number match; no ratings, reviews, photographs or hours retained."
       }
     ],
-    "notes": "OpenStreetMap listing, not operator-confirmed. Wedding booking, current operation and business contacts must be confirmed directly. The marker is the published map point, not a verified entrance. No unambiguous public business number was available in this source. The map record was last edited 2016-09-07. The source was reviewed on 2026-10-25; that is not an on-site verification date. Public business number checked on the named listing; phone ownership/current activity has not been tested by calling.",
+    "notes": "OpenStreetMap listing, not operator-confirmed. Wedding booking, current operation and business contacts must be confirmed directly. The marker is the published map point, not a verified entrance. No unambiguous public business number was available in this source. The map record was last edited 2016-09-07. The source was reviewed on 2026-10-25; that is not an on-site verification date. Public business number checked on the named listing; phone ownership/current activity has not been tested by calling. Follow-up on 2026-10-27: the individually matched business profile confirms the same number and a more specific map point; a separate OSM building names 352 Modhubag. The house number remains partial pending operator confirmation. This record replaces a proposed duplicate admission.",
     "discovery": {
       "source": "OpenStreetMap",
       "element_type": "node",
@@ -2144,7 +2170,8 @@
       "source": "https://nominatim.openstreetmap.org/reverse?lat=23.7568792&lon=90.4113471&format=jsonv2&addressdetails=1&zoom=18&accept-language=en",
       "reason": "Mapped Modhubag quarter and Old Elephant Road context; normalized English spelling."
     },
-    "maps_url": "https://www.google.com/maps/search/?api=1&query=Kader%20Party%20House%20Madhubag%20Dhaka"
+    "maps_url": "https://www.google.com/maps/place/Kader's+Party+House/@23.7573028,90.4105097,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b880d124adbb:0x48d7e20fa950f7f4!8m2!3d23.7573028!4d90.4105097!16s%2Fg%2F11f403mkfq",
+    "collection": "restaurant-party-centers"
   },
   {
     "id": "bd-osm-node-4320931026",
@@ -2779,7 +2806,8 @@
       "status": "identity-unconfirmed",
       "checked": "2026-10-25",
       "note": "A booking contact could not be safely matched to this venue. Identity or venue use needs confirmation; unrelated contacts were not reused."
-    }
+    },
+    "collection": "restaurant-party-centers"
   },
   {
     "id": "bd-osm-node-4973354765",
@@ -2871,7 +2899,8 @@
       "source": "https://nominatim.openstreetmap.org/reverse?lat=23.7206116&lon=90.4166416&format=jsonv2&addressdetails=1&zoom=18&accept-language=en",
       "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
     },
-    "maps_url": "https://www.google.com/maps/search/?api=1&query=Wari%20Party%20Center%20Dhaka"
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Wari%20Party%20Center%20Dhaka",
+    "collection": "restaurant-party-centers"
   },
   {
     "id": "bd-osm-node-5171683022",
@@ -4363,7 +4392,8 @@
       "source": "https://nominatim.openstreetmap.org/reverse?lat=23.7330039&lon=90.4066307&format=jsonv2&addressdetails=1&zoom=18&accept-language=en",
       "reason": "Reverse-geocoded locality hierarchy reviewed with the venue map point; source spelling normalized for browsing."
     },
-    "maps_url": "https://www.google.com/maps/place/Aziz+Manzil+Party+Place+and+Banquet+Hall/@23.7330083,90.4064949,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b8f3df83153f:0x9e032b8901a58138!8m2!3d23.7330083!4d90.4064949!16s%2Fg%2F11c5h38xj_?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
+    "maps_url": "https://www.google.com/maps/place/Aziz+Manzil+Party+Place+and+Banquet+Hall/@23.7330083,90.4064949,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b8f3df83153f:0x9e032b8901a58138!8m2!3d23.7330083!4d90.4064949!16s%2Fg%2F11c5h38xj_?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+    "collection": "restaurant-party-centers"
   },
   {
     "id": "bd-osm-node-10983479205",
@@ -6556,7 +6586,8 @@
       "extract_timestamp": "2026-10-24T20:20:51Z",
       "geometry_method": "mapped_point"
     },
-    "maps_url": "https://www.google.com/maps/search/?api=1&query=Waterfall%20Restaurant%20and%20Convention%20Hall%20Dhanmondi%20Dhanmondi%20Dhaka%20Bangladesh"
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Waterfall%20Restaurant%20and%20Convention%20Hall%20Dhanmondi%20Dhanmondi%20Dhaka%20Bangladesh",
+    "collection": "restaurant-party-centers"
   },
   {
     "id": "bd-osm-node-13527564201",
@@ -10610,7 +10641,8 @@
       "extract_timestamp": "2026-10-24T20:20:51Z",
       "geometry_method": "building_bbox_center"
     },
-    "maps_url": "https://www.google.com/maps/place/Waterfall+Restaurant+%26+Convention+Hall+Khilgaon/@23.7487563,90.4062937,16z/data=!4m10!1m2!2m1!1sWaterfall+Restaurant+Convention+Hall+Khilgaon+Dhaka!3m6!1s0x3755b9141cb78191:0xc7610dc2d02ae3c6!8m2!3d23.751932!4d90.4172223!15sCjNXYXRlcmZhbGwgUmVzdGF1cmFudCBDb252ZW50aW9uIEhhbGwgS2hpbGdhb24gRGhha2FaNSIzd2F0ZXJmYWxsIHJlc3RhdXJhbnQgY29udmVudGlvbiBoYWxsIGtoaWxnYW9uIGRoYWthkgERY29udmVudGlvbl9jZW50ZXKaAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMnRXVDFwSGFGRlZWWEJMVTBkT2IwMHljSHBXTWtwdFZGWTVUMVZZWXhBQuABAPoBBAgnEC0!16s%2Fg%2F11l_4b82k4?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
+    "maps_url": "https://www.google.com/maps/place/Waterfall+Restaurant+%26+Convention+Hall+Khilgaon/@23.7487563,90.4062937,16z/data=!4m10!1m2!2m1!1sWaterfall+Restaurant+Convention+Hall+Khilgaon+Dhaka!3m6!1s0x3755b9141cb78191:0xc7610dc2d02ae3c6!8m2!3d23.751932!4d90.4172223!15sCjNXYXRlcmZhbGwgUmVzdGF1cmFudCBDb252ZW50aW9uIEhhbGwgS2hpbGdhb24gRGhha2FaNSIzd2F0ZXJmYWxsIHJlc3RhdXJhbnQgY29udmVudGlvbiBoYWxsIGtoaWxnYW9uIGRoYWthkgERY29udmVudGlvbl9jZW50ZXKaAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMnRXVDFwSGFGRlZWWEJMVTBkT2IwMHljSHBXTWtwdFZGWTVUMVZZWXhBQuABAPoBBAgnEC0!16s%2Fg%2F11l_4b82k4?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+    "collection": "restaurant-party-centers"
   },
   {
     "id": "bd-abacus-convention-center",
@@ -12102,7 +12134,8 @@
       "checked": "2026-10-26",
       "source": "https://nominatim.openstreetmap.org/reverse?lat=23.8646972&lon=90.3995238&format=jsonv2&zoom=18&addressdetails=1&accept-language=en",
       "reason": "Published business point and premises/road context reviewed against the OSM address hierarchy. Nearest-object name and differing geocoder street/postcode were not copied into the venue address."
-    }
+    },
+    "collection": "restaurant-party-centers"
   },
   {
     "id": "bd-dream-world-convention-center-zigatola",
@@ -12590,7 +12623,8 @@
     "notes": "Mixed restaurant and party venue, not a wedding-only hall. Marker is the mapped OSM business point; the named Maps listing agrees within about 10 m. Public number is not call-tested.",
     "city": "Dhaka",
     "address_status": "published",
-    "maps_url": "https://www.google.com/maps/place/Blue+Moon+Restaurant+%26+Party+Center/@23.7516006,90.4227532,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b8701021b517:0x8966aa734dbef0a6!8m2!3d23.7516006!4d90.4227532!16s%2Fg%2F1tjx_vz5"
+    "maps_url": "https://www.google.com/maps/place/Blue+Moon+Restaurant+%26+Party+Center/@23.7516006,90.4227532,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b8701021b517:0x8966aa734dbef0a6!8m2!3d23.7516006!4d90.4227532!16s%2Fg%2F1tjx_vz5",
+    "collection": "restaurant-party-centers"
   },
   {
     "id": "bd-taiking-party-centre-middle-badda",
@@ -12672,7 +12706,8 @@
     "city": "Dhaka",
     "address_status": "published",
     "maps_url": "https://www.google.com/maps/place/Taiking+Thai+-+Chinese+Restaurant+and+Party+Centre+Limited/@23.776335,90.4253782,17z/data=!4m14!1m7!3m6!1s0x3755c79195b0ff8d:0x791d2b88265d904e!2sTaiking+Thai+-+Chinese+Restaurant+and+Party+Centre+Limited!8m2!3d23.776335!4d90.4253782!16s%2Fg%2F11cnbmm9_q!3m5!1s0x3755c79195b0ff8d:0x791d2b88265d904e!8m2!3d23.776335!4d90.4253782!16s%2Fg%2F11cnbmm9_q",
-    "review_notice": "Two public listings publish different business numbers; confirm the booking line with the venue."
+    "review_notice": "Two public listings publish different business numbers; confirm the booking line with the venue.",
+    "collection": "restaurant-party-centers"
   },
   {
     "id": "bd-protik-rupsree-convention-center",
@@ -12816,7 +12851,8 @@
     "notes": "Named party centre at 41 DIT Road No. 5; distinct from Mahal Community Center on Road 13. Public contact is not call-tested.",
     "city": "Dhaka",
     "address_status": "published",
-    "maps_url": "https://www.google.com/maps/place/Shadi+Mahal+Party+Center/@23.7751535,90.4285667,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c76231167a03:0x8b9f09161294daf!8m2!3d23.7751535!4d90.4285667!16s%2Fg%2F11vlzmtmf8"
+    "maps_url": "https://www.google.com/maps/place/Shadi+Mahal+Party+Center/@23.7751535,90.4285667,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c76231167a03:0x8b9f09161294daf!8m2!3d23.7751535!4d90.4285667!16s%2Fg%2F11vlzmtmf8",
+    "collection": "restaurant-party-centers"
   },
   {
     "id": "bd-kamrul-restaurant-convention-center",
@@ -12866,7 +12902,8 @@
     "notes": "Combined restaurant and convention venue. A separate nearby Kamrul Restaurant listing has another number, which was not copied to this convention listing. The published contact is not call-tested.",
     "city": "Dhaka",
     "address_status": "published",
-    "maps_url": "https://www.google.com/maps/place/Kamrul+Restaurant+%26+Convention+Center/@23.7862219,90.4254037,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c76f11c6a5e1:0x46a591b342f54d03!8m2!3d23.7862219!4d90.4254037!16s%2Fg%2F11rmv12f40"
+    "maps_url": "https://www.google.com/maps/place/Kamrul+Restaurant+%26+Convention+Center/@23.7862219,90.4254037,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c76f11c6a5e1:0x46a591b342f54d03!8m2!3d23.7862219!4d90.4254037!16s%2Fg%2F11rmv12f40",
+    "collection": "restaurant-party-centers"
   },
   {
     "id": "bd-china-land-party-center-khilgaon",
@@ -12923,7 +12960,8 @@
       "checked": "2026-10-27",
       "source": "https://www.google.com/maps/place/China+Land+Restaurant+and+Party+Center/@23.7523183,90.4175388,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b9b39aebff85:0xa2a52e24897bfe4b!8m2!3d23.7523183!4d90.4175388!16s%2Fg%2F11scrsjwq0",
       "reason": "The owner identifies this party venue with Khilgaon; the named map point lies on the Khilgaon/Malibagh Chowdhury Para corridor. The published road name remains in the address."
-    }
+    },
+    "collection": "restaurant-party-centers"
   },
   {
     "id": "bd-alkaderia-convention-hall-rampura",
@@ -13059,7 +13097,8 @@
       "checked": "2026-10-27",
       "source": "https://sites.google.com/view/haquesbanquethallrestaurantur/home",
       "reason": "The venue site gives M Block, Banasree, Rampura; the matched map listing uses Banasree–Meradia. Banasree is the supported broad browsing area, with Meradia retained in the venue context."
-    }
+    },
+    "collection": "restaurant-party-centers"
   },
   {
     "id": "bd-aristocrat-banquet-hall-motijheel",
@@ -13174,7 +13213,8 @@
       "checked": "2026-10-27",
       "source": "https://nominatim.openstreetmap.org/reverse?lat=23.7304015&lon=90.4121767&format=jsonv2&addressdetails=1&zoom=18&accept-language=en",
       "reason": "The named map point is at Baitul View Tower, while the individual Nominatim reverse lookup identifies Paltan; the public address itself does not state a neighborhood."
-    }
+    },
+    "collection": "restaurant-party-centers"
   },
   {
     "id": "bd-party-palace-banasree",
@@ -13224,7 +13264,8 @@
     "notes": "Mixed restaurant and party centre on Titash Road, within the Banasree browsing area. The party-centre identity and public contact were checked on its named listing; wedding-specific booking terms and phone activity remain unconfirmed.",
     "city": "Dhaka",
     "address_status": "published",
-    "maps_url": "https://www.google.com/maps/place/Party+Palace+Chinese+Restaurant+%26+Party+Center/@23.758098,90.4280122,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b900747f460d:0x8feae273159186e9!8m2!3d23.758098!4d90.4280122!16s%2Fg%2F11myyb9k8x"
+    "maps_url": "https://www.google.com/maps/place/Party+Palace+Chinese+Restaurant+%26+Party+Center/@23.758098,90.4280122,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b900747f460d:0x8feae273159186e9!8m2!3d23.758098!4d90.4280122!16s%2Fg%2F11myyb9k8x",
+    "collection": "restaurant-party-centers"
   },
   {
     "id": "bd-modhumilon-party-center-badda",
@@ -13285,6 +13326,551 @@
       "status": "not-found-in-checked-sources",
       "checked": "2026-10-27",
       "note": "The individually matched business profile invites a phone addition and the OSM tag has no phone. No public venue-specific number was established."
-    }
+    },
+    "collection": "restaurant-party-centers"
+  },
+  {
+    "id": "bd-onion-leaf-restaurant-party-center",
+    "name": "Onion Leaf Restaurant and Party Center",
+    "bn_name": null,
+    "aliases": [],
+    "category": "Event Hall",
+    "division": "6",
+    "district": "47",
+    "area": "Rampura",
+    "address": "458 West Rampura, DIT Road, Dhaka 1219, Bangladesh",
+    "coordinates": {
+      "lat": 23.7655156,
+      "lon": 90.4216677
+    },
+    "phones": [
+      {
+        "number": "+8801342697121",
+        "source": "https://onionleafbd.com/",
+        "checked": "2026-10-27",
+        "status": "published-not-call-tested"
+      },
+      {
+        "number": "+8801344399765",
+        "source": "https://onionleafbd.com/",
+        "checked": "2026-10-27",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": "https://onionleafbd.com/",
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "cross-checked",
+    "last_checked": "2026-10-27",
+    "evidence": [
+      {
+        "url": "https://www.google.com/maps/place/Onion+Leaf+Restaurant+and+Party+Center/@23.7655156,90.4216677,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c700049e8f75:0xf3921ca1d7631f86!8m2!3d23.7655156!4d90.4216677!16s%2Fg%2F11xnp614q8",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "address",
+          "coordinates",
+          "phones",
+          "maps_url"
+        ],
+        "checked": "2026-10-27",
+        "kind": "independent",
+        "reuse": "Individual named public business profile manually inspected on 2026-10-27. Only identity, location and public contact facts retained; no ratings, reviews, photographs, hours or copied prose."
+      },
+      {
+        "url": "https://onionleafbd.com/",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "address",
+          "phones",
+          "website"
+        ],
+        "checked": "2026-10-27",
+        "kind": "official",
+        "reuse": "First-party operator website individually inspected. It explicitly advertises wedding events, publishes this address and two general booking lines; no images or promotional copy retained."
+      }
+    ],
+    "notes": "The operator explicitly offers wedding and other social-event bookings. Two published business lines have not been call-tested.",
+    "city": "Dhaka",
+    "address_status": "published",
+    "maps_url": "https://www.google.com/maps/place/Onion+Leaf+Restaurant+and+Party+Center/@23.7655156,90.4216677,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c700049e8f75:0xf3921ca1d7631f86!8m2!3d23.7655156!4d90.4216677!16s%2Fg%2F11xnp614q8",
+    "collection": "restaurant-party-centers"
+  },
+  {
+    "id": "bd-shanghai-chinese-party-center-jatrabari",
+    "name": "Shanghai Chinese Restaurant & Party Center",
+    "bn_name": null,
+    "aliases": [],
+    "category": "Event Hall",
+    "division": "6",
+    "district": "47",
+    "area": "Jatrabari",
+    "address": "99 Dhonia–Dholaipar Road, Dhaka 1204, Bangladesh",
+    "coordinates": {
+      "lat": 23.7025847,
+      "lon": 90.4350621
+    },
+    "phones": [
+      {
+        "number": "+8801943317335",
+        "source": "https://www.google.com/maps/place/Shanghai+Chinese+Restaurant+%26+Party+Center/@23.7025847,90.4350621,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b9c613ab90dd:0x7d709b6ddec6df!8m2!3d23.7025847!4d90.4350621!16s%2Fg%2F11b_2szgqy",
+        "checked": "2026-10-27",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": null,
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "cross-checked",
+    "last_checked": "2026-10-27",
+    "evidence": [
+      {
+        "url": "https://www.google.com/maps/place/Shanghai+Chinese+Restaurant+%26+Party+Center/@23.7025847,90.4350621,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b9c613ab90dd:0x7d709b6ddec6df!8m2!3d23.7025847!4d90.4350621!16s%2Fg%2F11b_2szgqy",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "address",
+          "coordinates",
+          "phones",
+          "maps_url"
+        ],
+        "checked": "2026-10-27",
+        "kind": "independent",
+        "reuse": "Individual named public business profile manually inspected on 2026-10-27. Only identity, location and public contact facts retained; no ratings, reviews, photographs, hours or copied prose."
+      },
+      {
+        "url": "https://www.openstreetmap.org/node/5185128521",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "address",
+          "coordinates"
+        ],
+        "checked": "2026-10-27",
+        "kind": "open-data",
+        "reuse": "OpenStreetMap ODbL-1.0; checksum-verified 25 October Geofabrik extract reviewed locally. Mapped identity and position cross-checked against the named business profile."
+      }
+    ],
+    "notes": "Named party-center listing matches the OSM premises. The OSM extract has an older, conflicting number (+8801924748437); only the individually inspected current business-profile number is displayed. Wedding booking terms are unconfirmed.",
+    "city": "Dhaka",
+    "address_status": "published",
+    "maps_url": "https://www.google.com/maps/place/Shanghai+Chinese+Restaurant+%26+Party+Center/@23.7025847,90.4350621,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b9c613ab90dd:0x7d709b6ddec6df!8m2!3d23.7025847!4d90.4350621!16s%2Fg%2F11b_2szgqy",
+    "collection": "restaurant-party-centers"
+  },
+  {
+    "id": "bd-arabian-khabsa-party-center-jigatola",
+    "name": "Arabian Khabsa Restaurant & Party Center",
+    "bn_name": null,
+    "aliases": [],
+    "category": "Event Hall",
+    "division": "6",
+    "district": "47",
+    "area": "Jigatola",
+    "address": "ANZ Square, 53 Satmasjid Road, Jigatola, Dhaka 1209, Bangladesh",
+    "coordinates": {
+      "lat": 23.7394207,
+      "lon": 90.375773
+    },
+    "phones": [
+      {
+        "number": "+8801977691994",
+        "source": "https://www.google.com/maps/place/Arabian+Khabsa+Restaurant+%26+Party+Center/@23.7394207,90.375773,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b915af60cbff:0xedec4057ae9397e5!8m2!3d23.7394207!4d90.375773!16s%2Fg%2F11sdkfkc31",
+        "checked": "2026-10-27",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": null,
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "cross-checked",
+    "last_checked": "2026-10-27",
+    "evidence": [
+      {
+        "url": "https://www.google.com/maps/place/Arabian+Khabsa+Restaurant+%26+Party+Center/@23.7394207,90.375773,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b915af60cbff:0xedec4057ae9397e5!8m2!3d23.7394207!4d90.375773!16s%2Fg%2F11sdkfkc31",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "address",
+          "coordinates",
+          "phones",
+          "maps_url"
+        ],
+        "checked": "2026-10-27",
+        "kind": "independent",
+        "reuse": "Individual named public business profile manually inspected on 2026-10-27. Only identity, location and public contact facts retained; no ratings, reviews, photographs, hours or copied prose."
+      },
+      {
+        "url": "https://www.openstreetmap.org/node/11824829247",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "address",
+          "coordinates"
+        ],
+        "checked": "2026-10-27",
+        "kind": "open-data",
+        "reuse": "OpenStreetMap ODbL-1.0; checksum-verified 25 October Geofabrik extract reviewed locally. Mapped identity and position cross-checked against the named business profile."
+      }
+    ],
+    "notes": "Named restaurant and party center; public contact and premises matched with an OSM listing. Wedding booking terms are unconfirmed.",
+    "city": "Dhaka",
+    "address_status": "published",
+    "maps_url": "https://www.google.com/maps/place/Arabian+Khabsa+Restaurant+%26+Party+Center/@23.7394207,90.375773,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b915af60cbff:0xedec4057ae9397e5!8m2!3d23.7394207!4d90.375773!16s%2Fg%2F11sdkfkc31",
+    "collection": "restaurant-party-centers"
+  },
+  {
+    "id": "bd-dhanmondi-party-center",
+    "name": "Dhanmondi Party Center",
+    "bn_name": null,
+    "aliases": [],
+    "category": "Event Hall",
+    "division": "6",
+    "district": "47",
+    "area": "Dhanmondi",
+    "address": "House 107, Road 9A, Dhanmondi, Dhaka 1209, Bangladesh",
+    "coordinates": {
+      "lat": 23.7492084,
+      "lon": 90.3682324
+    },
+    "phones": [
+      {
+        "number": "+8801711596565",
+        "source": "https://www.google.com/maps/place/Dhanmondi+Party+Center/@23.7492084,90.3682324,17z/data=!3m1!4b1!4m6!3m5!1s0x3755bf4e35954bcb:0x754ef3a364984235!8m2!3d23.7492084!4d90.3682324!16s%2Fg%2F119wtg134",
+        "checked": "2026-10-27",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": null,
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "cross-checked",
+    "last_checked": "2026-10-27",
+    "evidence": [
+      {
+        "url": "https://www.google.com/maps/place/Dhanmondi+Party+Center/@23.7492084,90.3682324,17z/data=!3m1!4b1!4m6!3m5!1s0x3755bf4e35954bcb:0x754ef3a364984235!8m2!3d23.7492084!4d90.3682324!16s%2Fg%2F119wtg134",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "address",
+          "coordinates",
+          "phones",
+          "maps_url"
+        ],
+        "checked": "2026-10-27",
+        "kind": "independent",
+        "reuse": "Individual named public business profile manually inspected on 2026-10-27. Only identity, location and public contact facts retained; no ratings, reviews, photographs, hours or copied prose."
+      },
+      {
+        "url": "https://www.openstreetmap.org/way/323329545",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "address",
+          "coordinates"
+        ],
+        "checked": "2026-10-27",
+        "kind": "open-data",
+        "reuse": "OpenStreetMap ODbL-1.0; checksum-verified 25 October Geofabrik extract reviewed locally. Mapped identity and position cross-checked against the named business profile."
+      }
+    ],
+    "notes": "Named party center and published premises matched with OSM. The business-linked website could not be inspected through this environment; wedding booking terms and the public line have not been call-tested.",
+    "city": "Dhaka",
+    "address_status": "published",
+    "maps_url": "https://www.google.com/maps/place/Dhanmondi+Party+Center/@23.7492084,90.3682324,17z/data=!3m1!4b1!4m6!3m5!1s0x3755bf4e35954bcb:0x754ef3a364984235!8m2!3d23.7492084!4d90.3682324!16s%2Fg%2F119wtg134",
+    "collection": "restaurant-party-centers"
+  },
+  {
+    "id": "bd-red-chilli-party-center-banasree",
+    "name": "Red Chilli Chinese Restaurant & Party Center",
+    "bn_name": null,
+    "aliases": [],
+    "category": "Event Hall",
+    "division": "6",
+    "district": "47",
+    "area": "Banasree",
+    "address": "First floor, House 2, Road 3, Banasree, Dhaka 1219, Bangladesh",
+    "coordinates": {
+      "lat": 23.7624206,
+      "lon": 90.4309244
+    },
+    "phones": [
+      {
+        "number": "+8801766489921",
+        "source": "https://www.google.com/maps/place/Red+Chilli+Chinese+Restaurant+%26+Party+Center/@23.7624206,90.4309244,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b875570ee829:0x61e81573e8a1a986!8m2!3d23.7624206!4d90.4309244!16s%2Fg%2F11bxfmhwgj",
+        "checked": "2026-10-27",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": null,
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "source-checked",
+    "last_checked": "2026-10-27",
+    "evidence": [
+      {
+        "url": "https://www.google.com/maps/place/Red+Chilli+Chinese+Restaurant+%26+Party+Center/@23.7624206,90.4309244,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b875570ee829:0x61e81573e8a1a986!8m2!3d23.7624206!4d90.4309244!16s%2Fg%2F11bxfmhwgj",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "address",
+          "coordinates",
+          "phones",
+          "maps_url"
+        ],
+        "checked": "2026-10-27",
+        "kind": "independent",
+        "reuse": "Individual named public business profile manually inspected on 2026-10-27. Only identity, location and public contact facts retained; no ratings, reviews, photographs, hours or copied prose."
+      }
+    ],
+    "notes": "Named restaurant and party center with an individually inspected public business profile. Wedding booking terms are unconfirmed.",
+    "city": "Dhaka",
+    "address_status": "published",
+    "maps_url": "https://www.google.com/maps/place/Red+Chilli+Chinese+Restaurant+%26+Party+Center/@23.7624206,90.4309244,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b875570ee829:0x61e81573e8a1a986!8m2!3d23.7624206!4d90.4309244!16s%2Fg%2F11bxfmhwgj",
+    "collection": "restaurant-party-centers"
+  },
+  {
+    "id": "bd-shaker-park-party-center-jatrabari",
+    "name": "Shaker Park Thai Chinese Restaurant & Party Center",
+    "bn_name": null,
+    "aliases": [],
+    "category": "Event Hall",
+    "division": "6",
+    "district": "47",
+    "area": "Jatrabari",
+    "address": "North West Jatrabari, Dhaka, Bangladesh",
+    "coordinates": {
+      "lat": 23.7106503,
+      "lon": 90.4280882
+    },
+    "phones": [
+      {
+        "number": "+8801933322333",
+        "source": "https://www.google.com/maps/place/Shaker+park+thai+chinese+restaurant+%26+party+center/@23.7106503,90.4280882,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b900d4bc60b3:0xb548fe3551df45af!8m2!3d23.7106503!4d90.4280882!16s%2Fg%2F11qyq3whks",
+        "checked": "2026-10-27",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": null,
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "cross-checked",
+    "last_checked": "2026-10-27",
+    "evidence": [
+      {
+        "url": "https://www.google.com/maps/place/Shaker+park+thai+chinese+restaurant+%26+party+center/@23.7106503,90.4280882,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b900d4bc60b3:0xb548fe3551df45af!8m2!3d23.7106503!4d90.4280882!16s%2Fg%2F11qyq3whks",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "address",
+          "coordinates",
+          "phones",
+          "maps_url"
+        ],
+        "checked": "2026-10-27",
+        "kind": "independent",
+        "reuse": "Individual named public business profile manually inspected on 2026-10-27. Only identity, location and public contact facts retained; no ratings, reviews, photographs, hours or copied prose."
+      },
+      {
+        "url": "https://www.openstreetmap.org/node/11765673874",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "address",
+          "coordinates"
+        ],
+        "checked": "2026-10-27",
+        "kind": "open-data",
+        "reuse": "OpenStreetMap ODbL-1.0; checksum-verified 25 October Geofabrik extract reviewed locally. Mapped identity and position cross-checked against the named business profile."
+      }
+    ],
+    "notes": "Named restaurant and party center; exact house/street number was not published in the inspected sources. Wedding booking terms are unconfirmed.",
+    "city": "Dhaka",
+    "address_status": "partial",
+    "maps_url": "https://www.google.com/maps/place/Shaker+park+thai+chinese+restaurant+%26+party+center/@23.7106503,90.4280882,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b900d4bc60b3:0xb548fe3551df45af!8m2!3d23.7106503!4d90.4280882!16s%2Fg%2F11qyq3whks",
+    "collection": "restaurant-party-centers"
+  },
+  {
+    "id": "bd-victoria-convention-center-dhanmondi",
+    "name": "Victoria Convention Center",
+    "bn_name": null,
+    "aliases": [],
+    "category": "Convention Center",
+    "division": "6",
+    "district": "47",
+    "area": "Dhanmondi",
+    "address": "Road 14, Dhanmondi, Dhaka 1205, Bangladesh",
+    "coordinates": {
+      "lat": 23.7543019,
+      "lon": 90.3759187
+    },
+    "phones": [
+      {
+        "number": "+8801760312540",
+        "source": "https://www.google.com/maps/place/Victoria+Convention+Center/@23.7543019,90.3759187,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b8acddc58ea3:0x717f247765bfe387!8m2!3d23.7543019!4d90.3759187!16s%2Fg%2F1pty4ccgk",
+        "checked": "2026-10-27",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": null,
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "cross-checked",
+    "last_checked": "2026-10-27",
+    "evidence": [
+      {
+        "url": "https://www.google.com/maps/place/Victoria+Convention+Center/@23.7543019,90.3759187,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b8acddc58ea3:0x717f247765bfe387!8m2!3d23.7543019!4d90.3759187!16s%2Fg%2F1pty4ccgk",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "address",
+          "coordinates",
+          "phones",
+          "maps_url"
+        ],
+        "checked": "2026-10-27",
+        "kind": "independent",
+        "reuse": "Individual named public business profile manually inspected on 2026-10-27. Only identity, location and public contact facts retained; no ratings, reviews, photographs, hours or copied prose."
+      },
+      {
+        "url": "https://www.openstreetmap.org/way/506432173",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "address",
+          "coordinates"
+        ],
+        "checked": "2026-10-27",
+        "kind": "open-data",
+        "reuse": "OpenStreetMap ODbL-1.0; checksum-verified 25 October Geofabrik extract reviewed locally. Mapped identity and position cross-checked against the named business profile."
+      }
+    ],
+    "notes": "Named convention center with its public business number independently matching the OSM entry. A complete premises number and current booking terms still need operator confirmation.",
+    "city": "Dhaka",
+    "address_status": "partial",
+    "maps_url": "https://www.google.com/maps/place/Victoria+Convention+Center/@23.7543019,90.3759187,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b8acddc58ea3:0x717f247765bfe387!8m2!3d23.7543019!4d90.3759187!16s%2Fg%2F1pty4ccgk",
+    "collection": "community-halls"
+  },
+  {
+    "id": "bd-golden-sun-party-center-mirpur",
+    "name": "The Golden Sun Chinese Restaurant and Party Center",
+    "bn_name": null,
+    "aliases": [],
+    "category": "Event Hall",
+    "division": "6",
+    "district": "47",
+    "area": "Mirpur",
+    "address": "Third floor, Ramzan Nessa Super Market, 2 No Harunabad, 142 Senanibash Road, Dhaka 1216, Bangladesh",
+    "coordinates": {
+      "lat": 23.8298174,
+      "lon": 90.3635281
+    },
+    "phones": [
+      {
+        "number": "+8801998038096",
+        "source": "https://www.google.com/maps/place/The+Golden+Sun+Chinese+Restaurant+and+party+Center/@23.8298174,90.3635281,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c1c8fd511bc1:0x20b72c52df92b81!8m2!3d23.8298174!4d90.3635281!16s%2Fg%2F11nxpxlkj0",
+        "checked": "2026-10-27",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": null,
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "source-checked",
+    "last_checked": "2026-10-27",
+    "evidence": [
+      {
+        "url": "https://www.google.com/maps/place/The+Golden+Sun+Chinese+Restaurant+and+party+Center/@23.8298174,90.3635281,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c1c8fd511bc1:0x20b72c52df92b81!8m2!3d23.8298174!4d90.3635281!16s%2Fg%2F11nxpxlkj0",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "address",
+          "coordinates",
+          "phones",
+          "maps_url"
+        ],
+        "checked": "2026-10-27",
+        "kind": "independent",
+        "reuse": "Individual named public business profile manually inspected on 2026-10-27. Only identity, location and public contact facts retained; no ratings, reviews, photographs, hours or copied prose."
+      }
+    ],
+    "notes": "This Mirpur listing is distinct from an older similarly named OSM point in Jatrabari; no branch relationship is assumed. Wedding booking terms are unconfirmed.",
+    "city": "Dhaka",
+    "address_status": "published",
+    "maps_url": "https://www.google.com/maps/place/The+Golden+Sun+Chinese+Restaurant+and+party+Center/@23.8298174,90.3635281,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c1c8fd511bc1:0x20b72c52df92b81!8m2!3d23.8298174!4d90.3635281!16s%2Fg%2F11nxpxlkj0",
+    "collection": "restaurant-party-centers"
+  },
+  {
+    "id": "bd-sector-7-party-center-uttara",
+    "name": "Sector 7 Restaurant & Party Center",
+    "bn_name": null,
+    "aliases": [],
+    "category": "Event Hall",
+    "division": "6",
+    "district": "47",
+    "area": "Uttara",
+    "address": "Plot 11, Service Road, Rajuk Rajib Cosmo Shopping Complex, Uttara, Dhaka 1230, Bangladesh",
+    "coordinates": {
+      "lat": 23.8688789,
+      "lon": 90.3998918
+    },
+    "phones": [
+      {
+        "number": "+8801847258746",
+        "source": "https://www.google.com/maps/place/Sector+7+Restaurant+%26+Party+Center/@23.8688789,90.3998918,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c424230aff6b:0x59107c95ada642e3!8m2!3d23.8688789!4d90.3998918!16s%2Fg%2F11fxvpqzvx",
+        "checked": "2026-10-27",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": null,
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "source-checked",
+    "last_checked": "2026-10-27",
+    "evidence": [
+      {
+        "url": "https://www.google.com/maps/place/Sector+7+Restaurant+%26+Party+Center/@23.8688789,90.3998918,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c424230aff6b:0x59107c95ada642e3!8m2!3d23.8688789!4d90.3998918!16s%2Fg%2F11fxvpqzvx",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "address",
+          "coordinates",
+          "phones",
+          "maps_url"
+        ],
+        "checked": "2026-10-27",
+        "kind": "independent",
+        "reuse": "Individual named public business profile manually inspected on 2026-10-27. Only identity, location and public contact facts retained; no ratings, reviews, photographs, hours or copied prose."
+      }
+    ],
+    "notes": "Named restaurant and party center with individually inspected public business contact. The linked website returned HTTP 503, so it was not used as official evidence. Wedding booking terms are unconfirmed.",
+    "city": "Dhaka",
+    "address_status": "published",
+    "maps_url": "https://www.google.com/maps/place/Sector+7+Restaurant+%26+Party+Center/@23.8688789,90.3998918,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c424230aff6b:0x59107c95ada642e3!8m2!3d23.8688789!4d90.3998918!16s%2Fg%2F11fxvpqzvx",
+    "collection": "restaurant-party-centers"
   }
 ]

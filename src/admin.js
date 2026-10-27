@@ -42,7 +42,7 @@ function render() {
       || queue === "missing:map" && !v.coordinates
       || queue === "missing:area" && !v.area
       || queue === "needs:review" && !!v.review_notice)).sort((a, b) => a.name.localeCompare(b.name));
-  $("adminCount").textContent = `${shown.length} of ${rows.length} halls and venues`;
+  $("adminCount").textContent = `${shown.length} of ${rows.length} venues`;
   for (const v of shown) {
     const b = button("", () => open(v), "manager-row");
     b.setAttribute("aria-pressed", String(selected === v.id));
@@ -50,7 +50,7 @@ function render() {
     if (v.review_notice) b.append(el("span", "Needs review", "review-badge"));
     list.append(b);
   }
-  if (!shown.length) list.append(el("p", "No match. Try another name or add a hall.", "hint"));
+  if (!shown.length) list.append(el("p", "No match. Try another name or add a venue.", "hint"));
   const c = changeSet(baseline, rows), count = changeCount(c);
   $("changeSummary").textContent = count ? `${c.added.length} added · ${c.modified.length} edited · ${c.removed.length} removed` : "No changes yet.";
   $("changeList").replaceChildren();
@@ -73,9 +73,9 @@ function open(v = null) {
   selected = v?.id || null;
   $("editorEmpty").hidden = true;
   $("venueForm").hidden = false;
-  $("editorTitle").textContent = v ? "Edit hall" : "Add a hall";
+  $("editorTitle").textContent = v ? "Edit venue" : "Add a venue";
   $("deleteVenue").hidden = !v;
-  const vals = { Id: v?.id || "", Name: v?.name || "", Area: v?.area || "", Address: v?.address || "", AddressStatus: v?.address_status || "partial", Phones: v?.phones.map((p) => p.number).join("\n") || "", Maps: v?.maps_url || "", Website: v?.website || "", Lat: v?.coordinates?.lat ?? "", Lon: v?.coordinates?.lon ?? "", Source: v?.review_notice ? "" : v?.maps_url || v?.evidence.at(-1)?.url || "", SourceKind: "independent", Notice: v?.review_notice || "" };
+  const vals = { Id: v?.id || "", Name: v?.name || "", Area: v?.area || "", Collection: v?.collection || collections?.groups.find((g) => g.venue_ids.includes(v?.id))?.id || "community-halls", Address: v?.address || "", AddressStatus: v?.address_status || "partial", Phones: v?.phones.map((p) => p.number).join("\n") || "", Maps: v?.maps_url || "", Website: v?.website || "", Lat: v?.coordinates?.lat ?? "", Lon: v?.coordinates?.lon ?? "", Source: v?.review_notice ? "" : v?.maps_url || v?.evidence.at(-1)?.url || "", SourceKind: "independent", Notice: v?.review_notice || "" };
   for (const [k, value] of Object.entries(vals)) $("edit" + k).value = value;
   $("reviewPanel").hidden = !v?.review_notice;
   $("existingNotice").textContent = v?.review_notice || "";
@@ -99,7 +99,7 @@ $("venueForm").onsubmit = (e) => {
   e.preventDefault();
   try {
     const input = {};
-    for (const k of ["Id", "Name", "Area", "Address", "AddressStatus", "Phones", "Maps", "Website", "Lat", "Lon", "Source", "SourceKind", "Notice"]) input[k[0].toLowerCase() + k.slice(1)] = $("edit" + k).value;
+    for (const k of ["Id", "Name", "Area", "Collection", "Address", "AddressStatus", "Phones", "Maps", "Website", "Lat", "Lon", "Source", "SourceKind", "Notice"]) input[k[0].toLowerCase() + k.slice(1)] = $("edit" + k).value;
     input.confirmNotice = $("editConfirmNotice").checked;
     const next = editVenue(rows, input);
     const errors = validation(next);
@@ -258,7 +258,7 @@ async function load() {
     $("adminSearch").disabled = false;
     $("newVenue").disabled = false;
     render();
-    message(restored ? "Your unpublished draft has been restored." : draftProblem || "Ready. Choose a hall or add a new one. Published data changes only when you publish.");
+    message(restored ? "Your unpublished draft has been restored." : draftProblem || "Ready. Choose a venue or add a new one. Published data changes only when you publish.");
   } catch (e) {
     message(e.message, true);
   }

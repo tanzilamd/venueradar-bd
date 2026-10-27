@@ -5,7 +5,7 @@ Open **https://tanzilahmed.tech/venueradar-bd/manage.html** after the manager re
 ## Edit, add or remove a hall
 
 1. Search by hall name or area, then select a result. For a new listing, select **Add a hall**.
-2. Edit the name, area/zone, address, phone numbers and Maps link. Separate multiple numbers with commas or new lines. Domestic mobile and landline formats are normalized automatically. The Maps link can fill the source field; check that it refers to the correct business and branch.
+2. Edit the name, area/zone, collection, address, phone numbers and Maps link. Choose **Restaurants & party centers** for a mixed-use restaurant or party center, **Community centers & halls** for a dedicated hall, or **Hotel venues** for a hotel. A collection describes the venue type; it does not guarantee wedding bookings. Separate multiple numbers with commas or new lines. Domestic mobile and landline formats are normalized automatically. The Maps link can fill the source field; check that it refers to the correct business and branch.
 3. Select **Save to draft**, then review the change list. Nothing is public yet. **Remove hall** asks for confirmation and stages a removal. **Discard draft** restores the last loaded published version.
 
 Keep a public source URL. Choose **Owner contribution** if the fact is supplied by you but has not been independently established from that source. Those contacts stay labelled as owner supplied. Previously sourced information and hidden research fields are retained when untouched. Correct a warning only when its underlying issue has actually been resolved.

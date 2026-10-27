@@ -1,12 +1,13 @@
 # VenueRadar BD
 
-Dhaka-focused, static venue discovery. Find community centers and convention halls by area, check the address and phone, then open the map or call.
+Dhaka-focused, static venue discovery. Find community centers, convention halls, restaurants and party centers by area, check the address and phone, then open the map or call.
 
 Live project: https://tanzilahmed.tech/venueradar-bd/
 
 ## Public directory
 
 - English interface, Dhaka areas, name/alias search and optional nearby neighborhoods.
+- Separate collections for community centers and halls, restaurants and party centers, and hotel venues. Collection labels describe venue type; wedding bookings should be confirmed with the operator.
 - Phone and Maps actions, a short detail view, Saved venues and comparison.
 - Lazy-loaded MapLibre/OpenFreeMap vector map with clustering, visible-area venue browsing, one-time Near me positioning, selected contacts, and list fallback. Browsers without WebGL use the original Leaflet/OpenStreetMap map.
 - One-time nearby distance sorting; precise location is never saved or shared.
