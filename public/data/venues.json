@@ -12867,5 +12867,424 @@
     "city": "Dhaka",
     "address_status": "published",
     "maps_url": "https://www.google.com/maps/place/Kamrul+Restaurant+%26+Convention+Center/@23.7862219,90.4254037,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c76f11c6a5e1:0x46a591b342f54d03!8m2!3d23.7862219!4d90.4254037!16s%2Fg%2F11rmv12f40"
+  },
+  {
+    "id": "bd-china-land-party-center-khilgaon",
+    "name": "China Land Restaurant and Party Center",
+    "bn_name": null,
+    "aliases": [],
+    "category": "Event Hall",
+    "division": "6",
+    "district": "47",
+    "area": "Khilgaon",
+    "address": "398/B, Malibagh Chowdhury Para Road, Dhaka 1219, Bangladesh",
+    "coordinates": {
+      "lat": 23.7523183,
+      "lon": 90.4175388
+    },
+    "phones": [
+      {
+        "number": "+8801771554415",
+        "source": "https://www.google.com/maps/place/China+Land+Restaurant+and+Party+Center/@23.7523183,90.4175388,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b9b39aebff85:0xa2a52e24897bfe4b!8m2!3d23.7523183!4d90.4175388!16s%2Fg%2F11scrsjwq0",
+        "checked": "2026-10-27",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": null,
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "source-checked",
+    "last_checked": "2026-10-27",
+    "evidence": [
+      {
+        "url": "https://www.google.com/maps/place/China+Land+Restaurant+and+Party+Center/@23.7523183,90.4175388,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b9b39aebff85:0xa2a52e24897bfe4b!8m2!3d23.7523183!4d90.4175388!16s%2Fg%2F11scrsjwq0",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "address",
+          "coordinates",
+          "phones",
+          "maps_url"
+        ],
+        "checked": "2026-10-27",
+        "kind": "independent",
+        "reuse": "Individual named public business profile manually inspected on 2026-10-27. Only venue identity, location and public contact facts retained; no ratings, reviews, photographs, hours, copied prose or Places API dataset."
+      }
+    ],
+    "notes": "Owner reports that wedding events take place here. The individually matched public listing confirms the party-center business, published address, map point and phone; wedding booking terms and call activity were not independently checked. The nearby Waterfall venue has a different name, premises and number.",
+    "city": "Dhaka",
+    "address_status": "published",
+    "maps_url": "https://www.google.com/maps/place/China+Land+Restaurant+and+Party+Center/@23.7523183,90.4175388,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b9b39aebff85:0xa2a52e24897bfe4b!8m2!3d23.7523183!4d90.4175388!16s%2Fg%2F11scrsjwq0",
+    "area_review": {
+      "method": "coordinate-and-address-review",
+      "precision": "browsing_locality",
+      "checked": "2026-10-27",
+      "source": "https://www.google.com/maps/place/China+Land+Restaurant+and+Party+Center/@23.7523183,90.4175388,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b9b39aebff85:0xa2a52e24897bfe4b!8m2!3d23.7523183!4d90.4175388!16s%2Fg%2F11scrsjwq0",
+      "reason": "The owner identifies this party venue with Khilgaon; the named map point lies on the Khilgaon/Malibagh Chowdhury Para corridor. The published road name remains in the address."
+    }
+  },
+  {
+    "id": "bd-alkaderia-convention-hall-rampura",
+    "name": "ALKADERIA Convention Hall",
+    "bn_name": null,
+    "aliases": [],
+    "category": "Convention Center",
+    "division": "6",
+    "district": "47",
+    "area": "Rampura",
+    "address": "2, 1 East Rampura, Dhaka 1219, Bangladesh",
+    "coordinates": {
+      "lat": 23.759108,
+      "lon": 90.421705
+    },
+    "phones": [
+      {
+        "number": "+8801798617944",
+        "source": "https://www.google.com/maps/place/ALKADERIA+Convention+Hall/@23.759108,90.421705,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b9fb9c6a1683:0xcd2c4ce2c04d801!8m2!3d23.759108!4d90.421705!16s%2Fg%2F11g4f5mv42",
+        "checked": "2026-10-27",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": null,
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "source-checked",
+    "last_checked": "2026-10-27",
+    "evidence": [
+      {
+        "url": "https://www.google.com/maps/place/ALKADERIA+Convention+Hall/@23.759108,90.421705,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b9fb9c6a1683:0xcd2c4ce2c04d801!8m2!3d23.759108!4d90.421705!16s%2Fg%2F11g4f5mv42",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "address",
+          "coordinates",
+          "phones",
+          "maps_url"
+        ],
+        "checked": "2026-10-27",
+        "kind": "independent",
+        "reuse": "Individual named public business profile manually inspected on 2026-10-27. Only venue identity, location and public contact facts retained; no ratings, reviews, photographs, hours, copied prose or Places API dataset."
+      }
+    ],
+    "notes": "Named convention hall in East Rampura. The map listing prints the premises as “2, 1 E Rampura”; exact building-number punctuation and current booking availability were not independently confirmed. A linked operator site could not be inspected because access was denied.",
+    "city": "Dhaka",
+    "address_status": "partial",
+    "maps_url": "https://www.google.com/maps/place/ALKADERIA+Convention+Hall/@23.759108,90.421705,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b9fb9c6a1683:0xcd2c4ce2c04d801!8m2!3d23.759108!4d90.421705!16s%2Fg%2F11g4f5mv42"
+  },
+  {
+    "id": "bd-haques-banquet-hall-meradia",
+    "name": "Haque's Banquet Hall & Restaurant",
+    "bn_name": null,
+    "aliases": [
+      "HAQUE'S Banquet Hall & Restaurant ~ Banasree - Meradia"
+    ],
+    "category": "Banquet Hall",
+    "division": "6",
+    "district": "47",
+    "area": "Banasree",
+    "address": "46/6, Haque Tower, M Block Main Road, Banasree, Rampura, Dhaka 1219, Bangladesh",
+    "coordinates": {
+      "lat": 23.7583682,
+      "lon": 90.4474336
+    },
+    "phones": [
+      {
+        "number": "+8801929616400",
+        "source": "https://sites.google.com/view/haquesbanquethallrestaurantur/home",
+        "checked": "2026-10-27",
+        "status": "published-not-call-tested"
+      },
+      {
+        "number": "+8801711475074",
+        "source": "https://sites.google.com/view/haquesbanquethallrestaurantur/home",
+        "checked": "2026-10-27",
+        "status": "published-not-call-tested"
+      },
+      {
+        "number": "+8801677217931",
+        "source": "https://sites.google.com/view/haquesbanquethallrestaurantur/home",
+        "checked": "2026-10-27",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": "https://sites.google.com/view/haquesbanquethallrestaurantur/home",
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "cross-checked",
+    "last_checked": "2026-10-27",
+    "evidence": [
+      {
+        "url": "https://sites.google.com/view/haquesbanquethallrestaurantur/home",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "address",
+          "phones",
+          "website"
+        ],
+        "checked": "2026-10-27",
+        "kind": "official",
+        "reuse": "Venue-branded first-party page individually inspected. It explicitly offers weddings and publishes this address and three general hotlines; no promotional prose or photos copied."
+      },
+      {
+        "url": "https://www.google.com/maps/place/HAQUE%27S+Banquet+Hall+%26+Restaurant+~+Banasree+-+Meradia/@23.7583682,90.4474336,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b95c464b2243:0xb795726aebb0e346!8m2!3d23.7583682!4d90.4474336!16s%2Fg%2F11k41x2tkm",
+        "fields": [
+          "name",
+          "aliases",
+          "category",
+          "area",
+          "address",
+          "coordinates",
+          "phones",
+          "maps_url"
+        ],
+        "checked": "2026-10-27",
+        "kind": "independent",
+        "reuse": "Individual named public business profile manually inspected on 2026-10-27. Only venue identity, location and public contact facts retained; no ratings, reviews, photographs, hours, copied prose or Places API dataset."
+      }
+    ],
+    "notes": "The venue-branded website explicitly offers wedding and event bookings and publishes three business hotlines. The listed address and primary number agree with the named map profile. Numbers have not been call-tested; no seating capacity or amenities have been inferred.",
+    "city": "Dhaka",
+    "address_status": "published",
+    "maps_url": "https://www.google.com/maps/place/HAQUE%27S+Banquet+Hall+%26+Restaurant+~+Banasree+-+Meradia/@23.7583682,90.4474336,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b95c464b2243:0xb795726aebb0e346!8m2!3d23.7583682!4d90.4474336!16s%2Fg%2F11k41x2tkm",
+    "area_review": {
+      "method": "named-address-review",
+      "precision": "browsing_locality",
+      "checked": "2026-10-27",
+      "source": "https://sites.google.com/view/haquesbanquethallrestaurantur/home",
+      "reason": "The venue site gives M Block, Banasree, Rampura; the matched map listing uses Banasree–Meradia. Banasree is the supported broad browsing area, with Meradia retained in the venue context."
+    }
+  },
+  {
+    "id": "bd-aristocrat-banquet-hall-motijheel",
+    "name": "Aristocrat Banquet Hall",
+    "bn_name": null,
+    "aliases": [],
+    "category": "Banquet Hall",
+    "division": "6",
+    "district": "47",
+    "area": "Motijheel",
+    "address": "104 Motijheel C/A, Dhaka, Bangladesh",
+    "coordinates": {
+      "lat": 23.7293543,
+      "lon": 90.4172042
+    },
+    "phones": [
+      {
+        "number": "+8801730592419",
+        "source": "https://www.google.com/maps/place/Aristocrat+Banquet+Hall/@23.7293543,90.4172042,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b94e1e659379:0x2eb1f78c6d89bd0e!8m2!3d23.7293543!4d90.4172042!16s%2Fg%2F11grv8w07h",
+        "checked": "2026-10-27",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": null,
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "source-checked",
+    "last_checked": "2026-10-27",
+    "evidence": [
+      {
+        "url": "https://www.google.com/maps/place/Aristocrat+Banquet+Hall/@23.7293543,90.4172042,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b94e1e659379:0x2eb1f78c6d89bd0e!8m2!3d23.7293543!4d90.4172042!16s%2Fg%2F11grv8w07h",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "address",
+          "coordinates",
+          "phones",
+          "maps_url"
+        ],
+        "checked": "2026-10-27",
+        "kind": "independent",
+        "reuse": "Individual named public business profile manually inspected on 2026-10-27. Only venue identity, location and public contact facts retained; no ratings, reviews, photographs, hours, copied prose or Places API dataset."
+      }
+    ],
+    "notes": "The named public profile identifies a banquet hall at 104 Motijheel C/A with a published business number. Wedding-specific booking terms, current operation and number activity have not been independently confirmed.",
+    "city": "Dhaka",
+    "address_status": "published",
+    "maps_url": "https://www.google.com/maps/place/Aristocrat+Banquet+Hall/@23.7293543,90.4172042,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b94e1e659379:0x2eb1f78c6d89bd0e!8m2!3d23.7293543!4d90.4172042!16s%2Fg%2F11grv8w07h"
+  },
+  {
+    "id": "bd-birds-eye-convention-hall-paltan",
+    "name": "Bird's Eye Roof Top Restaurant and Convention Hall",
+    "bn_name": null,
+    "aliases": [],
+    "category": "Convention Center",
+    "division": "6",
+    "district": "47",
+    "area": "Paltan",
+    "address": "House 56/1, 19th Floor, Baitul View Tower, Dhaka 1000, Bangladesh",
+    "coordinates": {
+      "lat": 23.7304015,
+      "lon": 90.4121767
+    },
+    "phones": [
+      {
+        "number": "+8801766387071",
+        "source": "https://www.google.com/maps/place/Bird%27s+Eye+Roof+Top+Restaurant+and+Convention+Hall/@23.7304015,90.4121767,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b8f62e2bbed5:0x88dfb61ee8f36255!8m2!3d23.7304015!4d90.4121767!16s%2Fg%2F11clgpwpvz",
+        "checked": "2026-10-27",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": null,
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "source-checked",
+    "last_checked": "2026-10-27",
+    "evidence": [
+      {
+        "url": "https://www.google.com/maps/place/Bird%27s+Eye+Roof+Top+Restaurant+and+Convention+Hall/@23.7304015,90.4121767,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b8f62e2bbed5:0x88dfb61ee8f36255!8m2!3d23.7304015!4d90.4121767!16s%2Fg%2F11clgpwpvz",
+        "fields": [
+          "name",
+          "category",
+          "address",
+          "coordinates",
+          "phones",
+          "maps_url"
+        ],
+        "checked": "2026-10-27",
+        "kind": "independent",
+        "reuse": "Individual named public business profile manually inspected on 2026-10-27. Only venue identity, location and public contact facts retained; no ratings, reviews, photographs, hours, copied prose or Places API dataset."
+      },
+      {
+        "url": "https://nominatim.openstreetmap.org/reverse?lat=23.7304015&lon=90.4121767&format=jsonv2&addressdetails=1&zoom=18&accept-language=en",
+        "fields": [
+          "area"
+        ],
+        "checked": "2026-10-27",
+        "kind": "open-data",
+        "reuse": "OpenStreetMap/Nominatim locality result, ODbL-1.0; one manually reviewed reverse lookup. Paltan is a browsing locality, not a surveyed boundary."
+      }
+    ],
+    "notes": "Mixed rooftop restaurant and named convention hall. The listed business website could not be inspected because the public route returned HTTP 503, so the website field remains unknown. Published phone has not been call-tested.",
+    "city": "Dhaka",
+    "address_status": "published",
+    "maps_url": "https://www.google.com/maps/place/Bird%27s+Eye+Roof+Top+Restaurant+and+Convention+Hall/@23.7304015,90.4121767,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b8f62e2bbed5:0x88dfb61ee8f36255!8m2!3d23.7304015!4d90.4121767!16s%2Fg%2F11clgpwpvz",
+    "area_review": {
+      "method": "coordinate-and-address-review",
+      "precision": "browsing_locality",
+      "checked": "2026-10-27",
+      "source": "https://nominatim.openstreetmap.org/reverse?lat=23.7304015&lon=90.4121767&format=jsonv2&addressdetails=1&zoom=18&accept-language=en",
+      "reason": "The named map point is at Baitul View Tower, while the individual Nominatim reverse lookup identifies Paltan; the public address itself does not state a neighborhood."
+    }
+  },
+  {
+    "id": "bd-party-palace-banasree",
+    "name": "Party Palace Chinese Restaurant & Party Center",
+    "bn_name": null,
+    "aliases": [],
+    "category": "Event Hall",
+    "division": "6",
+    "district": "47",
+    "area": "Banasree",
+    "address": "Holding 264/6/Gha, C-D Extension, Avenue 3/A, Titash Road, Dhaka 1219, Bangladesh",
+    "coordinates": {
+      "lat": 23.758098,
+      "lon": 90.4280122
+    },
+    "phones": [
+      {
+        "number": "+8801325117799",
+        "source": "https://www.google.com/maps/place/Party+Palace+Chinese+Restaurant+%26+Party+Center/@23.758098,90.4280122,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b900747f460d:0x8feae273159186e9!8m2!3d23.758098!4d90.4280122!16s%2Fg%2F11myyb9k8x",
+        "checked": "2026-10-27",
+        "status": "published-not-call-tested"
+      }
+    ],
+    "website": null,
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "source-checked",
+    "last_checked": "2026-10-27",
+    "evidence": [
+      {
+        "url": "https://www.google.com/maps/place/Party+Palace+Chinese+Restaurant+%26+Party+Center/@23.758098,90.4280122,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b900747f460d:0x8feae273159186e9!8m2!3d23.758098!4d90.4280122!16s%2Fg%2F11myyb9k8x",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "address",
+          "coordinates",
+          "phones",
+          "maps_url"
+        ],
+        "checked": "2026-10-27",
+        "kind": "independent",
+        "reuse": "Individual named public business profile manually inspected on 2026-10-27. Only venue identity, location and public contact facts retained; no ratings, reviews, photographs, hours, copied prose or Places API dataset."
+      }
+    ],
+    "notes": "Mixed restaurant and party centre on Titash Road, within the Banasree browsing area. The party-centre identity and public contact were checked on its named listing; wedding-specific booking terms and phone activity remain unconfirmed.",
+    "city": "Dhaka",
+    "address_status": "published",
+    "maps_url": "https://www.google.com/maps/place/Party+Palace+Chinese+Restaurant+%26+Party+Center/@23.758098,90.4280122,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b900747f460d:0x8feae273159186e9!8m2!3d23.758098!4d90.4280122!16s%2Fg%2F11myyb9k8x"
+  },
+  {
+    "id": "bd-modhumilon-party-center-badda",
+    "name": "Modhumilon Party Center",
+    "bn_name": null,
+    "aliases": [
+      "Modhu Milon Restaurant and Party Center"
+    ],
+    "category": "Convention Center",
+    "division": "6",
+    "district": "47",
+    "area": "Badda",
+    "address": "Cha-87/6, Progoti Sarani, Badda, Dhaka 1212, Bangladesh",
+    "coordinates": {
+      "lat": 23.7869873,
+      "lon": 90.4256375
+    },
+    "phones": [],
+    "website": null,
+    "capacity": null,
+    "capacity_layout": null,
+    "facilities": [],
+    "verification": "source-checked",
+    "last_checked": "2026-10-27",
+    "evidence": [
+      {
+        "url": "https://www.openstreetmap.org/node/7292502553",
+        "fields": [
+          "name",
+          "aliases",
+          "area",
+          "address",
+          "coordinates"
+        ],
+        "checked": "2026-10-27",
+        "kind": "open-data",
+        "reuse": "OpenStreetMap contributors, ODbL-1.0. Relevant public mapped business tags manually reviewed from the checksum-verified 2026-10-25 Geofabrik Bangladesh extract; mapped address may need operator reconfirmation."
+      },
+      {
+        "url": "https://www.google.com/maps/place/Modhumilon+Party+Center/@23.7869859,90.4256344,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c7004576fae3:0x7e328804048a5292!8m2!3d23.7869859!4d90.4256344!16s%2Fg%2F11y4n4j_89",
+        "fields": [
+          "name",
+          "category",
+          "area",
+          "coordinates",
+          "maps_url"
+        ],
+        "checked": "2026-10-27",
+        "kind": "independent",
+        "reuse": "Individual named public business profile manually inspected on 2026-10-27. Only venue identity, location and public contact facts retained; no ratings, reviews, photographs, hours, copied prose or Places API dataset."
+      }
+    ],
+    "notes": "A named convention/party-centre profile and an older OSM restaurant-party-centre point match at the same Badda premises. OSM supplies the street address, which the current profile does not repeat; exact address and phone need operator confirmation. No wedding-only claim is made.",
+    "city": "Dhaka",
+    "address_status": "partial",
+    "maps_url": "https://www.google.com/maps/place/Modhumilon+Party+Center/@23.7869859,90.4256344,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c7004576fae3:0x7e328804048a5292!8m2!3d23.7869859!4d90.4256344!16s%2Fg%2F11y4n4j_89",
+    "phone_review": {
+      "status": "not-found-in-checked-sources",
+      "checked": "2026-10-27",
+      "note": "The individually matched business profile invites a phone addition and the OSM tag has no phone. No public venue-specific number was established."
+    }
   }
 ]

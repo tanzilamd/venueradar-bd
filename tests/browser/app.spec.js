@@ -59,6 +59,29 @@ test("area results are exact until nearby neighborhoods are requested",async({pa
  await expect(page.locator("#includeNearby")).not.toBeChecked();await page.locator("#includeNearby").check();expect(await cards(page).count()).toBeGreaterThanOrEqual(1);
  await area(page,"Rampura");await page.locator("#includeNearby").uncheck();await expect(cards(page)).toHaveCount(0);await page.locator("#results").getByRole("button",{name:"Show nearby venues",exact:true}).click();expect(await cards(page).count()).toBeGreaterThan(0);
 });
+test("mobile nearby shortcut toggles exact results and area badges never cover addresses", async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 750 });
+  await page.goto("/?area=Rampura&nearby=1");
+  await expect(page.locator('#directory[aria-busy="false"]')).toBeVisible();
+  const quick = page.locator("#quickNearby"), blue = card(page, "bd-blue-moon-party-centre-khilgaon");
+  await expect(quick).toBeVisible();
+  await expect(quick).toHaveAttribute("aria-pressed", "true");
+  await expect(blue).toBeVisible();
+  const badge = await blue.locator(".card-location").boundingBox();
+  const address = await blue.locator(".card-address").boundingBox();
+  expect(address.y).toBeGreaterThanOrEqual(badge.y + badge.height);
+  await quick.click();
+  await expect(quick).toHaveAttribute("aria-pressed", "false");
+  await expect(blue).toHaveCount(0);
+  expect(new URL(page.url()).searchParams.get("nearby")).toBe("0");
+  await quick.click();
+  await expect(blue).toBeVisible();
+  await page.locator("#allAreas").click();
+  await expect(quick).toBeHidden();
+  await page.setViewportSize({ width: 1024, height: 768 });
+  await page.goto("/?area=Rampura&nearby=1");
+  await expect(quick).toBeHidden();
+});
 test("search aliases and empty results remain usable",async({page})=>{
  await mock(page);await page.goto("/");await page.locator("#search").fill("Alpha");await expect(cards(page)).toHaveCount(1);await expect(cards(page)).toContainText("Alpha");
  await page.locator("#search").fill("definitely-no-match");await expect(cards(page)).toHaveCount(0);await expect(page.locator("#results")).toContainText("No venues match");

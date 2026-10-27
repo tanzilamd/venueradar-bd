@@ -2367,5 +2367,47 @@
       "KH Convention Centre and Sadeque Hossain Khoka Community Centre have separate map markers about 153 m apart; the latter is not reused as a phone source.",
       "Shadi Mahal Party Center is on DIT Road 5; Mahal Community Center is at House 42, Road 13, DIT Project."
     ]
+  },
+  "wedding_halls_2026_10_27": {
+    "scope": "Owner-requested China Land and further individually inspected Dhaka banquet, convention and party venues around Khilgaon, Rampura, Banasree, Badda, Motijheel and Paltan. No claim of complete wedding-venue coverage.",
+    "added_ids": [
+      "bd-china-land-party-center-khilgaon",
+      "bd-alkaderia-convention-hall-rampura",
+      "bd-haques-banquet-hall-meradia",
+      "bd-aristocrat-banquet-hall-motijheel",
+      "bd-birds-eye-convention-hall-paltan",
+      "bd-party-palace-banasree",
+      "bd-modhumilon-party-center-badda"
+    ],
+    "owner_submission": "The owner supplied China Land's Maps short link and states weddings take place there. Its public business identity, address, point and number were independently checked on the exact named listing. Wedding booking details were not independently verified.",
+    "strongest_operator_evidence": "Haque's venue-branded Google Sites page explicitly offers wedding/event bookings and publishes its Banasree address and three business hotlines; the primary line and address match its individual Maps listing.",
+    "duplicate_review": [
+      "China Land is about 55 m from Waterfall Khilgaon but has a different name, published premises and business number.",
+      "Modhumilon is about 88 m from Kamrul Restaurant & Convention Center but has a distinct named profile, OSM point and street number.",
+      "New phone numbers were checked against every previously indexed normalized number; none was reused."
+    ],
+    "held_candidates": [
+      {
+        "name": "Golden Gate Restaurant & Party Center",
+        "area": "Khilgaon",
+        "reason": "Named map marker is only about 17 m from already indexed Blue Moon Restaurant & Party Centre on Shahid Baki Road. Separate operator/premises identity is not yet secure, so do not risk a duplicate."
+      },
+      {
+        "name": "Rodevu Restaurant & Party Center",
+        "area": "Khilgaon",
+        "reason": "An older wedding-booking page exists, but the exact matched restaurant listing at 406/A Khilgaon is marked permanently closed. Not admitted."
+      },
+      {
+        "name": "Block G",
+        "area": "South Banasree",
+        "reason": "Generic neighborhood name and a map category alone do not establish a separate bookable wedding venue; no hall-specific phone or operator page found."
+      },
+      {
+        "name": "SAQI Restaurant and Party Centre",
+        "area": "Basabo",
+        "reason": "Older OSM candidate did not produce a uniquely matched current individual business profile in the targeted search. Held for identity review."
+      }
+    ],
+    "source_limits": "The venue-linked ALKADERIA site returned HTTP 403 and the Bird's Eye site returned HTTP 503 through the public route. Neither was treated as inspected official evidence or stored as a confirmed website. The other map-only additions do not assert current wedding-booking terms."
   }
 }

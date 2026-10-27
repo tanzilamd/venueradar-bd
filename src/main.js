@@ -216,6 +216,10 @@ function renderAreas() {
     $("priorityAreas").append(b);
     if (focus === area) b.focus({ preventScroll: true });
   }
+  const quick = $("quickNearby"), f = state.filters;
+  quick.hidden = !f.area || !nearbyNames(f.area, areas).length;
+  quick.setAttribute("aria-pressed", String(!!f.includeNearby));
+  quick.textContent = f.includeNearby ? "Nearby areas included" : "Include nearby areas";
 }
 function activeChips() {
   const f = state.filters, defaults = defaultFilters(state.tab), entries = [];
@@ -778,6 +782,7 @@ $("method").onclick = method;
 $("footerMethod").onclick = method;
 $("reset").onclick = reset;
 $("allAreas").onclick = () => changeFilters({ ...state.filters, area: "", search: "" });
+$("quickNearby").onclick = () => changeFilters({ ...state.filters, includeNearby: !state.filters.includeNearby });
 $("moreAreas").onclick = () => {
   const area = $("areaQuery");
   area?.scrollIntoView({ block: "center", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
