@@ -6,6 +6,8 @@ import { filterPanel, areaCounts, areaNames, groupNames, nearbyNames } from "./f
 import { $, el, button, external, phoneLink, displayName, dateText, icon, withIcon, sourceLabel } from "./ui.js";
 let venues = [], areas, collections, results = [], favorites = [], compare = [], sharedIds = [], ready = false, locationPoint = null, selected = null, sidebar = null, draftPanel = null, draft = null, mapController = null, mapControllerLoading = null, mapPromise = null, mapTileError = "";
 let mapAreaIds = null, mapVisibleIds = [], mapResultSignature = "";
+let mapFirstFitPromise = null;
+let mapExpanded = false, mapExpansionFocus = null, mapInertSiblings = [];
 let state = { tab: "explore", filters: defaultFilters("explore"), view: "list", detailId: null, sharedIds: [] };
 const contexts = { explore: { filters: defaultFilters("explore"), view: "list" }, saved: { filters: defaultFilters("saved"), view: "list" }, shared: { filters: defaultFilters("shared"), view: "list" } };
 let storage = null, storageWorks = true, modalKind = null, returnFocus = null, undo = null, searchTimer = null, feedbackTimer = null, loading = false;
@@ -13,6 +15,56 @@ let previewMap = null, previewMapLoading = null, previewMapWanted = false, previ
 const previewMapNode = el("div", null, "inspector-map");
 previewMapNode.id = "inspectorMap";
 previewMapNode.setAttribute("aria-label", "Selected venue location map");
+function setMapExpanded(expanded, restoreFocus = true) {
+  if (expanded === mapExpanded || (expanded && state.view !== "map")) return;
+  const wrap = $("mapWrap"), toggle = $("expandMap");
+  mapExpanded = expanded;
+  if (expanded) {
+    mapExpansionFocus = document.activeElement;
+    for (let node = wrap; node.parentElement; node = node.parentElement) {
+      for (const sibling of node.parentElement.children) {
+        if (sibling === node) continue;
+        mapInertSiblings.push([sibling, sibling.inert]);
+        sibling.inert = true;
+      }
+      if (node.parentElement === document.body) break;
+    }
+    wrap.setAttribute("role", "dialog");
+    wrap.setAttribute("aria-modal", "true");
+    wrap.setAttribute("aria-label", "Full-screen venue map");
+    wrap.classList.add("is-expanded");
+    document.body.classList.add("map-expanded");
+  } else {
+    for (const [sibling, wasInert] of mapInertSiblings) sibling.inert = wasInert;
+    mapInertSiblings = [];
+    wrap.removeAttribute("role");
+    wrap.removeAttribute("aria-modal");
+    wrap.removeAttribute("aria-label");
+    wrap.classList.remove("is-expanded");
+    document.body.classList.remove("map-expanded");
+  }
+  toggle.textContent = expanded ? "Exit full screen" : "Full screen";
+  toggle.setAttribute("aria-pressed", String(expanded));
+  if (expanded) toggle.focus({ preventScroll: true });
+  else if (restoreFocus) mapExpansionFocus?.focus?.({ preventScroll: true });
+  if (!expanded) mapExpansionFocus = null;
+  requestAnimationFrame(() => mapController?.invalidate());
+}
+window.addEventListener("keydown", (event) => {
+  if (!mapExpanded) return;
+  if (event.key === "Escape") { event.preventDefault(); setMapExpanded(false); return; }
+  if (event.key !== "Tab") return;
+  const focusable = [...$("mapWrap").querySelectorAll('a[href], button:not([disabled]), [tabindex="0"]')]
+    .filter((node) => !node.closest("[hidden]") && node.getClientRects().length);
+  if (!focusable.length) { event.preventDefault(); $("expandMap").focus(); return; }
+  const first = focusable[0], last = focusable.at(-1);
+  if (!$("mapWrap").contains(document.activeElement)) { event.preventDefault(); first.focus(); }
+  else if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+  else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+});
+window.addEventListener("resize", () => {
+  if (mapExpanded) requestAnimationFrame(() => mapController?.invalidate());
+});
 try {
   storage = window.localStorage;
 } catch {
@@ -425,6 +477,8 @@ function renderCards() {
 }
 function render() {
   if (!ready) return;
+  const leavingExpandedMap = mapExpanded && state.view !== "map";
+  if (leavingExpandedMap) setMapExpanded(false, false);
   results = filtered();
   if (state.filters.area && state.filters.sort === "name") {
     const own = groupNames(state.filters.area, areas);
@@ -459,6 +513,7 @@ function render() {
   $("mapWrap").hidden = state.view !== "map";
   $("listView").setAttribute("aria-pressed", String(state.view === "list"));
   $("mapView").setAttribute("aria-pressed", String(state.view === "map"));
+  if (leavingExpandedMap) $("listView").focus({ preventScroll: true });
   if (state.view === "map") ensureMap();
 }
 function correctionURL(v) {
@@ -633,10 +688,13 @@ function updateMapAreaControls() {
 }
 async function ensureMap() {
   if (state.view !== "map") return;
+  const initialLoad = !mapController;
   if (!mapController) {
     $("mapMessage").textContent = "Loading the map…";
     try {
       if (!mapControllerLoading) mapControllerLoading = (async () => {
+        await new Promise((resolve) => requestAnimationFrame(resolve));
+        if (state.view !== "map") return;
         if (!mapPromise) mapPromise = import("./map.js");
         const module = await mapPromise;
         mapController = await module.createMap($("map"), { onSelect: (id) => selectOnMap(id), onViewportChange: (ids) => {
@@ -665,6 +723,11 @@ async function ensureMap() {
       ? "These matching venues have no source-published map point. Switch to List to view them."
       : mapTileError || "Move or zoom the map, then choose Show venues here.";
   renderMapSelection();
+  if (initialLoad && !mapFirstFitPromise) mapFirstFitPromise = new Promise((resolve) => requestAnimationFrame(() => {
+    if (state.view === "map") { mapController?.invalidate(); mapController?.fit(); }
+    resolve();
+  })).finally(() => { mapFirstFitPromise = null; });
+  if (mapFirstFitPromise) await mapFirstFitPromise;
 }
 function selectOnMap(id, zoom = false) {
   selected = id;
@@ -813,6 +876,7 @@ $("sort").onchange = () => {
 };
 $("listView").onclick = () => setView("list");
 $("mapView").onclick = () => setView("map");
+$("expandMap").onclick = () => setMapExpanded(!mapExpanded);
 $("fitMap").onclick = () => {
   mapAreaIds = null;
   $("directory").classList.remove("map-area-active");

@@ -144,7 +144,7 @@ export async function createMap(container, { onSelect, onError, onViewportChange
     if (!rows.length) return;
     const lons = rows.map((v) => v.coordinates.lon), lats = rows.map((v) => v.coordinates.lat);
     map.fitBounds([[Math.min(...lons), Math.min(...lats)], [Math.max(...lons), Math.max(...lats)]],
-      { padding: 42, maxZoom: 15, duration: 0 });
+      { padding: { top: 66, bottom: 48, left: 70, right: 48 }, maxZoom: 15, duration: 0 });
     renderMarkers();
   }
   function setResults(allRows) {
@@ -184,6 +184,13 @@ export async function createMap(container, { onSelect, onError, onViewportChange
     userMarker = new maplibregl.Marker({ element: dot, anchor: "center" }).setLngLat([point.lon, point.lat]).addTo(map);
     map.easeTo({ center: [point.lon, point.lat], zoom: 14, duration: reducedMotion() ? 0 : 350 });
   }
+  const resizeObserver = new ResizeObserver(() => {
+    if (!container.clientWidth || !container.clientHeight) return;
+    map.resize();
+    renderMarkers();
+    onViewportChange?.(visibleIds());
+  });
+  resizeObserver.observe(container);
   return { setResults, select, fit, visibleIds, focusLocation, invalidate() { map.resize(); renderMarkers(); onViewportChange?.(visibleIds()); } };
 }
 

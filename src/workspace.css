@@ -402,3 +402,48 @@
   .directory-page .card-actions .save, .directory-page .card-actions .compare-toggle { flex: 0 0 44px; }
   .directory-page #dialog[data-kind="compare"] th, .directory-page #dialog[data-kind="compare"] td { min-width: 178px; width: 178px; }
 }
+
+/* A viewport-sized map works in browsers without the Fullscreen API, including iOS Safari. */
+body.directory-page.map-expanded { overflow: hidden; }
+.directory-page .map-toolbar #expandMap { margin-left: auto; }
+.directory-page .map-mode #mapWrap.is-expanded {
+  position: fixed;
+  inset: 0;
+  z-index: 6000;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100dvh;
+  padding: max(10px, env(safe-area-inset-top)) max(10px, env(safe-area-inset-right)) max(10px, env(safe-area-inset-bottom)) max(10px, env(safe-area-inset-left));
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  overflow: hidden;
+  background: var(--surface);
+}
+.directory-page .map-mode #mapWrap.is-expanded .map-toolbar { flex: 0 0 auto; padding-bottom: 9px; }
+.directory-page .map-mode #mapWrap.is-expanded #map {
+  flex: 1 1 auto;
+  width: 100%;
+  height: auto;
+  min-height: 160px;
+  max-height: none;
+}
+.directory-page .map-mode #mapWrap.is-expanded .map-area-bar { flex: 0 0 auto; margin-top: 8px; }
+.directory-page .map-mode #mapWrap.is-expanded #mapMessage { flex: 0 0 auto; margin: 5px 0 0; font-size: 12px; }
+.directory-page .map-mode #mapWrap.is-expanded .map-selection:not(:empty) {
+  flex: 0 0 auto;
+  max-height: min(28dvh, 230px);
+  margin-top: 7px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.directory-page .map-mode #mapWrap.is-expanded > .hint:last-child { flex: 0 0 auto; margin: 6px 0 0; font-size: 11px; }
+@media (max-width: 720px) {
+  .directory-page .map-mode #mapWrap.is-expanded .map-area-bar { flex-direction: row; align-items: center; }
+  .directory-page .map-mode #mapWrap.is-expanded .map-area-bar > div { justify-content: flex-end; }
+  .directory-page .map-mode #mapWrap.is-expanded .map-selection:not(:empty) { max-height: 30dvh; }
+}
+@media (max-width: 360px) {
+  .directory-page .map-mode #mapWrap.is-expanded .map-toolbar { gap: 5px; }
+  .directory-page .map-mode #mapWrap.is-expanded .map-toolbar button { padding-inline: 8px; }
+}

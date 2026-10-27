@@ -2591,5 +2591,81 @@
     ],
     "limitations": "Individual named business listings and allowed first-party pages were reviewed; no claim of exhaustive coverage, call-tested contacts, or weddings at every restaurant branch.",
     "checked": "2026-10-27"
+  },
+  "map_coordinate_review_2026_10_27": {
+    "scope": "Previously unmapped indexed Dhaka venues. Coordinates are matched named OpenStreetMap building or complex centres, not entrance points. Existing official venue evidence and contacts retained. Exact Google Maps business listings were reviewed for identity/navigation only; their coordinates were not copied into the OpenFreeMap dataset.",
+    "changed": [
+      {
+        "id": "bd-radisson-blu-dhaka",
+        "before": null,
+        "after": {
+          "lat": 23.81603455625,
+          "lon": 90.40875854375
+        },
+        "source": "https://www.openstreetmap.org/way/240041045",
+        "osm_last_edited": "2017-06-24"
+      },
+      {
+        "id": "bd-pan-pacific-sonargaon-dhaka",
+        "before": null,
+        "after": {
+          "lat": 23.7495691,
+          "lon": 90.39440952307692
+        },
+        "source": "https://www.openstreetmap.org/way/32562242",
+        "osm_last_edited": "2026-01-23"
+      },
+      {
+        "id": "bd-amari-dhaka",
+        "before": null,
+        "after": {
+          "lat": 23.79031218,
+          "lon": 90.41263542
+        },
+        "source": "https://www.openstreetmap.org/way/366172605",
+        "osm_last_edited": "2019-10-29"
+      },
+      {
+        "id": "bd-dhaka-regency",
+        "before": null,
+        "after": {
+          "lat": 23.82937652,
+          "lon": 90.41937756
+        },
+        "source": "https://www.openstreetmap.org/way/283182556",
+        "osm_last_edited": "2014-05-20"
+      },
+      {
+        "id": "bd-raowa-convention-halls",
+        "before": null,
+        "after": {
+          "lat": 23.77779420769231,
+          "lon": 90.39560206153845
+        },
+        "source": "https://www.openstreetmap.org/way/366205735",
+        "osm_last_edited": "2023-10-31"
+      },
+      {
+        "id": "bd-sks-convention-hall",
+        "before": null,
+        "after": {
+          "lat": 23.7786142875,
+          "lon": 90.3967740375
+        },
+        "source": "https://www.openstreetmap.org/way/367287601",
+        "osm_last_edited": "2023-09-12"
+      },
+      {
+        "id": "bd-police-convention-hall-eskaton",
+        "before": null,
+        "after": {
+          "lat": 23.7448763,
+          "lon": 90.4020498
+        },
+        "source": "https://www.openstreetmap.org/relation/21446956",
+        "osm_last_edited": "2026-09-27"
+      }
+    ],
+    "checked": "2026-10-27"
   }
 }

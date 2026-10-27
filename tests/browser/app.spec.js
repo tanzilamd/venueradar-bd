@@ -280,6 +280,35 @@ test("mobile map selection actions remain above the Compare tray", async ({ page
     expect(a.right <= b.x || b.right <= a.x || a.bottom <= b.y || b.bottom <= a.y).toBe(true);
   }
 });
+for (const width of [320, 390, 768, 1440]) test(`full-screen map remains usable at ${width}px and exits without changing view`, async ({ page }) => {
+  await page.setViewportSize({ width, height: 900 });
+  await mock(page);
+  await page.goto("/");
+  await page.locator("#mapView").click();
+  const toggle = page.locator("#expandMap");
+  await toggle.click();
+  const overlay = page.locator('#mapWrap[role="dialog"]');
+  await expect(overlay).toHaveAttribute("aria-modal", "true");
+  await expect(toggle).toHaveAttribute("aria-pressed", "true");
+  const bounds = await overlay.boundingBox();
+  expect(bounds.x).toBe(0);
+  expect(bounds.y).toBe(0);
+  expect(bounds.width).toBe(width);
+  expect(bounds.height).toBe(900);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await page.locator("#map .venue-marker").first().click();
+  await expect(page.locator("#mapSelection")).toContainText("TEST ONLY");
+  await expect(page.locator('#mapSelection a[href^="tel:"]')).toBeVisible();
+  await page.keyboard.press("Escape");
+  await expect(overlay).toHaveCount(0);
+  await expect(toggle).toBeFocused();
+  await expect(page.locator("#mapView")).toHaveAttribute("aria-pressed", "true");
+  await toggle.click();
+  await page.locator("#mapListFallback").click();
+  await expect(page.locator("#mapWrap")).toBeHidden();
+  await expect(page.locator("#listView")).toHaveAttribute("aria-pressed", "true");
+  await expect(page.locator("#listView")).toBeFocused();
+});
 test("one-time nearby distance is sorted and never serialized or stored", async ({ page, context }) => {
   await mock(page);
   await context.grantPermissions(["geolocation"]);

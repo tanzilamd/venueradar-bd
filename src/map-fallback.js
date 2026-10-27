@@ -33,7 +33,7 @@ export function createMap(container, { onSelect, onError, onViewportChange }) {
   map.on("moveend", () => onViewportChange?.(visibleIds()));
   const icon = (active) => L.divIcon({ html: '<span class="map-pin"></span>', className: "venue-marker" + (active ? " is-selected" : ""), iconSize: [44, 44], iconAnchor: [22, 22] });
   function fit() {
-    if (markers.size) map.fitBounds(clusters.getBounds(), { padding: [30, 30], maxZoom: 15 });
+    if (markers.size) map.fitBounds(clusters.getBounds(), { paddingTopLeft: [70, 66], paddingBottomRight: [48, 48], maxZoom: 15 });
   }
   function setResults(rows) {
     const next = rows.filter((v) => v.coordinates).map((v) => v.id + ":" + v.coordinates.lat + "," + v.coordinates.lon).join("|");

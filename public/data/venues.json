@@ -274,7 +274,10 @@
     "district": "47",
     "area": "Dhaka Cantonment",
     "address": "Airport Rd, Dhaka Cantonment, Dhaka 1206, Bangladesh",
-    "coordinates": null,
+    "coordinates": {
+      "lat": 23.81603455625,
+      "lon": 90.40875854375
+    },
     "phones": [
       {
         "number": "+8809666774466",
@@ -291,7 +294,7 @@
       "Catering"
     ],
     "verification": "source-checked",
-    "last_checked": "2026-10-25",
+    "last_checked": "2026-10-27",
     "evidence": [
       {
         "url": "https://www.radissonhotels.com/en-us/hotels/radisson-blu-dhaka/meeting-events",
@@ -312,9 +315,18 @@
         "checked": "2026-10-25",
         "kind": "official",
         "reuse": "Individual publicly listed business facts only; no promotional text, images or rating data reused."
+      },
+      {
+        "url": "https://www.openstreetmap.org/way/240041045",
+        "fields": [
+          "coordinates"
+        ],
+        "checked": "2026-10-27",
+        "kind": "open-data",
+        "reuse": "© OpenStreetMap contributors, ODbL-1.0. Matching named building/complex in checksum-verified 25 October Geofabrik extract; geometry centre, not a surveyed entrance. OSM last edited 2017-06-24; reviewed 2026-10-27."
       }
     ],
-    "notes": "Theatre capacity, not wedding banquet seating. The page headline says 1,100, while its Grand Ballroom description says 1,050; the hall-specific figure is shown. Coordinates have not yet been verified.",
+    "notes": "Theatre capacity, not wedding banquet seating. The page headline says 1,100, while its Grand Ballroom description says 1,050; the hall-specific figure is shown. The marker is the approximate centre of the matching named OpenStreetMap building or complex, not an entrance.",
     "city": "Dhaka"
   },
   {
@@ -329,7 +341,10 @@
     "district": "47",
     "area": "Karwan Bazar",
     "address": "107 Kazi Nazrul Islam Avenue, Dhaka 1215, Bangladesh",
-    "coordinates": null,
+    "coordinates": {
+      "lat": 23.7495691,
+      "lon": 90.39440952307692
+    },
     "phones": [
       {
         "number": "+880255028008",
@@ -343,7 +358,7 @@
     "capacity_layout": null,
     "facilities": [],
     "verification": "source-checked",
-    "last_checked": "2026-10-25",
+    "last_checked": "2026-10-27",
     "evidence": [
       {
         "url": "https://www.panpacific.com/en/hotels-and-resorts/pp-dhaka/meetings.html",
@@ -368,9 +383,18 @@
         "checked": "2026-10-25",
         "kind": "open-data",
         "reuse": "OpenStreetMap/Nominatim named address match, ODbL-1.0. Existing official venue fields preserved."
+      },
+      {
+        "url": "https://www.openstreetmap.org/way/32562242",
+        "fields": [
+          "coordinates"
+        ],
+        "checked": "2026-10-27",
+        "kind": "open-data",
+        "reuse": "© OpenStreetMap contributors, ODbL-1.0. Matching named building/complex in checksum-verified 25 October Geofabrik extract; geometry centre, not a surveyed entrance. OSM last edited 2026-01-23; reviewed 2026-10-27."
       }
     ],
-    "notes": "The official overview advertises up to 2,500 attendees across an unspecified event configuration. Capacity remains unknown until a particular space and layout are confirmed. Coordinates have not yet been verified.",
+    "notes": "The official overview advertises up to 2,500 attendees across an unspecified event configuration. Capacity remains unknown until a particular space and layout are confirmed. The marker is the approximate centre of the matching named OpenStreetMap building or complex, not an entrance.",
     "city": "Dhaka",
     "area_review": {
       "method": "named-address-review",
@@ -391,7 +415,10 @@
     "district": "47",
     "area": "Gulshan 2",
     "address": "47, Road No 41, Gulshan-2, Dhaka 1212, Bangladesh",
-    "coordinates": null,
+    "coordinates": {
+      "lat": 23.79031218,
+      "lon": 90.41263542
+    },
     "phones": [
       {
         "number": "+880255059620",
@@ -405,7 +432,7 @@
     "capacity_layout": "The Eden Grand Ballroom · banquet",
     "facilities": [],
     "verification": "source-checked",
-    "last_checked": "2026-10-25",
+    "last_checked": "2026-10-27",
     "evidence": [
       {
         "url": "https://www.amari.com/dhaka/meetings-events",
@@ -423,9 +450,18 @@
         "checked": "2026-10-25",
         "kind": "official",
         "reuse": "Manually checked individual business facts only; no promotional prose, photographs or ratings reproduced."
+      },
+      {
+        "url": "https://www.openstreetmap.org/way/366172605",
+        "fields": [
+          "coordinates"
+        ],
+        "checked": "2026-10-27",
+        "kind": "open-data",
+        "reuse": "© OpenStreetMap contributors, ODbL-1.0. Matching named building/complex in checksum-verified 25 October Geofabrik extract; geometry centre, not a surveyed entrance. OSM last edited 2019-10-29; reviewed 2026-10-27."
       }
     ],
-    "notes": "The official capacity chart lists 200 in banquet layout and 300 for reception. Banquet capacity is shown. Coordinates have not yet been verified."
+    "notes": "The official capacity chart lists 200 in banquet layout and 300 for reception. Banquet capacity is shown. The marker is the approximate centre of the matching named OpenStreetMap building or complex, not an entrance."
   },
   {
     "id": "bd-dhaka-regency",
@@ -440,7 +476,10 @@
     "district": "47",
     "area": "Nikunja 2 / Khilkhet",
     "address": "Airport Road, Nikunja-2, Dhaka 1229, Bangladesh",
-    "coordinates": null,
+    "coordinates": {
+      "lat": 23.82937652,
+      "lon": 90.41937756
+    },
     "phones": [
       {
         "number": "+8801713332651",
@@ -454,7 +493,7 @@
     "capacity_layout": null,
     "facilities": [],
     "verification": "source-checked",
-    "last_checked": "2026-10-25",
+    "last_checked": "2026-10-27",
     "evidence": [
       {
         "url": "https://dhakaregency.com/",
@@ -480,9 +519,18 @@
         "checked": "2026-10-25",
         "kind": "official",
         "reuse": "Manually checked individual business facts only; no promotional prose, photographs or ratings reproduced."
+      },
+      {
+        "url": "https://www.openstreetmap.org/way/283182556",
+        "fields": [
+          "coordinates"
+        ],
+        "checked": "2026-10-27",
+        "kind": "open-data",
+        "reuse": "© OpenStreetMap contributors, ODbL-1.0. Matching named building/complex in checksum-verified 25 October Geofabrik extract; geometry centre, not a surveyed entrance. OSM last edited 2014-05-20; reviewed 2026-10-27."
       }
     ],
-    "notes": "The official site describes banquet facilities but the inspected page has no numerical capacity. A separately hosted HTTP factsheet was not retrieved. Published business mobile number is not assumed to support WhatsApp."
+    "notes": "The official site describes banquet facilities but the inspected page has no numerical capacity. A separately hosted HTTP factsheet was not retrieved. Published business mobile number is not assumed to support WhatsApp. The marker is the approximate centre of the matching named OpenStreetMap building or complex, not an entrance."
   },
   {
     "id": "bd-police-convention-hall-eskaton",
@@ -498,7 +546,10 @@
     "district": "47",
     "area": "Eskaton",
     "address": "37/3/B Eskaton Garden Road, Ramna, Dhaka, Bangladesh",
-    "coordinates": null,
+    "coordinates": {
+      "lat": 23.7448763,
+      "lon": 90.4020498
+    },
     "phones": [
       {
         "number": "+8801789376469",
@@ -527,7 +578,7 @@
       "Air conditioning"
     ],
     "verification": "source-checked",
-    "last_checked": "2026-10-25",
+    "last_checked": "2026-10-27",
     "evidence": [
       {
         "url": "https://policeconventionhall.com/wp/",
@@ -568,15 +619,34 @@
         "checked": "2026-10-25",
         "kind": "official",
         "reuse": "Individual public business facts manually inspected in the requested full-record review. No copied prose, ratings, reviews, photographs, private schedules or restricted API responses."
+      },
+      {
+        "url": "https://www.openstreetmap.org/relation/21446956",
+        "fields": [
+          "coordinates"
+        ],
+        "checked": "2026-10-27",
+        "kind": "open-data",
+        "reuse": "© OpenStreetMap contributors, ODbL-1.0. Named Police Convention Hall building multipolygon; approximate geometry centre, not a surveyed entrance. OSM last edited 2026-09-27; reviewed 2026-10-27."
+      },
+      {
+        "url": "https://www.google.com/maps/place/Police+Convention+Hall/@23.7447459,90.4021104,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b891f5f213b5:0x35180b044b72b5c7!8m2!3d23.7447459!4d90.4021104!16s%2Fg%2F11c0r5241l",
+        "fields": [
+          "maps_url"
+        ],
+        "checked": "2026-10-27",
+        "kind": "independent",
+        "reuse": "Exact public business profile manually matched to the existing Eskaton address, website and business phone; used as a navigation link only. No Google map coordinates, reviews, rating, photos or hours stored."
       }
     ],
-    "notes": "The operator publishes 800 guests per floor and 1,600 across two floors; the per-floor figure is shown, with no seating layout specified. Only consistently published booking numbers and the public landline are included. One other number has conflicting digit counts on the site and is omitted pending clarification. Coordinates have not yet been verified.",
+    "notes": "The operator publishes 800 guests per floor and 1,600 across two floors; the per-floor figure is shown, with no seating layout specified. Only consistently published booking numbers and the public landline are included. One other number has conflicting digit counts on the site and is omitted pending clarification. The marker is the approximate centre of the named OpenStreetMap building, not a surveyed entrance.",
     "contact_hours": {
       "text": "10:00–18:00; days not specified",
       "kind": "booking-office-hours",
       "source": "https://policeconventionhall.com/wp/",
       "checked": "2026-10-25"
-    }
+    },
+    "maps_url": "https://www.google.com/maps/place/Police+Convention+Hall/@23.7447459,90.4021104,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b891f5f213b5:0x35180b044b72b5c7!8m2!3d23.7447459!4d90.4021104!16s%2Fg%2F11c0r5241l"
   },
   {
     "id": "bd-raowa-convention-halls",
@@ -592,7 +662,10 @@
     "district": "47",
     "area": "Mohakhali",
     "address": "VIP Road, Mohakhali, Dhaka 1206, Bangladesh",
-    "coordinates": null,
+    "coordinates": {
+      "lat": 23.77779420769231,
+      "lon": 90.39560206153845
+    },
     "phones": [
       {
         "number": "+880255058363",
@@ -612,7 +685,7 @@
     "capacity_layout": null,
     "facilities": [],
     "verification": "source-checked",
-    "last_checked": "2026-10-25",
+    "last_checked": "2026-10-27",
     "evidence": [
       {
         "url": "https://raowa.org/",
@@ -649,9 +722,18 @@
         "checked": "2026-10-25",
         "kind": "official",
         "reuse": "Individually reviewed public business facts, translated where needed. No promotional prose, photos, reviews, private schedules or personal staff details reproduced."
+      },
+      {
+        "url": "https://www.openstreetmap.org/way/366205735",
+        "fields": [
+          "coordinates"
+        ],
+        "checked": "2026-10-27",
+        "kind": "open-data",
+        "reuse": "© OpenStreetMap contributors, ODbL-1.0. Matching named building/complex in checksum-verified 25 October Geofabrik extract; geometry centre, not a surveyed entrance. OSM last edited 2023-10-31; reviewed 2026-10-27."
       }
     ],
-    "notes": "The operator publishes hall-booking terms for non-members. Contacts are the RAOWA office, not a dedicated booking line; confirm eligibility, terms and availability directly. No numerical capacity or coordinates were verified from the inspected text. Multiple halls at this location are kept as one venue record."
+    "notes": "The operator publishes hall-booking terms for non-members. Contacts are the RAOWA office, not a dedicated booking line; confirm eligibility, terms and availability directly. No numerical capacity was verified from the inspected text. Multiple halls at this location are kept as one venue record. The marker is the approximate centre of the matching named OpenStreetMap building or complex, not an entrance."
   },
   {
     "id": "bd-sks-convention-hall",
@@ -668,7 +750,10 @@
     "district": "47",
     "area": "Mohakhali",
     "address": "SKS Tower, 9th Floor, 7 VIP Road, Mohakhali Commercial Area, Dhaka, Bangladesh",
-    "coordinates": null,
+    "coordinates": {
+      "lat": 23.7786142875,
+      "lon": 90.3967740375
+    },
     "phones": [
       {
         "number": "+8801769056591",
@@ -686,7 +771,7 @@
       "Catering"
     ],
     "verification": "source-checked",
-    "last_checked": "2026-10-25",
+    "last_checked": "2026-10-27",
     "evidence": [
       {
         "url": "https://senakalyan.org/dynamic_page/load_page/43",
@@ -708,9 +793,18 @@
         "checked": "2026-10-25",
         "kind": "official",
         "reuse": "Individually reviewed public business facts, translated where needed. No promotional prose, photos, reviews, private schedules or personal staff details reproduced."
+      },
+      {
+        "url": "https://www.openstreetmap.org/way/367287601",
+        "fields": [
+          "coordinates"
+        ],
+        "checked": "2026-10-27",
+        "kind": "open-data",
+        "reuse": "© OpenStreetMap contributors, ODbL-1.0. Matching SKS Tower building in checksum-verified 25 October Geofabrik extract; geometry centre, not the ninth-floor hall entrance. OSM last edited 2023-09-12; reviewed 2026-10-27."
       }
     ],
-    "notes": "The operator lists Sena Gourab at 400–500 people and Sena Cafe at 200–250. The displayed range is for Sena Gourab, not a combined total. Catering support and parking are documented. One record covers the two spaces at this address. Coordinates have not yet been verified.",
+    "notes": "The operator lists Sena Gourab at 400–500 people and Sena Cafe at 200–250. The displayed range is for Sena Gourab, not a combined total. Catering support and parking are documented. One record covers the two spaces at this address. The marker is the approximate centre of the matching SKS Tower building, not a hall entrance.",
     "capacity_range": {
       "min": 400,
       "max": 500

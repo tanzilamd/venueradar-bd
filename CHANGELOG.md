@@ -1,5 +1,10 @@
 # Changelog
 
+## Full-screen map and sourced map points — 27 October 2026
+- Add a viewport-sized, keyboard-accessible map mode that works on mobile browsers without the Fullscreen API; Escape and the visible exit button restore the directory.
+- Refit the map after the selected-venue panel changes its size, keep markers clear of map controls, and preserve the existing MapLibre/OpenFreeMap and Leaflet fallback behavior.
+- Add seven previously missing map markers from matching named OpenStreetMap buildings or complexes. Mark their positions as approximate building centres; retain unresolved or closed listings without guessed markers.
+
 ## Map-first venue browsing — 26 October 2026
 - Show the number of indexed venues inside the visible map, with an explicit action to browse just those venues and a one-tap reset to the full directory.
 - Add one-time Near me positioning with a distinct approximate-location dot and straight-line distance sorting. Coordinates remain in memory only.
